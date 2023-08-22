@@ -1,0 +1,72 @@
+Job:C:\Users\Scotty\Downloads\Scott's Arm 2022-2023\Small Arm Assembly-Nonlinear 1	at:Sun Aug  6 19:19:56 2023
+
+******PCGLSS Error******
+Status:7
+PCGLSS0031:Stiffness present for nodes not on element 22232 in element matrixVersion:8.0:PCGLSS0031:Source File:getinputs_std.c:Line:681
+******PCGLSS Error******
+Job:C:\Users\Scotty\Downloads\Scott's Arm 2022-2023\Small Arm Assembly-Nonlinear 1	at:Sun Aug  6 19:19:57 2023
+
+******PCGLSS Error******
+Status:7
+PCGLSS0031:Stiffness present for nodes not on element 22232 in element matrixVersion:8.0:PCGLSS0031:Source File:getinputs_std.c:Line:681
+******PCGLSS Error******
+Job:C:\Users\Scotty\Downloads\Scott's Arm 2022-2023\Small Arm Assembly-Nonlinear 1	at:Sun Aug  6 19:19:59 2023
+
+******PCGLSS Error******
+Status:7
+PCGLSS0031:Stiffness present for nodes not on element 22232 in element matrixVersion:8.0:PCGLSS0031:Source File:getinputs_std.c:Line:681
+******PCGLSS Error******
+Job:C:\Users\Scotty\Downloads\Scott's Arm 2022-2023\Small Arm Assembly-Nonlinear 1	at:Sun Aug  6 19:20:00 2023
+
+******PCGLSS Error******
+Status:7
+PCGLSS0031:Stiffness present for nodes not on element 22232 in element matrixVersion:8.0:PCGLSS0031:Source File:getinputs_std.c:Line:681
+******PCGLSS Error******
+Job:C:\Users\Scotty\Downloads\Scott's Arm 2022-2023\Small Arm Assembly-Nonlinear 1	at:Sun Aug  6 19:20:01 2023
+
+******PCGLSS Error******
+Status:7
+PCGLSS0031:Stiffness present for nodes not on element 22232 in element matrixVersion:8.0:PCGLSS0031:Source File:getinputs_std.c:Line:681
+******PCGLSS Error******
+Job:C:\Users\Scotty\Downloads\Scott's Arm 2022-2023\Small Arm Assembly-Nonlinear 1	at:Sun Aug  6 19:20:02 2023
+
+******PCGLSS Error******
+Status:7
+PCGLSS0031:Stiffness present for nodes not on element 22232 in element matrixVersion:8.0:PCGLSS0031:Source File:getinputs_std.c:Line:681
+******PCGLSS Error******
+Job:C:\Users\Scotty\Downloads\Scott's Arm 2022-2023\Small Arm Assembly-Nonlinear 1	at:Sun Aug  6 19:21:47 2023
+
+******PCGLSS Error******
+Status:2
+PCGLSS0204:Negative or zero pivot 1.277973e-11 at row 115353 (:Original Node:34474:Global DOF Type:6:). Extreme Preconditioner failed to factorVersion:8.0:PCGLSS0204:Source File:arrayfactorblocked.c:Line:266
+******PCGLSS Error******
+Job:C:\Users\Scotty\Downloads\Scott's Arm 2022-2023\Small Arm Assembly-Nonlinear 1	at:Sun Aug  6 19:21:57 2023
+
+******PCGLSS Error******
+Status:2
+PCGLSS0204:Negative or zero pivot 4.291742e-12 at row 115353 (:Original Node:34474:Global DOF Type:6:). Extreme Preconditioner failed to factorVersion:8.0:PCGLSS0204:Source File:arrayfactorblocked.c:Line:266
+******PCGLSS Error******
+Job:C:\Users\Scotty\Downloads\Scott's Arm 2022-2023\Small Arm Assembly-Nonlinear 1	at:Sun Aug  6 19:22:06 2023
+
+******PCGLSS Error******
+Status:2
+PCGLSS0204:Negative or zero pivot 3.343348e-12 at row 115353 (:Original Node:34474:Global DOF Type:6:). Extreme Preconditioner failed to factorVersion:8.0:PCGLSS0204:Source File:arrayfactorblocked.c:Line:266
+******PCGLSS Error******
+Job:C:\Users\Scotty\Downloads\Scott's Arm 2022-2023\Small Arm Assembly-Nonlinear 1	at:Sun Aug  6 19:22:16 2023
+
+******PCGLSS Error******
+Status:2
+PCGLSS0204:Negative or zero pivot 2.180417e-12 at row 115353 (:Original Node:34474:Global DOF Type:6:). Extreme Preconditioner failed to factorVersion:8.0:PCGLSS0204:Source File:arrayfactorblocked.c:Line:266
+******PCGLSS Error******
+Job:C:\Users\Scotty\Downloads\Scott's Arm 2022-2023\Small Arm Assembly-Nonlinear 1	at:Sun Aug  6 19:22:22 2023
+
+******PCGLSS Error******
+Status:2
+PCGLSS0204:Negative or zero pivot 2.546361e-12 at row 115353 (:Original Node:34474:Global DOF Type:6:). Extreme Preconditioner failed to factorVersion:8.0:PCGLSS0204:Source File:arrayfactorblocked.c:Line:266
+******PCGLSS Error******
+Job:C:\Users\Scotty\Downloads\Scott's Arm 2022-2023\Small Arm Assembly-Nonlinear 1	at:Sun Aug  6 19:22:29 2023
+
+******PCGLSS Error******
+Status:2
+PCGLSS0204:Negative or zero pivot 3.148155e-12 at row 115353 (:Original Node:34474:Global DOF Type:6:). Extreme Preconditioner failed to factorVersion:8.0:PCGLSS0204:Source File:arrayfactorblocked.c:Line:266
+******PCGLSS Error******

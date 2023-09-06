@@ -1,2 +1,2 @@
 Number of Contacts: 718
-Number of contact data: 14643
+Number of contact data: 6903

@@ -1,0 +1,3 @@
+[submodule "Xsens_MTi_I2C"]
+	path = Xsens_MTi_I2C
+	url = https://github.com/Steven-GH/Xsens_MTi_I2C.git

@@ -1,0 +1,32 @@
+{
+    "python.autoComplete.extraPaths": [
+        "/home/isopodin-time/ros2_ws/install/uuv_world_ros_plugins_msgs/lib/python3.8/site-packages",
+        "/home/isopodin-time/ros2_ws/install/uuv_trajectory_control/lib/python3.8/site-packages",
+        "/home/isopodin-time/ros2_ws/install/uuv_thruster_manager/lib/python3.8/site-packages",
+        "/home/isopodin-time/ros2_ws/install/uuv_sensor_ros_plugins_msgs/lib/python3.8/site-packages",
+        "/home/isopodin-time/ros2_ws/install/uuv_gazebo_ros_plugins_msgs/lib/python3.8/site-packages",
+        "/home/isopodin-time/ros2_ws/install/uuv_control_msgs/lib/python3.8/site-packages",
+        "/home/isopodin-time/ros2_ws/install/uuv_control_cascaded_pid/lib/python3.8/site-packages",
+        "/home/isopodin-time/ros2_ws/install/uuv_auv_control_allocator/lib/python3.8/site-packages",
+        "/home/isopodin-time/ros2_ws/install/uuv_assistants/lib/python3.8/site-packages",
+        "/home/isopodin-time/ros2_ws/install/plankton_utils/lib/python3.8/site-packages",
+        "/home/isopodin-time/ros2_ws/install/muuv_msgs/lib/python3.8/site-packages",
+        "/home/isopodin-time/ros2_ws/install/custom_msg_srv/lib/python3.8/site-packages",
+        "/opt/ros/foxy/lib/python3.8/site-packages"
+    ],
+    "python.analysis.extraPaths": [
+        "/home/isopodin-time/ros2_ws/install/uuv_world_ros_plugins_msgs/lib/python3.8/site-packages",
+        "/home/isopodin-time/ros2_ws/install/uuv_trajectory_control/lib/python3.8/site-packages",
+        "/home/isopodin-time/ros2_ws/install/uuv_thruster_manager/lib/python3.8/site-packages",
+        "/home/isopodin-time/ros2_ws/install/uuv_sensor_ros_plugins_msgs/lib/python3.8/site-packages",
+        "/home/isopodin-time/ros2_ws/install/uuv_gazebo_ros_plugins_msgs/lib/python3.8/site-packages",
+        "/home/isopodin-time/ros2_ws/install/uuv_control_msgs/lib/python3.8/site-packages",
+        "/home/isopodin-time/ros2_ws/install/uuv_control_cascaded_pid/lib/python3.8/site-packages",
+        "/home/isopodin-time/ros2_ws/install/uuv_auv_control_allocator/lib/python3.8/site-packages",
+        "/home/isopodin-time/ros2_ws/install/uuv_assistants/lib/python3.8/site-packages",
+        "/home/isopodin-time/ros2_ws/install/plankton_utils/lib/python3.8/site-packages",
+        "/home/isopodin-time/ros2_ws/install/muuv_msgs/lib/python3.8/site-packages",
+        "/home/isopodin-time/ros2_ws/install/custom_msg_srv/lib/python3.8/site-packages",
+        "/opt/ros/foxy/lib/python3.8/site-packages"
+    ]
+}

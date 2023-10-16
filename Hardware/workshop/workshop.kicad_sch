@@ -425,7 +425,6 @@
     )
   )
 
-
   (junction (at 142.24 63.5) (diameter 0) (color 0 0 0 0)
     (uuid 5c8ac510-eca3-455d-a8c6-b4de69ca9078)
   )
@@ -568,7 +567,7 @@
     (uuid f282cf6c-b5ea-463f-9918-12e5e9038fab)
   )
 
-  (text "555 timer frequency: 1Hz" (at 190.5 83.82 0)
+  (text "555 timer frequency: 1Hz" (at 114.3 50.8 0)
     (effects (font (size 1.27 1.27)) (justify left bottom))
     (uuid 8d2b050b-c197-42fc-9bb7-b2a3d5a61f69)
   )

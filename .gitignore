@@ -19,6 +19,7 @@ _autosave-*
 fp-info-cache
 gerber.zip
 *gerber
+*.lck
 
 # Netlist files (exported from Eeschema)
 *.net

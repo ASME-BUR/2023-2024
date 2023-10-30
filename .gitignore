@@ -17,9 +17,11 @@ _autosave-*
 *-save.pro
 *-save.kicad_pcb
 fp-info-cache
-gerber.zip
-*gerber
 *.lck
+
+# Gerbers
+*.zip
+*gerber
 
 # Netlist files (exported from Eeschema)
 *.net

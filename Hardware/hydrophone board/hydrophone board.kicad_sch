@@ -285,10 +285,10 @@
     (stroke (width 0.1524) (type solid))
     (fill (color 0 0 0 0.0000))
     (uuid cf9d259f-9643-49eb-8aca-1ca8b75f4d64)
-    (property "Sheetname" "linear regulator" (at 241.3 69.1384 0)
+    (property "Sheetname" "power" (at 241.3 69.1384 0)
       (effects (font (size 1.27 1.27)) (justify left bottom))
     )
-    (property "Sheetfile" "linear regulator.kicad_sch" (at 241.3 83.1346 0)
+    (property "Sheetfile" "power.kicad_sch" (at 241.3 83.1346 0)
       (effects (font (size 1.27 1.27)) (justify left top))
     )
     (instances

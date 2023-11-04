@@ -1,0 +1,4 @@
+(sym_lib_table
+  (version 7)
+  (lib (name "S5B-XH-A")(type "KiCad")(uri "${KIPRJMOD}/battery monitoring library/S5B-XH-A.kicad_sym")(options "")(descr ""))
+)

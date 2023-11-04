@@ -489,12 +489,16 @@
       "adc"
     ],
     [
-      "a8130f8e-af9b-4eca-a221-c91133653f4f",
-      "output connectors"
-    ],
-    [
       "cf9d259f-9643-49eb-8aca-1ca8b75f4d64",
       "power"
+    ],
+    [
+      "fa1a46a1-ed86-4a84-a182-b5dbe7fc86e7",
+      "preamp_2"
+    ],
+    [
+      "1c2c9d85-5695-48de-99af-3ac5f27a43fe",
+      "mcu"
     ]
   ],
   "text_variables": {}

@@ -596,6 +596,9 @@
         (path "/4356d3a6-6a00-447d-897e-473f60221539/f560d530-135c-40dc-9144-4f9599a30f13"
           (reference "#PWR03") (unit 1)
         )
+        (path "/4356d3a6-6a00-447d-897e-473f60221539/fa1a46a1-ed86-4a84-a182-b5dbe7fc86e7"
+          (reference "#PWR020") (unit 1)
+        )
       )
     )
   )
@@ -621,6 +624,9 @@
       (project "hydrophone board"
         (path "/4356d3a6-6a00-447d-897e-473f60221539/f560d530-135c-40dc-9144-4f9599a30f13"
           (reference "C3") (unit 1)
+        )
+        (path "/4356d3a6-6a00-447d-897e-473f60221539/fa1a46a1-ed86-4a84-a182-b5dbe7fc86e7"
+          (reference "C39") (unit 1)
         )
       )
     )
@@ -650,6 +656,9 @@
         (path "/4356d3a6-6a00-447d-897e-473f60221539/f560d530-135c-40dc-9144-4f9599a30f13"
           (reference "#PWR04") (unit 1)
         )
+        (path "/4356d3a6-6a00-447d-897e-473f60221539/fa1a46a1-ed86-4a84-a182-b5dbe7fc86e7"
+          (reference "#PWR021") (unit 1)
+        )
       )
     )
   )
@@ -678,6 +687,9 @@
         (path "/4356d3a6-6a00-447d-897e-473f60221539/f560d530-135c-40dc-9144-4f9599a30f13"
           (reference "#PWR06") (unit 1)
         )
+        (path "/4356d3a6-6a00-447d-897e-473f60221539/fa1a46a1-ed86-4a84-a182-b5dbe7fc86e7"
+          (reference "#PWR041") (unit 1)
+        )
       )
     )
   )
@@ -703,6 +715,9 @@
       (project "hydrophone board"
         (path "/4356d3a6-6a00-447d-897e-473f60221539/f560d530-135c-40dc-9144-4f9599a30f13"
           (reference "R2") (unit 1)
+        )
+        (path "/4356d3a6-6a00-447d-897e-473f60221539/fa1a46a1-ed86-4a84-a182-b5dbe7fc86e7"
+          (reference "R13") (unit 1)
         )
       )
     )
@@ -732,6 +747,9 @@
         (path "/4356d3a6-6a00-447d-897e-473f60221539/f560d530-135c-40dc-9144-4f9599a30f13"
           (reference "#PWR05") (unit 1)
         )
+        (path "/4356d3a6-6a00-447d-897e-473f60221539/fa1a46a1-ed86-4a84-a182-b5dbe7fc86e7"
+          (reference "#PWR022") (unit 1)
+        )
       )
     )
   )
@@ -758,6 +776,9 @@
         (path "/4356d3a6-6a00-447d-897e-473f60221539/f560d530-135c-40dc-9144-4f9599a30f13"
           (reference "R4") (unit 1)
         )
+        (path "/4356d3a6-6a00-447d-897e-473f60221539/fa1a46a1-ed86-4a84-a182-b5dbe7fc86e7"
+          (reference "R20") (unit 1)
+        )
       )
     )
   )
@@ -783,6 +804,9 @@
       (project "hydrophone board"
         (path "/4356d3a6-6a00-447d-897e-473f60221539/f560d530-135c-40dc-9144-4f9599a30f13"
           (reference "C1") (unit 1)
+        )
+        (path "/4356d3a6-6a00-447d-897e-473f60221539/fa1a46a1-ed86-4a84-a182-b5dbe7fc86e7"
+          (reference "C22") (unit 1)
         )
       )
     )
@@ -812,6 +836,9 @@
         (path "/4356d3a6-6a00-447d-897e-473f60221539/f560d530-135c-40dc-9144-4f9599a30f13"
           (reference "#PWR07") (unit 1)
         )
+        (path "/4356d3a6-6a00-447d-897e-473f60221539/fa1a46a1-ed86-4a84-a182-b5dbe7fc86e7"
+          (reference "#PWR042") (unit 1)
+        )
       )
     )
   )
@@ -837,6 +864,9 @@
       (project "hydrophone board"
         (path "/4356d3a6-6a00-447d-897e-473f60221539/f560d530-135c-40dc-9144-4f9599a30f13"
           (reference "C2") (unit 1)
+        )
+        (path "/4356d3a6-6a00-447d-897e-473f60221539/fa1a46a1-ed86-4a84-a182-b5dbe7fc86e7"
+          (reference "C38") (unit 1)
         )
       )
     )
@@ -867,6 +897,9 @@
         (path "/4356d3a6-6a00-447d-897e-473f60221539/f560d530-135c-40dc-9144-4f9599a30f13"
           (reference "U1") (unit 1)
         )
+        (path "/4356d3a6-6a00-447d-897e-473f60221539/fa1a46a1-ed86-4a84-a182-b5dbe7fc86e7"
+          (reference "U6") (unit 1)
+        )
       )
     )
   )
@@ -895,6 +928,9 @@
         (path "/4356d3a6-6a00-447d-897e-473f60221539/f560d530-135c-40dc-9144-4f9599a30f13"
           (reference "#PWR08") (unit 1)
         )
+        (path "/4356d3a6-6a00-447d-897e-473f60221539/fa1a46a1-ed86-4a84-a182-b5dbe7fc86e7"
+          (reference "#PWR043") (unit 1)
+        )
       )
     )
   )
@@ -920,6 +956,9 @@
       (project "hydrophone board"
         (path "/4356d3a6-6a00-447d-897e-473f60221539/f560d530-135c-40dc-9144-4f9599a30f13"
           (reference "C4") (unit 1)
+        )
+        (path "/4356d3a6-6a00-447d-897e-473f60221539/fa1a46a1-ed86-4a84-a182-b5dbe7fc86e7"
+          (reference "C40") (unit 1)
         )
       )
     )
@@ -949,6 +988,9 @@
         (path "/4356d3a6-6a00-447d-897e-473f60221539/f560d530-135c-40dc-9144-4f9599a30f13"
           (reference "TP1") (unit 1)
         )
+        (path "/4356d3a6-6a00-447d-897e-473f60221539/fa1a46a1-ed86-4a84-a182-b5dbe7fc86e7"
+          (reference "TP15") (unit 1)
+        )
       )
     )
   )
@@ -975,6 +1017,9 @@
         (path "/4356d3a6-6a00-447d-897e-473f60221539/f560d530-135c-40dc-9144-4f9599a30f13"
           (reference "R1") (unit 1)
         )
+        (path "/4356d3a6-6a00-447d-897e-473f60221539/fa1a46a1-ed86-4a84-a182-b5dbe7fc86e7"
+          (reference "R12") (unit 1)
+        )
       )
     )
   )
@@ -1000,6 +1045,9 @@
       (project "hydrophone board"
         (path "/4356d3a6-6a00-447d-897e-473f60221539/f560d530-135c-40dc-9144-4f9599a30f13"
           (reference "R3") (unit 1)
+        )
+        (path "/4356d3a6-6a00-447d-897e-473f60221539/fa1a46a1-ed86-4a84-a182-b5dbe7fc86e7"
+          (reference "R19") (unit 1)
         )
       )
     )

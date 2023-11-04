@@ -567,6 +567,11 @@
           (reference "C3") (unit 1)
         )
       )
+      (project "battery monitoring board"
+        (path "/bf623d80-ca5a-491f-9daa-4dffbeba5279/986cc9e1-c37e-4aa2-b3b5-8e2dcbe750c5"
+          (reference "C3") (unit 1)
+        )
+      )
     )
   )
 
@@ -590,6 +595,11 @@
     (instances
       (project "voltage monitor"
         (path "/64dd58dd-0f80-4046-8958-33031e8c772b"
+          (reference "C1") (unit 1)
+        )
+      )
+      (project "battery monitoring board"
+        (path "/bf623d80-ca5a-491f-9daa-4dffbeba5279/986cc9e1-c37e-4aa2-b3b5-8e2dcbe750c5"
           (reference "C1") (unit 1)
         )
       )
@@ -649,6 +659,11 @@
           (reference "#PWR04") (unit 1)
         )
       )
+      (project "battery monitoring board"
+        (path "/bf623d80-ca5a-491f-9daa-4dffbeba5279/986cc9e1-c37e-4aa2-b3b5-8e2dcbe750c5"
+          (reference "#PWR04") (unit 1)
+        )
+      )
     )
   )
 
@@ -671,6 +686,11 @@
     (instances
       (project "voltage monitor"
         (path "/64dd58dd-0f80-4046-8958-33031e8c772b"
+          (reference "#PWR02") (unit 1)
+        )
+      )
+      (project "battery monitoring board"
+        (path "/bf623d80-ca5a-491f-9daa-4dffbeba5279/986cc9e1-c37e-4aa2-b3b5-8e2dcbe750c5"
           (reference "#PWR02") (unit 1)
         )
       )
@@ -727,6 +747,11 @@
     (instances
       (project "voltage monitor"
         (path "/64dd58dd-0f80-4046-8958-33031e8c772b"
+          (reference "#PWR03") (unit 1)
+        )
+      )
+      (project "battery monitoring board"
+        (path "/bf623d80-ca5a-491f-9daa-4dffbeba5279/986cc9e1-c37e-4aa2-b3b5-8e2dcbe750c5"
           (reference "#PWR03") (unit 1)
         )
       )
@@ -815,6 +840,11 @@
     (instances
       (project "voltage monitor"
         (path "/64dd58dd-0f80-4046-8958-33031e8c772b"
+          (reference "C2") (unit 1)
+        )
+      )
+      (project "battery monitoring board"
+        (path "/bf623d80-ca5a-491f-9daa-4dffbeba5279/986cc9e1-c37e-4aa2-b3b5-8e2dcbe750c5"
           (reference "C2") (unit 1)
         )
       )

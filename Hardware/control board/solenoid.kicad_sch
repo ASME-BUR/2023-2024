@@ -82,6 +82,53 @@
         )
       )
     )
+    (symbol "Device:Fuse" (pin_numbers hide) (pin_names (offset 0)) (in_bom yes) (on_board yes)
+      (property "Reference" "F" (at 2.032 0 90)
+        (effects (font (size 1.27 1.27)))
+      )
+      (property "Value" "Fuse" (at -1.905 0 90)
+        (effects (font (size 1.27 1.27)))
+      )
+      (property "Footprint" "" (at -1.778 0 90)
+        (effects (font (size 1.27 1.27)) hide)
+      )
+      (property "Datasheet" "~" (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide)
+      )
+      (property "ki_keywords" "fuse" (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide)
+      )
+      (property "ki_description" "Fuse" (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide)
+      )
+      (property "ki_fp_filters" "*Fuse*" (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide)
+      )
+      (symbol "Fuse_0_1"
+        (rectangle (start -0.762 -2.54) (end 0.762 2.54)
+          (stroke (width 0.254) (type default))
+          (fill (type none))
+        )
+        (polyline
+          (pts
+            (xy 0 2.54)
+            (xy 0 -2.54)
+          )
+          (stroke (width 0) (type default))
+          (fill (type none))
+        )
+      )
+      (symbol "Fuse_1_1"
+        (pin passive line (at 0 3.81 270) (length 1.27)
+          (name "~" (effects (font (size 1.27 1.27))))
+          (number "1" (effects (font (size 1.27 1.27))))
+        )
+        (pin passive line (at 0 -3.81 90) (length 1.27)
+          (name "~" (effects (font (size 1.27 1.27))))
+          (number "2" (effects (font (size 1.27 1.27))))
+        )
+      )
+    )
     (symbol "Device:LED" (pin_numbers hide) (pin_names (offset 1.016) hide) (in_bom yes) (on_board yes)
       (property "Reference" "D" (at 0 2.54 0)
         (effects (font (size 1.27 1.27)))
@@ -564,6 +611,9 @@
     )
   )
 
+  (junction (at 122.555 75.565) (diameter 0) (color 0 0 0 0)
+    (uuid 02231a45-1b3d-4994-aeea-a7869b4c9061)
+  )
   (junction (at 129.54 75.565) (diameter 0) (color 0 0 0 0)
     (uuid 50e5d335-9a41-45f7-a277-a7cf1837890a)
   )
@@ -578,9 +628,6 @@
   )
   (junction (at 129.54 90.805) (diameter 0) (color 0 0 0 0)
     (uuid dd74b29a-f3ed-437b-bbcd-fe9db01477d4)
-  )
-  (junction (at 122.555 75.565) (diameter 0) (color 0 0 0 0)
-    (uuid e44b3ad2-658d-4892-83c1-0f589b697185)
   )
 
   (wire (pts (xy 120.015 113.03) (xy 122.555 113.03))
@@ -619,6 +666,10 @@
     (stroke (width 0) (type default))
     (uuid 71330dab-de12-420c-9385-cc2e61c871c9)
   )
+  (wire (pts (xy 122.555 73.025) (xy 122.555 75.565))
+    (stroke (width 0) (type default))
+    (uuid 9f79ba09-96f9-4564-a382-bff9040f04dd)
+  )
   (wire (pts (xy 122.555 104.14) (xy 122.555 113.03))
     (stroke (width 0) (type default))
     (uuid a59653c6-e180-4681-960d-1ae9c0ee53ff)
@@ -643,13 +694,13 @@
     (stroke (width 0) (type default))
     (uuid d6ac1f71-4a51-434f-8a54-de9f8c66fefc)
   )
+  (wire (pts (xy 122.555 59.69) (xy 122.555 65.405))
+    (stroke (width 0) (type default))
+    (uuid d96a5dfc-06c9-4cc4-a5d4-041060aa0eb6)
+  )
   (wire (pts (xy 139.7 88.265) (xy 153.67 88.265))
     (stroke (width 0) (type default))
     (uuid e6c77f3f-ca97-4be6-9820-a63757998045)
-  )
-  (wire (pts (xy 122.555 71.755) (xy 122.555 75.565))
-    (stroke (width 0) (type default))
-    (uuid e73d82a4-a58e-430a-ba96-11d0e23a7f79)
   )
   (wire (pts (xy 122.555 113.03) (xy 122.555 118.745))
     (stroke (width 0) (type default))
@@ -689,6 +740,11 @@
     (pin "2" (uuid fdc49a86-3d40-4798-88f6-555529ce8c09))
     (pin "3" (uuid d3332281-74f8-4883-a610-2a3d38135b38))
     (instances
+      (project "solenoid"
+        (path "/b4ed5960-473e-41d7-9d87-eb439ed22219"
+          (reference "Q3") (unit 1)
+        )
+      )
       (project "control board"
         (path "/cf0863a8-7f64-449b-8eb4-3c06c871fb37"
           (reference "Q3") (unit 1)
@@ -701,6 +757,43 @@
         )
         (path "/cf0863a8-7f64-449b-8eb4-3c06c871fb37/f39ce93b-3626-4dde-a021-b00a2c8134c7"
           (reference "Q3") (unit 1)
+        )
+      )
+    )
+  )
+
+  (symbol (lib_id "Device:Fuse") (at 122.555 69.215 0) (unit 1)
+    (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
+    (uuid 29e02065-d1be-4faf-8dbe-f1d32edf31de)
+    (property "Reference" "F1" (at 124.46 67.945 0)
+      (effects (font (size 1.27 1.27)) (justify left))
+    )
+    (property "Value" "25 A" (at 124.46 70.485 0)
+      (effects (font (size 1.27 1.27)) (justify left))
+    )
+    (property "Footprint" "" (at 120.777 69.215 90)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Datasheet" "~" (at 122.555 69.215 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (pin "1" (uuid d747c95b-41eb-4342-b195-69d01748d0f7))
+    (pin "2" (uuid 3d42766b-2b38-4c22-b6f5-c7a69d8e4541))
+    (instances
+      (project "solenoid"
+        (path "/b4ed5960-473e-41d7-9d87-eb439ed22219"
+          (reference "F1") (unit 1)
+        )
+      )
+      (project "control board"
+        (path "/cf0863a8-7f64-449b-8eb4-3c06c871fb37/9fd0b45f-6f46-40af-ae0d-29c33b45e498"
+          (reference "F1") (unit 1)
+        )
+        (path "/cf0863a8-7f64-449b-8eb4-3c06c871fb37/6163a064-c95f-47b6-9c17-0e18c391c233"
+          (reference "F1") (unit 1)
+        )
+        (path "/cf0863a8-7f64-449b-8eb4-3c06c871fb37/f39ce93b-3626-4dde-a021-b00a2c8134c7"
+          (reference "F1") (unit 1)
         )
       )
     )
@@ -724,6 +817,11 @@
     (pin "1" (uuid 25beb217-c9e5-44db-99bc-6410bb1d1736))
     (pin "2" (uuid 3f44aeac-fd0e-4481-bb3a-76b6fda77b9a))
     (instances
+      (project "solenoid"
+        (path "/b4ed5960-473e-41d7-9d87-eb439ed22219"
+          (reference "D6") (unit 1)
+        )
+      )
       (project "control board"
         (path "/cf0863a8-7f64-449b-8eb4-3c06c871fb37"
           (reference "D6") (unit 1)
@@ -759,6 +857,11 @@
     (pin "1" (uuid f488649b-dc01-4b29-b1fc-47db0a043d9d))
     (pin "2" (uuid f9e24e96-7e0d-49aa-b513-9aee30dd9ee2))
     (instances
+      (project "solenoid"
+        (path "/b4ed5960-473e-41d7-9d87-eb439ed22219"
+          (reference "J11") (unit 1)
+        )
+      )
       (project "control board"
         (path "/cf0863a8-7f64-449b-8eb4-3c06c871fb37"
           (reference "J11") (unit 1)
@@ -771,40 +874,6 @@
         )
         (path "/cf0863a8-7f64-449b-8eb4-3c06c871fb37/f39ce93b-3626-4dde-a021-b00a2c8134c7"
           (reference "J11") (unit 1)
-        )
-      )
-    )
-  )
-
-  (symbol (lib_id "power:+12V") (at 122.555 71.755 0) (unit 1)
-    (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
-    (uuid 4d5f63ba-8003-4bc7-a6b8-bc5541e8c9b3)
-    (property "Reference" "#PWR08" (at 122.555 75.565 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Value" "+12V" (at 122.555 66.675 0)
-      (effects (font (size 1.27 1.27)))
-    )
-    (property "Footprint" "" (at 122.555 71.755 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Datasheet" "" (at 122.555 71.755 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (pin "1" (uuid 5d216f03-baf6-426d-949b-dd4544553e26))
-    (instances
-      (project "control board"
-        (path "/cf0863a8-7f64-449b-8eb4-3c06c871fb37"
-          (reference "#PWR08") (unit 1)
-        )
-        (path "/cf0863a8-7f64-449b-8eb4-3c06c871fb37/9fd0b45f-6f46-40af-ae0d-29c33b45e498"
-          (reference "#PWR02") (unit 1)
-        )
-        (path "/cf0863a8-7f64-449b-8eb4-3c06c871fb37/6163a064-c95f-47b6-9c17-0e18c391c233"
-          (reference "#PWR04") (unit 1)
-        )
-        (path "/cf0863a8-7f64-449b-8eb4-3c06c871fb37/f39ce93b-3626-4dde-a021-b00a2c8134c7"
-          (reference "#PWR06") (unit 1)
         )
       )
     )
@@ -828,6 +897,11 @@
     (pin "1" (uuid 985376eb-18e9-499e-bf1d-26735a8162de))
     (pin "2" (uuid 66d4d2fc-c206-47db-a4bc-b6b178b94c5d))
     (instances
+      (project "solenoid"
+        (path "/b4ed5960-473e-41d7-9d87-eb439ed22219"
+          (reference "R8") (unit 1)
+        )
+      )
       (project "control board"
         (path "/cf0863a8-7f64-449b-8eb4-3c06c871fb37"
           (reference "R8") (unit 1)
@@ -863,6 +937,11 @@
     (pin "1" (uuid 13ca0e15-09f5-4c7a-b5b1-2171b2856925))
     (pin "2" (uuid e949f59c-80db-4e1d-a569-0f45ee44f202))
     (instances
+      (project "solenoid"
+        (path "/b4ed5960-473e-41d7-9d87-eb439ed22219"
+          (reference "R9") (unit 1)
+        )
+      )
       (project "control board"
         (path "/cf0863a8-7f64-449b-8eb4-3c06c871fb37"
           (reference "R9") (unit 1)
@@ -897,6 +976,11 @@
     )
     (pin "1" (uuid 13285189-dccf-49cc-8437-3d586f6c8932))
     (instances
+      (project "solenoid"
+        (path "/b4ed5960-473e-41d7-9d87-eb439ed22219"
+          (reference "#PWR09") (unit 1)
+        )
+      )
       (project "control board"
         (path "/cf0863a8-7f64-449b-8eb4-3c06c871fb37"
           (reference "#PWR09") (unit 1)
@@ -932,6 +1016,11 @@
     (pin "1" (uuid 6f2aa0e3-b7f7-4fd2-bffb-d3b753e26d23))
     (pin "2" (uuid 06d168d0-5e0b-4d65-aaad-622bd6a75718))
     (instances
+      (project "solenoid"
+        (path "/b4ed5960-473e-41d7-9d87-eb439ed22219"
+          (reference "R7") (unit 1)
+        )
+      )
       (project "control board"
         (path "/cf0863a8-7f64-449b-8eb4-3c06c871fb37"
           (reference "R7") (unit 1)
@@ -944,6 +1033,42 @@
         )
         (path "/cf0863a8-7f64-449b-8eb4-3c06c871fb37/f39ce93b-3626-4dde-a021-b00a2c8134c7"
           (reference "R7") (unit 1)
+        )
+      )
+    )
+  )
+
+  (symbol (lib_id "power:+12V") (at 122.555 59.69 0) (unit 1)
+    (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
+    (uuid dfda5c89-96c6-4595-8ba1-afb1c6b932d1)
+    (property "Reference" "#PWR01" (at 122.555 63.5 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Value" "+12V" (at 122.555 54.61 0)
+      (effects (font (size 1.27 1.27)))
+    )
+    (property "Footprint" "" (at 122.555 59.69 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Datasheet" "" (at 122.555 59.69 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (pin "1" (uuid 4990a876-81ec-4d69-801c-3c3992636b33))
+    (instances
+      (project "solenoid"
+        (path "/b4ed5960-473e-41d7-9d87-eb439ed22219"
+          (reference "#PWR01") (unit 1)
+        )
+      )
+      (project "control board"
+        (path "/cf0863a8-7f64-449b-8eb4-3c06c871fb37/9fd0b45f-6f46-40af-ae0d-29c33b45e498"
+          (reference "#PWR01") (unit 1)
+        )
+        (path "/cf0863a8-7f64-449b-8eb4-3c06c871fb37/6163a064-c95f-47b6-9c17-0e18c391c233"
+          (reference "#PWR01") (unit 1)
+        )
+        (path "/cf0863a8-7f64-449b-8eb4-3c06c871fb37/f39ce93b-3626-4dde-a021-b00a2c8134c7"
+          (reference "#PWR01") (unit 1)
         )
       )
     )
@@ -973,6 +1098,11 @@
     (pin "1" (uuid 68f652b8-22b3-4ea7-b489-f8e0bab4f36c))
     (pin "2" (uuid 55acd9df-ae5d-400e-90a8-1a71129012f8))
     (instances
+      (project "solenoid"
+        (path "/b4ed5960-473e-41d7-9d87-eb439ed22219"
+          (reference "D5") (unit 1)
+        )
+      )
       (project "control board"
         (path "/cf0863a8-7f64-449b-8eb4-3c06c871fb37"
           (reference "D5") (unit 1)

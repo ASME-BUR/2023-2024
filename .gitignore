@@ -33,6 +33,3 @@ fp-info-cache
 # Exported BOM files
 # *.xml
 # *.csv
-
-# mac
-.DS_Store

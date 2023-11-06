@@ -1054,6 +1054,10 @@
     (uuid f7e73fdf-f27e-49f2-9137-f263e4dfebe6)
   )
 
+  (text "choose 3.3V from MCU or linear regulator" (at 133.35 45.72 0)
+    (effects (font (size 1.27 1.27)) (justify left bottom))
+    (uuid ad69eaff-4895-4c49-916c-3bd85dddc215)
+  )
   (text "ADC max current draw = 20 mA\nop amps max current draw = 75 uA/amp * 5 amps/channel * 4 channels = 1.5mA\nLED = 18 mA"
     (at 165.1 114.3 0)
     (effects (font (size 1.27 1.27)) (justify left bottom))

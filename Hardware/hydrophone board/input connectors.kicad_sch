@@ -442,7 +442,7 @@
   (symbol (lib_id "Connector_Generic:Conn_01x02") (at 110.49 76.2 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 0d2ef0b8-5c55-4c49-b425-a888934cc39c)
-    (property "Reference" "J2" (at 113.03 76.835 0)
+    (property "Reference" "J6" (at 113.03 76.835 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "Conn_01x02" (at 113.03 79.375 0)
@@ -459,7 +459,7 @@
     (instances
       (project "hydrophone board"
         (path "/4356d3a6-6a00-447d-897e-473f60221539/1cfbaf71-7039-4355-8fc7-d8c77f0e8058"
-          (reference "J2") (unit 1)
+          (reference "J6") (unit 1)
         )
       )
     )
@@ -468,7 +468,7 @@
   (symbol (lib_id "Connector_Generic:Conn_01x02") (at 72.39 76.2 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 3a894420-1286-4bb3-af6f-6e8c4129f418)
-    (property "Reference" "J10" (at 74.93 76.835 0)
+    (property "Reference" "J5" (at 74.93 76.835 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "Conn_01x02" (at 74.93 79.375 0)
@@ -485,7 +485,7 @@
     (instances
       (project "hydrophone board"
         (path "/4356d3a6-6a00-447d-897e-473f60221539/1cfbaf71-7039-4355-8fc7-d8c77f0e8058"
-          (reference "J10") (unit 1)
+          (reference "J5") (unit 1)
         )
       )
     )
@@ -516,7 +516,7 @@
           (reference "J?") (unit 1)
         )
         (path "/4356d3a6-6a00-447d-897e-473f60221539/1cfbaf71-7039-4355-8fc7-d8c77f0e8058"
-          (reference "J3") (unit 1)
+          (reference "J2") (unit 1)
         )
       )
     )
@@ -525,7 +525,7 @@
   (symbol (lib_id "Connector_Generic:Conn_01x02") (at 148.59 76.2 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 52d2e3f1-8a81-44e8-9fc2-4f49b5dc0e89)
-    (property "Reference" "J4" (at 151.13 76.835 0)
+    (property "Reference" "J7" (at 151.13 76.835 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "Conn_01x02" (at 151.13 79.375 0)
@@ -542,7 +542,7 @@
     (instances
       (project "hydrophone board"
         (path "/4356d3a6-6a00-447d-897e-473f60221539/1cfbaf71-7039-4355-8fc7-d8c77f0e8058"
-          (reference "J4") (unit 1)
+          (reference "J7") (unit 1)
         )
       )
     )
@@ -573,7 +573,7 @@
           (reference "J?") (unit 1)
         )
         (path "/4356d3a6-6a00-447d-897e-473f60221539/1cfbaf71-7039-4355-8fc7-d8c77f0e8058"
-          (reference "J5") (unit 1)
+          (reference "J3") (unit 1)
         )
       )
     )
@@ -582,7 +582,7 @@
   (symbol (lib_id "power:GND") (at 187.96 57.15 90) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 5fbd9ad1-5677-4d87-86e0-ae9c8475a37e)
-    (property "Reference" "#PWR02" (at 194.31 57.15 0)
+    (property "Reference" "#PWR01" (at 194.31 57.15 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (at 191.77 57.785 90)
@@ -598,7 +598,7 @@
     (instances
       (project "hydrophone board"
         (path "/4356d3a6-6a00-447d-897e-473f60221539/1cfbaf71-7039-4355-8fc7-d8c77f0e8058"
-          (reference "#PWR02") (unit 1)
+          (reference "#PWR01") (unit 1)
         )
       )
     )
@@ -629,7 +629,7 @@
           (reference "J?") (unit 1)
         )
         (path "/4356d3a6-6a00-447d-897e-473f60221539/1cfbaf71-7039-4355-8fc7-d8c77f0e8058"
-          (reference "J7") (unit 1)
+          (reference "J4") (unit 1)
         )
       )
     )
@@ -638,7 +638,7 @@
   (symbol (lib_id "Connector_Generic:Conn_01x02") (at 186.69 76.2 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid b0c445f0-74ae-48d8-a1e7-d31670a77691)
-    (property "Reference" "J6" (at 189.23 76.835 0)
+    (property "Reference" "J8" (at 189.23 76.835 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "Conn_01x02" (at 189.23 79.375 0)
@@ -655,7 +655,7 @@
     (instances
       (project "hydrophone board"
         (path "/4356d3a6-6a00-447d-897e-473f60221539/1cfbaf71-7039-4355-8fc7-d8c77f0e8058"
-          (reference "J6") (unit 1)
+          (reference "J8") (unit 1)
         )
       )
     )
@@ -664,7 +664,7 @@
   (symbol (lib_id "power:GND") (at 55.88 90.17 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid fb342223-5c69-401c-91ff-5a75b6e3c5c6)
-    (property "Reference" "#PWR01" (at 55.88 96.52 0)
+    (property "Reference" "#PWR02" (at 55.88 96.52 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (at 55.88 95.25 0)
@@ -680,7 +680,7 @@
     (instances
       (project "hydrophone board"
         (path "/4356d3a6-6a00-447d-897e-473f60221539/1cfbaf71-7039-4355-8fc7-d8c77f0e8058"
-          (reference "#PWR01") (unit 1)
+          (reference "#PWR02") (unit 1)
         )
       )
     )

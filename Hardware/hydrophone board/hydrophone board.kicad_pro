@@ -434,7 +434,7 @@
     "page_layout_descr_file": ""
   },
   "schematic": {
-    "annotate_start_num": 0,
+    "annotate_start_num": 240,
     "drawing": {
       "dashed_lines_dash_length_ratio": 12.0,
       "dashed_lines_gap_length_ratio": 3.0,
@@ -481,24 +481,44 @@
       "preamp"
     ],
     [
+      "fa1a46a1-ed86-4a84-a182-b5dbe7fc86e7",
+      "preamp_2"
+    ],
+    [
+      "d3a562a3-af99-4bb5-b5fa-eb83660cffa4",
+      "preamp_3"
+    ],
+    [
+      "6f981a72-1f6f-4ccf-ba7d-c5dfb70b4229",
+      "preamp_4"
+    ],
+    [
       "c13371a9-09b1-4e65-81c3-6f6fb4c4ebd4",
       "low pass filter"
+    ],
+    [
+      "924dcbbe-1ff5-4b2e-a973-2a9e51c40258",
+      "low pass filter_2"
+    ],
+    [
+      "9c7eb115-b279-4a21-9abb-ee1a14da0145",
+      "low pass filter_3"
+    ],
+    [
+      "025ca7c2-0364-4e32-8d6c-dbe542d6c74c",
+      "low pass filter_4"
     ],
     [
       "c9760799-658d-4181-af96-8731ebbcaea9",
       "adc"
     ],
     [
-      "cf9d259f-9643-49eb-8aca-1ca8b75f4d64",
-      "power"
-    ],
-    [
-      "fa1a46a1-ed86-4a84-a182-b5dbe7fc86e7",
-      "preamp_2"
-    ],
-    [
       "1c2c9d85-5695-48de-99af-3ac5f27a43fe",
       "mcu"
+    ],
+    [
+      "cf9d259f-9643-49eb-8aca-1ca8b75f4d64",
+      "power"
     ]
   ],
   "text_variables": {}

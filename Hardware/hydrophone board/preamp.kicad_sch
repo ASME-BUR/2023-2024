@@ -578,7 +578,7 @@
   (symbol (lib_id "power:+5VA") (at 63.5 71.12 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 046f9a00-5808-41c4-bff3-9dcc16609561)
-    (property "Reference" "#PWR03" (at 63.5 74.93 0)
+    (property "Reference" "#PWR0113" (at 63.5 74.93 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "+5VA" (at 62.865 67.31 90)
@@ -594,10 +594,16 @@
     (instances
       (project "hydrophone board"
         (path "/4356d3a6-6a00-447d-897e-473f60221539/f560d530-135c-40dc-9144-4f9599a30f13"
-          (reference "#PWR03") (unit 1)
+          (reference "#PWR0113") (unit 1)
         )
         (path "/4356d3a6-6a00-447d-897e-473f60221539/fa1a46a1-ed86-4a84-a182-b5dbe7fc86e7"
-          (reference "#PWR020") (unit 1)
+          (reference "#PWR0123") (unit 1)
+        )
+        (path "/4356d3a6-6a00-447d-897e-473f60221539/d3a562a3-af99-4bb5-b5fa-eb83660cffa4"
+          (reference "#PWR0133") (unit 1)
+        )
+        (path "/4356d3a6-6a00-447d-897e-473f60221539/6f981a72-1f6f-4ccf-ba7d-c5dfb70b4229"
+          (reference "#PWR0143") (unit 1)
         )
       )
     )
@@ -606,7 +612,7 @@
   (symbol (lib_id "Device:C") (at 124.46 63.5 270) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 141f6152-aac6-49c7-bbf7-c41ee2e0e804)
-    (property "Reference" "C3" (at 124.46 57.15 90)
+    (property "Reference" "C112" (at 124.46 57.15 90)
       (effects (font (size 1.27 1.27)))
     )
     (property "Value" "821p" (at 124.46 59.69 90)
@@ -623,10 +629,16 @@
     (instances
       (project "hydrophone board"
         (path "/4356d3a6-6a00-447d-897e-473f60221539/f560d530-135c-40dc-9144-4f9599a30f13"
-          (reference "C3") (unit 1)
+          (reference "C112") (unit 1)
         )
         (path "/4356d3a6-6a00-447d-897e-473f60221539/fa1a46a1-ed86-4a84-a182-b5dbe7fc86e7"
-          (reference "C39") (unit 1)
+          (reference "C122") (unit 1)
+        )
+        (path "/4356d3a6-6a00-447d-897e-473f60221539/d3a562a3-af99-4bb5-b5fa-eb83660cffa4"
+          (reference "C132") (unit 1)
+        )
+        (path "/4356d3a6-6a00-447d-897e-473f60221539/6f981a72-1f6f-4ccf-ba7d-c5dfb70b4229"
+          (reference "C142") (unit 1)
         )
       )
     )
@@ -654,10 +666,16 @@
           (reference "#PWR?") (unit 1)
         )
         (path "/4356d3a6-6a00-447d-897e-473f60221539/f560d530-135c-40dc-9144-4f9599a30f13"
-          (reference "#PWR04") (unit 1)
+          (reference "#PWR0115") (unit 1)
         )
         (path "/4356d3a6-6a00-447d-897e-473f60221539/fa1a46a1-ed86-4a84-a182-b5dbe7fc86e7"
-          (reference "#PWR021") (unit 1)
+          (reference "#PWR0125") (unit 1)
+        )
+        (path "/4356d3a6-6a00-447d-897e-473f60221539/d3a562a3-af99-4bb5-b5fa-eb83660cffa4"
+          (reference "#PWR0135") (unit 1)
+        )
+        (path "/4356d3a6-6a00-447d-897e-473f60221539/6f981a72-1f6f-4ccf-ba7d-c5dfb70b4229"
+          (reference "#PWR0145") (unit 1)
         )
       )
     )
@@ -685,10 +703,16 @@
           (reference "#PWR0401") (unit 1)
         )
         (path "/4356d3a6-6a00-447d-897e-473f60221539/f560d530-135c-40dc-9144-4f9599a30f13"
-          (reference "#PWR06") (unit 1)
+          (reference "#PWR0111") (unit 1)
         )
         (path "/4356d3a6-6a00-447d-897e-473f60221539/fa1a46a1-ed86-4a84-a182-b5dbe7fc86e7"
-          (reference "#PWR041") (unit 1)
+          (reference "#PWR0121") (unit 1)
+        )
+        (path "/4356d3a6-6a00-447d-897e-473f60221539/d3a562a3-af99-4bb5-b5fa-eb83660cffa4"
+          (reference "#PWR0131") (unit 1)
+        )
+        (path "/4356d3a6-6a00-447d-897e-473f60221539/6f981a72-1f6f-4ccf-ba7d-c5dfb70b4229"
+          (reference "#PWR0141") (unit 1)
         )
       )
     )
@@ -697,7 +721,7 @@
   (symbol (lib_id "Device:R_US") (at 95.25 107.95 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 472c8604-99fd-4299-b3c5-19a2c93aca38)
-    (property "Reference" "R2" (at 97.79 107.315 0)
+    (property "Reference" "R113" (at 97.79 107.315 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "10k" (at 97.79 109.855 0)
@@ -714,10 +738,16 @@
     (instances
       (project "hydrophone board"
         (path "/4356d3a6-6a00-447d-897e-473f60221539/f560d530-135c-40dc-9144-4f9599a30f13"
-          (reference "R2") (unit 1)
+          (reference "R113") (unit 1)
         )
         (path "/4356d3a6-6a00-447d-897e-473f60221539/fa1a46a1-ed86-4a84-a182-b5dbe7fc86e7"
-          (reference "R13") (unit 1)
+          (reference "R123") (unit 1)
+        )
+        (path "/4356d3a6-6a00-447d-897e-473f60221539/d3a562a3-af99-4bb5-b5fa-eb83660cffa4"
+          (reference "R133") (unit 1)
+        )
+        (path "/4356d3a6-6a00-447d-897e-473f60221539/6f981a72-1f6f-4ccf-ba7d-c5dfb70b4229"
+          (reference "R143") (unit 1)
         )
       )
     )
@@ -745,10 +775,16 @@
           (reference "#PWR0205") (unit 1)
         )
         (path "/4356d3a6-6a00-447d-897e-473f60221539/f560d530-135c-40dc-9144-4f9599a30f13"
-          (reference "#PWR05") (unit 1)
+          (reference "#PWR0116") (unit 1)
         )
         (path "/4356d3a6-6a00-447d-897e-473f60221539/fa1a46a1-ed86-4a84-a182-b5dbe7fc86e7"
-          (reference "#PWR022") (unit 1)
+          (reference "#PWR0126") (unit 1)
+        )
+        (path "/4356d3a6-6a00-447d-897e-473f60221539/d3a562a3-af99-4bb5-b5fa-eb83660cffa4"
+          (reference "#PWR0136") (unit 1)
+        )
+        (path "/4356d3a6-6a00-447d-897e-473f60221539/6f981a72-1f6f-4ccf-ba7d-c5dfb70b4229"
+          (reference "#PWR0146") (unit 1)
         )
       )
     )
@@ -757,7 +793,7 @@
   (symbol (lib_id "Device:R_US") (at 124.46 76.2 90) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 5e1313c1-1d23-4607-abd9-5bae8aa73465)
-    (property "Reference" "R4" (at 124.46 71.12 90)
+    (property "Reference" "R111" (at 124.46 71.12 90)
       (effects (font (size 1.27 1.27)))
     )
     (property "Value" "715" (at 124.46 73.66 90)
@@ -774,10 +810,16 @@
     (instances
       (project "hydrophone board"
         (path "/4356d3a6-6a00-447d-897e-473f60221539/f560d530-135c-40dc-9144-4f9599a30f13"
-          (reference "R4") (unit 1)
+          (reference "R111") (unit 1)
         )
         (path "/4356d3a6-6a00-447d-897e-473f60221539/fa1a46a1-ed86-4a84-a182-b5dbe7fc86e7"
-          (reference "R20") (unit 1)
+          (reference "R121") (unit 1)
+        )
+        (path "/4356d3a6-6a00-447d-897e-473f60221539/d3a562a3-af99-4bb5-b5fa-eb83660cffa4"
+          (reference "R131") (unit 1)
+        )
+        (path "/4356d3a6-6a00-447d-897e-473f60221539/6f981a72-1f6f-4ccf-ba7d-c5dfb70b4229"
+          (reference "R141") (unit 1)
         )
       )
     )
@@ -786,7 +828,7 @@
   (symbol (lib_id "Device:C") (at 82.55 86.36 90) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 60911708-b4f5-4aaf-a9b1-8917bef082e4)
-    (property "Reference" "C1" (at 82.55 80.01 90)
+    (property "Reference" "C113" (at 82.55 80.01 90)
       (effects (font (size 1.27 1.27)))
     )
     (property "Value" "7.5u" (at 82.55 82.55 90)
@@ -803,10 +845,16 @@
     (instances
       (project "hydrophone board"
         (path "/4356d3a6-6a00-447d-897e-473f60221539/f560d530-135c-40dc-9144-4f9599a30f13"
-          (reference "C1") (unit 1)
+          (reference "C113") (unit 1)
         )
         (path "/4356d3a6-6a00-447d-897e-473f60221539/fa1a46a1-ed86-4a84-a182-b5dbe7fc86e7"
-          (reference "C22") (unit 1)
+          (reference "C123") (unit 1)
+        )
+        (path "/4356d3a6-6a00-447d-897e-473f60221539/d3a562a3-af99-4bb5-b5fa-eb83660cffa4"
+          (reference "C133") (unit 1)
+        )
+        (path "/4356d3a6-6a00-447d-897e-473f60221539/6f981a72-1f6f-4ccf-ba7d-c5dfb70b4229"
+          (reference "C143") (unit 1)
         )
       )
     )
@@ -834,10 +882,16 @@
           (reference "#PWR0205") (unit 1)
         )
         (path "/4356d3a6-6a00-447d-897e-473f60221539/f560d530-135c-40dc-9144-4f9599a30f13"
-          (reference "#PWR07") (unit 1)
+          (reference "#PWR0114") (unit 1)
         )
         (path "/4356d3a6-6a00-447d-897e-473f60221539/fa1a46a1-ed86-4a84-a182-b5dbe7fc86e7"
-          (reference "#PWR042") (unit 1)
+          (reference "#PWR0124") (unit 1)
+        )
+        (path "/4356d3a6-6a00-447d-897e-473f60221539/d3a562a3-af99-4bb5-b5fa-eb83660cffa4"
+          (reference "#PWR0134") (unit 1)
+        )
+        (path "/4356d3a6-6a00-447d-897e-473f60221539/6f981a72-1f6f-4ccf-ba7d-c5dfb70b4229"
+          (reference "#PWR0144") (unit 1)
         )
       )
     )
@@ -846,7 +900,7 @@
   (symbol (lib_id "Device:C") (at 107.95 120.65 180) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 8ee387a5-51c7-4b04-bc78-bbc6682bfed0)
-    (property "Reference" "C2" (at 111.76 120.015 0)
+    (property "Reference" "C114" (at 111.76 120.015 0)
       (effects (font (size 1.27 1.27)) (justify right))
     )
     (property "Value" "1u" (at 111.76 122.555 0)
@@ -863,10 +917,16 @@
     (instances
       (project "hydrophone board"
         (path "/4356d3a6-6a00-447d-897e-473f60221539/f560d530-135c-40dc-9144-4f9599a30f13"
-          (reference "C2") (unit 1)
+          (reference "C114") (unit 1)
         )
         (path "/4356d3a6-6a00-447d-897e-473f60221539/fa1a46a1-ed86-4a84-a182-b5dbe7fc86e7"
-          (reference "C38") (unit 1)
+          (reference "C124") (unit 1)
+        )
+        (path "/4356d3a6-6a00-447d-897e-473f60221539/d3a562a3-af99-4bb5-b5fa-eb83660cffa4"
+          (reference "C134") (unit 1)
+        )
+        (path "/4356d3a6-6a00-447d-897e-473f60221539/6f981a72-1f6f-4ccf-ba7d-c5dfb70b4229"
+          (reference "C144") (unit 1)
         )
       )
     )
@@ -875,7 +935,7 @@
   (symbol (lib_id "PCM_Amplifier_Operational_AKL:AD8541ARTZ") (at 119.38 88.9 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 9c479292-b695-4bd2-8932-f3557088e455)
-    (property "Reference" "U1" (at 132.08 85.4711 0)
+    (property "Reference" "U111" (at 132.08 85.4711 0)
       (effects (font (size 1.27 1.27)))
     )
     (property "Value" "AD8541ARTZ" (at 132.08 88.0111 0)
@@ -895,10 +955,16 @@
     (instances
       (project "hydrophone board"
         (path "/4356d3a6-6a00-447d-897e-473f60221539/f560d530-135c-40dc-9144-4f9599a30f13"
-          (reference "U1") (unit 1)
+          (reference "U111") (unit 1)
         )
         (path "/4356d3a6-6a00-447d-897e-473f60221539/fa1a46a1-ed86-4a84-a182-b5dbe7fc86e7"
-          (reference "U6") (unit 1)
+          (reference "U121") (unit 1)
+        )
+        (path "/4356d3a6-6a00-447d-897e-473f60221539/d3a562a3-af99-4bb5-b5fa-eb83660cffa4"
+          (reference "U131") (unit 1)
+        )
+        (path "/4356d3a6-6a00-447d-897e-473f60221539/6f981a72-1f6f-4ccf-ba7d-c5dfb70b4229"
+          (reference "U141") (unit 1)
         )
       )
     )
@@ -926,10 +992,16 @@
           (reference "#PWR0205") (unit 1)
         )
         (path "/4356d3a6-6a00-447d-897e-473f60221539/f560d530-135c-40dc-9144-4f9599a30f13"
-          (reference "#PWR08") (unit 1)
+          (reference "#PWR0112") (unit 1)
         )
         (path "/4356d3a6-6a00-447d-897e-473f60221539/fa1a46a1-ed86-4a84-a182-b5dbe7fc86e7"
-          (reference "#PWR043") (unit 1)
+          (reference "#PWR0122") (unit 1)
+        )
+        (path "/4356d3a6-6a00-447d-897e-473f60221539/d3a562a3-af99-4bb5-b5fa-eb83660cffa4"
+          (reference "#PWR0132") (unit 1)
+        )
+        (path "/4356d3a6-6a00-447d-897e-473f60221539/6f981a72-1f6f-4ccf-ba7d-c5dfb70b4229"
+          (reference "#PWR0142") (unit 1)
         )
       )
     )
@@ -938,7 +1010,7 @@
   (symbol (lib_id "Device:C") (at 127 50.8 90) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid c434f7f7-b69f-43b6-8cc3-c651a4124c84)
-    (property "Reference" "C4" (at 127 44.45 90)
+    (property "Reference" "C111" (at 127 44.45 90)
       (effects (font (size 1.27 1.27)))
     )
     (property "Value" "0.1u" (at 127 46.99 90)
@@ -955,10 +1027,16 @@
     (instances
       (project "hydrophone board"
         (path "/4356d3a6-6a00-447d-897e-473f60221539/f560d530-135c-40dc-9144-4f9599a30f13"
-          (reference "C4") (unit 1)
+          (reference "C111") (unit 1)
         )
         (path "/4356d3a6-6a00-447d-897e-473f60221539/fa1a46a1-ed86-4a84-a182-b5dbe7fc86e7"
-          (reference "C40") (unit 1)
+          (reference "C121") (unit 1)
+        )
+        (path "/4356d3a6-6a00-447d-897e-473f60221539/d3a562a3-af99-4bb5-b5fa-eb83660cffa4"
+          (reference "C131") (unit 1)
+        )
+        (path "/4356d3a6-6a00-447d-897e-473f60221539/6f981a72-1f6f-4ccf-ba7d-c5dfb70b4229"
+          (reference "C141") (unit 1)
         )
       )
     )
@@ -986,10 +1064,16 @@
           (reference "TP?") (unit 1)
         )
         (path "/4356d3a6-6a00-447d-897e-473f60221539/f560d530-135c-40dc-9144-4f9599a30f13"
-          (reference "TP1") (unit 1)
+          (reference "TP111") (unit 1)
         )
         (path "/4356d3a6-6a00-447d-897e-473f60221539/fa1a46a1-ed86-4a84-a182-b5dbe7fc86e7"
-          (reference "TP15") (unit 1)
+          (reference "TP121") (unit 1)
+        )
+        (path "/4356d3a6-6a00-447d-897e-473f60221539/d3a562a3-af99-4bb5-b5fa-eb83660cffa4"
+          (reference "TP131") (unit 1)
+        )
+        (path "/4356d3a6-6a00-447d-897e-473f60221539/6f981a72-1f6f-4ccf-ba7d-c5dfb70b4229"
+          (reference "TP141") (unit 1)
         )
       )
     )
@@ -998,7 +1082,7 @@
   (symbol (lib_id "Device:R_US") (at 63.5 78.74 180) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid ebd44ab5-53dd-442c-9266-d3bbe50bc8c4)
-    (property "Reference" "R1" (at 66.04 77.47 0)
+    (property "Reference" "R112" (at 66.04 77.47 0)
       (effects (font (size 1.27 1.27)) (justify right))
     )
     (property "Value" "1.1k" (at 66.04 80.01 0)
@@ -1015,10 +1099,16 @@
     (instances
       (project "hydrophone board"
         (path "/4356d3a6-6a00-447d-897e-473f60221539/f560d530-135c-40dc-9144-4f9599a30f13"
-          (reference "R1") (unit 1)
+          (reference "R112") (unit 1)
         )
         (path "/4356d3a6-6a00-447d-897e-473f60221539/fa1a46a1-ed86-4a84-a182-b5dbe7fc86e7"
-          (reference "R12") (unit 1)
+          (reference "R122") (unit 1)
+        )
+        (path "/4356d3a6-6a00-447d-897e-473f60221539/d3a562a3-af99-4bb5-b5fa-eb83660cffa4"
+          (reference "R132") (unit 1)
+        )
+        (path "/4356d3a6-6a00-447d-897e-473f60221539/6f981a72-1f6f-4ccf-ba7d-c5dfb70b4229"
+          (reference "R142") (unit 1)
         )
       )
     )
@@ -1027,7 +1117,7 @@
   (symbol (lib_id "Device:R_US") (at 95.25 120.65 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid f67cdd66-4b8c-49b7-aac6-97389499e17d)
-    (property "Reference" "R3" (at 97.79 120.015 0)
+    (property "Reference" "R114" (at 97.79 120.015 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "10k" (at 97.79 122.555 0)
@@ -1044,10 +1134,16 @@
     (instances
       (project "hydrophone board"
         (path "/4356d3a6-6a00-447d-897e-473f60221539/f560d530-135c-40dc-9144-4f9599a30f13"
-          (reference "R3") (unit 1)
+          (reference "R114") (unit 1)
         )
         (path "/4356d3a6-6a00-447d-897e-473f60221539/fa1a46a1-ed86-4a84-a182-b5dbe7fc86e7"
-          (reference "R19") (unit 1)
+          (reference "R124") (unit 1)
+        )
+        (path "/4356d3a6-6a00-447d-897e-473f60221539/d3a562a3-af99-4bb5-b5fa-eb83660cffa4"
+          (reference "R134") (unit 1)
+        )
+        (path "/4356d3a6-6a00-447d-897e-473f60221539/6f981a72-1f6f-4ccf-ba7d-c5dfb70b4229"
+          (reference "R144") (unit 1)
         )
       )
     )

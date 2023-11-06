@@ -634,7 +634,7 @@
   (symbol (lib_id "DEV-16771:DEV-16771") (at 167.64 88.9 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 1981a2b4-aa7c-4045-b56d-a8f28a540d85)
-    (property "Reference" "U301" (at 167.64 34.29 0)
+    (property "Reference" "U401" (at 167.64 34.29 0)
       (effects (font (size 1.27 1.27)))
     )
     (property "Value" "DEV-16771" (at 167.64 36.83 0)
@@ -753,7 +753,7 @@
     (instances
       (project "hydrophone board"
         (path "/4356d3a6-6a00-447d-897e-473f60221539/1c2c9d85-5695-48de-99af-3ac5f27a43fe"
-          (reference "U301") (unit 1)
+          (reference "U401") (unit 1)
         )
       )
     )
@@ -762,13 +762,13 @@
   (symbol (lib_id "Connector_Generic:Conn_01x07") (at 74.93 58.42 180) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 1e25908c-069b-45a1-b163-468a7cd54156)
-    (property "Reference" "J301" (at 74.93 44.45 0)
+    (property "Reference" "J401" (at 74.93 44.45 0)
       (effects (font (size 1.27 1.27)))
     )
     (property "Value" "Conn_01x07" (at 74.93 46.99 0)
       (effects (font (size 1.27 1.27)))
     )
-    (property "Footprint" "" (at 74.93 58.42 0)
+    (property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x07_P2.54mm_Vertical" (at 74.93 58.42 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "~" (at 74.93 58.42 0)
@@ -784,7 +784,7 @@
     (instances
       (project "hydrophone board"
         (path "/4356d3a6-6a00-447d-897e-473f60221539/1c2c9d85-5695-48de-99af-3ac5f27a43fe"
-          (reference "J301") (unit 1)
+          (reference "J401") (unit 1)
         )
       )
     )
@@ -793,7 +793,7 @@
   (symbol (lib_id "PCM_4ms_Power-symbol:GND") (at 187.96 139.7 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 8443f71b-3ae6-4b46-96d9-34b47c78705b)
-    (property "Reference" "#PWR0302" (at 187.96 146.05 0)
+    (property "Reference" "#PWR0402" (at 187.96 146.05 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (at 187.96 144.78 0)
@@ -809,7 +809,7 @@
     (instances
       (project "hydrophone board"
         (path "/4356d3a6-6a00-447d-897e-473f60221539/1c2c9d85-5695-48de-99af-3ac5f27a43fe"
-          (reference "#PWR0302") (unit 1)
+          (reference "#PWR0402") (unit 1)
         )
       )
     )
@@ -837,7 +837,7 @@
           (reference "#PWR032") (unit 1)
         )
         (path "/4356d3a6-6a00-447d-897e-473f60221539/1c2c9d85-5695-48de-99af-3ac5f27a43fe"
-          (reference "#PWR0301") (unit 1)
+          (reference "#PWR0401") (unit 1)
         )
       )
     )

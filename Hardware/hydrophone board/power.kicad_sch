@@ -1076,13 +1076,13 @@
   (symbol (lib_id "Connector:TestPoint_Probe") (at 152.4 76.2 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 134a3647-3968-4a9c-be7a-bb4ebfb593bf)
-    (property "Reference" "TP402" (at 156.21 73.9775 0)
+    (property "Reference" "TP502" (at 156.21 73.9775 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "TestPoint_Probe" (at 156.21 76.5175 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
-    (property "Footprint" "" (at 157.48 76.2 0)
+    (property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x01_P2.54mm_Vertical" (at 157.48 76.2 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "~" (at 157.48 76.2 0)
@@ -1092,7 +1092,7 @@
     (instances
       (project "hydrophone board"
         (path "/4356d3a6-6a00-447d-897e-473f60221539/cf9d259f-9643-49eb-8aca-1ca8b75f4d64"
-          (reference "TP402") (unit 1)
+          (reference "TP502") (unit 1)
         )
       )
     )
@@ -1101,13 +1101,13 @@
   (symbol (lib_id "Device:L_Ferrite_Small") (at 177.8 76.2 90) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 162e96f2-a26c-4b65-9d59-09fa8b23b341)
-    (property "Reference" "L401" (at 177.8 71.12 90)
+    (property "Reference" "L501" (at 177.8 71.12 90)
       (effects (font (size 1.27 1.27)))
     )
     (property "Value" "L_Ferrite_Small" (at 177.8 73.66 90)
       (effects (font (size 1.27 1.27)))
     )
-    (property "Footprint" "" (at 177.8 76.2 0)
+    (property "Footprint" "Inductor_SMD:L_0805_2012Metric" (at 177.8 76.2 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "~" (at 177.8 76.2 0)
@@ -1118,7 +1118,7 @@
     (instances
       (project "hydrophone board"
         (path "/4356d3a6-6a00-447d-897e-473f60221539/cf9d259f-9643-49eb-8aca-1ca8b75f4d64"
-          (reference "L401") (unit 1)
+          (reference "L501") (unit 1)
         )
       )
     )
@@ -1127,7 +1127,7 @@
   (symbol (lib_id "power:+3.3VA") (at 107.95 139.7 90) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 2e0f9f26-a2cc-4e27-ab69-0f0b2c48ec12)
-    (property "Reference" "#PWR0406" (at 111.76 139.7 0)
+    (property "Reference" "#PWR0506" (at 111.76 139.7 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "+3.3VA" (at 104.14 140.335 90)
@@ -1143,7 +1143,7 @@
     (instances
       (project "hydrophone board"
         (path "/4356d3a6-6a00-447d-897e-473f60221539/cf9d259f-9643-49eb-8aca-1ca8b75f4d64"
-          (reference "#PWR0406") (unit 1)
+          (reference "#PWR0506") (unit 1)
         )
       )
     )
@@ -1152,13 +1152,13 @@
   (symbol (lib_id "Connector_Generic:Conn_01x03") (at 143.51 52.07 90) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 2fa5a0f3-2305-4d22-99dd-85f35461f81d)
-    (property "Reference" "J401" (at 148.59 51.435 90)
+    (property "Reference" "J501" (at 148.59 51.435 90)
       (effects (font (size 1.27 1.27)) (justify right))
     )
     (property "Value" "Conn_01x03" (at 148.59 53.975 90)
       (effects (font (size 1.27 1.27)) (justify right))
     )
-    (property "Footprint" "" (at 143.51 52.07 0)
+    (property "Footprint" "Connector_PinSocket_2.54mm:PinSocket_1x03_P2.54mm_Vertical" (at 143.51 52.07 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "~" (at 143.51 52.07 0)
@@ -1170,7 +1170,7 @@
     (instances
       (project "hydrophone board"
         (path "/4356d3a6-6a00-447d-897e-473f60221539/cf9d259f-9643-49eb-8aca-1ca8b75f4d64"
-          (reference "J401") (unit 1)
+          (reference "J501") (unit 1)
         )
       )
     )
@@ -1179,7 +1179,7 @@
   (symbol (lib_id "power:+3.3VA") (at 152.4 72.39 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 35eb8b89-1400-4382-a9e2-17be9a7aae25)
-    (property "Reference" "#PWR0402" (at 152.4 76.2 0)
+    (property "Reference" "#PWR0502" (at 152.4 76.2 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "+3.3VA" (at 152.4 68.58 0)
@@ -1195,7 +1195,7 @@
     (instances
       (project "hydrophone board"
         (path "/4356d3a6-6a00-447d-897e-473f60221539/cf9d259f-9643-49eb-8aca-1ca8b75f4d64"
-          (reference "#PWR0402") (unit 1)
+          (reference "#PWR0502") (unit 1)
         )
       )
     )
@@ -1204,13 +1204,13 @@
   (symbol (lib_id "Connector:TestPoint_Probe") (at 190.5 76.2 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 37ee47dc-e5d9-4a5f-9cb7-5a975b7261ce)
-    (property "Reference" "TP403" (at 194.31 73.9775 0)
+    (property "Reference" "TP503" (at 194.31 73.9775 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "TestPoint_Probe" (at 194.31 76.5175 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
-    (property "Footprint" "" (at 195.58 76.2 0)
+    (property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x01_P2.54mm_Vertical" (at 195.58 76.2 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "~" (at 195.58 76.2 0)
@@ -1220,7 +1220,7 @@
     (instances
       (project "hydrophone board"
         (path "/4356d3a6-6a00-447d-897e-473f60221539/cf9d259f-9643-49eb-8aca-1ca8b75f4d64"
-          (reference "TP403") (unit 1)
+          (reference "TP503") (unit 1)
         )
       )
     )
@@ -1248,7 +1248,7 @@
           (reference "#PWR?") (unit 1)
         )
         (path "/4356d3a6-6a00-447d-897e-473f60221539/cf9d259f-9643-49eb-8aca-1ca8b75f4d64"
-          (reference "#PWR0408") (unit 1)
+          (reference "#PWR0508") (unit 1)
         )
       )
     )
@@ -1257,7 +1257,7 @@
   (symbol (lib_id "Regulator_Linear:LT1963AxST-3.3") (at 127 78.74 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 3efb09f8-8587-448a-adc3-c7f76aa732b3)
-    (property "Reference" "U401" (at 127 68.58 0)
+    (property "Reference" "U501" (at 127 68.58 0)
       (effects (font (size 1.27 1.27)))
     )
     (property "Value" "LT1963AxST-3.3" (at 127 71.12 0)
@@ -1275,7 +1275,7 @@
     (instances
       (project "hydrophone board"
         (path "/4356d3a6-6a00-447d-897e-473f60221539/cf9d259f-9643-49eb-8aca-1ca8b75f4d64"
-          (reference "U401") (unit 1)
+          (reference "U501") (unit 1)
         )
       )
     )
@@ -1284,13 +1284,13 @@
   (symbol (lib_id "Device:C_Polarized_US") (at 101.6 85.09 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 491794e7-94df-497b-a888-ee5e03215a46)
-    (property "Reference" "C402" (at 105.41 83.82 0)
+    (property "Reference" "C502" (at 105.41 83.82 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "22u" (at 105.41 86.36 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
-    (property "Footprint" "" (at 101.6 85.09 0)
+    (property "Footprint" "Capacitor_SMD:C_0805_2012Metric" (at 101.6 85.09 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "~" (at 101.6 85.09 0)
@@ -1301,7 +1301,7 @@
     (instances
       (project "hydrophone board"
         (path "/4356d3a6-6a00-447d-897e-473f60221539/cf9d259f-9643-49eb-8aca-1ca8b75f4d64"
-          (reference "C402") (unit 1)
+          (reference "C502") (unit 1)
         )
       )
     )
@@ -1310,13 +1310,13 @@
   (symbol (lib_id "Device:LED") (at 116.84 139.7 180) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 536a56dd-321b-4a91-b725-156f0dd13369)
-    (property "Reference" "D402" (at 118.4275 133.35 0)
+    (property "Reference" "D502" (at 118.4275 133.35 0)
       (effects (font (size 1.27 1.27)))
     )
     (property "Value" "LED" (at 118.4275 135.89 0)
       (effects (font (size 1.27 1.27)))
     )
-    (property "Footprint" "" (at 116.84 139.7 0)
+    (property "Footprint" "LED_SMD:LED_0805_2012Metric" (at 116.84 139.7 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "~" (at 116.84 139.7 0)
@@ -1327,7 +1327,7 @@
     (instances
       (project "hydrophone board"
         (path "/4356d3a6-6a00-447d-897e-473f60221539/cf9d259f-9643-49eb-8aca-1ca8b75f4d64"
-          (reference "D402") (unit 1)
+          (reference "D502") (unit 1)
         )
       )
     )
@@ -1336,13 +1336,13 @@
   (symbol (lib_id "Device:C") (at 88.9 85.09 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 5b8b9bcb-546f-4b31-94dc-af3f8e2fd58f)
-    (property "Reference" "C401" (at 92.71 84.455 0)
+    (property "Reference" "C501" (at 92.71 84.455 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "1u" (at 92.71 86.995 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
-    (property "Footprint" "" (at 89.8652 88.9 0)
+    (property "Footprint" "Capacitor_SMD:C_0603_1608Metric" (at 89.8652 88.9 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "~" (at 88.9 85.09 0)
@@ -1353,7 +1353,7 @@
     (instances
       (project "hydrophone board"
         (path "/4356d3a6-6a00-447d-897e-473f60221539/cf9d259f-9643-49eb-8aca-1ca8b75f4d64"
-          (reference "C401") (unit 1)
+          (reference "C501") (unit 1)
         )
       )
     )
@@ -1362,13 +1362,13 @@
   (symbol (lib_id "Connector:TestPoint_Probe") (at 88.9 76.2 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 5efe8353-b6b2-45d9-bcab-811c61a86cfd)
-    (property "Reference" "TP401" (at 92.71 73.9775 0)
+    (property "Reference" "TP501" (at 92.71 73.9775 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "TestPoint_Probe" (at 92.71 76.5175 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
-    (property "Footprint" "" (at 93.98 76.2 0)
+    (property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x01_P2.54mm_Vertical" (at 93.98 76.2 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "~" (at 93.98 76.2 0)
@@ -1378,7 +1378,7 @@
     (instances
       (project "hydrophone board"
         (path "/4356d3a6-6a00-447d-897e-473f60221539/cf9d259f-9643-49eb-8aca-1ca8b75f4d64"
-          (reference "TP401") (unit 1)
+          (reference "TP501") (unit 1)
         )
       )
     )
@@ -1387,13 +1387,13 @@
   (symbol (lib_id "Device:C") (at 203.2 85.09 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 6159b488-1b25-4f84-acfc-a60dc6311d74)
-    (property "Reference" "C406" (at 207.01 84.455 0)
+    (property "Reference" "C506" (at 207.01 84.455 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "1u" (at 207.01 86.995 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
-    (property "Footprint" "" (at 204.1652 88.9 0)
+    (property "Footprint" "Capacitor_SMD:C_0603_1608Metric" (at 204.1652 88.9 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "~" (at 203.2 85.09 0)
@@ -1404,7 +1404,7 @@
     (instances
       (project "hydrophone board"
         (path "/4356d3a6-6a00-447d-897e-473f60221539/cf9d259f-9643-49eb-8aca-1ca8b75f4d64"
-          (reference "C406") (unit 1)
+          (reference "C506") (unit 1)
         )
       )
     )
@@ -1413,7 +1413,7 @@
   (symbol (lib_id "power:+5V") (at 107.95 127 90) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 7e5a35d7-c7f6-4687-8d81-1701a0982db7)
-    (property "Reference" "#PWR0405" (at 111.76 127 0)
+    (property "Reference" "#PWR0505" (at 111.76 127 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "+5V" (at 104.14 127.635 90)
@@ -1429,7 +1429,7 @@
     (instances
       (project "hydrophone board"
         (path "/4356d3a6-6a00-447d-897e-473f60221539/cf9d259f-9643-49eb-8aca-1ca8b75f4d64"
-          (reference "#PWR0405") (unit 1)
+          (reference "#PWR0505") (unit 1)
         )
       )
     )
@@ -1438,13 +1438,13 @@
   (symbol (lib_id "Device:C_Polarized_US") (at 152.4 85.09 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 7f6b94a4-77c3-40f1-832b-39c6e914e7c1)
-    (property "Reference" "C403" (at 156.21 83.82 0)
+    (property "Reference" "C503" (at 156.21 83.82 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "22u" (at 156.21 86.36 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
-    (property "Footprint" "" (at 152.4 85.09 0)
+    (property "Footprint" "Capacitor_SMD:C_0805_2012Metric" (at 152.4 85.09 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "~" (at 152.4 85.09 0)
@@ -1455,7 +1455,7 @@
     (instances
       (project "hydrophone board"
         (path "/4356d3a6-6a00-447d-897e-473f60221539/cf9d259f-9643-49eb-8aca-1ca8b75f4d64"
-          (reference "C403") (unit 1)
+          (reference "C503") (unit 1)
         )
       )
     )
@@ -1483,7 +1483,7 @@
           (reference "#PWR0205") (unit 1)
         )
         (path "/4356d3a6-6a00-447d-897e-473f60221539/cf9d259f-9643-49eb-8aca-1ca8b75f4d64"
-          (reference "#PWR0407") (unit 1)
+          (reference "#PWR0507") (unit 1)
         )
       )
     )
@@ -1492,13 +1492,13 @@
   (symbol (lib_id "Device:R_US") (at 129.54 139.7 90) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 83bcbc6a-8c1c-40b6-bf13-8187fdf10064)
-    (property "Reference" "R402" (at 129.54 134.62 90)
+    (property "Reference" "R502" (at 129.54 134.62 90)
       (effects (font (size 1.27 1.27)))
     )
     (property "Value" "470" (at 129.54 137.16 90)
       (effects (font (size 1.27 1.27)))
     )
-    (property "Footprint" "" (at 129.794 138.684 90)
+    (property "Footprint" "Resistor_SMD:R_0603_1608Metric" (at 129.794 138.684 90)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "~" (at 129.54 139.7 0)
@@ -1509,7 +1509,7 @@
     (instances
       (project "hydrophone board"
         (path "/4356d3a6-6a00-447d-897e-473f60221539/cf9d259f-9643-49eb-8aca-1ca8b75f4d64"
-          (reference "R402") (unit 1)
+          (reference "R502") (unit 1)
         )
       )
     )
@@ -1518,13 +1518,13 @@
   (symbol (lib_id "Device:C") (at 165.1 85.09 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 869b6e45-dd61-477e-b386-8e43ef968281)
-    (property "Reference" "C404" (at 168.91 84.455 0)
+    (property "Reference" "C504" (at 168.91 84.455 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "1u" (at 168.91 86.995 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
-    (property "Footprint" "" (at 166.0652 88.9 0)
+    (property "Footprint" "Capacitor_SMD:C_0603_1608Metric" (at 166.0652 88.9 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "~" (at 165.1 85.09 0)
@@ -1535,7 +1535,7 @@
     (instances
       (project "hydrophone board"
         (path "/4356d3a6-6a00-447d-897e-473f60221539/cf9d259f-9643-49eb-8aca-1ca8b75f4d64"
-          (reference "C404") (unit 1)
+          (reference "C504") (unit 1)
         )
       )
     )
@@ -1544,13 +1544,13 @@
   (symbol (lib_id "Connector:TestPoint_Probe") (at 152.4 95.25 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 943dfc72-f36b-4e85-aa30-382526ce0297)
-    (property "Reference" "TP404" (at 156.21 93.0275 0)
+    (property "Reference" "TP504" (at 156.21 93.0275 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "TestPoint_Probe" (at 156.21 95.5675 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
-    (property "Footprint" "" (at 157.48 95.25 0)
+    (property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x01_P2.54mm_Vertical" (at 157.48 95.25 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "~" (at 157.48 95.25 0)
@@ -1560,7 +1560,7 @@
     (instances
       (project "hydrophone board"
         (path "/4356d3a6-6a00-447d-897e-473f60221539/cf9d259f-9643-49eb-8aca-1ca8b75f4d64"
-          (reference "TP404") (unit 1)
+          (reference "TP504") (unit 1)
         )
       )
     )
@@ -1588,7 +1588,7 @@
           (reference "#PWR?") (unit 1)
         )
         (path "/4356d3a6-6a00-447d-897e-473f60221539/cf9d259f-9643-49eb-8aca-1ca8b75f4d64"
-          (reference "#PWR0403") (unit 1)
+          (reference "#PWR0503") (unit 1)
         )
       )
     )
@@ -1616,7 +1616,7 @@
           (reference "#PWR0205") (unit 1)
         )
         (path "/4356d3a6-6a00-447d-897e-473f60221539/cf9d259f-9643-49eb-8aca-1ca8b75f4d64"
-          (reference "#PWR0404") (unit 1)
+          (reference "#PWR0504") (unit 1)
         )
       )
     )
@@ -1625,13 +1625,13 @@
   (symbol (lib_id "Device:LED") (at 116.84 127 180) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid c3a76eb6-bd92-4024-b3d4-42c697860fda)
-    (property "Reference" "D401" (at 118.4275 120.65 0)
+    (property "Reference" "D501" (at 118.4275 120.65 0)
       (effects (font (size 1.27 1.27)))
     )
     (property "Value" "LED" (at 118.4275 123.19 0)
       (effects (font (size 1.27 1.27)))
     )
-    (property "Footprint" "" (at 116.84 127 0)
+    (property "Footprint" "LED_SMD:LED_0805_2012Metric" (at 116.84 127 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "~" (at 116.84 127 0)
@@ -1642,7 +1642,7 @@
     (instances
       (project "hydrophone board"
         (path "/4356d3a6-6a00-447d-897e-473f60221539/cf9d259f-9643-49eb-8aca-1ca8b75f4d64"
-          (reference "D401") (unit 1)
+          (reference "D501") (unit 1)
         )
       )
     )
@@ -1651,13 +1651,13 @@
   (symbol (lib_id "Device:R_US") (at 129.54 127 90) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid d78167e9-4fcf-4f54-b9d6-29ef91dc6ea6)
-    (property "Reference" "R401" (at 129.54 121.92 90)
+    (property "Reference" "R501" (at 129.54 121.92 90)
       (effects (font (size 1.27 1.27)))
     )
     (property "Value" "470" (at 129.54 124.46 90)
       (effects (font (size 1.27 1.27)))
     )
-    (property "Footprint" "" (at 129.794 125.984 90)
+    (property "Footprint" "Resistor_SMD:R_0603_1608Metric" (at 129.794 125.984 90)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "~" (at 129.54 127 0)
@@ -1668,7 +1668,7 @@
     (instances
       (project "hydrophone board"
         (path "/4356d3a6-6a00-447d-897e-473f60221539/cf9d259f-9643-49eb-8aca-1ca8b75f4d64"
-          (reference "R401") (unit 1)
+          (reference "R501") (unit 1)
         )
       )
     )
@@ -1677,7 +1677,7 @@
   (symbol (lib_id "power:+5V") (at 88.9 72.39 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid e17848ec-ff46-4a4a-9499-3e1c394c9901)
-    (property "Reference" "#PWR0401" (at 88.9 76.2 0)
+    (property "Reference" "#PWR0501" (at 88.9 76.2 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "+5V" (at 88.9 68.58 0)
@@ -1693,7 +1693,7 @@
     (instances
       (project "hydrophone board"
         (path "/4356d3a6-6a00-447d-897e-473f60221539/cf9d259f-9643-49eb-8aca-1ca8b75f4d64"
-          (reference "#PWR0401") (unit 1)
+          (reference "#PWR0501") (unit 1)
         )
       )
     )
@@ -1702,13 +1702,13 @@
   (symbol (lib_id "Device:C_Polarized_US") (at 190.5 85.09 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid f6e291d9-83ad-4de0-8b89-54c5ec4d12fd)
-    (property "Reference" "C405" (at 194.31 83.82 0)
+    (property "Reference" "C505" (at 194.31 83.82 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "22u" (at 194.31 86.36 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
-    (property "Footprint" "" (at 190.5 85.09 0)
+    (property "Footprint" "Capacitor_SMD:C_0805_2012Metric" (at 190.5 85.09 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "~" (at 190.5 85.09 0)
@@ -1719,7 +1719,7 @@
     (instances
       (project "hydrophone board"
         (path "/4356d3a6-6a00-447d-897e-473f60221539/cf9d259f-9643-49eb-8aca-1ca8b75f4d64"
-          (reference "C405") (unit 1)
+          (reference "C505") (unit 1)
         )
       )
     )

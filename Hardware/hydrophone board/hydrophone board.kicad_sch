@@ -116,6 +116,10 @@
     (stroke (width 0) (type default))
     (uuid e0a06c21-be06-4bbe-b578-3b4d0c87915c)
   )
+  (wire (pts (xy 228.6 76.2) (xy 241.3 76.2))
+    (stroke (width 0) (type default))
+    (uuid eb9905cb-5b25-45dd-9e43-b732f6a4c81c)
+  )
   (wire (pts (xy 190.5 107.95) (xy 203.2 107.95))
     (stroke (width 0) (type default))
     (uuid edcbb95b-2c18-4d49-9f35-01afa7469436)
@@ -158,6 +162,10 @@
     (pin "BCLK" output (at 203.2 82.55 180)
       (effects (font (size 1.27 1.27)) (justify left))
       (uuid 56bf98f4-f531-4f9e-b717-69cfcc6fe62a)
+    )
+    (pin "3.3V MCU" output (at 228.6 76.2 0)
+      (effects (font (size 1.27 1.27)) (justify right))
+      (uuid cc1dee34-67ff-4424-ad43-90ec408eec47)
     )
     (instances
       (project "hydrophone board"
@@ -294,6 +302,10 @@
     )
     (property "Sheetfile" "power.kicad_sch" (at 241.3 83.1346 0)
       (effects (font (size 1.27 1.27)) (justify left top))
+    )
+    (pin "3.3V MCU" input (at 241.3 76.2 180)
+      (effects (font (size 1.27 1.27)) (justify left))
+      (uuid 26389a1a-1288-4c25-bc07-b18b1cf10331)
     )
     (instances
       (project "hydrophone board"

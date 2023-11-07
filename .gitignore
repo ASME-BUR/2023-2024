@@ -33,3 +33,6 @@ fp-info-cache
 # Exported BOM files
 # *.xml
 # *.csv
+
+# Max
+*.DS_Store

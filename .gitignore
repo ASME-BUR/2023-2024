@@ -34,5 +34,5 @@ fp-info-cache
 # *.xml
 # *.csv
 
-# mac
-.DS_Store
+# Max
+*.DS_Store

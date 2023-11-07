@@ -729,7 +729,7 @@
     (property "Datasheet" "" (at 114.3 105.41 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (pin "1" (uuid b3681dd1-aff5-4334-a786-17024f3b4920))
+    (pin "1" (uuid fbb857e1-214b-4479-9f8c-5a99fe5fda4c))
     (instances
       (project "hydrophone board"
         (path "/4356d3a6-6a00-447d-897e-473f60221539/1cfbaf71-7039-4355-8fc7-d8c77f0e8058"
@@ -739,7 +739,16 @@
           (reference "#PWR0306") (unit 1)
         )
         (path "/4356d3a6-6a00-447d-897e-473f60221539/c13371a9-09b1-4e65-81c3-6f6fb4c4ebd4"
-          (reference "#PWR013") (unit 1)
+          (reference "#PWR0216") (unit 1)
+        )
+        (path "/4356d3a6-6a00-447d-897e-473f60221539/924dcbbe-1ff5-4b2e-a973-2a9e51c40258"
+          (reference "#PWR0226") (unit 1)
+        )
+        (path "/4356d3a6-6a00-447d-897e-473f60221539/9c7eb115-b279-4a21-9abb-ee1a14da0145"
+          (reference "#PWR0236") (unit 1)
+        )
+        (path "/4356d3a6-6a00-447d-897e-473f60221539/025ca7c2-0364-4e32-8d6c-dbe542d6c74c"
+          (reference "#PWR0246") (unit 1)
         )
       )
     )
@@ -760,7 +769,7 @@
     (property "Datasheet" "" (at 63.5 106.68 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (pin "1" (uuid 11e1ee5a-7c5f-480e-8b1a-002c49b72fea))
+    (pin "1" (uuid 8f231a03-b172-49f8-91bd-c520509fca84))
     (instances
       (project "hydrophone board"
         (path "/4356d3a6-6a00-447d-897e-473f60221539/1cfbaf71-7039-4355-8fc7-d8c77f0e8058"
@@ -770,7 +779,16 @@
           (reference "#PWR0306") (unit 1)
         )
         (path "/4356d3a6-6a00-447d-897e-473f60221539/c13371a9-09b1-4e65-81c3-6f6fb4c4ebd4"
-          (reference "#PWR09") (unit 1)
+          (reference "#PWR0217") (unit 1)
+        )
+        (path "/4356d3a6-6a00-447d-897e-473f60221539/924dcbbe-1ff5-4b2e-a973-2a9e51c40258"
+          (reference "#PWR0227") (unit 1)
+        )
+        (path "/4356d3a6-6a00-447d-897e-473f60221539/9c7eb115-b279-4a21-9abb-ee1a14da0145"
+          (reference "#PWR0237") (unit 1)
+        )
+        (path "/4356d3a6-6a00-447d-897e-473f60221539/025ca7c2-0364-4e32-8d6c-dbe542d6c74c"
+          (reference "#PWR0247") (unit 1)
         )
       )
     )
@@ -785,21 +803,30 @@
     (property "Value" "169k" (at 209.55 80.01 90)
       (effects (font (size 1.27 1.27)))
     )
-    (property "Footprint" "" (at 209.804 81.534 90)
+    (property "Footprint" "Resistor_SMD:R_0603_1608Metric" (at 209.804 81.534 90)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "~" (at 209.55 82.55 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (pin "1" (uuid fe907e54-9d66-473e-a7cf-3cf833febf38))
-    (pin "2" (uuid 589d451f-5086-4de4-a6a1-455ad60dea0c))
+    (pin "1" (uuid 6f19a44f-4aa6-45b6-83e3-a6573a2ccbf1))
+    (pin "2" (uuid e6b825ed-1234-45b0-bd6a-a1f4c0ea5bdc))
     (instances
       (project "hydrophone board"
         (path "/4356d3a6-6a00-447d-897e-473f60221539/f560d530-135c-40dc-9144-4f9599a30f13"
           (reference "R306") (unit 1)
         )
         (path "/4356d3a6-6a00-447d-897e-473f60221539/c13371a9-09b1-4e65-81c3-6f6fb4c4ebd4"
-          (reference "R11") (unit 1)
+          (reference "R212") (unit 1)
+        )
+        (path "/4356d3a6-6a00-447d-897e-473f60221539/924dcbbe-1ff5-4b2e-a973-2a9e51c40258"
+          (reference "R222") (unit 1)
+        )
+        (path "/4356d3a6-6a00-447d-897e-473f60221539/9c7eb115-b279-4a21-9abb-ee1a14da0145"
+          (reference "R232") (unit 1)
+        )
+        (path "/4356d3a6-6a00-447d-897e-473f60221539/025ca7c2-0364-4e32-8d6c-dbe542d6c74c"
+          (reference "R242") (unit 1)
         )
       )
     )
@@ -820,7 +847,7 @@
     (property "Datasheet" "" (at 76.2 96.52 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (pin "1" (uuid 591d1dee-3161-4bce-b420-1fddb24a745c))
+    (pin "1" (uuid 394a45c5-bb1b-476e-8fbe-72b72e3000d9))
     (instances
       (project "hydrophone board"
         (path "/4356d3a6-6a00-447d-897e-473f60221539/1cfbaf71-7039-4355-8fc7-d8c77f0e8058"
@@ -830,7 +857,16 @@
           (reference "#PWR0307") (unit 1)
         )
         (path "/4356d3a6-6a00-447d-897e-473f60221539/c13371a9-09b1-4e65-81c3-6f6fb4c4ebd4"
-          (reference "#PWR011") (unit 1)
+          (reference "#PWR0213") (unit 1)
+        )
+        (path "/4356d3a6-6a00-447d-897e-473f60221539/924dcbbe-1ff5-4b2e-a973-2a9e51c40258"
+          (reference "#PWR0223") (unit 1)
+        )
+        (path "/4356d3a6-6a00-447d-897e-473f60221539/9c7eb115-b279-4a21-9abb-ee1a14da0145"
+          (reference "#PWR0233") (unit 1)
+        )
+        (path "/4356d3a6-6a00-447d-897e-473f60221539/025ca7c2-0364-4e32-8d6c-dbe542d6c74c"
+          (reference "#PWR0243") (unit 1)
         )
       )
     )
@@ -845,21 +881,30 @@
     (property "Value" "36p" (at 219.71 93.345 0)
       (effects (font (size 1.27 1.27)) (justify right))
     )
-    (property "Footprint" "" (at 214.9348 87.63 0)
+    (property "Footprint" "Capacitor_SMD:C_0603_1608Metric" (at 214.9348 87.63 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "~" (at 215.9 91.44 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (pin "1" (uuid 652f91d6-4343-4c14-bf75-a12ce74f8581))
-    (pin "2" (uuid 04551840-dfe7-4ce6-a57f-af9c2f17d860))
+    (pin "1" (uuid 74e087a2-6385-4757-b1ab-b6e502c9451a))
+    (pin "2" (uuid def1fab7-ba5f-4bbb-afd6-c9187fc64e03))
     (instances
       (project "hydrophone board"
         (path "/4356d3a6-6a00-447d-897e-473f60221539/f560d530-135c-40dc-9144-4f9599a30f13"
           (reference "C304") (unit 1)
         )
         (path "/4356d3a6-6a00-447d-897e-473f60221539/c13371a9-09b1-4e65-81c3-6f6fb4c4ebd4"
-          (reference "C11") (unit 1)
+          (reference "C215") (unit 1)
+        )
+        (path "/4356d3a6-6a00-447d-897e-473f60221539/924dcbbe-1ff5-4b2e-a973-2a9e51c40258"
+          (reference "C225") (unit 1)
+        )
+        (path "/4356d3a6-6a00-447d-897e-473f60221539/9c7eb115-b279-4a21-9abb-ee1a14da0145"
+          (reference "C235") (unit 1)
+        )
+        (path "/4356d3a6-6a00-447d-897e-473f60221539/025ca7c2-0364-4e32-8d6c-dbe542d6c74c"
+          (reference "C245") (unit 1)
         )
       )
     )
@@ -868,7 +913,7 @@
   (symbol (lib_id "PCM_Amplifier_Operational_AKL:AD8648ARZ") (at 177.8 82.55 0) (unit 3)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 4cd0d102-8abe-435b-a379-28f44e23a904)
-    (property "Reference" "U2" (at 179.07 73.66 0)
+    (property "Reference" "U211" (at 179.07 73.66 0)
       (effects (font (size 1.27 1.27)))
     )
     (property "Value" "AD8648ARZ" (at 179.07 76.2 0)
@@ -897,7 +942,16 @@
     (instances
       (project "hydrophone board"
         (path "/4356d3a6-6a00-447d-897e-473f60221539/c13371a9-09b1-4e65-81c3-6f6fb4c4ebd4"
-          (reference "U2") (unit 3)
+          (reference "U211") (unit 3)
+        )
+        (path "/4356d3a6-6a00-447d-897e-473f60221539/924dcbbe-1ff5-4b2e-a973-2a9e51c40258"
+          (reference "U221") (unit 3)
+        )
+        (path "/4356d3a6-6a00-447d-897e-473f60221539/9c7eb115-b279-4a21-9abb-ee1a14da0145"
+          (reference "U231") (unit 3)
+        )
+        (path "/4356d3a6-6a00-447d-897e-473f60221539/025ca7c2-0364-4e32-8d6c-dbe542d6c74c"
+          (reference "U241") (unit 3)
         )
       )
     )
@@ -912,21 +966,30 @@
     (property "Value" "44.2k" (at 95.25 85.09 90)
       (effects (font (size 1.27 1.27)))
     )
-    (property "Footprint" "" (at 95.504 86.614 90)
+    (property "Footprint" "Resistor_SMD:R_0603_1608Metric" (at 95.504 86.614 90)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "~" (at 95.25 87.63 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (pin "1" (uuid f6fd5605-b267-495b-8cc3-bbabd18e0b27))
-    (pin "2" (uuid d5b98be7-c6fe-4167-a904-56659b0417bf))
+    (pin "1" (uuid 66a688df-9618-4dae-8187-17213d1dcdd6))
+    (pin "2" (uuid 38eaa490-430c-428f-ad26-76e894df417d))
     (instances
       (project "hydrophone board"
         (path "/4356d3a6-6a00-447d-897e-473f60221539/f560d530-135c-40dc-9144-4f9599a30f13"
           (reference "R306") (unit 1)
         )
         (path "/4356d3a6-6a00-447d-897e-473f60221539/c13371a9-09b1-4e65-81c3-6f6fb4c4ebd4"
-          (reference "R6") (unit 1)
+          (reference "R215") (unit 1)
+        )
+        (path "/4356d3a6-6a00-447d-897e-473f60221539/924dcbbe-1ff5-4b2e-a973-2a9e51c40258"
+          (reference "R225") (unit 1)
+        )
+        (path "/4356d3a6-6a00-447d-897e-473f60221539/9c7eb115-b279-4a21-9abb-ee1a14da0145"
+          (reference "R235") (unit 1)
+        )
+        (path "/4356d3a6-6a00-447d-897e-473f60221539/025ca7c2-0364-4e32-8d6c-dbe542d6c74c"
+          (reference "R245") (unit 1)
         )
       )
     )
@@ -941,13 +1004,13 @@
     (property "Value" "TestPoint_Probe" (at 251.46 73.9775 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
-    (property "Footprint" "" (at 252.73 73.66 0)
+    (property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x01_P2.54mm_Vertical" (at 252.73 73.66 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "~" (at 252.73 73.66 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (pin "1" (uuid eb47f72e-f8e8-4480-bccd-aa51db3d6434))
+    (pin "1" (uuid 26567d50-4cc9-4062-b0b1-8251b7be6622))
     (instances
       (project "hydrophone board"
         (path "/4356d3a6-6a00-447d-897e-473f60221539/cf9d259f-9643-49eb-8aca-1ca8b75f4d64"
@@ -957,7 +1020,16 @@
           (reference "TP301") (unit 1)
         )
         (path "/4356d3a6-6a00-447d-897e-473f60221539/c13371a9-09b1-4e65-81c3-6f6fb4c4ebd4"
-          (reference "TP2") (unit 1)
+          (reference "TP211") (unit 1)
+        )
+        (path "/4356d3a6-6a00-447d-897e-473f60221539/924dcbbe-1ff5-4b2e-a973-2a9e51c40258"
+          (reference "TP221") (unit 1)
+        )
+        (path "/4356d3a6-6a00-447d-897e-473f60221539/9c7eb115-b279-4a21-9abb-ee1a14da0145"
+          (reference "TP231") (unit 1)
+        )
+        (path "/4356d3a6-6a00-447d-897e-473f60221539/025ca7c2-0364-4e32-8d6c-dbe542d6c74c"
+          (reference "TP241") (unit 1)
         )
       )
     )
@@ -972,21 +1044,30 @@
     (property "Value" "44.2k" (at 107.95 85.09 90)
       (effects (font (size 1.27 1.27)))
     )
-    (property "Footprint" "" (at 108.204 86.614 90)
+    (property "Footprint" "Resistor_SMD:R_0603_1608Metric" (at 108.204 86.614 90)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "~" (at 107.95 87.63 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (pin "1" (uuid 12b09573-4ff6-427c-a547-469d2fdea223))
-    (pin "2" (uuid 708a3526-8120-47c5-8b35-60731c41892f))
+    (pin "1" (uuid cc057628-4791-4942-99a2-0228e412998c))
+    (pin "2" (uuid 2fbe5b0a-726e-4574-8cc5-a7bcbb2fef3a))
     (instances
       (project "hydrophone board"
         (path "/4356d3a6-6a00-447d-897e-473f60221539/f560d530-135c-40dc-9144-4f9599a30f13"
           (reference "R306") (unit 1)
         )
         (path "/4356d3a6-6a00-447d-897e-473f60221539/c13371a9-09b1-4e65-81c3-6f6fb4c4ebd4"
-          (reference "R7") (unit 1)
+          (reference "R216") (unit 1)
+        )
+        (path "/4356d3a6-6a00-447d-897e-473f60221539/924dcbbe-1ff5-4b2e-a973-2a9e51c40258"
+          (reference "R226") (unit 1)
+        )
+        (path "/4356d3a6-6a00-447d-897e-473f60221539/9c7eb115-b279-4a21-9abb-ee1a14da0145"
+          (reference "R236") (unit 1)
+        )
+        (path "/4356d3a6-6a00-447d-897e-473f60221539/025ca7c2-0364-4e32-8d6c-dbe542d6c74c"
+          (reference "R246") (unit 1)
         )
       )
     )
@@ -1001,21 +1082,30 @@
     (property "Value" "360p" (at 222.25 62.23 90)
       (effects (font (size 1.27 1.27)))
     )
-    (property "Footprint" "" (at 218.44 67.0052 0)
+    (property "Footprint" "Capacitor_SMD:C_0603_1608Metric" (at 218.44 67.0052 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "~" (at 222.25 66.04 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (pin "1" (uuid 267545d1-dc0c-4f6a-8931-56cf178c00ab))
-    (pin "2" (uuid 437d9311-c149-4609-8cb9-3f9df5aa5325))
+    (pin "1" (uuid 2f22d4d6-7c9e-4f55-b788-302620c856b1))
+    (pin "2" (uuid 3cccf118-9f41-46e1-9585-c951fdf19822))
     (instances
       (project "hydrophone board"
         (path "/4356d3a6-6a00-447d-897e-473f60221539/f560d530-135c-40dc-9144-4f9599a30f13"
           (reference "C305") (unit 1)
         )
         (path "/4356d3a6-6a00-447d-897e-473f60221539/c13371a9-09b1-4e65-81c3-6f6fb4c4ebd4"
-          (reference "C12") (unit 1)
+          (reference "C211") (unit 1)
+        )
+        (path "/4356d3a6-6a00-447d-897e-473f60221539/924dcbbe-1ff5-4b2e-a973-2a9e51c40258"
+          (reference "C221") (unit 1)
+        )
+        (path "/4356d3a6-6a00-447d-897e-473f60221539/9c7eb115-b279-4a21-9abb-ee1a14da0145"
+          (reference "C231") (unit 1)
+        )
+        (path "/4356d3a6-6a00-447d-897e-473f60221539/025ca7c2-0364-4e32-8d6c-dbe542d6c74c"
+          (reference "C241") (unit 1)
         )
       )
     )
@@ -1024,7 +1114,7 @@
   (symbol (lib_id "PCM_Amplifier_Operational_AKL:AD8648ARZ") (at 76.2 87.63 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 648660d4-0aea-48af-aaeb-5ffece060c99)
-    (property "Reference" "U2" (at 88.9 84.2011 0)
+    (property "Reference" "U211" (at 88.9 84.2011 0)
       (effects (font (size 1.27 1.27)))
     )
     (property "Value" "AD8648ARZ" (at 88.9 86.7411 0)
@@ -1053,7 +1143,16 @@
     (instances
       (project "hydrophone board"
         (path "/4356d3a6-6a00-447d-897e-473f60221539/c13371a9-09b1-4e65-81c3-6f6fb4c4ebd4"
-          (reference "U2") (unit 1)
+          (reference "U211") (unit 1)
+        )
+        (path "/4356d3a6-6a00-447d-897e-473f60221539/924dcbbe-1ff5-4b2e-a973-2a9e51c40258"
+          (reference "U221") (unit 1)
+        )
+        (path "/4356d3a6-6a00-447d-897e-473f60221539/9c7eb115-b279-4a21-9abb-ee1a14da0145"
+          (reference "U231") (unit 1)
+        )
+        (path "/4356d3a6-6a00-447d-897e-473f60221539/025ca7c2-0364-4e32-8d6c-dbe542d6c74c"
+          (reference "U241") (unit 1)
         )
       )
     )
@@ -1068,21 +1167,30 @@
     (property "Value" "115k" (at 158.75 82.55 90)
       (effects (font (size 1.27 1.27)))
     )
-    (property "Footprint" "" (at 159.004 84.074 90)
+    (property "Footprint" "Resistor_SMD:R_0603_1608Metric" (at 159.004 84.074 90)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "~" (at 158.75 85.09 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (pin "1" (uuid 25afd5d0-a2f4-4fa1-9ea8-99c4453b64f6))
-    (pin "2" (uuid 8e3bc832-f135-41ed-b4ab-8f1dff175945))
+    (pin "1" (uuid 95844e82-b073-4cbb-856a-58b7e0b7ae9e))
+    (pin "2" (uuid 77911e2a-c92e-4939-9d74-1074fcc0ba47))
     (instances
       (project "hydrophone board"
         (path "/4356d3a6-6a00-447d-897e-473f60221539/f560d530-135c-40dc-9144-4f9599a30f13"
           (reference "R306") (unit 1)
         )
         (path "/4356d3a6-6a00-447d-897e-473f60221539/c13371a9-09b1-4e65-81c3-6f6fb4c4ebd4"
-          (reference "R9") (unit 1)
+          (reference "R214") (unit 1)
+        )
+        (path "/4356d3a6-6a00-447d-897e-473f60221539/924dcbbe-1ff5-4b2e-a973-2a9e51c40258"
+          (reference "R224") (unit 1)
+        )
+        (path "/4356d3a6-6a00-447d-897e-473f60221539/9c7eb115-b279-4a21-9abb-ee1a14da0145"
+          (reference "R234") (unit 1)
+        )
+        (path "/4356d3a6-6a00-447d-897e-473f60221539/025ca7c2-0364-4e32-8d6c-dbe542d6c74c"
+          (reference "R244") (unit 1)
         )
       )
     )
@@ -1103,7 +1211,7 @@
     (property "Datasheet" "" (at 215.9 100.33 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (pin "1" (uuid cde44be5-293f-4f80-892f-befcb61ca7f6))
+    (pin "1" (uuid a7975492-4f59-44f0-80e7-0ac885abc426))
     (instances
       (project "hydrophone board"
         (path "/4356d3a6-6a00-447d-897e-473f60221539/1cfbaf71-7039-4355-8fc7-d8c77f0e8058"
@@ -1113,7 +1221,16 @@
           (reference "#PWR0306") (unit 1)
         )
         (path "/4356d3a6-6a00-447d-897e-473f60221539/c13371a9-09b1-4e65-81c3-6f6fb4c4ebd4"
-          (reference "#PWR015") (unit 1)
+          (reference "#PWR0214") (unit 1)
+        )
+        (path "/4356d3a6-6a00-447d-897e-473f60221539/924dcbbe-1ff5-4b2e-a973-2a9e51c40258"
+          (reference "#PWR0224") (unit 1)
+        )
+        (path "/4356d3a6-6a00-447d-897e-473f60221539/9c7eb115-b279-4a21-9abb-ee1a14da0145"
+          (reference "#PWR0234") (unit 1)
+        )
+        (path "/4356d3a6-6a00-447d-897e-473f60221539/025ca7c2-0364-4e32-8d6c-dbe542d6c74c"
+          (reference "#PWR0244") (unit 1)
         )
       )
     )
@@ -1128,21 +1245,30 @@
     (property "Value" "0.1u" (at 83.82 66.04 90)
       (effects (font (size 1.27 1.27)))
     )
-    (property "Footprint" "" (at 87.63 68.8848 0)
+    (property "Footprint" "Capacitor_SMD:C_0603_1608Metric" (at 87.63 68.8848 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "~" (at 83.82 69.85 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (pin "1" (uuid 424cff59-fc5d-4254-ac9d-dee9dd9f4977))
-    (pin "2" (uuid f7ff304f-a44e-4b5f-898e-af27ae0d9f9a))
+    (pin "1" (uuid 22e2f6c1-e32d-466a-b9d5-ac48820a5c6c))
+    (pin "2" (uuid 2ffb8fef-7f1c-494b-926a-df743db92c4a))
     (instances
       (project "hydrophone board"
         (path "/4356d3a6-6a00-447d-897e-473f60221539/f560d530-135c-40dc-9144-4f9599a30f13"
           (reference "C303") (unit 1)
         )
         (path "/4356d3a6-6a00-447d-897e-473f60221539/c13371a9-09b1-4e65-81c3-6f6fb4c4ebd4"
-          (reference "C6") (unit 1)
+          (reference "C213") (unit 1)
+        )
+        (path "/4356d3a6-6a00-447d-897e-473f60221539/924dcbbe-1ff5-4b2e-a973-2a9e51c40258"
+          (reference "C223") (unit 1)
+        )
+        (path "/4356d3a6-6a00-447d-897e-473f60221539/9c7eb115-b279-4a21-9abb-ee1a14da0145"
+          (reference "C233") (unit 1)
+        )
+        (path "/4356d3a6-6a00-447d-897e-473f60221539/025ca7c2-0364-4e32-8d6c-dbe542d6c74c"
+          (reference "C243") (unit 1)
         )
       )
     )
@@ -1157,21 +1283,30 @@
     (property "Value" "8.45k" (at 146.05 82.55 90)
       (effects (font (size 1.27 1.27)))
     )
-    (property "Footprint" "" (at 146.304 84.074 90)
+    (property "Footprint" "Resistor_SMD:R_0603_1608Metric" (at 146.304 84.074 90)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "~" (at 146.05 85.09 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (pin "1" (uuid b1f1cab3-672d-4e38-952f-723704709a7c))
-    (pin "2" (uuid 52f0207e-a560-40a1-bb55-92c7f994db1c))
+    (pin "1" (uuid a6a51f51-bda5-4d28-b9ec-a326c857d413))
+    (pin "2" (uuid a80aa18b-da3a-44da-832e-b29edb9899df))
     (instances
       (project "hydrophone board"
         (path "/4356d3a6-6a00-447d-897e-473f60221539/f560d530-135c-40dc-9144-4f9599a30f13"
           (reference "R306") (unit 1)
         )
         (path "/4356d3a6-6a00-447d-897e-473f60221539/c13371a9-09b1-4e65-81c3-6f6fb4c4ebd4"
-          (reference "R8") (unit 1)
+          (reference "R213") (unit 1)
+        )
+        (path "/4356d3a6-6a00-447d-897e-473f60221539/924dcbbe-1ff5-4b2e-a973-2a9e51c40258"
+          (reference "R223") (unit 1)
+        )
+        (path "/4356d3a6-6a00-447d-897e-473f60221539/9c7eb115-b279-4a21-9abb-ee1a14da0145"
+          (reference "R233") (unit 1)
+        )
+        (path "/4356d3a6-6a00-447d-897e-473f60221539/025ca7c2-0364-4e32-8d6c-dbe542d6c74c"
+          (reference "R243") (unit 1)
         )
       )
     )
@@ -1186,21 +1321,30 @@
     (property "Value" "360p" (at 67.31 100.965 0)
       (effects (font (size 1.27 1.27)) (justify right))
     )
-    (property "Footprint" "" (at 62.5348 95.25 0)
+    (property "Footprint" "Capacitor_SMD:C_0603_1608Metric" (at 62.5348 95.25 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "~" (at 63.5 99.06 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (pin "1" (uuid 08da2e5b-5b72-4774-b509-7a0263f22d69))
-    (pin "2" (uuid 9be40791-861a-4026-8826-f3116f75663d))
+    (pin "1" (uuid 0477af77-7969-49ca-af30-c7a2051197d3))
+    (pin "2" (uuid 1a21721e-fa2b-4e62-9062-a37e0a482ca0))
     (instances
       (project "hydrophone board"
         (path "/4356d3a6-6a00-447d-897e-473f60221539/f560d530-135c-40dc-9144-4f9599a30f13"
           (reference "C304") (unit 1)
         )
         (path "/4356d3a6-6a00-447d-897e-473f60221539/c13371a9-09b1-4e65-81c3-6f6fb4c4ebd4"
-          (reference "C5") (unit 1)
+          (reference "C218") (unit 1)
+        )
+        (path "/4356d3a6-6a00-447d-897e-473f60221539/924dcbbe-1ff5-4b2e-a973-2a9e51c40258"
+          (reference "C228") (unit 1)
+        )
+        (path "/4356d3a6-6a00-447d-897e-473f60221539/9c7eb115-b279-4a21-9abb-ee1a14da0145"
+          (reference "C238") (unit 1)
+        )
+        (path "/4356d3a6-6a00-447d-897e-473f60221539/025ca7c2-0364-4e32-8d6c-dbe542d6c74c"
+          (reference "C248") (unit 1)
         )
       )
     )
@@ -1209,7 +1353,7 @@
   (symbol (lib_id "PCM_Amplifier_Operational_AKL:AD8648ARZ") (at 127 85.09 0) (unit 2)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 94406ba1-6483-4583-a8d1-bef4b5ee7a82)
-    (property "Reference" "U2" (at 128.27 76.2 0)
+    (property "Reference" "U211" (at 128.27 76.2 0)
       (effects (font (size 1.27 1.27)))
     )
     (property "Value" "AD8648ARZ" (at 128.27 78.74 0)
@@ -1238,7 +1382,16 @@
     (instances
       (project "hydrophone board"
         (path "/4356d3a6-6a00-447d-897e-473f60221539/c13371a9-09b1-4e65-81c3-6f6fb4c4ebd4"
-          (reference "U2") (unit 2)
+          (reference "U211") (unit 2)
+        )
+        (path "/4356d3a6-6a00-447d-897e-473f60221539/924dcbbe-1ff5-4b2e-a973-2a9e51c40258"
+          (reference "U221") (unit 2)
+        )
+        (path "/4356d3a6-6a00-447d-897e-473f60221539/9c7eb115-b279-4a21-9abb-ee1a14da0145"
+          (reference "U231") (unit 2)
+        )
+        (path "/4356d3a6-6a00-447d-897e-473f60221539/025ca7c2-0364-4e32-8d6c-dbe542d6c74c"
+          (reference "U241") (unit 2)
         )
       )
     )
@@ -1253,21 +1406,30 @@
     (property "Value" "9.76k" (at 57.15 87.63 90)
       (effects (font (size 1.27 1.27)))
     )
-    (property "Footprint" "" (at 57.404 89.154 90)
+    (property "Footprint" "Resistor_SMD:R_0603_1608Metric" (at 57.404 89.154 90)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "~" (at 57.15 90.17 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (pin "1" (uuid 040948e4-cefd-455e-a98f-8c79ecfeae87))
-    (pin "2" (uuid c6c7f47e-3560-484f-a8d7-e18e6ce61870))
+    (pin "1" (uuid 3560a8d7-7cca-474c-a5ad-5ac53bc208b5))
+    (pin "2" (uuid 7ec89b1a-339a-490a-896f-a98226ee24bf))
     (instances
       (project "hydrophone board"
         (path "/4356d3a6-6a00-447d-897e-473f60221539/f560d530-135c-40dc-9144-4f9599a30f13"
           (reference "R307") (unit 1)
         )
         (path "/4356d3a6-6a00-447d-897e-473f60221539/c13371a9-09b1-4e65-81c3-6f6fb4c4ebd4"
-          (reference "R5") (unit 1)
+          (reference "R217") (unit 1)
+        )
+        (path "/4356d3a6-6a00-447d-897e-473f60221539/924dcbbe-1ff5-4b2e-a973-2a9e51c40258"
+          (reference "R227") (unit 1)
+        )
+        (path "/4356d3a6-6a00-447d-897e-473f60221539/9c7eb115-b279-4a21-9abb-ee1a14da0145"
+          (reference "R237") (unit 1)
+        )
+        (path "/4356d3a6-6a00-447d-897e-473f60221539/025ca7c2-0364-4e32-8d6c-dbe542d6c74c"
+          (reference "R247") (unit 1)
         )
       )
     )
@@ -1282,21 +1444,30 @@
     (property "Value" "5.62k" (at 196.85 80.01 90)
       (effects (font (size 1.27 1.27)))
     )
-    (property "Footprint" "" (at 197.104 81.534 90)
+    (property "Footprint" "Resistor_SMD:R_0603_1608Metric" (at 197.104 81.534 90)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "~" (at 196.85 82.55 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (pin "1" (uuid 47b4024d-6b9a-4436-871e-2753dbbf35a9))
-    (pin "2" (uuid 2d738456-c121-4f6c-8f45-b9e97d130f19))
+    (pin "1" (uuid c6568dad-b30c-4910-8901-edcdfe5c26b4))
+    (pin "2" (uuid b514b608-a705-4581-983f-cccf9c4803b3))
     (instances
       (project "hydrophone board"
         (path "/4356d3a6-6a00-447d-897e-473f60221539/f560d530-135c-40dc-9144-4f9599a30f13"
           (reference "R306") (unit 1)
         )
         (path "/4356d3a6-6a00-447d-897e-473f60221539/c13371a9-09b1-4e65-81c3-6f6fb4c4ebd4"
-          (reference "R10") (unit 1)
+          (reference "R211") (unit 1)
+        )
+        (path "/4356d3a6-6a00-447d-897e-473f60221539/924dcbbe-1ff5-4b2e-a973-2a9e51c40258"
+          (reference "R221") (unit 1)
+        )
+        (path "/4356d3a6-6a00-447d-897e-473f60221539/9c7eb115-b279-4a21-9abb-ee1a14da0145"
+          (reference "R231") (unit 1)
+        )
+        (path "/4356d3a6-6a00-447d-897e-473f60221539/025ca7c2-0364-4e32-8d6c-dbe542d6c74c"
+          (reference "R241") (unit 1)
         )
       )
     )
@@ -1317,7 +1488,7 @@
     (property "Datasheet" "" (at 76.2 63.5 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (pin "1" (uuid c1a8baa9-b902-4af9-a3d3-92f4f12aa640))
+    (pin "1" (uuid 6f5ec953-3912-4682-bdcf-9620540024e0))
     (instances
       (project "hydrophone board"
         (path "/4356d3a6-6a00-447d-897e-473f60221539/c9760799-658d-4181-af96-8731ebbcaea9"
@@ -1327,7 +1498,16 @@
           (reference "#PWR0304") (unit 1)
         )
         (path "/4356d3a6-6a00-447d-897e-473f60221539/c13371a9-09b1-4e65-81c3-6f6fb4c4ebd4"
-          (reference "#PWR010") (unit 1)
+          (reference "#PWR0211") (unit 1)
+        )
+        (path "/4356d3a6-6a00-447d-897e-473f60221539/924dcbbe-1ff5-4b2e-a973-2a9e51c40258"
+          (reference "#PWR0221") (unit 1)
+        )
+        (path "/4356d3a6-6a00-447d-897e-473f60221539/9c7eb115-b279-4a21-9abb-ee1a14da0145"
+          (reference "#PWR0231") (unit 1)
+        )
+        (path "/4356d3a6-6a00-447d-897e-473f60221539/025ca7c2-0364-4e32-8d6c-dbe542d6c74c"
+          (reference "#PWR0241") (unit 1)
         )
       )
     )
@@ -1342,21 +1522,30 @@
     (property "Value" "360p" (at 120.65 67.31 90)
       (effects (font (size 1.27 1.27)))
     )
-    (property "Footprint" "" (at 116.84 72.0852 0)
+    (property "Footprint" "Capacitor_SMD:C_0603_1608Metric" (at 116.84 72.0852 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "~" (at 120.65 71.12 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (pin "1" (uuid 91c2a111-b4d0-4ccf-bab0-e191d8e44a45))
-    (pin "2" (uuid 057e6af8-64bc-4eeb-945f-1f570169e29e))
+    (pin "1" (uuid 7426a6d0-0a3c-416f-865a-dcb56cc5e15d))
+    (pin "2" (uuid 0ef84c89-9afb-4107-8453-545db528bd0b))
     (instances
       (project "hydrophone board"
         (path "/4356d3a6-6a00-447d-897e-473f60221539/f560d530-135c-40dc-9144-4f9599a30f13"
           (reference "C305") (unit 1)
         )
         (path "/4356d3a6-6a00-447d-897e-473f60221539/c13371a9-09b1-4e65-81c3-6f6fb4c4ebd4"
-          (reference "C8") (unit 1)
+          (reference "C214") (unit 1)
+        )
+        (path "/4356d3a6-6a00-447d-897e-473f60221539/924dcbbe-1ff5-4b2e-a973-2a9e51c40258"
+          (reference "C224") (unit 1)
+        )
+        (path "/4356d3a6-6a00-447d-897e-473f60221539/9c7eb115-b279-4a21-9abb-ee1a14da0145"
+          (reference "C234") (unit 1)
+        )
+        (path "/4356d3a6-6a00-447d-897e-473f60221539/025ca7c2-0364-4e32-8d6c-dbe542d6c74c"
+          (reference "C244") (unit 1)
         )
       )
     )
@@ -1371,21 +1560,30 @@
     (property "Value" "18p" (at 118.11 98.425 0)
       (effects (font (size 1.27 1.27)) (justify right))
     )
-    (property "Footprint" "" (at 113.3348 92.71 0)
+    (property "Footprint" "Capacitor_SMD:C_0603_1608Metric" (at 113.3348 92.71 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "~" (at 114.3 96.52 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (pin "1" (uuid fdee16fe-c0ad-4805-9494-fa6d494191cf))
-    (pin "2" (uuid 1d9c991f-0e21-45cb-a3f8-1ddb56d1f87a))
+    (pin "1" (uuid ba0cb70b-3ca1-48e9-888d-5230ea03ab8b))
+    (pin "2" (uuid 944bd757-95c4-4f0d-926f-6b503b1b0e0b))
     (instances
       (project "hydrophone board"
         (path "/4356d3a6-6a00-447d-897e-473f60221539/f560d530-135c-40dc-9144-4f9599a30f13"
           (reference "C304") (unit 1)
         )
         (path "/4356d3a6-6a00-447d-897e-473f60221539/c13371a9-09b1-4e65-81c3-6f6fb4c4ebd4"
-          (reference "C7") (unit 1)
+          (reference "C217") (unit 1)
+        )
+        (path "/4356d3a6-6a00-447d-897e-473f60221539/924dcbbe-1ff5-4b2e-a973-2a9e51c40258"
+          (reference "C227") (unit 1)
+        )
+        (path "/4356d3a6-6a00-447d-897e-473f60221539/9c7eb115-b279-4a21-9abb-ee1a14da0145"
+          (reference "C237") (unit 1)
+        )
+        (path "/4356d3a6-6a00-447d-897e-473f60221539/025ca7c2-0364-4e32-8d6c-dbe542d6c74c"
+          (reference "C247") (unit 1)
         )
       )
     )
@@ -1406,7 +1604,7 @@
     (property "Datasheet" "" (at 165.1 102.87 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (pin "1" (uuid a663b8ad-a170-40ac-8b18-d3eed5bc5faf))
+    (pin "1" (uuid 8243809c-1ce5-47a9-9c7c-03b899f554c3))
     (instances
       (project "hydrophone board"
         (path "/4356d3a6-6a00-447d-897e-473f60221539/1cfbaf71-7039-4355-8fc7-d8c77f0e8058"
@@ -1416,7 +1614,16 @@
           (reference "#PWR0306") (unit 1)
         )
         (path "/4356d3a6-6a00-447d-897e-473f60221539/c13371a9-09b1-4e65-81c3-6f6fb4c4ebd4"
-          (reference "#PWR014") (unit 1)
+          (reference "#PWR0215") (unit 1)
+        )
+        (path "/4356d3a6-6a00-447d-897e-473f60221539/924dcbbe-1ff5-4b2e-a973-2a9e51c40258"
+          (reference "#PWR0225") (unit 1)
+        )
+        (path "/4356d3a6-6a00-447d-897e-473f60221539/9c7eb115-b279-4a21-9abb-ee1a14da0145"
+          (reference "#PWR0235") (unit 1)
+        )
+        (path "/4356d3a6-6a00-447d-897e-473f60221539/025ca7c2-0364-4e32-8d6c-dbe542d6c74c"
+          (reference "#PWR0245") (unit 1)
         )
       )
     )
@@ -1437,7 +1644,7 @@
     (property "Datasheet" "" (at 90.17 69.85 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (pin "1" (uuid 67080542-d927-4398-8875-a913d738c67e))
+    (pin "1" (uuid f78aeced-e135-453b-8cdb-908e7929b700))
     (instances
       (project "hydrophone board"
         (path "/4356d3a6-6a00-447d-897e-473f60221539/1cfbaf71-7039-4355-8fc7-d8c77f0e8058"
@@ -1447,7 +1654,16 @@
           (reference "#PWR0307") (unit 1)
         )
         (path "/4356d3a6-6a00-447d-897e-473f60221539/c13371a9-09b1-4e65-81c3-6f6fb4c4ebd4"
-          (reference "#PWR012") (unit 1)
+          (reference "#PWR0212") (unit 1)
+        )
+        (path "/4356d3a6-6a00-447d-897e-473f60221539/924dcbbe-1ff5-4b2e-a973-2a9e51c40258"
+          (reference "#PWR0222") (unit 1)
+        )
+        (path "/4356d3a6-6a00-447d-897e-473f60221539/9c7eb115-b279-4a21-9abb-ee1a14da0145"
+          (reference "#PWR0232") (unit 1)
+        )
+        (path "/4356d3a6-6a00-447d-897e-473f60221539/025ca7c2-0364-4e32-8d6c-dbe542d6c74c"
+          (reference "#PWR0242") (unit 1)
         )
       )
     )
@@ -1462,21 +1678,30 @@
     (property "Value" "36p" (at 168.91 95.885 0)
       (effects (font (size 1.27 1.27)) (justify right))
     )
-    (property "Footprint" "" (at 164.1348 90.17 0)
+    (property "Footprint" "Capacitor_SMD:C_0603_1608Metric" (at 164.1348 90.17 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "~" (at 165.1 93.98 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (pin "1" (uuid aa9e440c-fd89-4a7a-a91f-5eb9dcb2fa9f))
-    (pin "2" (uuid 28f62d5e-6853-48dd-a661-bac6b43a19db))
+    (pin "1" (uuid 6b4e9a20-fbb6-4359-9afc-f6523c17e9f6))
+    (pin "2" (uuid f2d4867a-5967-4536-a0f6-7ff67dbdeb5a))
     (instances
       (project "hydrophone board"
         (path "/4356d3a6-6a00-447d-897e-473f60221539/f560d530-135c-40dc-9144-4f9599a30f13"
           (reference "C304") (unit 1)
         )
         (path "/4356d3a6-6a00-447d-897e-473f60221539/c13371a9-09b1-4e65-81c3-6f6fb4c4ebd4"
-          (reference "C9") (unit 1)
+          (reference "C216") (unit 1)
+        )
+        (path "/4356d3a6-6a00-447d-897e-473f60221539/924dcbbe-1ff5-4b2e-a973-2a9e51c40258"
+          (reference "C226") (unit 1)
+        )
+        (path "/4356d3a6-6a00-447d-897e-473f60221539/9c7eb115-b279-4a21-9abb-ee1a14da0145"
+          (reference "C236") (unit 1)
+        )
+        (path "/4356d3a6-6a00-447d-897e-473f60221539/025ca7c2-0364-4e32-8d6c-dbe542d6c74c"
+          (reference "C246") (unit 1)
         )
       )
     )
@@ -1491,21 +1716,30 @@
     (property "Value" "360p" (at 171.45 64.77 90)
       (effects (font (size 1.27 1.27)))
     )
-    (property "Footprint" "" (at 167.64 69.5452 0)
+    (property "Footprint" "Capacitor_SMD:C_0603_1608Metric" (at 167.64 69.5452 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "~" (at 171.45 68.58 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (pin "1" (uuid a046a204-f7f6-4b8c-a8f8-217a9ea4f6d1))
-    (pin "2" (uuid ddf1108f-1807-4f1a-a763-f3a8d65e16b2))
+    (pin "1" (uuid d7a0ea30-aa78-485f-8e7a-91e87970baf4))
+    (pin "2" (uuid 84e3b282-bed5-4c08-a748-444bacafcdc6))
     (instances
       (project "hydrophone board"
         (path "/4356d3a6-6a00-447d-897e-473f60221539/f560d530-135c-40dc-9144-4f9599a30f13"
           (reference "C305") (unit 1)
         )
         (path "/4356d3a6-6a00-447d-897e-473f60221539/c13371a9-09b1-4e65-81c3-6f6fb4c4ebd4"
-          (reference "C10") (unit 1)
+          (reference "C212") (unit 1)
+        )
+        (path "/4356d3a6-6a00-447d-897e-473f60221539/924dcbbe-1ff5-4b2e-a973-2a9e51c40258"
+          (reference "C222") (unit 1)
+        )
+        (path "/4356d3a6-6a00-447d-897e-473f60221539/9c7eb115-b279-4a21-9abb-ee1a14da0145"
+          (reference "C232") (unit 1)
+        )
+        (path "/4356d3a6-6a00-447d-897e-473f60221539/025ca7c2-0364-4e32-8d6c-dbe542d6c74c"
+          (reference "C242") (unit 1)
         )
       )
     )
@@ -1514,7 +1748,7 @@
   (symbol (lib_id "PCM_Amplifier_Operational_AKL:AD8648ARZ") (at 228.6 80.01 0) (unit 4)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid fa64a0e4-25b7-4349-96a8-d33cb75089a2)
-    (property "Reference" "U2" (at 229.87 71.12 0)
+    (property "Reference" "U211" (at 229.87 71.12 0)
       (effects (font (size 1.27 1.27)))
     )
     (property "Value" "AD8648ARZ" (at 229.87 73.66 0)
@@ -1543,7 +1777,16 @@
     (instances
       (project "hydrophone board"
         (path "/4356d3a6-6a00-447d-897e-473f60221539/c13371a9-09b1-4e65-81c3-6f6fb4c4ebd4"
-          (reference "U2") (unit 4)
+          (reference "U211") (unit 4)
+        )
+        (path "/4356d3a6-6a00-447d-897e-473f60221539/924dcbbe-1ff5-4b2e-a973-2a9e51c40258"
+          (reference "U221") (unit 4)
+        )
+        (path "/4356d3a6-6a00-447d-897e-473f60221539/9c7eb115-b279-4a21-9abb-ee1a14da0145"
+          (reference "U231") (unit 4)
+        )
+        (path "/4356d3a6-6a00-447d-897e-473f60221539/025ca7c2-0364-4e32-8d6c-dbe542d6c74c"
+          (reference "U241") (unit 4)
         )
       )
     )

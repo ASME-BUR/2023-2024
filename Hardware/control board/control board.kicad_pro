@@ -329,15 +329,15 @@
     ],
     [
       "9fd0b45f-6f46-40af-ae0d-29c33b45e498",
-      "solenoid thingamabobber1"
+      "solenoid 1"
     ],
     [
       "6163a064-c95f-47b6-9c17-0e18c391c233",
-      "solenoid thingamabobber2"
+      "solenoid 2"
     ],
     [
       "f39ce93b-3626-4dde-a021-b00a2c8134c7",
-      "solenoid thingamabobber3"
+      "solenoid 3"
     ]
   ],
   "text_variables": {}

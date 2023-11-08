@@ -450,10 +450,6 @@
     (effects (font (size 1.27 1.27)) (justify left bottom))
     (uuid 02680a9c-d157-4637-91fa-0324a334fbf0)
   )
-  (label "OUT3" (at 128.27 35.56 0) (fields_autoplaced)
-    (effects (font (size 1.27 1.27)) (justify left bottom))
-    (uuid 255ff491-e1f0-4726-9a00-56c3039d2ca7)
-  )
   (label "7V4" (at 35.814 31.75 0) (fields_autoplaced)
     (effects (font (size 1.27 1.27)) (justify left bottom))
     (uuid 27c90276-4978-4ded-90aa-4f2b758bacad)
@@ -461,10 +457,6 @@
   (label "14V8" (at 35.56 26.67 0) (fields_autoplaced)
     (effects (font (size 1.27 1.27)) (justify left bottom))
     (uuid 312fe0f1-3122-4c49-96bb-8a6056105748)
-  )
-  (label "OUT1" (at 69.85 35.56 0) (fields_autoplaced)
-    (effects (font (size 1.27 1.27)) (justify left bottom))
-    (uuid 5600ab40-48f6-406f-bd73-b323fda4da4a)
   )
   (label "14V8" (at 49.53 20.066 0) (fields_autoplaced)
     (effects (font (size 1.27 1.27)) (justify left bottom))
@@ -474,13 +466,22 @@
     (effects (font (size 1.27 1.27)) (justify left bottom))
     (uuid c0a3c763-a177-4ed8-965e-0483aa5f6edd)
   )
-  (label "OUT2" (at 99.06 35.56 0) (fields_autoplaced)
-    (effects (font (size 1.27 1.27)) (justify left bottom))
-    (uuid d30d89a3-2659-4c64-bebd-3e0624f555e4)
+
+  (hierarchical_label "OUT4" (shape input) (at 128.27 35.56 0) (fields_autoplaced)
+    (effects (font (size 1.27 1.27)) (justify left))
+    (uuid 0c0b03bc-c76e-4f7c-9d00-6fd1ee472114)
   )
-  (label "3V7" (at 35.814 34.29 0) (fields_autoplaced)
-    (effects (font (size 1.27 1.27)) (justify left bottom))
-    (uuid f55fb23c-0971-481d-8184-db616017863c)
+  (hierarchical_label "OUT1" (shape input) (at 35.814 34.29 0) (fields_autoplaced)
+    (effects (font (size 1.27 1.27)) (justify left))
+    (uuid 2e30d1b9-8e07-48fa-a27a-3fb2d67703bf)
+  )
+  (hierarchical_label "OUT2" (shape input) (at 69.85 35.56 0) (fields_autoplaced)
+    (effects (font (size 1.27 1.27)) (justify left))
+    (uuid 32be78ef-9cd7-45db-9f0b-47ee00b7593e)
+  )
+  (hierarchical_label "OUT3" (shape input) (at 99.06 35.56 0) (fields_autoplaced)
+    (effects (font (size 1.27 1.27)) (justify left))
+    (uuid f1add398-3984-4df8-a722-4954a8c58a61)
   )
 
   (symbol (lib_id "power:GND") (at 31.75 36.83 0) (unit 1)
@@ -567,6 +568,11 @@
           (reference "C3") (unit 1)
         )
       )
+      (project "battery monitoring board"
+        (path "/bf623d80-ca5a-491f-9daa-4dffbeba5279/986cc9e1-c37e-4aa2-b3b5-8e2dcbe750c5"
+          (reference "C3") (unit 1)
+        )
+      )
     )
   )
 
@@ -590,6 +596,11 @@
     (instances
       (project "voltage monitor"
         (path "/64dd58dd-0f80-4046-8958-33031e8c772b"
+          (reference "C1") (unit 1)
+        )
+      )
+      (project "battery monitoring board"
+        (path "/bf623d80-ca5a-491f-9daa-4dffbeba5279/986cc9e1-c37e-4aa2-b3b5-8e2dcbe750c5"
           (reference "C1") (unit 1)
         )
       )
@@ -649,6 +660,11 @@
           (reference "#PWR04") (unit 1)
         )
       )
+      (project "battery monitoring board"
+        (path "/bf623d80-ca5a-491f-9daa-4dffbeba5279/986cc9e1-c37e-4aa2-b3b5-8e2dcbe750c5"
+          (reference "#PWR04") (unit 1)
+        )
+      )
     )
   )
 
@@ -671,6 +687,11 @@
     (instances
       (project "voltage monitor"
         (path "/64dd58dd-0f80-4046-8958-33031e8c772b"
+          (reference "#PWR02") (unit 1)
+        )
+      )
+      (project "battery monitoring board"
+        (path "/bf623d80-ca5a-491f-9daa-4dffbeba5279/986cc9e1-c37e-4aa2-b3b5-8e2dcbe750c5"
           (reference "#PWR02") (unit 1)
         )
       )
@@ -727,6 +748,11 @@
     (instances
       (project "voltage monitor"
         (path "/64dd58dd-0f80-4046-8958-33031e8c772b"
+          (reference "#PWR03") (unit 1)
+        )
+      )
+      (project "battery monitoring board"
+        (path "/bf623d80-ca5a-491f-9daa-4dffbeba5279/986cc9e1-c37e-4aa2-b3b5-8e2dcbe750c5"
           (reference "#PWR03") (unit 1)
         )
       )
@@ -815,6 +841,11 @@
     (instances
       (project "voltage monitor"
         (path "/64dd58dd-0f80-4046-8958-33031e8c772b"
+          (reference "C2") (unit 1)
+        )
+      )
+      (project "battery monitoring board"
+        (path "/bf623d80-ca5a-491f-9daa-4dffbeba5279/986cc9e1-c37e-4aa2-b3b5-8e2dcbe750c5"
           (reference "C2") (unit 1)
         )
       )

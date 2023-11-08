@@ -596,9 +596,9 @@
     (uuid f794406d-6427-4de4-8e7c-c4d28e74543d)
   )
 
-  (label "MCU" (at 35.56 59.69 0) (fields_autoplaced)
-    (effects (font (size 1.27 1.27)) (justify left bottom))
-    (uuid 36d5eb54-bb2c-410b-a853-bc6131658c66)
+  (hierarchical_label "MCU_OUTPUT" (shape input) (at 35.56 59.69 180) (fields_autoplaced)
+    (effects (font (size 1.27 1.27)) (justify right))
+    (uuid 50a65e4d-0397-4f2f-9946-6d41561dff52)
   )
 
   (symbol (lib_id "Device:R_US") (at 67.31 49.53 0) (unit 1)
@@ -619,6 +619,11 @@
     (pin "1" (uuid cbb79e32-4ac1-4caf-9a2c-660aee1f0d37))
     (pin "2" (uuid c32df606-da8a-4d0a-be27-06ab81d7fa96))
     (instances
+      (project "battery monitoring board"
+        (path "/bf623d80-ca5a-491f-9daa-4dffbeba5279/d1e89632-1041-42ed-815d-03472eda859a"
+          (reference "R2") (unit 1)
+        )
+      )
       (project "e-switch_sch"
         (path "/efca75fd-153b-4cfe-ab8f-e37262fd383b"
           (reference "R2") (unit 1)
@@ -644,6 +649,11 @@
     )
     (pin "1" (uuid e5d8c785-1d82-4ee8-8bd0-cc77791fbd2d))
     (instances
+      (project "battery monitoring board"
+        (path "/bf623d80-ca5a-491f-9daa-4dffbeba5279/d1e89632-1041-42ed-815d-03472eda859a"
+          (reference "#PWR01") (unit 1)
+        )
+      )
       (project "e-switch_sch"
         (path "/efca75fd-153b-4cfe-ab8f-e37262fd383b"
           (reference "#PWR01") (unit 1)
@@ -680,6 +690,11 @@
     (pin "2" (uuid c6684f96-7860-4c04-82ab-414c95d3eca8))
     (pin "3" (uuid b2f98b59-9713-4552-9222-5a598e449fb4))
     (instances
+      (project "battery monitoring board"
+        (path "/bf623d80-ca5a-491f-9daa-4dffbeba5279/d1e89632-1041-42ed-815d-03472eda859a"
+          (reference "Q1") (unit 1)
+        )
+      )
       (project "e-switch_sch"
         (path "/efca75fd-153b-4cfe-ab8f-e37262fd383b"
           (reference "Q1") (unit 1)
@@ -706,6 +721,11 @@
     (pin "1" (uuid 5a6a734a-4e85-401c-8b1d-6c399dd4bb3a))
     (pin "2" (uuid 00c8c23f-2916-4453-8616-121d6bf41aeb))
     (instances
+      (project "battery monitoring board"
+        (path "/bf623d80-ca5a-491f-9daa-4dffbeba5279/d1e89632-1041-42ed-815d-03472eda859a"
+          (reference "R1") (unit 1)
+        )
+      )
       (project "e-switch_sch"
         (path "/efca75fd-153b-4cfe-ab8f-e37262fd383b"
           (reference "R1") (unit 1)
@@ -742,6 +762,11 @@
     (pin "2" (uuid 6cea277e-a901-4bbb-a19e-341877bfbcb9))
     (pin "3" (uuid a4824b9c-3b0a-46c9-9c03-719583e1c207))
     (instances
+      (project "battery monitoring board"
+        (path "/bf623d80-ca5a-491f-9daa-4dffbeba5279/d1e89632-1041-42ed-815d-03472eda859a"
+          (reference "Q2") (unit 1)
+        )
+      )
       (project "e-switch_sch"
         (path "/efca75fd-153b-4cfe-ab8f-e37262fd383b"
           (reference "Q2") (unit 1)
@@ -768,6 +793,11 @@
     (pin "1" (uuid 362f27d5-a45a-4444-9190-6feb37515938))
     (pin "2" (uuid 2eaa8ba4-c576-4583-9f6b-ef96c09bcd01))
     (instances
+      (project "battery monitoring board"
+        (path "/bf623d80-ca5a-491f-9daa-4dffbeba5279/d1e89632-1041-42ed-815d-03472eda859a"
+          (reference "R3") (unit 1)
+        )
+      )
       (project "e-switch_sch"
         (path "/efca75fd-153b-4cfe-ab8f-e37262fd383b"
           (reference "R3") (unit 1)
@@ -794,6 +824,11 @@
     (pin "1" (uuid 1b4bb0e0-b20d-4c18-8b18-7e5b6161930f))
     (pin "2" (uuid c4691076-9b94-486b-aa5b-cb8b9faa7b26))
     (instances
+      (project "battery monitoring board"
+        (path "/bf623d80-ca5a-491f-9daa-4dffbeba5279/d1e89632-1041-42ed-815d-03472eda859a"
+          (reference "D1") (unit 1)
+        )
+      )
       (project "e-switch_sch"
         (path "/efca75fd-153b-4cfe-ab8f-e37262fd383b"
           (reference "D1") (unit 1)
@@ -820,6 +855,11 @@
     (pin "1" (uuid 8cc41982-b22c-4c26-9d10-bbfe3b3826b2))
     (pin "2" (uuid a0c69ee8-1fb0-4441-b801-4fc8514cea89))
     (instances
+      (project "battery monitoring board"
+        (path "/bf623d80-ca5a-491f-9daa-4dffbeba5279/d1e89632-1041-42ed-815d-03472eda859a"
+          (reference "R4") (unit 1)
+        )
+      )
       (project "e-switch_sch"
         (path "/efca75fd-153b-4cfe-ab8f-e37262fd383b"
           (reference "R4") (unit 1)

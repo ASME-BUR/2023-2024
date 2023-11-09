@@ -508,7 +508,7 @@
       )
       (project "battery monitoring board"
         (path "/bf623d80-ca5a-491f-9daa-4dffbeba5279/986cc9e1-c37e-4aa2-b3b5-8e2dcbe750c5"
-          (reference "#PWR01") (unit 1)
+          (reference "#PWR03") (unit 1)
         )
       )
     )
@@ -662,7 +662,7 @@
       )
       (project "battery monitoring board"
         (path "/bf623d80-ca5a-491f-9daa-4dffbeba5279/986cc9e1-c37e-4aa2-b3b5-8e2dcbe750c5"
-          (reference "#PWR04") (unit 1)
+          (reference "#PWR06") (unit 1)
         )
       )
     )
@@ -692,7 +692,7 @@
       )
       (project "battery monitoring board"
         (path "/bf623d80-ca5a-491f-9daa-4dffbeba5279/986cc9e1-c37e-4aa2-b3b5-8e2dcbe750c5"
-          (reference "#PWR02") (unit 1)
+          (reference "#PWR04") (unit 1)
         )
       )
     )
@@ -753,7 +753,7 @@
       )
       (project "battery monitoring board"
         (path "/bf623d80-ca5a-491f-9daa-4dffbeba5279/986cc9e1-c37e-4aa2-b3b5-8e2dcbe750c5"
-          (reference "#PWR03") (unit 1)
+          (reference "#PWR05") (unit 1)
         )
       )
     )

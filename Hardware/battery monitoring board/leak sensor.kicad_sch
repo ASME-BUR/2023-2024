@@ -314,6 +314,58 @@
         )
       )
     )
+    (symbol "power:+3V3" (power) (pin_names (offset 0)) (in_bom yes) (on_board yes)
+      (property "Reference" "#PWR" (at 0 -3.81 0)
+        (effects (font (size 1.27 1.27)) hide)
+      )
+      (property "Value" "+3V3" (at 0 3.556 0)
+        (effects (font (size 1.27 1.27)))
+      )
+      (property "Footprint" "" (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide)
+      )
+      (property "Datasheet" "" (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide)
+      )
+      (property "ki_keywords" "global power" (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide)
+      )
+      (property "ki_description" "Power symbol creates a global label with name \"+3V3\"" (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide)
+      )
+      (symbol "+3V3_0_1"
+        (polyline
+          (pts
+            (xy -0.762 1.27)
+            (xy 0 2.54)
+          )
+          (stroke (width 0) (type default))
+          (fill (type none))
+        )
+        (polyline
+          (pts
+            (xy 0 0)
+            (xy 0 2.54)
+          )
+          (stroke (width 0) (type default))
+          (fill (type none))
+        )
+        (polyline
+          (pts
+            (xy 0 2.54)
+            (xy 0.762 1.27)
+          )
+          (stroke (width 0) (type default))
+          (fill (type none))
+        )
+      )
+      (symbol "+3V3_1_1"
+        (pin power_in line (at 0 0 90) (length 0) hide
+          (name "+3V3" (effects (font (size 1.27 1.27))))
+          (number "1" (effects (font (size 1.27 1.27))))
+        )
+      )
+    )
     (symbol "power:GND" (power) (pin_names (offset 0)) (in_bom yes) (on_board yes)
       (property "Reference" "#PWR" (at 0 -6.35 0)
         (effects (font (size 1.27 1.27)) hide)
@@ -350,58 +402,6 @@
       (symbol "GND_1_1"
         (pin power_in line (at 0 0 270) (length 0) hide
           (name "GND" (effects (font (size 1.27 1.27))))
-          (number "1" (effects (font (size 1.27 1.27))))
-        )
-      )
-    )
-    (symbol "power:VCC" (power) (pin_names (offset 0)) (in_bom yes) (on_board yes)
-      (property "Reference" "#PWR" (at 0 -3.81 0)
-        (effects (font (size 1.27 1.27)) hide)
-      )
-      (property "Value" "VCC" (at 0 3.81 0)
-        (effects (font (size 1.27 1.27)))
-      )
-      (property "Footprint" "" (at 0 0 0)
-        (effects (font (size 1.27 1.27)) hide)
-      )
-      (property "Datasheet" "" (at 0 0 0)
-        (effects (font (size 1.27 1.27)) hide)
-      )
-      (property "ki_keywords" "global power" (at 0 0 0)
-        (effects (font (size 1.27 1.27)) hide)
-      )
-      (property "ki_description" "Power symbol creates a global label with name \"VCC\"" (at 0 0 0)
-        (effects (font (size 1.27 1.27)) hide)
-      )
-      (symbol "VCC_0_1"
-        (polyline
-          (pts
-            (xy -0.762 1.27)
-            (xy 0 2.54)
-          )
-          (stroke (width 0) (type default))
-          (fill (type none))
-        )
-        (polyline
-          (pts
-            (xy 0 0)
-            (xy 0 2.54)
-          )
-          (stroke (width 0) (type default))
-          (fill (type none))
-        )
-        (polyline
-          (pts
-            (xy 0 2.54)
-            (xy 0.762 1.27)
-          )
-          (stroke (width 0) (type default))
-          (fill (type none))
-        )
-      )
-      (symbol "VCC_1_1"
-        (pin power_in line (at 0 0 90) (length 0) hide
-          (name "VCC" (effects (font (size 1.27 1.27))))
           (number "1" (effects (font (size 1.27 1.27))))
         )
       )
@@ -589,6 +589,31 @@
     (uuid 70017390-6a21-44c8-a538-5026718f32d4)
   )
 
+  (symbol (lib_id "power:+3V3") (at 105.41 46.99 0) (unit 1)
+    (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
+    (uuid 0c931b87-f893-488d-845a-6c5ec62870b6)
+    (property "Reference" "#PWR016" (at 105.41 50.8 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Value" "+3V3" (at 105.41 41.91 0)
+      (effects (font (size 1.27 1.27)))
+    )
+    (property "Footprint" "" (at 105.41 46.99 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Datasheet" "" (at 105.41 46.99 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (pin "1" (uuid 1c146842-65d8-442c-b366-391aad18a18d))
+    (instances
+      (project "battery monitoring board"
+        (path "/bf623d80-ca5a-491f-9daa-4dffbeba5279/7fa71be0-4e2c-431c-85f4-b0f15423b53d"
+          (reference "#PWR016") (unit 1)
+        )
+      )
+    )
+  )
+
   (symbol (lib_id "Connector_Generic:Conn_01x02") (at 36.83 59.69 0) (mirror y) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 0e2a970c-0a7b-4fe5-8117-07d9a3d08456)
@@ -614,37 +639,7 @@
       )
       (project "battery monitoring board"
         (path "/bf623d80-ca5a-491f-9daa-4dffbeba5279/7fa71be0-4e2c-431c-85f4-b0f15423b53d"
-          (reference "J3") (unit 1)
-        )
-      )
-    )
-  )
-
-  (symbol (lib_id "power:VCC") (at 105.41 46.99 0) (unit 1)
-    (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
-    (uuid 2f8d1c5e-7e7c-4c5f-93c9-039fb1461c5e)
-    (property "Reference" "#PWR06" (at 105.41 50.8 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Value" "VCC" (at 105.41 41.91 0)
-      (effects (font (size 1.27 1.27)))
-    )
-    (property "Footprint" "" (at 105.41 46.99 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Datasheet" "" (at 105.41 46.99 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (pin "1" (uuid 5ac9cbdd-4082-44c3-a878-878eeabd7f99))
-    (instances
-      (project "leak sensor"
-        (path "/127822e7-fd70-4fb4-952a-2fa8fdde2438"
-          (reference "#PWR06") (unit 1)
-        )
-      )
-      (project "battery monitoring board"
-        (path "/bf623d80-ca5a-491f-9daa-4dffbeba5279/7fa71be0-4e2c-431c-85f4-b0f15423b53d"
-          (reference "#PWR06") (unit 1)
+          (reference "J4") (unit 1)
         )
       )
     )
@@ -675,7 +670,7 @@
       )
       (project "battery monitoring board"
         (path "/bf623d80-ca5a-491f-9daa-4dffbeba5279/7fa71be0-4e2c-431c-85f4-b0f15423b53d"
-          (reference "J5") (unit 1)
+          (reference "J6") (unit 1)
         )
       )
     )
@@ -705,7 +700,7 @@
       )
       (project "battery monitoring board"
         (path "/bf623d80-ca5a-491f-9daa-4dffbeba5279/7fa71be0-4e2c-431c-85f4-b0f15423b53d"
-          (reference "#PWR07") (unit 1)
+          (reference "#PWR017") (unit 1)
         )
       )
     )
@@ -735,7 +730,7 @@
       )
       (project "battery monitoring board"
         (path "/bf623d80-ca5a-491f-9daa-4dffbeba5279/7fa71be0-4e2c-431c-85f4-b0f15423b53d"
-          (reference "#PWR05") (unit 1)
+          (reference "#PWR015") (unit 1)
         )
       )
     )
@@ -766,7 +761,7 @@
       )
       (project "battery monitoring board"
         (path "/bf623d80-ca5a-491f-9daa-4dffbeba5279/7fa71be0-4e2c-431c-85f4-b0f15423b53d"
-          (reference "R7") (unit 1)
+          (reference "R10") (unit 1)
         )
       )
     )
@@ -797,7 +792,7 @@
       )
       (project "battery monitoring board"
         (path "/bf623d80-ca5a-491f-9daa-4dffbeba5279/7fa71be0-4e2c-431c-85f4-b0f15423b53d"
-          (reference "R9") (unit 1)
+          (reference "R11") (unit 1)
         )
       )
     )
@@ -828,7 +823,7 @@
       )
       (project "battery monitoring board"
         (path "/bf623d80-ca5a-491f-9daa-4dffbeba5279/7fa71be0-4e2c-431c-85f4-b0f15423b53d"
-          (reference "R10") (unit 1)
+          (reference "R12") (unit 1)
         )
       )
     )
@@ -859,7 +854,7 @@
       )
       (project "battery monitoring board"
         (path "/bf623d80-ca5a-491f-9daa-4dffbeba5279/7fa71be0-4e2c-431c-85f4-b0f15423b53d"
-          (reference "J4") (unit 1)
+          (reference "J5") (unit 1)
         )
       )
     )
@@ -890,7 +885,7 @@
       )
       (project "battery monitoring board"
         (path "/bf623d80-ca5a-491f-9daa-4dffbeba5279/7fa71be0-4e2c-431c-85f4-b0f15423b53d"
-          (reference "J2") (unit 1)
+          (reference "J3") (unit 1)
         )
       )
     )
@@ -921,7 +916,7 @@
       )
       (project "battery monitoring board"
         (path "/bf623d80-ca5a-491f-9daa-4dffbeba5279/7fa71be0-4e2c-431c-85f4-b0f15423b53d"
-          (reference "D1") (unit 1)
+          (reference "D3") (unit 1)
         )
       )
     )
@@ -952,7 +947,7 @@
       )
       (project "battery monitoring board"
         (path "/bf623d80-ca5a-491f-9daa-4dffbeba5279/7fa71be0-4e2c-431c-85f4-b0f15423b53d"
-          (reference "R8") (unit 1)
+          (reference "R9") (unit 1)
         )
       )
     )

@@ -507,6 +507,12 @@
   (junction (at 67.31 38.1) (diameter 0) (color 0 0 0 0)
     (uuid 3a0feb8c-071b-4b4e-b404-831f6e224721)
   )
+  (junction (at 91.948 30.48) (diameter 0) (color 0 0 0 0)
+    (uuid 4fdc998a-c685-45c2-98db-72001240e2b1)
+  )
+  (junction (at 59.69 30.48) (diameter 0) (color 0 0 0 0)
+    (uuid 837aa6e8-0942-440b-bf86-5029ced06098)
+  )
   (junction (at 53.34 59.69) (diameter 0) (color 0 0 0 0)
     (uuid c52fc3ca-f271-4eda-a219-194265c7ce89)
   )
@@ -535,11 +541,19 @@
     (stroke (width 0) (type default))
     (uuid 1a5960f7-d1ae-4d9d-b702-f9eb9f6075f0)
   )
+  (wire (pts (xy 59.69 21.336) (xy 59.69 30.48))
+    (stroke (width 0) (type default))
+    (uuid 1d19fe8c-61b5-46d6-b3ef-44a481402fa1)
+  )
   (wire (pts (xy 48.26 59.69) (xy 53.34 59.69))
     (stroke (width 0) (type default))
     (uuid 1f051ee7-404c-48ab-aee7-f63e6bc86cee)
   )
-  (wire (pts (xy 52.07 30.48) (xy 62.23 30.48))
+  (wire (pts (xy 73.152 21.336) (xy 59.69 21.336))
+    (stroke (width 0) (type default))
+    (uuid 29db1a7f-f331-471d-86b0-4e40b3d7e7e5)
+  )
+  (wire (pts (xy 52.07 30.48) (xy 59.69 30.48))
     (stroke (width 0) (type default))
     (uuid 368edf49-7e7e-41c3-b2c8-dd9d781f9c09)
   )
@@ -547,13 +561,29 @@
     (stroke (width 0) (type default))
     (uuid 42d59801-58f4-4174-a375-f1f0df78afca)
   )
+  (wire (pts (xy 78.232 28.956) (xy 78.232 38.1))
+    (stroke (width 0) (type default))
+    (uuid 504062ce-fcd7-4b63-9d32-64a4169fde32)
+  )
+  (wire (pts (xy 59.69 30.48) (xy 62.23 30.48))
+    (stroke (width 0) (type default))
+    (uuid 568d8a57-8f16-4ece-8200-1828ffc9af96)
+  )
   (wire (pts (xy 53.34 59.69) (xy 53.34 64.77))
     (stroke (width 0) (type default))
     (uuid 62e9e749-1062-498f-8938-ceddb301e977)
   )
+  (wire (pts (xy 78.232 38.1) (xy 67.31 38.1))
+    (stroke (width 0) (type default))
+    (uuid 68906166-fc53-4e30-94d2-668345896c4c)
+  )
   (wire (pts (xy 36.83 30.48) (xy 52.07 30.48))
     (stroke (width 0) (type default))
     (uuid 8c3c3595-1ddf-4de4-a3e7-77831646995a)
+  )
+  (wire (pts (xy 91.948 30.48) (xy 107.696 30.48))
+    (stroke (width 0) (type default))
+    (uuid b3485184-7be5-4660-babe-8db6f8dce622)
   )
   (wire (pts (xy 53.34 72.39) (xy 67.31 72.39))
     (stroke (width 0) (type default))
@@ -579,6 +609,10 @@
     (stroke (width 0) (type default))
     (uuid c9d7d46e-ee6e-49f0-bdcf-ff2ac1344044)
   )
+  (wire (pts (xy 72.39 30.48) (xy 91.948 30.48))
+    (stroke (width 0) (type default))
+    (uuid d6bdc5a0-c2aa-4ea8-9ec3-389b52fe1843)
+  )
   (wire (pts (xy 67.31 72.39) (xy 67.31 76.2))
     (stroke (width 0) (type default))
     (uuid dc7e7844-3249-4529-a240-ce40b24a6a45)
@@ -587,9 +621,17 @@
     (stroke (width 0) (type default))
     (uuid de3a67b5-8c02-4d52-9990-64c48fd6c719)
   )
+  (wire (pts (xy 91.948 21.336) (xy 91.948 30.48))
+    (stroke (width 0) (type default))
+    (uuid df410017-0bfd-40ca-83b8-294d9370be9f)
+  )
   (wire (pts (xy 67.31 35.56) (xy 67.31 38.1))
     (stroke (width 0) (type default))
     (uuid e2825e7b-3ec4-4be1-8d76-1495a133b401)
+  )
+  (wire (pts (xy 83.312 21.336) (xy 91.948 21.336))
+    (stroke (width 0) (type default))
+    (uuid f4f7336b-c173-4426-8f48-71f13503e9f6)
   )
   (wire (pts (xy 36.83 30.48) (xy 36.83 35.56))
     (stroke (width 0) (type default))
@@ -604,7 +646,7 @@
   (symbol (lib_id "Device:R_US") (at 67.31 49.53 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 11b1b8b5-33d1-4f84-a9c3-0b2a9fe13121)
-    (property "Reference" "R2" (at 69.85 48.26 0)
+    (property "Reference" "R16" (at 69.85 48.26 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "R_US" (at 69.85 50.8 0)
@@ -621,7 +663,7 @@
     (instances
       (project "battery monitoring board"
         (path "/bf623d80-ca5a-491f-9daa-4dffbeba5279/d1e89632-1041-42ed-815d-03472eda859a"
-          (reference "R2") (unit 1)
+          (reference "R16") (unit 1)
         )
       )
       (project "e-switch_sch"
@@ -635,7 +677,7 @@
   (symbol (lib_id "power:GND") (at 67.31 76.2 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 1e0fae94-6d91-4826-99a0-cf0aa896d844)
-    (property "Reference" "#PWR01" (at 67.31 82.55 0)
+    (property "Reference" "#PWR018" (at 67.31 82.55 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (at 67.31 81.28 0)
@@ -651,7 +693,7 @@
     (instances
       (project "battery monitoring board"
         (path "/bf623d80-ca5a-491f-9daa-4dffbeba5279/d1e89632-1041-42ed-815d-03472eda859a"
-          (reference "#PWR01") (unit 1)
+          (reference "#PWR018") (unit 1)
         )
       )
       (project "e-switch_sch"
@@ -665,7 +707,7 @@
   (symbol (lib_id "Simulation_SPICE:PMOS") (at 67.31 33.02 90) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 4459cd71-c751-4f65-a31c-a0cc85300c37)
-    (property "Reference" "Q1" (at 67.31 24.13 90)
+    (property "Reference" "Q3" (at 67.31 24.13 90)
       (effects (font (size 1.27 1.27)))
     )
     (property "Value" "PMOS" (at 67.31 26.67 90)
@@ -692,7 +734,7 @@
     (instances
       (project "battery monitoring board"
         (path "/bf623d80-ca5a-491f-9daa-4dffbeba5279/d1e89632-1041-42ed-815d-03472eda859a"
-          (reference "Q1") (unit 1)
+          (reference "Q3") (unit 1)
         )
       )
       (project "e-switch_sch"
@@ -706,7 +748,7 @@
   (symbol (lib_id "Device:R_US") (at 52.07 39.37 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 587d5045-9a4c-4916-a827-59e3eaa0cf34)
-    (property "Reference" "R1" (at 54.61 38.1 0)
+    (property "Reference" "R14" (at 54.61 38.1 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "R_US" (at 54.61 40.64 0)
@@ -723,7 +765,7 @@
     (instances
       (project "battery monitoring board"
         (path "/bf623d80-ca5a-491f-9daa-4dffbeba5279/d1e89632-1041-42ed-815d-03472eda859a"
-          (reference "R1") (unit 1)
+          (reference "R14") (unit 1)
         )
       )
       (project "e-switch_sch"
@@ -778,7 +820,7 @@
   (symbol (lib_id "Device:R_US") (at 44.45 59.69 90) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid bc31cf32-c760-4e29-9a66-cbcd422b2b77)
-    (property "Reference" "R3" (at 44.45 53.34 90)
+    (property "Reference" "R13" (at 44.45 53.34 90)
       (effects (font (size 1.27 1.27)))
     )
     (property "Value" "R_US" (at 44.45 55.88 90)
@@ -795,7 +837,7 @@
     (instances
       (project "battery monitoring board"
         (path "/bf623d80-ca5a-491f-9daa-4dffbeba5279/d1e89632-1041-42ed-815d-03472eda859a"
-          (reference "R3") (unit 1)
+          (reference "R13") (unit 1)
         )
       )
       (project "e-switch_sch"
@@ -809,7 +851,7 @@
   (symbol (lib_id "Device:D_Zener") (at 36.83 39.37 270) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid d32a1143-e3cf-40c2-a0f3-f6c147c50aff)
-    (property "Reference" "D1" (at 39.37 38.1 90)
+    (property "Reference" "D4" (at 39.37 38.1 90)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "D_Zener" (at 39.37 40.64 90)
@@ -826,7 +868,7 @@
     (instances
       (project "battery monitoring board"
         (path "/bf623d80-ca5a-491f-9daa-4dffbeba5279/d1e89632-1041-42ed-815d-03472eda859a"
-          (reference "D1") (unit 1)
+          (reference "D4") (unit 1)
         )
       )
       (project "e-switch_sch"
@@ -837,10 +879,51 @@
     )
   )
 
+  (symbol (lib_id "Simulation_SPICE:PMOS") (at 78.232 23.876 90) (unit 1)
+    (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
+    (uuid d81153ec-f849-40e6-9129-80609d2fa5d3)
+    (property "Reference" "Q4" (at 78.232 14.986 90)
+      (effects (font (size 1.27 1.27)))
+    )
+    (property "Value" "PMOS" (at 78.232 17.526 90)
+      (effects (font (size 1.27 1.27)))
+    )
+    (property "Footprint" "" (at 75.692 18.796 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Datasheet" "https://ngspice.sourceforge.io/docs/ngspice-manual.pdf" (at 90.932 23.876 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Sim.Device" "PMOS" (at 95.377 23.876 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Sim.Type" "VDMOS" (at 97.282 23.876 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Sim.Pins" "1=D 2=G 3=S" (at 93.472 23.876 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (pin "1" (uuid d90820ed-7275-4c78-be8e-3162c6ee07e8))
+    (pin "2" (uuid 92c7ce98-7aed-407d-b7b2-67f0c2716663))
+    (pin "3" (uuid 11b55890-71eb-48ec-bb95-03c226e4909e))
+    (instances
+      (project "battery monitoring board"
+        (path "/bf623d80-ca5a-491f-9daa-4dffbeba5279/d1e89632-1041-42ed-815d-03472eda859a"
+          (reference "Q4") (unit 1)
+        )
+      )
+      (project "e-switch_sch"
+        (path "/efca75fd-153b-4cfe-ab8f-e37262fd383b"
+          (reference "Q1") (unit 1)
+        )
+      )
+    )
+  )
+
   (symbol (lib_id "Device:R_US") (at 53.34 68.58 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid efe8caf2-fbda-4613-895d-82e02e36303b)
-    (property "Reference" "R4" (at 55.88 67.31 0)
+    (property "Reference" "R15" (at 55.88 67.31 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "R_US" (at 55.88 69.85 0)
@@ -857,7 +940,7 @@
     (instances
       (project "battery monitoring board"
         (path "/bf623d80-ca5a-491f-9daa-4dffbeba5279/d1e89632-1041-42ed-815d-03472eda859a"
-          (reference "R4") (unit 1)
+          (reference "R15") (unit 1)
         )
       )
       (project "e-switch_sch"

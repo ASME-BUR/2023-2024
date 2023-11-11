@@ -524,10 +524,10 @@
       )
       (project "battery monitoring board"
         (path "/bf623d80-ca5a-491f-9daa-4dffbeba5279/986cc9e1-c37e-4aa2-b3b5-8e2dcbe750c5"
-          (reference "R1") (unit 1)
+          (reference "R7") (unit 1)
         )
         (path "/bf623d80-ca5a-491f-9daa-4dffbeba5279/26c6129c-8fb5-4658-8c7a-1dc4298981ba"
-          (reference "R16") (unit 1)
+          (reference "R7") (unit 1)
         )
       )
     )
@@ -557,10 +557,10 @@
       )
       (project "battery monitoring board"
         (path "/bf623d80-ca5a-491f-9daa-4dffbeba5279/986cc9e1-c37e-4aa2-b3b5-8e2dcbe750c5"
-          (reference "#PWR06") (unit 1)
+          (reference "#PWR03") (unit 1)
         )
         (path "/bf623d80-ca5a-491f-9daa-4dffbeba5279/26c6129c-8fb5-4658-8c7a-1dc4298981ba"
-          (reference "#PWR024") (unit 1)
+          (reference "#PWR03") (unit 1)
         )
       )
     )
@@ -591,10 +591,10 @@
       )
       (project "battery monitoring board"
         (path "/bf623d80-ca5a-491f-9daa-4dffbeba5279/986cc9e1-c37e-4aa2-b3b5-8e2dcbe750c5"
-          (reference "R3") (unit 1)
+          (reference "R2") (unit 1)
         )
         (path "/bf623d80-ca5a-491f-9daa-4dffbeba5279/26c6129c-8fb5-4658-8c7a-1dc4298981ba"
-          (reference "R18") (unit 1)
+          (reference "R2") (unit 1)
         )
       )
     )
@@ -628,7 +628,7 @@
           (reference "C3") (unit 1)
         )
         (path "/bf623d80-ca5a-491f-9daa-4dffbeba5279/26c6129c-8fb5-4658-8c7a-1dc4298981ba"
-          (reference "C9") (unit 1)
+          (reference "C3") (unit 1)
         )
       )
     )
@@ -662,7 +662,7 @@
           (reference "C1") (unit 1)
         )
         (path "/bf623d80-ca5a-491f-9daa-4dffbeba5279/26c6129c-8fb5-4658-8c7a-1dc4298981ba"
-          (reference "C7") (unit 1)
+          (reference "C1") (unit 1)
         )
       )
     )
@@ -693,10 +693,10 @@
       )
       (project "battery monitoring board"
         (path "/bf623d80-ca5a-491f-9daa-4dffbeba5279/986cc9e1-c37e-4aa2-b3b5-8e2dcbe750c5"
-          (reference "R5") (unit 1)
+          (reference "R4") (unit 1)
         )
         (path "/bf623d80-ca5a-491f-9daa-4dffbeba5279/26c6129c-8fb5-4658-8c7a-1dc4298981ba"
-          (reference "R20") (unit 1)
+          (reference "R4") (unit 1)
         )
       )
     )
@@ -726,10 +726,10 @@
       )
       (project "battery monitoring board"
         (path "/bf623d80-ca5a-491f-9daa-4dffbeba5279/986cc9e1-c37e-4aa2-b3b5-8e2dcbe750c5"
-          (reference "#PWR010") (unit 1)
+          (reference "#PWR06") (unit 1)
         )
         (path "/bf623d80-ca5a-491f-9daa-4dffbeba5279/26c6129c-8fb5-4658-8c7a-1dc4298981ba"
-          (reference "#PWR028") (unit 1)
+          (reference "#PWR06") (unit 1)
         )
       )
     )
@@ -759,10 +759,10 @@
       )
       (project "battery monitoring board"
         (path "/bf623d80-ca5a-491f-9daa-4dffbeba5279/986cc9e1-c37e-4aa2-b3b5-8e2dcbe750c5"
-          (reference "#PWR08") (unit 1)
+          (reference "#PWR04") (unit 1)
         )
         (path "/bf623d80-ca5a-491f-9daa-4dffbeba5279/26c6129c-8fb5-4658-8c7a-1dc4298981ba"
-          (reference "#PWR026") (unit 1)
+          (reference "#PWR04") (unit 1)
         )
       )
     )
@@ -793,10 +793,10 @@
       )
       (project "battery monitoring board"
         (path "/bf623d80-ca5a-491f-9daa-4dffbeba5279/986cc9e1-c37e-4aa2-b3b5-8e2dcbe750c5"
-          (reference "R4") (unit 1)
+          (reference "R3") (unit 1)
         )
         (path "/bf623d80-ca5a-491f-9daa-4dffbeba5279/26c6129c-8fb5-4658-8c7a-1dc4298981ba"
-          (reference "R19") (unit 1)
+          (reference "R3") (unit 1)
         )
       )
     )
@@ -826,10 +826,10 @@
       )
       (project "battery monitoring board"
         (path "/bf623d80-ca5a-491f-9daa-4dffbeba5279/986cc9e1-c37e-4aa2-b3b5-8e2dcbe750c5"
-          (reference "#PWR09") (unit 1)
+          (reference "#PWR05") (unit 1)
         )
         (path "/bf623d80-ca5a-491f-9daa-4dffbeba5279/26c6129c-8fb5-4658-8c7a-1dc4298981ba"
-          (reference "#PWR027") (unit 1)
+          (reference "#PWR05") (unit 1)
         )
       )
     )
@@ -860,10 +860,10 @@
       )
       (project "battery monitoring board"
         (path "/bf623d80-ca5a-491f-9daa-4dffbeba5279/986cc9e1-c37e-4aa2-b3b5-8e2dcbe750c5"
-          (reference "R2") (unit 1)
+          (reference "R1") (unit 1)
         )
         (path "/bf623d80-ca5a-491f-9daa-4dffbeba5279/26c6129c-8fb5-4658-8c7a-1dc4298981ba"
-          (reference "R17") (unit 1)
+          (reference "R1") (unit 1)
         )
       )
     )
@@ -894,10 +894,10 @@
       )
       (project "battery monitoring board"
         (path "/bf623d80-ca5a-491f-9daa-4dffbeba5279/986cc9e1-c37e-4aa2-b3b5-8e2dcbe750c5"
-          (reference "R7") (unit 1)
+          (reference "R6") (unit 1)
         )
         (path "/bf623d80-ca5a-491f-9daa-4dffbeba5279/26c6129c-8fb5-4658-8c7a-1dc4298981ba"
-          (reference "R22") (unit 1)
+          (reference "R6") (unit 1)
         )
       )
     )
@@ -931,7 +931,7 @@
           (reference "C2") (unit 1)
         )
         (path "/bf623d80-ca5a-491f-9daa-4dffbeba5279/26c6129c-8fb5-4658-8c7a-1dc4298981ba"
-          (reference "C8") (unit 1)
+          (reference "C2") (unit 1)
         )
       )
     )
@@ -962,10 +962,10 @@
       )
       (project "battery monitoring board"
         (path "/bf623d80-ca5a-491f-9daa-4dffbeba5279/986cc9e1-c37e-4aa2-b3b5-8e2dcbe750c5"
-          (reference "R6") (unit 1)
+          (reference "R5") (unit 1)
         )
         (path "/bf623d80-ca5a-491f-9daa-4dffbeba5279/26c6129c-8fb5-4658-8c7a-1dc4298981ba"
-          (reference "R21") (unit 1)
+          (reference "R5") (unit 1)
         )
       )
     )
@@ -995,10 +995,10 @@
       )
       (project "battery monitoring board"
         (path "/bf623d80-ca5a-491f-9daa-4dffbeba5279/986cc9e1-c37e-4aa2-b3b5-8e2dcbe750c5"
-          (reference "#PWR07") (unit 1)
+          (reference "#PWR05") (unit 1)
         )
         (path "/bf623d80-ca5a-491f-9daa-4dffbeba5279/26c6129c-8fb5-4658-8c7a-1dc4298981ba"
-          (reference "#PWR025") (unit 1)
+          (reference "#PWR05") (unit 1)
         )
       )
     )
@@ -1074,10 +1074,10 @@
           (reference "J1") (unit 1)
         )
         (path "/bf623d80-ca5a-491f-9daa-4dffbeba5279/986cc9e1-c37e-4aa2-b3b5-8e2dcbe750c5"
-          (reference "J3") (unit 1)
+          (reference "J1") (unit 1)
         )
         (path "/bf623d80-ca5a-491f-9daa-4dffbeba5279/26c6129c-8fb5-4658-8c7a-1dc4298981ba"
-          (reference "J9") (unit 1)
+          (reference "J1") (unit 1)
         )
       )
     )

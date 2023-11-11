@@ -568,7 +568,7 @@
   (symbol (lib_id "power:GND") (at 86.36 88.9 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 1e0fae94-6d91-4826-99a0-cf0aa896d844)
-    (property "Reference" "#PWR023" (at 86.36 95.25 0)
+    (property "Reference" "#PWR018" (at 86.36 95.25 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (at 86.36 93.98 0)
@@ -584,7 +584,7 @@
     (instances
       (project "battery monitoring board"
         (path "/bf623d80-ca5a-491f-9daa-4dffbeba5279/d1e89632-1041-42ed-815d-03472eda859a"
-          (reference "#PWR023") (unit 1)
+          (reference "#PWR018") (unit 1)
         )
       )
       (project "e-switch_sch"
@@ -598,7 +598,7 @@
   (symbol (lib_id "PCM_Transistor_BJT_AKL:PN2222A") (at 83.82 71.12 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 2ac05739-4527-490e-b808-c5c91f6e53a3)
-    (property "Reference" "Q2" (at 89.916 69.85 0)
+    (property "Reference" "Q3" (at 89.916 69.85 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "PN2222A" (at 89.916 72.39 0)
@@ -616,7 +616,7 @@
     (instances
       (project "battery monitoring board"
         (path "/bf623d80-ca5a-491f-9daa-4dffbeba5279/d1e89632-1041-42ed-815d-03472eda859a"
-          (reference "Q2") (unit 1)
+          (reference "Q3") (unit 1)
         )
       )
     )
@@ -625,7 +625,7 @@
   (symbol (lib_id "Device:R_US") (at 62.23 71.12 90) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid bc31cf32-c760-4e29-9a66-cbcd422b2b77)
-    (property "Reference" "R14" (at 62.23 64.77 90)
+    (property "Reference" "R13" (at 62.23 64.77 90)
       (effects (font (size 1.27 1.27)))
     )
     (property "Value" "220" (at 62.23 67.31 90)
@@ -642,7 +642,7 @@
     (instances
       (project "battery monitoring board"
         (path "/bf623d80-ca5a-491f-9daa-4dffbeba5279/d1e89632-1041-42ed-815d-03472eda859a"
-          (reference "R14") (unit 1)
+          (reference "R13") (unit 1)
         )
       )
       (project "e-switch_sch"
@@ -747,7 +747,7 @@
   (symbol (lib_id "PCM_4ms_Power-symbol:+9V") (at 49.53 45.72 90) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid f0363986-0df5-41fa-b71c-129dba2be6d6)
-    (property "Reference" "#PWR022" (at 53.34 45.72 0)
+    (property "Reference" "#PWR024" (at 53.34 45.72 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "+9V" (at 45.466 45.72 90)
@@ -763,7 +763,7 @@
     (instances
       (project "battery monitoring board"
         (path "/bf623d80-ca5a-491f-9daa-4dffbeba5279/d1e89632-1041-42ed-815d-03472eda859a"
-          (reference "#PWR022") (unit 1)
+          (reference "#PWR024") (unit 1)
         )
       )
     )

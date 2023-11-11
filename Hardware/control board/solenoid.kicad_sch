@@ -862,7 +862,7 @@
     (property "Reference" "R9" (at 132.08 85.725 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
-    (property "Value" "650" (at 132.08 88.265 0)
+    (property "Value" "649" (at 132.08 88.265 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Footprint" "" (at 130.556 87.249 90)

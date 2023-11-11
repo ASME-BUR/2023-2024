@@ -522,6 +522,14 @@
           (reference "R7") (unit 1)
         )
       )
+      (project "battery monitoring board"
+        (path "/bf623d80-ca5a-491f-9daa-4dffbeba5279/986cc9e1-c37e-4aa2-b3b5-8e2dcbe750c5"
+          (reference "R7") (unit 1)
+        )
+        (path "/bf623d80-ca5a-491f-9daa-4dffbeba5279/26c6129c-8fb5-4658-8c7a-1dc4298981ba"
+          (reference "R7") (unit 1)
+        )
+      )
     )
   )
 
@@ -582,6 +590,9 @@
         (path "/bf623d80-ca5a-491f-9daa-4dffbeba5279/986cc9e1-c37e-4aa2-b3b5-8e2dcbe750c5"
           (reference "R2") (unit 1)
         )
+        (path "/bf623d80-ca5a-491f-9daa-4dffbeba5279/26c6129c-8fb5-4658-8c7a-1dc4298981ba"
+          (reference "R2") (unit 1)
+        )
       )
     )
   )
@@ -611,6 +622,9 @@
       )
       (project "battery monitoring board"
         (path "/bf623d80-ca5a-491f-9daa-4dffbeba5279/986cc9e1-c37e-4aa2-b3b5-8e2dcbe750c5"
+          (reference "C3") (unit 1)
+        )
+        (path "/bf623d80-ca5a-491f-9daa-4dffbeba5279/26c6129c-8fb5-4658-8c7a-1dc4298981ba"
           (reference "C3") (unit 1)
         )
       )
@@ -644,6 +658,9 @@
         (path "/bf623d80-ca5a-491f-9daa-4dffbeba5279/986cc9e1-c37e-4aa2-b3b5-8e2dcbe750c5"
           (reference "C1") (unit 1)
         )
+        (path "/bf623d80-ca5a-491f-9daa-4dffbeba5279/26c6129c-8fb5-4658-8c7a-1dc4298981ba"
+          (reference "C1") (unit 1)
+        )
       )
     )
   )
@@ -673,6 +690,9 @@
       )
       (project "battery monitoring board"
         (path "/bf623d80-ca5a-491f-9daa-4dffbeba5279/986cc9e1-c37e-4aa2-b3b5-8e2dcbe750c5"
+          (reference "R4") (unit 1)
+        )
+        (path "/bf623d80-ca5a-491f-9daa-4dffbeba5279/26c6129c-8fb5-4658-8c7a-1dc4298981ba"
           (reference "R4") (unit 1)
         )
       )
@@ -766,6 +786,9 @@
         (path "/bf623d80-ca5a-491f-9daa-4dffbeba5279/986cc9e1-c37e-4aa2-b3b5-8e2dcbe750c5"
           (reference "R3") (unit 1)
         )
+        (path "/bf623d80-ca5a-491f-9daa-4dffbeba5279/26c6129c-8fb5-4658-8c7a-1dc4298981ba"
+          (reference "R3") (unit 1)
+        )
       )
     )
   )
@@ -827,6 +850,9 @@
         (path "/bf623d80-ca5a-491f-9daa-4dffbeba5279/986cc9e1-c37e-4aa2-b3b5-8e2dcbe750c5"
           (reference "R1") (unit 1)
         )
+        (path "/bf623d80-ca5a-491f-9daa-4dffbeba5279/26c6129c-8fb5-4658-8c7a-1dc4298981ba"
+          (reference "R1") (unit 1)
+        )
       )
     )
   )
@@ -856,6 +882,9 @@
       )
       (project "battery monitoring board"
         (path "/bf623d80-ca5a-491f-9daa-4dffbeba5279/986cc9e1-c37e-4aa2-b3b5-8e2dcbe750c5"
+          (reference "R6") (unit 1)
+        )
+        (path "/bf623d80-ca5a-491f-9daa-4dffbeba5279/26c6129c-8fb5-4658-8c7a-1dc4298981ba"
           (reference "R6") (unit 1)
         )
       )
@@ -889,6 +918,9 @@
         (path "/bf623d80-ca5a-491f-9daa-4dffbeba5279/986cc9e1-c37e-4aa2-b3b5-8e2dcbe750c5"
           (reference "C2") (unit 1)
         )
+        (path "/bf623d80-ca5a-491f-9daa-4dffbeba5279/26c6129c-8fb5-4658-8c7a-1dc4298981ba"
+          (reference "C2") (unit 1)
+        )
       )
     )
   )
@@ -920,6 +952,9 @@
         (path "/bf623d80-ca5a-491f-9daa-4dffbeba5279/986cc9e1-c37e-4aa2-b3b5-8e2dcbe750c5"
           (reference "R5") (unit 1)
         )
+        (path "/bf623d80-ca5a-491f-9daa-4dffbeba5279/26c6129c-8fb5-4658-8c7a-1dc4298981ba"
+          (reference "R5") (unit 1)
+        )
       )
     )
   )
@@ -943,6 +978,11 @@
     (instances
       (project "voltage monitor"
         (path "/64dd58dd-0f80-4046-8958-33031e8c772b"
+          (reference "#PWR05") (unit 1)
+        )
+      )
+      (project "battery monitoring board"
+        (path "/bf623d80-ca5a-491f-9daa-4dffbeba5279/986cc9e1-c37e-4aa2-b3b5-8e2dcbe750c5"
           (reference "#PWR05") (unit 1)
         )
       )
@@ -1021,11 +1061,10 @@
         (path "/bf623d80-ca5a-491f-9daa-4dffbeba5279/986cc9e1-c37e-4aa2-b3b5-8e2dcbe750c5"
           (reference "J1") (unit 1)
         )
+        (path "/bf623d80-ca5a-491f-9daa-4dffbeba5279/26c6129c-8fb5-4658-8c7a-1dc4298981ba"
+          (reference "J1") (unit 1)
+        )
       )
     )
-  )
-
-  (sheet_instances
-    (path "/" (page "1"))
   )
 )

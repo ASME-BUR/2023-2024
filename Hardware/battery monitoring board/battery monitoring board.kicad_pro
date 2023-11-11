@@ -342,6 +342,10 @@
     [
       "d1e89632-1041-42ed-815d-03472eda859a",
       "e-switch"
+    ],
+    [
+      "26c6129c-8fb5-4658-8c7a-1dc4298981ba",
+      "voltage monitor2"
     ]
   ],
   "text_variables": {}

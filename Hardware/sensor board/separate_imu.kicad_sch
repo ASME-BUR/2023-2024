@@ -249,20 +249,20 @@
         )
       )
     )
-    (symbol "MTi_1_1" (in_bom yes) (on_board yes)
-      (property "Reference" "IMU1" (at 0 1.27 0)
+    (symbol "Sensor_Board_Components:MTi_3" (in_bom yes) (on_board yes)
+      (property "Reference" "U" (at -16.51 1.27 0)
         (effects (font (size 1.27 1.27)))
       )
-      (property "Value" "~" (at 0 0 0)
+      (property "Value" "MTi_3" (at 15.24 1.27 0)
         (effects (font (size 1.27 1.27)))
       )
-      (property "Footprint" "Package_LCC:PLCC-28_THT-Socket" (at 0 0 0)
+      (property "Footprint" "" (at 0 0 0)
         (effects (font (size 1.27 1.27)) hide)
       )
       (property "Datasheet" "" (at 0 0 0)
         (effects (font (size 1.27 1.27)) hide)
       )
-      (symbol "MTi_1_1_1_1"
+      (symbol "MTi_3_1_1"
         (rectangle (start -17.78 -1.27) (end 19.05 -15.24)
           (stroke (width 0) (type default))
           (fill (type background))
@@ -279,7 +279,7 @@
           (name "ADD0" (effects (font (size 1.27 1.27))))
           (number "12" (effects (font (size 1.27 1.27))))
         )
-        (pin unspecified line (at 7.62 -17.78 90) (length 2.54)
+        (pin power_in line (at 7.62 -17.78 90) (length 2.54)
           (name "GND" (effects (font (size 1.27 1.27))))
           (number "13" (effects (font (size 1.27 1.27))))
         )
@@ -291,23 +291,23 @@
           (name "PSEL1" (effects (font (size 1.27 1.27))))
           (number "15" (effects (font (size 1.27 1.27))))
         )
-        (pin unspecified line (at 21.59 -3.81 180) (length 2.54)
+        (pin output line (at 21.59 -3.81 180) (length 2.54)
           (name "I2C_SDA" (effects (font (size 1.27 1.27))))
           (number "23" (effects (font (size 1.27 1.27))))
         )
-        (pin unspecified line (at 21.59 -6.35 180) (length 2.54)
+        (pin input line (at 21.59 -6.35 180) (length 2.54)
           (name "I2C_SCL" (effects (font (size 1.27 1.27))))
           (number "24" (effects (font (size 1.27 1.27))))
         )
-        (pin unspecified line (at 10.16 -17.78 90) (length 2.54)
+        (pin power_in line (at 10.16 -17.78 90) (length 2.54)
           (name "GND" (effects (font (size 1.27 1.27))))
           (number "25" (effects (font (size 1.27 1.27))))
         )
-        (pin unspecified line (at 2.54 -17.78 90) (length 2.54)
+        (pin power_in line (at 2.54 -17.78 90) (length 2.54)
           (name "GND" (effects (font (size 1.27 1.27))))
           (number "4" (effects (font (size 1.27 1.27))))
         )
-        (pin unspecified line (at -20.32 -6.35 0) (length 2.54)
+        (pin power_in line (at -20.32 -6.35 0) (length 2.54)
           (name "VDDA" (effects (font (size 1.27 1.27))))
           (number "5" (effects (font (size 1.27 1.27))))
         )
@@ -315,11 +315,11 @@
           (name "nRST" (effects (font (size 1.27 1.27))))
           (number "6" (effects (font (size 1.27 1.27))))
         )
-        (pin unspecified line (at -20.32 -11.43 0) (length 2.54)
+        (pin power_in line (at -20.32 -11.43 0) (length 2.54)
           (name "VDDIO" (effects (font (size 1.27 1.27))))
           (number "7" (effects (font (size 1.27 1.27))))
         )
-        (pin unspecified line (at 5.08 -17.78 90) (length 2.54)
+        (pin power_in line (at 5.08 -17.78 90) (length 2.54)
           (name "GND" (effects (font (size 1.27 1.27))))
           (number "8" (effects (font (size 1.27 1.27))))
         )
@@ -567,11 +567,6 @@
     (uuid f9ad2609-2189-4f5f-a9d1-580ed38f1d15)
   )
 
-  (text "PSEL0, PSEL1 unconnected = i2c" (at 163.83 127 0)
-    (effects (font (size 1.27 1.27)) (justify left bottom))
-    (uuid 89689616-9575-4045-8e36-69618a65a0f6)
-  )
-
   (hierarchical_label "SDA" (shape output) (at 189.23 105.41 90) (fields_autoplaced)
     (effects (font (size 1.27 1.27)) (justify left))
     (uuid 2666fc4a-dffd-46d2-bbb9-4abf931c6219)
@@ -581,13 +576,13 @@
     (uuid 512cf9de-8e4f-4da8-a090-9b941228341e)
   )
 
-  (symbol (lib_name "MTi_1_1") (lib_id "New_Library:MTi_1") (at 139.7 105.41 0) (unit 1)
+  (symbol (lib_id "Sensor_Board_Components:MTi_3") (at 139.7 105.41 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 49517cbf-4311-47a0-b4d9-504d4c6ec54a)
-    (property "Reference" "IMU1" (at 139.7 104.14 0)
+    (property "Reference" "IMU1" (at 123.19 104.14 0)
       (effects (font (size 1.27 1.27)))
     )
-    (property "Value" "~" (at 139.7 105.41 0)
+    (property "Value" "MTi_3" (at 154.94 104.14 0)
       (effects (font (size 1.27 1.27)))
     )
     (property "Footprint" "Package_LCC:PLCC-28_THT-Socket" (at 139.7 105.41 0)
@@ -621,7 +616,7 @@
           (reference "IMU1") (unit 1)
         )
         (path "/b809390c-5c7b-4faa-a505-ee668295313b/b45961e0-d21c-4cf1-a8fa-4e6b738a8420"
-          (reference "IMU1") (unit 1)
+          (reference "U1") (unit 1)
         )
       )
       (project "Sensor Board 3"
@@ -659,7 +654,7 @@
           (reference "#PWR010") (unit 1)
         )
         (path "/b809390c-5c7b-4faa-a505-ee668295313b/b45961e0-d21c-4cf1-a8fa-4e6b738a8420"
-          (reference "#PWR015") (unit 1)
+          (reference "#PWR011") (unit 1)
         )
       )
       (project "Sensor Board 3"
@@ -692,7 +687,7 @@
           (reference "#PWR04") (unit 1)
         )
         (path "/b809390c-5c7b-4faa-a505-ee668295313b/b45961e0-d21c-4cf1-a8fa-4e6b738a8420"
-          (reference "#PWR012") (unit 1)
+          (reference "#PWR09") (unit 1)
         )
       )
       (project "Sensor Board 3"
@@ -725,7 +720,7 @@
           (reference "#PWR04") (unit 1)
         )
         (path "/b809390c-5c7b-4faa-a505-ee668295313b/b45961e0-d21c-4cf1-a8fa-4e6b738a8420"
-          (reference "#PWR010") (unit 1)
+          (reference "#PWR012") (unit 1)
         )
       )
       (project "Sensor Board 3"
@@ -761,7 +756,7 @@
       )
       (project "sensor board"
         (path "/b809390c-5c7b-4faa-a505-ee668295313b/b45961e0-d21c-4cf1-a8fa-4e6b738a8420"
-          (reference "R2") (unit 1)
+          (reference "R1") (unit 1)
         )
       )
     )
@@ -853,7 +848,7 @@
       )
       (project "sensor board"
         (path "/b809390c-5c7b-4faa-a505-ee668295313b/b45961e0-d21c-4cf1-a8fa-4e6b738a8420"
-          (reference "#PWR011") (unit 1)
+          (reference "#PWR010") (unit 1)
         )
       )
     )
@@ -884,7 +879,7 @@
       )
       (project "sensor board"
         (path "/b809390c-5c7b-4faa-a505-ee668295313b/b45961e0-d21c-4cf1-a8fa-4e6b738a8420"
-          (reference "R3") (unit 1)
+          (reference "R2") (unit 1)
         )
       )
     )
@@ -917,7 +912,7 @@
       )
       (project "sensor board"
         (path "/b809390c-5c7b-4faa-a505-ee668295313b/b45961e0-d21c-4cf1-a8fa-4e6b738a8420"
-          (reference "J3") (unit 1)
+          (reference "J5") (unit 1)
         )
       )
     )

@@ -682,6 +682,11 @@
     )
     (pin "1" (uuid b2893e74-b87b-4e34-9482-7250f2c1ffa7))
     (instances
+      (project "separate_imu"
+        (path "/8a24fe02-04cc-49de-bd83-d8cbd4825e35"
+          (reference "#PWR04") (unit 1)
+        )
+      )
       (project "sensor board"
         (path "/b809390c-5c7b-4faa-a505-ee668295313b"
           (reference "#PWR04") (unit 1)
@@ -715,6 +720,11 @@
     )
     (pin "1" (uuid ff5504df-70a2-4f3e-afc3-5afa30fda227))
     (instances
+      (project "separate_imu"
+        (path "/8a24fe02-04cc-49de-bd83-d8cbd4825e35"
+          (reference "#PWR04") (unit 1)
+        )
+      )
       (project "sensor board"
         (path "/b809390c-5c7b-4faa-a505-ee668295313b"
           (reference "#PWR04") (unit 1)
@@ -886,7 +896,7 @@
   )
 
   (symbol (lib_id "Connector:Conn_01x04_Pin") (at 207.01 114.3 180) (unit 1)
-    (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
+    (in_bom yes) (on_board yes) (dnp no)
     (uuid ad8e1453-6a2c-49f7-bcd8-debb8e116ab2)
     (property "Reference" "J1" (at 206.375 121.92 0)
       (effects (font (size 1.27 1.27)))
@@ -894,16 +904,16 @@
     (property "Value" "Conn_01x04_Pin" (at 206.375 119.38 0)
       (effects (font (size 1.27 1.27)))
     )
-    (property "Footprint" "" (at 207.01 114.3 0)
+    (property "Footprint" "Connector_JST:JST_XH_B4B-XH-AM_1x04_P2.50mm_Vertical" (at 207.01 114.3 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "~" (at 207.01 114.3 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (pin "1" (uuid 833e3c11-024e-464b-aaa3-546d0a0c4c23))
-    (pin "2" (uuid 30a2cd9b-bb88-418c-94e7-2a19e68074fb))
-    (pin "3" (uuid c9bc2b58-270f-414e-8463-c9b0b4d01c09))
-    (pin "4" (uuid 0d2b6861-486b-47fd-a65f-8903cdce8a5a))
+    (pin "1" (uuid 707d9f28-a441-4d4b-b5a4-9c019c516d81))
+    (pin "2" (uuid 5eda42c4-6789-4fc1-aba3-6e9a2fe4a6a5))
+    (pin "3" (uuid b0483aee-1bc9-4af3-b1f6-e7553a17c77f))
+    (pin "4" (uuid 1a8b1917-19b0-4173-8c5b-e6b7907fab70))
     (instances
       (project "separate_imu"
         (path "/8a24fe02-04cc-49de-bd83-d8cbd4825e35"
@@ -935,6 +945,11 @@
     )
     (pin "1" (uuid e73e5582-e037-477e-903a-329b8ef36333))
     (instances
+      (project "separate_imu"
+        (path "/8a24fe02-04cc-49de-bd83-d8cbd4825e35"
+          (reference "#PWR04") (unit 1)
+        )
+      )
       (project "sensor board"
         (path "/b809390c-5c7b-4faa-a505-ee668295313b"
           (reference "#PWR04") (unit 1)
@@ -979,5 +994,9 @@
         )
       )
     )
+  )
+
+  (sheet_instances
+    (path "/" (page "1"))
   )
 )

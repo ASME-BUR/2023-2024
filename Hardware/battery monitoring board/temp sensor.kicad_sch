@@ -631,7 +631,7 @@
     (uuid f65133a7-327d-4b88-8b99-0a7bf0f38f5e)
   )
 
-  (hierarchical_label "cs" (shape input) (at 192.532 101.346 0) (fields_autoplaced)
+  (hierarchical_label "cs" (shape output) (at 192.532 101.346 0) (fields_autoplaced)
     (effects (font (size 1.27 1.27)) (justify left))
     (uuid 5913142d-11e3-45b7-a886-496ebb14fb61)
   )
@@ -639,7 +639,7 @@
     (effects (font (size 1.27 1.27)) (justify left))
     (uuid 706b3215-d554-4e27-a59c-1b051eea2732)
   )
-  (hierarchical_label "sck" (shape input) (at 192.532 93.726 0) (fields_autoplaced)
+  (hierarchical_label "sck" (shape output) (at 192.532 93.726 0) (fields_autoplaced)
     (effects (font (size 1.27 1.27)) (justify left))
     (uuid 80ee19a9-909b-4d26-b375-91e0dbd7aaaf)
   )

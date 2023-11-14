@@ -537,7 +537,7 @@
   (symbol (lib_id "Connector_Generic:Conn_01x02") (at 196.85 71.12 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 2935213a-2a02-4acd-aea4-f6cee44c0ce7)
-    (property "Reference" "J8" (at 199.39 71.12 0)
+    (property "Reference" "J2" (at 199.39 71.12 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "Conn_01x02" (at 199.39 73.66 0)
@@ -554,7 +554,7 @@
     (instances
       (project "battery monitoring board"
         (path "/bf623d80-ca5a-491f-9daa-4dffbeba5279"
-          (reference "J8") (unit 1)
+          (reference "J2") (unit 1)
         )
       )
     )
@@ -563,7 +563,7 @@
   (symbol (lib_id "power:+3V3") (at 124.46 58.42 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 2fc644c2-d9c7-4c25-8ad5-664ad5a69a62)
-    (property "Reference" "#PWR019" (at 124.46 62.23 0)
+    (property "Reference" "#PWR02" (at 124.46 62.23 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "+3V3" (at 122.682 54.61 0)
@@ -579,7 +579,7 @@
     (instances
       (project "battery monitoring board"
         (path "/bf623d80-ca5a-491f-9daa-4dffbeba5279"
-          (reference "#PWR019") (unit 1)
+          (reference "#PWR02") (unit 1)
         )
       )
     )
@@ -588,7 +588,7 @@
   (symbol (lib_id "PCM_4ms_Power-symbol:GND") (at 191.77 73.66 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 798b053c-7140-4caf-85f9-48c8696a02e7)
-    (property "Reference" "#PWR020" (at 191.77 80.01 0)
+    (property "Reference" "#PWR05" (at 191.77 80.01 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (at 194.31 76.2 0)
@@ -604,7 +604,7 @@
     (instances
       (project "battery monitoring board"
         (path "/bf623d80-ca5a-491f-9daa-4dffbeba5279"
-          (reference "#PWR020") (unit 1)
+          (reference "#PWR05") (unit 1)
         )
       )
     )
@@ -638,7 +638,7 @@
   (symbol (lib_id "Connector_Generic:Conn_01x02") (at 142.24 73.66 180) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 7ac4e823-aa80-4b0a-b757-047df6789237)
-    (property "Reference" "J7" (at 142.24 64.77 0)
+    (property "Reference" "J1" (at 142.24 64.77 0)
       (effects (font (size 1.27 1.27)))
     )
     (property "Value" "Conn_01x02" (at 142.24 67.31 0)
@@ -655,7 +655,7 @@
     (instances
       (project "battery monitoring board"
         (path "/bf623d80-ca5a-491f-9daa-4dffbeba5279"
-          (reference "J7") (unit 1)
+          (reference "J1") (unit 1)
         )
       )
     )
@@ -664,7 +664,7 @@
   (symbol (lib_id "PCM_4ms_Power-symbol:+5V") (at 127 58.42 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid b34bc405-81d3-467c-bb46-0d4b0bf6e492)
-    (property "Reference" "#PWR02" (at 127 62.23 0)
+    (property "Reference" "#PWR03" (at 127 62.23 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "+5V" (at 128.016 54.61 0)
@@ -680,7 +680,7 @@
     (instances
       (project "battery monitoring board"
         (path "/bf623d80-ca5a-491f-9daa-4dffbeba5279"
-          (reference "#PWR02") (unit 1)
+          (reference "#PWR03") (unit 1)
         )
       )
     )
@@ -689,7 +689,7 @@
   (symbol (lib_id "PCM_4ms_Power-symbol:GND") (at 147.32 73.66 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid bf8bc524-ab7e-421a-b8a5-928f86e71004)
-    (property "Reference" "#PWR021" (at 147.32 80.01 0)
+    (property "Reference" "#PWR04" (at 147.32 80.01 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (at 149.86 76.2 0)
@@ -705,7 +705,7 @@
     (instances
       (project "battery monitoring board"
         (path "/bf623d80-ca5a-491f-9daa-4dffbeba5279"
-          (reference "#PWR021") (unit 1)
+          (reference "#PWR04") (unit 1)
         )
       )
     )

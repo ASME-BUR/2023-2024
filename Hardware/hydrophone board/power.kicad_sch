@@ -1230,7 +1230,7 @@
     (property "Value" "Conn_01x03" (at 148.59 53.975 90)
       (effects (font (size 1.27 1.27)) (justify right))
     )
-    (property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x03_P2.54mm_Vertical" (at 143.51 52.07 0)
+    (property "Footprint" "Connector_PinSocket_2.54mm:PinSocket_1x03_P2.54mm_Vertical" (at 143.51 52.07 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "~" (at 143.51 52.07 0)

@@ -1,0 +1,69 @@
+11-17 16:10:56 com_github_MitjaNemec_ReplicateLayout.action_replicate_layout 392:Plugin executed on: 'win32'
+11-17 16:10:56 com_github_MitjaNemec_ReplicateLayout.action_replicate_layout 393:Plugin executed with python version: '3.9.16 (main, Aug  8 2023, 05:38:28) [MSC v.1936 64 bit (AMD64)]'
+11-17 16:10:56 com_github_MitjaNemec_ReplicateLayout.action_replicate_layout 394:KiCad build version: 7.0.8
+11-17 16:10:56 com_github_MitjaNemec_ReplicateLayout.action_replicate_layout 395:Plugin version: 2.1.3
+11-17 16:10:56 com_github_MitjaNemec_ReplicateLayout.action_replicate_layout 396:Frame repr: <wx._core.Frame object at 0x0000028B6DDACA60>
+11-17 16:10:56 com_github_MitjaNemec_ReplicateLayout.action_replicate_layout 420:Preparing replicator with U111 as a reference
+11-17 16:10:56 com_github_MitjaNemec_ReplicateLayout.replicate_layout 117:getting a list of all footprints on board
+11-17 16:10:56 com_github_MitjaNemec_ReplicateLayout.action_replicate_layout 468:source anchor footprint is 'U111'
+Located on: ['preamp']
+With filenames: ['preamp.kicad_sch']
+With sheet_id:['preamp']
+11-17 16:10:56 com_github_MitjaNemec_ReplicateLayout.action_replicate_layout 475:Corresponding footprints are 
+[('U131', ['preamp_3']), ('U121', ['preamp_2']), ('U141', ['preamp_4']), ('U111', ['preamp'])]
+11-17 16:10:56 com_github_MitjaNemec_ReplicateLayout.action_replicate_layout 487:Showing dialog
+11-17 16:10:56 com_github_MitjaNemec_ReplicateLayout.replicate_layout 424:constructing a list of sheets suitable for replication on level:'preamp', file:'preamp.kicad_sch'
+11-17 16:10:56 com_github_MitjaNemec_ReplicateLayout.replicate_layout 461:suitable sheets are:[['preamp_2'], ['preamp_3'], ['preamp_4']]
+11-17 16:10:56 com_github_MitjaNemec_ReplicateLayout.replicate_layout 1464:Level selected: ['preamp']
+11-17 16:10:56 com_github_MitjaNemec_ReplicateLayout.replicate_layout 1299:Filtering list of tracks
+11-17 16:10:56 com_github_MitjaNemec_ReplicateLayout.action_replicate_layout 493:Toolbar position: wx.Point(2390, 232)
+11-17 16:10:56 com_github_MitjaNemec_ReplicateLayout.action_replicate_layout 498:Dialog position: wx.Point(1951, 232)
+11-17 16:11:07 com_github_MitjaNemec_ReplicateLayout.replicate_layout 424:constructing a list of sheets suitable for replication on level:'preamp', file:'preamp.kicad_sch'
+11-17 16:11:07 com_github_MitjaNemec_ReplicateLayout.replicate_layout 461:suitable sheets are:[['preamp_2'], ['preamp_3'], ['preamp_4']]
+11-17 16:11:07 com_github_MitjaNemec_ReplicateLayout.action_replicate_layout 240:Replicating layout
+11-17 16:11:08 com_github_MitjaNemec_ReplicateLayout.replicate_layout 240:Starting replication of sheets: [['preamp_2'], ['preamp_3'], ['preamp_4']]
+on level: ['preamp']
+with tracks=True, zone=True, text=True, text=True, intersecting=False, remove=False, locked footprints=False, group_only=False
+11-17 16:11:08 root 332:updating GUI message: 'Preparing for replication'
+11-17 16:11:08 root 337:updating GUI with: 0
+11-17 16:11:08 com_github_MitjaNemec_ReplicateLayout.replicate_layout 310:Getting the list of source footprints
+11-17 16:11:08 com_github_MitjaNemec_ReplicateLayout.replicate_layout 320:Getting the list of all the remaining footprints
+11-17 16:11:08 com_github_MitjaNemec_ReplicateLayout.replicate_layout 327:Getting source tracks
+11-17 16:11:08 com_github_MitjaNemec_ReplicateLayout.replicate_layout 1299:Filtering list of tracks
+11-17 16:11:08 com_github_MitjaNemec_ReplicateLayout.replicate_layout 331:Getting source zones
+11-17 16:11:08 com_github_MitjaNemec_ReplicateLayout.replicate_layout 335:Getting source text items
+11-17 16:11:08 com_github_MitjaNemec_ReplicateLayout.replicate_layout 339:Getting source drawing items
+11-17 16:11:08 root 332:updating GUI message: 'Replicating footprints'
+11-17 16:11:08 com_github_MitjaNemec_ReplicateLayout.replicate_layout 806:Replicating footprints
+11-17 16:11:08 com_github_MitjaNemec_ReplicateLayout.replicate_layout 813:Replicating footprints on sheet ['preamp_2']
+11-17 16:11:08 root 337:updating GUI with: 6
+11-17 16:11:08 com_github_MitjaNemec_ReplicateLayout.replicate_layout 813:Replicating footprints on sheet ['preamp_3']
+11-17 16:11:08 com_github_MitjaNemec_ReplicateLayout.replicate_layout 813:Replicating footprints on sheet ['preamp_4']
+11-17 16:11:08 root 332:updating GUI message: 'Replicating tracks'
+11-17 16:11:08 com_github_MitjaNemec_ReplicateLayout.replicate_layout 977:Replicating tracks
+11-17 16:11:08 com_github_MitjaNemec_ReplicateLayout.replicate_layout 983:Replicating tracks on sheet ['preamp_2']
+11-17 16:11:08 com_github_MitjaNemec_ReplicateLayout.replicate_layout 766:Net pairs for sheet ['preamp_2'] :[('+3.3VA', '+3.3VA'), ('/IN_1_A', '/IN_2_A'), ('/IN_1', '/IN_2'), ('Net-(U111-+)', 'Net-(U121-+)'), ('+5V', '+5V'), ('Net-(U111--)', 'Net-(U121--)'), ('GND', 'GND')]
+11-17 16:11:08 root 337:updating GUI with: 2
+11-17 16:11:08 com_github_MitjaNemec_ReplicateLayout.replicate_layout 983:Replicating tracks on sheet ['preamp_3']
+11-17 16:11:08 com_github_MitjaNemec_ReplicateLayout.replicate_layout 766:Net pairs for sheet ['preamp_3'] :[('+3.3VA', '+3.3VA'), ('Net-(U111--)', 'Net-(U131--)'), ('+5V', '+5V'), ('/IN_1_A', '/IN_3_A'), ('/IN_1', '/IN_3'), ('GND', 'GND'), ('Net-(U111-+)', 'Net-(U131-+)')]
+11-17 16:11:08 com_github_MitjaNemec_ReplicateLayout.replicate_layout 983:Replicating tracks on sheet ['preamp_4']
+11-17 16:11:08 com_github_MitjaNemec_ReplicateLayout.replicate_layout 766:Net pairs for sheet ['preamp_4'] :[('Net-(U111--)', 'Net-(U141--)'), ('+3.3VA', '+3.3VA'), ('+5V', '+5V'), ('/IN_1_A', '/IN_4_A'), ('/IN_1', '/IN_4'), ('GND', 'GND'), ('Net-(U111-+)', 'Net-(U141-+)')]
+11-17 16:11:08 root 332:updating GUI message: 'Replicating zones'
+11-17 16:11:08 com_github_MitjaNemec_ReplicateLayout.replicate_layout 1047:Replicating zones
+11-17 16:11:08 com_github_MitjaNemec_ReplicateLayout.replicate_layout 1054:Replicating zones on sheet ['preamp_2']
+11-17 16:11:08 com_github_MitjaNemec_ReplicateLayout.replicate_layout 766:Net pairs for sheet ['preamp_2'] :[('+3.3VA', '+3.3VA'), ('/IN_1_A', '/IN_2_A'), ('/IN_1', '/IN_2'), ('Net-(U111-+)', 'Net-(U121-+)'), ('+5V', '+5V'), ('Net-(U111--)', 'Net-(U121--)'), ('GND', 'GND')]
+11-17 16:11:08 com_github_MitjaNemec_ReplicateLayout.replicate_layout 1054:Replicating zones on sheet ['preamp_3']
+11-17 16:11:08 com_github_MitjaNemec_ReplicateLayout.replicate_layout 766:Net pairs for sheet ['preamp_3'] :[('+3.3VA', '+3.3VA'), ('Net-(U111--)', 'Net-(U131--)'), ('+5V', '+5V'), ('/IN_1_A', '/IN_3_A'), ('/IN_1', '/IN_3'), ('GND', 'GND'), ('Net-(U111-+)', 'Net-(U131-+)')]
+11-17 16:11:08 com_github_MitjaNemec_ReplicateLayout.replicate_layout 1054:Replicating zones on sheet ['preamp_4']
+11-17 16:11:08 com_github_MitjaNemec_ReplicateLayout.replicate_layout 766:Net pairs for sheet ['preamp_4'] :[('Net-(U111--)', 'Net-(U141--)'), ('+3.3VA', '+3.3VA'), ('+5V', '+5V'), ('/IN_1_A', '/IN_4_A'), ('/IN_1', '/IN_4'), ('GND', 'GND'), ('Net-(U111-+)', 'Net-(U141-+)')]
+11-17 16:11:08 root 332:updating GUI message: 'Replicating text'
+11-17 16:11:08 com_github_MitjaNemec_ReplicateLayout.replicate_layout 1136:Replicating text
+11-17 16:11:08 com_github_MitjaNemec_ReplicateLayout.replicate_layout 1143:Replicating text on sheet ['preamp_2']
+11-17 16:11:08 com_github_MitjaNemec_ReplicateLayout.replicate_layout 1143:Replicating text on sheet ['preamp_3']
+11-17 16:11:08 com_github_MitjaNemec_ReplicateLayout.replicate_layout 1143:Replicating text on sheet ['preamp_4']
+11-17 16:11:08 root 332:updating GUI message: 'Replicating drawings'
+11-17 16:11:08 com_github_MitjaNemec_ReplicateLayout.replicate_layout 1187:Replicating drawings
+11-17 16:11:08 com_github_MitjaNemec_ReplicateLayout.replicate_layout 1193:Replicating drawings on sheet ['preamp_2']
+11-17 16:11:08 com_github_MitjaNemec_ReplicateLayout.replicate_layout 1193:Replicating drawings on sheet ['preamp_3']
+11-17 16:11:08 com_github_MitjaNemec_ReplicateLayout.replicate_layout 1193:Replicating drawings on sheet ['preamp_4']
+11-17 16:11:08 com_github_MitjaNemec_ReplicateLayout.action_replicate_layout 256:Replication complete

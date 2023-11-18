@@ -801,7 +801,7 @@
     (property "Reference" "R10" (at 118.11 71.12 90)
       (effects (font (size 1.27 1.27)) (justify left))
     )
-    (property "Value" "100" (at 113.03 71.12 90)
+    (property "Value" "248" (at 113.03 71.12 90)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Footprint" "" (at 116.586 70.104 90)

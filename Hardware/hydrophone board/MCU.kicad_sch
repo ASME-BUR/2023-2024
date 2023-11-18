@@ -760,7 +760,6 @@
     (pin "28" (uuid f4f59d16-bb6e-4da4-aca2-2845249983d5))
     (pin "29" (uuid bcc95a16-f536-4b18-91a9-4897501e791e))
     (pin "3" (uuid 2b3deb49-f753-493d-bce2-6bfcb76495cc))
-    (pin "3.3V_1" (uuid deea5820-724e-46f5-b17b-221ab39d24c1))
     (pin "3.3V_2" (uuid 0855cdd7-d27a-493b-b2f4-268adbc89d98))
     (pin "3.3V_3" (uuid 4c49adb8-bc70-41ab-a7c2-6389e599f990))
     (pin "30" (uuid 3c406d95-523b-4d80-b640-e34e99ed1093))
@@ -801,6 +800,7 @@
     (pin "VBAT" (uuid 1b39cabd-bc76-480d-8ec9-d8199ce3a174))
     (pin "VIN" (uuid 85ddb1ae-106f-48b9-980c-d88b6c25ae26))
     (pin "VUSB" (uuid ec07dc25-f4ed-44a3-b828-8703f43e09b0))
+    (pin "3.3V_1" (uuid deea5820-724e-46f5-b17b-221ab39d24c1))
     (instances
       (project "hydrophone board"
         (path "/4356d3a6-6a00-447d-897e-473f60221539/1c2c9d85-5695-48de-99af-3ac5f27a43fe"

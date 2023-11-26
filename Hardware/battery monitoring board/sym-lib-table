@@ -1,4 +1,6 @@
 (sym_lib_table
   (version 7)
   (lib (name "S5B-XH-A")(type "KiCad")(uri "${KIPRJMOD}/battery monitoring library/S5B-XH-A.kicad_sym")(options "")(descr ""))
+  (lib (name "282836-2")(type "KiCad")(uri "${KIPRJMOD}/battery monitoring library/282836-2.kicad_sym")(options "")(descr ""))
+  (lib (name "BM02B-GHS-TBT_LF__SN_")(type "KiCad")(uri "${KIPRJMOD}/battery monitoring library/BM02B-GHS-TBT_LF__SN_.kicad_sym")(options "")(descr ""))
 )

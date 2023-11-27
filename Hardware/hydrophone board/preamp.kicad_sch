@@ -185,52 +185,6 @@
         )
       )
     )
-    (symbol "PCM_4ms_Power-symbol:+5V" (power) (pin_names (offset 0)) (in_bom yes) (on_board yes)
-      (property "Reference" "#PWR" (at 0 -3.81 0)
-        (effects (font (size 1.27 1.27)) hide)
-      )
-      (property "Value" "+5V" (at 0 3.556 0)
-        (effects (font (size 1.27 1.27)))
-      )
-      (property "Footprint" "" (at 0 0 0)
-        (effects (font (size 1.27 1.27)) hide)
-      )
-      (property "Datasheet" "" (at 0 0 0)
-        (effects (font (size 1.27 1.27)) hide)
-      )
-      (symbol "+5V_0_1"
-        (polyline
-          (pts
-            (xy -0.762 1.27)
-            (xy 0 2.54)
-          )
-          (stroke (width 0) (type default))
-          (fill (type none))
-        )
-        (polyline
-          (pts
-            (xy 0 0)
-            (xy 0 2.54)
-          )
-          (stroke (width 0) (type default))
-          (fill (type none))
-        )
-        (polyline
-          (pts
-            (xy 0 2.54)
-            (xy 0.762 1.27)
-          )
-          (stroke (width 0) (type default))
-          (fill (type none))
-        )
-      )
-      (symbol "+5V_1_1"
-        (pin power_in line (at 0 0 90) (length 0) hide
-          (name "+5V" (effects (font (size 1.27 1.27))))
-          (number "1" (effects (font (size 1.27 1.27))))
-        )
-      )
-    )
     (symbol "PCM_Amplifier_Operational_AKL:AD8541ARTZ" (pin_names (offset 0.2)) (in_bom yes) (on_board yes)
       (property "Reference" "U" (at 1.27 7.62 0)
         (effects (font (size 1.27 1.27)) (justify left))
@@ -596,40 +550,6 @@
         )
         (path "/4356d3a6-6a00-447d-897e-473f60221539/6f981a72-1f6f-4ccf-ba7d-c5dfb70b4229"
           (reference "C142") (unit 1)
-        )
-      )
-    )
-  )
-
-  (symbol (lib_id "PCM_4ms_Power-symbol:+5V") (at 63.5 71.12 0) (unit 1)
-    (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
-    (uuid 2cb9d7d6-e57c-44f2-9a6f-d8a3b962a08c)
-    (property "Reference" "#PWR0248" (at 63.5 74.93 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Value" "+5V" (at 63.5 66.04 0)
-      (effects (font (size 1.27 1.27)))
-    )
-    (property "Footprint" "" (at 63.5 71.12 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Datasheet" "" (at 63.5 71.12 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (pin "1" (uuid a33bb11f-eb17-417f-910c-3782be52c5ec))
-    (instances
-      (project "hydrophone board"
-        (path "/4356d3a6-6a00-447d-897e-473f60221539/f560d530-135c-40dc-9144-4f9599a30f13"
-          (reference "#PWR0248") (unit 1)
-        )
-        (path "/4356d3a6-6a00-447d-897e-473f60221539/fa1a46a1-ed86-4a84-a182-b5dbe7fc86e7"
-          (reference "#PWR0249") (unit 1)
-        )
-        (path "/4356d3a6-6a00-447d-897e-473f60221539/d3a562a3-af99-4bb5-b5fa-eb83660cffa4"
-          (reference "#PWR0250") (unit 1)
-        )
-        (path "/4356d3a6-6a00-447d-897e-473f60221539/6f981a72-1f6f-4ccf-ba7d-c5dfb70b4229"
-          (reference "#PWR0251") (unit 1)
         )
       )
     )
@@ -1065,6 +985,43 @@
         )
         (path "/4356d3a6-6a00-447d-897e-473f60221539/6f981a72-1f6f-4ccf-ba7d-c5dfb70b4229"
           (reference "C141") (unit 1)
+        )
+      )
+    )
+  )
+
+  (symbol (lib_id "power:+3.3VA") (at 63.5 71.12 0) (unit 1)
+    (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
+    (uuid e3a43b16-6426-47fe-962d-a34ca21fc0e4)
+    (property "Reference" "#PWR0401" (at 63.5 74.93 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Value" "+3.3VA" (at 63.5 67.31 0)
+      (effects (font (size 1.27 1.27)))
+    )
+    (property "Footprint" "" (at 63.5 71.12 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Datasheet" "" (at 63.5 71.12 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (pin "1" (uuid d622e441-ed38-4848-a2a5-e313285e9def))
+    (instances
+      (project "hydrophone board"
+        (path "/4356d3a6-6a00-447d-897e-473f60221539/c9760799-658d-4181-af96-8731ebbcaea9"
+          (reference "#PWR0401") (unit 1)
+        )
+        (path "/4356d3a6-6a00-447d-897e-473f60221539/f560d530-135c-40dc-9144-4f9599a30f13"
+          (reference "#PWR0248") (unit 1)
+        )
+        (path "/4356d3a6-6a00-447d-897e-473f60221539/fa1a46a1-ed86-4a84-a182-b5dbe7fc86e7"
+          (reference "#PWR0249") (unit 1)
+        )
+        (path "/4356d3a6-6a00-447d-897e-473f60221539/d3a562a3-af99-4bb5-b5fa-eb83660cffa4"
+          (reference "#PWR0250") (unit 1)
+        )
+        (path "/4356d3a6-6a00-447d-897e-473f60221539/6f981a72-1f6f-4ccf-ba7d-c5dfb70b4229"
+          (reference "#PWR0251") (unit 1)
         )
       )
     )

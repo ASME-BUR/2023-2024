@@ -1171,7 +1171,7 @@
     (property "Reference" "L501" (at 177.8 71.12 90)
       (effects (font (size 1.27 1.27)))
     )
-    (property "Value" "L_Ferrite_Small" (at 177.8 73.66 90)
+    (property "Value" "600R @ 100MHz" (at 177.8 73.66 90)
       (effects (font (size 1.27 1.27)))
     )
     (property "Footprint" "Inductor_SMD:L_0805_2012Metric_Pad1.05x1.20mm_HandSolder" (at 177.8 76.2 0)

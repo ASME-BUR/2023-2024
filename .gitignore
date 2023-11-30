@@ -22,6 +22,7 @@ fp-info-cache
 # Gerbers
 *.zip
 *gerber
+*gerbers
 
 # Netlist files (exported from Eeschema)
 *.net
@@ -31,8 +32,11 @@ fp-info-cache
 *.ses
 
 # Exported BOM files
-# *.xml
-# *.csv
+*.csv
+*.xml
 
-# Max
+# Mac
 *.DS_Store
+
+# plugin
+*.html

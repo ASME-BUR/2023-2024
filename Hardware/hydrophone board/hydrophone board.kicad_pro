@@ -48,6 +48,7 @@
           "min_clearance": 0.5
         }
       },
+<<<<<<< Updated upstream
       "diff_pair_dimensions": [
         {
           "gap": 0.0,
@@ -56,6 +57,19 @@
         }
       ],
       "drc_exclusions": [],
+=======
+      "diff_pair_dimensions": [],
+      "drc_exclusions": [
+        "lib_footprint_issues|168907597|43029176|c0bb077a-4e9b-412e-96cb-0fabc184f778|00000000-0000-0000-0000-000000000000",
+        "lib_footprint_mismatch|176530000|53086000|db5c3a80-a576-4486-bd66-0e2cb91c2a7c|00000000-0000-0000-0000-000000000000",
+        "lib_footprint_mismatch|180594000|53086000|88f2b909-218f-4aee-93f3-60ecb6a2d3dd|00000000-0000-0000-0000-000000000000",
+        "lib_footprint_mismatch|209550000|88900000|8fd9bcbe-4a1e-4660-8485-179a61e92478|00000000-0000-0000-0000-000000000000",
+        "lib_footprint_mismatch|74930000|45747500|5db47aa9-04ae-475a-a8b0-dedb2b09515a|00000000-0000-0000-0000-000000000000",
+        "lib_footprint_mismatch|74930000|60987500|7541db4a-a935-482f-b770-a2b91aed4ee9|00000000-0000-0000-0000-000000000000",
+        "lib_footprint_mismatch|74930000|76227500|8c51eb21-1dc8-4c64-bea6-191e4cae5127|00000000-0000-0000-0000-000000000000",
+        "lib_footprint_mismatch|74930000|91467500|6b56da76-ecd6-4bf3-a52d-b75625d25175|00000000-0000-0000-0000-000000000000"
+      ],
+>>>>>>> Stashed changes
       "meta": {
         "version": 2
       },

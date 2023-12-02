@@ -2048,7 +2048,7 @@
     (property "Reference" "C310" (at 229.87 59.69 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
-    (property "Value" "1u" (at 229.87 62.23 0)
+    (property "Value" "10u" (at 229.87 62.23 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Footprint" "Capacitor_SMD:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder" (at 226.06 60.96 0)

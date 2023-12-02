@@ -1,0 +1,26 @@
+Error parsing '/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/package.xml':
+Traceback (most recent call last):
+  File "/opt/ros/foxy/share/ament_cmake_core/cmake/core/package_xml_2_cmake.py", line 143, in <module>
+    main()
+  File "/opt/ros/foxy/share/ament_cmake_core/cmake/core/package_xml_2_cmake.py", line 52, in main
+    raise e
+  File "/opt/ros/foxy/share/ament_cmake_core/cmake/core/package_xml_2_cmake.py", line 48, in main
+    package = parse_package_string(
+  File "/usr/lib/python3/dist-packages/catkin_pkg/package.py", line 786, in parse_package_string
+    raise InvalidPackage('Error(s):%s' % (''.join(['\n- %s' % e for e in errors])), filename)
+catkin_pkg.package.InvalidPackage: Error(s) in package '/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/package.xml':
+Error(s):
+- The manifest of package "eskf" (with format version 1) must not contain the following tags: exec_depend, member_of_group
+- Either update to a newer format or replace <exec_depend> tags with <run_depend> tags.
+CMake Error at /opt/ros/foxy/share/ament_cmake_core/cmake/core/ament_package_xml.cmake:94 (message):
+  execute_process(/usr/bin/python3
+  /opt/ros/foxy/share/ament_cmake_core/cmake/core/package_xml_2_cmake.py
+  /home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/package.xml
+  /home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/build/state-estimation/ament_cmake_core/package.cmake)
+  returned error code 1
+Call Stack (most recent call first):
+  /opt/ros/foxy/share/ament_cmake_core/cmake/core/ament_package_xml.cmake:49 (_ament_package_xml)
+  /opt/ros/foxy/share/ament_cmake_auto/cmake/ament_auto_find_build_dependencies.cmake:42 (ament_package_xml)
+  CMakeLists.txt:19 (ament_auto_find_build_dependencies)
+
+

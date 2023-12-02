@@ -1,0 +1,69 @@
+[0.000000] (-) TimerEvent: {}
+[0.000262] (eskf) JobQueued: {'identifier': 'eskf', 'dependencies': OrderedDict()}
+[0.000329] (eskf) JobStarted: {'identifier': 'eskf'}
+[0.099664] (-) TimerEvent: {}
+[0.200322] (eskf) JobProgress: {'identifier': 'eskf', 'progress': 'cmake'}
+[0.200486] (-) TimerEvent: {}
+[0.201273] (eskf) Command: {'cmd': ['/usr/bin/cmake', '/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation', '-DCATKIN_INSTALL_INTO_PREFIX_ROOT=0', '-DCMAKE_INSTALL_PREFIX=/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/install/eskf'], 'cwd': '/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/build/eskf', 'env': OrderedDict([('GJS_DEBUG_TOPICS', 'JS ERROR;JS LOG'), ('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'nakul'), ('SSH_AGENT_PID', '1595'), ('XDG_SESSION_TYPE', 'x11'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/opt/ros/foxy/opt/yaml_cpp_vendor/lib:/opt/ros/foxy/opt/rviz_ogre_vendor/lib:/opt/ros/foxy/lib/x86_64-linux-gnu:/opt/ros/foxy/lib'), ('HOME', '/home/nakul'), ('OLDPWD', '/home/nakul/Desktop/bur/ros2_ws'), ('DESKTOP_SESSION', 'ubuntu'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('MANAGERPID', '1401'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('IM_CONFIG_PHASE', '1'), ('COLCON_PREFIX_PATH', '/home/nakul/Desktop/bur/ros2_ws/install'), ('ROS_DISTRO', 'foxy'), ('LOGNAME', 'nakul'), ('JOURNAL_STREAM', '8:43692'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'nakul'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('WINDOWPATH', '2'), ('PATH', '/opt/ros/foxy/bin:/opt/gcc-arm-none-eabi-9-2020-q2-update/bin:/home/nakul/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin'), ('SESSION_MANAGER', 'local/nakul-IdeaPad-Flex-5-14ARE05:@/tmp/.ICE-unix/1655,unix/nakul-IdeaPad-Flex-5-14ARE05:/tmp/.ICE-unix/1655'), ('INVOCATION_ID', 'd2c8bcb2281747d9a4262da74003460c'), ('XDG_MENU_PREFIX', 'gnome-'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/3f5fc384_5465_4ce5_a9c0_6a6da4ec2909'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/gdm/Xauthority'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('GNOME_TERMINAL_SERVICE', ':1.82'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/opt/ros/foxy'), ('SHELL', '/bin/bash'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('GJS_DEBUG_OUTPUT', 'stderr'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/build/eskf'), ('LC_ALL', 'en_US.UTF-8'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/opt/ros/foxy/lib/python3.8/site-packages'), ('COLCON', '1'), ('VTE_VERSION', '6003')]), 'shell': False}
+[0.223423] (eskf) StdoutLine: {'line': b'-- Found rclcpp: 2.4.3 (/opt/ros/foxy/share/rclcpp/cmake)\n'}
+[0.255931] (eskf) StdoutLine: {'line': b'-- Found PythonInterp: /usr/bin/python3 (found suitable version "3.8.10", minimum required is "3") \n'}
+[0.256357] (eskf) StdoutLine: {'line': b'-- Using PYTHON_EXECUTABLE: /usr/bin/python3\n'}
+[0.300678] (-) TimerEvent: {}
+[0.401336] (-) TimerEvent: {}
+[0.501751] (-) TimerEvent: {}
+[0.588004] (eskf) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c\n'}
+[0.597444] (eskf) StdoutLine: {'line': b'-- Found rosidl_adapter: 1.3.1 (/opt/ros/foxy/share/rosidl_adapter/cmake)\n'}
+[0.602051] (-) TimerEvent: {}
+[0.702406] (-) TimerEvent: {}
+[0.749497] (eskf) StdoutLine: {'line': b'-- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "1.1.1f")  \n'}
+[0.795196] (eskf) StdoutLine: {'line': b'-- Found FastRTPS: /opt/ros/foxy/include  \n'}
+[0.802511] (-) TimerEvent: {}
+[0.902857] (-) TimerEvent: {}
+[0.911214] (eskf) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp\n'}
+[0.994641] (eskf) StdoutLine: {'line': b'-- Found rmw_implementation_cmake: 1.0.4 (/opt/ros/foxy/share/rmw_implementation_cmake/cmake)\n'}
+[0.997105] (eskf) StdoutLine: {'line': b"-- Using RMW implementation 'rmw_fastrtps_cpp' as default\n"}
+[0.998752] (eskf) StdoutLine: {'line': b'-- Looking for pthread.h\n'}
+[1.002965] (-) TimerEvent: {}
+[1.103399] (-) TimerEvent: {}
+[1.114958] (eskf) StdoutLine: {'line': b'-- Looking for pthread.h - found\n'}
+[1.115363] (eskf) StdoutLine: {'line': b'-- Performing Test CMAKE_HAVE_LIBC_PTHREAD\n'}
+[1.203531] (-) TimerEvent: {}
+[1.226647] (eskf) StdoutLine: {'line': b'-- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Failed\n'}
+[1.227072] (eskf) StdoutLine: {'line': b'-- Looking for pthread_create in pthreads\n'}
+[1.303663] (-) TimerEvent: {}
+[1.323384] (eskf) StdoutLine: {'line': b'-- Looking for pthread_create in pthreads - not found\n'}
+[1.323871] (eskf) StdoutLine: {'line': b'-- Looking for pthread_create in pthread\n'}
+[1.403801] (-) TimerEvent: {}
+[1.437339] (eskf) StdoutLine: {'line': b'-- Looking for pthread_create in pthread - found\n'}
+[1.439536] (eskf) StdoutLine: {'line': b'-- Found Threads: TRUE  \n'}
+[1.503933] (-) TimerEvent: {}
+[1.604354] (-) TimerEvent: {}
+[1.667303] (eskf) StdoutLine: {'line': b'-- Found geometry_msgs: 2.0.5 (/opt/ros/foxy/share/geometry_msgs/cmake)\n'}
+[1.704514] (-) TimerEvent: {}
+[1.717482] (eskf) StdoutLine: {'line': b'-- Found sensor_msgs: 2.0.5 (/opt/ros/foxy/share/sensor_msgs/cmake)\n'}
+[1.804649] (-) TimerEvent: {}
+[1.822445] (eskf) StdoutLine: {'line': b'-- Found message_filters: 3.2.7 (/opt/ros/foxy/share/message_filters/cmake)\n'}
+[1.839540] (eskf) StderrLine: {'line': b'CMake Error at CMakeLists.txt:11 (find_package):\n'}
+[1.839835] (eskf) StderrLine: {'line': b'  By not providing "Findmessage_generation.cmake" in CMAKE_MODULE_PATH this\n'}
+[1.839993] (eskf) StderrLine: {'line': b'  project has asked CMake to find a package configuration file provided by\n'}
+[1.840130] (eskf) StderrLine: {'line': b'  "message_generation", but CMake did not find one.\n'}
+[1.840264] (eskf) StderrLine: {'line': b'\n'}
+[1.840395] (eskf) StderrLine: {'line': b'  Could not find a package configuration file provided by\n'}
+[1.840527] (eskf) StderrLine: {'line': b'  "message_generation" with any of the following names:\n'}
+[1.840671] (eskf) StderrLine: {'line': b'\n'}
+[1.840803] (eskf) StderrLine: {'line': b'    message_generationConfig.cmake\n'}
+[1.840934] (eskf) StderrLine: {'line': b'    message_generation-config.cmake\n'}
+[1.841065] (eskf) StderrLine: {'line': b'\n'}
+[1.841199] (eskf) StderrLine: {'line': b'  Add the installation prefix of "message_generation" to CMAKE_PREFIX_PATH or\n'}
+[1.841368] (eskf) StderrLine: {'line': b'  set "message_generation_DIR" to a directory containing one of the above\n'}
+[1.841515] (eskf) StderrLine: {'line': b'  files.  If "message_generation" provides a separate development package or\n'}
+[1.841655] (eskf) StderrLine: {'line': b'  SDK, be sure it has been installed.\n'}
+[1.841794] (eskf) StderrLine: {'line': b'\n'}
+[1.841930] (eskf) StderrLine: {'line': b'\n'}
+[1.842174] (eskf) StdoutLine: {'line': b'-- Configuring incomplete, errors occurred!\n'}
+[1.842357] (eskf) StdoutLine: {'line': b'See also "/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/build/eskf/CMakeFiles/CMakeOutput.log".\n'}
+[1.842498] (eskf) StdoutLine: {'line': b'See also "/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/build/eskf/CMakeFiles/CMakeError.log".\n'}
+[1.848721] (eskf) CommandEnded: {'returncode': 1}
+[1.906952] (-) TimerEvent: {}
+[1.982634] (eskf) JobEnded: {'identifier': 'eskf', 'rc': 1}
+[1.993351] (-) EventReactorShutdown: {}

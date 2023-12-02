@@ -1,0 +1,35 @@
+[0.102s] Invoking command in '/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/build/eskf': /usr/bin/cmake /home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation -DCATKIN_INSTALL_INTO_PREFIX_ROOT=0 -DCMAKE_INSTALL_PREFIX=/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/install/eskf
+[0.248s] -- The C compiler identification is GNU 9.4.0
+[0.375s] -- The CXX compiler identification is GNU 9.4.0
+[0.385s] -- Check for working C compiler: /usr/bin/cc
+[0.476s] -- Check for working C compiler: /usr/bin/cc -- works
+[0.479s] -- Detecting C compiler ABI info
+[0.576s] -- Detecting C compiler ABI info - done
+[0.595s] -- Detecting C compile features
+[0.595s] -- Detecting C compile features - done
+[0.599s] -- Check for working CXX compiler: /usr/bin/c++
+[0.711s] -- Check for working CXX compiler: /usr/bin/c++ -- works
+[0.714s] -- Detecting CXX compiler ABI info
+[0.830s] -- Detecting CXX compiler ABI info - done
+[0.845s] -- Detecting CXX compile features
+[0.846s] -- Detecting CXX compile features - done
+[0.863s] CMake Error at CMakeLists.txt:5 (find_package):
+[0.863s]   By not providing "Findament_cmake.cmake" in CMAKE_MODULE_PATH this project
+[0.863s]   has asked CMake to find a package configuration file provided by
+[0.863s]   "ament_cmake", but CMake did not find one.
+[0.863s] 
+[0.864s]   Could not find a package configuration file provided by "ament_cmake" with
+[0.864s]   any of the following names:
+[0.864s] 
+[0.864s]     ament_cmakeConfig.cmake
+[0.864s]     ament_cmake-config.cmake
+[0.864s] 
+[0.864s]   Add the installation prefix of "ament_cmake" to CMAKE_PREFIX_PATH or set
+[0.865s]   "ament_cmake_DIR" to a directory containing one of the above files.  If
+[0.865s]   "ament_cmake" provides a separate development package or SDK, be sure it
+[0.865s]   has been installed.
+[0.865s] 
+[0.865s] 
+[0.865s] -- Configuring incomplete, errors occurred!
+[0.866s] See also "/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/build/eskf/CMakeFiles/CMakeOutput.log".
+[0.867s] Invoked command in '/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/build/eskf' returned '1': /usr/bin/cmake /home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation -DCATKIN_INSTALL_INTO_PREFIX_ROOT=0 -DCMAKE_INSTALL_PREFIX=/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/install/eskf

@@ -1,0 +1,195 @@
+[0.126s] Invoking command in '/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/build/state-estimation': /usr/bin/cmake --build /home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/build/state-estimation -- -j8 -l8
+[0.198s] [ 40%] Built target ESKF
+[0.211s] [35m[1mScanning dependencies of target state-estimation[0m
+[0.248s] [ 60%] [32mBuilding CXX object CMakeFiles/state-estimation.dir/src/Node.cpp.o[0m
+[1.958s] [01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/src/Node.cpp:[m[K In constructor ‘[01m[Keskf::Node::Node()[m[K’:
+[1.958s] [01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/src/Node.cpp:47:64:[m[K [01;31m[Kerror: [m[Kno matching function for call to ‘[01m[Keskf::Node::create_wall_timer(float, std::_Bind_helper<false, void (eskf::Node::*)(), eskf::Node*>::type)[m[K’
+[1.959s]    47 |       (1.0f/publish_rate), std::bind(&Node::publishState, this)[01;31m[K)[m[K;
+[1.959s]       |                                                                [01;31m[K^[m[K
+[1.959s] In file included from [01m[K/opt/ros/foxy/include/rclcpp/executors/single_threaded_executor.hpp:28[m[K,
+[1.959s]                  from [01m[K/opt/ros/foxy/include/rclcpp/executors.hpp:22[m[K,
+[1.959s]                  from [01m[K/opt/ros/foxy/include/rclcpp/rclcpp.hpp:146[m[K,
+[1.959s]                  from [01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/include/eskf/Node.hpp:5[m[K,
+[1.960s]                  from [01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/src/Node.cpp:1[m[K:
+[1.960s] [01m[K/opt/ros/foxy/include/rclcpp/node.hpp:232:3:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class DurationRepT, class DurationT, class CallbackT> typename rclcpp::WallTimer<CallbackT>::SharedPtr rclcpp::Node::create_wall_timer(std::chrono::duration<_Rep1, _Period1>, CallbackT, rclcpp::CallbackGroup::SharedPtr)[m[K’
+[1.960s]   232 |   [01;36m[Kcreate_wall_timer[m[K(
+[1.960s]       |   [01;36m[K^~~~~~~~~~~~~~~~~[m[K
+[1.960s] [01m[K/opt/ros/foxy/include/rclcpp/node.hpp:232:3:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[1.960s] [01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/src/Node.cpp:47:64:[m[K [01;36m[Knote: [m[K  mismatched types ‘[01m[Kstd::chrono::duration<_Rep1, _Period1>[m[K’ and ‘[01m[Kfloat[m[K’
+[1.961s]    47 |       (1.0f/publish_rate), std::bind(&Node::publishState, this)[01;36m[K)[m[K;
+[1.961s]       |                                                                [01;36m[K^[m[K
+[1.962s] [01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/src/Node.cpp:[m[K In member function ‘[01m[Kvoid eskf::Node::inputCallback(sensor_msgs::msg::Imu_<std::allocator<void> >::SharedPtr) const[m[K’:
+[1.962s] [01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/src/Node.cpp:57:68:[m[K [01;31m[Kerror: [m[Kno match for call to ‘[01m[K(rclcpp::Time) (std_msgs::msg::Header_<std::allocator<void> >::_stamp_type&, rcl_clock_type_t)[m[K’
+[1.962s]    57 |     header_time = header_time(imuMsg->header.stamp, RCL_SYSTEM_TIME[01;31m[K)[m[K;
+[1.963s]       |                                                                    [01;31m[K^[m[K
+[1.963s] [01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/src/Node.cpp:61:13:[m[K [01;31m[Kerror: [m[Kassignment of member ‘[01m[Keskf::Node::init_[m[K’ in read-only object
+[1.963s]    61 |       [01;31m[Kinit_ = true[m[K;
+[1.963s]       |       [01;31m[K~~~~~~^~~~~~[m[K
+[1.963s] [01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/src/Node.cpp:66:79:[m[K [01;31m[Kerror: [m[Kpassing ‘[01m[Kconst eskf::ESKF[m[K’ as ‘[01m[Kthis[m[K’ argument discards qualifiers [[01;31m[K-fpermissive[m[K]
+[1.963s]    66 |     eskf_.run(wm, am, static_cast<uint64_t>(header_time.seconds()*1e6f), delta[01;31m[K)[m[K;
+[1.963s]       |                                                                               [01;31m[K^[m[K
+[1.964s] In file included from [01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/include/eskf/Node.hpp:15[m[K,
+[1.964s]                  from [01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/src/Node.cpp:1[m[K:
+[1.964s] [01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/include/eskf/ESKF.hpp:18:10:[m[K [01;36m[Knote: [m[K  in call to ‘[01m[Kvoid eskf::ESKF::run(const vec3&, const vec3&, uint64_t, eskf::scalar_t)[m[K’
+[1.964s]    18 |     void [01;36m[Krun[m[K(const vec3& w, const vec3& a, uint64_t time_us, scalar_t dt);
+[1.965s]       |          [01;36m[K^~~[m[K
+[1.965s] [01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/src/Node.cpp:68:19:[m[K [01;31m[Kerror: [m[Kpassing ‘[01m[Kconst rclcpp::Time[m[K’ as ‘[01m[Kthis[m[K’ argument discards qualifiers [[01;31m[K-fpermissive[m[K]
+[1.965s]    68 |   prevStampImu_ = [01;31m[Kheader_time[m[K;
+[1.965s]       |                   [01;31m[K^~~~~~~~~~~[m[K
+[1.965s] In file included from [01m[K/opt/ros/foxy/include/rclcpp/clock.hpp:23[m[K,
+[1.965s]                  from [01m[K/opt/ros/foxy/include/rclcpp/timer.hpp:27[m[K,
+[1.966s]                  from [01m[K/opt/ros/foxy/include/rclcpp/callback_group.hpp:27[m[K,
+[1.966s]                  from [01m[K/opt/ros/foxy/include/rclcpp/any_executable.hpp:20[m[K,
+[1.966s]                  from [01m[K/opt/ros/foxy/include/rclcpp/memory_strategy.hpp:24[m[K,
+[1.966s]                  from [01m[K/opt/ros/foxy/include/rclcpp/memory_strategies.hpp:18[m[K,
+[1.966s]                  from [01m[K/opt/ros/foxy/include/rclcpp/executor_options.hpp:20[m[K,
+[1.966s]                  from [01m[K/opt/ros/foxy/include/rclcpp/executor.hpp:33[m[K,
+[1.966s]                  from [01m[K/opt/ros/foxy/include/rclcpp/executors/multi_threaded_executor.hpp:26[m[K,
+[1.966s]                  from [01m[K/opt/ros/foxy/include/rclcpp/executors.hpp:21[m[K,
+[1.967s]                  from [01m[K/opt/ros/foxy/include/rclcpp/rclcpp.hpp:146[m[K,
+[1.967s]                  from [01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/include/eskf/Node.hpp:5[m[K,
+[1.967s]                  from [01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/src/Node.cpp:1[m[K:
+[1.967s] [01m[K/opt/ros/foxy/include/rclcpp/time.hpp:91:3:[m[K [01;36m[Knote: [m[K  in call to ‘[01m[Krclcpp::Time& rclcpp::Time::operator=(const rclcpp::Time&)[m[K’
+[1.967s]    91 |   [01;36m[Koperator[m[K=(const Time & rhs);
+[1.967s]       |   [01;36m[K^~~~~~~~[m[K
+[1.968s] [01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/src/Node.cpp:[m[K In member function ‘[01m[Kvoid eskf::Node::visionCallback(geometry_msgs::msg::PoseWithCovarianceStamped_<std::allocator<void> >::SharedPtr) const[m[K’:
+[1.968s] [01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/src/Node.cpp:75:69:[m[K [01;31m[Kerror: [m[Kno match for call to ‘[01m[K(rclcpp::Time) (std_msgs::msg::Header_<std::allocator<void> >::_stamp_type&, rcl_clock_type_t)[m[K’
+[1.968s]    75 |     header_time = header_time(poseMsg->header.stamp, RCL_SYSTEM_TIME[01;31m[K)[m[K;
+[1.968s]       |                                                                     [01;31m[K^[m[K
+[1.968s] [01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/src/Node.cpp:81:90:[m[K [01;31m[Kerror: [m[Kpassing ‘[01m[Kconst eskf::ESKF[m[K’ as ‘[01m[Kthis[m[K’ argument discards qualifiers [[01;31m[K-fpermissive[m[K]
+[1.968s]    81 |     eskf_.updateVision(z_q, z_p, static_cast<uint64_t>(header_time.seconds()*1e6f), delta[01;31m[K)[m[K;
+[1.968s]       |                                                                                          [01;31m[K^[m[K
+[1.969s] In file included from [01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/include/eskf/Node.hpp:15[m[K,
+[1.969s]                  from [01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/src/Node.cpp:1[m[K:
+[1.969s] [01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/include/eskf/ESKF.hpp:19:10:[m[K [01;36m[Knote: [m[K  in call to ‘[01m[Kvoid eskf::ESKF::updateVision(const quat&, const vec3&, uint64_t, eskf::scalar_t)[m[K’
+[1.969s]    19 |     void [01;36m[KupdateVision[m[K(const quat& q, const vec3& p, uint64_t time_us, scalar_t dt);
+[1.969s]       |          [01;36m[K^~~~~~~~~~~~[m[K
+[1.969s] [01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/src/Node.cpp:83:26:[m[K [01;31m[Kerror: [m[Kpassing ‘[01m[Kconst rclcpp::Time[m[K’ as ‘[01m[Kthis[m[K’ argument discards qualifiers [[01;31m[K-fpermissive[m[K]
+[1.969s]    83 |   prevStampVisionPose_ = [01;31m[Kheader_time[m[K;
+[1.969s]       |                          [01;31m[K^~~~~~~~~~~[m[K
+[1.969s] In file included from [01m[K/opt/ros/foxy/include/rclcpp/clock.hpp:23[m[K,
+[1.969s]                  from [01m[K/opt/ros/foxy/include/rclcpp/timer.hpp:27[m[K,
+[1.969s]                  from [01m[K/opt/ros/foxy/include/rclcpp/callback_group.hpp:27[m[K,
+[1.969s]                  from [01m[K/opt/ros/foxy/include/rclcpp/any_executable.hpp:20[m[K,
+[1.969s]                  from [01m[K/opt/ros/foxy/include/rclcpp/memory_strategy.hpp:24[m[K,
+[1.969s]                  from [01m[K/opt/ros/foxy/include/rclcpp/memory_strategies.hpp:18[m[K,
+[1.969s]                  from [01m[K/opt/ros/foxy/include/rclcpp/executor_options.hpp:20[m[K,
+[1.969s]                  from [01m[K/opt/ros/foxy/include/rclcpp/executor.hpp:33[m[K,
+[1.969s]                  from [01m[K/opt/ros/foxy/include/rclcpp/executors/multi_threaded_executor.hpp:26[m[K,
+[1.969s]                  from [01m[K/opt/ros/foxy/include/rclcpp/executors.hpp:21[m[K,
+[1.970s]                  from [01m[K/opt/ros/foxy/include/rclcpp/rclcpp.hpp:146[m[K,
+[1.970s]                  from [01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/include/eskf/Node.hpp:5[m[K,
+[1.970s]                  from [01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/src/Node.cpp:1[m[K:
+[1.970s] [01m[K/opt/ros/foxy/include/rclcpp/time.hpp:91:3:[m[K [01;36m[Knote: [m[K  in call to ‘[01m[Krclcpp::Time& rclcpp::Time::operator=(const rclcpp::Time&)[m[K’
+[1.970s]    91 |   [01;36m[Koperator[m[K=(const Time & rhs);
+[1.970s]       |   [01;36m[K^~~~~~~~[m[K
+[1.970s] [01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/src/Node.cpp:[m[K In member function ‘[01m[Kvoid eskf::Node::gpsCallback(nav_msgs::msg::Odometry_<std::allocator<void> >::SharedPtr) const[m[K’:
+[1.970s] [01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/src/Node.cpp:89:69:[m[K [01;31m[Kerror: [m[Kno match for call to ‘[01m[K(rclcpp::Time) (std_msgs::msg::Header_<std::allocator<void> >::_stamp_type&, rcl_clock_type_t)[m[K’
+[1.970s]    89 |     header_time = header_time(odomMsg->header.stamp, RCL_SYSTEM_TIME[01;31m[K)[m[K;
+[1.970s]       |                                                                     [01;31m[K^[m[K
+[1.970s] [01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/src/Node.cpp:96:89:[m[K [01;31m[Kerror: [m[Kpassing ‘[01m[Kconst eskf::ESKF[m[K’ as ‘[01m[Kthis[m[K’ argument discards qualifiers [[01;31m[K-fpermissive[m[K]
+[1.970s]    96 |     eskf_.updateGps(z_v, z_p, static_cast<uint64_t>(header_time.seconds() * 1e6f), delta[01;31m[K)[m[K;
+[1.970s]       |                                                                                         [01;31m[K^[m[K
+[1.970s] In file included from [01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/include/eskf/Node.hpp:15[m[K,
+[1.970s]                  from [01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/src/Node.cpp:1[m[K:
+[1.970s] [01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/include/eskf/ESKF.hpp:20:10:[m[K [01;36m[Knote: [m[K  in call to ‘[01m[Kvoid eskf::ESKF::updateGps(const vec3&, const vec3&, uint64_t, eskf::scalar_t)[m[K’
+[1.971s]    20 |     void [01;36m[KupdateGps[m[K(const vec3& v, const vec3& p, uint64_t time_us, scalar_t dt);
+[1.971s]       |          [01;36m[K^~~~~~~~~[m[K
+[1.971s] [01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/src/Node.cpp:98:23:[m[K [01;31m[Kerror: [m[Kpassing ‘[01m[Kconst rclcpp::Time[m[K’ as ‘[01m[Kthis[m[K’ argument discards qualifiers [[01;31m[K-fpermissive[m[K]
+[1.971s]    98 |   prevStampGpsPose_ = [01;31m[Kheader_time[m[K;
+[1.971s]       |                       [01;31m[K^~~~~~~~~~~[m[K
+[1.971s] In file included from [01m[K/opt/ros/foxy/include/rclcpp/clock.hpp:23[m[K,
+[1.971s]                  from [01m[K/opt/ros/foxy/include/rclcpp/timer.hpp:27[m[K,
+[1.971s]                  from [01m[K/opt/ros/foxy/include/rclcpp/callback_group.hpp:27[m[K,
+[1.971s]                  from [01m[K/opt/ros/foxy/include/rclcpp/any_executable.hpp:20[m[K,
+[1.971s]                  from [01m[K/opt/ros/foxy/include/rclcpp/memory_strategy.hpp:24[m[K,
+[1.971s]                  from [01m[K/opt/ros/foxy/include/rclcpp/memory_strategies.hpp:18[m[K,
+[1.971s]                  from [01m[K/opt/ros/foxy/include/rclcpp/executor_options.hpp:20[m[K,
+[1.971s]                  from [01m[K/opt/ros/foxy/include/rclcpp/executor.hpp:33[m[K,
+[1.971s]                  from [01m[K/opt/ros/foxy/include/rclcpp/executors/multi_threaded_executor.hpp:26[m[K,
+[1.971s]                  from [01m[K/opt/ros/foxy/include/rclcpp/executors.hpp:21[m[K,
+[1.971s]                  from [01m[K/opt/ros/foxy/include/rclcpp/rclcpp.hpp:146[m[K,
+[1.971s]                  from [01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/include/eskf/Node.hpp:5[m[K,
+[1.971s]                  from [01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/src/Node.cpp:1[m[K:
+[1.971s] [01m[K/opt/ros/foxy/include/rclcpp/time.hpp:91:3:[m[K [01;36m[Knote: [m[K  in call to ‘[01m[Krclcpp::Time& rclcpp::Time::operator=(const rclcpp::Time&)[m[K’
+[1.971s]    91 |   [01;36m[Koperator[m[K=(const Time & rhs);
+[1.972s]       |   [01;36m[K^~~~~~~~[m[K
+[1.972s] [01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/src/Node.cpp:[m[K In member function ‘[01m[Kvoid eskf::Node::magCallback(sensor_msgs::msg::MagneticField_<std::allocator<void> >::SharedPtr) const[m[K’:
+[1.972s] [01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/src/Node.cpp:105:68:[m[K [01;31m[Kerror: [m[Kno match for call to ‘[01m[K(rclcpp::Time) (std_msgs::msg::Header_<std::allocator<void> >::_stamp_type&, rcl_clock_type_t)[m[K’
+[1.972s]   105 |     header_time = header_time(magMsg->header.stamp, RCL_SYSTEM_TIME[01;31m[K)[m[K;
+[1.972s]       |                                                                    [01;31m[K^[m[K
+[1.972s] [01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/src/Node.cpp:110:91:[m[K [01;31m[Kerror: [m[Kpassing ‘[01m[Kconst eskf::ESKF[m[K’ as ‘[01m[Kthis[m[K’ argument discards qualifiers [[01;31m[K-fpermissive[m[K]
+[1.972s]   110 |     eskf_.updateMagnetometer(m, static_cast<uint64_t>(header_time.seconds() * 1e6f), delta[01;31m[K)[m[K;
+[1.972s]       |                                                                                           [01;31m[K^[m[K
+[1.972s] In file included from [01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/include/eskf/Node.hpp:15[m[K,
+[1.972s]                  from [01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/src/Node.cpp:1[m[K:
+[1.972s] [01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/include/eskf/ESKF.hpp:23:10:[m[K [01;36m[Knote: [m[K  in call to ‘[01m[Kvoid eskf::ESKF::updateMagnetometer(const vec3&, uint64_t, eskf::scalar_t)[m[K’
+[1.972s]    23 |     void [01;36m[KupdateMagnetometer[m[K(const vec3& m, uint64_t time_us, scalar_t dt);
+[1.972s]       |          [01;36m[K^~~~~~~~~~~~~~~~~~[m[K
+[1.972s] [01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/src/Node.cpp:112:23:[m[K [01;31m[Kerror: [m[Kpassing ‘[01m[Kconst rclcpp::Time[m[K’ as ‘[01m[Kthis[m[K’ argument discards qualifiers [[01;31m[K-fpermissive[m[K]
+[1.972s]   112 |   prevStampMagPose_ = [01;31m[Kheader_time[m[K;
+[1.972s]       |                       [01;31m[K^~~~~~~~~~~[m[K
+[1.973s] In file included from [01m[K/opt/ros/foxy/include/rclcpp/clock.hpp:23[m[K,
+[1.973s]                  from [01m[K/opt/ros/foxy/include/rclcpp/timer.hpp:27[m[K,
+[1.973s]                  from [01m[K/opt/ros/foxy/include/rclcpp/callback_group.hpp:27[m[K,
+[1.973s]                  from [01m[K/opt/ros/foxy/include/rclcpp/any_executable.hpp:20[m[K,
+[1.973s]                  from [01m[K/opt/ros/foxy/include/rclcpp/memory_strategy.hpp:24[m[K,
+[1.973s]                  from [01m[K/opt/ros/foxy/include/rclcpp/memory_strategies.hpp:18[m[K,
+[1.973s]                  from [01m[K/opt/ros/foxy/include/rclcpp/executor_options.hpp:20[m[K,
+[1.973s]                  from [01m[K/opt/ros/foxy/include/rclcpp/executor.hpp:33[m[K,
+[1.973s]                  from [01m[K/opt/ros/foxy/include/rclcpp/executors/multi_threaded_executor.hpp:26[m[K,
+[1.973s]                  from [01m[K/opt/ros/foxy/include/rclcpp/executors.hpp:21[m[K,
+[1.973s]                  from [01m[K/opt/ros/foxy/include/rclcpp/rclcpp.hpp:146[m[K,
+[1.973s]                  from [01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/include/eskf/Node.hpp:5[m[K,
+[1.973s]                  from [01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/src/Node.cpp:1[m[K:
+[1.973s] [01m[K/opt/ros/foxy/include/rclcpp/time.hpp:91:3:[m[K [01;36m[Knote: [m[K  in call to ‘[01m[Krclcpp::Time& rclcpp::Time::operator=(const rclcpp::Time&)[m[K’
+[1.973s]    91 |   [01;36m[Koperator[m[K=(const Time & rhs);
+[1.973s]       |   [01;36m[K^~~~~~~~[m[K
+[1.973s] [01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/src/Node.cpp:[m[K In member function ‘[01m[Kvoid eskf::Node::rangeFinderCallback(sensor_msgs::msg::Range_<std::allocator<void> >::SharedPtr) const[m[K’:
+[1.973s] [01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/src/Node.cpp:118:70:[m[K [01;31m[Kerror: [m[Kno match for call to ‘[01m[K(rclcpp::Time) (std_msgs::msg::Header_<std::allocator<void> >::_stamp_type&, rcl_clock_type_t)[m[K’
+[1.973s]   118 |     header_time = header_time(rangeMsg->header.stamp, RCL_SYSTEM_TIME[01;31m[K)[m[K;
+[1.973s]       |                                                                      [01;31m[K^[m[K
+[1.974s] [01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/src/Node.cpp:122:104:[m[K [01;31m[Kerror: [m[Kpassing ‘[01m[Kconst eskf::ESKF[m[K’ as ‘[01m[Kthis[m[K’ argument discards qualifiers [[01;31m[K-fpermissive[m[K]
+[1.974s]   122 |     eskf_.updateRangeFinder(rangeMsg->range, static_cast<uint64_t>(header_time.seconds() * 1e6f), delta[01;31m[K)[m[K;
+[1.974s]       |                                                                                                        [01;31m[K^[m[K
+[1.974s] In file included from [01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/include/eskf/Node.hpp:15[m[K,
+[1.974s]                  from [01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/src/Node.cpp:1[m[K:
+[1.974s] [01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/include/eskf/ESKF.hpp:22:10:[m[K [01;36m[Knote: [m[K  in call to ‘[01m[Kvoid eskf::ESKF::updateRangeFinder(eskf::scalar_t, uint64_t, eskf::scalar_t)[m[K’
+[1.974s]    22 |     void [01;36m[KupdateRangeFinder[m[K(scalar_t range, uint64_t time_us, scalar_t dt);
+[1.974s]       |          [01;36m[K^~~~~~~~~~~~~~~~~[m[K
+[1.974s] [01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/src/Node.cpp:124:31:[m[K [01;31m[Kerror: [m[Kpassing ‘[01m[Kconst rclcpp::Time[m[K’ as ‘[01m[Kthis[m[K’ argument discards qualifiers [[01;31m[K-fpermissive[m[K]
+[1.974s]   124 |   prevStampRangeFinderPose_ = [01;31m[Kheader_time[m[K;
+[1.974s]       |                               [01;31m[K^~~~~~~~~~~[m[K
+[1.974s] In file included from [01m[K/opt/ros/foxy/include/rclcpp/clock.hpp:23[m[K,
+[1.974s]                  from [01m[K/opt/ros/foxy/include/rclcpp/timer.hpp:27[m[K,
+[1.974s]                  from [01m[K/opt/ros/foxy/include/rclcpp/callback_group.hpp:27[m[K,
+[1.974s]                  from [01m[K/opt/ros/foxy/include/rclcpp/any_executable.hpp:20[m[K,
+[1.974s]                  from [01m[K/opt/ros/foxy/include/rclcpp/memory_strategy.hpp:24[m[K,
+[1.974s]                  from [01m[K/opt/ros/foxy/include/rclcpp/memory_strategies.hpp:18[m[K,
+[1.974s]                  from [01m[K/opt/ros/foxy/include/rclcpp/executor_options.hpp:20[m[K,
+[1.975s]                  from [01m[K/opt/ros/foxy/include/rclcpp/executor.hpp:33[m[K,
+[1.975s]                  from [01m[K/opt/ros/foxy/include/rclcpp/executors/multi_threaded_executor.hpp:26[m[K,
+[1.975s]                  from [01m[K/opt/ros/foxy/include/rclcpp/executors.hpp:21[m[K,
+[1.975s]                  from [01m[K/opt/ros/foxy/include/rclcpp/rclcpp.hpp:146[m[K,
+[1.975s]                  from [01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/include/eskf/Node.hpp:5[m[K,
+[1.975s]                  from [01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/src/Node.cpp:1[m[K:
+[1.975s] [01m[K/opt/ros/foxy/include/rclcpp/time.hpp:91:3:[m[K [01;36m[Knote: [m[K  in call to ‘[01m[Krclcpp::Time& rclcpp::Time::operator=(const rclcpp::Time&)[m[K’
+[1.975s]    91 |   [01;36m[Koperator[m[K=(const Time & rhs);
+[1.975s]       |   [01;36m[K^~~~~~~~[m[K
+[1.975s] [01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/src/Node.cpp:[m[K In member function ‘[01m[Kvoid eskf::Node::extendedStateCallback(mavros_msgs::msg::ExtendedState_<std::allocator<void> >::SharedPtr) const[m[K’:
+[1.975s] [01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/src/Node.cpp:128:112:[m[K [01;31m[Kerror: [m[Kpassing ‘[01m[Kconst eskf::ESKF[m[K’ as ‘[01m[Kthis[m[K’ argument discards qualifiers [[01;31m[K-fpermissive[m[K]
+[1.975s]   128 |   eskf_.updateLandedState(extendedStateMsg->landed_state & mavros_msgs::msg::ExtendedState::LANDED_STATE_IN_AIR[01;31m[K)[m[K;
+[1.975s]       |                                                                                                                [01;31m[K^[m[K
+[1.975s] In file included from [01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/include/eskf/Node.hpp:15[m[K,
+[1.975s]                  from [01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/src/Node.cpp:1[m[K:
+[1.975s] [01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/include/eskf/ESKF.hpp:24:10:[m[K [01;36m[Knote: [m[K  in call to ‘[01m[Kvoid eskf::ESKF::updateLandedState(uint8_t)[m[K’
+[1.975s]    24 |     void [01;36m[KupdateLandedState[m[K(uint8_t landed_state);
+[1.976s]       |          [01;36m[K^~~~~~~~~~~~~~~~~[m[K
+[1.976s] [01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/src/Node.cpp:[m[K In member function ‘[01m[Kvoid eskf::Node::publishState()[m[K’:
+[1.976s] [01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/src/Node.cpp:141:10:[m[K [01;31m[Kerror: [m[K‘[01m[Kusing Header = struct std_msgs::msg::Header_<std::allocator<void> >[m[K’ {aka ‘[01m[Kstruct std_msgs::msg::Header_<std::allocator<void> >[m[K’} has no member named ‘[01m[Ksec[m[K’
+[1.976s]   141 |   header.[01;31m[Ksec[m[K = trace_id_++;
+[1.976s]       |          [01;31m[K^~~[m[K
+[5.150s] make[2]: *** [CMakeFiles/state-estimation.dir/build.make:76: CMakeFiles/state-estimation.dir/src/Node.cpp.o] Error 1
+[5.150s] make[1]: *** [CMakeFiles/Makefile2:80: CMakeFiles/state-estimation.dir/all] Error 2
+[5.151s] make: *** [Makefile:141: all] Error 2
+[5.154s] Invoked command in '/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/build/state-estimation' returned '2': /usr/bin/cmake --build /home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/build/state-estimation -- -j8 -l8

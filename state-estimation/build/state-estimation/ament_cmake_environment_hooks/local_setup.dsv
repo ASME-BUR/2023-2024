@@ -1,0 +1,2 @@
+source;share/state-estimation/environment/ament_prefix_path.sh
+source;share/state-estimation/environment/path.sh

@@ -1,0 +1,33 @@
+[0.207s] Invoking command in '/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/build/eskf': /usr/bin/cmake /home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation -DCATKIN_INSTALL_INTO_PREFIX_ROOT=0 -DCMAKE_INSTALL_PREFIX=/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/install/eskf
+[0.226s] -- Found ament_cmake: 0.9.12 (/opt/ros/foxy/share/ament_cmake/cmake)
+[0.258s] -- Using PYTHON_EXECUTABLE: /usr/bin/python3
+[0.487s] -- Found rclcpp: 2.4.3 (/opt/ros/foxy/share/rclcpp/cmake)
+[0.530s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.535s] -- Found rosidl_adapter: 1.3.1 (/opt/ros/foxy/share/rosidl_adapter/cmake)
+[0.709s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[0.773s] -- Found rmw_implementation_cmake: 1.0.4 (/opt/ros/foxy/share/rmw_implementation_cmake/cmake)
+[0.775s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[0.974s] -- Found geometry_msgs: 2.0.5 (/opt/ros/foxy/share/geometry_msgs/cmake)
+[1.020s] -- Found sensor_msgs: 2.0.5 (/opt/ros/foxy/share/sensor_msgs/cmake)
+[1.120s] -- Found message_filters: 3.2.7 (/opt/ros/foxy/share/message_filters/cmake)
+[1.137s] CMake Error at CMakeLists.txt:11 (find_package):
+[1.137s]   By not providing "Findmessage_generation.cmake" in CMAKE_MODULE_PATH this
+[1.137s]   project has asked CMake to find a package configuration file provided by
+[1.137s]   "message_generation", but CMake did not find one.
+[1.138s] 
+[1.138s]   Could not find a package configuration file provided by
+[1.138s]   "message_generation" with any of the following names:
+[1.138s] 
+[1.138s]     message_generationConfig.cmake
+[1.138s]     message_generation-config.cmake
+[1.138s] 
+[1.139s]   Add the installation prefix of "message_generation" to CMAKE_PREFIX_PATH or
+[1.139s]   set "message_generation_DIR" to a directory containing one of the above
+[1.139s]   files.  If "message_generation" provides a separate development package or
+[1.139s]   SDK, be sure it has been installed.
+[1.139s] 
+[1.139s] 
+[1.139s] -- Configuring incomplete, errors occurred!
+[1.139s] See also "/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/build/eskf/CMakeFiles/CMakeOutput.log".
+[1.140s] See also "/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/build/eskf/CMakeFiles/CMakeError.log".
+[1.146s] Invoked command in '/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/build/eskf' returned '1': /usr/bin/cmake /home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation -DCATKIN_INSTALL_INTO_PREFIX_ROOT=0 -DCMAKE_INSTALL_PREFIX=/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/install/eskf

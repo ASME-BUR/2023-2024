@@ -1,0 +1,961 @@
+[0.207s] Invoking command in '/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/build/state-estimation': /usr/bin/cmake --build /home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/build/state-estimation -- -j8 -l8
+[0.276s] [ 40%] Built target ESKF
+[0.299s] [35m[1mScanning dependencies of target state-estimation[0m
+[0.353s] [ 60%] [32mBuilding CXX object CMakeFiles/state-estimation.dir/src/eskf.cpp.o[0m
+[0.355s] [ 80%] [32mBuilding CXX object CMakeFiles/state-estimation.dir/src/Node.cpp.o[0m
+[2.868s] In file included from [01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/src/Node.cpp:1[m[K:
+[2.868s] [01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/include/eskf/Node.hpp:36:57:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+[2.869s]    36 |     rclcpp::Subscription<mavros_msgs:msg::OpticalFlowRad[01;31m[K>[m[K::SharedPtr subOpticalFlowPose_;
+[2.869s]       |                                                         [01;31m[K^[m[K
+[2.869s] [01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/include/eskf/Node.hpp:36:57:[m[K [01;31m[Kerror: [m[Ktemplate argument 3 is invalid
+[2.869s] [01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/include/eskf/Node.hpp:36:60:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K;[m[K’ at end of member declaration
+[2.869s]    36 |     rclcpp::Subscription<mavros_msgs:msg::OpticalFlowRad>::[01;31m[KSharedPtr[m[K subOpticalFlowPose_;
+[2.869s]       |                                                            [01;31m[K^~~~~~~~~[m[K
+[2.869s]       |                                                                     [32m[K;[m[K
+[2.876s] [01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/include/eskf/Node.hpp:36:70:[m[K [01;31m[Kerror: [m[K‘[01m[KsubOpticalFlowPose_[m[K’ does not name a type
+[2.876s]    36 |     rclcpp::Subscription<mavros_msgs:msg::OpticalFlowRad>::SharedPtr [01;31m[KsubOpticalFlowPose_[m[K;
+[2.876s]       |                                                                      [01;31m[K^~~~~~~~~~~~~~~~~~~[m[K
+[2.887s] In file included from [01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/src/eskf.cpp:1[m[K:
+[2.887s] [01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/include/eskf/Node.hpp:36:57:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+[2.887s]    36 |     rclcpp::Subscription<mavros_msgs:msg::OpticalFlowRad[01;31m[K>[m[K::SharedPtr subOpticalFlowPose_;
+[2.887s]       |                                                         [01;31m[K^[m[K
+[2.887s] [01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/include/eskf/Node.hpp:36:57:[m[K [01;31m[Kerror: [m[Ktemplate argument 3 is invalid
+[2.887s] [01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/include/eskf/Node.hpp:36:60:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K;[m[K’ at end of member declaration
+[2.888s]    36 |     rclcpp::Subscription<mavros_msgs:msg::OpticalFlowRad>::[01;31m[KSharedPtr[m[K subOpticalFlowPose_;
+[2.888s]       |                                                            [01;31m[K^~~~~~~~~[m[K
+[2.888s]       |                                                                     [32m[K;[m[K
+[2.895s] [01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/include/eskf/Node.hpp:36:70:[m[K [01;31m[Kerror: [m[K‘[01m[KsubOpticalFlowPose_[m[K’ does not name a type
+[2.895s]    36 |     rclcpp::Subscription<mavros_msgs:msg::OpticalFlowRad>::SharedPtr [01;31m[KsubOpticalFlowPose_[m[K;
+[2.895s]       |                                                                      [01;31m[K^~~~~~~~~~~~~~~~~~~[m[K
+[2.932s] [01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/src/Node.cpp:[m[K In constructor ‘[01m[Keskf::Node::Node()[m[K’:
+[2.932s] [01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/src/Node.cpp:6:32:[m[K [01;31m[Kerror: [m[Kno matching function for call to ‘[01m[Keskf::Node::Node(const char [10])[m[K’
+[2.932s]     6 | Node::Node() : Node("ESKF_Node"[01;31m[K)[m[K {
+[2.933s]       |                                [01;31m[K^[m[K
+[2.933s] In file included from [01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/src/Node.cpp:1[m[K:
+[2.933s] [01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/include/eskf/Node.hpp:24:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Keskf::Node::Node()[m[K’
+[2.933s]    24 |     [01;36m[KNode[m[K();
+[2.933s]       |     [01;36m[K^~~~[m[K
+[2.933s] [01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/include/eskf/Node.hpp:24:5:[m[K [01;36m[Knote: [m[K  candidate expects 0 arguments, 1 provided
+[2.933s] In file included from [01m[K/opt/ros/foxy/include/rclcpp/service.hpp:34[m[K,
+[2.934s]                  from [01m[K/opt/ros/foxy/include/rclcpp/callback_group.hpp:25[m[K,
+[2.934s]                  from [01m[K/opt/ros/foxy/include/rclcpp/any_executable.hpp:20[m[K,
+[2.934s]                  from [01m[K/opt/ros/foxy/include/rclcpp/memory_strategy.hpp:24[m[K,
+[2.934s]                  from [01m[K/opt/ros/foxy/include/rclcpp/memory_strategies.hpp:18[m[K,
+[2.934s]                  from [01m[K/opt/ros/foxy/include/rclcpp/executor_options.hpp:20[m[K,
+[2.934s]                  from [01m[K/opt/ros/foxy/include/rclcpp/executor.hpp:33[m[K,
+[2.934s]                  from [01m[K/opt/ros/foxy/include/rclcpp/executors/multi_threaded_executor.hpp:26[m[K,
+[2.935s]                  from [01m[K/opt/ros/foxy/include/rclcpp/executors.hpp:21[m[K,
+[2.935s]                  from [01m[K/opt/ros/foxy/include/rclcpp/rclcpp.hpp:146[m[K,
+[2.935s]                  from [01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/include/eskf/Node.hpp:5[m[K,
+[2.935s]                  from [01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/src/Node.cpp:1[m[K:
+[2.935s] [01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/src/Node.cpp:7:3:[m[K [01;31m[Kerror: [m[Kstatic assertion failed: First argument to logging macros must be an rclcpp::Logger
+[2.935s]     7 |   [01;31m[KRCLCPP_INFO[m[K("Subscribing to imu.");
+[2.935s]       |   [01;31m[K^~~~~~~~~~~[m[K
+[2.936s] In file included from [01m[K/opt/ros/foxy/include/rclcpp/client.hpp:40[m[K,
+[2.936s]                  from [01m[K/opt/ros/foxy/include/rclcpp/callback_group.hpp:23[m[K,
+[2.936s]                  from [01m[K/opt/ros/foxy/include/rclcpp/any_executable.hpp:20[m[K,
+[2.936s]                  from [01m[K/opt/ros/foxy/include/rclcpp/memory_strategy.hpp:24[m[K,
+[2.936s]                  from [01m[K/opt/ros/foxy/include/rclcpp/memory_strategies.hpp:18[m[K,
+[2.936s]                  from [01m[K/opt/ros/foxy/include/rclcpp/executor_options.hpp:20[m[K,
+[2.937s]                  from [01m[K/opt/ros/foxy/include/rclcpp/executor.hpp:33[m[K,
+[2.937s]                  from [01m[K/opt/ros/foxy/include/rclcpp/executors/multi_threaded_executor.hpp:26[m[K,
+[2.937s]                  from [01m[K/opt/ros/foxy/include/rclcpp/executors.hpp:21[m[K,
+[2.937s]                  from [01m[K/opt/ros/foxy/include/rclcpp/rclcpp.hpp:146[m[K,
+[2.937s]                  from [01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/include/eskf/Node.hpp:5[m[K,
+[2.937s]                  from [01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/src/Node.cpp:1[m[K:
+[2.937s] [01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/src/Node.cpp:7:3:[m[K [01;31m[Kerror: [m[Krequest for member ‘[01m[Kget_name[m[K’ in ‘[01m[K("Subscribing to imu.")[m[K’, which is of non-class type ‘[01m[Kconst char [20][m[K’
+[2.938s]     7 |   [01;31m[KRCLCPP_INFO[m[K("Subscribing to imu.");
+[2.938s]       |   [01;31m[K^~~~~~~~~~~[m[K
+[2.938s] [01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/src/Node.cpp:7:3:[m[K [01;31m[Kerror: [m[Krequest for member ‘[01m[Kget_name[m[K’ in ‘[01m[K("Subscribing to imu.")[m[K’, which is of non-class type ‘[01m[Kconst char [20][m[K’
+[2.938s]     7 |   [01;31m[KRCLCPP_INFO[m[K("Subscribing to imu.");
+[2.938s]       |   [01;31m[K^~~~~~~~~~~[m[K
+[2.938s] [01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/src/Node.cpp:7:3:[m[K [01;31m[Kerror: [m[Kno matching function for call to ‘[01m[Kget_c_string()[m[K’
+[2.938s]     7 |   [01;31m[KRCLCPP_INFO[m[K("Subscribing to imu.");
+[2.938s]       |   [01;31m[K^~~~~~~~~~~[m[K
+[2.938s] In file included from [01m[K/opt/ros/foxy/include/rclcpp/client.hpp:36[m[K,
+[2.939s]                  from [01m[K/opt/ros/foxy/include/rclcpp/callback_group.hpp:23[m[K,
+[2.939s]                  from [01m[K/opt/ros/foxy/include/rclcpp/any_executable.hpp:20[m[K,
+[2.939s]                  from [01m[K/opt/ros/foxy/include/rclcpp/memory_strategy.hpp:24[m[K,
+[2.939s]                  from [01m[K/opt/ros/foxy/include/rclcpp/memory_strategies.hpp:18[m[K,
+[2.939s]                  from [01m[K/opt/ros/foxy/include/rclcpp/executor_options.hpp:20[m[K,
+[2.939s]                  from [01m[K/opt/ros/foxy/include/rclcpp/executor.hpp:33[m[K,
+[2.939s]                  from [01m[K/opt/ros/foxy/include/rclcpp/executors/multi_threaded_executor.hpp:26[m[K,
+[2.939s]                  from [01m[K/opt/ros/foxy/include/rclcpp/executors.hpp:21[m[K,
+[2.940s]                  from [01m[K/opt/ros/foxy/include/rclcpp/rclcpp.hpp:146[m[K,
+[2.940s]                  from [01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/include/eskf/Node.hpp:5[m[K,
+[2.940s]                  from [01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/src/Node.cpp:1[m[K:
+[2.940s] [01m[K/opt/ros/foxy/include/rclcpp/utilities.hpp:296:1:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kconst char* rclcpp::get_c_string(const char*)[m[K’
+[2.940s]   296 | [01;36m[Kget_c_string[m[K(const char * string_in);
+[2.940s]       | [01;36m[K^~~~~~~~~~~~[m[K
+[2.940s] [01m[K/opt/ros/foxy/include/rclcpp/utilities.hpp:296:1:[m[K [01;36m[Knote: [m[K  candidate expects 1 argument, 0 provided
+[2.940s] [01m[K/opt/ros/foxy/include/rclcpp/utilities.hpp:305:1:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kconst char* rclcpp::get_c_string(const string&)[m[K’
+[2.940s]   305 | [01;36m[Kget_c_string[m[K(const std::string & string_in);
+[2.941s]       | [01;36m[K^~~~~~~~~~~~[m[K
+[2.941s] [01m[K/opt/ros/foxy/include/rclcpp/utilities.hpp:305:1:[m[K [01;36m[Knote: [m[K  candidate expects 1 argument, 0 provided
+[2.945s] In file included from [01m[K/opt/ros/foxy/include/rclcpp/service.hpp:34[m[K,
+[2.945s]                  from [01m[K/opt/ros/foxy/include/rclcpp/callback_group.hpp:25[m[K,
+[2.945s]                  from [01m[K/opt/ros/foxy/include/rclcpp/any_executable.hpp:20[m[K,
+[2.945s]                  from [01m[K/opt/ros/foxy/include/rclcpp/memory_strategy.hpp:24[m[K,
+[2.946s]                  from [01m[K/opt/ros/foxy/include/rclcpp/memory_strategies.hpp:18[m[K,
+[2.946s]                  from [01m[K/opt/ros/foxy/include/rclcpp/executor_options.hpp:20[m[K,
+[2.946s]                  from [01m[K/opt/ros/foxy/include/rclcpp/executor.hpp:33[m[K,
+[2.946s]                  from [01m[K/opt/ros/foxy/include/rclcpp/executors/multi_threaded_executor.hpp:26[m[K,
+[2.946s]                  from [01m[K/opt/ros/foxy/include/rclcpp/executors.hpp:21[m[K,
+[2.946s]                  from [01m[K/opt/ros/foxy/include/rclcpp/rclcpp.hpp:146[m[K,
+[2.946s]                  from [01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/include/eskf/Node.hpp:5[m[K,
+[2.947s]                  from [01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/src/Node.cpp:1[m[K:
+[2.947s] [01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/src/Node.cpp:11:3:[m[K [01;31m[Kerror: [m[Kstatic assertion failed: First argument to logging macros must be an rclcpp::Logger
+[2.947s]    11 |   [01;31m[KRCLCPP_INFO[m[K("Subscribing to extended state");
+[2.947s]       |   [01;31m[K^~~~~~~~~~~[m[K
+[2.948s] In file included from [01m[K/opt/ros/foxy/include/rclcpp/client.hpp:40[m[K,
+[2.948s]                  from [01m[K/opt/ros/foxy/include/rclcpp/callback_group.hpp:23[m[K,
+[2.948s]                  from [01m[K/opt/ros/foxy/include/rclcpp/any_executable.hpp:20[m[K,
+[2.948s]                  from [01m[K/opt/ros/foxy/include/rclcpp/memory_strategy.hpp:24[m[K,
+[2.948s]                  from [01m[K/opt/ros/foxy/include/rclcpp/memory_strategies.hpp:18[m[K,
+[2.948s]                  from [01m[K/opt/ros/foxy/include/rclcpp/executor_options.hpp:20[m[K,
+[2.948s]                  from [01m[K/opt/ros/foxy/include/rclcpp/executor.hpp:33[m[K,
+[2.948s]                  from [01m[K/opt/ros/foxy/include/rclcpp/executors/multi_threaded_executor.hpp:26[m[K,
+[2.949s]                  from [01m[K/opt/ros/foxy/include/rclcpp/executors.hpp:21[m[K,
+[2.949s]                  from [01m[K/opt/ros/foxy/include/rclcpp/rclcpp.hpp:146[m[K,
+[2.949s]                  from [01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/include/eskf/Node.hpp:5[m[K,
+[2.949s]                  from [01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/src/Node.cpp:1[m[K:
+[2.949s] [01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/src/Node.cpp:11:3:[m[K [01;31m[Kerror: [m[Krequest for member ‘[01m[Kget_name[m[K’ in ‘[01m[K("Subscribing to extended state")[m[K’, which is of non-class type ‘[01m[Kconst char [30][m[K’
+[2.949s]    11 |   [01;31m[KRCLCPP_INFO[m[K("Subscribing to extended state");
+[2.949s]       |   [01;31m[K^~~~~~~~~~~[m[K
+[2.949s] [01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/src/Node.cpp:11:3:[m[K [01;31m[Kerror: [m[Krequest for member ‘[01m[Kget_name[m[K’ in ‘[01m[K("Subscribing to extended state")[m[K’, which is of non-class type ‘[01m[Kconst char [30][m[K’
+[2.949s]    11 |   [01;31m[KRCLCPP_INFO[m[K("Subscribing to extended state");
+[2.950s]       |   [01;31m[K^~~~~~~~~~~[m[K
+[2.950s] [01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/src/Node.cpp:11:3:[m[K [01;31m[Kerror: [m[Kno matching function for call to ‘[01m[Kget_c_string()[m[K’
+[2.950s]    11 |   [01;31m[KRCLCPP_INFO[m[K("Subscribing to extended state");
+[2.950s]       |   [01;31m[K^~~~~~~~~~~[m[K
+[2.950s] In file included from [01m[K/opt/ros/foxy/include/rclcpp/client.hpp:36[m[K,
+[2.950s]                  from [01m[K/opt/ros/foxy/include/rclcpp/callback_group.hpp:23[m[K,
+[2.950s]                  from [01m[K/opt/ros/foxy/include/rclcpp/any_executable.hpp:20[m[K,
+[2.951s]                  from [01m[K/opt/ros/foxy/include/rclcpp/memory_strategy.hpp:24[m[K,
+[2.951s]                  from [01m[K/opt/ros/foxy/include/rclcpp/memory_strategies.hpp:18[m[K,
+[2.951s]                  from [01m[K/opt/ros/foxy/include/rclcpp/executor_options.hpp:20[m[K,
+[2.951s]                  from [01m[K/opt/ros/foxy/include/rclcpp/executor.hpp:33[m[K,
+[2.951s]                  from [01m[K/opt/ros/foxy/include/rclcpp/executors/multi_threaded_executor.hpp:26[m[K,
+[2.951s]                  from [01m[K/opt/ros/foxy/include/rclcpp/executors.hpp:21[m[K,
+[2.951s]                  from [01m[K/opt/ros/foxy/include/rclcpp/rclcpp.hpp:146[m[K,
+[2.951s]                  from [01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/include/eskf/Node.hpp:5[m[K,
+[2.951s]                  from [01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/src/Node.cpp:1[m[K:
+[2.952s] [01m[K/opt/ros/foxy/include/rclcpp/utilities.hpp:296:1:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kconst char* rclcpp::get_c_string(const char*)[m[K’
+[2.952s]   296 | [01;36m[Kget_c_string[m[K(const char * string_in);
+[2.952s]       | [01;36m[K^~~~~~~~~~~~[m[K
+[2.952s] [01m[K/opt/ros/foxy/include/rclcpp/utilities.hpp:296:1:[m[K [01;36m[Knote: [m[K  candidate expects 1 argument, 0 provided
+[2.952s] [01m[K/opt/ros/foxy/include/rclcpp/utilities.hpp:305:1:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kconst char* rclcpp::get_c_string(const string&)[m[K’
+[2.953s]   305 | [01;36m[Kget_c_string[m[K(const std::string & string_in);
+[2.953s]       | [01;36m[K^~~~~~~~~~~~[m[K
+[2.953s] [01m[K/opt/ros/foxy/include/rclcpp/utilities.hpp:305:1:[m[K [01;36m[Knote: [m[K  candidate expects 1 argument, 0 provided
+[2.953s] [01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/src/eskf.cpp:[m[K In function ‘[01m[Kint main(int, char**)[m[K’:
+[2.953s] [01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/src/eskf.cpp:6:2:[m[K [01;31m[Kerror: [m[K‘[01m[Kros[m[K’ has not been declared
+[2.953s]     6 |  [01;31m[Kros[m[K::init(argc, argv);
+[2.953s]       |  [01;31m[K^~~[m[K
+[2.953s] In file included from [01m[K/opt/ros/foxy/include/rclcpp/service.hpp:34[m[K,
+[2.953s]                  from [01m[K/opt/ros/foxy/include/rclcpp/callback_group.hpp:25[m[K,
+[2.954s]                  from [01m[K/opt/ros/foxy/include/rclcpp/any_executable.hpp:20[m[K,
+[2.954s]                  from [01m[K/opt/ros/foxy/include/rclcpp/memory_strategy.hpp:24[m[K,
+[2.954s]                  from [01m[K/opt/ros/foxy/include/rclcpp/memory_strategies.hpp:18[m[K,
+[2.954s]                  from [01m[K/opt/ros/foxy/include/rclcpp/executor_options.hpp:20[m[K,
+[2.954s]                  from [01m[K/opt/ros/foxy/include/rclcpp/executor.hpp:33[m[K,
+[2.954s]                  from [01m[K/opt/ros/foxy/include/rclcpp/executors/multi_threaded_executor.hpp:26[m[K,
+[2.954s]                  from [01m[K/opt/ros/foxy/include/rclcpp/executors.hpp:21[m[K,
+[2.955s]                  from [01m[K/opt/ros/foxy/include/rclcpp/rclcpp.hpp:146[m[K,
+[2.955s]                  from [01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/include/eskf/Node.hpp:5[m[K,
+[2.955s]                  from [01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/src/Node.cpp:1[m[K:
+[2.955s] [01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/src/Node.cpp:19:5:[m[K [01;31m[Kerror: [m[Kstatic assertion failed: First argument to logging macros must be an rclcpp::Logger
+[2.955s]    19 |     [01;31m[KRCLCPP_INFO[m[K("Subscribing to vision");
+[2.955s]       |     [01;31m[K^~~~~~~~~~~[m[K
+[2.955s] In file included from [01m[K/opt/ros/foxy/include/rclcpp/client.hpp:40[m[K,
+[2.955s]                  from [01m[K/opt/ros/foxy/include/rclcpp/callback_group.hpp:23[m[K,
+[2.955s]                  from [01m[K/opt/ros/foxy/include/rclcpp/any_executable.hpp:20[m[K,
+[2.955s]                  from [01m[K/opt/ros/foxy/include/rclcpp/memory_strategy.hpp:24[m[K,
+[2.956s]                  from [01m[K/opt/ros/foxy/include/rclcpp/memory_strategies.hpp:18[m[K,
+[2.956s]                  from [01m[K/opt/ros/foxy/include/rclcpp/executor_options.hpp:20[m[K,
+[2.956s]                  from [01m[K/opt/ros/foxy/include/rclcpp/executor.hpp:33[m[K,
+[2.956s]                  from [01m[K/opt/ros/foxy/include/rclcpp/executors/multi_threaded_executor.hpp:26[m[K,
+[2.956s]                  from [01m[K/opt/ros/foxy/include/rclcpp/executors.hpp:21[m[K,
+[2.956s]                  from [01m[K/opt/ros/foxy/include/rclcpp/rclcpp.hpp:146[m[K,
+[2.956s]                  from [01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/include/eskf/Node.hpp:5[m[K,
+[2.956s]                  from [01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/src/Node.cpp:1[m[K:
+[2.957s] [01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/src/Node.cpp:19:5:[m[K [01;31m[Kerror: [m[Krequest for member ‘[01m[Kget_name[m[K’ in ‘[01m[K("Subscribing to vision")[m[K’, which is of non-class type ‘[01m[Kconst char [22][m[K’
+[2.957s]    19 |     [01;31m[KRCLCPP_INFO[m[K("Subscribing to vision");
+[2.957s]       |     [01;31m[K^~~~~~~~~~~[m[K
+[2.957s] [01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/src/Node.cpp:19:5:[m[K [01;31m[Kerror: [m[Krequest for member ‘[01m[Kget_name[m[K’ in ‘[01m[K("Subscribing to vision")[m[K’, which is of non-class type ‘[01m[Kconst char [22][m[K’
+[2.957s]    19 |     [01;31m[KRCLCPP_INFO[m[K("Subscribing to vision");
+[2.957s]       |     [01;31m[K^~~~~~~~~~~[m[K
+[2.957s] [01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/src/Node.cpp:19:5:[m[K [01;31m[Kerror: [m[Kno matching function for call to ‘[01m[Kget_c_string()[m[K’
+[2.957s]    19 |     [01;31m[KRCLCPP_INFO[m[K("Subscribing to vision");
+[2.957s]       |     [01;31m[K^~~~~~~~~~~[m[K
+[2.957s] In file included from [01m[K/opt/ros/foxy/include/rclcpp/client.hpp:36[m[K,
+[2.957s]                  from [01m[K/opt/ros/foxy/include/rclcpp/callback_group.hpp:23[m[K,
+[2.958s]                  from [01m[K/opt/ros/foxy/include/rclcpp/any_executable.hpp:20[m[K,
+[2.958s]                  from [01m[K/opt/ros/foxy/include/rclcpp/memory_strategy.hpp:24[m[K,
+[2.958s]                  from [01m[K/opt/ros/foxy/include/rclcpp/memory_strategies.hpp:18[m[K,
+[2.958s]                  from [01m[K/opt/ros/foxy/include/rclcpp/executor_options.hpp:20[m[K,
+[2.958s]                  from [01m[K/opt/ros/foxy/include/rclcpp/executor.hpp:33[m[K,
+[2.958s]                  from [01m[K/opt/ros/foxy/include/rclcpp/executors/multi_threaded_executor.hpp:26[m[K,
+[2.958s]                  from [01m[K/opt/ros/foxy/include/rclcpp/executors.hpp:21[m[K,
+[2.958s]                  from [01m[K/opt/ros/foxy/include/rclcpp/rclcpp.hpp:146[m[K,
+[2.958s]                  from [01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/include/eskf/Node.hpp:5[m[K,
+[2.958s]                  from [01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/src/Node.cpp:1[m[K:
+[2.958s] [01m[K/opt/ros/foxy/include/rclcpp/utilities.hpp:296:1:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kconst char* rclcpp::get_c_string(const char*)[m[K’
+[2.958s]   296 | [01;36m[Kget_c_string[m[K(const char * string_in);
+[2.959s]       | [01;36m[K^~~~~~~~~~~~[m[K
+[2.959s] [01m[K/opt/ros/foxy/include/rclcpp/utilities.hpp:296:1:[m[K [01;36m[Knote: [m[K  candidate expects 1 argument, 0 provided
+[2.959s] [01m[K/opt/ros/foxy/include/rclcpp/utilities.hpp:305:1:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kconst char* rclcpp::get_c_string(const string&)[m[K’
+[2.959s]   305 | [01;36m[Kget_c_string[m[K(const std::string & string_in);
+[2.959s]       | [01;36m[K^~~~~~~~~~~~[m[K
+[2.959s] [01m[K/opt/ros/foxy/include/rclcpp/utilities.hpp:305:1:[m[K [01;36m[Knote: [m[K  candidate expects 1 argument, 0 provided
+[2.959s] In file included from [01m[K/opt/ros/foxy/include/rclcpp/service.hpp:34[m[K,
+[2.959s]                  from [01m[K/opt/ros/foxy/include/rclcpp/callback_group.hpp:25[m[K,
+[2.959s]                  from [01m[K/opt/ros/foxy/include/rclcpp/any_executable.hpp:20[m[K,
+[2.959s]                  from [01m[K/opt/ros/foxy/include/rclcpp/memory_strategy.hpp:24[m[K,
+[2.960s]                  from [01m[K/opt/ros/foxy/include/rclcpp/memory_strategies.hpp:18[m[K,
+[2.960s]                  from [01m[K/opt/ros/foxy/include/rclcpp/executor_options.hpp:20[m[K,
+[2.960s]                  from [01m[K/opt/ros/foxy/include/rclcpp/executor.hpp:33[m[K,
+[2.960s]                  from [01m[K/opt/ros/foxy/include/rclcpp/executors/multi_threaded_executor.hpp:26[m[K,
+[2.960s]                  from [01m[K/opt/ros/foxy/include/rclcpp/executors.hpp:21[m[K,
+[2.960s]                  from [01m[K/opt/ros/foxy/include/rclcpp/rclcpp.hpp:146[m[K,
+[2.960s]                  from [01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/include/eskf/Node.hpp:5[m[K,
+[2.960s]                  from [01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/src/Node.cpp:1[m[K:
+[2.960s] [01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/src/Node.cpp:24:5:[m[K [01;31m[Kerror: [m[Kstatic assertion failed: First argument to logging macros must be an rclcpp::Logger
+[2.960s]    24 |     [01;31m[KRCLCPP_INFO[m[K("Subscribing to gps");
+[2.961s]       |     [01;31m[K^~~~~~~~~~~[m[K
+[2.961s] In file included from [01m[K/opt/ros/foxy/include/rclcpp/client.hpp:40[m[K,
+[2.961s]                  from [01m[K/opt/ros/foxy/include/rclcpp/callback_group.hpp:23[m[K,
+[2.961s]                  from [01m[K/opt/ros/foxy/include/rclcpp/any_executable.hpp:20[m[K,
+[2.961s]                  from [01m[K/opt/ros/foxy/include/rclcpp/memory_strategy.hpp:24[m[K,
+[2.961s]                  from [01m[K/opt/ros/foxy/include/rclcpp/memory_strategies.hpp:18[m[K,
+[2.961s]                  from [01m[K/opt/ros/foxy/include/rclcpp/executor_options.hpp:20[m[K,
+[2.961s]                  from [01m[K/opt/ros/foxy/include/rclcpp/executor.hpp:33[m[K,
+[2.961s]                  from [01m[K/opt/ros/foxy/include/rclcpp/executors/multi_threaded_executor.hpp:26[m[K,
+[2.961s]                  from [01m[K/opt/ros/foxy/include/rclcpp/executors.hpp:21[m[K,
+[2.961s]                  from [01m[K/opt/ros/foxy/include/rclcpp/rclcpp.hpp:146[m[K,
+[2.961s]                  from [01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/include/eskf/Node.hpp:5[m[K,
+[2.961s]                  from [01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/src/Node.cpp:1[m[K:
+[2.962s] [01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/src/Node.cpp:24:5:[m[K [01;31m[Kerror: [m[Krequest for member ‘[01m[Kget_name[m[K’ in ‘[01m[K("Subscribing to gps")[m[K’, which is of non-class type ‘[01m[Kconst char [19][m[K’
+[2.962s]    24 |     [01;31m[KRCLCPP_INFO[m[K("Subscribing to gps");
+[2.962s]       |     [01;31m[K^~~~~~~~~~~[m[K
+[2.962s] [01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/src/Node.cpp:24:5:[m[K [01;31m[Kerror: [m[Krequest for member ‘[01m[Kget_name[m[K’ in ‘[01m[K("Subscribing to gps")[m[K’, which is of non-class type ‘[01m[Kconst char [19][m[K’
+[2.962s]    24 |     [01;31m[KRCLCPP_INFO[m[K("Subscribing to gps");
+[2.962s]       |     [01;31m[K^~~~~~~~~~~[m[K
+[2.962s] [01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/src/Node.cpp:24:5:[m[K [01;31m[Kerror: [m[Kno matching function for call to ‘[01m[Kget_c_string()[m[K’
+[2.962s]    24 |     [01;31m[KRCLCPP_INFO[m[K("Subscribing to gps");
+[2.962s]       |     [01;31m[K^~~~~~~~~~~[m[K
+[2.962s] In file included from [01m[K/opt/ros/foxy/include/rclcpp/client.hpp:36[m[K,
+[2.962s]                  from [01m[K/opt/ros/foxy/include/rclcpp/callback_group.hpp:23[m[K,
+[2.962s]                  from [01m[K/opt/ros/foxy/include/rclcpp/any_executable.hpp:20[m[K,
+[2.963s]                  from [01m[K/opt/ros/foxy/include/rclcpp/memory_strategy.hpp:24[m[K,
+[2.963s]                  from [01m[K/opt/ros/foxy/include/rclcpp/memory_strategies.hpp:18[m[K,
+[2.963s]                  from [01m[K/opt/ros/foxy/include/rclcpp/executor_options.hpp:20[m[K,
+[2.963s]                  from [01m[K/opt/ros/foxy/include/rclcpp/executor.hpp:33[m[K,
+[2.963s]                  from [01m[K/opt/ros/foxy/include/rclcpp/executors/multi_threaded_executor.hpp:26[m[K,
+[2.963s]                  from [01m[K/opt/ros/foxy/include/rclcpp/executors.hpp:21[m[K,
+[2.963s]                  from [01m[K/opt/ros/foxy/include/rclcpp/rclcpp.hpp:146[m[K,
+[2.963s]                  from [01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/include/eskf/Node.hpp:5[m[K,
+[2.963s]                  from [01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/src/Node.cpp:1[m[K:
+[2.963s] [01m[K/opt/ros/foxy/include/rclcpp/utilities.hpp:296:1:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kconst char* rclcpp::get_c_string(const char*)[m[K’
+[2.963s]   296 | [01;36m[Kget_c_string[m[K(const char * string_in);
+[2.963s]       | [01;36m[K^~~~~~~~~~~~[m[K
+[2.963s] [01m[K/opt/ros/foxy/include/rclcpp/utilities.hpp:296:1:[m[K [01;36m[Knote: [m[K  candidate expects 1 argument, 0 provided
+[2.964s] [01m[K/opt/ros/foxy/include/rclcpp/utilities.hpp:305:1:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kconst char* rclcpp::get_c_string(const string&)[m[K’
+[2.964s]   305 | [01;36m[Kget_c_string[m[K(const std::string & string_in);
+[2.964s]       | [01;36m[K^~~~~~~~~~~~[m[K
+[2.964s] [01m[K/opt/ros/foxy/include/rclcpp/utilities.hpp:305:1:[m[K [01;36m[Knote: [m[K  candidate expects 1 argument, 0 provided
+[2.964s] In file included from [01m[K/opt/ros/foxy/include/rclcpp/service.hpp:34[m[K,
+[2.964s]                  from [01m[K/opt/ros/foxy/include/rclcpp/callback_group.hpp:25[m[K,
+[2.964s]                  from [01m[K/opt/ros/foxy/include/rclcpp/any_executable.hpp:20[m[K,
+[2.964s]                  from [01m[K/opt/ros/foxy/include/rclcpp/memory_strategy.hpp:24[m[K,
+[2.964s]                  from [01m[K/opt/ros/foxy/include/rclcpp/memory_strategies.hpp:18[m[K,
+[2.964s]                  from [01m[K/opt/ros/foxy/include/rclcpp/executor_options.hpp:20[m[K,
+[2.964s]                  from [01m[K/opt/ros/foxy/include/rclcpp/executor.hpp:33[m[K,
+[2.964s]                  from [01m[K/opt/ros/foxy/include/rclcpp/executors/multi_threaded_executor.hpp:26[m[K,
+[2.965s]                  from [01m[K/opt/ros/foxy/include/rclcpp/executors.hpp:21[m[K,
+[2.965s]                  from [01m[K/opt/ros/foxy/include/rclcpp/rclcpp.hpp:146[m[K,
+[2.965s]                  from [01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/include/eskf/Node.hpp:5[m[K,
+[2.965s]                  from [01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/src/Node.cpp:1[m[K:
+[2.965s] [01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/src/Node.cpp:29:5:[m[K [01;31m[Kerror: [m[Kstatic assertion failed: First argument to logging macros must be an rclcpp::Logger
+[2.965s]    29 |     [01;31m[KRCLCPP_INFO[m[K("Subscribing to optical_flow");
+[2.965s]       |     [01;31m[K^~~~~~~~~~~[m[K
+[2.965s] In file included from [01m[K/opt/ros/foxy/include/rclcpp/client.hpp:40[m[K,
+[2.965s]                  from [01m[K/opt/ros/foxy/include/rclcpp/callback_group.hpp:23[m[K,
+[2.965s]                  from [01m[K/opt/ros/foxy/include/rclcpp/any_executable.hpp:20[m[K,
+[2.965s]                  from [01m[K/opt/ros/foxy/include/rclcpp/memory_strategy.hpp:24[m[K,
+[2.965s]                  from [01m[K/opt/ros/foxy/include/rclcpp/memory_strategies.hpp:18[m[K,
+[2.966s]                  from [01m[K/opt/ros/foxy/include/rclcpp/executor_options.hpp:20[m[K,
+[2.966s]                  from [01m[K/opt/ros/foxy/include/rclcpp/executor.hpp:33[m[K,
+[2.966s]                  from [01m[K/opt/ros/foxy/include/rclcpp/executors/multi_threaded_executor.hpp:26[m[K,
+[2.966s]                  from [01m[K/opt/ros/foxy/include/rclcpp/executors.hpp:21[m[K,
+[2.966s]                  from [01m[K/opt/ros/foxy/include/rclcpp/rclcpp.hpp:146[m[K,
+[2.966s]                  from [01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/include/eskf/Node.hpp:5[m[K,
+[2.966s]                  from [01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/src/Node.cpp:1[m[K:
+[2.966s] [01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/src/Node.cpp:29:5:[m[K [01;31m[Kerror: [m[Krequest for member ‘[01m[Kget_name[m[K’ in ‘[01m[K("Subscribing to optical_flow")[m[K’, which is of non-class type ‘[01m[Kconst char [28][m[K’
+[2.966s]    29 |     [01;31m[KRCLCPP_INFO[m[K("Subscribing to optical_flow");
+[2.966s]       |     [01;31m[K^~~~~~~~~~~[m[K
+[2.966s] [01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/src/Node.cpp:29:5:[m[K [01;31m[Kerror: [m[Krequest for member ‘[01m[Kget_name[m[K’ in ‘[01m[K("Subscribing to optical_flow")[m[K’, which is of non-class type ‘[01m[Kconst char [28][m[K’
+[2.966s]    29 |     [01;31m[KRCLCPP_INFO[m[K("Subscribing to optical_flow");
+[2.966s]       |     [01;31m[K^~~~~~~~~~~[m[K
+[2.967s] [01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/src/Node.cpp:29:5:[m[K [01;31m[Kerror: [m[Kno matching function for call to ‘[01m[Kget_c_string()[m[K’
+[2.967s]    29 |     [01;31m[KRCLCPP_INFO[m[K("Subscribing to optical_flow");
+[2.967s]       |     [01;31m[K^~~~~~~~~~~[m[K
+[2.967s] In file included from [01m[K/opt/ros/foxy/include/rclcpp/client.hpp:36[m[K,
+[2.967s]                  from [01m[K/opt/ros/foxy/include/rclcpp/callback_group.hpp:23[m[K,
+[2.967s]                  from [01m[K/opt/ros/foxy/include/rclcpp/any_executable.hpp:20[m[K,
+[2.967s]                  from [01m[K/opt/ros/foxy/include/rclcpp/memory_strategy.hpp:24[m[K,
+[2.967s]                  from [01m[K/opt/ros/foxy/include/rclcpp/memory_strategies.hpp:18[m[K,
+[2.967s]                  from [01m[K/opt/ros/foxy/include/rclcpp/executor_options.hpp:20[m[K,
+[2.967s]                  from [01m[K/opt/ros/foxy/include/rclcpp/executor.hpp:33[m[K,
+[2.967s]                  from [01m[K/opt/ros/foxy/include/rclcpp/executors/multi_threaded_executor.hpp:26[m[K,
+[2.967s]                  from [01m[K/opt/ros/foxy/include/rclcpp/executors.hpp:21[m[K,
+[2.968s]                  from [01m[K/opt/ros/foxy/include/rclcpp/rclcpp.hpp:146[m[K,
+[2.968s]                  from [01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/include/eskf/Node.hpp:5[m[K,
+[2.968s]                  from [01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/src/Node.cpp:1[m[K:
+[2.968s] [01m[K/opt/ros/foxy/include/rclcpp/utilities.hpp:296:1:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kconst char* rclcpp::get_c_string(const char*)[m[K’
+[2.968s]   296 | [01;36m[Kget_c_string[m[K(const char * string_in);
+[2.968s]       | [01;36m[K^~~~~~~~~~~~[m[K
+[2.968s] [01m[K/opt/ros/foxy/include/rclcpp/utilities.hpp:296:1:[m[K [01;36m[Knote: [m[K  candidate expects 1 argument, 0 provided
+[2.968s] [01m[K/opt/ros/foxy/include/rclcpp/utilities.hpp:305:1:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kconst char* rclcpp::get_c_string(const string&)[m[K’
+[2.968s]   305 | [01;36m[Kget_c_string[m[K(const std::string & string_in);
+[2.968s]       | [01;36m[K^~~~~~~~~~~~[m[K
+[2.968s] [01m[K/opt/ros/foxy/include/rclcpp/utilities.hpp:305:1:[m[K [01;36m[Knote: [m[K  candidate expects 1 argument, 0 provided
+[2.969s] [01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/src/Node.cpp:30:5:[m[K [01;31m[Kerror: [m[K‘[01m[KsubOpticalFlowPose_[m[K’ was not declared in this scope
+[2.969s]    30 |     [01;31m[KsubOpticalFlowPose_[m[K = this->create_subscription<mavros_msgs::msg::OpticalFlowRad>(
+[2.969s]       |     [01;31m[K^~~~~~~~~~~~~~~~~~~[m[K
+[2.984s] In file included from [01m[K/opt/ros/foxy/include/rclcpp/service.hpp:34[m[K,
+[2.984s]                  from [01m[K/opt/ros/foxy/include/rclcpp/callback_group.hpp:25[m[K,
+[2.984s]                  from [01m[K/opt/ros/foxy/include/rclcpp/any_executable.hpp:20[m[K,
+[2.984s]                  from [01m[K/opt/ros/foxy/include/rclcpp/memory_strategy.hpp:24[m[K,
+[2.984s]                  from [01m[K/opt/ros/foxy/include/rclcpp/memory_strategies.hpp:18[m[K,
+[2.985s]                  from [01m[K/opt/ros/foxy/include/rclcpp/executor_options.hpp:20[m[K,
+[2.985s]                  from [01m[K/opt/ros/foxy/include/rclcpp/executor.hpp:33[m[K,
+[2.985s]                  from [01m[K/opt/ros/foxy/include/rclcpp/executors/multi_threaded_executor.hpp:26[m[K,
+[2.985s]                  from [01m[K/opt/ros/foxy/include/rclcpp/executors.hpp:21[m[K,
+[2.985s]                  from [01m[K/opt/ros/foxy/include/rclcpp/rclcpp.hpp:146[m[K,
+[2.986s]                  from [01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/include/eskf/Node.hpp:5[m[K,
+[2.986s]                  from [01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/src/Node.cpp:1[m[K:
+[2.986s] [01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/src/Node.cpp:34:5:[m[K [01;31m[Kerror: [m[Kstatic assertion failed: First argument to logging macros must be an rclcpp::Logger
+[2.986s]    34 |     [01;31m[KRCLCPP_INFO[m[K("Subscribing to mag");
+[2.986s]       |     [01;31m[K^~~~~~~~~~~[m[K
+[2.986s] In file included from [01m[K/opt/ros/foxy/include/rclcpp/client.hpp:40[m[K,
+[2.986s]                  from [01m[K/opt/ros/foxy/include/rclcpp/callback_group.hpp:23[m[K,
+[2.986s]                  from [01m[K/opt/ros/foxy/include/rclcpp/any_executable.hpp:20[m[K,
+[2.987s]                  from [01m[K/opt/ros/foxy/include/rclcpp/memory_strategy.hpp:24[m[K,
+[2.987s]                  from [01m[K/opt/ros/foxy/include/rclcpp/memory_strategies.hpp:18[m[K,
+[2.987s]                  from [01m[K/opt/ros/foxy/include/rclcpp/executor_options.hpp:20[m[K,
+[2.987s]                  from [01m[K/opt/ros/foxy/include/rclcpp/executor.hpp:33[m[K,
+[2.987s]                  from [01m[K/opt/ros/foxy/include/rclcpp/executors/multi_threaded_executor.hpp:26[m[K,
+[2.987s]                  from [01m[K/opt/ros/foxy/include/rclcpp/executors.hpp:21[m[K,
+[2.987s]                  from [01m[K/opt/ros/foxy/include/rclcpp/rclcpp.hpp:146[m[K,
+[2.987s]                  from [01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/include/eskf/Node.hpp:5[m[K,
+[2.987s]                  from [01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/src/Node.cpp:1[m[K:
+[2.988s] [01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/src/Node.cpp:34:5:[m[K [01;31m[Kerror: [m[Krequest for member ‘[01m[Kget_name[m[K’ in ‘[01m[K("Subscribing to mag")[m[K’, which is of non-class type ‘[01m[Kconst char [19][m[K’
+[2.988s]    34 |     [01;31m[KRCLCPP_INFO[m[K("Subscribing to mag");
+[2.988s]       |     [01;31m[K^~~~~~~~~~~[m[K
+[2.988s] [01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/src/Node.cpp:34:5:[m[K [01;31m[Kerror: [m[Krequest for member ‘[01m[Kget_name[m[K’ in ‘[01m[K("Subscribing to mag")[m[K’, which is of non-class type ‘[01m[Kconst char [19][m[K’
+[2.988s]    34 |     [01;31m[KRCLCPP_INFO[m[K("Subscribing to mag");
+[2.989s]       |     [01;31m[K^~~~~~~~~~~[m[K
+[2.989s] [01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/src/Node.cpp:34:5:[m[K [01;31m[Kerror: [m[Kno matching function for call to ‘[01m[Kget_c_string()[m[K’
+[2.989s]    34 |     [01;31m[KRCLCPP_INFO[m[K("Subscribing to mag");
+[2.989s]       |     [01;31m[K^~~~~~~~~~~[m[K
+[2.989s] In file included from [01m[K/opt/ros/foxy/include/rclcpp/client.hpp:36[m[K,
+[2.990s]                  from [01m[K/opt/ros/foxy/include/rclcpp/callback_group.hpp:23[m[K,
+[2.990s]                  from [01m[K/opt/ros/foxy/include/rclcpp/any_executable.hpp:20[m[K,
+[2.990s]                  from [01m[K/opt/ros/foxy/include/rclcpp/memory_strategy.hpp:24[m[K,
+[2.990s]                  from [01m[K/opt/ros/foxy/include/rclcpp/memory_strategies.hpp:18[m[K,
+[2.990s]                  from [01m[K/opt/ros/foxy/include/rclcpp/executor_options.hpp:20[m[K,
+[2.990s]                  from [01m[K/opt/ros/foxy/include/rclcpp/executor.hpp:33[m[K,
+[2.990s]                  from [01m[K/opt/ros/foxy/include/rclcpp/executors/multi_threaded_executor.hpp:26[m[K,
+[2.990s]                  from [01m[K/opt/ros/foxy/include/rclcpp/executors.hpp:21[m[K,
+[2.990s]                  from [01m[K/opt/ros/foxy/include/rclcpp/rclcpp.hpp:146[m[K,
+[2.991s]                  from [01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/include/eskf/Node.hpp:5[m[K,
+[2.991s]                  from [01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/src/Node.cpp:1[m[K:
+[2.991s] [01m[K/opt/ros/foxy/include/rclcpp/utilities.hpp:296:1:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kconst char* rclcpp::get_c_string(const char*)[m[K’
+[2.991s]   296 | [01;36m[Kget_c_string[m[K(const char * string_in);
+[2.991s]       | [01;36m[K^~~~~~~~~~~~[m[K
+[2.991s] [01m[K/opt/ros/foxy/include/rclcpp/utilities.hpp:296:1:[m[K [01;36m[Knote: [m[K  candidate expects 1 argument, 0 provided
+[2.991s] [01m[K/opt/ros/foxy/include/rclcpp/utilities.hpp:305:1:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kconst char* rclcpp::get_c_string(const string&)[m[K’
+[2.991s]   305 | [01;36m[Kget_c_string[m[K(const std::string & string_in);
+[2.992s]       | [01;36m[K^~~~~~~~~~~~[m[K
+[2.992s] [01m[K/opt/ros/foxy/include/rclcpp/utilities.hpp:305:1:[m[K [01;36m[Knote: [m[K  candidate expects 1 argument, 0 provided
+[2.992s] In file included from [01m[K/opt/ros/foxy/include/rclcpp/service.hpp:34[m[K,
+[2.992s]                  from [01m[K/opt/ros/foxy/include/rclcpp/callback_group.hpp:25[m[K,
+[2.992s]                  from [01m[K/opt/ros/foxy/include/rclcpp/any_executable.hpp:20[m[K,
+[2.992s]                  from [01m[K/opt/ros/foxy/include/rclcpp/memory_strategy.hpp:24[m[K,
+[2.992s]                  from [01m[K/opt/ros/foxy/include/rclcpp/memory_strategies.hpp:18[m[K,
+[2.992s]                  from [01m[K/opt/ros/foxy/include/rclcpp/executor_options.hpp:20[m[K,
+[2.992s]                  from [01m[K/opt/ros/foxy/include/rclcpp/executor.hpp:33[m[K,
+[2.993s]                  from [01m[K/opt/ros/foxy/include/rclcpp/executors/multi_threaded_executor.hpp:26[m[K,
+[2.993s]                  from [01m[K/opt/ros/foxy/include/rclcpp/executors.hpp:21[m[K,
+[2.993s]                  from [01m[K/opt/ros/foxy/include/rclcpp/rclcpp.hpp:146[m[K,
+[2.993s]                  from [01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/include/eskf/Node.hpp:5[m[K,
+[2.993s]                  from [01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/src/Node.cpp:1[m[K:
+[2.993s] [01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/src/Node.cpp:39:5:[m[K [01;31m[Kerror: [m[Kstatic assertion failed: First argument to logging macros must be an rclcpp::Logger
+[2.994s]    39 |     [01;31m[KRCLCPP_INFO[m[K("Subscribing to rangefinder");
+[2.994s]       |     [01;31m[K^~~~~~~~~~~[m[K
+[2.994s] In file included from [01m[K/opt/ros/foxy/include/rclcpp/client.hpp:40[m[K,
+[2.994s]                  from [01m[K/opt/ros/foxy/include/rclcpp/callback_group.hpp:23[m[K,
+[2.994s]                  from [01m[K/opt/ros/foxy/include/rclcpp/any_executable.hpp:20[m[K,
+[2.994s]                  from [01m[K/opt/ros/foxy/include/rclcpp/memory_strategy.hpp:24[m[K,
+[2.994s]                  from [01m[K/opt/ros/foxy/include/rclcpp/memory_strategies.hpp:18[m[K,
+[2.994s]                  from [01m[K/opt/ros/foxy/include/rclcpp/executor_options.hpp:20[m[K,
+[2.995s]                  from [01m[K/opt/ros/foxy/include/rclcpp/executor.hpp:33[m[K,
+[2.995s]                  from [01m[K/opt/ros/foxy/include/rclcpp/executors/multi_threaded_executor.hpp:26[m[K,
+[2.995s]                  from [01m[K/opt/ros/foxy/include/rclcpp/executors.hpp:21[m[K,
+[2.995s]                  from [01m[K/opt/ros/foxy/include/rclcpp/rclcpp.hpp:146[m[K,
+[2.995s]                  from [01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/include/eskf/Node.hpp:5[m[K,
+[2.995s]                  from [01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/src/Node.cpp:1[m[K:
+[2.995s] [01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/src/Node.cpp:39:5:[m[K [01;31m[Kerror: [m[Krequest for member ‘[01m[Kget_name[m[K’ in ‘[01m[K("Subscribing to rangefinder")[m[K’, which is of non-class type ‘[01m[Kconst char [27][m[K’
+[2.995s]    39 |     [01;31m[KRCLCPP_INFO[m[K("Subscribing to rangefinder");
+[2.995s]       |     [01;31m[K^~~~~~~~~~~[m[K
+[2.995s] [01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/src/Node.cpp:39:5:[m[K [01;31m[Kerror: [m[Krequest for member ‘[01m[Kget_name[m[K’ in ‘[01m[K("Subscribing to rangefinder")[m[K’, which is of non-class type ‘[01m[Kconst char [27][m[K’
+[2.995s]    39 |     [01;31m[KRCLCPP_INFO[m[K("Subscribing to rangefinder");
+[2.995s]       |     [01;31m[K^~~~~~~~~~~[m[K
+[2.996s] [01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/src/Node.cpp:39:5:[m[K [01;31m[Kerror: [m[Kno matching function for call to ‘[01m[Kget_c_string()[m[K’
+[2.996s]    39 |     [01;31m[KRCLCPP_INFO[m[K("Subscribing to rangefinder");
+[2.996s]       |     [01;31m[K^~~~~~~~~~~[m[K
+[2.996s] In file included from [01m[K/opt/ros/foxy/include/rclcpp/client.hpp:36[m[K,
+[2.996s]                  from [01m[K/opt/ros/foxy/include/rclcpp/callback_group.hpp:23[m[K,
+[2.996s]                  from [01m[K/opt/ros/foxy/include/rclcpp/any_executable.hpp:20[m[K,
+[2.996s]                  from [01m[K/opt/ros/foxy/include/rclcpp/memory_strategy.hpp:24[m[K,
+[2.996s]                  from [01m[K/opt/ros/foxy/include/rclcpp/memory_strategies.hpp:18[m[K,
+[2.996s]                  from [01m[K/opt/ros/foxy/include/rclcpp/executor_options.hpp:20[m[K,
+[2.996s]                  from [01m[K/opt/ros/foxy/include/rclcpp/executor.hpp:33[m[K,
+[2.996s]                  from [01m[K/opt/ros/foxy/include/rclcpp/executors/multi_threaded_executor.hpp:26[m[K,
+[2.996s]                  from [01m[K/opt/ros/foxy/include/rclcpp/executors.hpp:21[m[K,
+[2.997s]                  from [01m[K/opt/ros/foxy/include/rclcpp/rclcpp.hpp:146[m[K,
+[2.997s]                  from [01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/include/eskf/Node.hpp:5[m[K,
+[2.997s]                  from [01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/src/Node.cpp:1[m[K:
+[2.997s] [01m[K/opt/ros/foxy/include/rclcpp/utilities.hpp:296:1:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kconst char* rclcpp::get_c_string(const char*)[m[K’
+[2.997s]   296 | [01;36m[Kget_c_string[m[K(const char * string_in);
+[2.997s]       | [01;36m[K^~~~~~~~~~~~[m[K
+[2.997s] [01m[K/opt/ros/foxy/include/rclcpp/utilities.hpp:296:1:[m[K [01;36m[Knote: [m[K  candidate expects 1 argument, 0 provided
+[2.997s] [01m[K/opt/ros/foxy/include/rclcpp/utilities.hpp:305:1:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kconst char* rclcpp::get_c_string(const string&)[m[K’
+[2.997s]   305 | [01;36m[Kget_c_string[m[K(const std::string & string_in);
+[2.997s]       | [01;36m[K^~~~~~~~~~~~[m[K
+[2.997s] [01m[K/opt/ros/foxy/include/rclcpp/utilities.hpp:305:1:[m[K [01;36m[Knote: [m[K  candidate expects 1 argument, 0 provided
+[2.999s] [01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/src/Node.cpp:52:80:[m[K [01;31m[Kerror: [m[Kno matching function for call to ‘[01m[Keskf::Node::create_wall_timer(rclcpp::Duration, std::_Bind_helper<false, void (eskf::Node::*)(), eskf::Node*>::type)[m[K’
+[2.999s]    52 |       rclcpp::Duration(1.0f/publish_rate), std::bind(&Node::publishState, this)[01;31m[K)[m[K;
+[3.000s]       |                                                                                [01;31m[K^[m[K
+[3.000s] In file included from [01m[K/opt/ros/foxy/include/rclcpp/executors/single_threaded_executor.hpp:28[m[K,
+[3.000s]                  from [01m[K/opt/ros/foxy/include/rclcpp/executors.hpp:22[m[K,
+[3.000s]                  from [01m[K/opt/ros/foxy/include/rclcpp/rclcpp.hpp:146[m[K,
+[3.000s]                  from [01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/include/eskf/Node.hpp:5[m[K,
+[3.000s]                  from [01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/src/Node.cpp:1[m[K:
+[3.000s] [01m[K/opt/ros/foxy/include/rclcpp/node.hpp:232:3:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class DurationRepT, class DurationT, class CallbackT> typename rclcpp::WallTimer<CallbackT>::SharedPtr rclcpp::Node::create_wall_timer(std::chrono::duration<_Rep1, _Period1>, CallbackT, rclcpp::CallbackGroup::SharedPtr)[m[K’
+[3.000s]   232 |   [01;36m[Kcreate_wall_timer[m[K(
+[3.000s]       |   [01;36m[K^~~~~~~~~~~~~~~~~[m[K
+[3.000s] [01m[K/opt/ros/foxy/include/rclcpp/node.hpp:232:3:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[3.001s] [01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/src/Node.cpp:52:80:[m[K [01;36m[Knote: [m[K  ‘[01m[Krclcpp::Duration[m[K’ is not derived from ‘[01m[Kstd::chrono::duration<_Rep1, _Period1>[m[K’
+[3.001s]    52 |       rclcpp::Duration(1.0f/publish_rate), std::bind(&Node::publishState, this)[01;36m[K)[m[K;
+[3.001s]       |                                                                                [01;36m[K^[m[K
+[3.001s] [01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/src/Node.cpp:[m[K At global scope:
+[3.001s] [01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/src/Node.cpp:55:6:[m[K [01;31m[Kerror: [m[Kdeclaration of ‘[01m[Kvoid eskf::Node::inputCallback(sensor_msgs::msg::Imu_<std::allocator<void> >::SharedPtr) const[m[K’ outside of class is not definition [[01;31m[K-fpermissive[m[K]
+[3.001s]    55 | void [01;31m[KNode[m[K::inputCallback(const sensor_msgs::msg::Imu::SharedPtr imuMsg) const; {
+[3.001s]       |      [01;31m[K^~~~[m[K
+[3.001s] [01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/src/Node.cpp:55:80:[m[K [01;31m[Kerror: [m[Kexpected unqualified-id before ‘[01m[K{[m[K’ token
+[3.002s]    55 | void Node::inputCallback(const sensor_msgs::msg::Imu::SharedPtr imuMsg) const; [01;31m[K{[m[K
+[3.002s]       |                                                                                [01;31m[K^[m[K
+[3.004s] [01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/src/Node.cpp:[m[K In member function ‘[01m[Kvoid eskf::Node::visionCallback(geometry_msgs::msg::PoseWithCovarianceStamped_<std::allocator<void> >::SharedPtr) const[m[K’:
+[3.006s] [01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/src/Node.cpp:75:27:[m[K [01;31m[Kerror: [m[K‘[01m[Kconst class rclcpp::Time[m[K’ has no member named ‘[01m[Ksec[m[K’
+[3.006s]    75 |   if(prevStampVisionPose_.[01;31m[Ksec[m[K != 0) {
+[3.006s]       |                           [01;31m[K^~~[m[K
+[3.006s] [01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/src/Node.cpp:76:49:[m[K [01;31m[Kerror: [m[Kno match for ‘[01m[Koperator-[m[K’ (operand types are ‘[01m[Kstd_msgs::msg::Header_<std::allocator<void> >::_stamp_type[m[K’ {aka ‘[01m[Kbuiltin_interfaces::msg::Time_<std::allocator<void> >[m[K’} and ‘[01m[Kconst rclcpp::Time[m[K’)
+[3.006s]    76 |     const double delta = ([32m[KposeMsg->header.stamp[m[K [01;31m[K-[m[K [34m[KprevStampVisionPose_[m[K).toSec();
+[3.006s]       |                           [32m[K~~~~~~~~~~~~~~~~~~~~~[m[K [01;31m[K^[m[K [34m[K~~~~~~~~~~~~~~~~~~~~[m[K
+[3.006s]       |                                           [32m[K|[m[K       [34m[K|[m[K
+[3.007s]       |                                           [32m[K|[m[K       [34m[Kconst rclcpp::Time[m[K
+[3.007s]       |                                           [32m[Kstd_msgs::msg::Header_<std::allocator<void> >::_stamp_type {aka builtin_interfaces::msg::Time_<std::allocator<void> >}[m[K
+[3.007s] In file included from [01m[K/usr/include/c++/9/bits/stl_algobase.h:67[m[K,
+[3.007s]                  from [01m[K/usr/include/c++/9/memory:62[m[K,
+[3.007s]                  from [01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/include/eskf/Node.hpp:4[m[K,
+[3.007s]                  from [01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/src/Node.cpp:1[m[K:
+[3.007s] [01m[K/usr/include/c++/9/bits/stl_iterator.h:415:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _IteratorL, class _IteratorR> decltype ((__y.base() - __x.base())) std::operator-(const std::reverse_iterator<_Iterator>&, const std::reverse_iterator<_IteratorR>&)[m[K’
+[3.007s]   415 |     [01;36m[Koperator[m[K-(const reverse_iterator<_IteratorL>& __x,
+[3.007s]       |     [01;36m[K^~~~~~~~[m[K
+[3.007s] [01m[K/usr/include/c++/9/bits/stl_iterator.h:415:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[3.007s] [01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/src/Node.cpp:76:51:[m[K [01;36m[Knote: [m[K  ‘[01m[Kstd_msgs::msg::Header_<std::allocator<void> >::_stamp_type[m[K’ {aka ‘[01m[Kbuiltin_interfaces::msg::Time_<std::allocator<void> >[m[K’} is not derived from ‘[01m[Kconst std::reverse_iterator<_Iterator>[m[K’
+[3.008s]    76 |     const double delta = (poseMsg->header.stamp - [01;36m[KprevStampVisionPose_[m[K).toSec();
+[3.008s]       |                                                   [01;36m[K^~~~~~~~~~~~~~~~~~~~[m[K
+[3.008s] In file included from [01m[K/usr/include/c++/9/bits/stl_algobase.h:67[m[K,
+[3.008s]                  from [01m[K/usr/include/c++/9/memory:62[m[K,
+[3.008s]                  from [01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/include/eskf/Node.hpp:4[m[K,
+[3.008s]                  from [01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/src/Node.cpp:1[m[K:
+[3.008s] [01m[K/usr/include/c++/9/bits/stl_iterator.h:1209:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _IteratorL, class _IteratorR> decltype ((__x.base() - __y.base())) std::operator-(const std::move_iterator<_IteratorL>&, const std::move_iterator<_IteratorR>&)[m[K’
+[3.009s]  1209 |     [01;36m[Koperator[m[K-(const move_iterator<_IteratorL>& __x,
+[3.009s]       |     [01;36m[K^~~~~~~~[m[K
+[3.009s] [01m[K/usr/include/c++/9/bits/stl_iterator.h:1209:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[3.009s] [01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/src/Node.cpp:76:51:[m[K [01;36m[Knote: [m[K  ‘[01m[Kstd_msgs::msg::Header_<std::allocator<void> >::_stamp_type[m[K’ {aka ‘[01m[Kbuiltin_interfaces::msg::Time_<std::allocator<void> >[m[K’} is not derived from ‘[01m[Kconst std::move_iterator<_IteratorL>[m[K’
+[3.010s]    76 |     const double delta = (poseMsg->header.stamp - [01;36m[KprevStampVisionPose_[m[K).toSec();
+[3.010s]       |                                                   [01;36m[K^~~~~~~~~~~~~~~~~~~~[m[K
+[3.010s] In file included from [01m[K/usr/include/c++/9/vector:68[m[K,
+[3.010s]                  from [01m[K/opt/ros/foxy/include/rclcpp/executor.hpp:27[m[K,
+[3.010s]                  from [01m[K/opt/ros/foxy/include/rclcpp/executors/multi_threaded_executor.hpp:26[m[K,
+[3.010s]                  from [01m[K/opt/ros/foxy/include/rclcpp/executors.hpp:21[m[K,
+[3.010s]                  from [01m[K/opt/ros/foxy/include/rclcpp/rclcpp.hpp:146[m[K,
+[3.010s]                  from [01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/include/eskf/Node.hpp:5[m[K,
+[3.010s]                  from [01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/src/Node.cpp:1[m[K:
+[3.011s] [01m[K/usr/include/c++/9/bits/stl_bvector.h:214:3:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kstd::ptrdiff_t std::operator-(const std::_Bit_iterator_base&, const std::_Bit_iterator_base&)[m[K’
+[3.011s]   214 |   [01;36m[Koperator[m[K-(const _Bit_iterator_base& __x, const _Bit_iterator_base& __y)
+[3.011s]       |   [01;36m[K^~~~~~~~[m[K
+[3.011s] [01m[K/usr/include/c++/9/bits/stl_bvector.h:214:39:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[Kstd_msgs::msg::Header_<std::allocator<void> >::_stamp_type[m[K’ {aka ‘[01m[Kbuiltin_interfaces::msg::Time_<std::allocator<void> >[m[K’} to ‘[01m[Kconst std::_Bit_iterator_base&[m[K’
+[3.011s]   214 |   operator-([01;36m[Kconst _Bit_iterator_base& __x[m[K, const _Bit_iterator_base& __y)
+[3.011s]       |             [01;36m[K~~~~~~~~~~~~~~~~~~~~~~~~~~^~~[m[K
+[3.011s] In file included from [01m[K/usr/include/eigen3/Eigen/Core:96[m[K,
+[3.011s]                  from [01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/include/eskf/common.h:4[m[K,
+[3.011s]                  from [01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/include/eskf/ESKF.hpp:4[m[K,
+[3.012s]                  from [01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/include/eskf/Node.hpp:15[m[K,
+[3.012s]                  from [01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/src/Node.cpp:1[m[K:
+[3.012s] [01m[K/usr/include/c++/9/complex:361:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _Tp> std::complex<_Tp> std::operator-(const std::complex<_Tp>&, const std::complex<_Tp>&)[m[K’
+[3.012s]   361 |     [01;36m[Koperator[m[K-(const complex<_Tp>& __x, const complex<_Tp>& __y)
+[3.012s]       |     [01;36m[K^~~~~~~~[m[K
+[3.012s] [01m[K/usr/include/c++/9/complex:361:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[3.012s] [01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/src/Node.cpp:76:51:[m[K [01;36m[Knote: [m[K  ‘[01m[Kstd_msgs::msg::Header_<std::allocator<void> >::_stamp_type[m[K’ {aka ‘[01m[Kbuiltin_interfaces::msg::Time_<std::allocator<void> >[m[K’} is not derived from ‘[01m[Kconst std::complex<_Tp>[m[K’
+[3.013s]    76 |     const double delta = (poseMsg->header.stamp - [01;36m[KprevStampVisionPose_[m[K).toSec();
+[3.013s]       |                                                   [01;36m[K^~~~~~~~~~~~~~~~~~~~[m[K
+[3.013s] In file included from [01m[K/usr/include/eigen3/Eigen/Core:96[m[K,
+[3.013s]                  from [01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/include/eskf/common.h:4[m[K,
+[3.013s]                  from [01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/include/eskf/ESKF.hpp:4[m[K,
+[3.014s]                  from [01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/include/eskf/Node.hpp:15[m[K,
+[3.014s]                  from [01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/src/Node.cpp:1[m[K:
+[3.014s] [01m[K/usr/include/c++/9/complex:370:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _Tp> std::complex<_Tp> std::operator-(const std::complex<_Tp>&, const _Tp&)[m[K’
+[3.014s]   370 |     [01;36m[Koperator[m[K-(const complex<_Tp>& __x, const _Tp& __y)
+[3.015s]       |     [01;36m[K^~~~~~~~[m[K
+[3.015s] [01m[K/usr/include/c++/9/complex:370:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[3.015s] [01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/src/Node.cpp:76:51:[m[K [01;36m[Knote: [m[K  ‘[01m[Kstd_msgs::msg::Header_<std::allocator<void> >::_stamp_type[m[K’ {aka ‘[01m[Kbuiltin_interfaces::msg::Time_<std::allocator<void> >[m[K’} is not derived from ‘[01m[Kconst std::complex<_Tp>[m[K’
+[3.015s]    76 |     const double delta = (poseMsg->header.stamp - [01;36m[KprevStampVisionPose_[m[K).toSec();
+[3.015s]       |                                                   [01;36m[K^~~~~~~~~~~~~~~~~~~~[m[K
+[3.015s] In file included from [01m[K/usr/include/eigen3/Eigen/Core:96[m[K,
+[3.015s]                  from [01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/include/eskf/common.h:4[m[K,
+[3.015s]                  from [01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/include/eskf/ESKF.hpp:4[m[K,
+[3.016s]                  from [01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/include/eskf/Node.hpp:15[m[K,
+[3.016s]                  from [01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/src/Node.cpp:1[m[K:
+[3.016s] [01m[K/usr/include/c++/9/complex:379:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _Tp> std::complex<_Tp> std::operator-(const _Tp&, const std::complex<_Tp>&)[m[K’
+[3.016s]   379 |     [01;36m[Koperator[m[K-(const _Tp& __x, const complex<_Tp>& __y)
+[3.016s]       |     [01;36m[K^~~~~~~~[m[K
+[3.016s] [01m[K/usr/include/c++/9/complex:379:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[3.016s] [01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/src/Node.cpp:76:51:[m[K [01;36m[Knote: [m[K  ‘[01m[Kconst rclcpp::Time[m[K’ is not derived from ‘[01m[Kconst std::complex<_Tp>[m[K’
+[3.017s]    76 |     const double delta = (poseMsg->header.stamp - [01;36m[KprevStampVisionPose_[m[K).toSec();
+[3.017s]       |                                                   [01;36m[K^~~~~~~~~~~~~~~~~~~~[m[K
+[3.018s] In file included from [01m[K/usr/include/eigen3/Eigen/Core:96[m[K,
+[3.018s]                  from [01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/include/eskf/common.h:4[m[K,
+[3.018s]                  from [01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/include/eskf/ESKF.hpp:4[m[K,
+[3.018s]                  from [01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/include/eskf/Node.hpp:15[m[K,
+[3.018s]                  from [01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/src/Node.cpp:1[m[K:
+[3.018s] [01m[K/usr/include/c++/9/complex:456:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _Tp> std::complex<_Tp> std::operator-(const std::complex<_Tp>&)[m[K’
+[3.019s]   456 |     [01;36m[Koperator[m[K-(const complex<_Tp>& __x)
+[3.019s]       |     [01;36m[K^~~~~~~~[m[K
+[3.019s] [01m[K/usr/include/c++/9/complex:456:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[3.019s] [01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/src/Node.cpp:76:51:[m[K [01;36m[Knote: [m[K  ‘[01m[Kstd_msgs::msg::Header_<std::allocator<void> >::_stamp_type[m[K’ {aka ‘[01m[Kbuiltin_interfaces::msg::Time_<std::allocator<void> >[m[K’} is not derived from ‘[01m[Kconst std::complex<_Tp>[m[K’
+[3.019s]    76 |     const double delta = (poseMsg->header.stamp - [01;36m[KprevStampVisionPose_[m[K).toSec();
+[3.019s]       |                                                   [01;36m[K^~~~~~~~~~~~~~~~~~~~[m[K
+[3.019s] [01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/src/Node.cpp:81:78:[m[K [01;31m[Kerror: [m[K‘[01m[Kusing _stamp_type = struct builtin_interfaces::msg::Time_<std::allocator<void> >[m[K’ {aka ‘[01m[Kstruct builtin_interfaces::msg::Time_<std::allocator<void> >[m[K’} has no member named ‘[01m[KtoSec[m[K’
+[3.019s]    81 |     eskf_.updateVision(z_q, z_p, static_cast<uint64_t>(poseMsg->header.stamp.[01;31m[KtoSec[m[K()*1e6f), delta);
+[3.019s]       |                                                                              [01;31m[K^~~~~[m[K
+[3.019s] [01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/src/Node.cpp:83:42:[m[K [01;31m[Kerror: [m[Kpassing ‘[01m[Kconst rclcpp::Time[m[K’ as ‘[01m[Kthis[m[K’ argument discards qualifiers [[01;31m[K-fpermissive[m[K]
+[3.019s]    83 |   prevStampVisionPose_ = poseMsg->header.[01;31m[Kstamp[m[K;
+[3.019s]       |                                          [01;31m[K^~~~~[m[K
+[3.020s] In file included from [01m[K/opt/ros/foxy/include/rclcpp/clock.hpp:23[m[K,
+[3.020s]                  from [01m[K/opt/ros/foxy/include/rclcpp/timer.hpp:27[m[K,
+[3.020s]                  from [01m[K/opt/ros/foxy/include/rclcpp/callback_group.hpp:27[m[K,
+[3.020s]                  from [01m[K/opt/ros/foxy/include/rclcpp/any_executable.hpp:20[m[K,
+[3.020s]                  from [01m[K/opt/ros/foxy/include/rclcpp/memory_strategy.hpp:24[m[K,
+[3.020s]                  from [01m[K/opt/ros/foxy/include/rclcpp/memory_strategies.hpp:18[m[K,
+[3.020s]                  from [01m[K/opt/ros/foxy/include/rclcpp/executor_options.hpp:20[m[K,
+[3.020s]                  from [01m[K/opt/ros/foxy/include/rclcpp/executor.hpp:33[m[K,
+[3.020s]                  from [01m[K/opt/ros/foxy/include/rclcpp/executors/multi_threaded_executor.hpp:26[m[K,
+[3.021s]                  from [01m[K/opt/ros/foxy/include/rclcpp/executors.hpp:21[m[K,
+[3.021s]                  from [01m[K/opt/ros/foxy/include/rclcpp/rclcpp.hpp:146[m[K,
+[3.021s]                  from [01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/include/eskf/Node.hpp:5[m[K,
+[3.021s]                  from [01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/src/Node.cpp:1[m[K:
+[3.021s] [01m[K/opt/ros/foxy/include/rclcpp/time.hpp:101:3:[m[K [01;36m[Knote: [m[K  in call to ‘[01m[Krclcpp::Time& rclcpp::Time::operator=(const Time&)[m[K’
+[3.021s]   101 |   [01;36m[Koperator[m[K=(const builtin_interfaces::msg::Time & time_msg);
+[3.021s]       |   [01;36m[K^~~~~~~~[m[K
+[3.021s] [01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/src/Node.cpp:[m[K In member function ‘[01m[Kvoid eskf::Node::gpsCallback(nav_msgs::msg::Odometry_<std::allocator<void> >::SharedPtr) const[m[K’:
+[3.021s] [01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/src/Node.cpp:87:25:[m[K [01;31m[Kerror: [m[K‘[01m[Kconst class rclcpp::Time[m[K’ has no member named ‘[01m[Ksec[m[K’
+[3.021s]    87 |   if (prevStampGpsPose_.[01;31m[Ksec[m[K != 0) {
+[3.022s]       |                         [01;31m[K^~~[m[K
+[3.022s] [01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/src/Node.cpp:88:49:[m[K [01;31m[Kerror: [m[Kno match for ‘[01m[Koperator-[m[K’ (operand types are ‘[01m[Kstd_msgs::msg::Header_<std::allocator<void> >::_stamp_type[m[K’ {aka ‘[01m[Kbuiltin_interfaces::msg::Time_<std::allocator<void> >[m[K’} and ‘[01m[Kconst rclcpp::Time[m[K’)
+[3.022s]    88 |     const double delta = ([32m[KodomMsg->header.stamp[m[K [01;31m[K-[m[K [34m[KprevStampGpsPose_[m[K).toSec();
+[3.022s]       |                           [32m[K~~~~~~~~~~~~~~~~~~~~~[m[K [01;31m[K^[m[K [34m[K~~~~~~~~~~~~~~~~~[m[K
+[3.022s]       |                                           [32m[K|[m[K       [34m[K|[m[K
+[3.022s]       |                                           [32m[K|[m[K       [34m[Kconst rclcpp::Time[m[K
+[3.022s]       |                                           [32m[Kstd_msgs::msg::Header_<std::allocator<void> >::_stamp_type {aka builtin_interfaces::msg::Time_<std::allocator<void> >}[m[K
+[3.022s] In file included from [01m[K/usr/include/c++/9/bits/stl_algobase.h:67[m[K,
+[3.022s]                  from [01m[K/usr/include/c++/9/memory:62[m[K,
+[3.022s]                  from [01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/include/eskf/Node.hpp:4[m[K,
+[3.022s]                  from [01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/src/Node.cpp:1[m[K:
+[3.022s] [01m[K/usr/include/c++/9/bits/stl_iterator.h:415:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _IteratorL, class _IteratorR> decltype ((__y.base() - __x.base())) std::operator-(const std::reverse_iterator<_Iterator>&, const std::reverse_iterator<_IteratorR>&)[m[K’
+[3.023s]   415 |     [01;36m[Koperator[m[K-(const reverse_iterator<_IteratorL>& __x,
+[3.023s]       |     [01;36m[K^~~~~~~~[m[K
+[3.023s] [01m[K/usr/include/c++/9/bits/stl_iterator.h:415:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[3.023s] [01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/src/Node.cpp:88:51:[m[K [01;36m[Knote: [m[K  ‘[01m[Kstd_msgs::msg::Header_<std::allocator<void> >::_stamp_type[m[K’ {aka ‘[01m[Kbuiltin_interfaces::msg::Time_<std::allocator<void> >[m[K’} is not derived from ‘[01m[Kconst std::reverse_iterator<_Iterator>[m[K’
+[3.023s]    88 |     const double delta = (odomMsg->header.stamp - [01;36m[KprevStampGpsPose_[m[K).toSec();
+[3.023s]       |                                                   [01;36m[K^~~~~~~~~~~~~~~~~[m[K
+[3.023s] In file included from [01m[K/usr/include/c++/9/bits/stl_algobase.h:67[m[K,
+[3.023s]                  from [01m[K/usr/include/c++/9/memory:62[m[K,
+[3.023s]                  from [01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/include/eskf/Node.hpp:4[m[K,
+[3.023s]                  from [01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/src/Node.cpp:1[m[K:
+[3.023s] [01m[K/usr/include/c++/9/bits/stl_iterator.h:1209:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _IteratorL, class _IteratorR> decltype ((__x.base() - __y.base())) std::operator-(const std::move_iterator<_IteratorL>&, const std::move_iterator<_IteratorR>&)[m[K’
+[3.024s]  1209 |     [01;36m[Koperator[m[K-(const move_iterator<_IteratorL>& __x,
+[3.024s]       |     [01;36m[K^~~~~~~~[m[K
+[3.024s] [01m[K/usr/include/c++/9/bits/stl_iterator.h:1209:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[3.024s] [01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/src/Node.cpp:88:51:[m[K [01;36m[Knote: [m[K  ‘[01m[Kstd_msgs::msg::Header_<std::allocator<void> >::_stamp_type[m[K’ {aka ‘[01m[Kbuiltin_interfaces::msg::Time_<std::allocator<void> >[m[K’} is not derived from ‘[01m[Kconst std::move_iterator<_IteratorL>[m[K’
+[3.024s]    88 |     const double delta = (odomMsg->header.stamp - [01;36m[KprevStampGpsPose_[m[K).toSec();
+[3.024s]       |                                                   [01;36m[K^~~~~~~~~~~~~~~~~[m[K
+[3.024s] In file included from [01m[K/usr/include/c++/9/vector:68[m[K,
+[3.024s]                  from [01m[K/opt/ros/foxy/include/rclcpp/executor.hpp:27[m[K,
+[3.024s]                  from [01m[K/opt/ros/foxy/include/rclcpp/executors/multi_threaded_executor.hpp:26[m[K,
+[3.024s]                  from [01m[K/opt/ros/foxy/include/rclcpp/executors.hpp:21[m[K,
+[3.025s]                  from [01m[K/opt/ros/foxy/include/rclcpp/rclcpp.hpp:146[m[K,
+[3.025s]                  from [01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/include/eskf/Node.hpp:5[m[K,
+[3.025s]                  from [01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/src/Node.cpp:1[m[K:
+[3.025s] [01m[K/usr/include/c++/9/bits/stl_bvector.h:214:3:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kstd::ptrdiff_t std::operator-(const std::_Bit_iterator_base&, const std::_Bit_iterator_base&)[m[K’
+[3.025s]   214 |   [01;36m[Koperator[m[K-(const _Bit_iterator_base& __x, const _Bit_iterator_base& __y)
+[3.025s]       |   [01;36m[K^~~~~~~~[m[K
+[3.025s] [01m[K/usr/include/c++/9/bits/stl_bvector.h:214:39:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[Kstd_msgs::msg::Header_<std::allocator<void> >::_stamp_type[m[K’ {aka ‘[01m[Kbuiltin_interfaces::msg::Time_<std::allocator<void> >[m[K’} to ‘[01m[Kconst std::_Bit_iterator_base&[m[K’
+[3.025s]   214 |   operator-([01;36m[Kconst _Bit_iterator_base& __x[m[K, const _Bit_iterator_base& __y)
+[3.025s]       |             [01;36m[K~~~~~~~~~~~~~~~~~~~~~~~~~~^~~[m[K
+[3.025s] In file included from [01m[K/usr/include/eigen3/Eigen/Core:96[m[K,
+[3.025s]                  from [01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/include/eskf/common.h:4[m[K,
+[3.025s]                  from [01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/include/eskf/ESKF.hpp:4[m[K,
+[3.026s]                  from [01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/include/eskf/Node.hpp:15[m[K,
+[3.026s]                  from [01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/src/Node.cpp:1[m[K:
+[3.026s] [01m[K/usr/include/c++/9/complex:361:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _Tp> std::complex<_Tp> std::operator-(const std::complex<_Tp>&, const std::complex<_Tp>&)[m[K’
+[3.026s]   361 |     [01;36m[Koperator[m[K-(const complex<_Tp>& __x, const complex<_Tp>& __y)
+[3.026s]       |     [01;36m[K^~~~~~~~[m[K
+[3.026s] [01m[K/usr/include/c++/9/complex:361:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[3.026s] [01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/src/Node.cpp:88:51:[m[K [01;36m[Knote: [m[K  ‘[01m[Kstd_msgs::msg::Header_<std::allocator<void> >::_stamp_type[m[K’ {aka ‘[01m[Kbuiltin_interfaces::msg::Time_<std::allocator<void> >[m[K’} is not derived from ‘[01m[Kconst std::complex<_Tp>[m[K’
+[3.026s]    88 |     const double delta = (odomMsg->header.stamp - [01;36m[KprevStampGpsPose_[m[K).toSec();
+[3.026s]       |                                                   [01;36m[K^~~~~~~~~~~~~~~~~[m[K
+[3.027s] In file included from [01m[K/usr/include/eigen3/Eigen/Core:96[m[K,
+[3.027s]                  from [01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/include/eskf/common.h:4[m[K,
+[3.027s]                  from [01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/include/eskf/ESKF.hpp:4[m[K,
+[3.027s]                  from [01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/include/eskf/Node.hpp:15[m[K,
+[3.027s]                  from [01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/src/Node.cpp:1[m[K:
+[3.027s] [01m[K/usr/include/c++/9/complex:370:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _Tp> std::complex<_Tp> std::operator-(const std::complex<_Tp>&, const _Tp&)[m[K’
+[3.027s]   370 |     [01;36m[Koperator[m[K-(const complex<_Tp>& __x, const _Tp& __y)
+[3.027s]       |     [01;36m[K^~~~~~~~[m[K
+[3.027s] [01m[K/usr/include/c++/9/complex:370:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[3.027s] [01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/src/Node.cpp:88:51:[m[K [01;36m[Knote: [m[K  ‘[01m[Kstd_msgs::msg::Header_<std::allocator<void> >::_stamp_type[m[K’ {aka ‘[01m[Kbuiltin_interfaces::msg::Time_<std::allocator<void> >[m[K’} is not derived from ‘[01m[Kconst std::complex<_Tp>[m[K’
+[3.027s]    88 |     const double delta = (odomMsg->header.stamp - [01;36m[KprevStampGpsPose_[m[K).toSec();
+[3.027s]       |                                                   [01;36m[K^~~~~~~~~~~~~~~~~[m[K
+[3.028s] In file included from [01m[K/usr/include/eigen3/Eigen/Core:96[m[K,
+[3.028s]                  from [01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/include/eskf/common.h:4[m[K,
+[3.028s]                  from [01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/include/eskf/ESKF.hpp:4[m[K,
+[3.028s]                  from [01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/include/eskf/Node.hpp:15[m[K,
+[3.028s]                  from [01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/src/Node.cpp:1[m[K:
+[3.028s] [01m[K/usr/include/c++/9/complex:379:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _Tp> std::complex<_Tp> std::operator-(const _Tp&, const std::complex<_Tp>&)[m[K’
+[3.028s]   379 |     [01;36m[Koperator[m[K-(const _Tp& __x, const complex<_Tp>& __y)
+[3.028s]       |     [01;36m[K^~~~~~~~[m[K
+[3.028s] [01m[K/usr/include/c++/9/complex:379:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[3.028s] [01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/src/Node.cpp:88:51:[m[K [01;36m[Knote: [m[K  ‘[01m[Kconst rclcpp::Time[m[K’ is not derived from ‘[01m[Kconst std::complex<_Tp>[m[K’
+[3.028s]    88 |     const double delta = (odomMsg->header.stamp - [01;36m[KprevStampGpsPose_[m[K).toSec();
+[3.029s]       |                                                   [01;36m[K^~~~~~~~~~~~~~~~~[m[K
+[3.029s] In file included from [01m[K/usr/include/eigen3/Eigen/Core:96[m[K,
+[3.029s]                  from [01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/include/eskf/common.h:4[m[K,
+[3.029s]                  from [01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/include/eskf/ESKF.hpp:4[m[K,
+[3.029s]                  from [01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/include/eskf/Node.hpp:15[m[K,
+[3.029s]                  from [01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/src/Node.cpp:1[m[K:
+[3.029s] [01m[K/usr/include/c++/9/complex:456:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _Tp> std::complex<_Tp> std::operator-(const std::complex<_Tp>&)[m[K’
+[3.029s]   456 |     [01;36m[Koperator[m[K-(const complex<_Tp>& __x)
+[3.029s]       |     [01;36m[K^~~~~~~~[m[K
+[3.029s] [01m[K/usr/include/c++/9/complex:456:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[3.029s] [01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/src/Node.cpp:88:51:[m[K [01;36m[Knote: [m[K  ‘[01m[Kstd_msgs::msg::Header_<std::allocator<void> >::_stamp_type[m[K’ {aka ‘[01m[Kbuiltin_interfaces::msg::Time_<std::allocator<void> >[m[K’} is not derived from ‘[01m[Kconst std::complex<_Tp>[m[K’
+[3.029s]    88 |     const double delta = (odomMsg->header.stamp - [01;36m[KprevStampGpsPose_[m[K).toSec();
+[3.030s]       |                                                   [01;36m[K^~~~~~~~~~~~~~~~~[m[K
+[3.030s] [01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/src/Node.cpp:93:75:[m[K [01;31m[Kerror: [m[K‘[01m[Kusing _stamp_type = struct builtin_interfaces::msg::Time_<std::allocator<void> >[m[K’ {aka ‘[01m[Kstruct builtin_interfaces::msg::Time_<std::allocator<void> >[m[K’} has no member named ‘[01m[KtoSec[m[K’
+[3.030s]    93 |     eskf_.updateGps(z_v, z_p, static_cast<uint64_t>(odomMsg->header.stamp.[01;31m[KtoSec[m[K() * 1e6f), delta);
+[3.030s]       |                                                                           [01;31m[K^~~~~[m[K
+[3.030s] [01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/src/Node.cpp:95:39:[m[K [01;31m[Kerror: [m[Kpassing ‘[01m[Kconst rclcpp::Time[m[K’ as ‘[01m[Kthis[m[K’ argument discards qualifiers [[01;31m[K-fpermissive[m[K]
+[3.030s]    95 |   prevStampGpsPose_ = odomMsg->header.[01;31m[Kstamp[m[K;
+[3.030s]       |                                       [01;31m[K^~~~~[m[K
+[3.030s] In file included from [01m[K/opt/ros/foxy/include/rclcpp/clock.hpp:23[m[K,
+[3.030s]                  from [01m[K/opt/ros/foxy/include/rclcpp/timer.hpp:27[m[K,
+[3.030s]                  from [01m[K/opt/ros/foxy/include/rclcpp/callback_group.hpp:27[m[K,
+[3.030s]                  from [01m[K/opt/ros/foxy/include/rclcpp/any_executable.hpp:20[m[K,
+[3.031s]                  from [01m[K/opt/ros/foxy/include/rclcpp/memory_strategy.hpp:24[m[K,
+[3.031s]                  from [01m[K/opt/ros/foxy/include/rclcpp/memory_strategies.hpp:18[m[K,
+[3.031s]                  from [01m[K/opt/ros/foxy/include/rclcpp/executor_options.hpp:20[m[K,
+[3.031s]                  from [01m[K/opt/ros/foxy/include/rclcpp/executor.hpp:33[m[K,
+[3.031s]                  from [01m[K/opt/ros/foxy/include/rclcpp/executors/multi_threaded_executor.hpp:26[m[K,
+[3.031s]                  from [01m[K/opt/ros/foxy/include/rclcpp/executors.hpp:21[m[K,
+[3.031s]                  from [01m[K/opt/ros/foxy/include/rclcpp/rclcpp.hpp:146[m[K,
+[3.031s]                  from [01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/include/eskf/Node.hpp:5[m[K,
+[3.031s]                  from [01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/src/Node.cpp:1[m[K:
+[3.031s] [01m[K/opt/ros/foxy/include/rclcpp/time.hpp:101:3:[m[K [01;36m[Knote: [m[K  in call to ‘[01m[Krclcpp::Time& rclcpp::Time::operator=(const Time&)[m[K’
+[3.031s]   101 |   [01;36m[Koperator[m[K=(const builtin_interfaces::msg::Time & time_msg);
+[3.031s]       |   [01;36m[K^~~~~~~~[m[K
+[3.032s] [01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/src/Node.cpp:[m[K In member function ‘[01m[Kvoid eskf::Node::opticalFlowCallback(mavros_msgs::msg::OpticalFlowRad_<std::allocator<void> >::SharedPtr) const[m[K’:
+[3.032s] [01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/src/Node.cpp:99:33:[m[K [01;31m[Kerror: [m[K‘[01m[Kconst class rclcpp::Time[m[K’ has no member named ‘[01m[Ksec[m[K’
+[3.032s]    99 |   if (prevStampOpticalFlowPose_.[01;31m[Ksec[m[K != 0) {
+[3.032s]       |                                 [01;31m[K^~~[m[K
+[3.032s] [01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/src/Node.cpp:100:56:[m[K [01;31m[Kerror: [m[Kno match for ‘[01m[Koperator-[m[K’ (operand types are ‘[01m[Kstd_msgs::msg::Header_<std::allocator<void> >::_stamp_type[m[K’ {aka ‘[01m[Kbuiltin_interfaces::msg::Time_<std::allocator<void> >[m[K’} and ‘[01m[Kconst rclcpp::Time[m[K’)
+[3.032s]   100 |     const double delta = ([32m[KopticalFlowMsg->header.stamp[m[K [01;31m[K-[m[K [34m[KprevStampOpticalFlowPose_[m[K).toSec();
+[3.032s]       |                           [32m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K [01;31m[K^[m[K [34m[K~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[3.032s]       |                                                  [32m[K|[m[K       [34m[K|[m[K
+[3.032s]       |                                                  [32m[K|[m[K       [34m[Kconst rclcpp::Time[m[K
+[3.032s]       |                                                  [32m[Kstd_msgs::msg::Header_<std::allocator<void> >::_stamp_type {aka builtin_interfaces::msg::Time_<std::allocator<void> >}[m[K
+[3.032s] In file included from [01m[K/usr/include/c++/9/bits/stl_algobase.h:67[m[K,
+[3.032s]                  from [01m[K/usr/include/c++/9/memory:62[m[K,
+[3.033s]                  from [01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/include/eskf/Node.hpp:4[m[K,
+[3.033s]                  from [01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/src/Node.cpp:1[m[K:
+[3.033s] [01m[K/usr/include/c++/9/bits/stl_iterator.h:415:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _IteratorL, class _IteratorR> decltype ((__y.base() - __x.base())) std::operator-(const std::reverse_iterator<_Iterator>&, const std::reverse_iterator<_IteratorR>&)[m[K’
+[3.033s]   415 |     [01;36m[Koperator[m[K-(const reverse_iterator<_IteratorL>& __x,
+[3.033s]       |     [01;36m[K^~~~~~~~[m[K
+[3.033s] [01m[K/usr/include/c++/9/bits/stl_iterator.h:415:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[3.033s] [01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/src/Node.cpp:100:58:[m[K [01;36m[Knote: [m[K  ‘[01m[Kstd_msgs::msg::Header_<std::allocator<void> >::_stamp_type[m[K’ {aka ‘[01m[Kbuiltin_interfaces::msg::Time_<std::allocator<void> >[m[K’} is not derived from ‘[01m[Kconst std::reverse_iterator<_Iterator>[m[K’
+[3.033s]   100 |     const double delta = (opticalFlowMsg->header.stamp - [01;36m[KprevStampOpticalFlowPose_[m[K).toSec();
+[3.033s]       |                                                          [01;36m[K^~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[3.033s] In file included from [01m[K/usr/include/c++/9/bits/stl_algobase.h:67[m[K,
+[3.033s]                  from [01m[K/usr/include/c++/9/memory:62[m[K,
+[3.034s]                  from [01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/include/eskf/Node.hpp:4[m[K,
+[3.034s]                  from [01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/src/Node.cpp:1[m[K:
+[3.034s] [01m[K/usr/include/c++/9/bits/stl_iterator.h:1209:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _IteratorL, class _IteratorR> decltype ((__x.base() - __y.base())) std::operator-(const std::move_iterator<_IteratorL>&, const std::move_iterator<_IteratorR>&)[m[K’
+[3.034s]  1209 |     [01;36m[Koperator[m[K-(const move_iterator<_IteratorL>& __x,
+[3.034s]       |     [01;36m[K^~~~~~~~[m[K
+[3.034s] [01m[K/usr/include/c++/9/bits/stl_iterator.h:1209:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[3.034s] [01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/src/Node.cpp:100:58:[m[K [01;36m[Knote: [m[K  ‘[01m[Kstd_msgs::msg::Header_<std::allocator<void> >::_stamp_type[m[K’ {aka ‘[01m[Kbuiltin_interfaces::msg::Time_<std::allocator<void> >[m[K’} is not derived from ‘[01m[Kconst std::move_iterator<_IteratorL>[m[K’
+[3.034s]   100 |     const double delta = (opticalFlowMsg->header.stamp - [01;36m[KprevStampOpticalFlowPose_[m[K).toSec();
+[3.034s]       |                                                          [01;36m[K^~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[3.034s] In file included from [01m[K/usr/include/c++/9/vector:68[m[K,
+[3.035s]                  from [01m[K/opt/ros/foxy/include/rclcpp/executor.hpp:27[m[K,
+[3.035s]                  from [01m[K/opt/ros/foxy/include/rclcpp/executors/multi_threaded_executor.hpp:26[m[K,
+[3.035s]                  from [01m[K/opt/ros/foxy/include/rclcpp/executors.hpp:21[m[K,
+[3.035s]                  from [01m[K/opt/ros/foxy/include/rclcpp/rclcpp.hpp:146[m[K,
+[3.035s]                  from [01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/include/eskf/Node.hpp:5[m[K,
+[3.035s]                  from [01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/src/Node.cpp:1[m[K:
+[3.035s] [01m[K/usr/include/c++/9/bits/stl_bvector.h:214:3:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kstd::ptrdiff_t std::operator-(const std::_Bit_iterator_base&, const std::_Bit_iterator_base&)[m[K’
+[3.035s]   214 |   [01;36m[Koperator[m[K-(const _Bit_iterator_base& __x, const _Bit_iterator_base& __y)
+[3.035s]       |   [01;36m[K^~~~~~~~[m[K
+[3.035s] [01m[K/usr/include/c++/9/bits/stl_bvector.h:214:39:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[Kstd_msgs::msg::Header_<std::allocator<void> >::_stamp_type[m[K’ {aka ‘[01m[Kbuiltin_interfaces::msg::Time_<std::allocator<void> >[m[K’} to ‘[01m[Kconst std::_Bit_iterator_base&[m[K’
+[3.035s]   214 |   operator-([01;36m[Kconst _Bit_iterator_base& __x[m[K, const _Bit_iterator_base& __y)
+[3.036s]       |             [01;36m[K~~~~~~~~~~~~~~~~~~~~~~~~~~^~~[m[K
+[3.036s] In file included from [01m[K/usr/include/eigen3/Eigen/Core:96[m[K,
+[3.036s]                  from [01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/include/eskf/common.h:4[m[K,
+[3.036s]                  from [01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/include/eskf/ESKF.hpp:4[m[K,
+[3.036s]                  from [01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/include/eskf/Node.hpp:15[m[K,
+[3.036s]                  from [01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/src/Node.cpp:1[m[K:
+[3.036s] [01m[K/usr/include/c++/9/complex:361:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _Tp> std::complex<_Tp> std::operator-(const std::complex<_Tp>&, const std::complex<_Tp>&)[m[K’
+[3.036s]   361 |     [01;36m[Koperator[m[K-(const complex<_Tp>& __x, const complex<_Tp>& __y)
+[3.036s]       |     [01;36m[K^~~~~~~~[m[K
+[3.036s] [01m[K/usr/include/c++/9/complex:361:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[3.036s] [01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/src/Node.cpp:100:58:[m[K [01;36m[Knote: [m[K  ‘[01m[Kstd_msgs::msg::Header_<std::allocator<void> >::_stamp_type[m[K’ {aka ‘[01m[Kbuiltin_interfaces::msg::Time_<std::allocator<void> >[m[K’} is not derived from ‘[01m[Kconst std::complex<_Tp>[m[K’
+[3.037s]   100 |     const double delta = (opticalFlowMsg->header.stamp - [01;36m[KprevStampOpticalFlowPose_[m[K).toSec();
+[3.037s]       |                                                          [01;36m[K^~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[3.037s] In file included from [01m[K/usr/include/eigen3/Eigen/Core:96[m[K,
+[3.037s]                  from [01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/include/eskf/common.h:4[m[K,
+[3.037s]                  from [01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/include/eskf/ESKF.hpp:4[m[K,
+[3.037s]                  from [01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/include/eskf/Node.hpp:15[m[K,
+[3.037s]                  from [01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/src/Node.cpp:1[m[K:
+[3.037s] [01m[K/usr/include/c++/9/complex:370:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _Tp> std::complex<_Tp> std::operator-(const std::complex<_Tp>&, const _Tp&)[m[K’
+[3.037s]   370 |     [01;36m[Koperator[m[K-(const complex<_Tp>& __x, const _Tp& __y)
+[3.037s]       |     [01;36m[K^~~~~~~~[m[K
+[3.037s] [01m[K/usr/include/c++/9/complex:370:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[3.037s] [01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/src/Node.cpp:100:58:[m[K [01;36m[Knote: [m[K  ‘[01m[Kstd_msgs::msg::Header_<std::allocator<void> >::_stamp_type[m[K’ {aka ‘[01m[Kbuiltin_interfaces::msg::Time_<std::allocator<void> >[m[K’} is not derived from ‘[01m[Kconst std::complex<_Tp>[m[K’
+[3.038s]   100 |     const double delta = (opticalFlowMsg->header.stamp - [01;36m[KprevStampOpticalFlowPose_[m[K).toSec();
+[3.038s]       |                                                          [01;36m[K^~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[3.038s] In file included from [01m[K/usr/include/eigen3/Eigen/Core:96[m[K,
+[3.038s]                  from [01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/include/eskf/common.h:4[m[K,
+[3.038s]                  from [01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/include/eskf/ESKF.hpp:4[m[K,
+[3.038s]                  from [01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/include/eskf/Node.hpp:15[m[K,
+[3.038s]                  from [01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/src/Node.cpp:1[m[K:
+[3.038s] [01m[K/usr/include/c++/9/complex:379:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _Tp> std::complex<_Tp> std::operator-(const _Tp&, const std::complex<_Tp>&)[m[K’
+[3.038s]   379 |     [01;36m[Koperator[m[K-(const _Tp& __x, const complex<_Tp>& __y)
+[3.038s]       |     [01;36m[K^~~~~~~~[m[K
+[3.038s] [01m[K/usr/include/c++/9/complex:379:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[3.038s] [01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/src/Node.cpp:100:58:[m[K [01;36m[Knote: [m[K  ‘[01m[Kconst rclcpp::Time[m[K’ is not derived from ‘[01m[Kconst std::complex<_Tp>[m[K’
+[3.039s]   100 |     const double delta = (opticalFlowMsg->header.stamp - [01;36m[KprevStampOpticalFlowPose_[m[K).toSec();
+[3.039s]       |                                                          [01;36m[K^~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[3.039s] In file included from [01m[K/usr/include/eigen3/Eigen/Core:96[m[K,
+[3.039s]                  from [01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/include/eskf/common.h:4[m[K,
+[3.039s]                  from [01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/include/eskf/ESKF.hpp:4[m[K,
+[3.039s]                  from [01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/include/eskf/Node.hpp:15[m[K,
+[3.039s]                  from [01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/src/Node.cpp:1[m[K:
+[3.039s] [01m[K/usr/include/c++/9/complex:456:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _Tp> std::complex<_Tp> std::operator-(const std::complex<_Tp>&)[m[K’
+[3.039s]   456 |     [01;36m[Koperator[m[K-(const complex<_Tp>& __x)
+[3.039s]       |     [01;36m[K^~~~~~~~[m[K
+[3.039s] [01m[K/usr/include/c++/9/complex:456:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[3.039s] [01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/src/Node.cpp:100:58:[m[K [01;36m[Knote: [m[K  ‘[01m[Kstd_msgs::msg::Header_<std::allocator<void> >::_stamp_type[m[K’ {aka ‘[01m[Kbuiltin_interfaces::msg::Time_<std::allocator<void> >[m[K’} is not derived from ‘[01m[Kconst std::complex<_Tp>[m[K’
+[3.040s]   100 |     const double delta = (opticalFlowMsg->header.stamp - [01;36m[KprevStampOpticalFlowPose_[m[K).toSec();
+[3.040s]       |                                                          [01;36m[K^~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[3.040s] [01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/src/Node.cpp:108:138:[m[K [01;31m[Kerror: [m[K‘[01m[Kusing _stamp_type = struct builtin_interfaces::msg::Time_<std::allocator<void> >[m[K’ {aka ‘[01m[Kstruct builtin_interfaces::msg::Time_<std::allocator<void> >[m[K’} has no member named ‘[01m[KtoSec[m[K’
+[3.040s]   108 |     eskf_.updateOpticalFlow(int_xy, int_xy_gyro, integration_time, distance, quality, static_cast<uint64_t>(opticalFlowMsg->header.stamp.[01;31m[KtoSec[m[K() * 1e6f), delta);
+[3.040s]       |                                                                                                                                          [01;31m[K^~~~~[m[K
+[3.040s] [01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/src/Node.cpp:110:54:[m[K [01;31m[Kerror: [m[Kpassing ‘[01m[Kconst rclcpp::Time[m[K’ as ‘[01m[Kthis[m[K’ argument discards qualifiers [[01;31m[K-fpermissive[m[K]
+[3.040s]   110 |   prevStampOpticalFlowPose_ = opticalFlowMsg->header.[01;31m[Kstamp[m[K;
+[3.040s]       |                                                      [01;31m[K^~~~~[m[K
+[3.040s] In file included from [01m[K/opt/ros/foxy/include/rclcpp/clock.hpp:23[m[K,
+[3.040s]                  from [01m[K/opt/ros/foxy/include/rclcpp/timer.hpp:27[m[K,
+[3.040s]                  from [01m[K/opt/ros/foxy/include/rclcpp/callback_group.hpp:27[m[K,
+[3.040s]                  from [01m[K/opt/ros/foxy/include/rclcpp/any_executable.hpp:20[m[K,
+[3.041s]                  from [01m[K/opt/ros/foxy/include/rclcpp/memory_strategy.hpp:24[m[K,
+[3.041s]                  from [01m[K/opt/ros/foxy/include/rclcpp/memory_strategies.hpp:18[m[K,
+[3.041s]                  from [01m[K/opt/ros/foxy/include/rclcpp/executor_options.hpp:20[m[K,
+[3.041s]                  from [01m[K/opt/ros/foxy/include/rclcpp/executor.hpp:33[m[K,
+[3.041s]                  from [01m[K/opt/ros/foxy/include/rclcpp/executors/multi_threaded_executor.hpp:26[m[K,
+[3.041s]                  from [01m[K/opt/ros/foxy/include/rclcpp/executors.hpp:21[m[K,
+[3.041s]                  from [01m[K/opt/ros/foxy/include/rclcpp/rclcpp.hpp:146[m[K,
+[3.041s]                  from [01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/include/eskf/Node.hpp:5[m[K,
+[3.041s]                  from [01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/src/Node.cpp:1[m[K:
+[3.041s] [01m[K/opt/ros/foxy/include/rclcpp/time.hpp:101:3:[m[K [01;36m[Knote: [m[K  in call to ‘[01m[Krclcpp::Time& rclcpp::Time::operator=(const Time&)[m[K’
+[3.041s]   101 |   [01;36m[Koperator[m[K=(const builtin_interfaces::msg::Time & time_msg);
+[3.042s]       |   [01;36m[K^~~~~~~~[m[K
+[3.042s] [01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/src/Node.cpp:[m[K In member function ‘[01m[Kvoid eskf::Node::magCallback(sensor_msgs::msg::MagneticField_<std::allocator<void> >::SharedPtr) const[m[K’:
+[3.042s] [01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/src/Node.cpp:114:25:[m[K [01;31m[Kerror: [m[K‘[01m[Kconst class rclcpp::Time[m[K’ has no member named ‘[01m[Ksec[m[K’
+[3.042s]   114 |   if (prevStampMagPose_.[01;31m[Ksec[m[K != 0) {
+[3.042s]       |                         [01;31m[K^~~[m[K
+[3.042s] [01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/src/Node.cpp:115:48:[m[K [01;31m[Kerror: [m[Kno match for ‘[01m[Koperator-[m[K’ (operand types are ‘[01m[Kstd_msgs::msg::Header_<std::allocator<void> >::_stamp_type[m[K’ {aka ‘[01m[Kbuiltin_interfaces::msg::Time_<std::allocator<void> >[m[K’} and ‘[01m[Kconst rclcpp::Time[m[K’)
+[3.042s]   115 |     const double delta = ([32m[KmagMsg->header.stamp[m[K [01;31m[K-[m[K [34m[KprevStampMagPose_[m[K).toSec();
+[3.042s]       |                           [32m[K~~~~~~~~~~~~~~~~~~~~[m[K [01;31m[K^[m[K [34m[K~~~~~~~~~~~~~~~~~[m[K
+[3.042s]       |                                          [32m[K|[m[K       [34m[K|[m[K
+[3.042s]       |                                          [32m[K|[m[K       [34m[Kconst rclcpp::Time[m[K
+[3.043s]       |                                          [32m[Kstd_msgs::msg::Header_<std::allocator<void> >::_stamp_type {aka builtin_interfaces::msg::Time_<std::allocator<void> >}[m[K
+[3.043s] In file included from [01m[K/usr/include/c++/9/bits/stl_algobase.h:67[m[K,
+[3.043s]                  from [01m[K/usr/include/c++/9/memory:62[m[K,
+[3.043s]                  from [01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/include/eskf/Node.hpp:4[m[K,
+[3.043s]                  from [01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/src/Node.cpp:1[m[K:
+[3.043s] [01m[K/usr/include/c++/9/bits/stl_iterator.h:415:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _IteratorL, class _IteratorR> decltype ((__y.base() - __x.base())) std::operator-(const std::reverse_iterator<_Iterator>&, const std::reverse_iterator<_IteratorR>&)[m[K’
+[3.043s]   415 |     [01;36m[Koperator[m[K-(const reverse_iterator<_IteratorL>& __x,
+[3.043s]       |     [01;36m[K^~~~~~~~[m[K
+[3.043s] [01m[K/usr/include/c++/9/bits/stl_iterator.h:415:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[3.043s] [01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/src/Node.cpp:115:50:[m[K [01;36m[Knote: [m[K  ‘[01m[Kstd_msgs::msg::Header_<std::allocator<void> >::_stamp_type[m[K’ {aka ‘[01m[Kbuiltin_interfaces::msg::Time_<std::allocator<void> >[m[K’} is not derived from ‘[01m[Kconst std::reverse_iterator<_Iterator>[m[K’
+[3.043s]   115 |     const double delta = (magMsg->header.stamp - [01;36m[KprevStampMagPose_[m[K).toSec();
+[3.043s]       |                                                  [01;36m[K^~~~~~~~~~~~~~~~~[m[K
+[3.044s] In file included from [01m[K/usr/include/c++/9/bits/stl_algobase.h:67[m[K,
+[3.044s]                  from [01m[K/usr/include/c++/9/memory:62[m[K,
+[3.044s]                  from [01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/include/eskf/Node.hpp:4[m[K,
+[3.044s]                  from [01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/src/Node.cpp:1[m[K:
+[3.044s] [01m[K/usr/include/c++/9/bits/stl_iterator.h:1209:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _IteratorL, class _IteratorR> decltype ((__x.base() - __y.base())) std::operator-(const std::move_iterator<_IteratorL>&, const std::move_iterator<_IteratorR>&)[m[K’
+[3.044s]  1209 |     [01;36m[Koperator[m[K-(const move_iterator<_IteratorL>& __x,
+[3.044s]       |     [01;36m[K^~~~~~~~[m[K
+[3.044s] [01m[K/usr/include/c++/9/bits/stl_iterator.h:1209:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[3.044s] [01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/src/Node.cpp:115:50:[m[K [01;36m[Knote: [m[K  ‘[01m[Kstd_msgs::msg::Header_<std::allocator<void> >::_stamp_type[m[K’ {aka ‘[01m[Kbuiltin_interfaces::msg::Time_<std::allocator<void> >[m[K’} is not derived from ‘[01m[Kconst std::move_iterator<_IteratorL>[m[K’
+[3.044s]   115 |     const double delta = (magMsg->header.stamp - [01;36m[KprevStampMagPose_[m[K).toSec();
+[3.044s]       |                                                  [01;36m[K^~~~~~~~~~~~~~~~~[m[K
+[3.045s] In file included from [01m[K/usr/include/c++/9/vector:68[m[K,
+[3.045s]                  from [01m[K/opt/ros/foxy/include/rclcpp/executor.hpp:27[m[K,
+[3.045s]                  from [01m[K/opt/ros/foxy/include/rclcpp/executors/multi_threaded_executor.hpp:26[m[K,
+[3.045s]                  from [01m[K/opt/ros/foxy/include/rclcpp/executors.hpp:21[m[K,
+[3.045s]                  from [01m[K/opt/ros/foxy/include/rclcpp/rclcpp.hpp:146[m[K,
+[3.045s]                  from [01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/include/eskf/Node.hpp:5[m[K,
+[3.045s]                  from [01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/src/Node.cpp:1[m[K:
+[3.045s] [01m[K/usr/include/c++/9/bits/stl_bvector.h:214:3:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kstd::ptrdiff_t std::operator-(const std::_Bit_iterator_base&, const std::_Bit_iterator_base&)[m[K’
+[3.045s]   214 |   [01;36m[Koperator[m[K-(const _Bit_iterator_base& __x, const _Bit_iterator_base& __y)
+[3.045s]       |   [01;36m[K^~~~~~~~[m[K
+[3.045s] [01m[K/usr/include/c++/9/bits/stl_bvector.h:214:39:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[Kstd_msgs::msg::Header_<std::allocator<void> >::_stamp_type[m[K’ {aka ‘[01m[Kbuiltin_interfaces::msg::Time_<std::allocator<void> >[m[K’} to ‘[01m[Kconst std::_Bit_iterator_base&[m[K’
+[3.045s]   214 |   operator-([01;36m[Kconst _Bit_iterator_base& __x[m[K, const _Bit_iterator_base& __y)
+[3.046s]       |             [01;36m[K~~~~~~~~~~~~~~~~~~~~~~~~~~^~~[m[K
+[3.046s] In file included from [01m[K/usr/include/eigen3/Eigen/Core:96[m[K,
+[3.046s]                  from [01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/include/eskf/common.h:4[m[K,
+[3.046s]                  from [01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/include/eskf/ESKF.hpp:4[m[K,
+[3.046s]                  from [01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/include/eskf/Node.hpp:15[m[K,
+[3.046s]                  from [01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/src/Node.cpp:1[m[K:
+[3.046s] [01m[K/usr/include/c++/9/complex:361:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _Tp> std::complex<_Tp> std::operator-(const std::complex<_Tp>&, const std::complex<_Tp>&)[m[K’
+[3.046s]   361 |     [01;36m[Koperator[m[K-(const complex<_Tp>& __x, const complex<_Tp>& __y)
+[3.046s]       |     [01;36m[K^~~~~~~~[m[K
+[3.046s] [01m[K/usr/include/c++/9/complex:361:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[3.046s] [01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/src/Node.cpp:115:50:[m[K [01;36m[Knote: [m[K  ‘[01m[Kstd_msgs::msg::Header_<std::allocator<void> >::_stamp_type[m[K’ {aka ‘[01m[Kbuiltin_interfaces::msg::Time_<std::allocator<void> >[m[K’} is not derived from ‘[01m[Kconst std::complex<_Tp>[m[K’
+[3.047s]   115 |     const double delta = (magMsg->header.stamp - [01;36m[KprevStampMagPose_[m[K).toSec();
+[3.047s]       |                                                  [01;36m[K^~~~~~~~~~~~~~~~~[m[K
+[3.047s] In file included from [01m[K/usr/include/eigen3/Eigen/Core:96[m[K,
+[3.047s]                  from [01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/include/eskf/common.h:4[m[K,
+[3.047s]                  from [01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/include/eskf/ESKF.hpp:4[m[K,
+[3.047s]                  from [01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/include/eskf/Node.hpp:15[m[K,
+[3.047s]                  from [01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/src/Node.cpp:1[m[K:
+[3.047s] [01m[K/usr/include/c++/9/complex:370:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _Tp> std::complex<_Tp> std::operator-(const std::complex<_Tp>&, const _Tp&)[m[K’
+[3.047s]   370 |     [01;36m[Koperator[m[K-(const complex<_Tp>& __x, const _Tp& __y)
+[3.047s]       |     [01;36m[K^~~~~~~~[m[K
+[3.047s] [01m[K/usr/include/c++/9/complex:370:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[3.047s] [01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/src/Node.cpp:115:50:[m[K [01;36m[Knote: [m[K  ‘[01m[Kstd_msgs::msg::Header_<std::allocator<void> >::_stamp_type[m[K’ {aka ‘[01m[Kbuiltin_interfaces::msg::Time_<std::allocator<void> >[m[K’} is not derived from ‘[01m[Kconst std::complex<_Tp>[m[K’
+[3.048s]   115 |     const double delta = (magMsg->header.stamp - [01;36m[KprevStampMagPose_[m[K).toSec();
+[3.048s]       |                                                  [01;36m[K^~~~~~~~~~~~~~~~~[m[K
+[3.048s] In file included from [01m[K/usr/include/eigen3/Eigen/Core:96[m[K,
+[3.048s]                  from [01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/include/eskf/common.h:4[m[K,
+[3.048s]                  from [01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/include/eskf/ESKF.hpp:4[m[K,
+[3.048s]                  from [01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/include/eskf/Node.hpp:15[m[K,
+[3.048s]                  from [01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/src/Node.cpp:1[m[K:
+[3.048s] [01m[K/usr/include/c++/9/complex:379:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _Tp> std::complex<_Tp> std::operator-(const _Tp&, const std::complex<_Tp>&)[m[K’
+[3.048s]   379 |     [01;36m[Koperator[m[K-(const _Tp& __x, const complex<_Tp>& __y)
+[3.048s]       |     [01;36m[K^~~~~~~~[m[K
+[3.048s] [01m[K/usr/include/c++/9/complex:379:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[3.048s] [01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/src/Node.cpp:115:50:[m[K [01;36m[Knote: [m[K  ‘[01m[Kconst rclcpp::Time[m[K’ is not derived from ‘[01m[Kconst std::complex<_Tp>[m[K’
+[3.049s]   115 |     const double delta = (magMsg->header.stamp - [01;36m[KprevStampMagPose_[m[K).toSec();
+[3.049s]       |                                                  [01;36m[K^~~~~~~~~~~~~~~~~[m[K
+[3.049s] In file included from [01m[K/usr/include/eigen3/Eigen/Core:96[m[K,
+[3.049s]                  from [01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/include/eskf/common.h:4[m[K,
+[3.049s]                  from [01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/include/eskf/ESKF.hpp:4[m[K,
+[3.049s]                  from [01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/include/eskf/Node.hpp:15[m[K,
+[3.049s]                  from [01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/src/Node.cpp:1[m[K:
+[3.049s] [01m[K/usr/include/c++/9/complex:456:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _Tp> std::complex<_Tp> std::operator-(const std::complex<_Tp>&)[m[K’
+[3.049s]   456 |     [01;36m[Koperator[m[K-(const complex<_Tp>& __x)
+[3.049s]       |     [01;36m[K^~~~~~~~[m[K
+[3.049s] [01m[K/usr/include/c++/9/complex:456:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[3.049s] [01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/src/Node.cpp:115:50:[m[K [01;36m[Knote: [m[K  ‘[01m[Kstd_msgs::msg::Header_<std::allocator<void> >::_stamp_type[m[K’ {aka ‘[01m[Kbuiltin_interfaces::msg::Time_<std::allocator<void> >[m[K’} is not derived from ‘[01m[Kconst std::complex<_Tp>[m[K’
+[3.050s]   115 |     const double delta = (magMsg->header.stamp - [01;36m[KprevStampMagPose_[m[K).toSec();
+[3.050s]       |                                                  [01;36m[K^~~~~~~~~~~~~~~~~[m[K
+[3.050s] [01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/src/Node.cpp:118:76:[m[K [01;31m[Kerror: [m[K‘[01m[Kusing _stamp_type = struct builtin_interfaces::msg::Time_<std::allocator<void> >[m[K’ {aka ‘[01m[Kstruct builtin_interfaces::msg::Time_<std::allocator<void> >[m[K’} has no member named ‘[01m[KtoSec[m[K’
+[3.050s]   118 |     eskf_.updateMagnetometer(m, static_cast<uint64_t>(magMsg->header.stamp.[01;31m[KtoSec[m[K() * 1e6f), delta);
+[3.050s]       |                                                                            [01;31m[K^~~~~[m[K
+[3.050s] [01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/src/Node.cpp:120:38:[m[K [01;31m[Kerror: [m[Kpassing ‘[01m[Kconst rclcpp::Time[m[K’ as ‘[01m[Kthis[m[K’ argument discards qualifiers [[01;31m[K-fpermissive[m[K]
+[3.050s]   120 |   prevStampMagPose_ = magMsg->header.[01;31m[Kstamp[m[K;
+[3.050s]       |                                      [01;31m[K^~~~~[m[K
+[3.050s] In file included from [01m[K/opt/ros/foxy/include/rclcpp/clock.hpp:23[m[K,
+[3.051s]                  from [01m[K/opt/ros/foxy/include/rclcpp/timer.hpp:27[m[K,
+[3.051s]                  from [01m[K/opt/ros/foxy/include/rclcpp/callback_group.hpp:27[m[K,
+[3.051s]                  from [01m[K/opt/ros/foxy/include/rclcpp/any_executable.hpp:20[m[K,
+[3.051s]                  from [01m[K/opt/ros/foxy/include/rclcpp/memory_strategy.hpp:24[m[K,
+[3.051s]                  from [01m[K/opt/ros/foxy/include/rclcpp/memory_strategies.hpp:18[m[K,
+[3.051s]                  from [01m[K/opt/ros/foxy/include/rclcpp/executor_options.hpp:20[m[K,
+[3.051s]                  from [01m[K/opt/ros/foxy/include/rclcpp/executor.hpp:33[m[K,
+[3.051s]                  from [01m[K/opt/ros/foxy/include/rclcpp/executors/multi_threaded_executor.hpp:26[m[K,
+[3.051s]                  from [01m[K/opt/ros/foxy/include/rclcpp/executors.hpp:21[m[K,
+[3.051s]                  from [01m[K/opt/ros/foxy/include/rclcpp/rclcpp.hpp:146[m[K,
+[3.051s]                  from [01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/include/eskf/Node.hpp:5[m[K,
+[3.051s]                  from [01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/src/Node.cpp:1[m[K:
+[3.052s] [01m[K/opt/ros/foxy/include/rclcpp/time.hpp:101:3:[m[K [01;36m[Knote: [m[K  in call to ‘[01m[Krclcpp::Time& rclcpp::Time::operator=(const Time&)[m[K’
+[3.052s]   101 |   [01;36m[Koperator[m[K=(const builtin_interfaces::msg::Time & time_msg);
+[3.052s]       |   [01;36m[K^~~~~~~~[m[K
+[3.052s] [01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/src/Node.cpp:[m[K At global scope:
+[3.052s] [01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/src/Node.cpp:123:6:[m[K [01;31m[Kerror: [m[Kdeclaration of ‘[01m[Kvoid eskf::Node::rangeFinderCallback(sensor_msgs::msg::Range_<std::allocator<void> >::SharedPtr) const[m[K’ outside of class is not definition [[01;31m[K-fpermissive[m[K]
+[3.052s]   123 | void [01;31m[KNode[m[K::rangeFinderCallback(const sensor_msgs::msg::Range::SharedPtr rangeMsg) const; {
+[3.052s]       |      [01;31m[K^~~~[m[K
+[3.052s] [01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/src/Node.cpp:123:90:[m[K [01;31m[Kerror: [m[Kexpected unqualified-id before ‘[01m[K{[m[K’ token
+[3.052s]   123 | void Node::rangeFinderCallback(const sensor_msgs::msg::Range::SharedPtr rangeMsg) const; [01;31m[K{[m[K
+[3.052s]       |                                                                                          [01;31m[K^[m[K
+[3.052s] [01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/src/Node.cpp:[m[K In member function ‘[01m[Kvoid eskf::Node::extendedStateCallback(mavros_msgs::msg::ExtendedState_<std::allocator<void> >::SharedPtr) const[m[K’:
+[3.053s] [01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/src/Node.cpp:133:112:[m[K [01;31m[Kerror: [m[Kpassing ‘[01m[Kconst eskf::ESKF[m[K’ as ‘[01m[Kthis[m[K’ argument discards qualifiers [[01;31m[K-fpermissive[m[K]
+[3.053s]   133 |   eskf_.updateLandedState(extendedStateMsg->landed_state & mavros_msgs::msg::ExtendedState::LANDED_STATE_IN_AIR[01;31m[K)[m[K;
+[3.053s]       |                                                                                                                [01;31m[K^[m[K
+[3.053s] In file included from [01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/include/eskf/Node.hpp:15[m[K,
+[3.053s]                  from [01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/src/Node.cpp:1[m[K:
+[3.053s] [01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/include/eskf/ESKF.hpp:24:10:[m[K [01;36m[Knote: [m[K  in call to ‘[01m[Kvoid eskf::ESKF::updateLandedState(uint8_t)[m[K’
+[3.053s]    24 |     void [01;36m[KupdateLandedState[m[K(uint8_t landed_state);
+[3.053s]       |          [01;36m[K^~~~~~~~~~~~~~~~~[m[K
+[3.053s] [01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/src/Node.cpp:[m[K In member function ‘[01m[Kvoid eskf::Node::publishState()[m[K’:
+[3.053s] [01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/src/Node.cpp:144:13:[m[K [01;31m[Kerror: [m[K‘[01m[KHeader[m[K’ is not a member of ‘[01m[Kstd_msgs[m[K’; did you mean ‘[01m[Kstd_msgs::msg::Header[m[K’?
+[3.053s]   144 |   std_msgs::[01;31m[KHeader[m[K header;
+[3.053s]       |             [01;31m[K^~~~~~[m[K
+[3.054s] In file included from [01m[K/opt/ros/foxy/include/sensor_msgs/msg/detail/imu__struct.hpp:19[m[K,
+[3.054s]                  from [01m[K/opt/ros/foxy/include/sensor_msgs/msg/imu.hpp:7[m[K,
+[3.054s]                  from [01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/include/eskf/Node.hpp:6[m[K,
+[3.054s]                  from [01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/src/Node.cpp:1[m[K:
+[3.054s] [01m[K/opt/ros/foxy/include/std_msgs/msg/detail/header__struct.hpp:139:7:[m[K [01;36m[Knote: [m[K‘[01m[Kstd_msgs::msg::Header[m[K’ declared here
+[3.054s]   139 | using [01;36m[KHeader[m[K =
+[3.054s]       |       [01;36m[K^~~~~~[m[K
+[3.054s] [01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/src/Node.cpp:145:3:[m[K [01;31m[Kerror: [m[K‘[01m[Kheader[m[K’ was not declared in this scope
+[3.054s]   145 |   [01;31m[Kheader[m[K.frame_id = "/pose";
+[3.054s]       |   [01;31m[K^~~~~~[m[K
+[3.054s] [01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/src/Node.cpp:147:32:[m[K [01;31m[Kerror: [m[K‘[01m[Know[m[K’ is not a member of ‘[01m[Krclcpp::Time[m[K’
+[3.054s]   147 |   header.stamp = rclcpp::Time::[01;31m[Know[m[K();
+[3.055s]       |                                [01;31m[K^~~[m[K
+[3.055s] [01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/src/Node.cpp:162:12:[m[K [01;31m[Kerror: [m[K‘[01m[Kusing SharedPtr = class std::shared_ptr<rclcpp::Publisher<nav_msgs::msg::Odometry_<std::allocator<void> > > >[m[K’ {aka ‘[01m[Kclass std::shared_ptr<rclcpp::Publisher<nav_msgs::msg::Odometry_<std::allocator<void> > > >[m[K’} has no member named ‘[01m[Kpublish[m[K’
+[3.055s]   162 |   pubPose_.[01;31m[Kpublish[m[K(odom);
+[3.055s]       |            [01;31m[K^~~~~~~[m[K
+[3.475s] make[2]: *** [CMakeFiles/state-estimation.dir/build.make:63: CMakeFiles/state-estimation.dir/src/eskf.cpp.o] Error 1
+[3.475s] make[2]: *** Waiting for unfinished jobs....
+[7.807s] make[2]: *** [CMakeFiles/state-estimation.dir/build.make:76: CMakeFiles/state-estimation.dir/src/Node.cpp.o] Error 1
+[7.808s] make[1]: *** [CMakeFiles/Makefile2:80: CMakeFiles/state-estimation.dir/all] Error 2
+[7.808s] make: *** [Makefile:141: all] Error 2
+[7.812s] Invoked command in '/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/build/state-estimation' returned '2': /usr/bin/cmake --build /home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/build/state-estimation -- -j8 -l8

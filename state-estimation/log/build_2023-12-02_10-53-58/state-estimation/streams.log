@@ -1,0 +1,39 @@
+[0.213s] Invoking command in '/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/build/state-estimation': /usr/bin/cmake --build /home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/build/state-estimation -- -j8 -l8
+[0.254s] -- Found ament_cmake: 0.9.12 (/opt/ros/foxy/share/ament_cmake/cmake)
+[0.283s] -- Using PYTHON_EXECUTABLE: /usr/bin/python3
+[0.514s] -- Found rclcpp: 2.4.3 (/opt/ros/foxy/share/rclcpp/cmake)
+[0.557s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.561s] -- Found rosidl_adapter: 1.3.1 (/opt/ros/foxy/share/rosidl_adapter/cmake)
+[0.739s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[0.805s] -- Found rmw_implementation_cmake: 1.0.4 (/opt/ros/foxy/share/rmw_implementation_cmake/cmake)
+[0.806s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[1.003s] -- Found geometry_msgs: 2.0.5 (/opt/ros/foxy/share/geometry_msgs/cmake)
+[1.049s] -- Found sensor_msgs: 2.0.5 (/opt/ros/foxy/share/sensor_msgs/cmake)
+[1.148s] -- Found message_filters: 3.2.7 (/opt/ros/foxy/share/message_filters/cmake)
+[1.150s] -- Found eigen3_cmake_module: 0.1.1 (/opt/ros/foxy/share/eigen3_cmake_module/cmake)
+[1.152s] -- Found mavros_msgs: 2.4.0 (/opt/ros/foxy/share/mavros_msgs/cmake)
+[1.744s] -- Found rosidl_default_generators: 1.0.1 (/opt/ros/foxy/share/rosidl_default_generators/cmake)
+[1.833s] -- Configuring done
+[2.056s] -- Generating done
+[2.058s] -- Build files have been written to: /home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/build/state-estimation
+[2.093s] [35m[1mScanning dependencies of target ESKF[0m
+[2.108s] [ 20%] [32mBuilding CXX object CMakeFiles/ESKF.dir/src/ESKF.cpp.o[0m
+[5.256s] [ 40%] [32m[1mLinking CXX shared library libESKF.so[0m
+[5.413s] [ 40%] Built target ESKF
+[5.431s] [35m[1mScanning dependencies of target state-estimation[0m
+[5.543s] [ 60%] [32mBuilding CXX object CMakeFiles/state-estimation.dir/src/Node.cpp.o[0m
+[5.543s] [ 80%] [32mBuilding CXX object CMakeFiles/state-estimation.dir/src/eskf.cpp.o[0m
+[5.553s] [01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/src/eskf.cpp:1:10:[m[K [01;31m[Kfatal error: [m[Keskf/Node.hpp: No such file or directory
+[5.553s]     1 | #include [01;31m[K<eskf/Node.hpp>[m[K
+[5.553s]       |          [01;31m[K^~~~~~~~~~~~~~~[m[K
+[5.553s] compilation terminated.
+[5.554s] make[2]: *** [CMakeFiles/state-estimation.dir/build.make:63: CMakeFiles/state-estimation.dir/src/eskf.cpp.o] Error 1
+[5.554s] make[2]: *** Waiting for unfinished jobs....
+[5.555s] [01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/src/Node.cpp:1:10:[m[K [01;31m[Kfatal error: [m[Keskf/Node.hpp: No such file or directory
+[5.556s]     1 | #include [01;31m[K<eskf/Node.hpp>[m[K
+[5.556s]       |          [01;31m[K^~~~~~~~~~~~~~~[m[K
+[5.556s] compilation terminated.
+[5.557s] make[2]: *** [CMakeFiles/state-estimation.dir/build.make:76: CMakeFiles/state-estimation.dir/src/Node.cpp.o] Error 1
+[5.557s] make[1]: *** [CMakeFiles/Makefile2:80: CMakeFiles/state-estimation.dir/all] Error 2
+[5.558s] make: *** [Makefile:141: all] Error 2
+[5.561s] Invoked command in '/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/build/state-estimation' returned '2': /usr/bin/cmake --build /home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/build/state-estimation -- -j8 -l8

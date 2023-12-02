@@ -1,0 +1,9 @@
+[35m[1mScanning dependencies of target ESKF[0m
+[ 20%] [32mBuilding CXX object CMakeFiles/ESKF.dir/src/ESKF.cpp.o[0m
+[01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/src/ESKF.cpp:5:10:[m[K [01;31m[Kfatal error: [m[KESKF.hpp: No such file or directory
+    5 | #include [01;31m[K"ESKF.hpp"[m[K
+      |          [01;31m[K^~~~~~~~~~[m[K
+compilation terminated.
+make[2]: *** [CMakeFiles/ESKF.dir/build.make:63: CMakeFiles/ESKF.dir/src/ESKF.cpp.o] Error 1
+make[1]: *** [CMakeFiles/Makefile2:107: CMakeFiles/ESKF.dir/all] Error 2
+make: *** [Makefile:141: all] Error 2

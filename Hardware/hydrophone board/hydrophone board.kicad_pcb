@@ -13171,7 +13171,7 @@
   (dimension (type radial) (layer "User.3") (tstamp a7269566-2881-4569-aa8e-8c0b8ae92df7)
     (pts (xy 210.82 38.118051) (xy 212.616051 36.322))
     (leader_length 3.090926)
-    (gr_text "R 2.5400 mm" (at 224.707666 34.136385) (layer "User.3") (tstamp a7269566-2881-4569-aa8e-8c0b8ae92df7)
+    (gr_text "R 100.0000 mils" (at 224.707666 34.136385) (layer "User.3") (tstamp a7269566-2881-4569-aa8e-8c0b8ae92df7)
       (effects (font (size 1 1) (thickness 0.15)))
     )
     (format (prefix "R ") (suffix "") (units 3) (units_format 1) (precision 4))

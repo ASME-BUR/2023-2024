@@ -25,7 +25,7 @@
         (name "SCL" (effects (font (size 1.27 1.27))))
         (number "2" (effects (font (size 1.27 1.27))))
       )
-      (pin unspecified line (at 24.13 -11.43 180) (length 2.54)
+      (pin output line (at 24.13 -11.43 180) (length 2.54)
         (name "SDA" (effects (font (size 1.27 1.27))))
         (number "3" (effects (font (size 1.27 1.27))))
       )

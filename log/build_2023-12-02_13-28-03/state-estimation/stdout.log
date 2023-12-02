@@ -1,0 +1,48 @@
+-- Found ament_cmake: 0.9.12 (/opt/ros/foxy/share/ament_cmake/cmake)
+-- Using PYTHON_EXECUTABLE: /usr/bin/python3
+-- Found rclcpp: 2.4.3 (/opt/ros/foxy/share/rclcpp/cmake)
+-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+-- Found rosidl_adapter: 1.3.1 (/opt/ros/foxy/share/rosidl_adapter/cmake)
+-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+-- Found rmw_implementation_cmake: 1.0.4 (/opt/ros/foxy/share/rmw_implementation_cmake/cmake)
+-- Using RMW implementation 'rmw_fastrtps_cpp' as default
+-- Found geometry_msgs: 2.0.5 (/opt/ros/foxy/share/geometry_msgs/cmake)
+-- Found sensor_msgs: 2.0.5 (/opt/ros/foxy/share/sensor_msgs/cmake)
+-- Found message_filters: 3.2.7 (/opt/ros/foxy/share/message_filters/cmake)
+-- Found eigen3_cmake_module: 0.1.1 (/opt/ros/foxy/share/eigen3_cmake_module/cmake)
+-- Found mavros_msgs: 2.4.0 (/opt/ros/foxy/share/mavros_msgs/cmake)
+-- Found nav_msgs: 2.0.5 (/opt/ros/foxy/share/nav_msgs/cmake)
+-- Found rosidl_default_generators: 1.0.1 (/opt/ros/foxy/share/rosidl_default_generators/cmake)
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /home/nakul/Desktop/bur/ros2_ws/src/2023-2024/build/state-estimation
+[ 40%] Built target ESKF
+[ 60%] [32m[1mLinking CXX executable state-estimation[0m
+[100%] Built target state-estimation
+-- Install configuration: ""
+-- Installing: /home/nakul/Desktop/bur/ros2_ws/src/2023-2024/install/state-estimation/share/ament_index/resource_index/package_run_dependencies/state-estimation
+-- Installing: /home/nakul/Desktop/bur/ros2_ws/src/2023-2024/install/state-estimation/share/ament_index/resource_index/parent_prefix_path/state-estimation
+-- Installing: /home/nakul/Desktop/bur/ros2_ws/src/2023-2024/install/state-estimation/share/state-estimation/environment/ament_prefix_path.sh
+-- Installing: /home/nakul/Desktop/bur/ros2_ws/src/2023-2024/install/state-estimation/share/state-estimation/environment/ament_prefix_path.dsv
+-- Installing: /home/nakul/Desktop/bur/ros2_ws/src/2023-2024/install/state-estimation/share/state-estimation/environment/path.sh
+-- Installing: /home/nakul/Desktop/bur/ros2_ws/src/2023-2024/install/state-estimation/share/state-estimation/environment/path.dsv
+-- Installing: /home/nakul/Desktop/bur/ros2_ws/src/2023-2024/install/state-estimation/share/state-estimation/local_setup.bash
+-- Installing: /home/nakul/Desktop/bur/ros2_ws/src/2023-2024/install/state-estimation/share/state-estimation/local_setup.sh
+-- Installing: /home/nakul/Desktop/bur/ros2_ws/src/2023-2024/install/state-estimation/share/state-estimation/local_setup.zsh
+-- Installing: /home/nakul/Desktop/bur/ros2_ws/src/2023-2024/install/state-estimation/share/state-estimation/local_setup.dsv
+-- Installing: /home/nakul/Desktop/bur/ros2_ws/src/2023-2024/install/state-estimation/share/state-estimation/package.dsv
+-- Installing: /home/nakul/Desktop/bur/ros2_ws/src/2023-2024/install/state-estimation/share/ament_index/resource_index/packages/state-estimation
+-- Installing: /home/nakul/Desktop/bur/ros2_ws/src/2023-2024/install/state-estimation/share/state-estimation/cmake/state-estimationConfig.cmake
+-- Installing: /home/nakul/Desktop/bur/ros2_ws/src/2023-2024/install/state-estimation/share/state-estimation/cmake/state-estimationConfig-version.cmake
+-- Installing: /home/nakul/Desktop/bur/ros2_ws/src/2023-2024/install/state-estimation/share/state-estimation/package.xml
+-- Installing: /home/nakul/Desktop/bur/ros2_ws/src/2023-2024/install/state-estimation/lib/state-estimation/state-estimation
+-- Set runtime path of "/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/install/state-estimation/lib/state-estimation/state-estimation" to ""
+-- Installing: /home/nakul/Desktop/bur/ros2_ws/src/2023-2024/install/state-estimation/lib/libESKF.so
+-- Installing: /home/nakul/Desktop/bur/ros2_ws/src/2023-2024/install/state-estimation/include
+-- Installing: /home/nakul/Desktop/bur/ros2_ws/src/2023-2024/install/state-estimation/include/eskf
+-- Installing: /home/nakul/Desktop/bur/ros2_ws/src/2023-2024/install/state-estimation/include/eskf/ESKF.hpp
+-- Installing: /home/nakul/Desktop/bur/ros2_ws/src/2023-2024/install/state-estimation/include/eskf/common.h
+-- Installing: /home/nakul/Desktop/bur/ros2_ws/src/2023-2024/install/state-estimation/include/eskf/Node.hpp
+-- Installing: /home/nakul/Desktop/bur/ros2_ws/src/2023-2024/install/state-estimation/include/eskf/RingBuffer.hpp
+-- Installing: /home/nakul/Desktop/bur/ros2_ws/src/2023-2024/install/state-estimation/share/state-estimation//launch
+-- Installing: /home/nakul/Desktop/bur/ros2_ws/src/2023-2024/install/state-estimation/share/state-estimation//launch/eskf.launch

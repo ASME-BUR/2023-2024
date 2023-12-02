@@ -1,0 +1,41 @@
+CMake Warning:
+  Manually-specified variables were not used by the project:
+
+    CATKIN_INSTALL_INTO_PREFIX_ROOT
+    CATKIN_SYMLINK_INSTALL
+
+
+[01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/src/Node.cpp:[m[K In constructor ‘[01m[Keskf::Node::Node()[m[K’:
+[01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/src/Node.cpp:46:3:[m[K [01;31m[Kerror: [m[K‘[01m[KpubTimer_[m[K’ was not declared in this scope
+   46 |   [01;31m[KpubTimer_[m[K = this->create_wall_timer(
+      |   [01;31m[K^~~~~~~~~[m[K
+[01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/src/Node.cpp:[m[K In member function ‘[01m[Kvoid eskf::Node::gpsCallback(nav_msgs::msg::Odometry_<std::allocator<void> >::SharedPtr)[m[K’:
+[01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/src/Node.cpp:88:7:[m[K [01;31m[Kerror: [m[K‘[01m[KprevStampGpsPose_[m[K’ was not declared in this scope; did you mean ‘[01m[KprevStampVisionPose_[m[K’?
+   88 |   if ([01;31m[KprevStampGpsPose_[m[K.seconds()  != 0) {
+      |       [01;31m[K^~~~~~~~~~~~~~~~~[m[K
+      |       [32m[KprevStampVisionPose_[m[K
+[01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/src/Node.cpp:98:3:[m[K [01;31m[Kerror: [m[K‘[01m[KprevStampGpsPose_[m[K’ was not declared in this scope; did you mean ‘[01m[KprevStampVisionPose_[m[K’?
+   98 |   [01;31m[KprevStampGpsPose_[m[K = header_time;
+      |   [01;31m[K^~~~~~~~~~~~~~~~~[m[K
+      |   [32m[KprevStampVisionPose_[m[K
+[01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/src/Node.cpp:[m[K In member function ‘[01m[Kvoid eskf::Node::magCallback(sensor_msgs::msg::MagneticField_<std::allocator<void> >::SharedPtr)[m[K’:
+[01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/src/Node.cpp:104:7:[m[K [01;31m[Kerror: [m[K‘[01m[KprevStampMagPose_[m[K’ was not declared in this scope; did you mean ‘[01m[KprevStampVisionPose_[m[K’?
+  104 |   if ([01;31m[KprevStampMagPose_[m[K.seconds()  != 0) {
+      |       [01;31m[K^~~~~~~~~~~~~~~~~[m[K
+      |       [32m[KprevStampVisionPose_[m[K
+[01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/src/Node.cpp:112:3:[m[K [01;31m[Kerror: [m[K‘[01m[KprevStampMagPose_[m[K’ was not declared in this scope; did you mean ‘[01m[KprevStampVisionPose_[m[K’?
+  112 |   [01;31m[KprevStampMagPose_[m[K = header_time;
+      |   [01;31m[K^~~~~~~~~~~~~~~~~[m[K
+      |   [32m[KprevStampVisionPose_[m[K
+[01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/src/Node.cpp:[m[K In member function ‘[01m[Kvoid eskf::Node::rangeFinderCallback(sensor_msgs::msg::Range_<std::allocator<void> >::SharedPtr)[m[K’:
+[01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/src/Node.cpp:117:7:[m[K [01;31m[Kerror: [m[K‘[01m[KprevStampRangeFinderPose_[m[K’ was not declared in this scope; did you mean ‘[01m[KsubRangeFinderPose_[m[K’?
+  117 |   if ([01;31m[KprevStampRangeFinderPose_[m[K.seconds() != 0) {
+      |       [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+      |       [32m[KsubRangeFinderPose_[m[K
+[01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/src/Node.cpp:124:3:[m[K [01;31m[Kerror: [m[K‘[01m[KprevStampRangeFinderPose_[m[K’ was not declared in this scope; did you mean ‘[01m[KsubRangeFinderPose_[m[K’?
+  124 |   [01;31m[KprevStampRangeFinderPose_[m[K = header_time;
+      |   [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+      |   [32m[KsubRangeFinderPose_[m[K
+make[2]: *** [CMakeFiles/state-estimation.dir/build.make:76: CMakeFiles/state-estimation.dir/src/Node.cpp.o] Error 1
+make[1]: *** [CMakeFiles/Makefile2:80: CMakeFiles/state-estimation.dir/all] Error 2
+make: *** [Makefile:141: all] Error 2

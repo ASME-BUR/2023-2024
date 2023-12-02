@@ -143,14 +143,6 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/state-estimation/" TYPE DIRECTORY FILES "/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/launch")
 endif()
 
-if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/state-estimation/" TYPE DIRECTORY FILES "/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/config")
-endif()
-
-if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/state-estimation" TYPE PROGRAM FILES "/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/scripts/my_script.py")
-endif()
-
 if(CMAKE_INSTALL_COMPONENT)
   set(CMAKE_INSTALL_MANIFEST "install_manifest_${CMAKE_INSTALL_COMPONENT}.txt")
 else()

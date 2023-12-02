@@ -12,6 +12,7 @@ find_package(message_filters REQUIRED)
 find_package(eigen3_cmake_module REQUIRED)
 find_package(Eigen3 REQUIRED)
 find_package(mavros_msgs REQUIRED)
+find_package(nav_msgs REQUIRED)
 find_package(rosidl_default_generators REQUIRED)
 
 
@@ -53,10 +54,11 @@ ${rclcpp_LIBRARIES}
 ${std_msgs_LIBRARIES}
 ${geometry_msgs_LIBRARIES}
 ${sensor_msgs_LIBRARIES}
+${nav_msgs_LIBRARIES}
 ${message_filters_LIBRARIES}
 ${message_runtime_LIBRARIES}
 ${Eigen3_LIBRARIES}
-${mavros_LIBRARIES}
+${mavros_msgs_LIBRARIES}
 )
 
 # Install executable
@@ -81,13 +83,3 @@ install(DIRECTORY launch
   DESTINATION share/${PROJECT_NAME}/
 )
 
-# Install config files if any
-install(DIRECTORY config
-  DESTINATION share/${PROJECT_NAME}/
-)
-
-# Install Python scripts if any
-install(PROGRAMS
-  scripts/my_script.py
-  DESTINATION lib/${PROJECT_NAME}
-)

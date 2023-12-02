@@ -1,0 +1,2 @@
+Invoking command in '/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/build/state-estimation': /usr/bin/cmake --build /home/nakul/Desktop/bur/ros2_ws/src/2023-2024/build/state-estimation -- -j8 -l8
+Invoked command in '/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/build/state-estimation' returned '2': /usr/bin/cmake --build /home/nakul/Desktop/bur/ros2_ws/src/2023-2024/build/state-estimation -- -j8 -l8

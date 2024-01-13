@@ -15,6 +15,8 @@ class Audio_ADC_I2C
 public:
     Audio_ADC_I2C(char address);
     bool init();
+    bool setActive();
+    bool setSleep();
 
 private:
     char read();

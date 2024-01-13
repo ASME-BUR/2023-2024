@@ -1,1 +1,0 @@
-auv_msgs/MotorCommand[] motor_commands

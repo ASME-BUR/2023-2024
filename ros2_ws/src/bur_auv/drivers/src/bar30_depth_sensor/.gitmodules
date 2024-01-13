@@ -1,6 +1,0 @@
-[submodule "https:/github.com/bluerobotics/BlueRobotics_MS5837_Library.git"]
-	path = https:/github.com/bluerobotics/BlueRobotics_MS5837_Library.git
-	url = https://github.com/bluerobotics/ms5837-python
-[submodule "ms5837-python"]
-	path = ms5837-python
-	url = https://github.com/bluerobotics/ms5837-python

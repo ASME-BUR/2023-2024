@@ -19,8 +19,8 @@ public:
 private:
     char read();
     char read(char reg);
-    bool write(char data);
-    bool write(char reg, char data);
+    void write(char data);
+    void write(char reg, char data);
     char addr_;
 };
 

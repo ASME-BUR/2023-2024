@@ -4,11 +4,14 @@
 Audio_ADC_I2C::Audio_ADC_I2C(char address)
 {
     Wire.begin(address);
-    Audio_ADC_I2C::addr_ = address;
+    addr_ = address;
 }
 
 bool Audio_ADC_I2C::init()
 {
+<<<<<<< HEAD
+    return (true);
+=======
     // 1. apply power to the device
     // 2. transition from hardware shutdown mode to sleep mode
 
@@ -160,6 +163,7 @@ bool Audio_ADC_I2C::setSleep()
     // TODO: wait 6 milliseconds, check P0_R119, stop FSYNC, BCLK?
 
     return true;
+>>>>>>> 54e11ce3b68fc3376035d054e28f8d77d9a749b3
 }
 
 //Read a singular byte from a register and store into a char pointer
@@ -186,15 +190,17 @@ char Audio_ADC_I2C::read(char reg, int bytesRequested, char outputData[128])
     Wire.endTransmission();
 }
 
-bool Audio_ADC_I2C::write(char data)
+void Audio_ADC_I2C::write(char data)
 {
+    Wire.beginTransmission(addr_);
     Wire.beginTransmission(addr_);
     Wire.write(data);
     Wire.endTransmission();
 }
 
-bool Audio_ADC_I2C::write(char reg, char data)
+void Audio_ADC_I2C::write(char reg, char data)
 {
+    Wire.beginTransmission(addr_);
     Wire.beginTransmission(addr_);
     Wire.write(reg);
     Wire.write(data);

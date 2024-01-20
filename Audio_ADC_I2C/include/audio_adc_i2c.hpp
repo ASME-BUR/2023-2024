@@ -17,10 +17,11 @@ public:
     bool init();
     bool setActive();
     bool setSleep();
-
+    bool initAudioOutput();
+    bool initAudioInput();
 private:
-    char read();
-    char read(char reg);
+    char read(char reg, char* result);
+    char read(char reg, int bytesRequested, char outputData[128]);
     bool write(char data);
     bool write(char reg, char data);
     char addr_;

@@ -45,8 +45,85 @@ bool Audio_ADC_I2C::init()
     data = 0b11100000;
 
     // TODO: apply FSYNC, BCLK?
+    initAudioInput();
+    initAudioOutput();
 
     return true;
+}
+
+bool Audio_ADC_I2C::initAudioInput()
+{
+    char reg, data;
+    char* output;
+    //Initialize input channel settings
+    //AC Coupling & Single Ended-Input
+    reg = ADCX140_CH1_CFG0;
+    data = 0b01000000;
+    write(reg, data);
+    read(reg, output);
+    printf("Byte written to reg %x is %x", reg, *output);
+    
+    reg = ADCX140_CH2_CFG0;
+    data = 0b01000000;
+    write(reg, data);
+    read(reg, output);
+    printf("Byte written to reg %x is %x", reg, *output);
+
+    reg = ADCX140_CH3_CFG0;
+    data = 0b01000000;
+    write(reg, data);
+    read(reg, output);
+    printf("Byte written to reg %x is %x", reg, *output);
+
+    reg = ADCX140_CH4_CFG0;
+    data = 0b01000000;
+    write(reg, data);
+    read(reg, output);
+    printf("Byte written to reg %x is %x", reg, *output);
+
+}
+
+bool Audio_ADC_I2C::initAudioOutput()
+{
+    char reg, data;
+    char* output;
+    //Assign output channel slots for each data channel
+    //Channel 1 to standard output left
+    reg = ADCX140_ASI_CH1;
+    data = 0b00000000;
+    write(reg, data);
+    read(reg, output);
+    printf("Byte written to reg %x is %x", reg, *output);
+
+    //Channel 2 to standard output right
+    reg = ADCX140_ASI_CH2;
+    data = 0b00100000;
+    write(reg, data);
+    read(reg, output);
+    printf("Byte written to reg %x is %x", reg, *output);
+
+    //Channel 3 to secondary output left
+    reg = ADCX140_ASI_CH3;
+    data = 0b01000000;
+    write(reg, data);
+    read(reg, output);
+    printf("Byte written to reg %x is %x", reg, *output);
+
+    //Channel 4 to secondary output right
+    reg = ADCX140_ASI_CH4;
+    data = 0b01100000;
+    write(reg, data);
+    read(reg, output);
+    printf("Byte written to reg %x is %x", reg, *output);
+    
+    //Configure audio output word length
+    //Currently: I2S Mode with 16-bit word length
+    reg = ADCX140_ASI_CFG0;
+    data = 0b01000000;
+    write(reg, data);
+    read(reg, output);
+    printf("Byte written to reg %x is %x", reg, *output);
+
 }
 
 bool Audio_ADC_I2C::setActive()
@@ -85,28 +162,40 @@ bool Audio_ADC_I2C::setSleep()
     return true;
 }
 
-char Audio_ADC_I2C::read()
-{
-}
-char Audio_ADC_I2C::read(char reg)
+//Read a singular byte from a register and store into a char pointer
+char Audio_ADC_I2C::read(char reg, char* result)
 {
     Wire.beginTransmission(addr_);
     Wire.write(reg);
-    Wire.endTransmission();
     Wire.requestFrom(addr_, 1); // We want one byte
-    uint8_t val = Wire.read();
+    *result = Wire.read();
+    Wire.endTransmission(addr_);
+}
+
+//Read multiple bytes from a starting register and store into char array
+char Audio_ADC_I2C::read(char reg, int bytesRequested, char outputData[128])
+{
+    int pos = 0;
+    Wire.beginTransmission(addr_);
+    Wire.write(reg);
+    Wire.requestFrom(addr_, bytesRequested); 
+    while(Wire.available() && pos < 128) {
+        outputData[pos] = Wire.read();
+        pos++;
+    }
+    Wire.endTransmission();
 }
 
 bool Audio_ADC_I2C::write(char data)
 {
-    Wire.beginTransmission();
+    Wire.beginTransmission(addr_);
     Wire.write(data);
     Wire.endTransmission();
 }
 
 bool Audio_ADC_I2C::write(char reg, char data)
 {
-    Wire.beginTransmission();
+    Wire.beginTransmission(addr_);
     Wire.write(reg);
     Wire.write(data);
     Wire.endTransmission();

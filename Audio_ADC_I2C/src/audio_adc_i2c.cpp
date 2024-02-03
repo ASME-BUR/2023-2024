@@ -1,5 +1,6 @@
 #include "audio_adc_i2c.hpp"
 #include <unistd.h>
+#include <Arduino.h>
 
 Audio_ADC_I2C::Audio_ADC_I2C(char address)
 {
@@ -61,25 +62,25 @@ bool Audio_ADC_I2C::initAudioInput()
     data = 0b01000000;
     write(reg, data);
     read(reg, output);
-    printf("Byte written to reg %x is %x", reg, *output);
+    Serial.print("Byte written to reg "); Serial.print(reg, BIN); Serial.print(" is "); Serial.println(*output, BIN);
     
     reg = ADCX140_CH2_CFG0;
     data = 0b01000000;
     write(reg, data);
     read(reg, output);
-    printf("Byte written to reg %x is %x", reg, *output);
+    Serial.print("Byte written to reg "); Serial.print(reg, BIN); Serial.print(" is "); Serial.println(*output, BIN);
 
     reg = ADCX140_CH3_CFG0;
     data = 0b01000000;
     write(reg, data);
     read(reg, output);
-    printf("Byte written to reg %x is %x", reg, *output);
+    Serial.print("Byte written to reg "); Serial.print(reg, BIN); Serial.print(" is "); Serial.println(*output, BIN);
 
     reg = ADCX140_CH4_CFG0;
     data = 0b01000000;
     write(reg, data);
     read(reg, output);
-    printf("Byte written to reg %x is %x", reg, *output);
+    Serial.print("Byte written to reg "); Serial.print(reg, BIN); Serial.print(" is "); Serial.println(*output, BIN);
 
 }
 
@@ -93,28 +94,27 @@ bool Audio_ADC_I2C::initAudioOutput()
     data = 0b00000000;
     write(reg, data);
     read(reg, output);
-    printf("Byte written to reg %x is %x", reg, *output);
+    Serial.print("Byte written to reg "); Serial.print(reg, BIN); Serial.print(" is "); Serial.println(*output, BIN);
 
     //Channel 2 to standard output right
     reg = ADCX140_ASI_CH2;
     data = 0b00100000;
     write(reg, data);
-    read(reg, output);
-    printf("Byte written to reg %x is %x", reg, *output);
+    Serial.print("Byte written to reg "); Serial.print(reg, BIN); Serial.print(" is "); Serial.println(*output, BIN);
 
     //Channel 3 to secondary output left
     reg = ADCX140_ASI_CH3;
     data = 0b01000000;
     write(reg, data);
     read(reg, output);
-    printf("Byte written to reg %x is %x", reg, *output);
+    Serial.print("Byte written to reg "); Serial.print(reg, BIN); Serial.print(" is "); Serial.println(*output, BIN);
 
     //Channel 4 to secondary output right
     reg = ADCX140_ASI_CH4;
     data = 0b01100000;
     write(reg, data);
     read(reg, output);
-    printf("Byte written to reg %x is %x", reg, *output);
+    Serial.print("Byte written to reg "); Serial.print(reg, BIN); Serial.print(" is "); Serial.println(*output, BIN);
     
     //Configure audio output word length
     //Currently: I2S Mode with 16-bit word length
@@ -122,7 +122,7 @@ bool Audio_ADC_I2C::initAudioOutput()
     data = 0b01000000;
     write(reg, data);
     read(reg, output);
-    printf("Byte written to reg %x is %x", reg, *output);
+    Serial.print("Byte written to reg "); Serial.print(reg, BIN); Serial.print(" is "); Serial.println(*output, BIN);
 
 }
 

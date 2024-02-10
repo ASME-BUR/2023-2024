@@ -1,5 +1,5 @@
-geometry_msgs/Wrench force
-geometry_msgs/Twist vel
-geometry_msgs/Pose pos
+geometry_msgs/Twist target_vel
+geometry_msgs/Twist current_vel
+geometry_msgs/Pose current_pos
 float32[] auxilary
 bool[] buttons

@@ -8,13 +8,13 @@
 #include <memory>
 using namespace std;
 
-class Joy_cmd : public rclcpp::Node
+class JoyCommand : public rclcpp::Node
 {
 public:
-    Joy_cmd();
+    JoyCommand();
 
 private:
-    void joy_cb(const sensor_msgs::msg::Joy::SharedPtr msg);
+    void joy_callback(const sensor_msgs::msg::Joy::SharedPtr msg);
     rclcpp::Publisher<bur_rov_msgs::msg::Command>::SharedPtr pub_;
     rclcpp::Subscription<sensor_msgs::msg::Joy>::SharedPtr sub_;
 };

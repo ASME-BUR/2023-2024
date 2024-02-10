@@ -1,0 +1,1119 @@
+In file included from [01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/src/eskf.cpp:1[m[K:
+[01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/include/eskf/Node.hpp:29:33:[m[K [01;31m[Kerror: [m[K‘[01m[KOdometry[m[K’ is not a member of ‘[01m[Knav_msgs[m[K’; did you mean ‘[01m[Knav_msgs::msg::Odometry[m[K’?
+   29 |     rclcpp::Publisher<nav_msgs::[01;31m[KOdometry[m[K>::SharedPtr pubPose;
+      |                                 [01;31m[K^~~~~~~~[m[K
+In file included from [01m[K/opt/ros/foxy/include/nav_msgs/msg/odometry.hpp:7[m[K,
+                 from [01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/include/eskf/Node.hpp:8[m[K,
+                 from [01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/src/eskf.cpp:1[m[K:
+[01m[K/opt/ros/foxy/include/nav_msgs/msg/detail/odometry__struct.hpp:171:7:[m[K [01;36m[Knote: [m[K‘[01m[Knav_msgs::msg::Odometry[m[K’ declared here
+  171 | using [01;36m[KOdometry[m[K =
+      |       [01;36m[K^~~~~~~~[m[K
+In file included from [01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/src/eskf.cpp:1[m[K:
+[01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/include/eskf/Node.hpp:29:33:[m[K [01;31m[Kerror: [m[K‘[01m[KOdometry[m[K’ is not a member of ‘[01m[Knav_msgs[m[K’; did you mean ‘[01m[Knav_msgs::msg::Odometry[m[K’?
+   29 |     rclcpp::Publisher<nav_msgs::[01;31m[KOdometry[m[K>::SharedPtr pubPose;
+      |                                 [01;31m[K^~~~~~~~[m[K
+In file included from [01m[K/opt/ros/foxy/include/nav_msgs/msg/odometry.hpp:7[m[K,
+                 from [01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/include/eskf/Node.hpp:8[m[K,
+                 from [01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/src/eskf.cpp:1[m[K:
+[01m[K/opt/ros/foxy/include/nav_msgs/msg/detail/odometry__struct.hpp:171:7:[m[K [01;36m[Knote: [m[K‘[01m[Knav_msgs::msg::Odometry[m[K’ declared here
+  171 | using [01;36m[KOdometry[m[K =
+      |       [01;36m[K^~~~~~~~[m[K
+In file included from [01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/src/eskf.cpp:1[m[K:
+[01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/include/eskf/Node.hpp:29:41:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+   29 |     rclcpp::Publisher<nav_msgs::Odometry[01;31m[K>[m[K::SharedPtr pubPose;
+      |                                         [01;31m[K^[m[K
+[01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/include/eskf/Node.hpp:29:44:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K;[m[K’ at end of member declaration
+   29 |     rclcpp::Publisher<nav_msgs::Odometry>::[01;31m[KSharedPtr[m[K pubPose;
+      |                                            [01;31m[K^~~~~~~~~[m[K
+      |                                                     [32m[K;[m[K
+In file included from [01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/src/Node.cpp:1[m[K:
+[01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/include/eskf/Node.hpp:29:33:[m[K [01;31m[Kerror: [m[K‘[01m[KOdometry[m[K’ is not a member of ‘[01m[Knav_msgs[m[K’; did you mean ‘[01m[Knav_msgs::msg::Odometry[m[K’?
+   29 |     rclcpp::Publisher<nav_msgs::[01;31m[KOdometry[m[K>::SharedPtr pubPose;
+      |                                 [01;31m[K^~~~~~~~[m[K
+In file included from [01m[K/opt/ros/foxy/include/nav_msgs/msg/odometry.hpp:7[m[K,
+                 from [01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/include/eskf/Node.hpp:8[m[K,
+                 from [01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/src/Node.cpp:1[m[K:
+[01m[K/opt/ros/foxy/include/nav_msgs/msg/detail/odometry__struct.hpp:171:7:[m[K [01;36m[Knote: [m[K‘[01m[Knav_msgs::msg::Odometry[m[K’ declared here
+  171 | using [01;36m[KOdometry[m[K =
+      |       [01;36m[K^~~~~~~~[m[K
+[01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/include/eskf/Node.hpp:29:54:[m[K [01;31m[Kerror: [m[K‘[01m[KpubPose[m[K’ does not name a type
+   29 |     rclcpp::Publisher<nav_msgs::Odometry>::SharedPtr [01;31m[KpubPose[m[K;
+      |                                                      [01;31m[K^~~~~~~[m[K
+In file included from [01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/src/Node.cpp:1[m[K:
+[01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/include/eskf/Node.hpp:29:33:[m[K [01;31m[Kerror: [m[K‘[01m[KOdometry[m[K’ is not a member of ‘[01m[Knav_msgs[m[K’; did you mean ‘[01m[Knav_msgs::msg::Odometry[m[K’?
+   29 |     rclcpp::Publisher<nav_msgs::[01;31m[KOdometry[m[K>::SharedPtr pubPose;
+      |                                 [01;31m[K^~~~~~~~[m[K
+In file included from [01m[K/opt/ros/foxy/include/nav_msgs/msg/odometry.hpp:7[m[K,
+                 from [01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/include/eskf/Node.hpp:8[m[K,
+                 from [01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/src/Node.cpp:1[m[K:
+[01m[K/opt/ros/foxy/include/nav_msgs/msg/detail/odometry__struct.hpp:171:7:[m[K [01;36m[Knote: [m[K‘[01m[Knav_msgs::msg::Odometry[m[K’ declared here
+  171 | using [01;36m[KOdometry[m[K =
+      |       [01;36m[K^~~~~~~~[m[K
+In file included from [01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/src/Node.cpp:1[m[K:
+[01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/include/eskf/Node.hpp:29:41:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+   29 |     rclcpp::Publisher<nav_msgs::Odometry[01;31m[K>[m[K::SharedPtr pubPose;
+      |                                         [01;31m[K^[m[K
+[01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/include/eskf/Node.hpp:29:44:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K;[m[K’ at end of member declaration
+   29 |     rclcpp::Publisher<nav_msgs::Odometry>::[01;31m[KSharedPtr[m[K pubPose;
+      |                                            [01;31m[K^~~~~~~~~[m[K
+      |                                                     [32m[K;[m[K
+[01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/include/eskf/Node.hpp:32:39:[m[K [01;31m[Kerror: [m[K‘[01m[KImu[m[K’ is not a member of ‘[01m[Ksensor_msgs[m[K’; did you mean ‘[01m[Ksensor_msgs::msg::Imu[m[K’?
+   32 |     rclcpp::Subscription<sensor_msgs::[01;31m[KImu[m[K>::SharedPtr subImu_;
+      |                                       [01;31m[K^~~[m[K
+In file included from [01m[K/opt/ros/foxy/include/sensor_msgs/msg/imu.hpp:7[m[K,
+                 from [01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/include/eskf/Node.hpp:5[m[K,
+                 from [01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/src/eskf.cpp:1[m[K:
+[01m[K/opt/ros/foxy/include/sensor_msgs/msg/detail/imu__struct.hpp:216:7:[m[K [01;36m[Knote: [m[K‘[01m[Ksensor_msgs::msg::Imu[m[K’ declared here
+  216 | using [01;36m[KImu[m[K =
+      |       [01;36m[K^~~[m[K
+In file included from [01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/src/eskf.cpp:1[m[K:
+[01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/include/eskf/Node.hpp:32:39:[m[K [01;31m[Kerror: [m[K‘[01m[KImu[m[K’ is not a member of ‘[01m[Ksensor_msgs[m[K’; did you mean ‘[01m[Ksensor_msgs::msg::Imu[m[K’?
+   32 |     rclcpp::Subscription<sensor_msgs::[01;31m[KImu[m[K>::SharedPtr subImu_;
+      |                                       [01;31m[K^~~[m[K
+In file included from [01m[K/opt/ros/foxy/include/sensor_msgs/msg/imu.hpp:7[m[K,
+                 from [01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/include/eskf/Node.hpp:5[m[K,
+                 from [01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/src/eskf.cpp:1[m[K:
+[01m[K/opt/ros/foxy/include/sensor_msgs/msg/detail/imu__struct.hpp:216:7:[m[K [01;36m[Knote: [m[K‘[01m[Ksensor_msgs::msg::Imu[m[K’ declared here
+  216 | using [01;36m[KImu[m[K =
+      |       [01;36m[K^~~[m[K
+In file included from [01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/src/eskf.cpp:1[m[K:
+[01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/include/eskf/Node.hpp:32:42:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+   32 |     rclcpp::Subscription<sensor_msgs::Imu[01;31m[K>[m[K::SharedPtr subImu_;
+      |                                          [01;31m[K^[m[K
+[01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/include/eskf/Node.hpp:32:42:[m[K [01;31m[Kerror: [m[Ktemplate argument 3 is invalid
+[01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/include/eskf/Node.hpp:32:45:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K;[m[K’ at end of member declaration
+   32 |     rclcpp::Subscription<sensor_msgs::Imu>::[01;31m[KSharedPtr[m[K subImu_;
+      |                                             [01;31m[K^~~~~~~~~[m[K
+      |                                                      [32m[K;[m[K
+[01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/include/eskf/Node.hpp:32:45:[m[K [01;31m[Kerror: [m[Kredeclaration of ‘[01m[Kint eskf::Node::SharedPtr[m[K’
+[01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/include/eskf/Node.hpp:29:44:[m[K [01;36m[Knote: [m[Kprevious declaration ‘[01m[Kint eskf::Node::SharedPtr[m[K’
+   29 |     rclcpp::Publisher<nav_msgs::Odometry>::[01;36m[KSharedPtr[m[K pubPose;
+      |                                            [01;36m[K^~~~~~~~~[m[K
+[01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/include/eskf/Node.hpp:29:54:[m[K [01;31m[Kerror: [m[K‘[01m[KpubPose[m[K’ does not name a type
+   29 |     rclcpp::Publisher<nav_msgs::Odometry>::SharedPtr [01;31m[KpubPose[m[K;
+      |                                                      [01;31m[K^~~~~~~[m[K
+[01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/include/eskf/Node.hpp:32:55:[m[K [01;31m[Kerror: [m[K‘[01m[KsubImu_[m[K’ does not name a type
+   32 |     rclcpp::Subscription<sensor_msgs::Imu>::SharedPtr [01;31m[KsubImu_[m[K;
+      |                                                       [01;31m[K^~~~~~~[m[K
+[01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/include/eskf/Node.hpp:32:39:[m[K [01;31m[Kerror: [m[K‘[01m[KImu[m[K’ is not a member of ‘[01m[Ksensor_msgs[m[K’; did you mean ‘[01m[Ksensor_msgs::msg::Imu[m[K’?
+   32 |     rclcpp::Subscription<sensor_msgs::[01;31m[KImu[m[K>::SharedPtr subImu_;
+      |                                       [01;31m[K^~~[m[K
+In file included from [01m[K/opt/ros/foxy/include/sensor_msgs/msg/imu.hpp:7[m[K,
+                 from [01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/include/eskf/Node.hpp:5[m[K,
+                 from [01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/src/Node.cpp:1[m[K:
+[01m[K/opt/ros/foxy/include/sensor_msgs/msg/detail/imu__struct.hpp:216:7:[m[K [01;36m[Knote: [m[K‘[01m[Ksensor_msgs::msg::Imu[m[K’ declared here
+  216 | using [01;36m[KImu[m[K =
+      |       [01;36m[K^~~[m[K
+In file included from [01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/src/Node.cpp:1[m[K:
+[01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/include/eskf/Node.hpp:32:39:[m[K [01;31m[Kerror: [m[K‘[01m[KImu[m[K’ is not a member of ‘[01m[Ksensor_msgs[m[K’; did you mean ‘[01m[Ksensor_msgs::msg::Imu[m[K’?
+   32 |     rclcpp::Subscription<sensor_msgs::[01;31m[KImu[m[K>::SharedPtr subImu_;
+      |                                       [01;31m[K^~~[m[K
+In file included from [01m[K/opt/ros/foxy/include/sensor_msgs/msg/imu.hpp:7[m[K,
+                 from [01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/include/eskf/Node.hpp:5[m[K,
+                 from [01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/src/Node.cpp:1[m[K:
+[01m[K/opt/ros/foxy/include/sensor_msgs/msg/detail/imu__struct.hpp:216:7:[m[K [01;36m[Knote: [m[K‘[01m[Ksensor_msgs::msg::Imu[m[K’ declared here
+  216 | using [01;36m[KImu[m[K =
+      |       [01;36m[K^~~[m[K
+In file included from [01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/src/Node.cpp:1[m[K:
+[01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/include/eskf/Node.hpp:32:42:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+   32 |     rclcpp::Subscription<sensor_msgs::Imu[01;31m[K>[m[K::SharedPtr subImu_;
+      |                                          [01;31m[K^[m[K
+[01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/include/eskf/Node.hpp:33:41:[m[K [01;31m[Kerror: [m[K‘[01m[KPoseWithCovarianceStamped[m[K’ is not a member of ‘[01m[Kgeometry_msgs[m[K’; did you mean ‘[01m[Kgeometry_msgs::msg::PoseWithCovarianceStamped[m[K’?
+   33 |     rclcpp::Subscription<geometry_msgs::[01;31m[KPoseWithCovarianceStamped[m[K>::SharedPtr subVisionPose_;
+      |                                         [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/include/eskf/Node.hpp:32:42:[m[K [01;31m[Kerror: [m[Ktemplate argument 3 is invalid
+[01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/include/eskf/Node.hpp:32:45:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K;[m[K’ at end of member declaration
+   32 |     rclcpp::Subscription<sensor_msgs::Imu>::[01;31m[KSharedPtr[m[K subImu_;
+      |                                             [01;31m[K^~~~~~~~~[m[K
+      |                                                      [32m[K;[m[K
+[01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/include/eskf/Node.hpp:32:45:[m[K [01;31m[Kerror: [m[Kredeclaration of ‘[01m[Kint eskf::Node::SharedPtr[m[K’
+[01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/include/eskf/Node.hpp:29:44:[m[K [01;36m[Knote: [m[Kprevious declaration ‘[01m[Kint eskf::Node::SharedPtr[m[K’
+   29 |     rclcpp::Publisher<nav_msgs::Odometry>::[01;36m[KSharedPtr[m[K pubPose;
+      |                                            [01;36m[K^~~~~~~~~[m[K
+In file included from [01m[K/opt/ros/foxy/include/geometry_msgs/msg/pose_with_covariance_stamped.hpp:7[m[K,
+                 from [01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/include/eskf/Node.hpp:10[m[K,
+                 from [01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/src/eskf.cpp:1[m[K:
+[01m[K/opt/ros/foxy/include/geometry_msgs/msg/detail/pose_with_covariance_stamped__struct.hpp:134:7:[m[K [01;36m[Knote: [m[K‘[01m[Kgeometry_msgs::msg::PoseWithCovarianceStamped[m[K’ declared here
+  134 | using [01;36m[KPoseWithCovarianceStamped[m[K =
+      |       [01;36m[K^~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+In file included from [01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/src/eskf.cpp:1[m[K:
+[01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/include/eskf/Node.hpp:33:41:[m[K [01;31m[Kerror: [m[K‘[01m[KPoseWithCovarianceStamped[m[K’ is not a member of ‘[01m[Kgeometry_msgs[m[K’; did you mean ‘[01m[Kgeometry_msgs::msg::PoseWithCovarianceStamped[m[K’?
+   33 |     rclcpp::Subscription<geometry_msgs::[01;31m[KPoseWithCovarianceStamped[m[K>::SharedPtr subVisionPose_;
+      |                                         [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+In file included from [01m[K/opt/ros/foxy/include/geometry_msgs/msg/pose_with_covariance_stamped.hpp:7[m[K,
+                 from [01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/include/eskf/Node.hpp:10[m[K,
+                 from [01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/src/eskf.cpp:1[m[K:
+[01m[K/opt/ros/foxy/include/geometry_msgs/msg/detail/pose_with_covariance_stamped__struct.hpp:134:7:[m[K [01;36m[Knote: [m[K‘[01m[Kgeometry_msgs::msg::PoseWithCovarianceStamped[m[K’ declared here
+  134 | using [01;36m[KPoseWithCovarianceStamped[m[K =
+      |       [01;36m[K^~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+In file included from [01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/src/eskf.cpp:1[m[K:
+[01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/include/eskf/Node.hpp:33:66:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+   33 |     rclcpp::Subscription<geometry_msgs::PoseWithCovarianceStamped[01;31m[K>[m[K::SharedPtr subVisionPose_;
+      |                                                                  [01;31m[K^[m[K
+[01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/include/eskf/Node.hpp:33:66:[m[K [01;31m[Kerror: [m[Ktemplate argument 3 is invalid
+[01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/include/eskf/Node.hpp:33:69:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K;[m[K’ at end of member declaration
+   33 |     rclcpp::Subscription<geometry_msgs::PoseWithCovarianceStamped>::[01;31m[KSharedPtr[m[K subVisionPose_;
+      |                                                                     [01;31m[K^~~~~~~~~[m[K
+      |                                                                              [32m[K;[m[K
+[01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/include/eskf/Node.hpp:33:69:[m[K [01;31m[Kerror: [m[Kredeclaration of ‘[01m[Kint eskf::Node::SharedPtr[m[K’
+[01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/include/eskf/Node.hpp:29:44:[m[K [01;36m[Knote: [m[Kprevious declaration ‘[01m[Kint eskf::Node::SharedPtr[m[K’
+   29 |     rclcpp::Publisher<nav_msgs::Odometry>::[01;36m[KSharedPtr[m[K pubPose;
+      |                                            [01;36m[K^~~~~~~~~[m[K
+[01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/include/eskf/Node.hpp:32:55:[m[K [01;31m[Kerror: [m[K‘[01m[KsubImu_[m[K’ does not name a type
+   32 |     rclcpp::Subscription<sensor_msgs::Imu>::SharedPtr [01;31m[KsubImu_[m[K;
+      |                                                       [01;31m[K^~~~~~~[m[K
+[01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/include/eskf/Node.hpp:33:41:[m[K [01;31m[Kerror: [m[K‘[01m[KPoseWithCovarianceStamped[m[K’ is not a member of ‘[01m[Kgeometry_msgs[m[K’; did you mean ‘[01m[Kgeometry_msgs::msg::PoseWithCovarianceStamped[m[K’?
+   33 |     rclcpp::Subscription<geometry_msgs::[01;31m[KPoseWithCovarianceStamped[m[K>::SharedPtr subVisionPose_;
+      |                                         [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+In file included from [01m[K/opt/ros/foxy/include/geometry_msgs/msg/pose_with_covariance_stamped.hpp:7[m[K,
+                 from [01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/include/eskf/Node.hpp:10[m[K,
+                 from [01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/src/Node.cpp:1[m[K:
+[01m[K/opt/ros/foxy/include/geometry_msgs/msg/detail/pose_with_covariance_stamped__struct.hpp:134:7:[m[K [01;36m[Knote: [m[K‘[01m[Kgeometry_msgs::msg::PoseWithCovarianceStamped[m[K’ declared here
+  134 | using [01;36m[KPoseWithCovarianceStamped[m[K =
+      |       [01;36m[K^~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+In file included from [01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/src/Node.cpp:1[m[K:
+[01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/include/eskf/Node.hpp:33:41:[m[K [01;31m[Kerror: [m[K‘[01m[KPoseWithCovarianceStamped[m[K’ is not a member of ‘[01m[Kgeometry_msgs[m[K’; did you mean ‘[01m[Kgeometry_msgs::msg::PoseWithCovarianceStamped[m[K’?
+   33 |     rclcpp::Subscription<geometry_msgs::[01;31m[KPoseWithCovarianceStamped[m[K>::SharedPtr subVisionPose_;
+      |                                         [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+In file included from [01m[K/opt/ros/foxy/include/geometry_msgs/msg/pose_with_covariance_stamped.hpp:7[m[K,
+                 from [01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/include/eskf/Node.hpp:10[m[K,
+                 from [01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/src/Node.cpp:1[m[K:
+[01m[K/opt/ros/foxy/include/geometry_msgs/msg/detail/pose_with_covariance_stamped__struct.hpp:134:7:[m[K [01;36m[Knote: [m[K‘[01m[Kgeometry_msgs::msg::PoseWithCovarianceStamped[m[K’ declared here
+  134 | using [01;36m[KPoseWithCovarianceStamped[m[K =
+      |       [01;36m[K^~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+In file included from [01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/src/Node.cpp:1[m[K:
+[01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/include/eskf/Node.hpp:33:66:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+   33 |     rclcpp::Subscription<geometry_msgs::PoseWithCovarianceStamped[01;31m[K>[m[K::SharedPtr subVisionPose_;
+      |                                                                  [01;31m[K^[m[K
+[01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/include/eskf/Node.hpp:33:66:[m[K [01;31m[Kerror: [m[Ktemplate argument 3 is invalid
+[01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/include/eskf/Node.hpp:33:69:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K;[m[K’ at end of member declaration
+   33 |     rclcpp::Subscription<geometry_msgs::PoseWithCovarianceStamped>::[01;31m[KSharedPtr[m[K subVisionPose_;
+      |                                                                     [01;31m[K^~~~~~~~~[m[K
+      |                                                                              [32m[K;[m[K
+[01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/include/eskf/Node.hpp:33:69:[m[K [01;31m[Kerror: [m[Kredeclaration of ‘[01m[Kint eskf::Node::SharedPtr[m[K’
+[01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/include/eskf/Node.hpp:29:44:[m[K [01;36m[Knote: [m[Kprevious declaration ‘[01m[Kint eskf::Node::SharedPtr[m[K’
+   29 |     rclcpp::Publisher<nav_msgs::Odometry>::[01;36m[KSharedPtr[m[K pubPose;
+      |                                            [01;36m[K^~~~~~~~~[m[K
+[01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/include/eskf/Node.hpp:33:79:[m[K [01;31m[Kerror: [m[K‘[01m[KsubVisionPose_[m[K’ does not name a type
+   33 |     rclcpp::Subscription<geometry_msgs::PoseWithCovarianceStamped>::SharedPtr [01;31m[KsubVisionPose_[m[K;
+      |                                                                               [01;31m[K^~~~~~~~~~~~~~[m[K
+[01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/include/eskf/Node.hpp:34:36:[m[K [01;31m[Kerror: [m[K‘[01m[KOdometry[m[K’ is not a member of ‘[01m[Knav_msgs[m[K’; did you mean ‘[01m[Knav_msgs::msg::Odometry[m[K’?
+   34 |     rclcpp::Subscription<nav_msgs::[01;31m[KOdometry[m[K>::SharedPtr subGpsPose_;
+      |                                    [01;31m[K^~~~~~~~[m[K
+In file included from [01m[K/opt/ros/foxy/include/nav_msgs/msg/odometry.hpp:7[m[K,
+                 from [01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/include/eskf/Node.hpp:8[m[K,
+                 from [01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/src/eskf.cpp:1[m[K:
+[01m[K/opt/ros/foxy/include/nav_msgs/msg/detail/odometry__struct.hpp:171:7:[m[K [01;36m[Knote: [m[K‘[01m[Knav_msgs::msg::Odometry[m[K’ declared here
+  171 | using [01;36m[KOdometry[m[K =
+      |       [01;36m[K^~~~~~~~[m[K
+In file included from [01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/src/eskf.cpp:1[m[K:
+[01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/include/eskf/Node.hpp:34:36:[m[K [01;31m[Kerror: [m[K‘[01m[KOdometry[m[K’ is not a member of ‘[01m[Knav_msgs[m[K’; did you mean ‘[01m[Knav_msgs::msg::Odometry[m[K’?
+   34 |     rclcpp::Subscription<nav_msgs::[01;31m[KOdometry[m[K>::SharedPtr subGpsPose_;
+      |                                    [01;31m[K^~~~~~~~[m[K
+In file included from [01m[K/opt/ros/foxy/include/nav_msgs/msg/odometry.hpp:7[m[K,
+                 from [01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/include/eskf/Node.hpp:8[m[K,
+                 from [01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/src/eskf.cpp:1[m[K:
+[01m[K/opt/ros/foxy/include/nav_msgs/msg/detail/odometry__struct.hpp:171:7:[m[K [01;36m[Knote: [m[K‘[01m[Knav_msgs::msg::Odometry[m[K’ declared here
+  171 | using [01;36m[KOdometry[m[K =
+      |       [01;36m[K^~~~~~~~[m[K
+In file included from [01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/src/eskf.cpp:1[m[K:
+[01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/include/eskf/Node.hpp:34:44:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+   34 |     rclcpp::Subscription<nav_msgs::Odometry[01;31m[K>[m[K::SharedPtr subGpsPose_;
+      |                                            [01;31m[K^[m[K
+[01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/include/eskf/Node.hpp:34:44:[m[K [01;31m[Kerror: [m[Ktemplate argument 3 is invalid
+[01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/include/eskf/Node.hpp:34:47:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K;[m[K’ at end of member declaration
+   34 |     rclcpp::Subscription<nav_msgs::Odometry>::[01;31m[KSharedPtr[m[K subGpsPose_;
+      |                                               [01;31m[K^~~~~~~~~[m[K
+      |                                                        [32m[K;[m[K
+[01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/include/eskf/Node.hpp:34:47:[m[K [01;31m[Kerror: [m[Kredeclaration of ‘[01m[Kint eskf::Node::SharedPtr[m[K’
+[01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/include/eskf/Node.hpp:29:44:[m[K [01;36m[Knote: [m[Kprevious declaration ‘[01m[Kint eskf::Node::SharedPtr[m[K’
+   29 |     rclcpp::Publisher<nav_msgs::Odometry>::[01;36m[KSharedPtr[m[K pubPose;
+      |                                            [01;36m[K^~~~~~~~~[m[K
+[01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/include/eskf/Node.hpp:33:79:[m[K [01;31m[Kerror: [m[K‘[01m[KsubVisionPose_[m[K’ does not name a type
+   33 |     rclcpp::Subscription<geometry_msgs::PoseWithCovarianceStamped>::SharedPtr [01;31m[KsubVisionPose_[m[K;
+      |                                                                               [01;31m[K^~~~~~~~~~~~~~[m[K
+[01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/include/eskf/Node.hpp:34:36:[m[K [01;31m[Kerror: [m[K‘[01m[KOdometry[m[K’ is not a member of ‘[01m[Knav_msgs[m[K’; did you mean ‘[01m[Knav_msgs::msg::Odometry[m[K’?
+   34 |     rclcpp::Subscription<nav_msgs::[01;31m[KOdometry[m[K>::SharedPtr subGpsPose_;
+      |                                    [01;31m[K^~~~~~~~[m[K
+In file included from [01m[K/opt/ros/foxy/include/nav_msgs/msg/odometry.hpp:7[m[K,
+                 from [01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/include/eskf/Node.hpp:8[m[K,
+                 from [01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/src/Node.cpp:1[m[K:
+[01m[K/opt/ros/foxy/include/nav_msgs/msg/detail/odometry__struct.hpp:171:7:[m[K [01;36m[Knote: [m[K‘[01m[Knav_msgs::msg::Odometry[m[K’ declared here
+  171 | using [01;36m[KOdometry[m[K =
+      |       [01;36m[K^~~~~~~~[m[K
+In file included from [01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/src/Node.cpp:1[m[K:
+[01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/include/eskf/Node.hpp:34:36:[m[K [01;31m[Kerror: [m[K‘[01m[KOdometry[m[K’ is not a member of ‘[01m[Knav_msgs[m[K’; did you mean ‘[01m[Knav_msgs::msg::Odometry[m[K’?
+   34 |     rclcpp::Subscription<nav_msgs::[01;31m[KOdometry[m[K>::SharedPtr subGpsPose_;
+      |                                    [01;31m[K^~~~~~~~[m[K
+In file included from [01m[K/opt/ros/foxy/include/nav_msgs/msg/odometry.hpp:7[m[K,
+                 from [01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/include/eskf/Node.hpp:8[m[K,
+                 from [01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/src/Node.cpp:1[m[K:
+[01m[K/opt/ros/foxy/include/nav_msgs/msg/detail/odometry__struct.hpp:171:7:[m[K [01;36m[Knote: [m[K‘[01m[Knav_msgs::msg::Odometry[m[K’ declared here
+  171 | using [01;36m[KOdometry[m[K =
+      |       [01;36m[K^~~~~~~~[m[K
+In file included from [01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/src/Node.cpp:1[m[K:
+[01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/include/eskf/Node.hpp:34:44:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+   34 |     rclcpp::Subscription<nav_msgs::Odometry[01;31m[K>[m[K::SharedPtr subGpsPose_;
+      |                                            [01;31m[K^[m[K
+[01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/include/eskf/Node.hpp:34:44:[m[K [01;31m[Kerror: [m[Ktemplate argument 3 is invalid
+[01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/include/eskf/Node.hpp:34:47:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K;[m[K’ at end of member declaration
+   34 |     rclcpp::Subscription<nav_msgs::Odometry>::[01;31m[KSharedPtr[m[K subGpsPose_;
+      |                                               [01;31m[K^~~~~~~~~[m[K
+      |                                                        [32m[K;[m[K
+[01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/include/eskf/Node.hpp:34:47:[m[K [01;31m[Kerror: [m[Kredeclaration of ‘[01m[Kint eskf::Node::SharedPtr[m[K’
+[01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/include/eskf/Node.hpp:29:44:[m[K [01;36m[Knote: [m[Kprevious declaration ‘[01m[Kint eskf::Node::SharedPtr[m[K’
+   29 |     rclcpp::Publisher<nav_msgs::Odometry>::[01;36m[KSharedPtr[m[K pubPose;
+      |                                            [01;36m[K^~~~~~~~~[m[K
+[01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/include/eskf/Node.hpp:34:57:[m[K [01;31m[Kerror: [m[K‘[01m[KsubGpsPose_[m[K’ does not name a type
+   34 |     rclcpp::Subscription<nav_msgs::Odometry>::SharedPtr [01;31m[KsubGpsPose_[m[K;
+      |                                                         [01;31m[K^~~~~~~~~~~[m[K
+[01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/include/eskf/Node.hpp:35:52:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+   35 |     rclcpp::Subscription<mavros_msgs:OpticalFlowRad[01;31m[K>[m[K::SharedPtr subOpticalFlowPose_;
+      |                                                    [01;31m[K^[m[K
+[01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/include/eskf/Node.hpp:35:52:[m[K [01;31m[Kerror: [m[Ktemplate argument 3 is invalid
+[01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/include/eskf/Node.hpp:35:55:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K;[m[K’ at end of member declaration
+   35 |     rclcpp::Subscription<mavros_msgs:OpticalFlowRad>::[01;31m[KSharedPtr[m[K subOpticalFlowPose_;
+      |                                                       [01;31m[K^~~~~~~~~[m[K
+      |                                                                [32m[K;[m[K
+[01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/include/eskf/Node.hpp:35:55:[m[K [01;31m[Kerror: [m[Kredeclaration of ‘[01m[Kint eskf::Node::SharedPtr[m[K’
+[01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/include/eskf/Node.hpp:29:44:[m[K [01;36m[Knote: [m[Kprevious declaration ‘[01m[Kint eskf::Node::SharedPtr[m[K’
+   29 |     rclcpp::Publisher<nav_msgs::Odometry>::[01;36m[KSharedPtr[m[K pubPose;
+      |                                            [01;36m[K^~~~~~~~~[m[K
+[01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/include/eskf/Node.hpp:34:57:[m[K [01;31m[Kerror: [m[K‘[01m[KsubGpsPose_[m[K’ does not name a type
+   34 |     rclcpp::Subscription<nav_msgs::Odometry>::SharedPtr [01;31m[KsubGpsPose_[m[K;
+      |                                                         [01;31m[K^~~~~~~~~~~[m[K
+[01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/include/eskf/Node.hpp:35:52:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+   35 |     rclcpp::Subscription<mavros_msgs:OpticalFlowRad[01;31m[K>[m[K::SharedPtr subOpticalFlowPose_;
+      |                                                    [01;31m[K^[m[K
+[01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/include/eskf/Node.hpp:35:52:[m[K [01;31m[Kerror: [m[Ktemplate argument 3 is invalid
+[01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/include/eskf/Node.hpp:35:55:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K;[m[K’ at end of member declaration
+   35 |     rclcpp::Subscription<mavros_msgs:OpticalFlowRad>::[01;31m[KSharedPtr[m[K subOpticalFlowPose_;
+      |                                                       [01;31m[K^~~~~~~~~[m[K
+      |                                                                [32m[K;[m[K
+[01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/include/eskf/Node.hpp:35:55:[m[K [01;31m[Kerror: [m[Kredeclaration of ‘[01m[Kint eskf::Node::SharedPtr[m[K’
+[01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/include/eskf/Node.hpp:29:44:[m[K [01;36m[Knote: [m[Kprevious declaration ‘[01m[Kint eskf::Node::SharedPtr[m[K’
+   29 |     rclcpp::Publisher<nav_msgs::Odometry>::[01;36m[KSharedPtr[m[K pubPose;
+      |                                            [01;36m[K^~~~~~~~~[m[K
+[01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/include/eskf/Node.hpp:35:65:[m[K [01;31m[Kerror: [m[K‘[01m[KsubOpticalFlowPose_[m[K’ does not name a type
+   35 |     rclcpp::Subscription<mavros_msgs:OpticalFlowRad>::SharedPtr [01;31m[KsubOpticalFlowPose_[m[K;
+      |                                                                 [01;31m[K^~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/include/eskf/Node.hpp:36:39:[m[K [01;31m[Kerror: [m[K‘[01m[KMagneticField[m[K’ is not a member of ‘[01m[Ksensor_msgs[m[K’; did you mean ‘[01m[Ksensor_msgs::msg::MagneticField[m[K’?
+   36 |     rclcpp::Subscription<sensor_msgs::[01;31m[KMagneticField[m[K>::SharedPtr subMagPose_;
+      |                                       [01;31m[K^~~~~~~~~~~~~[m[K
+In file included from [01m[K/opt/ros/foxy/include/sensor_msgs/msg/magnetic_field.hpp:7[m[K,
+                 from [01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/include/eskf/Node.hpp:6[m[K,
+                 from [01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/src/eskf.cpp:1[m[K:
+[01m[K/opt/ros/foxy/include/sensor_msgs/msg/detail/magnetic_field__struct.hpp:155:7:[m[K [01;36m[Knote: [m[K‘[01m[Ksensor_msgs::msg::MagneticField[m[K’ declared here
+  155 | using [01;36m[KMagneticField[m[K =
+      |       [01;36m[K^~~~~~~~~~~~~[m[K
+In file included from [01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/src/eskf.cpp:1[m[K:
+[01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/include/eskf/Node.hpp:36:39:[m[K [01;31m[Kerror: [m[K‘[01m[KMagneticField[m[K’ is not a member of ‘[01m[Ksensor_msgs[m[K’; did you mean ‘[01m[Ksensor_msgs::msg::MagneticField[m[K’?
+   36 |     rclcpp::Subscription<sensor_msgs::[01;31m[KMagneticField[m[K>::SharedPtr subMagPose_;
+      |                                       [01;31m[K^~~~~~~~~~~~~[m[K
+In file included from [01m[K/opt/ros/foxy/include/sensor_msgs/msg/magnetic_field.hpp:7[m[K,
+                 from [01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/include/eskf/Node.hpp:6[m[K,
+                 from [01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/src/eskf.cpp:1[m[K:
+[01m[K/opt/ros/foxy/include/sensor_msgs/msg/detail/magnetic_field__struct.hpp:155:7:[m[K [01;36m[Knote: [m[K‘[01m[Ksensor_msgs::msg::MagneticField[m[K’ declared here
+  155 | using [01;36m[KMagneticField[m[K =
+      |       [01;36m[K^~~~~~~~~~~~~[m[K
+In file included from [01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/src/eskf.cpp:1[m[K:
+[01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/include/eskf/Node.hpp:36:52:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+   36 |     rclcpp::Subscription<sensor_msgs::MagneticField[01;31m[K>[m[K::SharedPtr subMagPose_;
+      |                                                    [01;31m[K^[m[K
+[01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/include/eskf/Node.hpp:36:52:[m[K [01;31m[Kerror: [m[Ktemplate argument 3 is invalid
+[01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/include/eskf/Node.hpp:36:55:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K;[m[K’ at end of member declaration
+   36 |     rclcpp::Subscription<sensor_msgs::MagneticField>::[01;31m[KSharedPtr[m[K subMagPose_;
+      |                                                       [01;31m[K^~~~~~~~~[m[K
+      |                                                                [32m[K;[m[K
+[01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/include/eskf/Node.hpp:36:55:[m[K [01;31m[Kerror: [m[Kredeclaration of ‘[01m[Kint eskf::Node::SharedPtr[m[K’
+[01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/include/eskf/Node.hpp:29:44:[m[K [01;36m[Knote: [m[Kprevious declaration ‘[01m[Kint eskf::Node::SharedPtr[m[K’
+   29 |     rclcpp::Publisher<nav_msgs::Odometry>::[01;36m[KSharedPtr[m[K pubPose;
+      |                                            [01;36m[K^~~~~~~~~[m[K
+[01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/include/eskf/Node.hpp:35:65:[m[K [01;31m[Kerror: [m[K‘[01m[KsubOpticalFlowPose_[m[K’ does not name a type
+   35 |     rclcpp::Subscription<mavros_msgs:OpticalFlowRad>::SharedPtr [01;31m[KsubOpticalFlowPose_[m[K;
+      |                                                                 [01;31m[K^~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/include/eskf/Node.hpp:36:39:[m[K [01;31m[Kerror: [m[K‘[01m[KMagneticField[m[K’ is not a member of ‘[01m[Ksensor_msgs[m[K’; did you mean ‘[01m[Ksensor_msgs::msg::MagneticField[m[K’?
+   36 |     rclcpp::Subscription<sensor_msgs::[01;31m[KMagneticField[m[K>::SharedPtr subMagPose_;
+      |                                       [01;31m[K^~~~~~~~~~~~~[m[K
+In file included from [01m[K/opt/ros/foxy/include/sensor_msgs/msg/magnetic_field.hpp:7[m[K,
+                 from [01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/include/eskf/Node.hpp:6[m[K,
+                 from [01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/src/Node.cpp:1[m[K:
+[01m[K/opt/ros/foxy/include/sensor_msgs/msg/detail/magnetic_field__struct.hpp:155:7:[m[K [01;36m[Knote: [m[K‘[01m[Ksensor_msgs::msg::MagneticField[m[K’ declared here
+  155 | using [01;36m[KMagneticField[m[K =
+      |       [01;36m[K^~~~~~~~~~~~~[m[K
+[01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/include/eskf/Node.hpp:36:65:[m[K [01;31m[Kerror: [m[K‘[01m[KsubMagPose_[m[K’ does not name a type
+   36 |     rclcpp::Subscription<sensor_msgs::MagneticField>::SharedPtr [01;31m[KsubMagPose_[m[K;
+      |                                                                 [01;31m[K^~~~~~~~~~~[m[K
+In file included from [01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/src/Node.cpp:1[m[K:
+[01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/include/eskf/Node.hpp:36:39:[m[K [01;31m[Kerror: [m[K‘[01m[KMagneticField[m[K’ is not a member of ‘[01m[Ksensor_msgs[m[K’; did you mean ‘[01m[Ksensor_msgs::msg::MagneticField[m[K’?
+   36 |     rclcpp::Subscription<sensor_msgs::[01;31m[KMagneticField[m[K>::SharedPtr subMagPose_;
+      |                                       [01;31m[K^~~~~~~~~~~~~[m[K
+In file included from [01m[K/opt/ros/foxy/include/sensor_msgs/msg/magnetic_field.hpp:7[m[K,
+                 from [01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/include/eskf/Node.hpp:6[m[K,
+                 from [01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/src/Node.cpp:1[m[K:
+[01m[K/opt/ros/foxy/include/sensor_msgs/msg/detail/magnetic_field__struct.hpp:155:7:[m[K [01;36m[Knote: [m[K‘[01m[Ksensor_msgs::msg::MagneticField[m[K’ declared here
+  155 | using [01;36m[KMagneticField[m[K =
+      |       [01;36m[K^~~~~~~~~~~~~[m[K
+In file included from [01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/src/Node.cpp:1[m[K:
+[01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/include/eskf/Node.hpp:36:52:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+   36 |     rclcpp::Subscription<sensor_msgs::MagneticField[01;31m[K>[m[K::SharedPtr subMagPose_;
+      |                                                    [01;31m[K^[m[K
+[01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/include/eskf/Node.hpp:36:52:[m[K [01;31m[Kerror: [m[Ktemplate argument 3 is invalid
+[01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/include/eskf/Node.hpp:36:55:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K;[m[K’ at end of member declaration
+   36 |     rclcpp::Subscription<sensor_msgs::MagneticField>::[01;31m[KSharedPtr[m[K subMagPose_;
+      |                                                       [01;31m[K^~~~~~~~~[m[K
+      |                                                                [32m[K;[m[K
+[01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/include/eskf/Node.hpp:36:55:[m[K [01;31m[Kerror: [m[Kredeclaration of ‘[01m[Kint eskf::Node::SharedPtr[m[K’
+[01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/include/eskf/Node.hpp:29:44:[m[K [01;36m[Knote: [m[Kprevious declaration ‘[01m[Kint eskf::Node::SharedPtr[m[K’
+   29 |     rclcpp::Publisher<nav_msgs::Odometry>::[01;36m[KSharedPtr[m[K pubPose;
+      |                                            [01;36m[K^~~~~~~~~[m[K
+[01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/include/eskf/Node.hpp:37:39:[m[K [01;31m[Kerror: [m[K‘[01m[KExtendedState[m[K’ is not a member of ‘[01m[Kmavros_msgs[m[K’; did you mean ‘[01m[Kmavros_msgs::msg::ExtendedState[m[K’?
+   37 |     rclcpp::Subscription<mavros_msgs::[01;31m[KExtendedState[m[K>::SharedPtr subExtendedState_;
+      |                                       [01;31m[K^~~~~~~~~~~~~[m[K
+In file included from [01m[K/opt/ros/foxy/include/mavros_msgs/msg/extended_state.hpp:7[m[K,
+                 from [01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/include/eskf/Node.hpp:12[m[K,
+                 from [01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/src/eskf.cpp:1[m[K:
+[01m[K/opt/ros/foxy/include/mavros_msgs/msg/detail/extended_state__struct.hpp:172:7:[m[K [01;36m[Knote: [m[K‘[01m[Kmavros_msgs::msg::ExtendedState[m[K’ declared here
+  172 | using [01;36m[KExtendedState[m[K =
+      |       [01;36m[K^~~~~~~~~~~~~[m[K
+In file included from [01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/src/eskf.cpp:1[m[K:
+[01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/include/eskf/Node.hpp:37:39:[m[K [01;31m[Kerror: [m[K‘[01m[KExtendedState[m[K’ is not a member of ‘[01m[Kmavros_msgs[m[K’; did you mean ‘[01m[Kmavros_msgs::msg::ExtendedState[m[K’?
+   37 |     rclcpp::Subscription<mavros_msgs::[01;31m[KExtendedState[m[K>::SharedPtr subExtendedState_;
+      |                                       [01;31m[K^~~~~~~~~~~~~[m[K
+In file included from [01m[K/opt/ros/foxy/include/mavros_msgs/msg/extended_state.hpp:7[m[K,
+                 from [01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/include/eskf/Node.hpp:12[m[K,
+                 from [01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/src/eskf.cpp:1[m[K:
+[01m[K/opt/ros/foxy/include/mavros_msgs/msg/detail/extended_state__struct.hpp:172:7:[m[K [01;36m[Knote: [m[K‘[01m[Kmavros_msgs::msg::ExtendedState[m[K’ declared here
+  172 | using [01;36m[KExtendedState[m[K =
+      |       [01;36m[K^~~~~~~~~~~~~[m[K
+In file included from [01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/src/eskf.cpp:1[m[K:
+[01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/include/eskf/Node.hpp:37:52:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+   37 |     rclcpp::Subscription<mavros_msgs::ExtendedState[01;31m[K>[m[K::SharedPtr subExtendedState_;
+      |                                                    [01;31m[K^[m[K
+[01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/include/eskf/Node.hpp:37:52:[m[K [01;31m[Kerror: [m[Ktemplate argument 3 is invalid
+[01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/include/eskf/Node.hpp:37:55:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K;[m[K’ at end of member declaration
+   37 |     rclcpp::Subscription<mavros_msgs::ExtendedState>::[01;31m[KSharedPtr[m[K subExtendedState_;
+      |                                                       [01;31m[K^~~~~~~~~[m[K
+      |                                                                [32m[K;[m[K
+[01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/include/eskf/Node.hpp:37:55:[m[K [01;31m[Kerror: [m[Kredeclaration of ‘[01m[Kint eskf::Node::SharedPtr[m[K’
+[01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/include/eskf/Node.hpp:29:44:[m[K [01;36m[Knote: [m[Kprevious declaration ‘[01m[Kint eskf::Node::SharedPtr[m[K’
+   29 |     rclcpp::Publisher<nav_msgs::Odometry>::[01;36m[KSharedPtr[m[K pubPose;
+      |                                            [01;36m[K^~~~~~~~~[m[K
+[01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/include/eskf/Node.hpp:36:65:[m[K [01;31m[Kerror: [m[K‘[01m[KsubMagPose_[m[K’ does not name a type
+   36 |     rclcpp::Subscription<sensor_msgs::MagneticField>::SharedPtr [01;31m[KsubMagPose_[m[K;
+      |                                                                 [01;31m[K^~~~~~~~~~~[m[K
+[01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/include/eskf/Node.hpp:37:39:[m[K [01;31m[Kerror: [m[K‘[01m[KExtendedState[m[K’ is not a member of ‘[01m[Kmavros_msgs[m[K’; did you mean ‘[01m[Kmavros_msgs::msg::ExtendedState[m[K’?
+   37 |     rclcpp::Subscription<mavros_msgs::[01;31m[KExtendedState[m[K>::SharedPtr subExtendedState_;
+      |                                       [01;31m[K^~~~~~~~~~~~~[m[K
+In file included from [01m[K/opt/ros/foxy/include/mavros_msgs/msg/extended_state.hpp:7[m[K,
+                 from [01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/include/eskf/Node.hpp:12[m[K,
+                 from [01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/src/Node.cpp:1[m[K:
+[01m[K/opt/ros/foxy/include/mavros_msgs/msg/detail/extended_state__struct.hpp:172:7:[m[K [01;36m[Knote: [m[K‘[01m[Kmavros_msgs::msg::ExtendedState[m[K’ declared here
+  172 | using [01;36m[KExtendedState[m[K =
+      |       [01;36m[K^~~~~~~~~~~~~[m[K
+In file included from [01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/src/Node.cpp:1[m[K:
+[01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/include/eskf/Node.hpp:37:39:[m[K [01;31m[Kerror: [m[K‘[01m[KExtendedState[m[K’ is not a member of ‘[01m[Kmavros_msgs[m[K’; did you mean ‘[01m[Kmavros_msgs::msg::ExtendedState[m[K’?
+   37 |     rclcpp::Subscription<mavros_msgs::[01;31m[KExtendedState[m[K>::SharedPtr subExtendedState_;
+      |                                       [01;31m[K^~~~~~~~~~~~~[m[K
+In file included from [01m[K/opt/ros/foxy/include/mavros_msgs/msg/extended_state.hpp:7[m[K,
+                 from [01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/include/eskf/Node.hpp:12[m[K,
+                 from [01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/src/Node.cpp:1[m[K:
+[01m[K/opt/ros/foxy/include/mavros_msgs/msg/detail/extended_state__struct.hpp:172:7:[m[K [01;36m[Knote: [m[K‘[01m[Kmavros_msgs::msg::ExtendedState[m[K’ declared here
+  172 | using [01;36m[KExtendedState[m[K =
+      |       [01;36m[K^~~~~~~~~~~~~[m[K
+In file included from [01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/src/Node.cpp:1[m[K:
+[01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/include/eskf/Node.hpp:37:52:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+   37 |     rclcpp::Subscription<mavros_msgs::ExtendedState[01;31m[K>[m[K::SharedPtr subExtendedState_;
+      |                                                    [01;31m[K^[m[K
+[01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/include/eskf/Node.hpp:37:52:[m[K [01;31m[Kerror: [m[Ktemplate argument 3 is invalid
+[01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/include/eskf/Node.hpp:37:55:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K;[m[K’ at end of member declaration
+   37 |     rclcpp::Subscription<mavros_msgs::ExtendedState>::[01;31m[KSharedPtr[m[K subExtendedState_;
+      |                                                       [01;31m[K^~~~~~~~~[m[K
+      |                                                                [32m[K;[m[K
+[01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/include/eskf/Node.hpp:37:55:[m[K [01;31m[Kerror: [m[Kredeclaration of ‘[01m[Kint eskf::Node::SharedPtr[m[K’
+[01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/include/eskf/Node.hpp:29:44:[m[K [01;36m[Knote: [m[Kprevious declaration ‘[01m[Kint eskf::Node::SharedPtr[m[K’
+   29 |     rclcpp::Publisher<nav_msgs::Odometry>::[01;36m[KSharedPtr[m[K pubPose;
+      |                                            [01;36m[K^~~~~~~~~[m[K
+[01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/include/eskf/Node.hpp:37:65:[m[K [01;31m[Kerror: [m[K‘[01m[KsubExtendedState_[m[K’ does not name a type
+   37 |     rclcpp::Subscription<mavros_msgs::ExtendedState>::SharedPtr [01;31m[KsubExtendedState_[m[K;
+      |                                                                 [01;31m[K^~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/include/eskf/Node.hpp:38:39:[m[K [01;31m[Kerror: [m[K‘[01m[KRange[m[K’ is not a member of ‘[01m[Ksensor_msgs[m[K’; did you mean ‘[01m[Ksensor_msgs::msg::Range[m[K’?
+   38 |     rclcpp::Subscription<sensor_msgs::[01;31m[KRange[m[K>::SharedPtr subRangeFinderPose_;
+      |                                       [01;31m[K^~~~~[m[K
+In file included from [01m[K/opt/ros/foxy/include/sensor_msgs/msg/range.hpp:7[m[K,
+                 from [01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/include/eskf/Node.hpp:7[m[K,
+                 from [01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/src/eskf.cpp:1[m[K:
+[01m[K/opt/ros/foxy/include/sensor_msgs/msg/detail/range__struct.hpp:198:7:[m[K [01;36m[Knote: [m[K‘[01m[Ksensor_msgs::msg::Range[m[K’ declared here
+  198 | using [01;36m[KRange[m[K =
+      |       [01;36m[K^~~~~[m[K
+In file included from [01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/src/eskf.cpp:1[m[K:
+[01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/include/eskf/Node.hpp:38:39:[m[K [01;31m[Kerror: [m[K‘[01m[KRange[m[K’ is not a member of ‘[01m[Ksensor_msgs[m[K’; did you mean ‘[01m[Ksensor_msgs::msg::Range[m[K’?
+   38 |     rclcpp::Subscription<sensor_msgs::[01;31m[KRange[m[K>::SharedPtr subRangeFinderPose_;
+      |                                       [01;31m[K^~~~~[m[K
+In file included from [01m[K/opt/ros/foxy/include/sensor_msgs/msg/range.hpp:7[m[K,
+                 from [01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/include/eskf/Node.hpp:7[m[K,
+                 from [01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/src/eskf.cpp:1[m[K:
+[01m[K/opt/ros/foxy/include/sensor_msgs/msg/detail/range__struct.hpp:198:7:[m[K [01;36m[Knote: [m[K‘[01m[Ksensor_msgs::msg::Range[m[K’ declared here
+  198 | using [01;36m[KRange[m[K =
+      |       [01;36m[K^~~~~[m[K
+In file included from [01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/src/eskf.cpp:1[m[K:
+[01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/include/eskf/Node.hpp:38:44:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+   38 |     rclcpp::Subscription<sensor_msgs::Range[01;31m[K>[m[K::SharedPtr subRangeFinderPose_;
+      |                                            [01;31m[K^[m[K
+[01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/include/eskf/Node.hpp:38:44:[m[K [01;31m[Kerror: [m[Ktemplate argument 3 is invalid
+[01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/include/eskf/Node.hpp:38:47:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K;[m[K’ at end of member declaration
+   38 |     rclcpp::Subscription<sensor_msgs::Range>::[01;31m[KSharedPtr[m[K subRangeFinderPose_;
+      |                                               [01;31m[K^~~~~~~~~[m[K
+      |                                                        [32m[K;[m[K
+[01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/include/eskf/Node.hpp:38:47:[m[K [01;31m[Kerror: [m[Kredeclaration of ‘[01m[Kint eskf::Node::SharedPtr[m[K’
+[01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/include/eskf/Node.hpp:29:44:[m[K [01;36m[Knote: [m[Kprevious declaration ‘[01m[Kint eskf::Node::SharedPtr[m[K’
+   29 |     rclcpp::Publisher<nav_msgs::Odometry>::[01;36m[KSharedPtr[m[K pubPose;
+      |                                            [01;36m[K^~~~~~~~~[m[K
+[01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/include/eskf/Node.hpp:37:65:[m[K [01;31m[Kerror: [m[K‘[01m[KsubExtendedState_[m[K’ does not name a type
+   37 |     rclcpp::Subscription<mavros_msgs::ExtendedState>::SharedPtr [01;31m[KsubExtendedState_[m[K;
+      |                                                                 [01;31m[K^~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/include/eskf/Node.hpp:38:39:[m[K [01;31m[Kerror: [m[K‘[01m[KRange[m[K’ is not a member of ‘[01m[Ksensor_msgs[m[K’; did you mean ‘[01m[Ksensor_msgs::msg::Range[m[K’?
+   38 |     rclcpp::Subscription<sensor_msgs::[01;31m[KRange[m[K>::SharedPtr subRangeFinderPose_;
+      |                                       [01;31m[K^~~~~[m[K
+In file included from [01m[K/opt/ros/foxy/include/sensor_msgs/msg/range.hpp:7[m[K,
+                 from [01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/include/eskf/Node.hpp:7[m[K,
+                 from [01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/src/Node.cpp:1[m[K:
+[01m[K/opt/ros/foxy/include/sensor_msgs/msg/detail/range__struct.hpp:198:7:[m[K [01;36m[Knote: [m[K‘[01m[Ksensor_msgs::msg::Range[m[K’ declared here
+  198 | using [01;36m[KRange[m[K =
+      |       [01;36m[K^~~~~[m[K
+In file included from [01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/src/Node.cpp:1[m[K:
+[01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/include/eskf/Node.hpp:38:39:[m[K [01;31m[Kerror: [m[K‘[01m[KRange[m[K’ is not a member of ‘[01m[Ksensor_msgs[m[K’; did you mean ‘[01m[Ksensor_msgs::msg::Range[m[K’?
+   38 |     rclcpp::Subscription<sensor_msgs::[01;31m[KRange[m[K>::SharedPtr subRangeFinderPose_;
+      |                                       [01;31m[K^~~~~[m[K
+In file included from [01m[K/opt/ros/foxy/include/sensor_msgs/msg/range.hpp:7[m[K,
+                 from [01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/include/eskf/Node.hpp:7[m[K,
+                 from [01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/src/Node.cpp:1[m[K:
+[01m[K/opt/ros/foxy/include/sensor_msgs/msg/detail/range__struct.hpp:198:7:[m[K [01;36m[Knote: [m[K‘[01m[Ksensor_msgs::msg::Range[m[K’ declared here
+  198 | using [01;36m[KRange[m[K =
+      |       [01;36m[K^~~~~[m[K
+In file included from [01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/src/Node.cpp:1[m[K:
+[01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/include/eskf/Node.hpp:38:44:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+   38 |     rclcpp::Subscription<sensor_msgs::Range[01;31m[K>[m[K::SharedPtr subRangeFinderPose_;
+      |                                            [01;31m[K^[m[K
+[01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/include/eskf/Node.hpp:38:44:[m[K [01;31m[Kerror: [m[Ktemplate argument 3 is invalid
+[01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/include/eskf/Node.hpp:38:47:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K;[m[K’ at end of member declaration
+   38 |     rclcpp::Subscription<sensor_msgs::Range>::[01;31m[KSharedPtr[m[K subRangeFinderPose_;
+      |                                               [01;31m[K^~~~~~~~~[m[K
+      |                                                        [32m[K;[m[K
+[01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/include/eskf/Node.hpp:38:47:[m[K [01;31m[Kerror: [m[Kredeclaration of ‘[01m[Kint eskf::Node::SharedPtr[m[K’
+[01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/include/eskf/Node.hpp:29:44:[m[K [01;36m[Knote: [m[Kprevious declaration ‘[01m[Kint eskf::Node::SharedPtr[m[K’
+   29 |     rclcpp::Publisher<nav_msgs::Odometry>::[01;36m[KSharedPtr[m[K pubPose;
+      |                                            [01;36m[K^~~~~~~~~[m[K
+[01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/include/eskf/Node.hpp:38:57:[m[K [01;31m[Kerror: [m[K‘[01m[KsubRangeFinderPose_[m[K’ does not name a type
+   38 |     rclcpp::Subscription<sensor_msgs::Range>::SharedPtr [01;31m[KsubRangeFinderPose_[m[K;
+      |                                                         [01;31m[K^~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/include/eskf/Node.hpp:52:43:[m[K [01;31m[Kerror: [m[K‘[01m[KImu[m[K’ in namespace ‘[01m[Ksensor_msgs[m[K’ does not name a type
+   52 |     void inputCallback(const sensor_msgs::[01;31m[KImu[m[K::SharedPtr imuMsg) const;
+      |                                           [01;31m[K^~~[m[K
+[01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/include/eskf/Node.hpp:52:58:[m[K [01;31m[Kerror: [m[Kexpected unqualified-id before ‘[01m[KimuMsg[m[K’
+   52 |     void inputCallback(const sensor_msgs::Imu::SharedPtr [01;31m[KimuMsg[m[K) const;
+      |                                                          [01;31m[K^~~~~~[m[K
+[01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/include/eskf/Node.hpp:52:57:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K)[m[K’ before ‘[01m[KimuMsg[m[K’
+   52 |     void inputCallback[34m[K([m[Kconst sensor_msgs::Imu::SharedPtr[01;31m[K [m[K[32m[KimuMsg[m[K) const;
+      |                       [34m[K~[m[K                                 [01;31m[K^[m[K[32m[K~~~~~~[m[K
+      |                                                         [32m[K)[m[K
+[01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/include/eskf/Node.hpp:52:48:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K;[m[K’ at end of member declaration
+   52 |     void inputCallback(const sensor_msgs::Imu::[01;31m[KSharedPtr[m[K imuMsg) const;
+      |                                                [01;31m[K^~~~~~~~~[m[K
+      |                                                         [32m[K;[m[K
+[01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/include/eskf/Node.hpp:52:58:[m[K [01;31m[Kerror: [m[K‘[01m[KimuMsg[m[K’ does not name a type
+   52 |     void inputCallback(const sensor_msgs::Imu::SharedPtr [01;31m[KimuMsg[m[K) const;
+      |                                                          [01;31m[K^~~~~~[m[K
+[01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/include/eskf/Node.hpp:53:46:[m[K [01;31m[Kerror: [m[K‘[01m[KPoseWithCovarianceStamped[m[K’ in namespace ‘[01m[Kgeometry_msgs[m[K’ does not name a type
+   53 |     void visionCallback(const geometry_msgs::[01;31m[KPoseWithCovarianceStamped[m[K::SharedPtr poseMsg) const;
+      |                                              [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/include/eskf/Node.hpp:53:83:[m[K [01;31m[Kerror: [m[Kexpected unqualified-id before ‘[01m[KposeMsg[m[K’
+   53 |     void visionCallback(const geometry_msgs::PoseWithCovarianceStamped::SharedPtr [01;31m[KposeMsg[m[K) const;
+      |                                                                                   [01;31m[K^~~~~~~[m[K
+[01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/include/eskf/Node.hpp:53:82:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K)[m[K’ before ‘[01m[KposeMsg[m[K’
+   53 |     void visionCallback[34m[K([m[Kconst geometry_msgs::PoseWithCovarianceStamped::SharedPtr[01;31m[K [m[K[32m[KposeMsg[m[K) const;
+      |                        [34m[K~[m[K                                                         [01;31m[K^[m[K[32m[K~~~~~~~[m[K
+      |                                                                                  [32m[K)[m[K
+[01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/include/eskf/Node.hpp:53:73:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K;[m[K’ at end of member declaration
+   53 |     void visionCallback(const geometry_msgs::PoseWithCovarianceStamped::[01;31m[KSharedPtr[m[K poseMsg) const;
+      |                                                                         [01;31m[K^~~~~~~~~[m[K
+      |                                                                                  [32m[K;[m[K
+[01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/include/eskf/Node.hpp:53:83:[m[K [01;31m[Kerror: [m[K‘[01m[KposeMsg[m[K’ does not name a type
+   53 |     void visionCallback(const geometry_msgs::PoseWithCovarianceStamped::SharedPtr [01;31m[KposeMsg[m[K) const;
+      |                                                                                   [01;31m[K^~~~~~~[m[K
+[01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/include/eskf/Node.hpp:54:38:[m[K [01;31m[Kerror: [m[K‘[01m[KOdometry[m[K’ in namespace ‘[01m[Knav_msgs[m[K’ does not name a type
+   54 |     void gpsCallback(const nav_msgs::[01;31m[KOdometry[m[K::SharedPtr odomMsg) const;
+      |                                      [01;31m[K^~~~~~~~[m[K
+[01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/include/eskf/Node.hpp:54:58:[m[K [01;31m[Kerror: [m[Kexpected unqualified-id before ‘[01m[KodomMsg[m[K’
+   54 |     void gpsCallback(const nav_msgs::Odometry::SharedPtr [01;31m[KodomMsg[m[K) const;
+      |                                                          [01;31m[K^~~~~~~[m[K
+[01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/include/eskf/Node.hpp:54:57:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K)[m[K’ before ‘[01m[KodomMsg[m[K’
+   54 |     void gpsCallback[34m[K([m[Kconst nav_msgs::Odometry::SharedPtr[01;31m[K [m[K[32m[KodomMsg[m[K) const;
+      |                     [34m[K~[m[K                                   [01;31m[K^[m[K[32m[K~~~~~~~[m[K
+      |                                                         [32m[K)[m[K
+[01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/include/eskf/Node.hpp:54:48:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K;[m[K’ at end of member declaration
+   54 |     void gpsCallback(const nav_msgs::Odometry::[01;31m[KSharedPtr[m[K odomMsg) const;
+      |                                                [01;31m[K^~~~~~~~~[m[K
+      |                                                         [32m[K;[m[K
+[01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/include/eskf/Node.hpp:38:57:[m[K [01;31m[Kerror: [m[K‘[01m[KsubRangeFinderPose_[m[K’ does not name a type
+   38 |     rclcpp::Subscription<sensor_msgs::Range>::SharedPtr [01;31m[KsubRangeFinderPose_[m[K;
+      |                                                         [01;31m[K^~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/include/eskf/Node.hpp:52:43:[m[K [01;31m[Kerror: [m[K‘[01m[KImu[m[K’ in namespace ‘[01m[Ksensor_msgs[m[K’ does not name a type
+   52 |     void inputCallback(const sensor_msgs::[01;31m[KImu[m[K::SharedPtr imuMsg) const;
+      |                                           [01;31m[K^~~[m[K
+[01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/include/eskf/Node.hpp:52:58:[m[K [01;31m[Kerror: [m[Kexpected unqualified-id before ‘[01m[KimuMsg[m[K’
+   52 |     void inputCallback(const sensor_msgs::Imu::SharedPtr [01;31m[KimuMsg[m[K) const;
+      |                                                          [01;31m[K^~~~~~[m[K
+[01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/include/eskf/Node.hpp:52:57:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K)[m[K’ before ‘[01m[KimuMsg[m[K’
+   52 |     void inputCallback[34m[K([m[Kconst sensor_msgs::Imu::SharedPtr[01;31m[K [m[K[32m[KimuMsg[m[K) const;
+      |                       [34m[K~[m[K                                 [01;31m[K^[m[K[32m[K~~~~~~[m[K
+      |                                                         [32m[K)[m[K
+[01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/include/eskf/Node.hpp:52:48:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K;[m[K’ at end of member declaration
+   52 |     void inputCallback(const sensor_msgs::Imu::[01;31m[KSharedPtr[m[K imuMsg) const;
+      |                                                [01;31m[K^~~~~~~~~[m[K
+      |                                                         [32m[K;[m[K
+[01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/include/eskf/Node.hpp:54:58:[m[K [01;31m[Kerror: [m[K‘[01m[KodomMsg[m[K’ does not name a type
+   54 |     void gpsCallback(const nav_msgs::Odometry::SharedPtr [01;31m[KodomMsg[m[K) const;
+      |                                                          [01;31m[K^~~~~~~[m[K
+[01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/include/eskf/Node.hpp:55:49:[m[K [01;31m[Kerror: [m[K‘[01m[KOpticalFlowRad[m[K’ in namespace ‘[01m[Kmavros_msgs[m[K’ does not name a type
+   55 |     void opticalFlowCallback(const mavros_msgs::[01;31m[KOpticalFlowRad[m[K::SharedPtr opticalFlowMsg) const;
+      |                                                 [01;31m[K^~~~~~~~~~~~~~[m[K
+[01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/include/eskf/Node.hpp:55:75:[m[K [01;31m[Kerror: [m[Kexpected unqualified-id before ‘[01m[KopticalFlowMsg[m[K’
+   55 |     void opticalFlowCallback(const mavros_msgs::OpticalFlowRad::SharedPtr [01;31m[KopticalFlowMsg[m[K) const;
+      |                                                                           [01;31m[K^~~~~~~~~~~~~~[m[K
+[01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/include/eskf/Node.hpp:55:74:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K)[m[K’ before ‘[01m[KopticalFlowMsg[m[K’
+   55 |     void opticalFlowCallback[34m[K([m[Kconst mavros_msgs::OpticalFlowRad::SharedPtr[01;31m[K [m[K[32m[KopticalFlowMsg[m[K) const;
+      |                             [34m[K~[m[K                                            [01;31m[K^[m[K[32m[K~~~~~~~~~~~~~~[m[K
+      |                                                                          [32m[K)[m[K
+[01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/include/eskf/Node.hpp:55:65:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K;[m[K’ at end of member declaration
+   55 |     void opticalFlowCallback(const mavros_msgs::OpticalFlowRad::[01;31m[KSharedPtr[m[K opticalFlowMsg) const;
+      |                                                                 [01;31m[K^~~~~~~~~[m[K
+      |                                                                          [32m[K;[m[K
+[01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/include/eskf/Node.hpp:52:58:[m[K [01;31m[Kerror: [m[K‘[01m[KimuMsg[m[K’ does not name a type
+   52 |     void inputCallback(const sensor_msgs::Imu::SharedPtr [01;31m[KimuMsg[m[K) const;
+      |                                                          [01;31m[K^~~~~~[m[K
+[01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/include/eskf/Node.hpp:53:46:[m[K [01;31m[Kerror: [m[K‘[01m[KPoseWithCovarianceStamped[m[K’ in namespace ‘[01m[Kgeometry_msgs[m[K’ does not name a type
+   53 |     void visionCallback(const geometry_msgs::[01;31m[KPoseWithCovarianceStamped[m[K::SharedPtr poseMsg) const;
+      |                                              [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/include/eskf/Node.hpp:53:83:[m[K [01;31m[Kerror: [m[Kexpected unqualified-id before ‘[01m[KposeMsg[m[K’
+   53 |     void visionCallback(const geometry_msgs::PoseWithCovarianceStamped::SharedPtr [01;31m[KposeMsg[m[K) const;
+      |                                                                                   [01;31m[K^~~~~~~[m[K
+[01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/include/eskf/Node.hpp:53:82:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K)[m[K’ before ‘[01m[KposeMsg[m[K’
+   53 |     void visionCallback[34m[K([m[Kconst geometry_msgs::PoseWithCovarianceStamped::SharedPtr[01;31m[K [m[K[32m[KposeMsg[m[K) const;
+      |                        [34m[K~[m[K                                                         [01;31m[K^[m[K[32m[K~~~~~~~[m[K
+      |                                                                                  [32m[K)[m[K
+[01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/include/eskf/Node.hpp:53:73:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K;[m[K’ at end of member declaration
+   53 |     void visionCallback(const geometry_msgs::PoseWithCovarianceStamped::[01;31m[KSharedPtr[m[K poseMsg) const;
+      |                                                                         [01;31m[K^~~~~~~~~[m[K
+      |                                                                                  [32m[K;[m[K
+[01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/include/eskf/Node.hpp:53:83:[m[K [01;31m[Kerror: [m[K‘[01m[KposeMsg[m[K’ does not name a type
+   53 |     void visionCallback(const geometry_msgs::PoseWithCovarianceStamped::SharedPtr [01;31m[KposeMsg[m[K) const;
+      |                                                                                   [01;31m[K^~~~~~~[m[K
+[01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/include/eskf/Node.hpp:54:38:[m[K [01;31m[Kerror: [m[K‘[01m[KOdometry[m[K’ in namespace ‘[01m[Knav_msgs[m[K’ does not name a type
+   54 |     void gpsCallback(const nav_msgs::[01;31m[KOdometry[m[K::SharedPtr odomMsg) const;
+      |                                      [01;31m[K^~~~~~~~[m[K
+[01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/include/eskf/Node.hpp:54:58:[m[K [01;31m[Kerror: [m[Kexpected unqualified-id before ‘[01m[KodomMsg[m[K’
+   54 |     void gpsCallback(const nav_msgs::Odometry::SharedPtr [01;31m[KodomMsg[m[K) const;
+      |                                                          [01;31m[K^~~~~~~[m[K
+[01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/include/eskf/Node.hpp:54:57:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K)[m[K’ before ‘[01m[KodomMsg[m[K’
+   54 |     void gpsCallback[34m[K([m[Kconst nav_msgs::Odometry::SharedPtr[01;31m[K [m[K[32m[KodomMsg[m[K) const;
+      |                     [34m[K~[m[K                                   [01;31m[K^[m[K[32m[K~~~~~~~[m[K
+      |                                                         [32m[K)[m[K
+[01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/include/eskf/Node.hpp:54:48:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K;[m[K’ at end of member declaration
+   54 |     void gpsCallback(const nav_msgs::Odometry::[01;31m[KSharedPtr[m[K odomMsg) const;
+      |                                                [01;31m[K^~~~~~~~~[m[K
+      |                                                         [32m[K;[m[K
+[01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/include/eskf/Node.hpp:55:75:[m[K [01;31m[Kerror: [m[K‘[01m[KopticalFlowMsg[m[K’ does not name a type
+   55 |     void opticalFlowCallback(const mavros_msgs::OpticalFlowRad::SharedPtr [01;31m[KopticalFlowMsg[m[K) const;
+      |                                                                           [01;31m[K^~~~~~~~~~~~~~[m[K
+[01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/include/eskf/Node.hpp:56:41:[m[K [01;31m[Kerror: [m[K‘[01m[KMagneticField[m[K’ in namespace ‘[01m[Ksensor_msgs[m[K’ does not name a type
+   56 |     void magCallback(const sensor_msgs::[01;31m[KMagneticField[m[K::SharedPtr magMsg) const;
+      |                                         [01;31m[K^~~~~~~~~~~~~[m[K
+[01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/include/eskf/Node.hpp:56:66:[m[K [01;31m[Kerror: [m[Kexpected unqualified-id before ‘[01m[KmagMsg[m[K’
+   56 |     void magCallback(const sensor_msgs::MagneticField::SharedPtr [01;31m[KmagMsg[m[K) const;
+      |                                                                  [01;31m[K^~~~~~[m[K
+[01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/include/eskf/Node.hpp:56:65:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K)[m[K’ before ‘[01m[KmagMsg[m[K’
+   56 |     void magCallback[34m[K([m[Kconst sensor_msgs::MagneticField::SharedPtr[01;31m[K [m[K[32m[KmagMsg[m[K) const;
+      |                     [34m[K~[m[K                                           [01;31m[K^[m[K[32m[K~~~~~~[m[K
+      |                                                                 [32m[K)[m[K
+[01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/include/eskf/Node.hpp:56:56:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K;[m[K’ at end of member declaration
+   56 |     void magCallback(const sensor_msgs::MagneticField::[01;31m[KSharedPtr[m[K magMsg) const;
+      |                                                        [01;31m[K^~~~~~~~~[m[K
+      |                                                                 [32m[K;[m[K
+[01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/include/eskf/Node.hpp:54:58:[m[K [01;31m[Kerror: [m[K‘[01m[KodomMsg[m[K’ does not name a type
+   54 |     void gpsCallback(const nav_msgs::Odometry::SharedPtr [01;31m[KodomMsg[m[K) const;
+      |                                                          [01;31m[K^~~~~~~[m[K
+[01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/include/eskf/Node.hpp:55:49:[m[K [01;31m[Kerror: [m[K‘[01m[KOpticalFlowRad[m[K’ in namespace ‘[01m[Kmavros_msgs[m[K’ does not name a type
+   55 |     void opticalFlowCallback(const mavros_msgs::[01;31m[KOpticalFlowRad[m[K::SharedPtr opticalFlowMsg) const;
+      |                                                 [01;31m[K^~~~~~~~~~~~~~[m[K
+[01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/include/eskf/Node.hpp:55:75:[m[K [01;31m[Kerror: [m[Kexpected unqualified-id before ‘[01m[KopticalFlowMsg[m[K’
+   55 |     void opticalFlowCallback(const mavros_msgs::OpticalFlowRad::SharedPtr [01;31m[KopticalFlowMsg[m[K) const;
+      |                                                                           [01;31m[K^~~~~~~~~~~~~~[m[K
+[01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/include/eskf/Node.hpp:55:74:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K)[m[K’ before ‘[01m[KopticalFlowMsg[m[K’
+   55 |     void opticalFlowCallback[34m[K([m[Kconst mavros_msgs::OpticalFlowRad::SharedPtr[01;31m[K [m[K[32m[KopticalFlowMsg[m[K) const;
+      |                             [34m[K~[m[K                                            [01;31m[K^[m[K[32m[K~~~~~~~~~~~~~~[m[K
+      |                                                                          [32m[K)[m[K
+[01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/include/eskf/Node.hpp:55:65:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K;[m[K’ at end of member declaration
+   55 |     void opticalFlowCallback(const mavros_msgs::OpticalFlowRad::[01;31m[KSharedPtr[m[K opticalFlowMsg) const;
+      |                                                                 [01;31m[K^~~~~~~~~[m[K
+      |                                                                          [32m[K;[m[K
+[01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/include/eskf/Node.hpp:56:66:[m[K [01;31m[Kerror: [m[K‘[01m[KmagMsg[m[K’ does not name a type
+   56 |     void magCallback(const sensor_msgs::MagneticField::SharedPtr [01;31m[KmagMsg[m[K) const;
+      |                                                                  [01;31m[K^~~~~~[m[K
+[01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/include/eskf/Node.hpp:57:51:[m[K [01;31m[Kerror: [m[K‘[01m[KExtendedState[m[K’ in namespace ‘[01m[Kmavros_msgs[m[K’ does not name a type
+   57 |     void extendedStateCallback(const mavros_msgs::[01;31m[KExtendedState[m[K::SharedPtr extendedStateMsg) const;
+      |                                                   [01;31m[K^~~~~~~~~~~~~[m[K
+[01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/include/eskf/Node.hpp:57:76:[m[K [01;31m[Kerror: [m[Kexpected unqualified-id before ‘[01m[KextendedStateMsg[m[K’
+   57 |     void extendedStateCallback(const mavros_msgs::ExtendedState::SharedPtr [01;31m[KextendedStateMsg[m[K) const;
+      |                                                                            [01;31m[K^~~~~~~~~~~~~~~~[m[K
+[01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/include/eskf/Node.hpp:57:75:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K)[m[K’ before ‘[01m[KextendedStateMsg[m[K’
+   57 |     void extendedStateCallback[34m[K([m[Kconst mavros_msgs::ExtendedState::SharedPtr[01;31m[K [m[K[32m[KextendedStateMsg[m[K) const;
+      |                               [34m[K~[m[K                                           [01;31m[K^[m[K[32m[K~~~~~~~~~~~~~~~~[m[K
+      |                                                                           [32m[K)[m[K
+[01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/include/eskf/Node.hpp:57:66:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K;[m[K’ at end of member declaration
+   57 |     void extendedStateCallback(const mavros_msgs::ExtendedState::[01;31m[KSharedPtr[m[K extendedStateMsg) const;
+      |                                                                  [01;31m[K^~~~~~~~~[m[K
+      |                                                                           [32m[K;[m[K
+[01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/include/eskf/Node.hpp:55:75:[m[K [01;31m[Kerror: [m[K‘[01m[KopticalFlowMsg[m[K’ does not name a type
+   55 |     void opticalFlowCallback(const mavros_msgs::OpticalFlowRad::SharedPtr [01;31m[KopticalFlowMsg[m[K) const;
+      |                                                                           [01;31m[K^~~~~~~~~~~~~~[m[K
+[01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/include/eskf/Node.hpp:56:41:[m[K [01;31m[Kerror: [m[K‘[01m[KMagneticField[m[K’ in namespace ‘[01m[Ksensor_msgs[m[K’ does not name a type
+   56 |     void magCallback(const sensor_msgs::[01;31m[KMagneticField[m[K::SharedPtr magMsg) const;
+      |                                         [01;31m[K^~~~~~~~~~~~~[m[K
+[01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/include/eskf/Node.hpp:56:66:[m[K [01;31m[Kerror: [m[Kexpected unqualified-id before ‘[01m[KmagMsg[m[K’
+   56 |     void magCallback(const sensor_msgs::MagneticField::SharedPtr [01;31m[KmagMsg[m[K) const;
+      |                                                                  [01;31m[K^~~~~~[m[K
+[01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/include/eskf/Node.hpp:56:65:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K)[m[K’ before ‘[01m[KmagMsg[m[K’
+   56 |     void magCallback[34m[K([m[Kconst sensor_msgs::MagneticField::SharedPtr[01;31m[K [m[K[32m[KmagMsg[m[K) const;
+      |                     [34m[K~[m[K                                           [01;31m[K^[m[K[32m[K~~~~~~[m[K
+      |                                                                 [32m[K)[m[K
+[01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/include/eskf/Node.hpp:56:56:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K;[m[K’ at end of member declaration
+   56 |     void magCallback(const sensor_msgs::MagneticField::[01;31m[KSharedPtr[m[K magMsg) const;
+      |                                                        [01;31m[K^~~~~~~~~[m[K
+      |                                                                 [32m[K;[m[K
+[01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/include/eskf/Node.hpp:57:76:[m[K [01;31m[Kerror: [m[K‘[01m[KextendedStateMsg[m[K’ does not name a type
+   57 |     void extendedStateCallback(const mavros_msgs::ExtendedState::SharedPtr [01;31m[KextendedStateMsg[m[K) const;
+      |                                                                            [01;31m[K^~~~~~~~~~~~~~~~[m[K
+[01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/include/eskf/Node.hpp:58:49:[m[K [01;31m[Kerror: [m[K‘[01m[KRange[m[K’ in namespace ‘[01m[Ksensor_msgs[m[K’ does not name a type
+   58 |     void rangeFinderCallback(const sensor_msgs::[01;31m[KRange[m[K::SharedPtr rangeMsg) const;
+      |                                                 [01;31m[K^~~~~[m[K
+[01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/include/eskf/Node.hpp:58:66:[m[K [01;31m[Kerror: [m[Kexpected unqualified-id before ‘[01m[KrangeMsg[m[K’
+   58 |     void rangeFinderCallback(const sensor_msgs::Range::SharedPtr [01;31m[KrangeMsg[m[K) const;
+      |                                                                  [01;31m[K^~~~~~~~[m[K
+[01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/include/eskf/Node.hpp:58:65:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K)[m[K’ before ‘[01m[KrangeMsg[m[K’
+   58 |     void rangeFinderCallback[34m[K([m[Kconst sensor_msgs::Range::SharedPtr[01;31m[K [m[K[32m[KrangeMsg[m[K) const;
+      |                             [34m[K~[m[K                                   [01;31m[K^[m[K[32m[K~~~~~~~~[m[K
+      |                                                                 [32m[K)[m[K
+[01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/include/eskf/Node.hpp:56:66:[m[K [01;31m[Kerror: [m[K‘[01m[KmagMsg[m[K’ does not name a type
+   56 |     void magCallback(const sensor_msgs::MagneticField::SharedPtr [01;31m[KmagMsg[m[K) const;
+      |                                                                  [01;31m[K^~~~~~[m[K
+[01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/include/eskf/Node.hpp:58:56:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K;[m[K’ at end of member declaration
+   58 |     void rangeFinderCallback(const sensor_msgs::Range::[01;31m[KSharedPtr[m[K rangeMsg) const;
+      |                                                        [01;31m[K^~~~~~~~~[m[K
+      |                                                                 [32m[K;[m[K
+[01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/include/eskf/Node.hpp:57:51:[m[K [01;31m[Kerror: [m[K‘[01m[KExtendedState[m[K’ in namespace ‘[01m[Kmavros_msgs[m[K’ does not name a type
+   57 |     void extendedStateCallback(const mavros_msgs::[01;31m[KExtendedState[m[K::SharedPtr extendedStateMsg) const;
+      |                                                   [01;31m[K^~~~~~~~~~~~~[m[K
+[01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/include/eskf/Node.hpp:57:76:[m[K [01;31m[Kerror: [m[Kexpected unqualified-id before ‘[01m[KextendedStateMsg[m[K’
+   57 |     void extendedStateCallback(const mavros_msgs::ExtendedState::SharedPtr [01;31m[KextendedStateMsg[m[K) const;
+      |                                                                            [01;31m[K^~~~~~~~~~~~~~~~[m[K
+[01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/include/eskf/Node.hpp:57:75:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K)[m[K’ before ‘[01m[KextendedStateMsg[m[K’
+   57 |     void extendedStateCallback[34m[K([m[Kconst mavros_msgs::ExtendedState::SharedPtr[01;31m[K [m[K[32m[KextendedStateMsg[m[K) const;
+      |                               [34m[K~[m[K                                           [01;31m[K^[m[K[32m[K~~~~~~~~~~~~~~~~[m[K
+      |                                                                           [32m[K)[m[K
+[01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/include/eskf/Node.hpp:57:66:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K;[m[K’ at end of member declaration
+   57 |     void extendedStateCallback(const mavros_msgs::ExtendedState::[01;31m[KSharedPtr[m[K extendedStateMsg) const;
+      |                                                                  [01;31m[K^~~~~~~~~[m[K
+      |                                                                           [32m[K;[m[K
+[01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/include/eskf/Node.hpp:58:66:[m[K [01;31m[Kerror: [m[K‘[01m[KrangeMsg[m[K’ does not name a type
+   58 |     void rangeFinderCallback(const sensor_msgs::Range::SharedPtr [01;31m[KrangeMsg[m[K) const;
+      |                                                                  [01;31m[K^~~~~~~~[m[K
+[01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/src/eskf.cpp:[m[K In function ‘[01m[Kint main(int, char**)[m[K’:
+[01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/src/eskf.cpp:6:2:[m[K [01;31m[Kerror: [m[K‘[01m[Kros[m[K’ has not been declared
+    6 |  [01;31m[Kros[m[K::init(argc, argv);
+      |  [01;31m[K^~~[m[K
+[01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/include/eskf/Node.hpp:57:76:[m[K [01;31m[Kerror: [m[K‘[01m[KextendedStateMsg[m[K’ does not name a type
+   57 |     void extendedStateCallback(const mavros_msgs::ExtendedState::SharedPtr [01;31m[KextendedStateMsg[m[K) const;
+      |                                                                            [01;31m[K^~~~~~~~~~~~~~~~[m[K
+[01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/include/eskf/Node.hpp:58:49:[m[K [01;31m[Kerror: [m[K‘[01m[KRange[m[K’ in namespace ‘[01m[Ksensor_msgs[m[K’ does not name a type
+   58 |     void rangeFinderCallback(const sensor_msgs::[01;31m[KRange[m[K::SharedPtr rangeMsg) const;
+      |                                                 [01;31m[K^~~~~[m[K
+[01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/include/eskf/Node.hpp:58:66:[m[K [01;31m[Kerror: [m[Kexpected unqualified-id before ‘[01m[KrangeMsg[m[K’
+   58 |     void rangeFinderCallback(const sensor_msgs::Range::SharedPtr [01;31m[KrangeMsg[m[K) const;
+      |                                                                  [01;31m[K^~~~~~~~[m[K
+[01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/include/eskf/Node.hpp:58:65:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K)[m[K’ before ‘[01m[KrangeMsg[m[K’
+   58 |     void rangeFinderCallback[34m[K([m[Kconst sensor_msgs::Range::SharedPtr[01;31m[K [m[K[32m[KrangeMsg[m[K) const;
+      |                             [34m[K~[m[K                                   [01;31m[K^[m[K[32m[K~~~~~~~~[m[K
+      |                                                                 [32m[K)[m[K
+[01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/include/eskf/Node.hpp:58:56:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K;[m[K’ at end of member declaration
+   58 |     void rangeFinderCallback(const sensor_msgs::Range::[01;31m[KSharedPtr[m[K rangeMsg) const;
+      |                                                        [01;31m[K^~~~~~~~~[m[K
+      |                                                                 [32m[K;[m[K
+[01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/include/eskf/Node.hpp:58:66:[m[K [01;31m[Kerror: [m[K‘[01m[KrangeMsg[m[K’ does not name a type
+   58 |     void rangeFinderCallback(const sensor_msgs::Range::SharedPtr [01;31m[KrangeMsg[m[K) const;
+      |                                                                  [01;31m[K^~~~~~~~[m[K
+[01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/src/Node.cpp:[m[K In constructor ‘[01m[Keskf::Node::Node()[m[K’:
+[01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/src/Node.cpp:6:32:[m[K [01;31m[Kerror: [m[Kno matching function for call to ‘[01m[Keskf::Node::Node(const char [10])[m[K’
+    6 | Node::Node() : Node("ESKF_Node"[01;31m[K)[m[K {
+      |                                [01;31m[K^[m[K
+In file included from [01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/src/Node.cpp:1[m[K:
+[01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/include/eskf/Node.hpp:23:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Keskf::Node::Node()[m[K’
+   23 |     [01;36m[KNode[m[K();
+      |     [01;36m[K^~~~[m[K
+[01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/include/eskf/Node.hpp:23:5:[m[K [01;36m[Knote: [m[K  candidate expects 0 arguments, 1 provided
+[01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/src/Node.cpp:7:3:[m[K [01;31m[Kerror: [m[K‘[01m[KROS_INFO[m[K’ was not declared in this scope
+    7 |   [01;31m[KROS_INFO[m[K("Subscribing to imu.");
+      |   [01;31m[K^~~~~~~~[m[K
+[01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/src/Node.cpp:8:3:[m[K [01;31m[Kerror: [m[K‘[01m[KsubImu_[m[K’ was not declared in this scope
+    8 |   [01;31m[KsubImu_[m[K = this->create_subscription<sensor_msgs::Imu>(
+      |   [01;31m[K^~~~~~~[m[K
+[01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/src/Node.cpp:8:52:[m[K [01;31m[Kerror: [m[K‘[01m[KImu[m[K’ is not a member of ‘[01m[Ksensor_msgs[m[K’; did you mean ‘[01m[Ksensor_msgs::msg::Imu[m[K’?
+    8 |   subImu_ = this->create_subscription<sensor_msgs::[01;31m[KImu[m[K>(
+      |                                                    [01;31m[K^~~[m[K
+In file included from [01m[K/opt/ros/foxy/include/sensor_msgs/msg/imu.hpp:7[m[K,
+                 from [01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/include/eskf/Node.hpp:5[m[K,
+                 from [01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/src/Node.cpp:1[m[K:
+[01m[K/opt/ros/foxy/include/sensor_msgs/msg/detail/imu__struct.hpp:216:7:[m[K [01;36m[Knote: [m[K‘[01m[Ksensor_msgs::msg::Imu[m[K’ declared here
+  216 | using [01;36m[KImu[m[K =
+      |       [01;36m[K^~~[m[K
+[01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/src/Node.cpp:8:52:[m[K [01;31m[Kerror: [m[K‘[01m[KImu[m[K’ is not a member of ‘[01m[Ksensor_msgs[m[K’; did you mean ‘[01m[Ksensor_msgs::msg::Imu[m[K’?
+    8 |   subImu_ = this->create_subscription<sensor_msgs::[01;31m[KImu[m[K>(
+      |                                                    [01;31m[K^~~[m[K
+In file included from [01m[K/opt/ros/foxy/include/sensor_msgs/msg/imu.hpp:7[m[K,
+                 from [01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/include/eskf/Node.hpp:5[m[K,
+                 from [01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/src/Node.cpp:1[m[K:
+[01m[K/opt/ros/foxy/include/sensor_msgs/msg/detail/imu__struct.hpp:216:7:[m[K [01;36m[Knote: [m[K‘[01m[Ksensor_msgs::msg::Imu[m[K’ declared here
+  216 | using [01;36m[KImu[m[K =
+      |       [01;36m[K^~~[m[K
+[01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/src/Node.cpp:9:58:[m[K [01;31m[Kerror: [m[K‘[01m[K_1[m[K’ was not declared in this scope; did you mean ‘[01m[Kstd::placeholders::_1[m[K’?
+    9 |       "imu", 1000, std::bind(&Node::inputCallback, this, [01;31m[K_1[m[K));
+      |                                                          [01;31m[K^~[m[K
+      |                                                          [32m[Kstd::placeholders::_1[m[K
+In file included from [01m[K/opt/ros/foxy/include/rclcpp/context.hpp:19[m[K,
+                 from [01m[K/opt/ros/foxy/include/rclcpp/contexts/default_context.hpp:18[m[K,
+                 from [01m[K/opt/ros/foxy/include/rclcpp/executor.hpp:32[m[K,
+                 from [01m[K/opt/ros/foxy/include/rclcpp/executors/multi_threaded_executor.hpp:26[m[K,
+                 from [01m[K/opt/ros/foxy/include/rclcpp/executors.hpp:21[m[K,
+                 from [01m[K/opt/ros/foxy/include/rclcpp/rclcpp.hpp:146[m[K,
+                 from [01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/include/eskf/Node.hpp:4[m[K,
+                 from [01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/src/Node.cpp:1[m[K:
+[01m[K/usr/include/c++/9/functional:211:34:[m[K [01;36m[Knote: [m[K‘[01m[Kstd::placeholders::_1[m[K’ declared here
+  211 |     extern const _Placeholder<1> [01;36m[K_1[m[K;
+      |                                  [01;36m[K^~[m[K
+[01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/src/Node.cpp:12:3:[m[K [01;31m[Kerror: [m[K‘[01m[KsubExtendedState_[m[K’ was not declared in this scope
+   12 |   [01;31m[KsubExtendedState_[m[K = this->create_subscription<mavros_msgs::ExtendedState>(
+      |   [01;31m[K^~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/src/Node.cpp:12:62:[m[K [01;31m[Kerror: [m[K‘[01m[KExtendedState[m[K’ is not a member of ‘[01m[Kmavros_msgs[m[K’; did you mean ‘[01m[Kmavros_msgs::msg::ExtendedState[m[K’?
+   12 |   subExtendedState_ = this->create_subscription<mavros_msgs::[01;31m[KExtendedState[m[K>(
+      |                                                              [01;31m[K^~~~~~~~~~~~~[m[K
+In file included from [01m[K/opt/ros/foxy/include/mavros_msgs/msg/extended_state.hpp:7[m[K,
+                 from [01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/include/eskf/Node.hpp:12[m[K,
+                 from [01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/src/Node.cpp:1[m[K:
+[01m[K/opt/ros/foxy/include/mavros_msgs/msg/detail/extended_state__struct.hpp:172:7:[m[K [01;36m[Knote: [m[K‘[01m[Kmavros_msgs::msg::ExtendedState[m[K’ declared here
+  172 | using [01;36m[KExtendedState[m[K =
+      |       [01;36m[K^~~~~~~~~~~~~[m[K
+[01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/src/Node.cpp:12:62:[m[K [01;31m[Kerror: [m[K‘[01m[KExtendedState[m[K’ is not a member of ‘[01m[Kmavros_msgs[m[K’; did you mean ‘[01m[Kmavros_msgs::msg::ExtendedState[m[K’?
+   12 |   subExtendedState_ = this->create_subscription<mavros_msgs::[01;31m[KExtendedState[m[K>(
+      |                                                              [01;31m[K^~~~~~~~~~~~~[m[K
+In file included from [01m[K/opt/ros/foxy/include/mavros_msgs/msg/extended_state.hpp:7[m[K,
+                 from [01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/include/eskf/Node.hpp:12[m[K,
+                 from [01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/src/Node.cpp:1[m[K:
+[01m[K/opt/ros/foxy/include/mavros_msgs/msg/detail/extended_state__struct.hpp:172:7:[m[K [01;36m[Knote: [m[K‘[01m[Kmavros_msgs::msg::ExtendedState[m[K’ declared here
+  172 | using [01;36m[KExtendedState[m[K =
+      |       [01;36m[K^~~~~~~~~~~~~[m[K
+[01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/src/Node.cpp:20:5:[m[K [01;31m[Kerror: [m[K‘[01m[KsubVisionPose_[m[K’ was not declared in this scope
+   20 |     [01;31m[KsubVisionPose_[m[K = this->create_subscription<geometry_msgs::PoseWithCovarianceStamped>(
+      |     [01;31m[K^~~~~~~~~~~~~~[m[K
+[01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/src/Node.cpp:20:63:[m[K [01;31m[Kerror: [m[K‘[01m[KPoseWithCovarianceStamped[m[K’ is not a member of ‘[01m[Kgeometry_msgs[m[K’; did you mean ‘[01m[Kgeometry_msgs::msg::PoseWithCovarianceStamped[m[K’?
+   20 |     subVisionPose_ = this->create_subscription<geometry_msgs::[01;31m[KPoseWithCovarianceStamped[m[K>(
+      |                                                               [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+In file included from [01m[K/opt/ros/foxy/include/geometry_msgs/msg/pose_with_covariance_stamped.hpp:7[m[K,
+                 from [01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/include/eskf/Node.hpp:10[m[K,
+                 from [01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/src/Node.cpp:1[m[K:
+[01m[K/opt/ros/foxy/include/geometry_msgs/msg/detail/pose_with_covariance_stamped__struct.hpp:134:7:[m[K [01;36m[Knote: [m[K‘[01m[Kgeometry_msgs::msg::PoseWithCovarianceStamped[m[K’ declared here
+  134 | using [01;36m[KPoseWithCovarianceStamped[m[K =
+      |       [01;36m[K^~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/src/Node.cpp:20:63:[m[K [01;31m[Kerror: [m[K‘[01m[KPoseWithCovarianceStamped[m[K’ is not a member of ‘[01m[Kgeometry_msgs[m[K’; did you mean ‘[01m[Kgeometry_msgs::msg::PoseWithCovarianceStamped[m[K’?
+   20 |     subVisionPose_ = this->create_subscription<geometry_msgs::[01;31m[KPoseWithCovarianceStamped[m[K>(
+      |                                                               [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+In file included from [01m[K/opt/ros/foxy/include/geometry_msgs/msg/pose_with_covariance_stamped.hpp:7[m[K,
+                 from [01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/include/eskf/Node.hpp:10[m[K,
+                 from [01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/src/Node.cpp:1[m[K:
+[01m[K/opt/ros/foxy/include/geometry_msgs/msg/detail/pose_with_covariance_stamped__struct.hpp:134:7:[m[K [01;36m[Knote: [m[K‘[01m[Kgeometry_msgs::msg::PoseWithCovarianceStamped[m[K’ declared here
+  134 | using [01;36m[KPoseWithCovarianceStamped[m[K =
+      |       [01;36m[K^~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/src/Node.cpp:25:5:[m[K [01;31m[Kerror: [m[K‘[01m[KsubGpsPose_[m[K’ was not declared in this scope
+   25 |     [01;31m[KsubGpsPose_[m[K = nh_.subscribe("gps", 1, &Node::gpsCallback, this);
+      |     [01;31m[K^~~~~~~~~~~[m[K
+[01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/src/Node.cpp:25:19:[m[K [01;31m[Kerror: [m[K‘[01m[Knh_[m[K’ was not declared in this scope
+   25 |     subGpsPose_ = [01;31m[Knh_[m[K.subscribe("gps", 1, &Node::gpsCallback, this);
+      |                   [01;31m[K^~~[m[K
+[01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/src/Node.cpp:26:55:[m[K [01;31m[Kerror: [m[K‘[01m[KOdometry[m[K’ is not a member of ‘[01m[Knav_msgs[m[K’; did you mean ‘[01m[Knav_msgs::msg::Odometry[m[K’?
+   26 |     subGpsPose_ = this->create_subscription<nav_msgs::[01;31m[KOdometry[m[K>(
+      |                                                       [01;31m[K^~~~~~~~[m[K
+In file included from [01m[K/opt/ros/foxy/include/nav_msgs/msg/odometry.hpp:7[m[K,
+                 from [01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/include/eskf/Node.hpp:8[m[K,
+                 from [01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/src/Node.cpp:1[m[K:
+[01m[K/opt/ros/foxy/include/nav_msgs/msg/detail/odometry__struct.hpp:171:7:[m[K [01;36m[Knote: [m[K‘[01m[Knav_msgs::msg::Odometry[m[K’ declared here
+  171 | using [01;36m[KOdometry[m[K =
+      |       [01;36m[K^~~~~~~~[m[K
+[01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/src/Node.cpp:26:55:[m[K [01;31m[Kerror: [m[K‘[01m[KOdometry[m[K’ is not a member of ‘[01m[Knav_msgs[m[K’; did you mean ‘[01m[Knav_msgs::msg::Odometry[m[K’?
+   26 |     subGpsPose_ = this->create_subscription<nav_msgs::[01;31m[KOdometry[m[K>(
+      |                                                       [01;31m[K^~~~~~~~[m[K
+In file included from [01m[K/opt/ros/foxy/include/nav_msgs/msg/odometry.hpp:7[m[K,
+                 from [01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/include/eskf/Node.hpp:8[m[K,
+                 from [01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/src/Node.cpp:1[m[K:
+[01m[K/opt/ros/foxy/include/nav_msgs/msg/detail/odometry__struct.hpp:171:7:[m[K [01;36m[Knote: [m[K‘[01m[Knav_msgs::msg::Odometry[m[K’ declared here
+  171 | using [01;36m[KOdometry[m[K =
+      |       [01;36m[K^~~~~~~~[m[K
+[01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/src/Node.cpp:31:5:[m[K [01;31m[Kerror: [m[K‘[01m[KsubOpticalFlowPose_[m[K’ was not declared in this scope; did you mean ‘[01m[KprevStampOpticalFlowPose_[m[K’?
+   31 |     [01;31m[KsubOpticalFlowPose_[m[K = this->create_subscription<mavros_msgs::OpticalFlowRad>(
+      |     [01;31m[K^~~~~~~~~~~~~~~~~~~[m[K
+      |     [32m[KprevStampOpticalFlowPose_[m[K
+[01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/src/Node.cpp:31:66:[m[K [01;31m[Kerror: [m[K‘[01m[KOpticalFlowRad[m[K’ is not a member of ‘[01m[Kmavros_msgs[m[K’; did you mean ‘[01m[Kmavros_msgs::msg::OpticalFlowRad[m[K’?
+   31 |     subOpticalFlowPose_ = this->create_subscription<mavros_msgs::[01;31m[KOpticalFlowRad[m[K>(
+      |                                                                  [01;31m[K^~~~~~~~~~~~~~[m[K
+In file included from [01m[K/opt/ros/foxy/include/mavros_msgs/msg/optical_flow_rad.hpp:7[m[K,
+                 from [01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/include/eskf/Node.hpp:11[m[K,
+                 from [01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/src/Node.cpp:1[m[K:
+[01m[K/opt/ros/foxy/include/mavros_msgs/msg/detail/optical_flow_rad__struct.hpp:264:7:[m[K [01;36m[Knote: [m[K‘[01m[Kmavros_msgs::msg::OpticalFlowRad[m[K’ declared here
+  264 | using [01;36m[KOpticalFlowRad[m[K =
+      |       [01;36m[K^~~~~~~~~~~~~~[m[K
+[01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/src/Node.cpp:31:66:[m[K [01;31m[Kerror: [m[K‘[01m[KOpticalFlowRad[m[K’ is not a member of ‘[01m[Kmavros_msgs[m[K’; did you mean ‘[01m[Kmavros_msgs::msg::OpticalFlowRad[m[K’?
+   31 |     subOpticalFlowPose_ = this->create_subscription<mavros_msgs::[01;31m[KOpticalFlowRad[m[K>(
+      |                                                                  [01;31m[K^~~~~~~~~~~~~~[m[K
+In file included from [01m[K/opt/ros/foxy/include/mavros_msgs/msg/optical_flow_rad.hpp:7[m[K,
+                 from [01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/include/eskf/Node.hpp:11[m[K,
+                 from [01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/src/Node.cpp:1[m[K:
+[01m[K/opt/ros/foxy/include/mavros_msgs/msg/detail/optical_flow_rad__struct.hpp:264:7:[m[K [01;36m[Knote: [m[K‘[01m[Kmavros_msgs::msg::OpticalFlowRad[m[K’ declared here
+  264 | using [01;36m[KOpticalFlowRad[m[K =
+      |       [01;36m[K^~~~~~~~~~~~~~[m[K
+[01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/src/Node.cpp:36:5:[m[K [01;31m[Kerror: [m[K‘[01m[KsubMagPose_[m[K’ was not declared in this scope
+   36 |     [01;31m[KsubMagPose_[m[K = this->create_subscription<sensor_msgs::MagneticField>(
+      |     [01;31m[K^~~~~~~~~~~[m[K
+[01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/src/Node.cpp:36:58:[m[K [01;31m[Kerror: [m[K‘[01m[KMagneticField[m[K’ is not a member of ‘[01m[Ksensor_msgs[m[K’; did you mean ‘[01m[Ksensor_msgs::msg::MagneticField[m[K’?
+   36 |     subMagPose_ = this->create_subscription<sensor_msgs::[01;31m[KMagneticField[m[K>(
+      |                                                          [01;31m[K^~~~~~~~~~~~~[m[K
+In file included from [01m[K/opt/ros/foxy/include/sensor_msgs/msg/magnetic_field.hpp:7[m[K,
+                 from [01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/include/eskf/Node.hpp:6[m[K,
+                 from [01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/src/Node.cpp:1[m[K:
+[01m[K/opt/ros/foxy/include/sensor_msgs/msg/detail/magnetic_field__struct.hpp:155:7:[m[K [01;36m[Knote: [m[K‘[01m[Ksensor_msgs::msg::MagneticField[m[K’ declared here
+  155 | using [01;36m[KMagneticField[m[K =
+      |       [01;36m[K^~~~~~~~~~~~~[m[K
+[01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/src/Node.cpp:36:58:[m[K [01;31m[Kerror: [m[K‘[01m[KMagneticField[m[K’ is not a member of ‘[01m[Ksensor_msgs[m[K’; did you mean ‘[01m[Ksensor_msgs::msg::MagneticField[m[K’?
+   36 |     subMagPose_ = this->create_subscription<sensor_msgs::[01;31m[KMagneticField[m[K>(
+      |                                                          [01;31m[K^~~~~~~~~~~~~[m[K
+In file included from [01m[K/opt/ros/foxy/include/sensor_msgs/msg/magnetic_field.hpp:7[m[K,
+                 from [01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/include/eskf/Node.hpp:6[m[K,
+                 from [01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/src/Node.cpp:1[m[K:
+[01m[K/opt/ros/foxy/include/sensor_msgs/msg/detail/magnetic_field__struct.hpp:155:7:[m[K [01;36m[Knote: [m[K‘[01m[Ksensor_msgs::msg::MagneticField[m[K’ declared here
+  155 | using [01;36m[KMagneticField[m[K =
+      |       [01;36m[K^~~~~~~~~~~~~[m[K
+[01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/src/Node.cpp:41:5:[m[K [01;31m[Kerror: [m[K‘[01m[KsubRangeFinderPose_[m[K’ was not declared in this scope; did you mean ‘[01m[KprevStampRangeFinderPose_[m[K’?
+   41 |     [01;31m[KsubRangeFinderPose_[m[K = this->create_subscription<sensor_msgs::Range>(
+      |     [01;31m[K^~~~~~~~~~~~~~~~~~~[m[K
+      |     [32m[KprevStampRangeFinderPose_[m[K
+[01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/src/Node.cpp:41:66:[m[K [01;31m[Kerror: [m[K‘[01m[KRange[m[K’ is not a member of ‘[01m[Ksensor_msgs[m[K’; did you mean ‘[01m[Ksensor_msgs::msg::Range[m[K’?
+   41 |     subRangeFinderPose_ = this->create_subscription<sensor_msgs::[01;31m[KRange[m[K>(
+      |                                                                  [01;31m[K^~~~~[m[K
+In file included from [01m[K/opt/ros/foxy/include/sensor_msgs/msg/range.hpp:7[m[K,
+                 from [01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/include/eskf/Node.hpp:7[m[K,
+                 from [01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/src/Node.cpp:1[m[K:
+[01m[K/opt/ros/foxy/include/sensor_msgs/msg/detail/range__struct.hpp:198:7:[m[K [01;36m[Knote: [m[K‘[01m[Ksensor_msgs::msg::Range[m[K’ declared here
+  198 | using [01;36m[KRange[m[K =
+      |       [01;36m[K^~~~~[m[K
+[01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/src/Node.cpp:41:66:[m[K [01;31m[Kerror: [m[K‘[01m[KRange[m[K’ is not a member of ‘[01m[Ksensor_msgs[m[K’; did you mean ‘[01m[Ksensor_msgs::msg::Range[m[K’?
+   41 |     subRangeFinderPose_ = this->create_subscription<sensor_msgs::[01;31m[KRange[m[K>(
+      |                                                                  [01;31m[K^~~~~[m[K
+In file included from [01m[K/opt/ros/foxy/include/sensor_msgs/msg/range.hpp:7[m[K,
+                 from [01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/include/eskf/Node.hpp:7[m[K,
+                 from [01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/src/Node.cpp:1[m[K:
+[01m[K/opt/ros/foxy/include/sensor_msgs/msg/detail/range__struct.hpp:198:7:[m[K [01;36m[Knote: [m[K‘[01m[Ksensor_msgs::msg::Range[m[K’ declared here
+  198 | using [01;36m[KRange[m[K =
+      |       [01;36m[K^~~~~[m[K
+[01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/src/Node.cpp:47:3:[m[K [01;31m[Kerror: [m[K‘[01m[KpubPose_[m[K’ was not declared in this scope
+   47 |   [01;31m[KpubPose_[m[K = this->create_publisher<nav_msgs::Odometry>("pose",1);
+      |   [01;31m[K^~~~~~~~[m[K
+[01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/src/Node.cpp:47:47:[m[K [01;31m[Kerror: [m[K‘[01m[KOdometry[m[K’ is not a member of ‘[01m[Knav_msgs[m[K’; did you mean ‘[01m[Knav_msgs::msg::Odometry[m[K’?
+   47 |   pubPose_ = this->create_publisher<nav_msgs::[01;31m[KOdometry[m[K>("pose",1);
+      |                                               [01;31m[K^~~~~~~~[m[K
+In file included from [01m[K/opt/ros/foxy/include/nav_msgs/msg/odometry.hpp:7[m[K,
+                 from [01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/include/eskf/Node.hpp:8[m[K,
+                 from [01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/src/Node.cpp:1[m[K:
+[01m[K/opt/ros/foxy/include/nav_msgs/msg/detail/odometry__struct.hpp:171:7:[m[K [01;36m[Knote: [m[K‘[01m[Knav_msgs::msg::Odometry[m[K’ declared here
+  171 | using [01;36m[KOdometry[m[K =
+      |       [01;36m[K^~~~~~~~[m[K
+[01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/src/Node.cpp:47:47:[m[K [01;31m[Kerror: [m[K‘[01m[KOdometry[m[K’ is not a member of ‘[01m[Knav_msgs[m[K’; did you mean ‘[01m[Knav_msgs::msg::Odometry[m[K’?
+   47 |   pubPose_ = this->create_publisher<nav_msgs::[01;31m[KOdometry[m[K>("pose",1);
+      |                                               [01;31m[K^~~~~~~~[m[K
+In file included from [01m[K/opt/ros/foxy/include/nav_msgs/msg/odometry.hpp:7[m[K,
+                 from [01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/include/eskf/Node.hpp:8[m[K,
+                 from [01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/src/Node.cpp:1[m[K:
+[01m[K/opt/ros/foxy/include/nav_msgs/msg/detail/odometry__struct.hpp:171:7:[m[K [01;36m[Knote: [m[K‘[01m[Knav_msgs::msg::Odometry[m[K’ declared here
+  171 | using [01;36m[KOdometry[m[K =
+      |       [01;36m[K^~~~~~~~[m[K
+[01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/src/Node.cpp:47:65:[m[K [01;31m[Kerror: [m[Kno matching function for call to ‘[01m[Keskf::Node::create_publisher<<expression error> >(const char [5], int)[m[K’
+   47 |   pubPose_ = this->create_publisher<nav_msgs::Odometry>("pose",1[01;31m[K)[m[K;
+      |                                                                 [01;31m[K^[m[K
+In file included from [01m[K/opt/ros/foxy/include/rclcpp/executors/single_threaded_executor.hpp:28[m[K,
+                 from [01m[K/opt/ros/foxy/include/rclcpp/executors.hpp:22[m[K,
+                 from [01m[K/opt/ros/foxy/include/rclcpp/rclcpp.hpp:146[m[K,
+                 from [01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/include/eskf/Node.hpp:4[m[K,
+                 from [01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/src/Node.cpp:1[m[K:
+[01m[K/opt/ros/foxy/include/rclcpp/node.hpp:184:3:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class MessageT, class AllocatorT, class PublisherT> std::shared_ptr<PublisherT> rclcpp::Node::create_publisher(const string&, const rclcpp::QoS&, const rclcpp::PublisherOptionsWithAllocator<AllocatorT>&)[m[K’
+  184 |   [01;36m[Kcreate_publisher[m[K(
+      |   [01;36m[K^~~~~~~~~~~~~~~~[m[K
+[01m[K/opt/ros/foxy/include/rclcpp/node.hpp:184:3:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/src/Node.cpp:47:65:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+   47 |   pubPose_ = this->create_publisher<nav_msgs::Odometry>("pose",1[01;31m[K)[m[K;
+      |                                                                 [01;31m[K^[m[K
+[01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/src/Node.cpp:53:80:[m[K [01;31m[Kerror: [m[Kno matching function for call to ‘[01m[Keskf::Node::create_wall_timer(rclcpp::Duration, std::_Bind_helper<false, void (eskf::Node::*)(), eskf::Node*>::type)[m[K’
+   53 |       rclcpp::Duration(1.0f/publish_rate), std::bind(&Node::publishState, this)[01;31m[K)[m[K;
+      |                                                                                [01;31m[K^[m[K
+In file included from [01m[K/opt/ros/foxy/include/rclcpp/executors/single_threaded_executor.hpp:28[m[K,
+                 from [01m[K/opt/ros/foxy/include/rclcpp/executors.hpp:22[m[K,
+                 from [01m[K/opt/ros/foxy/include/rclcpp/rclcpp.hpp:146[m[K,
+                 from [01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/include/eskf/Node.hpp:4[m[K,
+                 from [01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/src/Node.cpp:1[m[K:
+[01m[K/opt/ros/foxy/include/rclcpp/node.hpp:232:3:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class DurationRepT, class DurationT, class CallbackT> typename rclcpp::WallTimer<CallbackT>::SharedPtr rclcpp::Node::create_wall_timer(std::chrono::duration<_Rep1, _Period1>, CallbackT, rclcpp::CallbackGroup::SharedPtr)[m[K’
+  232 |   [01;36m[Kcreate_wall_timer[m[K(
+      |   [01;36m[K^~~~~~~~~~~~~~~~~[m[K
+[01m[K/opt/ros/foxy/include/rclcpp/node.hpp:232:3:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/src/Node.cpp:53:80:[m[K [01;36m[Knote: [m[K  ‘[01m[Krclcpp::Duration[m[K’ is not derived from ‘[01m[Kstd::chrono::duration<_Rep1, _Period1>[m[K’
+   53 |       rclcpp::Duration(1.0f/publish_rate), std::bind(&Node::publishState, this)[01;36m[K)[m[K;
+      |                                                                                [01;36m[K^[m[K
+[01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/src/Node.cpp:[m[K At global scope:
+[01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/src/Node.cpp:56:45:[m[K [01;31m[Kerror: [m[K‘[01m[KImu[m[K’ in namespace ‘[01m[Ksensor_msgs[m[K’ does not name a type
+   56 | void Node::inputCallback(const sensor_msgs::[01;31m[KImu[m[K::SharedPtr imuMsg) const; {
+      |                                             [01;31m[K^~~[m[K
+[01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/src/Node.cpp:56:60:[m[K [01;31m[Kerror: [m[Kexpected unqualified-id before ‘[01m[KimuMsg[m[K’
+   56 | void Node::inputCallback(const sensor_msgs::Imu::SharedPtr [01;31m[KimuMsg[m[K) const; {
+      |                                                            [01;31m[K^~~~~~[m[K
+[01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/src/Node.cpp:56:59:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K)[m[K’ before ‘[01m[KimuMsg[m[K’
+   56 | void Node::inputCallback[34m[K([m[Kconst sensor_msgs::Imu::SharedPtr[01;31m[K [m[K[32m[KimuMsg[m[K) const; {
+      |                         [34m[K~[m[K                                 [01;31m[K^[m[K[32m[K~~~~~~[m[K
+      |                                                           [32m[K)[m[K
+[01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/src/Node.cpp:56:60:[m[K [01;31m[Kerror: [m[Kexpected initializer before ‘[01m[KimuMsg[m[K’
+   56 | void Node::inputCallback(const sensor_msgs::Imu::SharedPtr [01;31m[KimuMsg[m[K) const; {
+      |                                                            [01;31m[K^~~~~~[m[K
+[01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/src/Node.cpp:56:75:[m[K [01;31m[Kerror: [m[Kexpected unqualified-id before ‘[01m[K{[m[K’ token
+   56 | void Node::inputCallback(const sensor_msgs::Imu::SharedPtr imuMsg) const; [01;31m[K{[m[K
+      |                                                                           [01;31m[K^[m[K
+[01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/src/Node.cpp:75:48:[m[K [01;31m[Kerror: [m[K‘[01m[KPoseWithCovarianceStamped[m[K’ in namespace ‘[01m[Kgeometry_msgs[m[K’ does not name a type
+   75 | void Node::visionCallback(const geometry_msgs::[01;31m[KPoseWithCovarianceStamped[m[K::SharedPtr poseMsg) const {
+      |                                                [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/src/Node.cpp:75:85:[m[K [01;31m[Kerror: [m[Kexpected unqualified-id before ‘[01m[KposeMsg[m[K’
+   75 | void Node::visionCallback(const geometry_msgs::PoseWithCovarianceStamped::SharedPtr [01;31m[KposeMsg[m[K) const {
+      |                                                                                     [01;31m[K^~~~~~~[m[K
+[01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/src/Node.cpp:75:84:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K)[m[K’ before ‘[01m[KposeMsg[m[K’
+   75 | void Node::visionCallback[34m[K([m[Kconst geometry_msgs::PoseWithCovarianceStamped::SharedPtr[01;31m[K [m[K[32m[KposeMsg[m[K) const {
+      |                          [34m[K~[m[K                                                         [01;31m[K^[m[K[32m[K~~~~~~~[m[K
+      |                                                                                    [32m[K)[m[K
+[01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/src/Node.cpp:75:85:[m[K [01;31m[Kerror: [m[Kexpected initializer before ‘[01m[KposeMsg[m[K’
+   75 | void Node::visionCallback(const geometry_msgs::PoseWithCovarianceStamped::SharedPtr [01;31m[KposeMsg[m[K) const {
+      |                                                                                     [01;31m[K^~~~~~~[m[K
+[01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/src/Node.cpp:87:40:[m[K [01;31m[Kerror: [m[K‘[01m[KOdometry[m[K’ in namespace ‘[01m[Knav_msgs[m[K’ does not name a type
+   87 | void Node::gpsCallback(const nav_msgs::[01;31m[KOdometry[m[K::SharedPtr odomMsg) const {
+      |                                        [01;31m[K^~~~~~~~[m[K
+[01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/src/Node.cpp:87:60:[m[K [01;31m[Kerror: [m[Kexpected unqualified-id before ‘[01m[KodomMsg[m[K’
+   87 | void Node::gpsCallback(const nav_msgs::Odometry::SharedPtr [01;31m[KodomMsg[m[K) const {
+      |                                                            [01;31m[K^~~~~~~[m[K
+[01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/src/Node.cpp:87:59:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K)[m[K’ before ‘[01m[KodomMsg[m[K’
+   87 | void Node::gpsCallback[34m[K([m[Kconst nav_msgs::Odometry::SharedPtr[01;31m[K [m[K[32m[KodomMsg[m[K) const {
+      |                       [34m[K~[m[K                                   [01;31m[K^[m[K[32m[K~~~~~~~[m[K
+      |                                                           [32m[K)[m[K
+[01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/src/Node.cpp:87:60:[m[K [01;31m[Kerror: [m[Kexpected initializer before ‘[01m[KodomMsg[m[K’
+   87 | void Node::gpsCallback(const nav_msgs::Odometry::SharedPtr [01;31m[KodomMsg[m[K) const {
+      |                                                            [01;31m[K^~~~~~~[m[K
+[01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/src/Node.cpp:99:51:[m[K [01;31m[Kerror: [m[K‘[01m[KOpticalFlowRad[m[K’ in namespace ‘[01m[Kmavros_msgs[m[K’ does not name a type
+   99 | void Node::opticalFlowCallback(const mavros_msgs::[01;31m[KOpticalFlowRad[m[K::SharedPtr opticalFlowMsg) const {
+      |                                                   [01;31m[K^~~~~~~~~~~~~~[m[K
+[01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/src/Node.cpp:99:77:[m[K [01;31m[Kerror: [m[Kexpected unqualified-id before ‘[01m[KopticalFlowMsg[m[K’
+   99 | void Node::opticalFlowCallback(const mavros_msgs::OpticalFlowRad::SharedPtr [01;31m[KopticalFlowMsg[m[K) const {
+      |                                                                             [01;31m[K^~~~~~~~~~~~~~[m[K
+[01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/src/Node.cpp:99:76:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K)[m[K’ before ‘[01m[KopticalFlowMsg[m[K’
+   99 | void Node::opticalFlowCallback[34m[K([m[Kconst mavros_msgs::OpticalFlowRad::SharedPtr[01;31m[K [m[K[32m[KopticalFlowMsg[m[K) const {
+      |                               [34m[K~[m[K                                            [01;31m[K^[m[K[32m[K~~~~~~~~~~~~~~[m[K
+      |                                                                            [32m[K)[m[K
+[01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/src/Node.cpp:99:77:[m[K [01;31m[Kerror: [m[Kexpected initializer before ‘[01m[KopticalFlowMsg[m[K’
+   99 | void Node::opticalFlowCallback(const mavros_msgs::OpticalFlowRad::SharedPtr [01;31m[KopticalFlowMsg[m[K) const {
+      |                                                                             [01;31m[K^~~~~~~~~~~~~~[m[K
+[01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/src/Node.cpp:114:43:[m[K [01;31m[Kerror: [m[K‘[01m[KMagneticField[m[K’ in namespace ‘[01m[Ksensor_msgs[m[K’ does not name a type
+  114 | void Node::magCallback(const sensor_msgs::[01;31m[KMagneticField[m[K::SharedPtr magMsg) const {
+      |                                           [01;31m[K^~~~~~~~~~~~~[m[K
+[01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/src/Node.cpp:114:68:[m[K [01;31m[Kerror: [m[Kexpected unqualified-id before ‘[01m[KmagMsg[m[K’
+  114 | void Node::magCallback(const sensor_msgs::MagneticField::SharedPtr [01;31m[KmagMsg[m[K) const {
+      |                                                                    [01;31m[K^~~~~~[m[K
+[01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/src/Node.cpp:114:67:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K)[m[K’ before ‘[01m[KmagMsg[m[K’
+  114 | void Node::magCallback[34m[K([m[Kconst sensor_msgs::MagneticField::SharedPtr[01;31m[K [m[K[32m[KmagMsg[m[K) const {
+      |                       [34m[K~[m[K                                           [01;31m[K^[m[K[32m[K~~~~~~[m[K
+      |                                                                   [32m[K)[m[K
+[01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/src/Node.cpp:114:68:[m[K [01;31m[Kerror: [m[Kexpected initializer before ‘[01m[KmagMsg[m[K’
+  114 | void Node::magCallback(const sensor_msgs::MagneticField::SharedPtr [01;31m[KmagMsg[m[K) const {
+      |                                                                    [01;31m[K^~~~~~[m[K
+[01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/src/Node.cpp:124:51:[m[K [01;31m[Kerror: [m[K‘[01m[KRange[m[K’ in namespace ‘[01m[Ksensor_msgs[m[K’ does not name a type
+  124 | void Node::rangeFinderCallback(const sensor_msgs::[01;31m[KRange[m[K::SharedPtr rangeMsg) const; {
+      |                                                   [01;31m[K^~~~~[m[K
+[01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/src/Node.cpp:124:68:[m[K [01;31m[Kerror: [m[Kexpected unqualified-id before ‘[01m[KrangeMsg[m[K’
+  124 | void Node::rangeFinderCallback(const sensor_msgs::Range::SharedPtr [01;31m[KrangeMsg[m[K) const; {
+      |                                                                    [01;31m[K^~~~~~~~[m[K
+[01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/src/Node.cpp:124:67:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K)[m[K’ before ‘[01m[KrangeMsg[m[K’
+  124 | void Node::rangeFinderCallback[34m[K([m[Kconst sensor_msgs::Range::SharedPtr[01;31m[K [m[K[32m[KrangeMsg[m[K) const; {
+      |                               [34m[K~[m[K                                   [01;31m[K^[m[K[32m[K~~~~~~~~[m[K
+      |                                                                   [32m[K)[m[K
+[01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/src/Node.cpp:124:68:[m[K [01;31m[Kerror: [m[Kexpected initializer before ‘[01m[KrangeMsg[m[K’
+  124 | void Node::rangeFinderCallback(const sensor_msgs::Range::SharedPtr [01;31m[KrangeMsg[m[K) const; {
+      |                                                                    [01;31m[K^~~~~~~~[m[K
+[01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/src/Node.cpp:124:85:[m[K [01;31m[Kerror: [m[Kexpected unqualified-id before ‘[01m[K{[m[K’ token
+  124 | void Node::rangeFinderCallback(const sensor_msgs::Range::SharedPtr rangeMsg) const; [01;31m[K{[m[K
+      |                                                                                     [01;31m[K^[m[K
+[01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/src/Node.cpp:133:53:[m[K [01;31m[Kerror: [m[K‘[01m[KExtendedState[m[K’ in namespace ‘[01m[Kmavros_msgs[m[K’ does not name a type
+  133 | void Node::extendedStateCallback(const mavros_msgs::[01;31m[KExtendedState[m[K::SharedPtr extendedStateMsg) const {
+      |                                                     [01;31m[K^~~~~~~~~~~~~[m[K
+[01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/src/Node.cpp:133:78:[m[K [01;31m[Kerror: [m[Kexpected unqualified-id before ‘[01m[KextendedStateMsg[m[K’
+  133 | void Node::extendedStateCallback(const mavros_msgs::ExtendedState::SharedPtr [01;31m[KextendedStateMsg[m[K) const {
+      |                                                                              [01;31m[K^~~~~~~~~~~~~~~~[m[K
+[01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/src/Node.cpp:133:77:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K)[m[K’ before ‘[01m[KextendedStateMsg[m[K’
+  133 | void Node::extendedStateCallback[34m[K([m[Kconst mavros_msgs::ExtendedState::SharedPtr[01;31m[K [m[K[32m[KextendedStateMsg[m[K) const {
+      |                                 [34m[K~[m[K                                           [01;31m[K^[m[K[32m[K~~~~~~~~~~~~~~~~[m[K
+      |                                                                             [32m[K)[m[K
+[01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/src/Node.cpp:133:78:[m[K [01;31m[Kerror: [m[Kexpected initializer before ‘[01m[KextendedStateMsg[m[K’
+  133 | void Node::extendedStateCallback(const mavros_msgs::ExtendedState::SharedPtr [01;31m[KextendedStateMsg[m[K) const {
+      |                                                                              [01;31m[K^~~~~~~~~~~~~~~~[m[K
+[01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/src/Node.cpp:[m[K In member function ‘[01m[Kvoid eskf::Node::publishState()[m[K’:
+[01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/src/Node.cpp:145:13:[m[K [01;31m[Kerror: [m[K‘[01m[KHeader[m[K’ is not a member of ‘[01m[Kstd_msgs[m[K’; did you mean ‘[01m[Kstd_msgs::msg::Header[m[K’?
+  145 |   std_msgs::[01;31m[KHeader[m[K header;
+      |             [01;31m[K^~~~~~[m[K
+In file included from [01m[K/opt/ros/foxy/include/sensor_msgs/msg/detail/imu__struct.hpp:19[m[K,
+                 from [01m[K/opt/ros/foxy/include/sensor_msgs/msg/imu.hpp:7[m[K,
+                 from [01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/include/eskf/Node.hpp:5[m[K,
+                 from [01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/src/Node.cpp:1[m[K:
+[01m[K/opt/ros/foxy/include/std_msgs/msg/detail/header__struct.hpp:139:7:[m[K [01;36m[Knote: [m[K‘[01m[Kstd_msgs::msg::Header[m[K’ declared here
+  139 | using [01;36m[KHeader[m[K =
+      |       [01;36m[K^~~~~~[m[K
+[01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/src/Node.cpp:146:3:[m[K [01;31m[Kerror: [m[K‘[01m[Kheader[m[K’ was not declared in this scope
+  146 |   [01;31m[Kheader[m[K.frame_id = "/pose";
+      |   [01;31m[K^~~~~~[m[K
+[01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/src/Node.cpp:148:18:[m[K [01;31m[Kerror: [m[K‘[01m[Kros[m[K’ has not been declared
+  148 |   header.stamp = [01;31m[Kros[m[K::Time::now();
+      |                  [01;31m[K^~~[m[K
+[01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/src/Node.cpp:150:13:[m[K [01;31m[Kerror: [m[K‘[01m[KOdometry[m[K’ is not a member of ‘[01m[Knav_msgs[m[K’; did you mean ‘[01m[Knav_msgs::msg::Odometry[m[K’?
+  150 |   nav_msgs::[01;31m[KOdometry[m[K odom;
+      |             [01;31m[K^~~~~~~~[m[K
+In file included from [01m[K/opt/ros/foxy/include/nav_msgs/msg/odometry.hpp:7[m[K,
+                 from [01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/include/eskf/Node.hpp:8[m[K,
+                 from [01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/src/Node.cpp:1[m[K:
+[01m[K/opt/ros/foxy/include/nav_msgs/msg/detail/odometry__struct.hpp:171:7:[m[K [01;36m[Knote: [m[K‘[01m[Knav_msgs::msg::Odometry[m[K’ declared here
+  171 | using [01;36m[KOdometry[m[K =
+      |       [01;36m[K^~~~~~~~[m[K
+[01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/src/Node.cpp:151:3:[m[K [01;31m[Kerror: [m[K‘[01m[Kodom[m[K’ was not declared in this scope
+  151 |   [01;31m[Kodom[m[K.header = header;
+      |   [01;31m[K^~~~[m[K
+[01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/src/Node.cpp:163:3:[m[K [01;31m[Kerror: [m[K‘[01m[KpubPose_[m[K’ was not declared in this scope
+  163 |   [01;31m[KpubPose_[m[K.publish(odom);
+      |   [01;31m[K^~~~~~~~[m[K
+make[2]: *** [CMakeFiles/state-estimation.dir/build.make:63: CMakeFiles/state-estimation.dir/src/eskf.cpp.o] Error 1
+make[2]: *** Waiting for unfinished jobs....
+make[2]: *** [CMakeFiles/state-estimation.dir/build.make:76: CMakeFiles/state-estimation.dir/src/Node.cpp.o] Error 1
+make[1]: *** [CMakeFiles/Makefile2:80: CMakeFiles/state-estimation.dir/all] Error 2
+make: *** [Makefile:141: all] Error 2

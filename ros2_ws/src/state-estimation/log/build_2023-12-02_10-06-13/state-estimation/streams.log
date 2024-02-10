@@ -1,0 +1,54 @@
+[0.203s] Invoking command in '/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/build/state-estimation': /usr/bin/cmake /home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation -DCMAKE_INSTALL_PREFIX=/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/install/state-estimation
+[0.285s] -- The C compiler identification is GNU 9.4.0
+[0.360s] -- The CXX compiler identification is GNU 9.4.0
+[0.368s] -- Check for working C compiler: /usr/bin/cc
+[0.471s] -- Check for working C compiler: /usr/bin/cc -- works
+[0.473s] -- Detecting C compiler ABI info
+[0.571s] -- Detecting C compiler ABI info - done
+[0.589s] -- Detecting C compile features
+[0.589s] -- Detecting C compile features - done
+[0.592s] -- Check for working CXX compiler: /usr/bin/c++
+[0.699s] -- Check for working CXX compiler: /usr/bin/c++ -- works
+[0.701s] -- Detecting CXX compiler ABI info
+[0.813s] -- Detecting CXX compiler ABI info - done
+[0.833s] -- Detecting CXX compile features
+[0.833s] -- Detecting CXX compile features - done
+[0.836s] -- Found ament_cmake: 0.9.12 (/opt/ros/foxy/share/ament_cmake/cmake)
+[0.867s] -- Found PythonInterp: /usr/bin/python3 (found suitable version "3.8.10", minimum required is "3") 
+[0.868s] -- Using PYTHON_EXECUTABLE: /usr/bin/python3
+[1.115s] -- Found rclcpp: 2.4.3 (/opt/ros/foxy/share/rclcpp/cmake)
+[1.171s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[1.178s] -- Found rosidl_adapter: 1.3.1 (/opt/ros/foxy/share/rosidl_adapter/cmake)
+[1.315s] -- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "1.1.1f")  
+[1.363s] -- Found FastRTPS: /opt/ros/foxy/include  
+[1.474s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[1.548s] -- Found rmw_implementation_cmake: 1.0.4 (/opt/ros/foxy/share/rmw_implementation_cmake/cmake)
+[1.550s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[1.550s] -- Looking for pthread.h
+[1.658s] -- Looking for pthread.h - found
+[1.659s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD
+[1.772s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Failed
+[1.773s] -- Looking for pthread_create in pthreads
+[1.862s] -- Looking for pthread_create in pthreads - not found
+[1.862s] -- Looking for pthread_create in pthread
+[1.968s] -- Looking for pthread_create in pthread - found
+[1.969s] -- Found Threads: TRUE  
+[2.177s] -- Found geometry_msgs: 2.0.5 (/opt/ros/foxy/share/geometry_msgs/cmake)
+[2.225s] -- Found sensor_msgs: 2.0.5 (/opt/ros/foxy/share/sensor_msgs/cmake)
+[2.327s] -- Found message_filters: 3.2.7 (/opt/ros/foxy/share/message_filters/cmake)
+[2.331s] -- Found eigen3_cmake_module: 0.1.1 (/opt/ros/foxy/share/eigen3_cmake_module/cmake)
+[2.334s] -- Found Eigen3: TRUE (found version "3.3.7") 
+[2.336s] -- Found mavros_msgs: 2.4.0 (/opt/ros/foxy/share/mavros_msgs/cmake)
+[2.939s] -- Found rosidl_default_generators: 1.0.1 (/opt/ros/foxy/share/rosidl_default_generators/cmake)
+[2.953s] CMake Error at /opt/ros/foxy/share/rosidl_cmake/cmake/rosidl_generate_interfaces.cmake:93 (message):
+[2.954s]   rosidl_generate_interfaces() the passed file 'state-estimation' doesn't
+[2.954s]   exist relative to the CMAKE_CURRENT_SOURCE_DIR
+[2.954s]   '/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation'
+[2.954s] Call Stack (most recent call first):
+[2.954s]   CMakeLists.txt:29 (rosidl_generate_interfaces)
+[2.954s] 
+[2.954s] 
+[2.955s] -- Configuring incomplete, errors occurred!
+[2.955s] See also "/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/build/state-estimation/CMakeFiles/CMakeOutput.log".
+[2.956s] See also "/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/build/state-estimation/CMakeFiles/CMakeError.log".
+[2.965s] Invoked command in '/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/build/state-estimation' returned '1': /usr/bin/cmake /home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation -DCMAKE_INSTALL_PREFIX=/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/install/state-estimation

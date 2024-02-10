@@ -1,0 +1,25 @@
+[0.206s] Invoking command in '/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/build/eskf': /usr/bin/cmake /home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation -DCATKIN_INSTALL_INTO_PREFIX_ROOT=0 -DCMAKE_INSTALL_PREFIX=/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/install/eskf
+[0.224s] -- Found ament_cmake: 0.9.12 (/opt/ros/foxy/share/ament_cmake/cmake)
+[0.253s] -- Using PYTHON_EXECUTABLE: /usr/bin/python3
+[0.480s] -- Found rclcpp: 2.4.3 (/opt/ros/foxy/share/rclcpp/cmake)
+[0.524s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.528s] -- Found rosidl_adapter: 1.3.1 (/opt/ros/foxy/share/rosidl_adapter/cmake)
+[0.707s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[0.767s] -- Found rmw_implementation_cmake: 1.0.4 (/opt/ros/foxy/share/rmw_implementation_cmake/cmake)
+[0.768s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[0.967s] -- Found geometry_msgs: 2.0.5 (/opt/ros/foxy/share/geometry_msgs/cmake)
+[1.013s] -- Found sensor_msgs: 2.0.5 (/opt/ros/foxy/share/sensor_msgs/cmake)
+[1.114s] -- Found message_filters: 3.2.7 (/opt/ros/foxy/share/message_filters/cmake)
+[1.116s] -- Found eigen3_cmake_module: 0.1.1 (/opt/ros/foxy/share/eigen3_cmake_module/cmake)
+[1.118s] -- Found mavros_msgs: 2.4.0 (/opt/ros/foxy/share/mavros_msgs/cmake)
+[1.724s] -- Found rosidl_default_generators: 1.0.1 (/opt/ros/foxy/share/rosidl_default_generators/cmake)
+[1.744s] CMake Error at /opt/ros/foxy/share/rosidl_cmake/cmake/rosidl_generate_interfaces.cmake:59 (message):
+[1.744s]   rosidl_generate_interfaces() called without any interface files
+[1.744s] Call Stack (most recent call first):
+[1.744s]   CMakeLists.txt:29 (rosidl_generate_interfaces)
+[1.744s] 
+[1.745s] 
+[1.746s] -- Configuring incomplete, errors occurred!
+[1.746s] See also "/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/build/eskf/CMakeFiles/CMakeOutput.log".
+[1.746s] See also "/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/build/eskf/CMakeFiles/CMakeError.log".
+[1.753s] Invoked command in '/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/build/eskf' returned '1': /usr/bin/cmake /home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation -DCATKIN_INSTALL_INTO_PREFIX_ROOT=0 -DCMAKE_INSTALL_PREFIX=/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/install/eskf

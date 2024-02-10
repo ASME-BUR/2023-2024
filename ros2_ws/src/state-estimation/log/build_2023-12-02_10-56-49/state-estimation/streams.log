@@ -1,0 +1,21 @@
+[0.204s] Invoking command in '/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/build/state-estimation': /usr/bin/cmake --build /home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/build/state-estimation -- -j8 -l8
+[0.278s] [ 40%] Built target ESKF
+[0.301s] [35m[1mScanning dependencies of target state-estimation[0m
+[0.355s] [ 60%] [32mBuilding CXX object CMakeFiles/state-estimation.dir/src/Node.cpp.o[0m
+[0.355s] [ 80%] [32mBuilding CXX object CMakeFiles/state-estimation.dir/src/eskf.cpp.o[0m
+[0.485s] In file included from [01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/src/Node.cpp:1[m[K:
+[0.485s] [01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/include/eskf/Node.hpp:5:10:[m[K [01;31m[Kfatal error: [m[KImu.h: No such file or directory
+[0.485s]     5 | #include [01;31m[K"Imu.h"[m[K
+[0.486s]       |          [01;31m[K^~~~~~~[m[K
+[0.486s] compilation terminated.
+[0.488s] In file included from [01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/src/eskf.cpp:1[m[K:
+[0.488s] [01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/include/eskf/Node.hpp:5:10:[m[K [01;31m[Kfatal error: [m[KImu.h: No such file or directory
+[0.489s]     5 | #include [01;31m[K"Imu.h"[m[K
+[0.489s]       |          [01;31m[K^~~~~~~[m[K
+[0.489s] compilation terminated.
+[0.495s] make[2]: *** [CMakeFiles/state-estimation.dir/build.make:63: CMakeFiles/state-estimation.dir/src/eskf.cpp.o] Error 1
+[0.495s] make[2]: *** Waiting for unfinished jobs....
+[0.495s] make[2]: *** [CMakeFiles/state-estimation.dir/build.make:76: CMakeFiles/state-estimation.dir/src/Node.cpp.o] Error 1
+[0.495s] make[1]: *** [CMakeFiles/Makefile2:80: CMakeFiles/state-estimation.dir/all] Error 2
+[0.496s] make: *** [Makefile:141: all] Error 2
+[0.499s] Invoked command in '/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/build/state-estimation' returned '2': /usr/bin/cmake --build /home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/build/state-estimation -- -j8 -l8

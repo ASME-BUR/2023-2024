@@ -1,0 +1,151 @@
+[0.000000] (-) TimerEvent: {}
+[0.000254] (state-estimation) JobQueued: {'identifier': 'state-estimation', 'dependencies': OrderedDict()}
+[0.000324] (state-estimation) JobStarted: {'identifier': 'state-estimation'}
+[0.100968] (-) TimerEvent: {}
+[0.121933] (state-estimation) JobProgress: {'identifier': 'state-estimation', 'progress': 'cmake'}
+[0.122667] (state-estimation) JobProgress: {'identifier': 'state-estimation', 'progress': 'build'}
+[0.123460] (state-estimation) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/build/state-estimation', '--', '-j8', '-l8'], 'cwd': '/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/build/state-estimation', 'env': OrderedDict([('GJS_DEBUG_TOPICS', 'JS ERROR;JS LOG'), ('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'nakul'), ('SSH_AGENT_PID', '1595'), ('XDG_SESSION_TYPE', 'x11'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/opt/ros/foxy/opt/yaml_cpp_vendor/lib:/opt/ros/foxy/opt/rviz_ogre_vendor/lib:/opt/ros/foxy/lib/x86_64-linux-gnu:/opt/ros/foxy/lib'), ('HOME', '/home/nakul'), ('OLDPWD', '/home/nakul/Desktop/bur/ros2_ws/src/2023-2024'), ('DESKTOP_SESSION', 'ubuntu'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('MANAGERPID', '1401'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('IM_CONFIG_PHASE', '1'), ('COLCON_PREFIX_PATH', '/home/nakul/Desktop/bur/ros2_ws/install'), ('ROS_DISTRO', 'foxy'), ('LOGNAME', 'nakul'), ('JOURNAL_STREAM', '8:43692'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'nakul'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('WINDOWPATH', '2'), ('PATH', '/opt/ros/foxy/bin:/opt/gcc-arm-none-eabi-9-2020-q2-update/bin:/home/nakul/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin'), ('SESSION_MANAGER', 'local/nakul-IdeaPad-Flex-5-14ARE05:@/tmp/.ICE-unix/1655,unix/nakul-IdeaPad-Flex-5-14ARE05:/tmp/.ICE-unix/1655'), ('INVOCATION_ID', 'd2c8bcb2281747d9a4262da74003460c'), ('XDG_MENU_PREFIX', 'gnome-'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/3f5fc384_5465_4ce5_a9c0_6a6da4ec2909'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/gdm/Xauthority'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('GNOME_TERMINAL_SERVICE', ':1.82'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/opt/ros/foxy'), ('SHELL', '/bin/bash'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('GJS_DEBUG_OUTPUT', 'stderr'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/build/state-estimation'), ('LC_ALL', 'en_US.UTF-8'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/opt/ros/foxy/lib/python3.8/site-packages'), ('COLCON', '1'), ('VTE_VERSION', '6003')]), 'shell': False}
+[0.199699] (state-estimation) StdoutLine: {'line': b'[ 40%] Built target ESKF\n'}
+[0.201039] (-) TimerEvent: {}
+[0.213066] (state-estimation) StdoutLine: {'line': b'\x1b[35m\x1b[1mScanning dependencies of target state-estimation\x1b[0m\n'}
+[0.254870] (state-estimation) StdoutLine: {'line': b'[ 60%] \x1b[32mBuilding CXX object CMakeFiles/state-estimation.dir/src/Node.cpp.o\x1b[0m\n'}
+[0.301191] (-) TimerEvent: {}
+[0.401567] (-) TimerEvent: {}
+[0.501946] (-) TimerEvent: {}
+[0.602305] (-) TimerEvent: {}
+[0.702771] (-) TimerEvent: {}
+[0.803142] (-) TimerEvent: {}
+[0.903491] (-) TimerEvent: {}
+[1.003867] (-) TimerEvent: {}
+[1.104213] (-) TimerEvent: {}
+[1.204582] (-) TimerEvent: {}
+[1.304987] (-) TimerEvent: {}
+[1.405375] (-) TimerEvent: {}
+[1.505759] (-) TimerEvent: {}
+[1.606132] (-) TimerEvent: {}
+[1.706541] (-) TimerEvent: {}
+[1.806898] (-) TimerEvent: {}
+[1.907270] (-) TimerEvent: {}
+[2.007648] (-) TimerEvent: {}
+[2.012662] (state-estimation) StderrLine: {'line': b'\x1b[01m\x1b[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/src/Node.cpp:\x1b[m\x1b[K In constructor \xe2\x80\x98\x1b[01m\x1b[Keskf::Node::Node()\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[2.013069] (state-estimation) StderrLine: {'line': b'\x1b[01m\x1b[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/src/Node.cpp:47:64:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kno matching function for call to \xe2\x80\x98\x1b[01m\x1b[Keskf::Node::create_wall_timer(float, std::_Bind_helper<false, void (eskf::Node::*)(), eskf::Node*>::type)\x1b[m\x1b[K\xe2\x80\x99\n'}
+[2.013196] (state-estimation) StderrLine: {'line': b'   47 |       (1.0f/publish_rate), std::bind(&Node::publishState, this)\x1b[01;31m\x1b[K)\x1b[m\x1b[K;\n'}
+[2.013301] (state-estimation) StderrLine: {'line': b'      |                                                                \x1b[01;31m\x1b[K^\x1b[m\x1b[K\n'}
+[2.013401] (state-estimation) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/opt/ros/foxy/include/rclcpp/executors/single_threaded_executor.hpp:28\x1b[m\x1b[K,\n'}
+[2.013502] (state-estimation) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/foxy/include/rclcpp/executors.hpp:22\x1b[m\x1b[K,\n'}
+[2.013600] (state-estimation) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/foxy/include/rclcpp/rclcpp.hpp:146\x1b[m\x1b[K,\n'}
+[2.013703] (state-estimation) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/include/eskf/Node.hpp:5\x1b[m\x1b[K,\n'}
+[2.013799] (state-estimation) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/src/Node.cpp:1\x1b[m\x1b[K:\n'}
+[2.013897] (state-estimation) StderrLine: {'line': b'\x1b[01m\x1b[K/opt/ros/foxy/include/rclcpp/node.hpp:232:3:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[Kcandidate: \xe2\x80\x98\x1b[01m\x1b[Ktemplate<class DurationRepT, class DurationT, class CallbackT> typename rclcpp::WallTimer<CallbackT>::SharedPtr rclcpp::Node::create_wall_timer(std::chrono::duration<_Rep1, _Period1>, CallbackT, rclcpp::CallbackGroup::SharedPtr)\x1b[m\x1b[K\xe2\x80\x99\n'}
+[2.014000] (state-estimation) StderrLine: {'line': b'  232 |   \x1b[01;36m\x1b[Kcreate_wall_timer\x1b[m\x1b[K(\n'}
+[2.014099] (state-estimation) StderrLine: {'line': b'      |   \x1b[01;36m\x1b[K^~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[2.014210] (state-estimation) StderrLine: {'line': b'\x1b[01m\x1b[K/opt/ros/foxy/include/rclcpp/node.hpp:232:3:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K  template argument deduction/substitution failed:\n'}
+[2.014312] (state-estimation) StderrLine: {'line': b'\x1b[01m\x1b[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/src/Node.cpp:47:64:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K  mismatched types \xe2\x80\x98\x1b[01m\x1b[Kstd::chrono::duration<_Rep1, _Period1>\x1b[m\x1b[K\xe2\x80\x99 and \xe2\x80\x98\x1b[01m\x1b[Kfloat\x1b[m\x1b[K\xe2\x80\x99\n'}
+[2.014414] (state-estimation) StderrLine: {'line': b'   47 |       (1.0f/publish_rate), std::bind(&Node::publishState, this)\x1b[01;36m\x1b[K)\x1b[m\x1b[K;\n'}
+[2.014533] (state-estimation) StderrLine: {'line': b'      |                                                                \x1b[01;36m\x1b[K^\x1b[m\x1b[K\n'}
+[2.016411] (state-estimation) StderrLine: {'line': b'\x1b[01m\x1b[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/src/Node.cpp:\x1b[m\x1b[K In member function \xe2\x80\x98\x1b[01m\x1b[Kvoid eskf::Node::inputCallback(sensor_msgs::msg::Imu_<std::allocator<void> >::SharedPtr) const\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[2.016639] (state-estimation) StderrLine: {'line': b'\x1b[01m\x1b[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/src/Node.cpp:55:21:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kconst class rclcpp::Time\x1b[m\x1b[K\xe2\x80\x99 has no member named \xe2\x80\x98\x1b[01m\x1b[Know\x1b[m\x1b[K\xe2\x80\x99\n'}
+[2.016764] (state-estimation) StderrLine: {'line': b'   55 |   if (prevStampImu_.\x1b[01;31m\x1b[Know\x1b[m\x1b[K() != 0) {\n'}
+[2.016872] (state-estimation) StderrLine: {'line': b'      |                     \x1b[01;31m\x1b[K^~~\x1b[m\x1b[K\n'}
+[2.016977] (state-estimation) StderrLine: {'line': b'\x1b[01m\x1b[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/src/Node.cpp:60:13:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kassignment of member \xe2\x80\x98\x1b[01m\x1b[Keskf::Node::init_\x1b[m\x1b[K\xe2\x80\x99 in read-only object\n'}
+[2.017081] (state-estimation) StderrLine: {'line': b'   60 |       \x1b[01;31m\x1b[Kinit_ = true\x1b[m\x1b[K;\n'}
+[2.017201] (state-estimation) StderrLine: {'line': b'      |       \x1b[01;31m\x1b[K~~~~~~^~~~~~\x1b[m\x1b[K\n'}
+[2.017413] (state-estimation) StderrLine: {'line': b'\x1b[01m\x1b[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/src/Node.cpp:65:66:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kusing _stamp_type = struct builtin_interfaces::msg::Time_<std::allocator<void> >\x1b[m\x1b[K\xe2\x80\x99 {aka \xe2\x80\x98\x1b[01m\x1b[Kstruct builtin_interfaces::msg::Time_<std::allocator<void> >\x1b[m\x1b[K\xe2\x80\x99} has no member named \xe2\x80\x98\x1b[01m\x1b[KtoSec\x1b[m\x1b[K\xe2\x80\x99\n'}
+[2.017576] (state-estimation) StderrLine: {'line': b'   65 |     eskf_.run(wm, am, static_cast<uint64_t>(imuMsg->header.stamp.\x1b[01;31m\x1b[KtoSec\x1b[m\x1b[K()*1e6f), delta);\n'}
+[2.017686] (state-estimation) StderrLine: {'line': b'      |                                                                  \x1b[01;31m\x1b[K^~~~~\x1b[m\x1b[K\n'}
+[2.020822] (state-estimation) StderrLine: {'line': b'\x1b[01m\x1b[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/src/Node.cpp:67:19:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kheader_time\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[2.021056] (state-estimation) StderrLine: {'line': b'   67 |   prevStampImu_ = \x1b[01;31m\x1b[Kheader_time\x1b[m\x1b[K;\n'}
+[2.021165] (state-estimation) StderrLine: {'line': b'      |                   \x1b[01;31m\x1b[K^~~~~~~~~~~\x1b[m\x1b[K\n'}
+[2.022936] (state-estimation) StderrLine: {'line': b'\x1b[01m\x1b[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/src/Node.cpp:\x1b[m\x1b[K In member function \xe2\x80\x98\x1b[01m\x1b[Kvoid eskf::Node::visionCallback(geometry_msgs::msg::PoseWithCovarianceStamped_<std::allocator<void> >::SharedPtr) const\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[2.023186] (state-estimation) StderrLine: {'line': b'\x1b[01m\x1b[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/src/Node.cpp:71:27:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kconst class rclcpp::Time\x1b[m\x1b[K\xe2\x80\x99 has no member named \xe2\x80\x98\x1b[01m\x1b[Ksec\x1b[m\x1b[K\xe2\x80\x99\n'}
+[2.023445] (state-estimation) StderrLine: {'line': b'   71 |   if(prevStampVisionPose_.\x1b[01;31m\x1b[Ksec\x1b[m\x1b[K != 0) {\n'}
+[2.023566] (state-estimation) StderrLine: {'line': b'      |                           \x1b[01;31m\x1b[K^~~\x1b[m\x1b[K\n'}
+[2.023670] (state-estimation) StderrLine: {'line': b'\x1b[01m\x1b[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/src/Node.cpp:78:78:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kusing _stamp_type = struct builtin_interfaces::msg::Time_<std::allocator<void> >\x1b[m\x1b[K\xe2\x80\x99 {aka \xe2\x80\x98\x1b[01m\x1b[Kstruct builtin_interfaces::msg::Time_<std::allocator<void> >\x1b[m\x1b[K\xe2\x80\x99} has no member named \xe2\x80\x98\x1b[01m\x1b[KtoSec\x1b[m\x1b[K\xe2\x80\x99\n'}
+[2.023775] (state-estimation) StderrLine: {'line': b'   78 |     eskf_.updateVision(z_q, z_p, static_cast<uint64_t>(poseMsg->header.stamp.\x1b[01;31m\x1b[KtoSec\x1b[m\x1b[K()*1e6f), delta);\n'}
+[2.023875] (state-estimation) StderrLine: {'line': b'      |                                                                              \x1b[01;31m\x1b[K^~~~~\x1b[m\x1b[K\n'}
+[2.027019] (state-estimation) StderrLine: {'line': b'\x1b[01m\x1b[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/src/Node.cpp:80:26:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kheader_time\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[2.027255] (state-estimation) StderrLine: {'line': b'   80 |   prevStampVisionPose_ = \x1b[01;31m\x1b[Kheader_time\x1b[m\x1b[K;\n'}
+[2.027365] (state-estimation) StderrLine: {'line': b'      |                          \x1b[01;31m\x1b[K^~~~~~~~~~~\x1b[m\x1b[K\n'}
+[2.029230] (state-estimation) StderrLine: {'line': b'\x1b[01m\x1b[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/src/Node.cpp:\x1b[m\x1b[K In member function \xe2\x80\x98\x1b[01m\x1b[Kvoid eskf::Node::gpsCallback(nav_msgs::msg::Odometry_<std::allocator<void> >::SharedPtr) const\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[2.029491] (state-estimation) StderrLine: {'line': b'\x1b[01m\x1b[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/src/Node.cpp:84:25:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kconst class rclcpp::Time\x1b[m\x1b[K\xe2\x80\x99 has no member named \xe2\x80\x98\x1b[01m\x1b[Ksec\x1b[m\x1b[K\xe2\x80\x99\n'}
+[2.029611] (state-estimation) StderrLine: {'line': b'   84 |   if (prevStampGpsPose_.\x1b[01;31m\x1b[Ksec\x1b[m\x1b[K != 0) {\n'}
+[2.029713] (state-estimation) StderrLine: {'line': b'      |                         \x1b[01;31m\x1b[K^~~\x1b[m\x1b[K\n'}
+[2.029811] (state-estimation) StderrLine: {'line': b'\x1b[01m\x1b[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/src/Node.cpp:92:75:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kusing _stamp_type = struct builtin_interfaces::msg::Time_<std::allocator<void> >\x1b[m\x1b[K\xe2\x80\x99 {aka \xe2\x80\x98\x1b[01m\x1b[Kstruct builtin_interfaces::msg::Time_<std::allocator<void> >\x1b[m\x1b[K\xe2\x80\x99} has no member named \xe2\x80\x98\x1b[01m\x1b[KtoSec\x1b[m\x1b[K\xe2\x80\x99\n'}
+[2.029914] (state-estimation) StderrLine: {'line': b'   92 |     eskf_.updateGps(z_v, z_p, static_cast<uint64_t>(odomMsg->header.stamp.\x1b[01;31m\x1b[KtoSec\x1b[m\x1b[K() * 1e6f), delta);\n'}
+[2.030015] (state-estimation) StderrLine: {'line': b'      |                                                                           \x1b[01;31m\x1b[K^~~~~\x1b[m\x1b[K\n'}
+[2.033383] (state-estimation) StderrLine: {'line': b'\x1b[01m\x1b[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/src/Node.cpp:94:23:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kheader_time\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[2.033636] (state-estimation) StderrLine: {'line': b'   94 |   prevStampGpsPose_ = \x1b[01;31m\x1b[Kheader_time\x1b[m\x1b[K;\n'}
+[2.033745] (state-estimation) StderrLine: {'line': b'      |                       \x1b[01;31m\x1b[K^~~~~~~~~~~\x1b[m\x1b[K\n'}
+[2.035586] (state-estimation) StderrLine: {'line': b'\x1b[01m\x1b[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/src/Node.cpp:\x1b[m\x1b[K In member function \xe2\x80\x98\x1b[01m\x1b[Kvoid eskf::Node::magCallback(sensor_msgs::msg::MagneticField_<std::allocator<void> >::SharedPtr) const\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[2.035825] (state-estimation) StderrLine: {'line': b'\x1b[01m\x1b[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/src/Node.cpp:99:25:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kconst class rclcpp::Time\x1b[m\x1b[K\xe2\x80\x99 has no member named \xe2\x80\x98\x1b[01m\x1b[Ksec\x1b[m\x1b[K\xe2\x80\x99\n'}
+[2.035943] (state-estimation) StderrLine: {'line': b'   99 |   if (prevStampMagPose_.\x1b[01;31m\x1b[Ksec\x1b[m\x1b[K != 0) {\n'}
+[2.036246] (state-estimation) StderrLine: {'line': b'      |                         \x1b[01;31m\x1b[K^~~\x1b[m\x1b[K\n'}
+[2.036371] (state-estimation) StderrLine: {'line': b'\x1b[01m\x1b[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/src/Node.cpp:105:76:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kusing _stamp_type = struct builtin_interfaces::msg::Time_<std::allocator<void> >\x1b[m\x1b[K\xe2\x80\x99 {aka \xe2\x80\x98\x1b[01m\x1b[Kstruct builtin_interfaces::msg::Time_<std::allocator<void> >\x1b[m\x1b[K\xe2\x80\x99} has no member named \xe2\x80\x98\x1b[01m\x1b[KtoSec\x1b[m\x1b[K\xe2\x80\x99\n'}
+[2.036505] (state-estimation) StderrLine: {'line': b'  105 |     eskf_.updateMagnetometer(m, static_cast<uint64_t>(magMsg->header.stamp.\x1b[01;31m\x1b[KtoSec\x1b[m\x1b[K() * 1e6f), delta);\n'}
+[2.036608] (state-estimation) StderrLine: {'line': b'      |                                                                            \x1b[01;31m\x1b[K^~~~~\x1b[m\x1b[K\n'}
+[2.039415] (state-estimation) StderrLine: {'line': b'\x1b[01m\x1b[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/src/Node.cpp:107:23:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kheader_time\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[2.039670] (state-estimation) StderrLine: {'line': b'  107 |   prevStampMagPose_ = \x1b[01;31m\x1b[Kheader_time\x1b[m\x1b[K;\n'}
+[2.039781] (state-estimation) StderrLine: {'line': b'      |                       \x1b[01;31m\x1b[K^~~~~~~~~~~\x1b[m\x1b[K\n'}
+[2.041797] (state-estimation) StderrLine: {'line': b'\x1b[01m\x1b[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/src/Node.cpp:\x1b[m\x1b[K In member function \xe2\x80\x98\x1b[01m\x1b[Kvoid eskf::Node::rangeFinderCallback(sensor_msgs::msg::Range_<std::allocator<void> >::SharedPtr) const\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[2.042095] (state-estimation) StderrLine: {'line': b'\x1b[01m\x1b[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/src/Node.cpp:111:33:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kconst class rclcpp::Time\x1b[m\x1b[K\xe2\x80\x99 has no member named \xe2\x80\x98\x1b[01m\x1b[Ksec\x1b[m\x1b[K\xe2\x80\x99\n'}
+[2.042216] (state-estimation) StderrLine: {'line': b'  111 |   if (prevStampRangeFinderPose_.\x1b[01;31m\x1b[Ksec\x1b[m\x1b[K != 0) {\n'}
+[2.042317] (state-estimation) StderrLine: {'line': b'      |                                 \x1b[01;31m\x1b[K^~~\x1b[m\x1b[K\n'}
+[2.042415] (state-estimation) StderrLine: {'line': b'\x1b[01m\x1b[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/src/Node.cpp:116:91:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kusing _stamp_type = struct builtin_interfaces::msg::Time_<std::allocator<void> >\x1b[m\x1b[K\xe2\x80\x99 {aka \xe2\x80\x98\x1b[01m\x1b[Kstruct builtin_interfaces::msg::Time_<std::allocator<void> >\x1b[m\x1b[K\xe2\x80\x99} has no member named \xe2\x80\x98\x1b[01m\x1b[KtoSec\x1b[m\x1b[K\xe2\x80\x99\n'}
+[2.042555] (state-estimation) StderrLine: {'line': b'  116 |     eskf_.updateRangeFinder(rangeMsg->range, static_cast<uint64_t>(rangeMsg->header.stamp.\x1b[01;31m\x1b[KtoSec\x1b[m\x1b[K() * 1e6f), delta);\n'}
+[2.042660] (state-estimation) StderrLine: {'line': b'      |                                                                                           \x1b[01;31m\x1b[K^~~~~\x1b[m\x1b[K\n'}
+[2.045973] (state-estimation) StderrLine: {'line': b'\x1b[01m\x1b[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/src/Node.cpp:118:31:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kheader_time\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[2.046209] (state-estimation) StderrLine: {'line': b'  118 |   prevStampRangeFinderPose_ = \x1b[01;31m\x1b[Kheader_time\x1b[m\x1b[K;\n'}
+[2.046320] (state-estimation) StderrLine: {'line': b'      |                               \x1b[01;31m\x1b[K^~~~~~~~~~~\x1b[m\x1b[K\n'}
+[2.048253] (state-estimation) StderrLine: {'line': b'\x1b[01m\x1b[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/src/Node.cpp:\x1b[m\x1b[K In member function \xe2\x80\x98\x1b[01m\x1b[Kvoid eskf::Node::extendedStateCallback(mavros_msgs::msg::ExtendedState_<std::allocator<void> >::SharedPtr) const\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[2.048503] (state-estimation) StderrLine: {'line': b'\x1b[01m\x1b[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/src/Node.cpp:122:112:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kpassing \xe2\x80\x98\x1b[01m\x1b[Kconst eskf::ESKF\x1b[m\x1b[K\xe2\x80\x99 as \xe2\x80\x98\x1b[01m\x1b[Kthis\x1b[m\x1b[K\xe2\x80\x99 argument discards qualifiers [\x1b[01;31m\x1b[K-fpermissive\x1b[m\x1b[K]\n'}
+[2.048624] (state-estimation) StderrLine: {'line': b'  122 |   eskf_.updateLandedState(extendedStateMsg->landed_state & mavros_msgs::msg::ExtendedState::LANDED_STATE_IN_AIR\x1b[01;31m\x1b[K)\x1b[m\x1b[K;\n'}
+[2.048735] (state-estimation) StderrLine: {'line': b'      |                                                                                                                \x1b[01;31m\x1b[K^\x1b[m\x1b[K\n'}
+[2.048841] (state-estimation) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/include/eskf/Node.hpp:15\x1b[m\x1b[K,\n'}
+[2.048946] (state-estimation) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/src/Node.cpp:1\x1b[m\x1b[K:\n'}
+[2.049050] (state-estimation) StderrLine: {'line': b'\x1b[01m\x1b[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/include/eskf/ESKF.hpp:24:10:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K  in call to \xe2\x80\x98\x1b[01m\x1b[Kvoid eskf::ESKF::updateLandedState(uint8_t)\x1b[m\x1b[K\xe2\x80\x99\n'}
+[2.049156] (state-estimation) StderrLine: {'line': b'   24 |     void \x1b[01;36m\x1b[KupdateLandedState\x1b[m\x1b[K(uint8_t landed_state);\n'}
+[2.049260] (state-estimation) StderrLine: {'line': b'      |          \x1b[01;36m\x1b[K^~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[2.049494] (state-estimation) StderrLine: {'line': b'\x1b[01m\x1b[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/src/Node.cpp:\x1b[m\x1b[K In member function \xe2\x80\x98\x1b[01m\x1b[Kvoid eskf::Node::publishState()\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[2.049686] (state-estimation) StderrLine: {'line': b'\x1b[01m\x1b[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/src/Node.cpp:135:10:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kusing Header = struct std_msgs::msg::Header_<std::allocator<void> >\x1b[m\x1b[K\xe2\x80\x99 {aka \xe2\x80\x98\x1b[01m\x1b[Kstruct std_msgs::msg::Header_<std::allocator<void> >\x1b[m\x1b[K\xe2\x80\x99} has no member named \xe2\x80\x98\x1b[01m\x1b[Kseq\x1b[m\x1b[K\xe2\x80\x99\n'}
+[2.049812] (state-estimation) StderrLine: {'line': b'  135 |   header.\x1b[01;31m\x1b[Kseq\x1b[m\x1b[K = trace_id_++;\n'}
+[2.049920] (state-estimation) StderrLine: {'line': b'      |          \x1b[01;31m\x1b[K^~~\x1b[m\x1b[K\n'}
+[2.107778] (-) TimerEvent: {}
+[2.208175] (-) TimerEvent: {}
+[2.308568] (-) TimerEvent: {}
+[2.408935] (-) TimerEvent: {}
+[2.509332] (-) TimerEvent: {}
+[2.609713] (-) TimerEvent: {}
+[2.710100] (-) TimerEvent: {}
+[2.810468] (-) TimerEvent: {}
+[2.910874] (-) TimerEvent: {}
+[3.011259] (-) TimerEvent: {}
+[3.111652] (-) TimerEvent: {}
+[3.212047] (-) TimerEvent: {}
+[3.312386] (-) TimerEvent: {}
+[3.412762] (-) TimerEvent: {}
+[3.513154] (-) TimerEvent: {}
+[3.613544] (-) TimerEvent: {}
+[3.713892] (-) TimerEvent: {}
+[3.814241] (-) TimerEvent: {}
+[3.914579] (-) TimerEvent: {}
+[4.014924] (-) TimerEvent: {}
+[4.115268] (-) TimerEvent: {}
+[4.215619] (-) TimerEvent: {}
+[4.315996] (-) TimerEvent: {}
+[4.416366] (-) TimerEvent: {}
+[4.516733] (-) TimerEvent: {}
+[4.617100] (-) TimerEvent: {}
+[4.717473] (-) TimerEvent: {}
+[4.817852] (-) TimerEvent: {}
+[4.918228] (-) TimerEvent: {}
+[5.018787] (-) TimerEvent: {}
+[5.119153] (-) TimerEvent: {}
+[5.219526] (-) TimerEvent: {}
+[5.226353] (state-estimation) StderrLine: {'line': b'make[2]: *** [CMakeFiles/state-estimation.dir/build.make:76: CMakeFiles/state-estimation.dir/src/Node.cpp.o] Error 1\n'}
+[5.226765] (state-estimation) StderrLine: {'line': b'make[1]: *** [CMakeFiles/Makefile2:80: CMakeFiles/state-estimation.dir/all] Error 2\n'}
+[5.227001] (state-estimation) StderrLine: {'line': b'make: *** [Makefile:141: all] Error 2\n'}
+[5.229135] (state-estimation) CommandEnded: {'returncode': 2}
+[5.320394] (-) TimerEvent: {}
+[5.422904] (-) TimerEvent: {}
+[5.470567] (state-estimation) JobEnded: {'identifier': 'state-estimation', 'rc': 2}
+[5.481392] (-) EventReactorShutdown: {}

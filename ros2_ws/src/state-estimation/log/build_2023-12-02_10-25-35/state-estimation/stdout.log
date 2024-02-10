@@ -1,0 +1,5 @@
+-- Found ament_cmake_auto: 0.9.12 (/opt/ros/foxy/share/ament_cmake_auto/cmake)
+-- Using PYTHON_EXECUTABLE: /usr/bin/python3
+-- Configuring incomplete, errors occurred!
+See also "/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/build/state-estimation/CMakeFiles/CMakeOutput.log".
+See also "/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/build/state-estimation/CMakeFiles/CMakeError.log".

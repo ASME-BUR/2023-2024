@@ -1,0 +1,55 @@
+[0.133s] Invoking command in '/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/build/state-estimation': /usr/bin/cmake --build /home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/build/state-estimation -- -j8 -l8
+[0.168s] -- Found ament_cmake: 0.9.12 (/opt/ros/foxy/share/ament_cmake/cmake)
+[0.191s] -- Using PYTHON_EXECUTABLE: /usr/bin/python3
+[0.344s] -- Found rclcpp: 2.4.3 (/opt/ros/foxy/share/rclcpp/cmake)
+[0.371s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.374s] -- Found rosidl_adapter: 1.3.1 (/opt/ros/foxy/share/rosidl_adapter/cmake)
+[0.483s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[0.525s] -- Found rmw_implementation_cmake: 1.0.4 (/opt/ros/foxy/share/rmw_implementation_cmake/cmake)
+[0.526s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[0.650s] -- Found geometry_msgs: 2.0.5 (/opt/ros/foxy/share/geometry_msgs/cmake)
+[0.679s] -- Found sensor_msgs: 2.0.5 (/opt/ros/foxy/share/sensor_msgs/cmake)
+[0.741s] -- Found message_filters: 3.2.7 (/opt/ros/foxy/share/message_filters/cmake)
+[0.743s] -- Found eigen3_cmake_module: 0.1.1 (/opt/ros/foxy/share/eigen3_cmake_module/cmake)
+[0.744s] -- Found mavros_msgs: 2.4.0 (/opt/ros/foxy/share/mavros_msgs/cmake)
+[1.116s] -- Found nav_msgs: 2.0.5 (/opt/ros/foxy/share/nav_msgs/cmake)
+[1.178s] -- Found rosidl_default_generators: 1.0.1 (/opt/ros/foxy/share/rosidl_default_generators/cmake)
+[1.251s] -- Configuring done
+[2.255s] -- Generating done
+[2.257s] -- Build files have been written to: /home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/build/state-estimation
+[2.299s] [ 40%] Built target ESKF
+[2.336s] [35m[1mScanning dependencies of target state-estimation[0m
+[2.384s] [ 60%] [32mBuilding CXX object CMakeFiles/state-estimation.dir/src/Node.cpp.o[0m
+[2.384s] [ 80%] [32mBuilding CXX object CMakeFiles/state-estimation.dir/src/eskf.cpp.o[0m
+[13.311s] [100%] [32m[1mLinking CXX executable state-estimation[0m
+[21.349s] [100%] Built target state-estimation
+[21.359s] Invoked command in '/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/build/state-estimation' returned '0': /usr/bin/cmake --build /home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/build/state-estimation -- -j8 -l8
+[21.456s] Invoking command in '/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/build/state-estimation': /usr/bin/cmake --install /home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/build/state-estimation
+[21.467s] -- Install configuration: ""
+[21.467s] -- Installing: /home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/install/state-estimation/share/ament_index/resource_index/package_run_dependencies/state-estimation
+[21.468s] -- Installing: /home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/install/state-estimation/share/ament_index/resource_index/parent_prefix_path/state-estimation
+[21.468s] -- Installing: /home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/install/state-estimation/share/state-estimation/environment/ament_prefix_path.sh
+[21.468s] -- Installing: /home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/install/state-estimation/share/state-estimation/environment/ament_prefix_path.dsv
+[21.468s] -- Installing: /home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/install/state-estimation/share/state-estimation/environment/path.sh
+[21.468s] -- Installing: /home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/install/state-estimation/share/state-estimation/environment/path.dsv
+[21.468s] -- Installing: /home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/install/state-estimation/share/state-estimation/local_setup.bash
+[21.469s] -- Installing: /home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/install/state-estimation/share/state-estimation/local_setup.sh
+[21.469s] -- Installing: /home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/install/state-estimation/share/state-estimation/local_setup.zsh
+[21.469s] -- Installing: /home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/install/state-estimation/share/state-estimation/local_setup.dsv
+[21.469s] -- Installing: /home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/install/state-estimation/share/state-estimation/package.dsv
+[21.469s] -- Installing: /home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/install/state-estimation/share/ament_index/resource_index/packages/state-estimation
+[21.469s] -- Installing: /home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/install/state-estimation/share/state-estimation/cmake/state-estimationConfig.cmake
+[21.469s] -- Installing: /home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/install/state-estimation/share/state-estimation/cmake/state-estimationConfig-version.cmake
+[21.469s] -- Installing: /home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/install/state-estimation/share/state-estimation/package.xml
+[21.469s] -- Installing: /home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/install/state-estimation/lib/state-estimation/state-estimation
+[21.473s] -- Set runtime path of "/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/install/state-estimation/lib/state-estimation/state-estimation" to ""
+[21.473s] -- Installing: /home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/install/state-estimation/lib/libESKF.so
+[21.474s] -- Installing: /home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/install/state-estimation/include
+[21.474s] -- Installing: /home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/install/state-estimation/include/eskf
+[21.474s] -- Installing: /home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/install/state-estimation/include/eskf/ESKF.hpp
+[21.475s] -- Installing: /home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/install/state-estimation/include/eskf/common.h
+[21.475s] -- Installing: /home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/install/state-estimation/include/eskf/Node.hpp
+[21.475s] -- Installing: /home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/install/state-estimation/include/eskf/RingBuffer.hpp
+[21.475s] -- Installing: /home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/install/state-estimation/share/state-estimation//launch
+[21.475s] -- Installing: /home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/install/state-estimation/share/state-estimation//launch/eskf.launch
+[21.484s] Invoked command in '/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/build/state-estimation' returned '0': /usr/bin/cmake --install /home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/build/state-estimation

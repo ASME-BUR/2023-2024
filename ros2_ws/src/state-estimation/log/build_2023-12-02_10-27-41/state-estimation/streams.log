@@ -1,0 +1,18 @@
+[0.209s] Invoking command in '/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/build/state-estimation': /usr/bin/cmake /home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation -DCATKIN_INSTALL_INTO_PREFIX_ROOT=0 -DCATKIN_SYMLINK_INSTALL=ON -DCMAKE_INSTALL_PREFIX=/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/install/state-estimation
+[0.228s] -- Found ament_cmake_auto: 0.9.12 (/opt/ros/foxy/share/ament_cmake_auto/cmake)
+[0.260s] -- Using PYTHON_EXECUTABLE: /usr/bin/python3
+[0.589s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.594s] -- Found rosidl_adapter: 1.3.1 (/opt/ros/foxy/share/rosidl_adapter/cmake)
+[0.780s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[1.711s] CMake Error at /opt/ros/foxy/share/rosidl_cmake/cmake/rosidl_generate_interfaces.cmake:93 (message):
+[1.711s]   rosidl_generate_interfaces() the passed file 'geometry_msgs' doesn't exist
+[1.711s]   relative to the CMAKE_CURRENT_SOURCE_DIR
+[1.712s]   '/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation'
+[1.712s] Call Stack (most recent call first):
+[1.712s]   CMakeLists.txt:21 (rosidl_generate_interfaces)
+[1.712s] 
+[1.712s] 
+[1.713s] -- Configuring incomplete, errors occurred!
+[1.713s] See also "/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/build/state-estimation/CMakeFiles/CMakeOutput.log".
+[1.713s] See also "/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/build/state-estimation/CMakeFiles/CMakeError.log".
+[1.721s] Invoked command in '/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/build/state-estimation' returned '1': /usr/bin/cmake /home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation -DCATKIN_INSTALL_INTO_PREFIX_ROOT=0 -DCATKIN_SYMLINK_INSTALL=ON -DCMAKE_INSTALL_PREFIX=/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/install/state-estimation

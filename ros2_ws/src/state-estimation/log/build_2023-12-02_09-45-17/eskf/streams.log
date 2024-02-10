@@ -1,0 +1,21 @@
+[0.084s] Invoking command in '/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/build/eskf': /usr/bin/cmake /home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation -DCATKIN_INSTALL_INTO_PREFIX_ROOT=0 -DCMAKE_INSTALL_PREFIX=/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/install/eskf
+[0.116s] CMake Error at CMakeLists.txt:6 (find_package):
+[0.116s]   By not providing "Findrclcpp.cmake" in CMAKE_MODULE_PATH this project has
+[0.116s]   asked CMake to find a package configuration file provided by "rclcpp", but
+[0.116s]   CMake did not find one.
+[0.116s] 
+[0.116s]   Could not find a package configuration file provided by "rclcpp" with any
+[0.117s]   of the following names:
+[0.117s] 
+[0.117s]     rclcppConfig.cmake
+[0.117s]     rclcpp-config.cmake
+[0.117s] 
+[0.117s]   Add the installation prefix of "rclcpp" to CMAKE_PREFIX_PATH or set
+[0.118s]   "rclcpp_DIR" to a directory containing one of the above files.  If "rclcpp"
+[0.118s]   provides a separate development package or SDK, be sure it has been
+[0.118s]   installed.
+[0.118s] 
+[0.118s] 
+[0.119s] -- Configuring incomplete, errors occurred!
+[0.119s] See also "/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/build/eskf/CMakeFiles/CMakeOutput.log".
+[0.120s] Invoked command in '/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/build/eskf' returned '1': /usr/bin/cmake /home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation -DCATKIN_INSTALL_INTO_PREFIX_ROOT=0 -DCMAKE_INSTALL_PREFIX=/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/install/eskf

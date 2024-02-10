@@ -1,0 +1,88 @@
+[ 40%] Built target ESKF
+[35m[1mScanning dependencies of target state-estimation[0m
+[ 60%] [32mBuilding CXX object CMakeFiles/state-estimation.dir/src/Node.cpp.o[0m
+[01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/src/Node.cpp:[m[K In constructor ‘[01m[Keskf::Node::Node()[m[K’:
+[01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/src/Node.cpp:47:64:[m[K [01;31m[Kerror: [m[Kno matching function for call to ‘[01m[Keskf::Node::create_wall_timer(float, std::_Bind_helper<false, void (eskf::Node::*)(), eskf::Node*>::type)[m[K’
+   47 |       (1.0f/publish_rate), std::bind(&Node::publishState, this)[01;31m[K)[m[K;
+      |                                                                [01;31m[K^[m[K
+In file included from [01m[K/opt/ros/foxy/include/rclcpp/executors/single_threaded_executor.hpp:28[m[K,
+                 from [01m[K/opt/ros/foxy/include/rclcpp/executors.hpp:22[m[K,
+                 from [01m[K/opt/ros/foxy/include/rclcpp/rclcpp.hpp:146[m[K,
+                 from [01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/include/eskf/Node.hpp:5[m[K,
+                 from [01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/src/Node.cpp:1[m[K:
+[01m[K/opt/ros/foxy/include/rclcpp/node.hpp:232:3:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class DurationRepT, class DurationT, class CallbackT> typename rclcpp::WallTimer<CallbackT>::SharedPtr rclcpp::Node::create_wall_timer(std::chrono::duration<_Rep1, _Period1>, CallbackT, rclcpp::CallbackGroup::SharedPtr)[m[K’
+  232 |   [01;36m[Kcreate_wall_timer[m[K(
+      |   [01;36m[K^~~~~~~~~~~~~~~~~[m[K
+[01m[K/opt/ros/foxy/include/rclcpp/node.hpp:232:3:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/src/Node.cpp:47:64:[m[K [01;36m[Knote: [m[K  mismatched types ‘[01m[Kstd::chrono::duration<_Rep1, _Period1>[m[K’ and ‘[01m[Kfloat[m[K’
+   47 |       (1.0f/publish_rate), std::bind(&Node::publishState, this)[01;36m[K)[m[K;
+      |                                                                [01;36m[K^[m[K
+[01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/src/Node.cpp:[m[K In member function ‘[01m[Kvoid eskf::Node::inputCallback(sensor_msgs::msg::Imu_<std::allocator<void> >::SharedPtr) const[m[K’:
+[01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/src/Node.cpp:55:21:[m[K [01;31m[Kerror: [m[K‘[01m[Kconst class rclcpp::Time[m[K’ has no member named ‘[01m[Know[m[K’
+   55 |   if (prevStampImu_.[01;31m[Know[m[K() != 0) {
+      |                     [01;31m[K^~~[m[K
+[01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/src/Node.cpp:60:13:[m[K [01;31m[Kerror: [m[Kassignment of member ‘[01m[Keskf::Node::init_[m[K’ in read-only object
+   60 |       [01;31m[Kinit_ = true[m[K;
+      |       [01;31m[K~~~~~~^~~~~~[m[K
+[01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/src/Node.cpp:65:66:[m[K [01;31m[Kerror: [m[K‘[01m[Kusing _stamp_type = struct builtin_interfaces::msg::Time_<std::allocator<void> >[m[K’ {aka ‘[01m[Kstruct builtin_interfaces::msg::Time_<std::allocator<void> >[m[K’} has no member named ‘[01m[KtoSec[m[K’
+   65 |     eskf_.run(wm, am, static_cast<uint64_t>(imuMsg->header.stamp.[01;31m[KtoSec[m[K()*1e6f), delta);
+      |                                                                  [01;31m[K^~~~~[m[K
+[01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/src/Node.cpp:67:19:[m[K [01;31m[Kerror: [m[K‘[01m[Kheader_time[m[K’ was not declared in this scope
+   67 |   prevStampImu_ = [01;31m[Kheader_time[m[K;
+      |                   [01;31m[K^~~~~~~~~~~[m[K
+[01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/src/Node.cpp:[m[K In member function ‘[01m[Kvoid eskf::Node::visionCallback(geometry_msgs::msg::PoseWithCovarianceStamped_<std::allocator<void> >::SharedPtr) const[m[K’:
+[01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/src/Node.cpp:71:27:[m[K [01;31m[Kerror: [m[K‘[01m[Kconst class rclcpp::Time[m[K’ has no member named ‘[01m[Ksec[m[K’
+   71 |   if(prevStampVisionPose_.[01;31m[Ksec[m[K != 0) {
+      |                           [01;31m[K^~~[m[K
+[01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/src/Node.cpp:78:78:[m[K [01;31m[Kerror: [m[K‘[01m[Kusing _stamp_type = struct builtin_interfaces::msg::Time_<std::allocator<void> >[m[K’ {aka ‘[01m[Kstruct builtin_interfaces::msg::Time_<std::allocator<void> >[m[K’} has no member named ‘[01m[KtoSec[m[K’
+   78 |     eskf_.updateVision(z_q, z_p, static_cast<uint64_t>(poseMsg->header.stamp.[01;31m[KtoSec[m[K()*1e6f), delta);
+      |                                                                              [01;31m[K^~~~~[m[K
+[01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/src/Node.cpp:80:26:[m[K [01;31m[Kerror: [m[K‘[01m[Kheader_time[m[K’ was not declared in this scope
+   80 |   prevStampVisionPose_ = [01;31m[Kheader_time[m[K;
+      |                          [01;31m[K^~~~~~~~~~~[m[K
+[01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/src/Node.cpp:[m[K In member function ‘[01m[Kvoid eskf::Node::gpsCallback(nav_msgs::msg::Odometry_<std::allocator<void> >::SharedPtr) const[m[K’:
+[01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/src/Node.cpp:84:25:[m[K [01;31m[Kerror: [m[K‘[01m[Kconst class rclcpp::Time[m[K’ has no member named ‘[01m[Ksec[m[K’
+   84 |   if (prevStampGpsPose_.[01;31m[Ksec[m[K != 0) {
+      |                         [01;31m[K^~~[m[K
+[01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/src/Node.cpp:92:75:[m[K [01;31m[Kerror: [m[K‘[01m[Kusing _stamp_type = struct builtin_interfaces::msg::Time_<std::allocator<void> >[m[K’ {aka ‘[01m[Kstruct builtin_interfaces::msg::Time_<std::allocator<void> >[m[K’} has no member named ‘[01m[KtoSec[m[K’
+   92 |     eskf_.updateGps(z_v, z_p, static_cast<uint64_t>(odomMsg->header.stamp.[01;31m[KtoSec[m[K() * 1e6f), delta);
+      |                                                                           [01;31m[K^~~~~[m[K
+[01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/src/Node.cpp:94:23:[m[K [01;31m[Kerror: [m[K‘[01m[Kheader_time[m[K’ was not declared in this scope
+   94 |   prevStampGpsPose_ = [01;31m[Kheader_time[m[K;
+      |                       [01;31m[K^~~~~~~~~~~[m[K
+[01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/src/Node.cpp:[m[K In member function ‘[01m[Kvoid eskf::Node::magCallback(sensor_msgs::msg::MagneticField_<std::allocator<void> >::SharedPtr) const[m[K’:
+[01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/src/Node.cpp:99:25:[m[K [01;31m[Kerror: [m[K‘[01m[Kconst class rclcpp::Time[m[K’ has no member named ‘[01m[Ksec[m[K’
+   99 |   if (prevStampMagPose_.[01;31m[Ksec[m[K != 0) {
+      |                         [01;31m[K^~~[m[K
+[01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/src/Node.cpp:105:76:[m[K [01;31m[Kerror: [m[K‘[01m[Kusing _stamp_type = struct builtin_interfaces::msg::Time_<std::allocator<void> >[m[K’ {aka ‘[01m[Kstruct builtin_interfaces::msg::Time_<std::allocator<void> >[m[K’} has no member named ‘[01m[KtoSec[m[K’
+  105 |     eskf_.updateMagnetometer(m, static_cast<uint64_t>(magMsg->header.stamp.[01;31m[KtoSec[m[K() * 1e6f), delta);
+      |                                                                            [01;31m[K^~~~~[m[K
+[01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/src/Node.cpp:107:23:[m[K [01;31m[Kerror: [m[K‘[01m[Kheader_time[m[K’ was not declared in this scope
+  107 |   prevStampMagPose_ = [01;31m[Kheader_time[m[K;
+      |                       [01;31m[K^~~~~~~~~~~[m[K
+[01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/src/Node.cpp:[m[K In member function ‘[01m[Kvoid eskf::Node::rangeFinderCallback(sensor_msgs::msg::Range_<std::allocator<void> >::SharedPtr) const[m[K’:
+[01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/src/Node.cpp:111:33:[m[K [01;31m[Kerror: [m[K‘[01m[Kconst class rclcpp::Time[m[K’ has no member named ‘[01m[Ksec[m[K’
+  111 |   if (prevStampRangeFinderPose_.[01;31m[Ksec[m[K != 0) {
+      |                                 [01;31m[K^~~[m[K
+[01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/src/Node.cpp:116:91:[m[K [01;31m[Kerror: [m[K‘[01m[Kusing _stamp_type = struct builtin_interfaces::msg::Time_<std::allocator<void> >[m[K’ {aka ‘[01m[Kstruct builtin_interfaces::msg::Time_<std::allocator<void> >[m[K’} has no member named ‘[01m[KtoSec[m[K’
+  116 |     eskf_.updateRangeFinder(rangeMsg->range, static_cast<uint64_t>(rangeMsg->header.stamp.[01;31m[KtoSec[m[K() * 1e6f), delta);
+      |                                                                                           [01;31m[K^~~~~[m[K
+[01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/src/Node.cpp:118:31:[m[K [01;31m[Kerror: [m[K‘[01m[Kheader_time[m[K’ was not declared in this scope
+  118 |   prevStampRangeFinderPose_ = [01;31m[Kheader_time[m[K;
+      |                               [01;31m[K^~~~~~~~~~~[m[K
+[01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/src/Node.cpp:[m[K In member function ‘[01m[Kvoid eskf::Node::extendedStateCallback(mavros_msgs::msg::ExtendedState_<std::allocator<void> >::SharedPtr) const[m[K’:
+[01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/src/Node.cpp:122:112:[m[K [01;31m[Kerror: [m[Kpassing ‘[01m[Kconst eskf::ESKF[m[K’ as ‘[01m[Kthis[m[K’ argument discards qualifiers [[01;31m[K-fpermissive[m[K]
+  122 |   eskf_.updateLandedState(extendedStateMsg->landed_state & mavros_msgs::msg::ExtendedState::LANDED_STATE_IN_AIR[01;31m[K)[m[K;
+      |                                                                                                                [01;31m[K^[m[K
+In file included from [01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/include/eskf/Node.hpp:15[m[K,
+                 from [01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/src/Node.cpp:1[m[K:
+[01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/include/eskf/ESKF.hpp:24:10:[m[K [01;36m[Knote: [m[K  in call to ‘[01m[Kvoid eskf::ESKF::updateLandedState(uint8_t)[m[K’
+   24 |     void [01;36m[KupdateLandedState[m[K(uint8_t landed_state);
+      |          [01;36m[K^~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/src/Node.cpp:[m[K In member function ‘[01m[Kvoid eskf::Node::publishState()[m[K’:
+[01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/src/Node.cpp:135:10:[m[K [01;31m[Kerror: [m[K‘[01m[Kusing Header = struct std_msgs::msg::Header_<std::allocator<void> >[m[K’ {aka ‘[01m[Kstruct std_msgs::msg::Header_<std::allocator<void> >[m[K’} has no member named ‘[01m[Kseq[m[K’
+  135 |   header.[01;31m[Kseq[m[K = trace_id_++;
+      |          [01;31m[K^~~[m[K
+make[2]: *** [CMakeFiles/state-estimation.dir/build.make:76: CMakeFiles/state-estimation.dir/src/Node.cpp.o] Error 1
+make[1]: *** [CMakeFiles/Makefile2:80: CMakeFiles/state-estimation.dir/all] Error 2
+make: *** [Makefile:141: all] Error 2

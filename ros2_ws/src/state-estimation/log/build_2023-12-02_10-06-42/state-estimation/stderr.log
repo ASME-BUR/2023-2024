@@ -1,0 +1,8 @@
+CMake Error at /opt/ros/foxy/share/rosidl_cmake/cmake/rosidl_generate_interfaces.cmake:93 (message):
+  rosidl_generate_interfaces() the passed file 'geometry_msgs' doesn't exist
+  relative to the CMAKE_CURRENT_SOURCE_DIR
+  '/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation'
+Call Stack (most recent call first):
+  CMakeLists.txt:29 (rosidl_generate_interfaces)
+
+

@@ -1,0 +1,21 @@
+[0.206s] Invoking command in '/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/build/state-estimation': /usr/bin/cmake --build /home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/build/state-estimation -- -j8 -l8
+[0.285s] [ 40%] Built target ESKF
+[0.304s] [35m[1mScanning dependencies of target state-estimation[0m
+[0.365s] [ 60%] [32mBuilding CXX object CMakeFiles/state-estimation.dir/src/Node.cpp.o[0m
+[0.366s] [ 80%] [32mBuilding CXX object CMakeFiles/state-estimation.dir/src/eskf.cpp.o[0m
+[0.504s] In file included from [01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/src/Node.cpp:1[m[K:
+[0.504s] [01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/include/eskf/Node.hpp:11:10:[m[K [01;31m[Kfatal error: [m[Kmavros_msgs/OpticalFlowRad.h: No such file or directory
+[0.504s]    11 | #include [01;31m[K<mavros_msgs/OpticalFlowRad.h>[m[K
+[0.504s]       |          [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[0.504s] compilation terminated.
+[0.504s] In file included from [01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/src/eskf.cpp:1[m[K:
+[0.505s] [01m[K/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/include/eskf/Node.hpp:11:10:[m[K [01;31m[Kfatal error: [m[Kmavros_msgs/OpticalFlowRad.h: No such file or directory
+[0.505s]    11 | #include [01;31m[K<mavros_msgs/OpticalFlowRad.h>[m[K
+[0.505s]       |          [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[0.505s] compilation terminated.
+[0.513s] make[2]: *** [CMakeFiles/state-estimation.dir/build.make:76: CMakeFiles/state-estimation.dir/src/Node.cpp.o] Error 1
+[0.513s] make[2]: *** Waiting for unfinished jobs....
+[0.513s] make[2]: *** [CMakeFiles/state-estimation.dir/build.make:63: CMakeFiles/state-estimation.dir/src/eskf.cpp.o] Error 1
+[0.514s] make[1]: *** [CMakeFiles/Makefile2:80: CMakeFiles/state-estimation.dir/all] Error 2
+[0.514s] make: *** [Makefile:141: all] Error 2
+[0.518s] Invoked command in '/home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/build/state-estimation' returned '2': /usr/bin/cmake --build /home/nakul/Desktop/bur/ros2_ws/src/2023-2024/state-estimation/build/state-estimation -- -j8 -l8

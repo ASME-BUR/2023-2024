@@ -1,3 +1,0 @@
-[ 40%] Built target ESKF
-[ 80%] [32mBuilding CXX object CMakeFiles/state-estimation.dir/src/eskf.cpp.o[0m
-[ 80%] [32mBuilding CXX object CMakeFiles/state-estimation.dir/src/Node.cpp.o[0m

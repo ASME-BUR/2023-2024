@@ -1,0 +1,3 @@
+[submodule "Audio_ADC_I2C/lib/Audio"]
+	path = Audio_ADC_I2C/lib/Audio
+	url = https://github.com/ASME-BUR/Audio.git

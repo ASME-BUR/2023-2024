@@ -2,3 +2,6 @@
 	path = ros2_ws/src/micro_ros_setup
 	url = https://github.com/micro-ROS/micro_ros_setup.git
 	branch = humble
+[submodule "ros2_ws/src/arduino/lib/Xsens_MTi_I2C"]
+	path = ros2_ws/src/arduino/lib/Xsens_MTi_I2C
+	url = https://github.com/Steven-GH/Xsens_MTi_I2C.git

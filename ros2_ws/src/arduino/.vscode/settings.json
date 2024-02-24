@@ -1,0 +1,17 @@
+{
+    "ros.distro": "humble",
+    "files.associations": {
+        "unordered_map": "cpp",
+        "system_error": "cpp"
+    },
+    "python.autoComplete.extraPaths": [
+        "/home/peach/2023-2024/ros2_ws/install/micro_ros_msgs/local/lib/python3.10/dist-packages",
+        "/opt/ros/humble/lib/python3.10/site-packages",
+        "/opt/ros/humble/local/lib/python3.10/dist-packages"
+    ],
+    "python.analysis.extraPaths": [
+        "/home/peach/2023-2024/ros2_ws/install/micro_ros_msgs/local/lib/python3.10/dist-packages",
+        "/opt/ros/humble/lib/python3.10/site-packages",
+        "/opt/ros/humble/local/lib/python3.10/dist-packages"
+    ]
+}

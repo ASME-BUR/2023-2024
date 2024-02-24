@@ -1,0 +1,7 @@
+<node name="controller"
+          pkg="controller"
+          type="controller">
+        <param name="my_pid/p" value="100.0"/>
+        <param name="my_pid/i" value="1.0"/>
+        <param name="my_pid/d" value="0.0"/>
+    </node>

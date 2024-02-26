@@ -1,4 +1,0 @@
-[ 40%] Built target ESKF
-[35m[1mScanning dependencies of target state-estimation[0m
-[ 60%] [32mBuilding CXX object CMakeFiles/state-estimation.dir/src/Node.cpp.o[0m
-[ 80%] [32m[1mLinking CXX executable state-estimation[0m

@@ -11,7 +11,7 @@ find_package(message_filters REQUIRED)
 find_package(rcutils REQUIRED)
 find_package(realtime_tools REQUIRED)
 # find_package(message_generation REQUIRED)
-# find_package(control_toolbox REQUIRED)
+find_package(control_toolbox REQUIRED)
 
 
 # find_package(ament_cmake_auto REQUIRED)
@@ -46,6 +46,18 @@ ${catkin_LIBRARIES}
 )
 
 
+ament_target_dependencies(PID rclcpp realtime_tools message_filters control_toolbox)
+ament_export_dependencies(rclcpp realtime_tools message_filters control_toolbox)
+ament_export_targets(export_PID HAS_LIBRARY_TARGET)
+
+# Install shared library
+install(TARGETS PID
+  EXPORT export_PID
+  ARCHIVE DESTINATION lib
+  LIBRARY DESTINATION lib
+  RUNTIME DESTINATION bin
+  INCLUDES DESTINATION include
+)
 
 # Build main filter
 add_executable(${PROJECT_NAME}
@@ -63,15 +75,11 @@ PID
 )
 target_link_libraries(${PROJECT_NAME} tinyxml)
 
+ament_target_dependencies(${PROJECT_NAME} rclcpp realtime_tools message_filters control_toolbox)
+
 # Install executable
 install(TARGETS ${PROJECT_NAME}
   DESTINATION lib/${PROJECT_NAME}
-
-)
-
-# Install include directory
-install(DIRECTORY include/
-  DESTINATION include
 )
 
 # Install launch files if any

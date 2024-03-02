@@ -13,7 +13,7 @@ T clamp(T val, T low, T high)
   return val;
 }
 
-    ControllerNode::ControllerNode():rclcpp::Node::Node("Controller Node") {
+    ControllerNode::ControllerNode():rclcpp::Node::Node("bur_controller") {
         subTargetTwist = this->create_subscription<geometry_msgs::msg::Twist>(
       "target_twist", 1, std::bind(&ControllerNode::targetTwistCallback, this, std::placeholders::_1));
         subCurrentTwist = this->create_subscription<geometry_msgs::msg::Twist>(
@@ -36,29 +36,29 @@ T clamp(T val, T low, T high)
         angular_y = control_toolbox::Pid(0.0, 0.0, 0.0, 1.0, -1.0, true);
         angular_z = control_toolbox::Pid(0.0, 0.0, 0.0, 1.0, -1.0, true);
 
-        this->declare_parameter("~linear_x/p", 0);
-        this->declare_parameter("~linear_x/i", 0);
-        this->declare_parameter("~linear_x/d", 0);
+        this->declare_parameter("~linear_x/p", rclcpp::PARAMETER_DOUBLE);
+        this->declare_parameter("~linear_x/i", rclcpp::PARAMETER_DOUBLE);
+        this->declare_parameter("~linear_x/d", rclcpp::PARAMETER_DOUBLE);
 
-        this->declare_parameter("~linear_y/p", 0);
-        this->declare_parameter("~linear_y/i", 0);
-        this->declare_parameter("~linear_y/d", 0);
+        this->declare_parameter("~linear_y/p", rclcpp::PARAMETER_DOUBLE);
+        this->declare_parameter("~linear_y/i", rclcpp::PARAMETER_DOUBLE);
+        this->declare_parameter("~linear_y/d", rclcpp::PARAMETER_DOUBLE);
 
-        this->declare_parameter("~linear_z/p", 0);
-        this->declare_parameter("~linear_z/i", 0);
-        this->declare_parameter("~linear_z/d", 0);
+        this->declare_parameter("~linear_z/p", rclcpp::PARAMETER_DOUBLE);
+        this->declare_parameter("~linear_z/i", rclcpp::PARAMETER_DOUBLE);
+        this->declare_parameter("~linear_z/d", rclcpp::PARAMETER_DOUBLE);
 
-        this->declare_parameter("~angular_x/p", 0);
-        this->declare_parameter("~angular_x/i", 0);
-        this->declare_parameter("~angular_x/d", 0);
+        this->declare_parameter("~angular_x/p", rclcpp::PARAMETER_DOUBLE);
+        this->declare_parameter("~angular_x/i", rclcpp::PARAMETER_DOUBLE);
+        this->declare_parameter("~angular_x/d", rclcpp::PARAMETER_DOUBLE);
 
-        this->declare_parameter("~angular_y/p", 0);
-        this->declare_parameter("~angular_y/i", 0);
-        this->declare_parameter("~linear_y/d", 0);
+        this->declare_parameter("~angular_y/p", rclcpp::PARAMETER_DOUBLE);
+        this->declare_parameter("~angular_y/i", rclcpp::PARAMETER_DOUBLE);
+        this->declare_parameter("~angular_y/d", rclcpp::PARAMETER_DOUBLE);
 
-        this->declare_parameter("~angular_z/p", 0);
-        this->declare_parameter("~angular_z/i", 0);
-        this->declare_parameter("~angular_z/d", 0);
+        this->declare_parameter("~angular_z/p", rclcpp::PARAMETER_DOUBLE);
+        this->declare_parameter("~angular_z/i", rclcpp::PARAMETER_DOUBLE);
+        this->declare_parameter("~angular_z/d", rclcpp::PARAMETER_DOUBLE);
     }
 
 

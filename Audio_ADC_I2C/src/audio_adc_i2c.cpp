@@ -4,22 +4,38 @@
 
 Audio_ADC_I2C::Audio_ADC_I2C(uint8_t address)
 {
-  delay(1000);
-  Serial.println("powering up");
+  delay(5000);
+  Serial.println("init");
   pinMode(shdnz_, OUTPUT);
   digitalWrite(shdnz_, LOW);
   Serial.println("SHDZ low");
-  delay(2000);
+  delay(1000);
+  Serial.println("powering up");
   digitalWrite(shdnz_, HIGH);
   Serial.println("SHDZ high");
   delay(100);
-  Wire.begin(address);
+  //Wire.begin(address);
   addr_ = address;
-  delay(1);
+  delay(100);
   uint8_t reg = ADCX140_SLEEP_CFG;
-  uint8_t data = 0b10001001;
+  uint8_t data = 0b00000001;
   write(reg, data);
-  Serial.println(read(reg, 2));
+  delay(100);
+  read(reg, 1);
+  reg = ADCX140_SLEEP_CFG;
+  data = 0b10000001;
+  write(reg, data);
+  delay(100);
+  read(reg, 1);
+
+  reg = ADCX140_SW_RESET;
+  read(reg,1);
+  delay(100);
+  reg = ADCX140_DEV_STS0;
+  read(reg, 1);
+  delay(100);
+  reg = ADCX140_DEV_STS1;
+  read(reg, 1);
 
   delay(1000);
   AudioMemory(128);
@@ -27,7 +43,6 @@ Audio_ADC_I2C::Audio_ADC_I2C(uint8_t address)
 
 bool Audio_ADC_I2C::init()
 {
-  Serial.println("init");
   // 1. apply power to the device
   // 2. transition from hardware shutdown mode to sleep mode
 
@@ -51,32 +66,33 @@ bool Audio_ADC_I2C::init()
 
   // 3d. enable desired input channels by writing to P0_R115
   reg = ADCX140_IN_CH_EN;
-  data = 0b00000000; // enabling channels 1-4
-  write(reg, data);
-  delay(100);
-  Serial.println(read(reg, 2));
-  delay(100);
-
-  reg = ADCX140_IN_CH_EN;
+  read(reg,1);
   data = 0b11110000; // enabling channels 1-4
   write(reg, data);
   delay(100);
-  Serial.println(read(reg, 2));
+  Serial.println(read(reg, 1));
   delay(100);
   // 3e. enable all desired audio serial interface channels (P0_R116)
   reg = ADCX140_ASI_OUT_CH_EN;
-  data = 0b01100000; // channels 1-4
+  read(reg,1);
+  data = 0b11110000; // channels 1-4
   write(reg, data);
   delay(100);
-  Serial.println(read(reg, 2));
+  Serial.println(read(reg, 1));
   delay(100);
   // 3f. power up ADC, MICBIAS, PLL
   reg = ADCX140_PWR_CFG;
-  data = 0b11100000;
+  data = 0b01100000;
   write(reg, data);
   delay(100);
-  Serial.println(read(reg, 2));
+  Serial.println(read(reg, 1));
   delay(100);
+
+  reg = ADCX140_DEV_STS0;
+  read(reg, 1);
+
+  reg = ADCX140_DEV_STS1;
+  read(reg, 1);
   // TODO: apply FSYNC, BCLK?
   // initAudioInput();
   // initAudioOutput();
@@ -92,22 +108,22 @@ bool Audio_ADC_I2C::initAudioInput()
   reg = ADCX140_CH1_CFG0;
   data = 0b01000000;
   write(reg, data);
-  Serial.println(read(reg, 2));
+  Serial.println(read(reg, 1));
 
   reg = ADCX140_CH2_CFG0;
   data = 0b01000000;
   write(reg, data);
-  Serial.println(read(reg, 2));
+  Serial.println(read(reg, 1));
 
   reg = ADCX140_CH3_CFG0;
   data = 0b01000000;
   write(reg, data);
-  Serial.println(read(reg, 2));
+  Serial.println(read(reg, 1));
 
   reg = ADCX140_CH4_CFG0;
   data = 0b01000000;
   write(reg, data);
-  Serial.println(read(reg, 2));
+  Serial.println(read(reg, 1));
   return true;
 }
 
@@ -119,32 +135,32 @@ bool Audio_ADC_I2C::initAudioOutput()
   reg = ADCX140_ASI_CH1;
   data = 0b00000000;
   write(reg, data);
-  Serial.println(read(reg, 2));
+  Serial.println(read(reg, 1));
 
   // Channel 2 to standard output right
   reg = ADCX140_ASI_CH2;
   data = 0b00100000;
   write(reg, data);
-  Serial.println(read(reg, 2));
+  Serial.println(read(reg, 1));
 
   // Channel 3 to secondary output left
   reg = ADCX140_ASI_CH3;
   data = 0b01000000;
   write(reg, data);
-  Serial.println(read(reg, 2));
+  Serial.println(read(reg, 1));
 
   // Channel 4 to secondary output right
   reg = ADCX140_ASI_CH4;
   data = 0b01100000;
   write(reg, data);
-  Serial.println(read(reg, 2));
+  Serial.println(read(reg, 1));
 
   // Configure audio output word length
   // Currently: I2S Mode with 16-bit word length
   reg = ADCX140_ASI_CFG0;
   data = 0b01000000;
   write(reg, data);
-  Serial.println(read(reg, 2));
+  Serial.println(read(reg, 1));
 
   // Apply FSYNC = 96 kHz and BCLK = 24.576 MHz
   return true;
@@ -166,7 +182,7 @@ bool Audio_ADC_I2C::setActive()
   uint8_t reg = ADCX140_SLEEP_CFG;
   uint8_t data = 0b00000001;
   write(reg, data);
-  Serial.println(read(reg, 2));
+  Serial.println(read(reg, 1));
 
   // 3b. sleep for 1 millisecond
   delay(1); // not included in example given?
@@ -181,7 +197,7 @@ bool Audio_ADC_I2C::setSleep()
   uint8_t reg = ADCX140_SLEEP_CFG;
   uint8_t data = 0b00000000;
   write(reg, data);
-  Serial.println(read(reg, 2));
+  Serial.println(read(reg, 1));
 
   // TODO: wait 6 milliseconds, check P0_R119, stop FSYNC, BCLK?
 
@@ -204,13 +220,13 @@ uint8_t Audio_ADC_I2C::read(uint8_t reg, int bytesRequested)
   Wire.requestFrom((uint8_t)addr_, (uint8_t)bytesRequested, (uint8_t) false);
   // Serial.println(Wire.requestFrom((uint8_t)addr_, (uint8_t)bytesRequested, (uint8_t) false));
 
-  Serial.print("available: ");
+  //Serial.print("available: ");
   // Serial.println(Wire.available());
-  while (Wire.available() > 0 && bytes_read < 128)
+  while (Wire.available() > 0 && bytes_read < 1)
   {
     outputData[bytes_read] = Wire.read();
     Serial.print("Result: ");
-    Serial.println(outputData[bytes_read], HEX);
+    Serial.println(outputData[bytes_read], BIN);
     bytes_read++;
   }
   Wire.endTransmission();

@@ -7,7 +7,7 @@
 
 #include <sensor_msgs/msg/imu.h>
 #include <sensor_msgs/msg/magnetic_field.h>
-#include <bur_rov_msgs/msg/thrustercommand.h>
+#include <bur_rov_msgs/msg/thruster_command.h>
 
 #include "MTi.h"
 #include <Wire.h>

@@ -1,9 +1,0 @@
-/home/grape/2023-2024/ros2_ws/build/bluerov2_control/CMakeFiles/uninstall.dir
-/home/grape/2023-2024/ros2_ws/build/bluerov2_control/CMakeFiles/bluerov2_control_uninstall.dir
-/home/grape/2023-2024/ros2_ws/build/bluerov2_control/CMakeFiles/test.dir
-/home/grape/2023-2024/ros2_ws/build/bluerov2_control/CMakeFiles/edit_cache.dir
-/home/grape/2023-2024/ros2_ws/build/bluerov2_control/CMakeFiles/rebuild_cache.dir
-/home/grape/2023-2024/ros2_ws/build/bluerov2_control/CMakeFiles/list_install_components.dir
-/home/grape/2023-2024/ros2_ws/build/bluerov2_control/CMakeFiles/install.dir
-/home/grape/2023-2024/ros2_ws/build/bluerov2_control/CMakeFiles/install/local.dir
-/home/grape/2023-2024/ros2_ws/build/bluerov2_control/CMakeFiles/install/strip.dir

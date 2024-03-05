@@ -1,6 +1,0 @@
-Invoking command in '/home/grape/2023-2024/ros2_ws/build/pose_to_tf': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake /home/grape/2023-2024/ros2_ws/src/pose_to_tf -DCMAKE_INSTALL_PREFIX=/home/grape/2023-2024/ros2_ws/install/pose_to_tf
-Invoked command in '/home/grape/2023-2024/ros2_ws/build/pose_to_tf' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake /home/grape/2023-2024/ros2_ws/src/pose_to_tf -DCMAKE_INSTALL_PREFIX=/home/grape/2023-2024/ros2_ws/install/pose_to_tf
-Invoking command in '/home/grape/2023-2024/ros2_ws/build/pose_to_tf': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/grape/2023-2024/ros2_ws/build/pose_to_tf -- -j8 -l8
-Invoked command in '/home/grape/2023-2024/ros2_ws/build/pose_to_tf' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/grape/2023-2024/ros2_ws/build/pose_to_tf -- -j8 -l8
-Invoking command in '/home/grape/2023-2024/ros2_ws/build/pose_to_tf': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/grape/2023-2024/ros2_ws/build/pose_to_tf
-Invoked command in '/home/grape/2023-2024/ros2_ws/build/pose_to_tf' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/grape/2023-2024/ros2_ws/build/pose_to_tf

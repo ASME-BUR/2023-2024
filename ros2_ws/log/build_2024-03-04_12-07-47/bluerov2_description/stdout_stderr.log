@@ -1,0 +1,67 @@
+-- The C compiler identification is GNU 11.4.0
+-- The CXX compiler identification is GNU 11.4.0
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Check for working C compiler: /usr/bin/cc - skipped
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Check for working CXX compiler: /usr/bin/c++ - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- Found ament_cmake: 1.3.7 (/opt/ros/humble/share/ament_cmake/cmake)
+-- Found Python3: /usr/bin/python3.10 (found version "3.10.12") found components: Interpreter 
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /home/grape/2023-2024/ros2_ws/build/bluerov2_description
+-- Install configuration: ""
+-- Installing: /home/grape/2023-2024/ros2_ws/install/bluerov2_description/share/bluerov2_description/launch
+-- Installing: /home/grape/2023-2024/ros2_ws/install/bluerov2_description/share/bluerov2_description/launch/upload_bluerov2_launch.py
+-- Installing: /home/grape/2023-2024/ros2_ws/install/bluerov2_description/share/bluerov2_description/launch/manual.yaml
+-- Installing: /home/grape/2023-2024/ros2_ws/install/bluerov2_description/share/bluerov2_description/launch/world_launch.py
+-- Installing: /home/grape/2023-2024/ros2_ws/install/bluerov2_description/share/bluerov2_description/launch/state_publisher_launch.py
+-- Installing: /home/grape/2023-2024/ros2_ws/install/bluerov2_description/share/bluerov2_description/meshes
+-- Installing: /home/grape/2023-2024/ros2_ws/install/bluerov2_description/share/bluerov2_description/meshes/bluerov2_propccw.dae
+-- Installing: /home/grape/2023-2024/ros2_ws/install/bluerov2_description/share/bluerov2_description/meshes/bluerov2_noprop.dae
+-- Installing: /home/grape/2023-2024/ros2_ws/install/bluerov2_description/share/bluerov2_description/meshes/bluerov2_propcw.ive
+-- Installing: /home/grape/2023-2024/ros2_ws/install/bluerov2_description/share/bluerov2_description/meshes/ping360_sonar.dae
+-- Installing: /home/grape/2023-2024/ros2_ws/install/bluerov2_description/share/bluerov2_description/meshes/bluerov2_noprop.stl
+-- Installing: /home/grape/2023-2024/ros2_ws/install/bluerov2_description/share/bluerov2_description/meshes/bluerov2_propcw.dae
+-- Installing: /home/grape/2023-2024/ros2_ws/install/bluerov2_description/share/bluerov2_description/meshes/bluerov2_propccw.ive
+-- Installing: /home/grape/2023-2024/ros2_ws/install/bluerov2_description/share/bluerov2_description/urdf
+-- Installing: /home/grape/2023-2024/ros2_ws/install/bluerov2_description/share/bluerov2_description/urdf/hydrodynamics.xacro
+-- Installing: /home/grape/2023-2024/ros2_ws/install/bluerov2_description/share/bluerov2_description/urdf/demo_world.sdf
+-- Installing: /home/grape/2023-2024/ros2_ws/install/bluerov2_description/share/bluerov2_description/urdf/bluerov2.xacro
+-- Installing: /home/grape/2023-2024/ros2_ws/install/bluerov2_description/share/bluerov2_description/urdf/snippets
+-- Installing: /home/grape/2023-2024/ros2_ws/install/bluerov2_description/share/bluerov2_description/urdf/snippets/README.md
+-- Installing: /home/grape/2023-2024/ros2_ws/install/bluerov2_description/share/bluerov2_description/urdf/snippets/pose_3d_snippets.xacro
+-- Installing: /home/grape/2023-2024/ros2_ws/install/bluerov2_description/share/bluerov2_description/urdf/snippets/gps_sensor_snippets.xacro
+-- Installing: /home/grape/2023-2024/ros2_ws/install/bluerov2_description/share/bluerov2_description/urdf/snippets/common.urdf.xacro
+-- Installing: /home/grape/2023-2024/ros2_ws/install/bluerov2_description/share/bluerov2_description/urdf/snippets/dvl_snippets.xacro
+-- Installing: /home/grape/2023-2024/ros2_ws/install/bluerov2_description/share/bluerov2_description/urdf/snippets/imu_snippets.xacro
+-- Installing: /home/grape/2023-2024/ros2_ws/install/bluerov2_description/share/bluerov2_description/urdf/snippets/all_sensor_snippets.xacro
+-- Installing: /home/grape/2023-2024/ros2_ws/install/bluerov2_description/share/bluerov2_description/urdf/snippets/chemical_concentration_snippets.xacro
+-- Installing: /home/grape/2023-2024/ros2_ws/install/bluerov2_description/share/bluerov2_description/urdf/snippets/magnetometer_snippets.xacro
+-- Installing: /home/grape/2023-2024/ros2_ws/install/bluerov2_description/share/bluerov2_description/urdf/snippets/rpt_snippets.xacro
+-- Installing: /home/grape/2023-2024/ros2_ws/install/bluerov2_description/share/bluerov2_description/urdf/snippets/stereo_snippets.xacro
+-- Installing: /home/grape/2023-2024/ros2_ws/install/bluerov2_description/share/bluerov2_description/urdf/snippets/sonar_snippets.xacro
+-- Installing: /home/grape/2023-2024/ros2_ws/install/bluerov2_description/share/bluerov2_description/urdf/snippets/camera_snippets.xacro
+-- Installing: /home/grape/2023-2024/ros2_ws/install/bluerov2_description/share/bluerov2_description/urdf/snippets/pressure_snippets.xacro
+-- Installing: /home/grape/2023-2024/ros2_ws/install/bluerov2_description/share/bluerov2_description/urdf/sensors.xacro
+-- Installing: /home/grape/2023-2024/ros2_ws/install/bluerov2_description/share/bluerov2_description/urdf/thrusters.xacro
+-- Installing: /home/grape/2023-2024/ros2_ws/install/bluerov2_description/share/ament_index/resource_index/package_run_dependencies/bluerov2_description
+-- Installing: /home/grape/2023-2024/ros2_ws/install/bluerov2_description/share/ament_index/resource_index/parent_prefix_path/bluerov2_description
+-- Installing: /home/grape/2023-2024/ros2_ws/install/bluerov2_description/share/bluerov2_description/environment/ament_prefix_path.sh
+-- Installing: /home/grape/2023-2024/ros2_ws/install/bluerov2_description/share/bluerov2_description/environment/ament_prefix_path.dsv
+-- Installing: /home/grape/2023-2024/ros2_ws/install/bluerov2_description/share/bluerov2_description/environment/path.sh
+-- Installing: /home/grape/2023-2024/ros2_ws/install/bluerov2_description/share/bluerov2_description/environment/path.dsv
+-- Installing: /home/grape/2023-2024/ros2_ws/install/bluerov2_description/share/bluerov2_description/local_setup.bash
+-- Installing: /home/grape/2023-2024/ros2_ws/install/bluerov2_description/share/bluerov2_description/local_setup.sh
+-- Installing: /home/grape/2023-2024/ros2_ws/install/bluerov2_description/share/bluerov2_description/local_setup.zsh
+-- Installing: /home/grape/2023-2024/ros2_ws/install/bluerov2_description/share/bluerov2_description/local_setup.dsv
+-- Installing: /home/grape/2023-2024/ros2_ws/install/bluerov2_description/share/bluerov2_description/package.dsv
+-- Installing: /home/grape/2023-2024/ros2_ws/install/bluerov2_description/share/ament_index/resource_index/packages/bluerov2_description
+-- Installing: /home/grape/2023-2024/ros2_ws/install/bluerov2_description/share/bluerov2_description/cmake/bluerov2_descriptionConfig.cmake
+-- Installing: /home/grape/2023-2024/ros2_ws/install/bluerov2_description/share/bluerov2_description/cmake/bluerov2_descriptionConfig-version.cmake
+-- Installing: /home/grape/2023-2024/ros2_ws/install/bluerov2_description/share/bluerov2_description/package.xml

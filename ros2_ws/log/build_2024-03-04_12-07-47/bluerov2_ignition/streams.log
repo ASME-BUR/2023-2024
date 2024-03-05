@@ -1,0 +1,64 @@
+[0.448s] Invoking command in '/home/grape/2023-2024/ros2_ws/build/bluerov2_ignition': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake /home/grape/2023-2024/ros2_ws/src/bluerov2/bluerov2_ignition -DCMAKE_INSTALL_PREFIX=/home/grape/2023-2024/ros2_ws/install/bluerov2_ignition
+[0.775s] -- The C compiler identification is GNU 11.4.0
+[1.665s] -- The CXX compiler identification is GNU 11.4.0
+[2.622s] -- Detecting C compiler ABI info
+[2.962s] -- Detecting C compiler ABI info - done
+[2.981s] -- Check for working C compiler: /usr/bin/cc - skipped
+[2.981s] -- Detecting C compile features
+[2.982s] -- Detecting C compile features - done
+[2.987s] -- Detecting CXX compiler ABI info
+[3.336s] -- Detecting CXX compiler ABI info - done
+[3.348s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[3.349s] -- Detecting CXX compile features
+[3.349s] -- Detecting CXX compile features - done
+[3.355s] -- Found ament_cmake: 1.3.7 (/opt/ros/humble/share/ament_cmake/cmake)
+[3.618s] -- Found Python3: /usr/bin/python3.10 (found version "3.10.12") found components: Interpreter 
+[3.887s] -- Configuring done
+[3.891s] -- Generating done
+[3.893s] -- Build files have been written to: /home/grape/2023-2024/ros2_ws/build/bluerov2_ignition
+[3.902s] Invoked command in '/home/grape/2023-2024/ros2_ws/build/bluerov2_ignition' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake /home/grape/2023-2024/ros2_ws/src/bluerov2/bluerov2_ignition -DCMAKE_INSTALL_PREFIX=/home/grape/2023-2024/ros2_ws/install/bluerov2_ignition
+[3.906s] Invoking command in '/home/grape/2023-2024/ros2_ws/build/bluerov2_ignition': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/grape/2023-2024/ros2_ws/build/bluerov2_ignition -- -j8 -l8
+[3.967s] Invoked command in '/home/grape/2023-2024/ros2_ws/build/bluerov2_ignition' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/grape/2023-2024/ros2_ws/build/bluerov2_ignition -- -j8 -l8
+[4.057s] Invoking command in '/home/grape/2023-2024/ros2_ws/build/bluerov2_ignition': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/grape/2023-2024/ros2_ws/build/bluerov2_ignition
+[4.069s] -- Install configuration: ""
+[4.071s] -- Installing: /home/grape/2023-2024/ros2_ws/install/bluerov2_ignition/share/bluerov2_ignition/launch
+[4.073s] -- Installing: /home/grape/2023-2024/ros2_ws/install/bluerov2_ignition/share/bluerov2_ignition/launch/upload_bluerov2_launch.py
+[4.076s] -- Installing: /home/grape/2023-2024/ros2_ws/install/bluerov2_ignition/share/bluerov2_ignition/launch/world_launch.py
+[4.076s] -- Installing: /home/grape/2023-2024/ros2_ws/install/bluerov2_ignition/share/bluerov2_ignition/launch/state_publisher_launch.py
+[4.080s] -- Installing: /home/grape/2023-2024/ros2_ws/install/bluerov2_ignition/share/bluerov2_ignition/urdf
+[4.080s] -- Installing: /home/grape/2023-2024/ros2_ws/install/bluerov2_ignition/share/bluerov2_ignition/urdf/hydrodynamics.xacro
+[4.081s] -- Installing: /home/grape/2023-2024/ros2_ws/install/bluerov2_ignition/share/bluerov2_ignition/urdf/demo_world.sdf
+[4.081s] -- Installing: /home/grape/2023-2024/ros2_ws/install/bluerov2_ignition/share/bluerov2_ignition/urdf/bluerov2.xacro
+[4.081s] -- Installing: /home/grape/2023-2024/ros2_ws/install/bluerov2_ignition/share/bluerov2_ignition/urdf/snippets
+[4.084s] -- Installing: /home/grape/2023-2024/ros2_ws/install/bluerov2_ignition/share/bluerov2_ignition/urdf/snippets/README.md
+[4.084s] -- Installing: /home/grape/2023-2024/ros2_ws/install/bluerov2_ignition/share/bluerov2_ignition/urdf/snippets/pose_3d_snippets.xacro
+[4.085s] -- Installing: /home/grape/2023-2024/ros2_ws/install/bluerov2_ignition/share/bluerov2_ignition/urdf/snippets/gps_sensor_snippets.xacro
+[4.085s] -- Installing: /home/grape/2023-2024/ros2_ws/install/bluerov2_ignition/share/bluerov2_ignition/urdf/snippets/common.urdf.xacro
+[4.085s] -- Installing: /home/grape/2023-2024/ros2_ws/install/bluerov2_ignition/share/bluerov2_ignition/urdf/snippets/dvl_snippets.xacro
+[4.085s] -- Installing: /home/grape/2023-2024/ros2_ws/install/bluerov2_ignition/share/bluerov2_ignition/urdf/snippets/imu_snippets.xacro
+[4.086s] -- Installing: /home/grape/2023-2024/ros2_ws/install/bluerov2_ignition/share/bluerov2_ignition/urdf/snippets/all_sensor_snippets.xacro
+[4.086s] -- Installing: /home/grape/2023-2024/ros2_ws/install/bluerov2_ignition/share/bluerov2_ignition/urdf/snippets/chemical_concentration_snippets.xacro
+[4.086s] -- Installing: /home/grape/2023-2024/ros2_ws/install/bluerov2_ignition/share/bluerov2_ignition/urdf/snippets/magnetometer_snippets.xacro
+[4.086s] -- Installing: /home/grape/2023-2024/ros2_ws/install/bluerov2_ignition/share/bluerov2_ignition/urdf/snippets/rpt_snippets.xacro
+[4.087s] -- Installing: /home/grape/2023-2024/ros2_ws/install/bluerov2_ignition/share/bluerov2_ignition/urdf/snippets/stereo_snippets.xacro
+[4.087s] -- Installing: /home/grape/2023-2024/ros2_ws/install/bluerov2_ignition/share/bluerov2_ignition/urdf/snippets/sonar_snippets.xacro
+[4.087s] -- Installing: /home/grape/2023-2024/ros2_ws/install/bluerov2_ignition/share/bluerov2_ignition/urdf/snippets/camera_snippets.xacro
+[4.087s] -- Installing: /home/grape/2023-2024/ros2_ws/install/bluerov2_ignition/share/bluerov2_ignition/urdf/snippets/pressure_snippets.xacro
+[4.088s] -- Installing: /home/grape/2023-2024/ros2_ws/install/bluerov2_ignition/share/bluerov2_ignition/urdf/sensors.xacro
+[4.088s] -- Installing: /home/grape/2023-2024/ros2_ws/install/bluerov2_ignition/share/bluerov2_ignition/urdf/thrusters.xacro
+[4.088s] -- Installing: /home/grape/2023-2024/ros2_ws/install/bluerov2_ignition/share/ament_index/resource_index/package_run_dependencies/bluerov2_ignition
+[4.088s] -- Installing: /home/grape/2023-2024/ros2_ws/install/bluerov2_ignition/share/ament_index/resource_index/parent_prefix_path/bluerov2_ignition
+[4.089s] -- Installing: /home/grape/2023-2024/ros2_ws/install/bluerov2_ignition/share/bluerov2_ignition/environment/ament_prefix_path.sh
+[4.089s] -- Installing: /home/grape/2023-2024/ros2_ws/install/bluerov2_ignition/share/bluerov2_ignition/environment/ament_prefix_path.dsv
+[4.093s] -- Installing: /home/grape/2023-2024/ros2_ws/install/bluerov2_ignition/share/bluerov2_ignition/environment/path.sh
+[4.093s] -- Installing: /home/grape/2023-2024/ros2_ws/install/bluerov2_ignition/share/bluerov2_ignition/environment/path.dsv
+[4.093s] -- Installing: /home/grape/2023-2024/ros2_ws/install/bluerov2_ignition/share/bluerov2_ignition/local_setup.bash
+[4.093s] -- Installing: /home/grape/2023-2024/ros2_ws/install/bluerov2_ignition/share/bluerov2_ignition/local_setup.sh
+[4.094s] -- Installing: /home/grape/2023-2024/ros2_ws/install/bluerov2_ignition/share/bluerov2_ignition/local_setup.zsh
+[4.094s] -- Installing: /home/grape/2023-2024/ros2_ws/install/bluerov2_ignition/share/bluerov2_ignition/local_setup.dsv
+[4.095s] -- Installing: /home/grape/2023-2024/ros2_ws/install/bluerov2_ignition/share/bluerov2_ignition/package.dsv
+[4.095s] -- Installing: /home/grape/2023-2024/ros2_ws/install/bluerov2_ignition/share/ament_index/resource_index/packages/bluerov2_ignition
+[4.095s] -- Installing: /home/grape/2023-2024/ros2_ws/install/bluerov2_ignition/share/bluerov2_ignition/cmake/bluerov2_ignitionConfig.cmake
+[4.096s] -- Installing: /home/grape/2023-2024/ros2_ws/install/bluerov2_ignition/share/bluerov2_ignition/cmake/bluerov2_ignitionConfig-version.cmake
+[4.096s] -- Installing: /home/grape/2023-2024/ros2_ws/install/bluerov2_ignition/share/bluerov2_ignition/package.xml
+[4.331s] Invoked command in '/home/grape/2023-2024/ros2_ws/build/bluerov2_ignition' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/grape/2023-2024/ros2_ws/build/bluerov2_ignition

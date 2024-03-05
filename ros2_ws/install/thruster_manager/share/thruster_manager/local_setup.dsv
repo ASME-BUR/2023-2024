@@ -1,0 +1,4 @@
+source;share/thruster_manager/environment/ament_prefix_path.sh
+source;share/thruster_manager/environment/library_path.sh
+source;share/thruster_manager/environment/library_path.sh
+source;share/thruster_manager/environment/path.sh

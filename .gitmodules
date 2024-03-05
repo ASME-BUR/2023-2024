@@ -1,0 +1,12 @@
+[submodule "ros2_ws/src/thruster_manager"]
+	path = ros2_ws/src/thruster_manager
+	url = https://github.com/CentraleNantesROV/thruster_manager.git
+[submodule "ros2_ws/src/bluerov2"]
+	path = ros2_ws/src/bluerov2
+	url = https://github.com/CentraleNantesROV/bluerov2.git
+[submodule "ros2_ws/src/auv_control"]
+	path = ros2_ws/src/auv_control
+	url = https://github.com/CentraleNantesROV/auv_control.git
+[submodule "ros2_ws/src/pose_to_tf"]
+	path = ros2_ws/src/pose_to_tf
+	url = https://github.com/oKermorgant/pose_to_tf.git

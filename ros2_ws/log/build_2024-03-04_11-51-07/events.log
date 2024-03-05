@@ -1,0 +1,1046 @@
+[0.000000] (-) TimerEvent: {}
+[0.000431] (thruster_manager) JobQueued: {'identifier': 'thruster_manager', 'dependencies': OrderedDict()}
+[0.000552] (thruster_manager) JobStarted: {'identifier': 'thruster_manager'}
+[0.097101] (-) TimerEvent: {}
+[0.192686] (thruster_manager) JobProgress: {'identifier': 'thruster_manager', 'progress': 'cmake'}
+[0.192985] (thruster_manager) Command: {'cmd': ['/usr/bin/cmake', '/home/grape/2023-2024/ros2_ws/src/thruster_manager', '-DCMAKE_INSTALL_PREFIX=/home/grape/2023-2024/ros2_ws/install/thruster_manager'], 'cwd': '/home/grape/2023-2024/ros2_ws/build/thruster_manager', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'grape'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/grape/2023-2024/ros2_ws/install/state_estimation/lib:/home/grape/isopod-explorer/ros2_ws/install/auv_control/lib:/home/grape/isopod-explorer/ros2_ws/install/thruster_manager/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('WT_PROFILE_ID', '{e5a83caa-4c73-52b3-ae6b-bc438d721ef9}'), ('MOTD_SHOWN', 'update-motd'), ('HOME', '/home/grape'), ('OLDPWD', '/home/grape/2023-2024/ros2_ws/src'), ('ROS_PYTHON_VERSION', '3'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('WSL_DISTRO_NAME', 'Ubuntu-22.04'), ('_colcon_cd_root', '/opt/ros/humble/'), ('QT_QPA_PLATFORMTHEME', 'qt5ct'), ('WAYLAND_DISPLAY', 'wayland-0'), ('COLCON_PREFIX_PATH', '/home/grape/2023-2024/ros2_ws/install:/home/grape/isopod-explorer/ros2_ws/install'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'grape'), ('NAME', 'My-Peach-Farm'), ('WSL_INTEROP', '/run/WSL/421_interop'), ('PULSE_SERVER', 'unix:/mnt/wslg/PulseServer'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('TERM', 'xterm-256color'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/usr/lib/wsl/lib:/mnt/c/Program Files (x86)/NVIDIA Corporation/PhysX/Common:/mnt/c/Windows/system32:/mnt/c/Windows:/mnt/c/Windows/System32/Wbem:/mnt/c/Windows/System32/WindowsPowerShell/v1.0/:/mnt/c/Program Files/Microsoft SQL Server/Client SDK/ODBC/170/Tools/Binn/:/mnt/c/Program Files (x86)/Microsoft SQL Server/150/Tools/Binn/:/mnt/c/Program Files/Microsoft SQL Server/150/Tools/Binn/:/mnt/c/Program Files/Microsoft SQL Server/150/DTS/Binn/:/mnt/c/Program Files (x86)/Windows Kits/8.1/Windows Performance Toolkit/:/mnt/c/Program Files/MATLAB/R2023a/bin:/mnt/c/Program Files/Git/cmd:/mnt/c/AMD:/mnt/c/Program Files/Microsoft VS Code/bin:/mnt/c/Program Files/usbipd-win/:/mnt/c/Program Files/Docker/Docker/resources/bin:/mnt/c/ProgramData/chocolatey/choco.exe/bin:/mnt/c/Program Files/dotnet/:/mnt/c/Users/aznmo/AppData/Local/Programs/Python/Python312/Scripts/:/mnt/c/Users/aznmo/AppData/Local/Programs/Python/Python312/:/mnt/c/Users/aznmo/AppData/Local/Programs/Python/Launcher/:/mnt/c/Users/aznmo/AppData/Local/Microsoft/WindowsApps:/mnt/c/Users/aznmo/AppData/Local/GitHubDesktop/bin:/mnt/c/AMD:/mnt/c/ProgramData/aznmo/GitHubDesktop/bin:/snap/bin'), ('WT_SESSION', '525f8b65-830d-4557-b547-eca40966b50d'), ('XDG_RUNTIME_DIR', '/run/user/1000/'), ('DISPLAY', ':0'), ('LANG', 'en_US.UTF-8'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('AMENT_PREFIX_PATH', '/home/grape/2023-2024/ros2_ws/install/state_estimation:/home/grape/isopod-explorer/ros2_ws/install/auv_control:/home/grape/isopod-explorer/ros2_ws/install/thruster_manager:/home/grape/isopod-explorer/ros2_ws/install/pose_to_tf:/home/grape/isopod-explorer/ros2_ws/install/bluerov2_ignition:/home/grape/isopod-explorer/ros2_ws/install/bluerov2_description:/home/grape/isopod-explorer/ros2_ws/install/bluerov2_control:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('PWD', '/home/grape/2023-2024/ros2_ws/build/thruster_manager'), ('XDG_DATA_DIRS', '/usr/local/share:/usr/share:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/grape/isopod-explorer/ros2_ws/install/auv_control/local/lib/python3.10/dist-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('WSL2_GUI_APPS_ENABLED', '1'), ('HOSTTYPE', 'x86_64'), ('CMAKE_PREFIX_PATH', '/home/grape/2023-2024/ros2_ws/install/state_estimation:/home/grape/isopod-explorer/ros2_ws/install/auv_control:/home/grape/isopod-explorer/ros2_ws/install/thruster_manager:/home/grape/isopod-explorer/ros2_ws/install/pose_to_tf:/home/grape/isopod-explorer/ros2_ws/install/bluerov2_ignition:/home/grape/isopod-explorer/ros2_ws/install/bluerov2_description:/home/grape/isopod-explorer/ros2_ws/install/bluerov2_control:/opt/ros/humble'), ('WSLENV', 'WT_SESSION:WT_PROFILE_ID:')]), 'shell': False}
+[0.199667] (-) TimerEvent: {}
+[0.300253] (-) TimerEvent: {}
+[0.400936] (-) TimerEvent: {}
+[0.501574] (-) TimerEvent: {}
+[0.602092] (-) TimerEvent: {}
+[0.702737] (-) TimerEvent: {}
+[0.803343] (-) TimerEvent: {}
+[0.903960] (-) TimerEvent: {}
+[0.976429] (thruster_manager) StdoutLine: {'line': b'-- The C compiler identification is GNU 11.4.0\n'}
+[1.004223] (-) TimerEvent: {}
+[1.104820] (-) TimerEvent: {}
+[1.205393] (-) TimerEvent: {}
+[1.305929] (-) TimerEvent: {}
+[1.406608] (-) TimerEvent: {}
+[1.507259] (-) TimerEvent: {}
+[1.608029] (-) TimerEvent: {}
+[1.708571] (-) TimerEvent: {}
+[1.809152] (-) TimerEvent: {}
+[1.909914] (-) TimerEvent: {}
+[2.010443] (-) TimerEvent: {}
+[2.111094] (-) TimerEvent: {}
+[2.211747] (-) TimerEvent: {}
+[2.312427] (-) TimerEvent: {}
+[2.413095] (-) TimerEvent: {}
+[2.513705] (-) TimerEvent: {}
+[2.614387] (-) TimerEvent: {}
+[2.715020] (-) TimerEvent: {}
+[2.815689] (-) TimerEvent: {}
+[2.916320] (-) TimerEvent: {}
+[3.016949] (-) TimerEvent: {}
+[3.117566] (-) TimerEvent: {}
+[3.218179] (-) TimerEvent: {}
+[3.318876] (-) TimerEvent: {}
+[3.419519] (-) TimerEvent: {}
+[3.486766] (thruster_manager) StdoutLine: {'line': b'-- The CXX compiler identification is GNU 11.4.0\n'}
+[3.519778] (-) TimerEvent: {}
+[3.620302] (-) TimerEvent: {}
+[3.720817] (-) TimerEvent: {}
+[3.821463] (-) TimerEvent: {}
+[3.921991] (-) TimerEvent: {}
+[4.022549] (-) TimerEvent: {}
+[4.123203] (-) TimerEvent: {}
+[4.223792] (-) TimerEvent: {}
+[4.324306] (-) TimerEvent: {}
+[4.424876] (-) TimerEvent: {}
+[4.525502] (-) TimerEvent: {}
+[4.626086] (-) TimerEvent: {}
+[4.726852] (-) TimerEvent: {}
+[4.827383] (-) TimerEvent: {}
+[4.927949] (-) TimerEvent: {}
+[5.028521] (-) TimerEvent: {}
+[5.129044] (-) TimerEvent: {}
+[5.229641] (-) TimerEvent: {}
+[5.272302] (thruster_manager) StdoutLine: {'line': b'-- Detecting C compiler ABI info\n'}
+[5.329955] (-) TimerEvent: {}
+[5.430582] (-) TimerEvent: {}
+[5.531229] (-) TimerEvent: {}
+[5.631741] (-) TimerEvent: {}
+[5.732338] (-) TimerEvent: {}
+[5.765597] (thruster_manager) StdoutLine: {'line': b'-- Detecting C compiler ABI info - done\n'}
+[5.783729] (thruster_manager) StdoutLine: {'line': b'-- Check for working C compiler: /usr/bin/cc - skipped\n'}
+[5.798043] (thruster_manager) StdoutLine: {'line': b'-- Detecting C compile features\n'}
+[5.800665] (thruster_manager) StdoutLine: {'line': b'-- Detecting C compile features - done\n'}
+[5.810373] (thruster_manager) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info\n'}
+[5.832569] (-) TimerEvent: {}
+[5.933118] (-) TimerEvent: {}
+[6.033789] (-) TimerEvent: {}
+[6.134354] (-) TimerEvent: {}
+[6.235148] (-) TimerEvent: {}
+[6.335792] (-) TimerEvent: {}
+[6.379677] (thruster_manager) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info - done\n'}
+[6.398469] (thruster_manager) StdoutLine: {'line': b'-- Check for working CXX compiler: /usr/bin/c++ - skipped\n'}
+[6.399157] (thruster_manager) StdoutLine: {'line': b'-- Detecting CXX compile features\n'}
+[6.400229] (thruster_manager) StdoutLine: {'line': b'-- Detecting CXX compile features - done\n'}
+[6.436046] (-) TimerEvent: {}
+[6.446614] (thruster_manager) StdoutLine: {'line': b'-- Found ament_cmake: 1.3.7 (/opt/ros/humble/share/ament_cmake/cmake)\n'}
+[6.536319] (-) TimerEvent: {}
+[6.636913] (-) TimerEvent: {}
+[6.737449] (-) TimerEvent: {}
+[6.837956] (-) TimerEvent: {}
+[6.853915] (thruster_manager) StdoutLine: {'line': b'-- Found Python3: /usr/bin/python3.10 (found version "3.10.12") found components: Interpreter \n'}
+[6.938210] (-) TimerEvent: {}
+[7.038854] (-) TimerEvent: {}
+[7.139531] (-) TimerEvent: {}
+[7.159534] (thruster_manager) StdoutLine: {'line': b'-- Found rclcpp: 16.0.8 (/opt/ros/humble/share/rclcpp/cmake)\n'}
+[7.239774] (-) TimerEvent: {}
+[7.340384] (-) TimerEvent: {}
+[7.440782] (-) TimerEvent: {}
+[7.541218] (-) TimerEvent: {}
+[7.591143] (thruster_manager) StdoutLine: {'line': b'-- Found rosidl_generator_c: 3.1.5 (/opt/ros/humble/share/rosidl_generator_c/cmake)\n'}
+[7.613435] (thruster_manager) StdoutLine: {'line': b'-- Found rosidl_adapter: 3.1.5 (/opt/ros/humble/share/rosidl_adapter/cmake)\n'}
+[7.641518] (-) TimerEvent: {}
+[7.650834] (thruster_manager) StdoutLine: {'line': b'-- Found rosidl_generator_cpp: 3.1.5 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)\n'}
+[7.709406] (thruster_manager) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c\n'}
+[7.741836] (-) TimerEvent: {}
+[7.783731] (thruster_manager) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp\n'}
+[7.842110] (-) TimerEvent: {}
+[7.942636] (-) TimerEvent: {}
+[8.037541] (thruster_manager) StdoutLine: {'line': b'-- Found rmw_implementation_cmake: 6.1.1 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)\n'}
+[8.042882] (-) TimerEvent: {}
+[8.050687] (thruster_manager) StdoutLine: {'line': b'-- Found rmw_fastrtps_cpp: 6.2.6 (/opt/ros/humble/share/rmw_fastrtps_cpp/cmake)\n'}
+[8.143148] (-) TimerEvent: {}
+[8.243769] (-) TimerEvent: {}
+[8.344324] (-) TimerEvent: {}
+[8.444885] (-) TimerEvent: {}
+[8.545313] (-) TimerEvent: {}
+[8.645872] (-) TimerEvent: {}
+[8.746555] (-) TimerEvent: {}
+[8.847201] (-) TimerEvent: {}
+[8.947852] (-) TimerEvent: {}
+[9.048509] (-) TimerEvent: {}
+[9.149212] (-) TimerEvent: {}
+[9.249785] (-) TimerEvent: {}
+[9.350277] (-) TimerEvent: {}
+[9.450741] (-) TimerEvent: {}
+[9.551148] (-) TimerEvent: {}
+[9.651588] (-) TimerEvent: {}
+[9.752121] (-) TimerEvent: {}
+[9.852756] (-) TimerEvent: {}
+[9.953247] (-) TimerEvent: {}
+[10.053775] (-) TimerEvent: {}
+[10.154341] (-) TimerEvent: {}
+[10.254938] (-) TimerEvent: {}
+[10.355623] (-) TimerEvent: {}
+[10.456196] (-) TimerEvent: {}
+[10.556709] (-) TimerEvent: {}
+[10.657266] (-) TimerEvent: {}
+[10.757930] (-) TimerEvent: {}
+[10.858471] (-) TimerEvent: {}
+[10.958865] (-) TimerEvent: {}
+[11.059287] (-) TimerEvent: {}
+[11.159893] (-) TimerEvent: {}
+[11.260631] (-) TimerEvent: {}
+[11.361094] (-) TimerEvent: {}
+[11.461761] (-) TimerEvent: {}
+[11.562335] (-) TimerEvent: {}
+[11.662872] (-) TimerEvent: {}
+[11.763623] (-) TimerEvent: {}
+[11.864197] (-) TimerEvent: {}
+[11.964776] (-) TimerEvent: {}
+[12.065533] (-) TimerEvent: {}
+[12.119949] (thruster_manager) StdoutLine: {'line': b'-- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "3.0.2")  \n'}
+[12.165824] (-) TimerEvent: {}
+[12.266463] (-) TimerEvent: {}
+[12.367158] (-) TimerEvent: {}
+[12.467698] (-) TimerEvent: {}
+[12.568069] (-) TimerEvent: {}
+[12.668438] (-) TimerEvent: {}
+[12.768853] (-) TimerEvent: {}
+[12.869301] (-) TimerEvent: {}
+[12.969921] (-) TimerEvent: {}
+[13.070546] (-) TimerEvent: {}
+[13.171229] (-) TimerEvent: {}
+[13.271899] (-) TimerEvent: {}
+[13.372538] (-) TimerEvent: {}
+[13.473184] (-) TimerEvent: {}
+[13.573815] (-) TimerEvent: {}
+[13.674455] (-) TimerEvent: {}
+[13.775068] (-) TimerEvent: {}
+[13.875711] (-) TimerEvent: {}
+[13.976445] (-) TimerEvent: {}
+[14.077111] (-) TimerEvent: {}
+[14.177679] (-) TimerEvent: {}
+[14.278268] (-) TimerEvent: {}
+[14.378844] (-) TimerEvent: {}
+[14.479471] (-) TimerEvent: {}
+[14.580023] (-) TimerEvent: {}
+[14.680612] (-) TimerEvent: {}
+[14.781319] (-) TimerEvent: {}
+[14.881984] (-) TimerEvent: {}
+[14.982533] (-) TimerEvent: {}
+[15.083154] (-) TimerEvent: {}
+[15.183683] (-) TimerEvent: {}
+[15.284275] (-) TimerEvent: {}
+[15.384803] (-) TimerEvent: {}
+[15.485399] (-) TimerEvent: {}
+[15.585974] (-) TimerEvent: {}
+[15.686555] (-) TimerEvent: {}
+[15.787062] (-) TimerEvent: {}
+[15.887620] (-) TimerEvent: {}
+[15.988167] (-) TimerEvent: {}
+[16.088813] (-) TimerEvent: {}
+[16.189919] (-) TimerEvent: {}
+[16.290579] (-) TimerEvent: {}
+[16.391193] (-) TimerEvent: {}
+[16.491771] (-) TimerEvent: {}
+[16.592370] (-) TimerEvent: {}
+[16.692920] (-) TimerEvent: {}
+[16.793448] (-) TimerEvent: {}
+[16.894111] (-) TimerEvent: {}
+[16.994619] (-) TimerEvent: {}
+[17.095245] (-) TimerEvent: {}
+[17.195851] (-) TimerEvent: {}
+[17.296491] (-) TimerEvent: {}
+[17.397087] (-) TimerEvent: {}
+[17.497676] (-) TimerEvent: {}
+[17.598251] (-) TimerEvent: {}
+[17.698841] (-) TimerEvent: {}
+[17.799487] (-) TimerEvent: {}
+[17.900117] (-) TimerEvent: {}
+[18.000694] (-) TimerEvent: {}
+[18.101287] (-) TimerEvent: {}
+[18.168991] (thruster_manager) StdoutLine: {'line': b'-- Found FastRTPS: /opt/ros/humble/include  \n'}
+[18.201547] (-) TimerEvent: {}
+[18.302255] (-) TimerEvent: {}
+[18.402899] (-) TimerEvent: {}
+[18.503464] (-) TimerEvent: {}
+[18.604093] (-) TimerEvent: {}
+[18.704461] (-) TimerEvent: {}
+[18.804843] (-) TimerEvent: {}
+[18.905309] (-) TimerEvent: {}
+[19.005932] (-) TimerEvent: {}
+[19.106570] (-) TimerEvent: {}
+[19.207237] (-) TimerEvent: {}
+[19.307837] (-) TimerEvent: {}
+[19.408356] (-) TimerEvent: {}
+[19.508929] (-) TimerEvent: {}
+[19.609541] (-) TimerEvent: {}
+[19.710157] (-) TimerEvent: {}
+[19.810771] (-) TimerEvent: {}
+[19.911431] (-) TimerEvent: {}
+[20.012068] (-) TimerEvent: {}
+[20.112654] (-) TimerEvent: {}
+[20.213149] (-) TimerEvent: {}
+[20.313588] (-) TimerEvent: {}
+[20.414122] (-) TimerEvent: {}
+[20.514693] (-) TimerEvent: {}
+[20.615382] (-) TimerEvent: {}
+[20.715892] (-) TimerEvent: {}
+[20.816451] (-) TimerEvent: {}
+[20.917141] (-) TimerEvent: {}
+[21.017926] (-) TimerEvent: {}
+[21.118687] (-) TimerEvent: {}
+[21.219375] (-) TimerEvent: {}
+[21.319977] (-) TimerEvent: {}
+[21.420533] (-) TimerEvent: {}
+[21.521211] (-) TimerEvent: {}
+[21.621773] (-) TimerEvent: {}
+[21.722367] (-) TimerEvent: {}
+[21.822954] (-) TimerEvent: {}
+[21.923632] (-) TimerEvent: {}
+[22.024287] (-) TimerEvent: {}
+[22.124953] (-) TimerEvent: {}
+[22.225537] (-) TimerEvent: {}
+[22.326187] (-) TimerEvent: {}
+[22.426800] (-) TimerEvent: {}
+[22.527315] (-) TimerEvent: {}
+[22.627917] (-) TimerEvent: {}
+[22.728550] (-) TimerEvent: {}
+[22.829157] (-) TimerEvent: {}
+[22.929783] (-) TimerEvent: {}
+[23.030305] (-) TimerEvent: {}
+[23.130732] (-) TimerEvent: {}
+[23.231102] (-) TimerEvent: {}
+[23.331461] (-) TimerEvent: {}
+[23.431903] (-) TimerEvent: {}
+[23.532426] (-) TimerEvent: {}
+[23.633098] (-) TimerEvent: {}
+[23.733627] (-) TimerEvent: {}
+[23.834236] (-) TimerEvent: {}
+[23.934904] (-) TimerEvent: {}
+[24.035535] (-) TimerEvent: {}
+[24.136102] (-) TimerEvent: {}
+[24.236820] (-) TimerEvent: {}
+[24.337500] (-) TimerEvent: {}
+[24.438108] (-) TimerEvent: {}
+[24.538802] (-) TimerEvent: {}
+[24.639479] (-) TimerEvent: {}
+[24.740055] (-) TimerEvent: {}
+[24.840694] (-) TimerEvent: {}
+[24.941352] (-) TimerEvent: {}
+[25.041956] (-) TimerEvent: {}
+[25.142551] (-) TimerEvent: {}
+[25.243103] (-) TimerEvent: {}
+[25.343653] (-) TimerEvent: {}
+[25.444282] (-) TimerEvent: {}
+[25.544922] (-) TimerEvent: {}
+[25.645471] (-) TimerEvent: {}
+[25.746221] (-) TimerEvent: {}
+[25.846967] (-) TimerEvent: {}
+[25.947576] (-) TimerEvent: {}
+[26.048247] (-) TimerEvent: {}
+[26.148916] (-) TimerEvent: {}
+[26.249539] (-) TimerEvent: {}
+[26.350206] (-) TimerEvent: {}
+[26.450762] (-) TimerEvent: {}
+[26.551367] (-) TimerEvent: {}
+[26.651956] (-) TimerEvent: {}
+[26.752557] (-) TimerEvent: {}
+[26.853263] (-) TimerEvent: {}
+[26.953864] (-) TimerEvent: {}
+[27.054502] (-) TimerEvent: {}
+[27.155068] (-) TimerEvent: {}
+[27.255733] (-) TimerEvent: {}
+[27.356439] (-) TimerEvent: {}
+[27.457181] (-) TimerEvent: {}
+[27.557745] (-) TimerEvent: {}
+[27.658426] (-) TimerEvent: {}
+[27.759011] (-) TimerEvent: {}
+[27.859517] (-) TimerEvent: {}
+[27.960258] (-) TimerEvent: {}
+[28.060901] (-) TimerEvent: {}
+[28.084194] (thruster_manager) StdoutLine: {'line': b"-- Using RMW implementation 'rmw_fastrtps_cpp' as default\n"}
+[28.138221] (thruster_manager) StdoutLine: {'line': b'-- Looking for pthread.h\n'}
+[28.161192] (-) TimerEvent: {}
+[28.261835] (-) TimerEvent: {}
+[28.362486] (-) TimerEvent: {}
+[28.463024] (-) TimerEvent: {}
+[28.563718] (-) TimerEvent: {}
+[28.664263] (-) TimerEvent: {}
+[28.718821] (thruster_manager) StdoutLine: {'line': b'-- Looking for pthread.h - found\n'}
+[28.720093] (thruster_manager) StdoutLine: {'line': b'-- Performing Test CMAKE_HAVE_LIBC_PTHREAD\n'}
+[28.765268] (-) TimerEvent: {}
+[28.865931] (-) TimerEvent: {}
+[28.966518] (-) TimerEvent: {}
+[29.067050] (-) TimerEvent: {}
+[29.167672] (-) TimerEvent: {}
+[29.268316] (-) TimerEvent: {}
+[29.272726] (thruster_manager) StdoutLine: {'line': b'-- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Success\n'}
+[29.275360] (thruster_manager) StdoutLine: {'line': b'-- Found Threads: TRUE  \n'}
+[29.368556] (-) TimerEvent: {}
+[29.469190] (-) TimerEvent: {}
+[29.569758] (-) TimerEvent: {}
+[29.670362] (-) TimerEvent: {}
+[29.770996] (-) TimerEvent: {}
+[29.792142] (thruster_manager) StdoutLine: {'line': b'-- Found geometry_msgs: 4.2.3 (/opt/ros/humble/share/geometry_msgs/cmake)\n'}
+[29.871184] (-) TimerEvent: {}
+[29.932172] (thruster_manager) StdoutLine: {'line': b'-- Found sensor_msgs: 4.2.3 (/opt/ros/humble/share/sensor_msgs/cmake)\n'}
+[29.971431] (-) TimerEvent: {}
+[30.072167] (-) TimerEvent: {}
+[30.159401] (thruster_manager) StdoutLine: {'line': b'-- Found tf2_ros: 0.25.5 (/opt/ros/humble/share/tf2_ros/cmake)\n'}
+[30.172449] (-) TimerEvent: {}
+[30.273054] (-) TimerEvent: {}
+[30.373827] (-) TimerEvent: {}
+[30.474264] (-) TimerEvent: {}
+[30.574727] (-) TimerEvent: {}
+[30.675285] (-) TimerEvent: {}
+[30.775884] (-) TimerEvent: {}
+[30.876416] (-) TimerEvent: {}
+[30.976874] (-) TimerEvent: {}
+[31.003776] (thruster_manager) StdoutLine: {'line': b'-- Found urdf: 2.6.0 (/opt/ros/humble/share/urdf/cmake)\n'}
+[31.077177] (-) TimerEvent: {}
+[31.177961] (-) TimerEvent: {}
+[31.278530] (-) TimerEvent: {}
+[31.379077] (-) TimerEvent: {}
+[31.479423] (-) TimerEvent: {}
+[31.579891] (-) TimerEvent: {}
+[31.680281] (-) TimerEvent: {}
+[31.780725] (-) TimerEvent: {}
+[31.881192] (-) TimerEvent: {}
+[31.981897] (-) TimerEvent: {}
+[32.082520] (-) TimerEvent: {}
+[32.183318] (-) TimerEvent: {}
+[32.283937] (-) TimerEvent: {}
+[32.384852] (-) TimerEvent: {}
+[32.485431] (-) TimerEvent: {}
+[32.586079] (-) TimerEvent: {}
+[32.686733] (-) TimerEvent: {}
+[32.787361] (-) TimerEvent: {}
+[32.887907] (-) TimerEvent: {}
+[32.988478] (-) TimerEvent: {}
+[33.089057] (-) TimerEvent: {}
+[33.189604] (-) TimerEvent: {}
+[33.290116] (-) TimerEvent: {}
+[33.390766] (-) TimerEvent: {}
+[33.491385] (-) TimerEvent: {}
+[33.592041] (-) TimerEvent: {}
+[33.692665] (-) TimerEvent: {}
+[33.793282] (-) TimerEvent: {}
+[33.893951] (-) TimerEvent: {}
+[33.994581] (-) TimerEvent: {}
+[34.095249] (-) TimerEvent: {}
+[34.195813] (-) TimerEvent: {}
+[34.296426] (-) TimerEvent: {}
+[34.397018] (-) TimerEvent: {}
+[34.497787] (-) TimerEvent: {}
+[34.598528] (-) TimerEvent: {}
+[34.699126] (-) TimerEvent: {}
+[34.799770] (-) TimerEvent: {}
+[34.900472] (-) TimerEvent: {}
+[35.001162] (-) TimerEvent: {}
+[35.101853] (-) TimerEvent: {}
+[35.202670] (-) TimerEvent: {}
+[35.303249] (-) TimerEvent: {}
+[35.404011] (-) TimerEvent: {}
+[35.504759] (-) TimerEvent: {}
+[35.605453] (-) TimerEvent: {}
+[35.706147] (-) TimerEvent: {}
+[35.806802] (-) TimerEvent: {}
+[35.907502] (-) TimerEvent: {}
+[35.934788] (thruster_manager) StdoutLine: {'line': b'-- Found kdl_parser: 2.6.4 (/opt/ros/humble/share/kdl_parser/cmake)\n'}
+[36.007749] (-) TimerEvent: {}
+[36.108301] (-) TimerEvent: {}
+[36.156466] (thruster_manager) StdoutLine: {'line': b'-- Found eigen3_cmake_module: 0.1.1 (/opt/ros/humble/share/eigen3_cmake_module/cmake)\n'}
+[36.161878] (thruster_manager) StdoutLine: {'line': b'-- Found Eigen3: TRUE (found version "3.4.0") \n'}
+[36.162118] (thruster_manager) StdoutLine: {'line': b'-- Ensuring Eigen3 include directory is part of orocos-kdl CMake target\n'}
+[36.175322] (thruster_manager) StdoutLine: {'line': b'-- Found rclcpp_lifecycle: 16.0.8 (/opt/ros/humble/share/rclcpp_lifecycle/cmake)\n'}
+[36.208570] (-) TimerEvent: {}
+[36.309199] (-) TimerEvent: {}
+[36.409710] (-) TimerEvent: {}
+[36.441533] (thruster_manager) StdoutLine: {'line': b'-- Configuring done\n'}
+[36.500299] (thruster_manager) StdoutLine: {'line': b'-- Generating done\n'}
+[36.504268] (thruster_manager) StdoutLine: {'line': b'-- Build files have been written to: /home/grape/2023-2024/ros2_ws/build/thruster_manager\n'}
+[36.509989] (-) TimerEvent: {}
+[36.525522] (thruster_manager) CommandEnded: {'returncode': 0}
+[36.526972] (thruster_manager) JobProgress: {'identifier': 'thruster_manager', 'progress': 'build'}
+[36.529582] (thruster_manager) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/grape/2023-2024/ros2_ws/build/thruster_manager', '--', '-j8', '-l8'], 'cwd': '/home/grape/2023-2024/ros2_ws/build/thruster_manager', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'grape'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/grape/2023-2024/ros2_ws/install/state_estimation/lib:/home/grape/isopod-explorer/ros2_ws/install/auv_control/lib:/home/grape/isopod-explorer/ros2_ws/install/thruster_manager/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('WT_PROFILE_ID', '{e5a83caa-4c73-52b3-ae6b-bc438d721ef9}'), ('MOTD_SHOWN', 'update-motd'), ('HOME', '/home/grape'), ('OLDPWD', '/home/grape/2023-2024/ros2_ws/src'), ('ROS_PYTHON_VERSION', '3'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('WSL_DISTRO_NAME', 'Ubuntu-22.04'), ('_colcon_cd_root', '/opt/ros/humble/'), ('QT_QPA_PLATFORMTHEME', 'qt5ct'), ('WAYLAND_DISPLAY', 'wayland-0'), ('COLCON_PREFIX_PATH', '/home/grape/2023-2024/ros2_ws/install:/home/grape/isopod-explorer/ros2_ws/install'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'grape'), ('NAME', 'My-Peach-Farm'), ('WSL_INTEROP', '/run/WSL/421_interop'), ('PULSE_SERVER', 'unix:/mnt/wslg/PulseServer'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('TERM', 'xterm-256color'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/usr/lib/wsl/lib:/mnt/c/Program Files (x86)/NVIDIA Corporation/PhysX/Common:/mnt/c/Windows/system32:/mnt/c/Windows:/mnt/c/Windows/System32/Wbem:/mnt/c/Windows/System32/WindowsPowerShell/v1.0/:/mnt/c/Program Files/Microsoft SQL Server/Client SDK/ODBC/170/Tools/Binn/:/mnt/c/Program Files (x86)/Microsoft SQL Server/150/Tools/Binn/:/mnt/c/Program Files/Microsoft SQL Server/150/Tools/Binn/:/mnt/c/Program Files/Microsoft SQL Server/150/DTS/Binn/:/mnt/c/Program Files (x86)/Windows Kits/8.1/Windows Performance Toolkit/:/mnt/c/Program Files/MATLAB/R2023a/bin:/mnt/c/Program Files/Git/cmd:/mnt/c/AMD:/mnt/c/Program Files/Microsoft VS Code/bin:/mnt/c/Program Files/usbipd-win/:/mnt/c/Program Files/Docker/Docker/resources/bin:/mnt/c/ProgramData/chocolatey/choco.exe/bin:/mnt/c/Program Files/dotnet/:/mnt/c/Users/aznmo/AppData/Local/Programs/Python/Python312/Scripts/:/mnt/c/Users/aznmo/AppData/Local/Programs/Python/Python312/:/mnt/c/Users/aznmo/AppData/Local/Programs/Python/Launcher/:/mnt/c/Users/aznmo/AppData/Local/Microsoft/WindowsApps:/mnt/c/Users/aznmo/AppData/Local/GitHubDesktop/bin:/mnt/c/AMD:/mnt/c/ProgramData/aznmo/GitHubDesktop/bin:/snap/bin'), ('WT_SESSION', '525f8b65-830d-4557-b547-eca40966b50d'), ('XDG_RUNTIME_DIR', '/run/user/1000/'), ('DISPLAY', ':0'), ('LANG', 'en_US.UTF-8'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('AMENT_PREFIX_PATH', '/home/grape/2023-2024/ros2_ws/install/state_estimation:/home/grape/isopod-explorer/ros2_ws/install/auv_control:/home/grape/isopod-explorer/ros2_ws/install/thruster_manager:/home/grape/isopod-explorer/ros2_ws/install/pose_to_tf:/home/grape/isopod-explorer/ros2_ws/install/bluerov2_ignition:/home/grape/isopod-explorer/ros2_ws/install/bluerov2_description:/home/grape/isopod-explorer/ros2_ws/install/bluerov2_control:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('PWD', '/home/grape/2023-2024/ros2_ws/build/thruster_manager'), ('XDG_DATA_DIRS', '/usr/local/share:/usr/share:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/grape/isopod-explorer/ros2_ws/install/auv_control/local/lib/python3.10/dist-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('WSL2_GUI_APPS_ENABLED', '1'), ('HOSTTYPE', 'x86_64'), ('CMAKE_PREFIX_PATH', '/home/grape/2023-2024/ros2_ws/install/state_estimation:/home/grape/isopod-explorer/ros2_ws/install/auv_control:/home/grape/isopod-explorer/ros2_ws/install/thruster_manager:/home/grape/isopod-explorer/ros2_ws/install/pose_to_tf:/home/grape/isopod-explorer/ros2_ws/install/bluerov2_ignition:/home/grape/isopod-explorer/ros2_ws/install/bluerov2_description:/home/grape/isopod-explorer/ros2_ws/install/bluerov2_control:/opt/ros/humble'), ('WSLENV', 'WT_SESSION:WT_PROFILE_ID:')]), 'shell': False}
+[36.610269] (-) TimerEvent: {}
+[36.631245] (thruster_manager) StdoutLine: {'line': b'[ 28%] \x1b[32mBuilding CXX object CMakeFiles/thruster_manager.dir/src/thruster_manager.cpp.o\x1b[0m\n'}
+[36.631560] (thruster_manager) StdoutLine: {'line': b'[ 28%] \x1b[32mBuilding CXX object CMakeFiles/thruster_manager_node.dir/rclcpp_components/node_main_thruster_manager_node.cpp.o\x1b[0m\n'}
+[36.631721] (thruster_manager) StdoutLine: {'line': b'[ 42%] \x1b[32mBuilding CXX object CMakeFiles/thruster_manager.dir/src/thruster_manager_node.cpp.o\x1b[0m\n'}
+[36.710451] (-) TimerEvent: {}
+[36.811103] (-) TimerEvent: {}
+[36.911603] (-) TimerEvent: {}
+[37.012153] (-) TimerEvent: {}
+[37.112665] (-) TimerEvent: {}
+[37.213168] (-) TimerEvent: {}
+[37.313916] (-) TimerEvent: {}
+[37.414499] (-) TimerEvent: {}
+[37.515152] (-) TimerEvent: {}
+[37.615723] (-) TimerEvent: {}
+[37.716382] (-) TimerEvent: {}
+[37.816935] (-) TimerEvent: {}
+[37.917554] (-) TimerEvent: {}
+[38.018312] (-) TimerEvent: {}
+[38.118865] (-) TimerEvent: {}
+[38.219392] (-) TimerEvent: {}
+[38.319808] (-) TimerEvent: {}
+[38.420237] (-) TimerEvent: {}
+[38.520650] (-) TimerEvent: {}
+[38.621161] (-) TimerEvent: {}
+[38.721751] (-) TimerEvent: {}
+[38.822177] (-) TimerEvent: {}
+[38.922713] (-) TimerEvent: {}
+[39.023186] (-) TimerEvent: {}
+[39.123625] (-) TimerEvent: {}
+[39.224173] (-) TimerEvent: {}
+[39.324637] (-) TimerEvent: {}
+[39.425124] (-) TimerEvent: {}
+[39.525706] (-) TimerEvent: {}
+[39.626380] (-) TimerEvent: {}
+[39.726843] (-) TimerEvent: {}
+[39.827284] (-) TimerEvent: {}
+[39.927775] (-) TimerEvent: {}
+[40.028324] (-) TimerEvent: {}
+[40.128842] (-) TimerEvent: {}
+[40.229307] (-) TimerEvent: {}
+[40.329854] (-) TimerEvent: {}
+[40.430274] (-) TimerEvent: {}
+[40.530722] (-) TimerEvent: {}
+[40.631218] (-) TimerEvent: {}
+[40.731822] (-) TimerEvent: {}
+[40.832367] (-) TimerEvent: {}
+[40.932893] (-) TimerEvent: {}
+[41.033408] (-) TimerEvent: {}
+[41.134002] (-) TimerEvent: {}
+[41.234658] (-) TimerEvent: {}
+[41.335171] (-) TimerEvent: {}
+[41.435651] (-) TimerEvent: {}
+[41.536138] (-) TimerEvent: {}
+[41.636577] (-) TimerEvent: {}
+[41.737005] (-) TimerEvent: {}
+[41.837402] (-) TimerEvent: {}
+[41.937918] (-) TimerEvent: {}
+[42.038355] (-) TimerEvent: {}
+[42.138890] (-) TimerEvent: {}
+[42.239372] (-) TimerEvent: {}
+[42.339939] (-) TimerEvent: {}
+[42.440418] (-) TimerEvent: {}
+[42.540924] (-) TimerEvent: {}
+[42.641527] (-) TimerEvent: {}
+[42.742084] (-) TimerEvent: {}
+[42.842624] (-) TimerEvent: {}
+[42.943349] (-) TimerEvent: {}
+[43.043916] (-) TimerEvent: {}
+[43.144495] (-) TimerEvent: {}
+[43.245117] (-) TimerEvent: {}
+[43.289251] (thruster_manager) StdoutLine: {'line': b'[ 57%] \x1b[32m\x1b[1mLinking CXX executable thruster_manager_node\x1b[0m\n'}
+[43.345385] (-) TimerEvent: {}
+[43.446102] (-) TimerEvent: {}
+[43.546625] (-) TimerEvent: {}
+[43.647219] (-) TimerEvent: {}
+[43.747732] (-) TimerEvent: {}
+[43.840882] (thruster_manager) StdoutLine: {'line': b'[ 57%] Built target thruster_manager_node\n'}
+[43.847979] (-) TimerEvent: {}
+[43.948662] (-) TimerEvent: {}
+[44.049248] (-) TimerEvent: {}
+[44.149709] (-) TimerEvent: {}
+[44.250187] (-) TimerEvent: {}
+[44.350707] (-) TimerEvent: {}
+[44.451279] (-) TimerEvent: {}
+[44.551717] (-) TimerEvent: {}
+[44.652266] (-) TimerEvent: {}
+[44.752840] (-) TimerEvent: {}
+[44.853306] (-) TimerEvent: {}
+[44.953894] (-) TimerEvent: {}
+[45.054546] (-) TimerEvent: {}
+[45.155500] (-) TimerEvent: {}
+[45.256163] (-) TimerEvent: {}
+[45.356911] (-) TimerEvent: {}
+[45.457430] (-) TimerEvent: {}
+[45.557884] (-) TimerEvent: {}
+[45.658502] (-) TimerEvent: {}
+[45.759138] (-) TimerEvent: {}
+[45.859902] (-) TimerEvent: {}
+[45.960457] (-) TimerEvent: {}
+[46.060985] (-) TimerEvent: {}
+[46.161437] (-) TimerEvent: {}
+[46.261885] (-) TimerEvent: {}
+[46.362301] (-) TimerEvent: {}
+[46.462701] (-) TimerEvent: {}
+[46.563126] (-) TimerEvent: {}
+[46.663723] (-) TimerEvent: {}
+[46.764511] (-) TimerEvent: {}
+[46.865020] (-) TimerEvent: {}
+[46.965538] (-) TimerEvent: {}
+[47.066207] (-) TimerEvent: {}
+[47.166822] (-) TimerEvent: {}
+[47.267353] (-) TimerEvent: {}
+[47.367888] (-) TimerEvent: {}
+[47.468398] (-) TimerEvent: {}
+[47.569052] (-) TimerEvent: {}
+[47.669739] (-) TimerEvent: {}
+[47.770356] (-) TimerEvent: {}
+[47.870968] (-) TimerEvent: {}
+[47.971651] (-) TimerEvent: {}
+[48.072272] (-) TimerEvent: {}
+[48.172876] (-) TimerEvent: {}
+[48.273551] (-) TimerEvent: {}
+[48.374127] (-) TimerEvent: {}
+[48.474718] (-) TimerEvent: {}
+[48.575331] (-) TimerEvent: {}
+[48.676061] (-) TimerEvent: {}
+[48.776754] (-) TimerEvent: {}
+[48.877293] (-) TimerEvent: {}
+[48.977902] (-) TimerEvent: {}
+[49.078561] (-) TimerEvent: {}
+[49.179117] (-) TimerEvent: {}
+[49.279806] (-) TimerEvent: {}
+[49.380560] (-) TimerEvent: {}
+[49.481126] (-) TimerEvent: {}
+[49.581679] (-) TimerEvent: {}
+[49.682386] (-) TimerEvent: {}
+[49.783000] (-) TimerEvent: {}
+[49.883727] (-) TimerEvent: {}
+[49.984456] (-) TimerEvent: {}
+[50.084969] (-) TimerEvent: {}
+[50.185400] (-) TimerEvent: {}
+[50.285824] (-) TimerEvent: {}
+[50.386242] (-) TimerEvent: {}
+[50.486649] (-) TimerEvent: {}
+[50.587237] (-) TimerEvent: {}
+[50.688138] (-) TimerEvent: {}
+[50.788672] (-) TimerEvent: {}
+[50.889417] (-) TimerEvent: {}
+[50.989965] (-) TimerEvent: {}
+[51.090524] (-) TimerEvent: {}
+[51.190958] (-) TimerEvent: {}
+[51.291681] (-) TimerEvent: {}
+[51.392326] (-) TimerEvent: {}
+[51.492930] (-) TimerEvent: {}
+[51.593888] (-) TimerEvent: {}
+[51.694506] (-) TimerEvent: {}
+[51.795109] (-) TimerEvent: {}
+[51.895729] (-) TimerEvent: {}
+[51.996281] (-) TimerEvent: {}
+[52.096751] (-) TimerEvent: {}
+[52.197182] (-) TimerEvent: {}
+[52.297612] (-) TimerEvent: {}
+[52.398054] (-) TimerEvent: {}
+[52.498526] (-) TimerEvent: {}
+[52.599138] (-) TimerEvent: {}
+[52.699676] (-) TimerEvent: {}
+[52.800327] (-) TimerEvent: {}
+[52.900980] (-) TimerEvent: {}
+[53.001523] (-) TimerEvent: {}
+[53.102240] (-) TimerEvent: {}
+[53.202822] (-) TimerEvent: {}
+[53.303419] (-) TimerEvent: {}
+[53.404168] (-) TimerEvent: {}
+[53.504737] (-) TimerEvent: {}
+[53.605456] (-) TimerEvent: {}
+[53.705971] (-) TimerEvent: {}
+[53.806617] (-) TimerEvent: {}
+[53.907277] (-) TimerEvent: {}
+[54.007816] (-) TimerEvent: {}
+[54.108337] (-) TimerEvent: {}
+[54.208773] (-) TimerEvent: {}
+[54.309207] (-) TimerEvent: {}
+[54.409717] (-) TimerEvent: {}
+[54.510162] (-) TimerEvent: {}
+[54.610653] (-) TimerEvent: {}
+[54.711259] (-) TimerEvent: {}
+[54.811962] (-) TimerEvent: {}
+[54.912591] (-) TimerEvent: {}
+[55.013177] (-) TimerEvent: {}
+[55.113775] (-) TimerEvent: {}
+[55.214451] (-) TimerEvent: {}
+[55.315032] (-) TimerEvent: {}
+[55.415456] (-) TimerEvent: {}
+[55.515870] (-) TimerEvent: {}
+[55.616551] (-) TimerEvent: {}
+[55.717115] (-) TimerEvent: {}
+[55.817907] (-) TimerEvent: {}
+[55.918459] (-) TimerEvent: {}
+[56.018889] (-) TimerEvent: {}
+[56.119482] (-) TimerEvent: {}
+[56.220094] (-) TimerEvent: {}
+[56.320672] (-) TimerEvent: {}
+[56.421119] (-) TimerEvent: {}
+[56.521589] (-) TimerEvent: {}
+[56.622004] (-) TimerEvent: {}
+[56.722514] (-) TimerEvent: {}
+[56.822959] (-) TimerEvent: {}
+[56.923404] (-) TimerEvent: {}
+[57.023862] (-) TimerEvent: {}
+[57.124277] (-) TimerEvent: {}
+[57.224729] (-) TimerEvent: {}
+[57.325194] (-) TimerEvent: {}
+[57.425796] (-) TimerEvent: {}
+[57.526720] (-) TimerEvent: {}
+[57.627328] (-) TimerEvent: {}
+[57.727983] (-) TimerEvent: {}
+[57.828532] (-) TimerEvent: {}
+[57.929121] (-) TimerEvent: {}
+[58.029847] (-) TimerEvent: {}
+[58.130441] (-) TimerEvent: {}
+[58.231052] (-) TimerEvent: {}
+[58.331995] (-) TimerEvent: {}
+[58.432629] (-) TimerEvent: {}
+[58.533273] (-) TimerEvent: {}
+[58.633841] (-) TimerEvent: {}
+[58.734610] (-) TimerEvent: {}
+[58.835409] (-) TimerEvent: {}
+[58.936025] (-) TimerEvent: {}
+[59.036648] (-) TimerEvent: {}
+[59.137288] (-) TimerEvent: {}
+[59.238211] (-) TimerEvent: {}
+[59.339044] (-) TimerEvent: {}
+[59.439697] (-) TimerEvent: {}
+[59.540416] (-) TimerEvent: {}
+[59.641066] (-) TimerEvent: {}
+[59.741730] (-) TimerEvent: {}
+[59.842301] (-) TimerEvent: {}
+[59.943069] (-) TimerEvent: {}
+[60.043609] (-) TimerEvent: {}
+[60.144074] (-) TimerEvent: {}
+[60.244711] (-) TimerEvent: {}
+[60.345260] (-) TimerEvent: {}
+[60.445930] (-) TimerEvent: {}
+[60.546489] (-) TimerEvent: {}
+[60.647063] (-) TimerEvent: {}
+[60.747596] (-) TimerEvent: {}
+[60.848087] (-) TimerEvent: {}
+[60.948666] (-) TimerEvent: {}
+[61.049327] (-) TimerEvent: {}
+[61.149873] (-) TimerEvent: {}
+[61.250493] (-) TimerEvent: {}
+[61.350922] (-) TimerEvent: {}
+[61.451308] (-) TimerEvent: {}
+[61.551750] (-) TimerEvent: {}
+[61.652307] (-) TimerEvent: {}
+[61.752797] (-) TimerEvent: {}
+[61.853266] (-) TimerEvent: {}
+[61.953864] (-) TimerEvent: {}
+[62.054578] (-) TimerEvent: {}
+[62.155217] (-) TimerEvent: {}
+[62.255808] (-) TimerEvent: {}
+[62.356327] (-) TimerEvent: {}
+[62.456851] (-) TimerEvent: {}
+[62.557432] (-) TimerEvent: {}
+[62.657952] (-) TimerEvent: {}
+[62.758751] (-) TimerEvent: {}
+[62.859398] (-) TimerEvent: {}
+[62.960055] (-) TimerEvent: {}
+[63.060685] (-) TimerEvent: {}
+[63.161401] (-) TimerEvent: {}
+[63.261930] (-) TimerEvent: {}
+[63.362392] (-) TimerEvent: {}
+[63.463008] (-) TimerEvent: {}
+[63.563602] (-) TimerEvent: {}
+[63.664085] (-) TimerEvent: {}
+[63.764538] (-) TimerEvent: {}
+[63.865100] (-) TimerEvent: {}
+[63.965709] (-) TimerEvent: {}
+[64.066254] (-) TimerEvent: {}
+[64.167069] (-) TimerEvent: {}
+[64.267679] (-) TimerEvent: {}
+[64.368133] (-) TimerEvent: {}
+[64.468552] (-) TimerEvent: {}
+[64.568947] (-) TimerEvent: {}
+[64.669389] (-) TimerEvent: {}
+[64.769934] (-) TimerEvent: {}
+[64.878519] (-) TimerEvent: {}
+[64.979136] (-) TimerEvent: {}
+[65.079753] (-) TimerEvent: {}
+[65.180401] (-) TimerEvent: {}
+[65.281069] (-) TimerEvent: {}
+[65.381714] (-) TimerEvent: {}
+[65.482283] (-) TimerEvent: {}
+[65.582767] (-) TimerEvent: {}
+[65.683571] (-) TimerEvent: {}
+[65.784178] (-) TimerEvent: {}
+[65.884730] (-) TimerEvent: {}
+[65.985332] (-) TimerEvent: {}
+[66.085934] (-) TimerEvent: {}
+[66.186454] (-) TimerEvent: {}
+[66.286879] (-) TimerEvent: {}
+[66.387285] (-) TimerEvent: {}
+[66.487722] (-) TimerEvent: {}
+[66.588184] (-) TimerEvent: {}
+[66.688797] (-) TimerEvent: {}
+[66.789379] (-) TimerEvent: {}
+[66.890127] (-) TimerEvent: {}
+[66.990600] (-) TimerEvent: {}
+[67.091212] (-) TimerEvent: {}
+[67.191726] (-) TimerEvent: {}
+[67.292223] (-) TimerEvent: {}
+[67.392665] (-) TimerEvent: {}
+[67.493112] (-) TimerEvent: {}
+[67.593621] (-) TimerEvent: {}
+[67.694105] (-) TimerEvent: {}
+[67.794510] (-) TimerEvent: {}
+[67.894892] (-) TimerEvent: {}
+[67.995390] (-) TimerEvent: {}
+[68.095891] (-) TimerEvent: {}
+[68.196410] (-) TimerEvent: {}
+[68.296937] (-) TimerEvent: {}
+[68.397394] (-) TimerEvent: {}
+[68.497794] (-) TimerEvent: {}
+[68.598195] (-) TimerEvent: {}
+[68.698719] (-) TimerEvent: {}
+[68.799362] (-) TimerEvent: {}
+[68.899807] (-) TimerEvent: {}
+[69.000369] (-) TimerEvent: {}
+[69.100754] (-) TimerEvent: {}
+[69.201139] (-) TimerEvent: {}
+[69.301596] (-) TimerEvent: {}
+[69.402140] (-) TimerEvent: {}
+[69.502590] (-) TimerEvent: {}
+[69.603092] (-) TimerEvent: {}
+[69.635901] (thruster_manager) StdoutLine: {'line': b'[ 71%] \x1b[32m\x1b[1mLinking CXX shared library libthruster_manager.so\x1b[0m\n'}
+[69.703365] (-) TimerEvent: {}
+[69.804151] (-) TimerEvent: {}
+[69.904713] (-) TimerEvent: {}
+[70.005380] (-) TimerEvent: {}
+[70.106006] (-) TimerEvent: {}
+[70.206550] (-) TimerEvent: {}
+[70.307171] (-) TimerEvent: {}
+[70.407780] (-) TimerEvent: {}
+[70.508398] (-) TimerEvent: {}
+[70.609131] (-) TimerEvent: {}
+[70.709719] (-) TimerEvent: {}
+[70.810405] (-) TimerEvent: {}
+[70.911038] (-) TimerEvent: {}
+[71.011780] (-) TimerEvent: {}
+[71.112649] (-) TimerEvent: {}
+[71.213704] (-) TimerEvent: {}
+[71.314421] (-) TimerEvent: {}
+[71.415063] (-) TimerEvent: {}
+[71.515684] (-) TimerEvent: {}
+[71.616316] (-) TimerEvent: {}
+[71.716739] (-) TimerEvent: {}
+[71.817184] (-) TimerEvent: {}
+[71.917655] (-) TimerEvent: {}
+[72.018119] (-) TimerEvent: {}
+[72.118644] (-) TimerEvent: {}
+[72.219273] (-) TimerEvent: {}
+[72.319726] (-) TimerEvent: {}
+[72.420191] (-) TimerEvent: {}
+[72.431140] (thruster_manager) StdoutLine: {'line': b'[ 71%] Built target thruster_manager\n'}
+[72.464759] (thruster_manager) StdoutLine: {'line': b'[ 85%] \x1b[32mBuilding CXX object CMakeFiles/publish_wrenches.dir/src/publish_wrenches.cpp.o\x1b[0m\n'}
+[72.520497] (-) TimerEvent: {}
+[72.621112] (-) TimerEvent: {}
+[72.721722] (-) TimerEvent: {}
+[72.822313] (-) TimerEvent: {}
+[72.922890] (-) TimerEvent: {}
+[73.023413] (-) TimerEvent: {}
+[73.123906] (-) TimerEvent: {}
+[73.224676] (-) TimerEvent: {}
+[73.325177] (-) TimerEvent: {}
+[73.425807] (-) TimerEvent: {}
+[73.526461] (-) TimerEvent: {}
+[73.627028] (-) TimerEvent: {}
+[73.727623] (-) TimerEvent: {}
+[73.828327] (-) TimerEvent: {}
+[73.928895] (-) TimerEvent: {}
+[74.029517] (-) TimerEvent: {}
+[74.129970] (-) TimerEvent: {}
+[74.230579] (-) TimerEvent: {}
+[74.331057] (-) TimerEvent: {}
+[74.431696] (-) TimerEvent: {}
+[74.532344] (-) TimerEvent: {}
+[74.633073] (-) TimerEvent: {}
+[74.733488] (-) TimerEvent: {}
+[74.834006] (-) TimerEvent: {}
+[74.934462] (-) TimerEvent: {}
+[75.035004] (-) TimerEvent: {}
+[75.135847] (-) TimerEvent: {}
+[75.236431] (-) TimerEvent: {}
+[75.337279] (-) TimerEvent: {}
+[75.437831] (-) TimerEvent: {}
+[75.538444] (-) TimerEvent: {}
+[75.639235] (-) TimerEvent: {}
+[75.739848] (-) TimerEvent: {}
+[75.840716] (-) TimerEvent: {}
+[75.941201] (-) TimerEvent: {}
+[76.041670] (-) TimerEvent: {}
+[76.142376] (-) TimerEvent: {}
+[76.242975] (-) TimerEvent: {}
+[76.343547] (-) TimerEvent: {}
+[76.444133] (-) TimerEvent: {}
+[76.544722] (-) TimerEvent: {}
+[76.645180] (-) TimerEvent: {}
+[76.745763] (-) TimerEvent: {}
+[76.846299] (-) TimerEvent: {}
+[76.946728] (-) TimerEvent: {}
+[77.047253] (-) TimerEvent: {}
+[77.147706] (-) TimerEvent: {}
+[77.248364] (-) TimerEvent: {}
+[77.348900] (-) TimerEvent: {}
+[77.449374] (-) TimerEvent: {}
+[77.549806] (-) TimerEvent: {}
+[77.650236] (-) TimerEvent: {}
+[77.750680] (-) TimerEvent: {}
+[77.851170] (-) TimerEvent: {}
+[77.951586] (-) TimerEvent: {}
+[78.052073] (-) TimerEvent: {}
+[78.152741] (-) TimerEvent: {}
+[78.253254] (-) TimerEvent: {}
+[78.353849] (-) TimerEvent: {}
+[78.454380] (-) TimerEvent: {}
+[78.554965] (-) TimerEvent: {}
+[78.655548] (-) TimerEvent: {}
+[78.756112] (-) TimerEvent: {}
+[78.856527] (-) TimerEvent: {}
+[78.956905] (-) TimerEvent: {}
+[79.057314] (-) TimerEvent: {}
+[79.157833] (-) TimerEvent: {}
+[79.258539] (-) TimerEvent: {}
+[79.358970] (-) TimerEvent: {}
+[79.459464] (-) TimerEvent: {}
+[79.560075] (-) TimerEvent: {}
+[79.660647] (-) TimerEvent: {}
+[79.761161] (-) TimerEvent: {}
+[79.861773] (-) TimerEvent: {}
+[79.962276] (-) TimerEvent: {}
+[80.062801] (-) TimerEvent: {}
+[80.163295] (-) TimerEvent: {}
+[80.263736] (-) TimerEvent: {}
+[80.364169] (-) TimerEvent: {}
+[80.464916] (-) TimerEvent: {}
+[80.565349] (-) TimerEvent: {}
+[80.665808] (-) TimerEvent: {}
+[80.766322] (-) TimerEvent: {}
+[80.866855] (-) TimerEvent: {}
+[80.967308] (-) TimerEvent: {}
+[81.067765] (-) TimerEvent: {}
+[81.168191] (-) TimerEvent: {}
+[81.268824] (-) TimerEvent: {}
+[81.369375] (-) TimerEvent: {}
+[81.469970] (-) TimerEvent: {}
+[81.570475] (-) TimerEvent: {}
+[81.670898] (-) TimerEvent: {}
+[81.771652] (-) TimerEvent: {}
+[81.872015] (-) TimerEvent: {}
+[81.972429] (-) TimerEvent: {}
+[82.072937] (-) TimerEvent: {}
+[82.173575] (-) TimerEvent: {}
+[82.274325] (-) TimerEvent: {}
+[82.374913] (-) TimerEvent: {}
+[82.475391] (-) TimerEvent: {}
+[82.575883] (-) TimerEvent: {}
+[82.676611] (-) TimerEvent: {}
+[82.777112] (-) TimerEvent: {}
+[82.877596] (-) TimerEvent: {}
+[82.978154] (-) TimerEvent: {}
+[83.078714] (-) TimerEvent: {}
+[83.179269] (-) TimerEvent: {}
+[83.279841] (-) TimerEvent: {}
+[83.380477] (-) TimerEvent: {}
+[83.481033] (-) TimerEvent: {}
+[83.581537] (-) TimerEvent: {}
+[83.682054] (-) TimerEvent: {}
+[83.782757] (-) TimerEvent: {}
+[83.883309] (-) TimerEvent: {}
+[83.983800] (-) TimerEvent: {}
+[84.084327] (-) TimerEvent: {}
+[84.184869] (-) TimerEvent: {}
+[84.285802] (-) TimerEvent: {}
+[84.387263] (-) TimerEvent: {}
+[84.487946] (-) TimerEvent: {}
+[84.588469] (-) TimerEvent: {}
+[84.688845] (-) TimerEvent: {}
+[84.789391] (-) TimerEvent: {}
+[84.889816] (-) TimerEvent: {}
+[84.990419] (-) TimerEvent: {}
+[85.090821] (-) TimerEvent: {}
+[85.191289] (-) TimerEvent: {}
+[85.291835] (-) TimerEvent: {}
+[85.392381] (-) TimerEvent: {}
+[85.492856] (-) TimerEvent: {}
+[85.593301] (-) TimerEvent: {}
+[85.693862] (-) TimerEvent: {}
+[85.794347] (-) TimerEvent: {}
+[85.894671] (-) TimerEvent: {}
+[85.995035] (-) TimerEvent: {}
+[86.095401] (-) TimerEvent: {}
+[86.195820] (-) TimerEvent: {}
+[86.296341] (-) TimerEvent: {}
+[86.397108] (-) TimerEvent: {}
+[86.497687] (-) TimerEvent: {}
+[86.598111] (-) TimerEvent: {}
+[86.698538] (-) TimerEvent: {}
+[86.798955] (-) TimerEvent: {}
+[86.899423] (-) TimerEvent: {}
+[86.999949] (-) TimerEvent: {}
+[87.100831] (-) TimerEvent: {}
+[87.201307] (-) TimerEvent: {}
+[87.301827] (-) TimerEvent: {}
+[87.402209] (-) TimerEvent: {}
+[87.502589] (-) TimerEvent: {}
+[87.602959] (-) TimerEvent: {}
+[87.703403] (-) TimerEvent: {}
+[87.804097] (-) TimerEvent: {}
+[87.904622] (-) TimerEvent: {}
+[88.005000] (-) TimerEvent: {}
+[88.105429] (-) TimerEvent: {}
+[88.205990] (-) TimerEvent: {}
+[88.306573] (-) TimerEvent: {}
+[88.406986] (-) TimerEvent: {}
+[88.507424] (-) TimerEvent: {}
+[88.607821] (-) TimerEvent: {}
+[88.708375] (-) TimerEvent: {}
+[88.808922] (-) TimerEvent: {}
+[88.909407] (-) TimerEvent: {}
+[89.009993] (-) TimerEvent: {}
+[89.110506] (-) TimerEvent: {}
+[89.210973] (-) TimerEvent: {}
+[89.311401] (-) TimerEvent: {}
+[89.411872] (-) TimerEvent: {}
+[89.512299] (-) TimerEvent: {}
+[89.612765] (-) TimerEvent: {}
+[89.713201] (-) TimerEvent: {}
+[89.813749] (-) TimerEvent: {}
+[89.914158] (-) TimerEvent: {}
+[90.014751] (-) TimerEvent: {}
+[90.115243] (-) TimerEvent: {}
+[90.215807] (-) TimerEvent: {}
+[90.316460] (-) TimerEvent: {}
+[90.417054] (-) TimerEvent: {}
+[90.517619] (-) TimerEvent: {}
+[90.618160] (-) TimerEvent: {}
+[90.718774] (-) TimerEvent: {}
+[90.819304] (-) TimerEvent: {}
+[90.919888] (-) TimerEvent: {}
+[91.020417] (-) TimerEvent: {}
+[91.120938] (-) TimerEvent: {}
+[91.221567] (-) TimerEvent: {}
+[91.322346] (-) TimerEvent: {}
+[91.422749] (-) TimerEvent: {}
+[91.523217] (-) TimerEvent: {}
+[91.623836] (-) TimerEvent: {}
+[91.651318] (thruster_manager) StdoutLine: {'line': b'[100%] \x1b[32m\x1b[1mLinking CXX executable publish_wrenches\x1b[0m\n'}
+[91.724119] (-) TimerEvent: {}
+[91.824735] (-) TimerEvent: {}
+[91.925333] (-) TimerEvent: {}
+[92.025972] (-) TimerEvent: {}
+[92.126454] (-) TimerEvent: {}
+[92.226959] (-) TimerEvent: {}
+[92.327555] (-) TimerEvent: {}
+[92.428137] (-) TimerEvent: {}
+[92.528774] (-) TimerEvent: {}
+[92.629414] (-) TimerEvent: {}
+[92.730071] (-) TimerEvent: {}
+[92.830838] (-) TimerEvent: {}
+[92.931458] (-) TimerEvent: {}
+[93.032153] (-) TimerEvent: {}
+[93.132847] (-) TimerEvent: {}
+[93.233408] (-) TimerEvent: {}
+[93.333985] (-) TimerEvent: {}
+[93.434668] (-) TimerEvent: {}
+[93.535247] (-) TimerEvent: {}
+[93.635872] (-) TimerEvent: {}
+[93.736313] (-) TimerEvent: {}
+[93.746131] (thruster_manager) StdoutLine: {'line': b'[100%] Built target publish_wrenches\n'}
+[93.761103] (thruster_manager) CommandEnded: {'returncode': 0}
+[93.833807] (thruster_manager) JobProgress: {'identifier': 'thruster_manager', 'progress': 'install'}
+[93.836561] (-) TimerEvent: {}
+[93.850988] (thruster_manager) Command: {'cmd': ['/usr/bin/cmake', '--install', '/home/grape/2023-2024/ros2_ws/build/thruster_manager'], 'cwd': '/home/grape/2023-2024/ros2_ws/build/thruster_manager', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'grape'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/grape/2023-2024/ros2_ws/install/state_estimation/lib:/home/grape/isopod-explorer/ros2_ws/install/auv_control/lib:/home/grape/isopod-explorer/ros2_ws/install/thruster_manager/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('WT_PROFILE_ID', '{e5a83caa-4c73-52b3-ae6b-bc438d721ef9}'), ('MOTD_SHOWN', 'update-motd'), ('HOME', '/home/grape'), ('OLDPWD', '/home/grape/2023-2024/ros2_ws/src'), ('ROS_PYTHON_VERSION', '3'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('WSL_DISTRO_NAME', 'Ubuntu-22.04'), ('_colcon_cd_root', '/opt/ros/humble/'), ('QT_QPA_PLATFORMTHEME', 'qt5ct'), ('WAYLAND_DISPLAY', 'wayland-0'), ('COLCON_PREFIX_PATH', '/home/grape/2023-2024/ros2_ws/install:/home/grape/isopod-explorer/ros2_ws/install'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'grape'), ('NAME', 'My-Peach-Farm'), ('WSL_INTEROP', '/run/WSL/421_interop'), ('PULSE_SERVER', 'unix:/mnt/wslg/PulseServer'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('TERM', 'xterm-256color'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/usr/lib/wsl/lib:/mnt/c/Program Files (x86)/NVIDIA Corporation/PhysX/Common:/mnt/c/Windows/system32:/mnt/c/Windows:/mnt/c/Windows/System32/Wbem:/mnt/c/Windows/System32/WindowsPowerShell/v1.0/:/mnt/c/Program Files/Microsoft SQL Server/Client SDK/ODBC/170/Tools/Binn/:/mnt/c/Program Files (x86)/Microsoft SQL Server/150/Tools/Binn/:/mnt/c/Program Files/Microsoft SQL Server/150/Tools/Binn/:/mnt/c/Program Files/Microsoft SQL Server/150/DTS/Binn/:/mnt/c/Program Files (x86)/Windows Kits/8.1/Windows Performance Toolkit/:/mnt/c/Program Files/MATLAB/R2023a/bin:/mnt/c/Program Files/Git/cmd:/mnt/c/AMD:/mnt/c/Program Files/Microsoft VS Code/bin:/mnt/c/Program Files/usbipd-win/:/mnt/c/Program Files/Docker/Docker/resources/bin:/mnt/c/ProgramData/chocolatey/choco.exe/bin:/mnt/c/Program Files/dotnet/:/mnt/c/Users/aznmo/AppData/Local/Programs/Python/Python312/Scripts/:/mnt/c/Users/aznmo/AppData/Local/Programs/Python/Python312/:/mnt/c/Users/aznmo/AppData/Local/Programs/Python/Launcher/:/mnt/c/Users/aznmo/AppData/Local/Microsoft/WindowsApps:/mnt/c/Users/aznmo/AppData/Local/GitHubDesktop/bin:/mnt/c/AMD:/mnt/c/ProgramData/aznmo/GitHubDesktop/bin:/snap/bin'), ('WT_SESSION', '525f8b65-830d-4557-b547-eca40966b50d'), ('XDG_RUNTIME_DIR', '/run/user/1000/'), ('DISPLAY', ':0'), ('LANG', 'en_US.UTF-8'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('AMENT_PREFIX_PATH', '/home/grape/2023-2024/ros2_ws/install/state_estimation:/home/grape/isopod-explorer/ros2_ws/install/auv_control:/home/grape/isopod-explorer/ros2_ws/install/thruster_manager:/home/grape/isopod-explorer/ros2_ws/install/pose_to_tf:/home/grape/isopod-explorer/ros2_ws/install/bluerov2_ignition:/home/grape/isopod-explorer/ros2_ws/install/bluerov2_description:/home/grape/isopod-explorer/ros2_ws/install/bluerov2_control:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('PWD', '/home/grape/2023-2024/ros2_ws/build/thruster_manager'), ('XDG_DATA_DIRS', '/usr/local/share:/usr/share:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/grape/isopod-explorer/ros2_ws/install/auv_control/local/lib/python3.10/dist-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('WSL2_GUI_APPS_ENABLED', '1'), ('HOSTTYPE', 'x86_64'), ('CMAKE_PREFIX_PATH', '/home/grape/2023-2024/ros2_ws/install/state_estimation:/home/grape/isopod-explorer/ros2_ws/install/auv_control:/home/grape/isopod-explorer/ros2_ws/install/thruster_manager:/home/grape/isopod-explorer/ros2_ws/install/pose_to_tf:/home/grape/isopod-explorer/ros2_ws/install/bluerov2_ignition:/home/grape/isopod-explorer/ros2_ws/install/bluerov2_description:/home/grape/isopod-explorer/ros2_ws/install/bluerov2_control:/opt/ros/humble'), ('WSLENV', 'WT_SESSION:WT_PROFILE_ID:')]), 'shell': False}
+[93.864863] (thruster_manager) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[93.866212] (thruster_manager) StdoutLine: {'line': b'-- Installing: /home/grape/2023-2024/ros2_ws/install/thruster_manager/share/thruster_manager/environment/library_path.sh\n'}
+[93.866670] (thruster_manager) StdoutLine: {'line': b'-- Installing: /home/grape/2023-2024/ros2_ws/install/thruster_manager/share/thruster_manager/environment/library_path.dsv\n'}
+[93.867548] (thruster_manager) StdoutLine: {'line': b'-- Installing: /home/grape/2023-2024/ros2_ws/install/thruster_manager/lib/thruster_manager/thruster_manager_node\n'}
+[93.868964] (thruster_manager) StdoutLine: {'line': b'-- Set runtime path of "/home/grape/2023-2024/ros2_ws/install/thruster_manager/lib/thruster_manager/thruster_manager_node" to ""\n'}
+[93.869195] (thruster_manager) StdoutLine: {'line': b'-- Installing: /home/grape/2023-2024/ros2_ws/install/thruster_manager/lib/libthruster_manager.so\n'}
+[93.904308] (thruster_manager) StdoutLine: {'line': b'-- Set runtime path of "/home/grape/2023-2024/ros2_ws/install/thruster_manager/lib/libthruster_manager.so" to ""\n'}
+[93.904727] (thruster_manager) StdoutLine: {'line': b'-- Installing: /home/grape/2023-2024/ros2_ws/install/thruster_manager/lib/thruster_manager/publish_wrenches\n'}
+[93.918918] (thruster_manager) StdoutLine: {'line': b'-- Set runtime path of "/home/grape/2023-2024/ros2_ws/install/thruster_manager/lib/thruster_manager/publish_wrenches" to ""\n'}
+[93.919541] (thruster_manager) StdoutLine: {'line': b'-- Installing: /home/grape/2023-2024/ros2_ws/install/thruster_manager/include\n'}
+[93.919716] (thruster_manager) StdoutLine: {'line': b'-- Installing: /home/grape/2023-2024/ros2_ws/install/thruster_manager/include/thruster_manager\n'}
+[93.920232] (thruster_manager) StdoutLine: {'line': b'-- Installing: /home/grape/2023-2024/ros2_ws/install/thruster_manager/include/thruster_manager/model_parser.h\n'}
+[93.920705] (thruster_manager) StdoutLine: {'line': b'-- Installing: /home/grape/2023-2024/ros2_ws/install/thruster_manager/include/thruster_manager/thruster_link.h\n'}
+[93.920995] (thruster_manager) StdoutLine: {'line': b'-- Installing: /home/grape/2023-2024/ros2_ws/install/thruster_manager/include/thruster_manager/thruster_manager.h\n'}
+[93.922198] (thruster_manager) StdoutLine: {'line': b'-- Installing: /home/grape/2023-2024/ros2_ws/install/thruster_manager/include/thruster_manager/thruster_manager_node.h\n'}
+[93.922716] (thruster_manager) StdoutLine: {'line': b'-- Up-to-date: /home/grape/2023-2024/ros2_ws/install/thruster_manager/include/thruster_manager\n'}
+[93.922931] (thruster_manager) StdoutLine: {'line': b'-- Installing: /home/grape/2023-2024/ros2_ws/install/thruster_manager/include/thruster_manager/thruster_manager\n'}
+[93.923306] (thruster_manager) StdoutLine: {'line': b'-- Installing: /home/grape/2023-2024/ros2_ws/install/thruster_manager/include/thruster_manager/thruster_manager/model_parser.h\n'}
+[93.923989] (thruster_manager) StdoutLine: {'line': b'-- Installing: /home/grape/2023-2024/ros2_ws/install/thruster_manager/include/thruster_manager/thruster_manager/thruster_link.h\n'}
+[93.924692] (thruster_manager) StdoutLine: {'line': b'-- Installing: /home/grape/2023-2024/ros2_ws/install/thruster_manager/include/thruster_manager/thruster_manager/thruster_manager.h\n'}
+[93.925289] (thruster_manager) StdoutLine: {'line': b'-- Installing: /home/grape/2023-2024/ros2_ws/install/thruster_manager/include/thruster_manager/thruster_manager/thruster_manager_node.h\n'}
+[93.925784] (thruster_manager) StdoutLine: {'line': b'-- Up-to-date: /home/grape/2023-2024/ros2_ws/install/thruster_manager/share/thruster_manager/environment/library_path.sh\n'}
+[93.925957] (thruster_manager) StdoutLine: {'line': b'-- Up-to-date: /home/grape/2023-2024/ros2_ws/install/thruster_manager/share/thruster_manager/environment/library_path.dsv\n'}
+[93.926461] (thruster_manager) StdoutLine: {'line': b'-- Installing: /home/grape/2023-2024/ros2_ws/install/thruster_manager/share/ament_index/resource_index/package_run_dependencies/thruster_manager\n'}
+[93.926861] (thruster_manager) StdoutLine: {'line': b'-- Installing: /home/grape/2023-2024/ros2_ws/install/thruster_manager/share/ament_index/resource_index/parent_prefix_path/thruster_manager\n'}
+[93.927229] (thruster_manager) StdoutLine: {'line': b'-- Installing: /home/grape/2023-2024/ros2_ws/install/thruster_manager/share/thruster_manager/environment/ament_prefix_path.sh\n'}
+[93.927728] (thruster_manager) StdoutLine: {'line': b'-- Installing: /home/grape/2023-2024/ros2_ws/install/thruster_manager/share/thruster_manager/environment/ament_prefix_path.dsv\n'}
+[93.927945] (thruster_manager) StdoutLine: {'line': b'-- Installing: /home/grape/2023-2024/ros2_ws/install/thruster_manager/share/thruster_manager/environment/path.sh\n'}
+[93.928403] (thruster_manager) StdoutLine: {'line': b'-- Installing: /home/grape/2023-2024/ros2_ws/install/thruster_manager/share/thruster_manager/environment/path.dsv\n'}
+[93.928981] (thruster_manager) StdoutLine: {'line': b'-- Installing: /home/grape/2023-2024/ros2_ws/install/thruster_manager/share/thruster_manager/local_setup.bash\n'}
+[93.929151] (thruster_manager) StdoutLine: {'line': b'-- Installing: /home/grape/2023-2024/ros2_ws/install/thruster_manager/share/thruster_manager/local_setup.sh\n'}
+[93.929629] (thruster_manager) StdoutLine: {'line': b'-- Installing: /home/grape/2023-2024/ros2_ws/install/thruster_manager/share/thruster_manager/local_setup.zsh\n'}
+[93.930116] (thruster_manager) StdoutLine: {'line': b'-- Installing: /home/grape/2023-2024/ros2_ws/install/thruster_manager/share/thruster_manager/local_setup.dsv\n'}
+[93.930318] (thruster_manager) StdoutLine: {'line': b'-- Installing: /home/grape/2023-2024/ros2_ws/install/thruster_manager/share/thruster_manager/package.dsv\n'}
+[93.930654] (thruster_manager) StdoutLine: {'line': b'-- Installing: /home/grape/2023-2024/ros2_ws/install/thruster_manager/share/ament_index/resource_index/packages/thruster_manager\n'}
+[93.931260] (thruster_manager) StdoutLine: {'line': b'-- Installing: /home/grape/2023-2024/ros2_ws/install/thruster_manager/share/ament_index/resource_index/rclcpp_components/thruster_manager\n'}
+[93.931878] (thruster_manager) StdoutLine: {'line': b'-- Installing: /home/grape/2023-2024/ros2_ws/install/thruster_manager/share/thruster_manager/cmake/ament_cmake_export_libraries-extras.cmake\n'}
+[93.932245] (thruster_manager) StdoutLine: {'line': b'-- Installing: /home/grape/2023-2024/ros2_ws/install/thruster_manager/share/thruster_manager/cmake/ament_cmake_export_include_directories-extras.cmake\n'}
+[93.932866] (thruster_manager) StdoutLine: {'line': b'-- Installing: /home/grape/2023-2024/ros2_ws/install/thruster_manager/share/thruster_manager/cmake/ament_cmake_export_dependencies-extras.cmake\n'}
+[93.933095] (thruster_manager) StdoutLine: {'line': b'-- Installing: /home/grape/2023-2024/ros2_ws/install/thruster_manager/share/thruster_manager/cmake/thruster_managerConfig.cmake\n'}
+[93.933240] (thruster_manager) StdoutLine: {'line': b'-- Installing: /home/grape/2023-2024/ros2_ws/install/thruster_manager/share/thruster_manager/cmake/thruster_managerConfig-version.cmake\n'}
+[93.933372] (thruster_manager) StdoutLine: {'line': b'-- Installing: /home/grape/2023-2024/ros2_ws/install/thruster_manager/share/thruster_manager/package.xml\n'}
+[93.937255] (thruster_manager) CommandEnded: {'returncode': 0}
+[93.937983] (-) TimerEvent: {}
+[94.039080] (-) TimerEvent: {}
+[94.140131] (-) TimerEvent: {}
+[94.240719] (-) TimerEvent: {}
+[94.341393] (-) TimerEvent: {}
+[94.356041] (thruster_manager) JobEnded: {'identifier': 'thruster_manager', 'rc': 0}
+[94.357899] (-) EventReactorShutdown: {}

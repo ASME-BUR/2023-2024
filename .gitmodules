@@ -10,3 +10,6 @@
 [submodule "ros2_ws/src/--force"]
 	path = ros2_ws/src/--force
 	url = https://github.com/CentraleNantesROV/auv_control.git
+[submodule "ros2_ws/src/auv_control"]
+	path = ros2_ws/src/auv_control
+	url = https://github.com/CentraleNantesROV/auv_control.git

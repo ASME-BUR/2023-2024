@@ -4,9 +4,12 @@ JoyCommand::JoyCommand() : rclcpp::Node("joy_command")
 {
     this->declare_parameter("pub_topic", "joy_command/command");
     this->declare_parameter("sub_topic", "joy");
+    this->declare_parameter("pose_topic", "pose");
     pub_ = this->create_publisher<bur_rov_msgs::msg::Command>(this->get_parameter("pub_topic").as_string(), 10);
     sub_ = this->create_subscription<sensor_msgs::msg::Joy>(this->get_parameter("sub_topic").as_string(), 10,
                                                             bind(&JoyCommand::joy_callback, this, placeholders::_1));
+    poseSub = this->create_subscription<geometry_msgs::msg::Pose>(this->get_parameter("pose_topic").as_string(), 10,
+                                                            bind(&JoyCommand::pose_callback, this, placeholders::_1));
 }
 
 void JoyCommand::joy_callback(const sensor_msgs::msg::Joy::SharedPtr msg)
@@ -22,6 +25,11 @@ void JoyCommand::joy_callback(const sensor_msgs::msg::Joy::SharedPtr msg)
         output.buttons.push_back(msg->buttons[i]);
     }
     pub_->publish(output);
+}
+
+void JoyCommand::pose_callback(const geometry_msgs::msg::Pose::SharedPtr msg)
+{
+    this->pose = *msg;
 }
 
 int main(int argc, char *argv[])

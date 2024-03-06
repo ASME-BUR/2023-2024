@@ -14,10 +14,14 @@ find_package(rclcpp REQUIRED)
 find_package(sensor_msgs REQUIRED)
 find_package(bur_rov_msgs REQUIRED)
 
+find_package(joy REQUIRED)
+find_package(state_estimation REQUIRED)
+find_package(controller REQUIRED)
+
 include_directories(include/${PROJECT_NAME})
 
 add_executable(joy_command src/joy_command.cpp)
-ament_target_dependencies(joy_command rclcpp sensor_msgs bur_rov_msgs)
+ament_target_dependencies(joy_command rclcpp sensor_msgs bur_rov_msgs joy state_estimation controller)
 
 install(TARGETS joy_command DESTINATION lib/${PROJECT_NAME})
 

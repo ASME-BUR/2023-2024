@@ -91,12 +91,12 @@ void imu_callback()
 void setup()
 {
   // Configure serial transport
-  Serial.begin(115200);
   set_microros_serial_transports(Serial);
+  Serial.begin(115200);
 
   // IMU Initialization
   IMU = new MTi(ADDRESS, DRDY);
-  Wire1.begin();         // Initialize Wire1 library for I2C communication
+  Wire1.begin(); // Initialize Wire1 library for I2C communication
   pinMode(DRDY, INPUT);
   // pinMode(DRDY, INPUT);
   delay(1000);
@@ -108,9 +108,9 @@ void setup()
   }
   else
   {
-    IMU->goToConfig(true);        // Switch device to Config mode
-    IMU->requestDeviceInfo(true); // Request the device's product code and firmware version
-    IMU->configureOutputs(1, true);  // Configure the device's outputs based on its functionality. See MTi::configureOutputs() for more alternative output configurations.
+    IMU->goToConfig(true);          // Switch device to Config mode
+    IMU->requestDeviceInfo(true);   // Request the device's product code and firmware version
+    IMU->configureOutputs(1, true); // Configure the device's outputs based on its functionality. See MTi::configureOutputs() for more alternative output configurations.
     IMU->requestOutputs(true);
     IMU->requestOutputs(true);
     // attachInterrupt(DRDY, imu_callback, CHANGE);

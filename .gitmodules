@@ -5,3 +5,11 @@
 [submodule "ros2_ws/src/arduino/lib/Xsens_MTi_I2C"]
 	path = ros2_ws/src/arduino/lib/Xsens_MTi_I2C
 	url = https://github.com/ASME-BUR/Xsens_MTi_I2C.git
+[submodule "ros2_ws/src/uros/micro_ros_msgs"]
+	path = ros2_ws/src/uros/micro_ros_msgs
+	url = https://github.com/micro-ROS/micro_ros_msgs.git
+	branch = humble
+[submodule "ros2_ws/src/uros/micro-ROS-Agent"]
+	path = ros2_ws/src/uros/micro-ROS-Agent
+	url = https://github.com/micro-ROS/micro-ROS-Agent.git
+	branch = humble

@@ -1,0 +1,7 @@
+/home/peach/2023-2024/ros2_ws/build/micro_ros_agent/agent/src/xrceagent-build/CMakeFiles/microxrcedds_agent.dir
+/home/peach/2023-2024/ros2_ws/build/micro_ros_agent/agent/src/xrceagent-build/CMakeFiles/edit_cache.dir
+/home/peach/2023-2024/ros2_ws/build/micro_ros_agent/agent/src/xrceagent-build/CMakeFiles/rebuild_cache.dir
+/home/peach/2023-2024/ros2_ws/build/micro_ros_agent/agent/src/xrceagent-build/CMakeFiles/list_install_components.dir
+/home/peach/2023-2024/ros2_ws/build/micro_ros_agent/agent/src/xrceagent-build/CMakeFiles/install.dir
+/home/peach/2023-2024/ros2_ws/build/micro_ros_agent/agent/src/xrceagent-build/CMakeFiles/install/local.dir
+/home/peach/2023-2024/ros2_ws/build/micro_ros_agent/agent/src/xrceagent-build/CMakeFiles/install/strip.dir

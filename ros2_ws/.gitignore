@@ -1,9 +1,15 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 install/
 build/
 log/
 .vscode/
 src/.vscode
+=======
+build/ 
+install/ 
+log/
+>>>>>>> pid-controller
 =======
 build/ 
 install/ 

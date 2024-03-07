@@ -11,7 +11,7 @@ bool Xbus::read(uint8_t address, bool verbose)
   if (notificationSize)
   { // New notification message available to be read
     readPipeNotif(address, verbose);
-    parseNotification(datanotif);
+    parseNotification(datanotif, verbose);
   }
   if (measurementSize)
   { // New measurement packet available to be read
@@ -31,7 +31,7 @@ void Xbus::readPipeStatus(uint8_t address, bool verbose)
   Wire1.write(XSENS_STATUS_PIPE);
   Wire1.endTransmission(false);
 
-  Wire1.requestFrom(address, uint8_t(4));
+  Wire1.requestFrom(address, uint8_t(4), false);
   if (Wire1.available() > 0)
   {
     for (int i = 0; i < 4; i++)
@@ -56,10 +56,10 @@ void Xbus::readPipeStatus(uint8_t address, bool verbose)
 void Xbus::readPipeNotif(uint8_t address, bool verbose)
 {
   Wire1.beginTransmission(address);
-  Wire1.write(XSENS_NOTIF_PIPE);
+  Wire1.write((int)XSENS_NOTIF_PIPE);
   Wire1.endTransmission(false);
 
-  Wire1.requestFrom((int)address, (int)notificationSize);
+  Wire1.requestFrom((int)address, (int)notificationSize, false);
   if (Wire1.available() > 0)
   {
     for (uint16_t i = 0; i < notificationSize; i++)
@@ -81,21 +81,42 @@ void Xbus::readPipeNotif(uint8_t address, bool verbose)
 
 void Xbus::readPipeMeas(uint8_t address, bool verbose)
 {
-  Wire1.beginTransmission(address);
-  Wire1.write(XSENS_MEAS_PIPE);
-  Wire1.endTransmission(false);
-  uint16_t remainder = measurementSize % 32;
-  for (uint16_t i = 0; i < measurementSize / 32; i++)
-  {
-    Wire1.requestFrom((int)address, 32);
+  // Use this function if you cant modify the wire buffer
+  /*
+    uint8_t remainder = measurementSize % 32;
+    uint8_t iterations = (measurementSize - remainder) / 32;
+    for (uint8_t j = 0; j < iterations; j++)
+    {
+      Wire1.beginTransmission(address);
+      Wire1.write((int)XSENS_MEAS_PIPE);
+      Wire1.endTransmission(false);
+      Wire1.requestFrom((int)address, (int)32, (int) false);
+      if (Wire1.available() > 0)
+      {
+        for (uint16_t i = 0; i < 32; i++)
+        {
+          datameas[j * 32 + i] = Wire1.read();
+          if (verbose)
+          {
+            Serial.print(datameas[j * 32 + i], HEX);
+            Serial.print(" ");
+          }
+        }
+      }
+      Wire1.endTransmission(true);
+    }
+    Wire1.beginTransmission(address);
+    Wire1.write((int)XSENS_MEAS_PIPE);
+    Wire1.endTransmission(false);
+    Wire1.requestFrom((int)address, (int)remainder, (int) false);
     if (Wire1.available() > 0)
     {
-      for (uint16_t j = 0; j < 32; j++)
+      for (uint16_t i = 0; i < remainder; i++)
       {
-        datameas[i*32+j] = Wire1.read();
+        datameas[iterations * 32 + i] = Wire1.read();
         if (verbose)
         {
-          Serial.print(datameas[i*32+j], HEX);
+          Serial.print(datameas[iterations * 32 + i], HEX);
           Serial.print(" ");
         }
       }
@@ -104,17 +125,22 @@ void Xbus::readPipeMeas(uint8_t address, bool verbose)
         Serial.println();
       }
     }
-  }
-  Wire1.requestFrom((int)address, remainder);
+    Wire1.endTransmission(true);
+  */
+
+  // Increase wire buffer to 256
+  Wire1.beginTransmission(address);
+  Wire1.write((int)XSENS_MEAS_PIPE);
+  Wire1.endTransmission(false);
+  Wire1.requestFrom((int)address, (int)measurementSize, (int)false);
   if (Wire1.available() > 0)
   {
-    int start = measurementSize - remainder - 1;
-    for (uint16_t i = 0; i < remainder; i++)
+    for (uint16_t i = 0; i < measurementSize; i++)
     {
-      datameas[start + i] = Wire1.read();
+      datameas[i] = Wire1.read();
       if (verbose)
       {
-        Serial.print(datameas[start + i], HEX);
+        Serial.print(datameas[i], HEX);
         Serial.print(" ");
       }
     }
@@ -123,7 +149,6 @@ void Xbus::readPipeMeas(uint8_t address, bool verbose)
       Serial.println();
     }
   }
-
   Wire1.endTransmission(true);
 }
 
@@ -166,77 +191,104 @@ void Xbus::parseMTData2(uint8_t *data, uint8_t datalength)
   }
 }
 
-void Xbus::parseNotification(uint8_t *notif)
+void Xbus::parseNotification(uint8_t *notif, bool verbose)
 { // Parse the most common notification messages
   uint8_t notifID = notif[0];
   switch (notifID)
   {
   case (uint8_t)MesID::WAKEUP:
   {
-    Serial.println("Received WakeUp message.");
+    if (verbose)
+    {
+      Serial.println("Received WakeUp message.");
+    }
     break;
   }
   case (uint8_t)MesID::ERROR:
   {
-    Serial.print("Received an error with code: ");
-    Serial.println(notif[2]);
+    if (verbose)
+    {
+      Serial.print("Received an error with code: ");
+      Serial.println(notif[2]);
+    }
     break;
   }
   case (uint8_t)MesID::WARNING:
   {
-    uint32_t warn = (uint32_t)notif[5] | ((uint32_t)notif[4] << 8);
-    Serial.print("Received a warning with code: ");
-    Serial.println(warn);
+    if (verbose)
+    {
+      uint32_t warn = (uint32_t)notif[5] | ((uint32_t)notif[4] << 8);
+      Serial.print("Received a warning with code: ");
+      Serial.println(warn);
+    }
     break;
   }
   case (uint8_t)MesID::PRODUCTCODE:
   {
-    Serial.print("Product code is: ");
-    for (int i = 2; i < notificationSize - 1; i++)
+    if (verbose)
     {
-      Serial.print(char(notif[i]));
+      Serial.print("Product code is: ");
+      for (int i = 2; i < notificationSize - 1; i++)
+      {
+        Serial.print(char(notif[i]));
+      }
+      Serial.println();
+      productCode = char(notif[6]); // Store the product code (MTi-#) for later usage
     }
-    Serial.println();
-    productCode = char(notif[6]); // Store the product code (MTi-#) for later usage
     break;
   }
   case (uint8_t)MesID::FIRMWAREREV:
   {
-    Serial.print("Firmware version is: ");
-    Serial.print(notif[2]);
-    Serial.print(".");
-    Serial.print(notif[3]);
-    Serial.print(".");
-    Serial.println(notif[4]);
+    if (verbose)
+    {
+      Serial.print("Firmware version is: ");
+      Serial.print(notif[2]);
+      Serial.print(".");
+      Serial.print(notif[3]);
+      Serial.print(".");
+      Serial.println(notif[4]);
+    }
     break;
   }
   case (uint8_t)MesID::GOTOCONFIGACK:
   {
-    Serial.println("Received GoToConfigACK.");
-    configState = true;
-    break;
+    if (verbose)
+    {
+      Serial.println("Received GoToConfigACK.");
+      configState = true;
+      break;
+    }
   }
   case (uint8_t)MesID::GOTOMEASUREMENTACK:
   {
-    Serial.println("Received GoToMeasurementACK.");
-    configState = false;
-    break;
+    if (verbose)
+    {
+      Serial.println("Received GoToMeasurementACK.");
+      configState = false;
+      break;
+    }
   }
   case (uint8_t)MesID::OUTPUTCONFIGURATION:
   {
-    Serial.println("Received SetOutputConfigurationACK.");
-    break;
+    if (verbose)
+    {
+      Serial.println("Received SetOutputConfigurationACK.");
+      break;
+    }
   }
   default:
   {
-    Serial.print("Received undefined notification: ");
-    for (int i = 0; i < notificationSize - 1; i++)
+    if (verbose)
     {
-      Serial.print(notif[i], HEX);
-      Serial.print(" ");
+      Serial.print("Received undefined notification: ");
+      for (int i = 0; i < notificationSize - 1; i++)
+      {
+        Serial.print(notif[i], HEX);
+        Serial.print(" ");
+      }
+      Serial.println();
+      break;
     }
-    Serial.println();
-    break;
   }
   }
 }

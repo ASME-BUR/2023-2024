@@ -43,7 +43,8 @@ void MTi::configureOutputs(uint16_t freq, bool verbose)
   uint8_t low = (uint8_t)(freq & 0x00FF);
   readMessages(); // Clear the measurement/notification pipes (without printing) before configuring.
   Serial.println("Configuring Acceleration, Rate of Turn, Quaternion, Mag FIeld at 100 Hz");
-  uint8_t outputConfig[] = {0xC0, 0x10, 0x40, 0x28, high, low, 0x80, 0x28, high, low, 0xC0, 0x28, high, low, 0x20, 0x18, high, low};
+  uint8_t outputConfig[] = {0xC0, 0x10, 0x40, 0x20, high, low, 0x80, 0x20, high, low, 0xC0, 0x20, high, low, 0x20, 0x10, high, low};
+  // uint8_t outputConfig[] = {0xC0, 0x04, 0x20, 0x14, high, low, 0x40, 0x24, high, low};
   sendMessage(outputConfig, sizeof(outputConfig), verbose);
   delay(100);
   readMessages();
@@ -137,7 +138,8 @@ void MTi::readMessages(bool verbose)
 { // read new messages until measurement/notification pipes are empty
   while (digitalRead(drdy_))
   {
-    xbus.read(address_, true);
+    // Serial.println("data ready");
+    xbus.read(address_, verbose);
   }
 }
 

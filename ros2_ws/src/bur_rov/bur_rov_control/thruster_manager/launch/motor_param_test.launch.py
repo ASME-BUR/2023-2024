@@ -1,0 +1,26 @@
+import os
+from ament_index_python.packages import get_package_share_directory
+from launch import LaunchDescription
+from launch_ros.actions import Node
+
+def generate_launch_description():
+    ld = LaunchDescription()
+
+    config = os.path.join(
+        get_package_share_directory('thruster_manager'),
+        'config',
+        'motor_force_config.yaml'
+        )
+        
+    node=Node(
+        package = 'thruster_manager',
+        name = 'thruster_manager',
+        executable = 'thruster_manager',
+        parameters = [config,
+                      {"wrench_sub_topic": "wrench"},
+                      {"cmd_sub_topic": "joy_command"}
+                      ]
+    )
+
+    ld.add_action(node)
+    return ld

@@ -1,0 +1,52 @@
+clc
+clear
+% Authored by Levi Cai
+% This calculates the mapping between force-torque to thruster allocations
+
+% This is just a place-holder script until this logic is implemented by ROS
+% tfs
+
+% Assume NED directions in local CoM frame
+% thruster locations (m) relative to CoM
+% Location of center of mass from vehicle origin
+CoM = [0.0 0.0 0.0];
+
+thruster_locations = [-1 0 -1;
+       -1 0.5 cosd(30);
+       -1 -0.5 cosd(30);];
+
+xyz = bsxfun(@plus, thruster_locations, -CoM);
+
+% thrust directions relative to CoM
+deg = 45;
+s = sind(deg);
+c = cosd(deg);
+f_uvw = [1 0 0;
+         1 0 0;
+         1 0 0;];
+     
+
+
+% Compute torques
+T_pqr = bsxfun(@cross, xyz', f_uvw');
+
+% Stack to get Force-Torque conversion matrix
+A = [f_uvw'; T_pqr];
+Ainv = pinv(A)
+
+% Save the matrix
+%writematrix(Ainv, 'Ainv.csv');
+
+%% Compute the max forces
+KGF2N = 9.80665;
+% Download cvx here: http://cvxr.com/cvx/download/
+cvx_begin
+    variables f(6) T(6) c
+    maximize(f(2)+f(6))
+    subject to
+        %f == [0;1;0;0;0;1]*c;
+        f <= 60.0;
+        f == A*T;
+        T >= -KGF2N*[4.1;4.1;4.1;4.1;4.1;4.1;];
+        T <= KGF2N*[5.1;5.1;5.1;5.1;5.1;5.1];
+cvx_end

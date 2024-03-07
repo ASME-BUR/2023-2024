@@ -1,0 +1,48 @@
+(kicad_sch (version 20230121) (generator eeschema)
+
+  (uuid 4356d3a6-6a00-447d-897e-473f60221539)
+
+  (paper "A4")
+
+  (lib_symbols
+  )
+
+
+  (sheet (at 33.02 111.76) (size 25.4 25.4) (fields_autoplaced)
+    (stroke (width 0.1524) (type solid))
+    (fill (color 0 0 0 0.0000))
+    (uuid c9760799-658d-4181-af96-8731ebbcaea9)
+    (property "Sheetname" "ADC and RPi Headers" (at 33.02 111.0484 0)
+      (effects (font (size 1.27 1.27)) (justify left bottom))
+    )
+    (property "Sheetfile" "adc.kicad_sch" (at 33.02 137.7446 0)
+      (effects (font (size 1.27 1.27)) (justify left top))
+    )
+    (instances
+      (project "hydrophone board"
+        (path "/4356d3a6-6a00-447d-897e-473f60221539" (page "2"))
+      )
+    )
+  )
+
+  (sheet (at 33.02 68.58) (size 25.4 27.94) (fields_autoplaced)
+    (stroke (width 0.1524) (type solid))
+    (fill (color 0 0 0 0.0000))
+    (uuid f560d530-135c-40dc-9144-4f9599a30f13)
+    (property "Sheetname" "Input Amp and Filter" (at 33.02 67.8684 0)
+      (effects (font (size 1.27 1.27)) (justify left bottom))
+    )
+    (property "Sheetfile" "untitled.kicad_sch" (at 33.02 97.1046 0)
+      (effects (font (size 1.27 1.27)) (justify left top))
+    )
+    (instances
+      (project "hydrophone board"
+        (path "/4356d3a6-6a00-447d-897e-473f60221539" (page "1"))
+      )
+    )
+  )
+
+  (sheet_instances
+    (path "/" (page "0"))
+  )
+)

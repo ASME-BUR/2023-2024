@@ -58,37 +58,6 @@ void error_loop()
   }
 }
 
-void imu_callback()
-{
-  // IMU->readMessages();
-  // // IMU->readMessages(); // Read new data messages
-  // // IMU->printData();    //...and print them to the serial monitor (Ctrl+Shift+M)
-  // // msg.header.stamp = ;
-  // imu_msg.linear_acceleration.x = (double)IMU->getAcceleration()[0];
-  // imu_msg.linear_acceleration.y = (double)IMU->getAcceleration()[1];
-  // imu_msg.linear_acceleration.z = (double)IMU->getAcceleration()[2];
-  // imu_msg.orientation.w = (double)IMU->getQuat()[0];
-  // imu_msg.orientation.x = (double)IMU->getQuat()[0];
-  // imu_msg.orientation.y = (double)IMU->getQuat()[0];
-  // imu_msg.orientation.z = (double)IMU->getQuat()[0];
-  // imu_msg.angular_velocity.x = (double)IMU->getRateOfTurn()[0];
-  // imu_msg.angular_velocity.y = (double)IMU->getRateOfTurn()[0];
-  // imu_msg.angular_velocity.z = (double)IMU->getRateOfTurn()[0];
-
-  // // Set covariance values
-  // double linear_acceleration_covariance[9] = {0, 0, 0, 0, 0, 0, 0, 0, 0};
-  // double angular_velocity_covariance[9] = {0, 0, 0, 0, 0, 0, 0, 0, 0};
-  // double orientation_covariance[9] = {0, 0, 0, 0, 0, 0, 0, 0, 0};
-  // for (int i = 0; i < 9; i++)
-  // {
-  //   imu_msg.linear_acceleration_covariance[i] = linear_acceleration_covariance[i];
-  //   imu_msg.angular_velocity_covariance[i] = angular_velocity_covariance[i];
-  //   imu_msg.orientation_covariance[i] = orientation_covariance[i];
-  // };
-  // // publish
-  // RCSOFTCHECK(rcl_publish(&publisher, &imu_msg, NULL));
-}
-
 void setup()
 {
   // Configure serial transport

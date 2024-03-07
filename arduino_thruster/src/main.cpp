@@ -17,7 +17,7 @@ rcl_node_t node;
 
 #define MOTOR_COUNT 8
 #define UTIL_COUNT 3
-const uint8_t util_pin_begin = 6;
+const uint8_t util_pin_begin = 24;
 Servo motor[MOTOR_COUNT];
 
 #define RCCHECK(fn)              \
@@ -55,7 +55,7 @@ void sub_callback(const void *msgin)
   {
     motor[i].writeMicroseconds(msg->thrusters[i]);
   }
-  for (uint8_t i = 0; i< UTIL_COUNT; i++){
+  for (uint8_t i = 0; i< UTIL_COUNT; i+2){
     digitalWrite(i + util_pin_begin, msg->buttons[i]);
   }
 }
@@ -66,13 +66,13 @@ void setup()
   set_microros_serial_transports(Serial);
   Serial.begin(115200);
   // Initialize motors and outputs
-  uint8_t motor_pin_begin = 2;
+  uint8_t motor_pin_begin = 4;
   for (uint8_t i = 0; i < MOTOR_COUNT; i++)
   {
     motor[i].attach(i + motor_pin_begin);
     motor[i].writeMicroseconds(1500);
   }
-  for (uint8_t i = 0; i < UTIL_COUNT; i++)
+  for (uint8_t i = 0; i < UTIL_COUNT; i+2)
   {
     pinMode(i + util_pin_begin, OUTPUT);
   }

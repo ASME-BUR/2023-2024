@@ -47,6 +47,9 @@ void JoyCommand::imu_callback(const sensor_msgs::msg::Imu::SharedPtr msg)
     this->output.current_pos.orientation.y = msg->orientation.y;
     this->output.current_pos.orientation.z = msg->orientation.z;
     this->output.current_pos.orientation.w = msg->orientation.w;
+    this->output.current_vel.angular.x = msg->angular_velocity.x;
+    this->output.current_vel.angular.y = msg->angular_velocity.y;
+    this->output.current_vel.angular.z = msg->angular_velocity.z;
     cmd_pub->publish(output);
 }
 

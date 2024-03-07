@@ -8,25 +8,19 @@
   <license>TODO: License declaration</license>
 
   <buildtool_depend>ament_cmake</buildtool_depend>
-  <buildtool_depend>catkin</buildtool_depend>
+  <depend>realtime_tools</depend>
+  <depend>message_filters</depend>
+  <depend>sensor_msgs</depend>
+  <depend>std_msgs</depend>
+  <depend>rcutils</depend>
+  <depend>control_toolbox</depend>
+  <depend>rclcpp</depend>
+  <depend>geometry_msgs</depend>
+  <depend>bur_rov_msgs</depend>
 
   <test_depend>ament_lint_auto</test_depend>
   <test_depend>ament_lint_common</test_depend>
 
-  <build_depend>control_toolbox</build_depend>
-  <build_depend>rclcpp</build_depend>
-  <build_depend>roscpp</build_depend>
-  <build_depend>geometry_msgs</build_depend>
-  <depend>bur_rov_msgs</depend>
-
-  <build_export_depend>control_toolbox</build_export_depend>
-  <build_export_depend>rclcpp</build_export_depend>
-  <build_export_depend>roscpp</build_export_depend>
-
-  <exec_depend>control_toolbox</exec_depend>
-  <exec_depend>rclcpp</exec_depend>
-  <exec_depend>roscpp</exec_depend>
-  <exec_depend>geometry_msgs</exec_depend>
   <export>
     <build_type>ament_cmake</build_type>
   </export>

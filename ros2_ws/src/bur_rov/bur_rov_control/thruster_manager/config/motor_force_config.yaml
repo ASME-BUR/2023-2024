@@ -1,7 +1,6 @@
 thruster_manager:
   ros__parameters:
     num_motors: 8
-    
     motor0:
       surge: -0.1116
       sway: -0.5393  

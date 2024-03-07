@@ -67,7 +67,7 @@ namespace controller
     this->declare_parameter("~angular_z/d", rclcpp::PARAMETER_DOUBLE);
   }
 
-  void ControllerNode::currentCommandCallback(const geometry_msgs::msg::Twist::SharedPtr msg)
+  void ControllerNode::currentCommandCallback(const bur_rov_msgs::msg::Command::SharedPtr msg)
   {
     this->pose_state = msg->current_pos;
     this->pose_setpoint = msg->target_pos;

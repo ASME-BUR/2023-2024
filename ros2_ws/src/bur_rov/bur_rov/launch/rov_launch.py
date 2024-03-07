@@ -8,8 +8,11 @@ from launch.launch_description_sources import PythonLaunchDescriptionSource
 from launch_xml.launch_description_sources import XMLLaunchDescriptionSource
 
 def generate_launch_description():
-    bur_rov_launch = IncludeLaunchDescription(
-        PythonLaunchDescriptionSource('joy.launch.py')
+    joy_launch = IncludeLaunchDescription(
+        PythonLaunchDescriptionSource([os.path.join(
+            get_package_share_directory('bur_rov'), 'launch'),
+            '/joy.launch.py'
+        ])
     )
     controller_launch = IncludeLaunchDescription(
         XMLLaunchDescriptionSource([os.path.join(
@@ -17,9 +20,16 @@ def generate_launch_description():
             '/controller.launch'
         ])
     )
+    thruster_manager = IncludeLaunchDescription(
+        PythonLaunchDescriptionSource([os.path.join(
+            get_package_share_directory('thruster_manager'), 'launch'),
+            '/motor_param_test.launch.py'
+        ])
+    )
+
 
     return LaunchDescription([
-        bur_rov_launch,
-        eskf_launch,
+        thruster_manager,
+        joy_launch,
         controller_launch
     ])

@@ -42,8 +42,8 @@ ${rcutils_LIBRARIES}
 )
 
 
-ament_target_dependencies(PID rclcpp realtime_tools message_filters control_toolbox)
-ament_export_dependencies(rclcpp realtime_tools message_filters control_toolbox)
+ament_target_dependencies(PID rclcpp realtime_tools message_filters control_toolbox bur_rov_msgs)
+ament_export_dependencies(rclcpp realtime_tools message_filters control_toolbox bur_rov_msgs)
 ament_export_targets(export_PID HAS_LIBRARY_TARGET)
 
 # Install shared library
@@ -70,7 +70,7 @@ PID
 )
 target_link_libraries(${PROJECT_NAME} tinyxml)
 
-ament_target_dependencies(${PROJECT_NAME} rclcpp realtime_tools message_filters control_toolbox)
+ament_target_dependencies(${PROJECT_NAME} rclcpp realtime_tools message_filters control_toolbox bur_rov_msgs)
 
 # Install executable
 install(TARGETS ${PROJECT_NAME}

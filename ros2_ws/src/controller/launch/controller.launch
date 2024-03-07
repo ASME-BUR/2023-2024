@@ -3,6 +3,8 @@
   <arg name="controller_node" default="bur_controller"/>
 
   <node pkg="controller" name="$(var controller_node)" exec="controller" output="screen">
+    <param name="sub_topic" value="command"/>
+    <param name="pub_topic" value="wrench"/>
     <param name="~linear_x/p" value="2.0" type="float"/>
     <param name="~linear_x/i" value="0.0" type="float"/>
     <param name="~linear_x/d" value="0.0" type="float"/>

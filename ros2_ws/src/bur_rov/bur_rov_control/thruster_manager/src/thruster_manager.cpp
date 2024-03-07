@@ -161,7 +161,7 @@ void Thruster_manager::runNode()
     this->output.thrusters.clear();
     for (size_t i = 0; i < motors.size(); ++i)
     {
-        this->output.thrusters[i] = motor_comms[i];
+        this->output.thrusters.push_back(motor_comms[i]);
         // Store the last command so we can ramp it
         last_motor_command[i] = motor_comms[i];
     }

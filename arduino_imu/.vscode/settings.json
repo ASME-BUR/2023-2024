@@ -4,7 +4,8 @@
         "unordered_map": "cpp",
         "system_error": "cpp",
         "arduino.h": "c",
-        "interrupt.h": "c"
+        "interrupt.h": "c",
+        "*.tcc": "cpp"
     },
     "python.autoComplete.extraPaths": [
         "/home/peach/2023-2024/ros2_ws/install/micro_ros_msgs/local/lib/python3.10/dist-packages",

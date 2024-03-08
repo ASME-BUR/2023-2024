@@ -150,15 +150,17 @@ void Thruster_manager::runNode()
 
     // Convert motor thrusts to commands
     std::vector<float> motor_comms(motors.size(), 0);
+    // Publish message
+    this->output.thrusters.clear();
+    // if (this->output.buttons[3])
+    // {
     for (size_t i = 0; i < des_motor_thrusts.size(); ++i)
     {
         double m_comms = thrust_to_motor_comm(des_motor_thrusts[i]);
         m_comms = CommonFunctions::Clamp(m_comms, -1.0, 1.0); // Clamp just in case
         motor_comms[i] = (float)rateLimitMotorCommand(m_comms, last_motor_command[i]);
     }
-
-    // Publish message
-    this->output.thrusters.clear();
+    // }
     for (size_t i = 0; i < motors.size(); ++i)
     {
         this->output.thrusters.push_back(motor_comms[i]);

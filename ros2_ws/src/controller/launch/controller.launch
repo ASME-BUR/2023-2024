@@ -28,5 +28,6 @@
     <param name="~angular_z/p" value="0.0" type="float"/>
     <param name="~angular_z/i" value="0.0" type="float"/>
     <param name="~angular_z/d" value="0.0" type="float"/>
+    <param name="~active" value="false" type="bool"/>
   </node>
 </launch>

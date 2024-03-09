@@ -13,7 +13,7 @@ def generate_launch_description():
                     {"deadzone": 0.01},
                     {"autorepeat_rate": 20.0},
                     {"coalesce_interval_ms": 1},
-                    {"sticky_buttons": True},
+                    {"sticky_buttons": False},
                 ],
             ),
             Node(
@@ -24,6 +24,7 @@ def generate_launch_description():
                     {"joy_topic": "joy"},
                     {"pose_topic": "pose"},
                     {"imu_topic": "imu"},
+                    {"velocity": 0.5},
                     {"cmd_pub_topic": "command"},
                     ],
             )

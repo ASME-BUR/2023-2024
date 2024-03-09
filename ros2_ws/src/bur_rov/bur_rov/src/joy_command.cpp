@@ -6,6 +6,7 @@ JoyCommand::JoyCommand() : rclcpp::Node("joy_command")
     this->declare_parameter("joy_topic", "joy");
     this->declare_parameter("pose_topic", "pose");
     this->declare_parameter("imu_topic", "imu");
+    this->declare_parameter("velocity", 0.5);
     cmd_pub = this->create_publisher<bur_rov_msgs::msg::Command>(this->get_parameter("cmd_pub_topic").as_string(), 10);
     joy_sub = this->create_subscription<sensor_msgs::msg::Joy>(this->get_parameter("joy_topic").as_string(), 10,
                                                                bind(&JoyCommand::joy_callback, this, placeholders::_1));
@@ -19,6 +20,7 @@ void JoyCommand::joy_callback(const sensor_msgs::msg::Joy::SharedPtr msg)
 {
     if (!msg->axes.empty())
     {
+        double vel = this->get_parameter("velocity").as_double();
         this->output.target_vel.linear.x = msg->axes[0];
         this->output.target_vel.linear.y = msg->axes[1];
         this->output.target_vel.linear.z = msg->axes[2];

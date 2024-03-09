@@ -65,6 +65,8 @@ namespace controller
     this->declare_parameter("~angular_z/p", rclcpp::PARAMETER_DOUBLE);
     this->declare_parameter("~angular_z/i", rclcpp::PARAMETER_DOUBLE);
     this->declare_parameter("~angular_z/d", rclcpp::PARAMETER_DOUBLE);
+
+    this->declare_parameter("~active", rclcpp::PARAMETER_BOOL);
   }
 
   void ControllerNode::currentCommandCallback(const bur_rov_msgs::msg::Command::SharedPtr msg)
@@ -77,6 +79,11 @@ namespace controller
 
   void ControllerNode::publishState()
   {
+    bool active = false;
+    
+    this->get_parameter("~active", active);
+
+    if(active){
     linear_x.setGains(this->get_parameter("~linear_x/p").as_double(), this->get_parameter("~linear_x/i").as_double(), this->get_parameter("~linear_x/d").as_double(), 1.0, -1.0, true);
     linear_y.setGains(this->get_parameter("~linear_y/p").as_double(), this->get_parameter("~linear_y/i").as_double(), this->get_parameter("~linear_y/d").as_double(), 1.0, -1.0, true);
     linear_z.setGains(this->get_parameter("~linear_z/p").as_double(), this->get_parameter("~linear_z/i").as_double(), this->get_parameter("~linear_z/d").as_double(), 1.0, -1.0, true);
@@ -107,6 +114,19 @@ namespace controller
       pubControlEffort->publish(controlEffort);
     }
     lastTime = time;
+    }else{
+      geometry_msgs::msg::Wrench controlEffort;
+      // controlEffort.header = header;
+      controlEffort.force.x = 0;
+      controlEffort.force.y = 0;
+      controlEffort.force.z = 0;
+
+      controlEffort.torque.x = 0;
+      controlEffort.torque.y = 0;
+      controlEffort.torque.z = 0;
+
+      pubControlEffort->publish(controlEffort);
+    }
   }
 }
 

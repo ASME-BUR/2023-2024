@@ -1,6 +1,6 @@
 #include <EEPROM.h>
 
-int current = 12; //current address to read
+int current = 0; //current address to read
 
 void setup() {
   // put your setup code here, to run once:
@@ -23,33 +23,7 @@ void setup() {
   TESTING END*/
   
   Serial.begin(9600);
-  Serial.println("Finding last record...");
-
-  bool currFound = false;
-  int i = 0;
-  while (i < EEPROM.length()) {
-    bool validbit;
-    EEPROM.get(i, validbit);
-    if (validbit) {
-      currFound = true;
-      current = i;
-      Serial.print("Last record found at ");
-      Serial.println(current);
-      delay(50);
-      break;
-    }
-    i += 12;
-  }
-
-  if (!currFound) {
-    Serial.println("Last record not found!");
-  }
-
-  else {
   getData();
-  //current =- 12;
-  //getData();
-  }
 
 }
 
@@ -61,12 +35,11 @@ void getData() {
   // put your main code here, to run repeatedly:
   Serial.print("DATA AT POSITION ");
   Serial.println(current);
-  bool leak;
   Serial.print("Leak Boolean: ");
-  Serial.println(leak);
+  Serial.println(EEPROM.read(current));
 
-  byte byte1 = EEPROM.read(current+2);
-  byte byte2 = EEPROM.read(current+3);
+  byte byte1 = EEPROM.read(current+1);
+  byte byte2 = EEPROM.read(current+2);
   int temp = (byte1 << 8) | byte2;
   Serial.print("Temperature reading: ");
   Serial.println(temp);
@@ -74,7 +47,7 @@ void getData() {
   Serial.print("Voltage Readings:");
   for (int i = 0; i < 8; i++) {
     Serial.print(" ");
-    Serial.print(EEPROM.read(current+4+i));
+    Serial.print(EEPROM.read(current+3+i));
   }
   Serial.println(" ");
   Serial.println(" ----------------------------------- ");

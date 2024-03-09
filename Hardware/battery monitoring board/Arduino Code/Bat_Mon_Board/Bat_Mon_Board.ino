@@ -18,9 +18,11 @@ int bat2_cel4 = A5;
 int bat2_cel3 = A6;
 int bat2_cel2 = A7;
 
+//PROGRAM VARIABLES (NOT FOR USER)
 int leakCount = 0;
 int tempCount = 0;
-int shutoffTemp = 0;
+byte isLeak = 0;
+double c = 255;
 int batCount[8] = {0, 0, 0, 0, 0, 0, 0, 0};
 
 Adafruit_MAX31855 thermocouple(MAXCLK, MAXCS, MAXDO);
@@ -52,65 +54,20 @@ void setup() {
 }
 
 void loop() { 
-  //INVALIDATE LAST EEPROM SLOT
-  if (current >= 12) {
-    EEPROM.write(current-12, false);
-  }
-  
-  EEPROM.write(current, true);
 
   //LEAK SENSOR
   if (digitalRead(leakPin)) {
     leakCount++;
-    EEPROM.write(current+1, true);
   }
   else {
-    EEPROM.write(current+1, false);
+    leakCount = 0;
   }
   
   //TEMP SENSOR
-  int temp = readTemp();
-  EEPROM.write(current+2, temp >> 8);
-  EEPROM.write(current+3, temp & 0xFF);
-
-  /*
-  //BATTERY MONITORING
-  byte batvals[8];
-  batvals[0] = analogRead(bat1_cel1);
-  batvals[1] = analogRead(bat1_cel2);
-  batvals[2] = analogRead(bat1_cel3);
-  batvals[3] = analogRead(bat1_cel4);
-  batvals[4] = analogRead(bat2_cel1);
-  batvals[5] = analogRead(bat2_cel2);
-  batvals[6] = analogRead(bat2_cel3);
-  batvals[7] = analogRead(bat2_cel4);
-  
-  for (int i = 0; i < 8; i++) {
-    EEPROM.write(current+4+i, batvals[i]);
-    if (batvals[i] < minVoltages[i]) {
-      batCount[i]++;
-    }
-  }
-  */
-
-  //CHECK COUNTERS
-  checkTurnoff();
-
-  //INCREMENT EEPROM
-  if (current + 12 > EEPROM.length()) {
-    current = 0;
-  }
-  else {
-    current += 12;
-  }
-  delay(1000);
-}
-
-int readTemp() {
   Serial.print("Internal Temp = ");
   Serial.println(thermocouple.readInternal());
 
-  double c = thermocouple.readCelsius();
+  c = thermocouple.readCelsius();
   if (isnan(c)) {
     Serial.println("Thermocouple fault(s) detected!");
     uint8_t e = thermocouple.readError();
@@ -123,29 +80,65 @@ int readTemp() {
     Serial.println(c);
     if (c > maxTemp) {
       tempCount++;
-      shutoffTemp = c;
     }
-    return int(c);
+    else {
+      tempCount = 0;
+    }
   }
-}
-void turnoff() {
-  digitalWrite(outputPin, LOW);
-}
 
-void checkTurnoff() {
-  if(tempCount >= 3) {
-    Serial.println("Too Hot! c = ");
-    Serial.print(shutoffTemp);
-    turnoff();
+  //BATTERY MONITORING
+  byte batvals[8];
+/*
+  batvals[0] = analogRead(bat1_cel1);
+  batvals[1] = analogRead(bat1_cel2);
+  batvals[2] = analogRead(bat1_cel3);
+  batvals[3] = analogRead(bat1_cel4);
+  batvals[4] = analogRead(bat2_cel1);
+  batvals[5] = analogRead(bat2_cel2);
+  batvals[6] = analogRead(bat2_cel3);
+  batvals[7] = analogRead(bat2_cel4);
+  
+  for (int i = 0; i < 8; i++) {
+    if (batvals[i] < minVoltages[i]) {
+      batCount[i]++;
+    }
+    else {
+      batCount[i] = 0;
+    }
   }
+*/
+
+  //CHECK TURNOFF
   if(leakCount >= 3) {
+    isLeak = 1;
     Serial.println("LEAK!");
-    turnoff();
+    turnoff(batvals[8]);
+  }
+  if (tempCount >= 3) {
+    Serial.println("Too Hot! c = ");
+    Serial.print(c);
+    turnoff(batvals[8]);
   }
   for (int i = 0; i < 8; i++) {
     if(batCount[i] >= 3) {
     Serial.println("A cell does not have sufficient voltage!");
-    turnoff();
+    turnoff(batvals[8]);
     }
   } 
+
+  //WAIT FOR NEXT SAMPLE
+  delay(1000);
+}
+
+void turnoff(byte bat[8]) {
+  digitalWrite(outputPin, LOW);
+  EEPROM.write(0, isLeak);
+
+  int temp = int(c);
+  EEPROM.write(current+1, temp >> 8);
+  EEPROM.write(current+2, temp & 0xFF);
+
+  for (int i = 0; i < 8; i++) {
+    EEPROM.write(current+3+i, bat[i]);
+  }
 }

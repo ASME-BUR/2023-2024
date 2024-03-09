@@ -3,65 +3,65 @@ thruster_manager:
     num_motors: 8
 
     motor0:
-      surge: -0.7071
-      sway: 0.7071
+      surge: -0.3536
+      sway: 0.3536
       heave: 0.0
       roll: 0.0
       pitch: 0.0
-      yaw: -0.0010
+      yaw: 0.5651
 
     motor1:
-      surge: 0.7071
-      sway: -0.7071
+      surge: -0.3536
+      sway: -0.3536
       heave: 0.0
       roll: 0.0
       pitch: 0.0
-      yaw: -0.0012
+      yaw: 0.5651
 
     motor2:
-      surge: 0.0359
-      sway: -0.0408
-      heave: -0.2500
-      roll: -0.0011
-      pitch: -0.0009
+      surge: 0.0360
+      sway: 0.0409
+      heave: 0.2500
+      roll: 1.0723
+      pitch: -0.9438
       yaw: 0.0
 
     motor3:
-      surge: 0.7071
-      sway: 0.7071
-      heave: 0.0
-      roll: 0.0
-      pitch: 0.0
-      yaw: -0.0001
+      surge: 0.0360
+      sway: -0.0409
+      heave: -0.2500
+      roll: -1.0723
+      pitch: -0.9438
+      yaw: 0.0
 
     motor4:
-      surge: -0.7071
-      sway: -0.7071
-      heave: 0.0
-      roll: 0.0
-      pitch: 0.0
+      surge: -0.0360
+      sway: 0.0409
+      heave: -0.2500
+      roll: 1.0723
+      pitch: 0.9438
       yaw: 0.0
 
     motor5:
-      surge: -0.0359
-      sway: 0.0408
-      heave: 0.2500
-      roll: 0.0011
-      pitch: 0.0009
-      yaw: 0.0
+      surge: 0.3536
+      sway: 0.3536
+      heave: 0.0
+      roll: 0.0
+      pitch: 0.0
+      yaw: 0.5651
 
     motor6:
-      surge: 0.0359
-      sway: 0.0408
-      heave: 0.2500
-      roll: 0.0011
-      pitch: -0.0009
-      yaw: 0.0
+      surge: 0.3536
+      sway: -0.3536
+      heave: 0.0
+      roll: 0.0
+      pitch: 0.0
+      yaw: 0.5651
 
     motor7:
-      surge: -0.0359
-      sway: -0.0408
+      surge: -0.0360
+      sway: -0.0409
       heave: 0.2500
-      roll: -0.0011
-      pitch: 0.0009
+      roll: -1.0723
+      pitch: 0.9438
       yaw: 0.0

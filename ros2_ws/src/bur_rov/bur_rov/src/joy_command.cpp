@@ -21,12 +21,12 @@ void JoyCommand::joy_callback(const sensor_msgs::msg::Joy::SharedPtr msg)
     if (!msg->axes.empty())
     {
         double vel = this->get_parameter("velocity").as_double();
-        this->output.target_vel.linear.x = msg->axes[0];
-        this->output.target_vel.linear.y = msg->axes[1];
-        this->output.target_vel.linear.z = msg->axes[2];
-        this->output.target_vel.angular.x = msg->axes[3];
-        this->output.target_vel.angular.y = msg->axes[4];
-        this->output.target_vel.angular.z = msg->axes[5];
+        this->output.target_vel.linear.x = vel * msg->axes[1];
+        this->output.target_vel.linear.y = vel * msg->axes[0];
+        this->output.target_vel.linear.z = (msg->axes[2]-1)/(2) +  (msg->axes[5]-1)/(-2) ;
+        this->output.target_vel.angular.x = msg->buttons[3]-msg->buttons[1];
+        this->output.target_vel.angular.y = vel *msg->axes[4];
+        this->output.target_vel.angular.z = vel* msg->axes[3];
         this->output.target_pos = this->pose;
         this->output.buttons.clear();
         for (uint8_t i = 0; i < msg->buttons.size(); i++)

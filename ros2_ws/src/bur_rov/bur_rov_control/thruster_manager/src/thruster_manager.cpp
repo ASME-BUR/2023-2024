@@ -164,16 +164,27 @@ void Thruster_manager::runNode()
     for (size_t i = 0; i < motors.size(); ++i)
     {
         this->output.thrusters.push_back(motor_comms[i]);
+
         // Store the last command so we can ramp it
         last_motor_command[i] = motor_comms[i];
     }
     cmd_pub->publish(this->output);
 } // End of run node
 
+void Thruster_manager::shutdown(){
+    for (size_t i=0;i<motors.size();i++){
+        this->output.thrusters.push_back(0);
+    }
+    cmd_pub->publish(this->output);
+}
+
 int main(int argc, char *argv[])
 {
     rclcpp::init(argc, argv);
-    rclcpp::spin(std::make_shared<Thruster_manager>());
+    auto node = std::make_shared<Thruster_manager>();
+    rclcpp::spin(node);
+    node->shutdown();
     rclcpp::shutdown();
+
     return 0;
 }

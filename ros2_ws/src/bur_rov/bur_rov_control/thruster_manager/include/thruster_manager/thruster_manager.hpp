@@ -56,9 +56,11 @@ class Thruster_manager : public rclcpp::Node
 public:
     Thruster_manager();
     void runNode();
+    void shutdown();
 
 private:
     // Functions
+    
     double thrust_to_motor_comm(const double thrust_n);
     void setVariables();
     void allocate_generic_motors(std::map<std::string, double> &des_forces, std::vector<double> &des_motor_thrusts);

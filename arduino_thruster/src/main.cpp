@@ -63,11 +63,23 @@ void sub_callback(const void *msgin)
   const bur_rov_msgs__msg__ThrusterCommand *msg = (const bur_rov_msgs__msg__ThrusterCommand *)msgin;
   for (uint8_t i = 0; i < MOTOR_COUNT; i++)
   {
-    motor[i].writeMicroseconds((int) (msg->thrusters[i] * 400 + 1500));
+    motor[i].writeMicroseconds((int)(msg->thrusters[i] * 400 + 1500));
   }
   for (uint8_t i = 0; i < UTIL_COUNT; i++)
   {
-    digitalWrite(i*2 + util_pin_begin, msg->buttons[i]);
+    digitalWrite(i * 2 + util_pin_begin, msg->buttons[i]);
+  }
+}
+
+void turn_off_outputs()
+{
+  for (uint8_t i = 0; i < MOTOR_COUNT; i++)
+  {
+    motor[i].writeMicroseconds(1500);
+  }
+  for (uint8_t i = 0; i < UTIL_COUNT; i++)
+  {
+    digitalWrite(i * 2 + util_pin_begin, LOW);
   }
 }
 
@@ -101,7 +113,7 @@ void destroy_entities()
 {
   rmw_context_t *rmw_context = rcl_context_get_rmw_context(&support.context);
   (void)rmw_uros_set_context_entity_destroy_session_timeout(rmw_context, 0);
-
+  turn_off_outputs();
   rcl_subscription_fini(&subscriber, &node);
   rcl_timer_fini(&timer);
   rclc_executor_fini(&executor);
@@ -120,7 +132,7 @@ void setup()
   }
   for (uint8_t i = 0; i < UTIL_COUNT; i++)
   {
-    pinMode(i*2 + util_pin_begin, OUTPUT);
+    pinMode(i * 2 + util_pin_begin, OUTPUT);
   }
   // Initialize micro-ROS
   Serial.begin(115200);

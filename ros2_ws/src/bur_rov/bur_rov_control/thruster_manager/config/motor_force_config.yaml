@@ -1,16 +1,10 @@
 thruster_manager:
   ros__parameters:
+    max_force: 100.0
+    max_torque: 30.0
     num_motors: 8
 
     motor0:
-      surge: -0.3536
-      sway: 0.3536
-      heave: 0.0
-      roll: 0.0
-      pitch: 0.0
-      yaw: 0.5651
-
-    motor1:
       surge: -0.3536
       sway: -0.3536
       heave: 0.0
@@ -26,7 +20,7 @@ thruster_manager:
       pitch: -0.9438
       yaw: 0.0
 
-    motor3:
+    motor1:
       surge: 0.0360
       sway: -0.0409
       heave: -0.2500
@@ -34,7 +28,7 @@ thruster_manager:
       pitch: -0.9438
       yaw: 0.0
 
-    motor4:
+    motor3:
       surge: -0.0360
       sway: 0.0409
       heave: -0.2500
@@ -42,7 +36,7 @@ thruster_manager:
       pitch: 0.9438
       yaw: 0.0
 
-    motor5:
+    motor4:
       surge: 0.3536
       sway: 0.3536
       heave: 0.0
@@ -50,7 +44,7 @@ thruster_manager:
       pitch: 0.0
       yaw: 0.5651
 
-    motor6:
+    motor5:
       surge: 0.3536
       sway: -0.3536
       heave: 0.0
@@ -58,10 +52,18 @@ thruster_manager:
       pitch: 0.0
       yaw: 0.5651
 
-    motor7:
+    motor6:
       surge: -0.0360
       sway: -0.0409
       heave: 0.2500
       roll: -1.0723
       pitch: 0.9438
       yaw: 0.0
+
+    motor7:
+      surge: -0.3536
+      sway: 0.3536
+      heave: 0.0
+      roll: 0.0
+      pitch: 0.0
+      yaw: 0.5651

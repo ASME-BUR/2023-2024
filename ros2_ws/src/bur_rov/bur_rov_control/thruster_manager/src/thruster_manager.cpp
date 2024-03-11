@@ -1,5 +1,7 @@
 #include "thruster_manager.hpp"
 
+#include <iostream>
+
 using std::placeholders::_1;
 
 Thruster_manager::Thruster_manager() : rclcpp::Node("thruster_manager")
@@ -158,7 +160,8 @@ void Thruster_manager::runNode()
     {
         double m_comms = thrust_to_motor_comm(des_motor_thrusts[i]);
         m_comms = CommonFunctions::Clamp(m_comms, -1.0, 1.0); // Clamp just in case
-        motor_comms[i] = (float)rateLimitMotorCommand(m_comms, last_motor_command[i]);
+        // motor_comms[i] = (float)rateLimitMotorCommand(m_comms, last_motor_command[i]);
+        motor_comms[i] = (float)CommonFunctions::Clamp(m_comms, last_motor_command[i] - max_step_per_loop, last_motor_command[i] + max_step_per_loop);
     }
     // }
     for (size_t i = 0; i < motors.size(); ++i)

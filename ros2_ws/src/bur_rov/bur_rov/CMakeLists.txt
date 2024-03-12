@@ -13,7 +13,9 @@ find_package(ament_cmake REQUIRED)
 find_package(rclcpp REQUIRED)
 find_package(sensor_msgs REQUIRED)
 find_package(bur_rov_msgs REQUIRED)
-
+find_package(tf2 REQUIRED)
+find_package(tf2_ros REQUIRED)
+find_package(tf2_geometry_msgs REQUIRED)
 find_package(joy REQUIRED)
 # find_package(state_estimation REQUIRED)
 # find_package(controller REQUIRED)
@@ -21,7 +23,7 @@ find_package(joy REQUIRED)
 include_directories(include/${PROJECT_NAME})
 
 add_executable(joy_command src/joy_command.cpp)
-ament_target_dependencies(joy_command rclcpp sensor_msgs bur_rov_msgs joy)
+ament_target_dependencies(joy_command tf2 tf2_geometry_msgs rclcpp sensor_msgs bur_rov_msgs joy)
 
 install(TARGETS joy_command DESTINATION lib/${PROJECT_NAME})
 

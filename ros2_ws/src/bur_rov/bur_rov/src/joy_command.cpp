@@ -26,11 +26,14 @@ void JoyCommand::joy_callback(const sensor_msgs::msg::Joy::SharedPtr msg)
     {
         this->output.target_vel.linear.x = vel * msg->axes[axis_mapping_.at("linear_x")];
         this->output.target_vel.linear.y = vel * msg->axes[axis_mapping_.at("linear_y")];
-        this->output.target_vel.linear.z = vel*msg->axes[axis_mapping_.at("linear_z")];
-        this->output.target_vel.angular.x = vel*msg->buttons[axis_mapping_.at("angular_x")];
+        this->output.target_vel.linear.z = vel * msg->axes[axis_mapping_.at("linear_z")];
+        this->output.target_vel.angular.x = vel * msg->axes[axis_mapping_.at("angular_x")];
         this->output.target_vel.angular.y = vel * msg->axes[axis_mapping_.at("angular_y")];
         this->output.target_vel.angular.z = vel * msg->axes[axis_mapping_.at("angular_z")];
-        this->output.target_pos = this->pose;
+        tf2::Quaternion q;
+        q.setRPY(msg->axes[axis_mapping_.at("angular_x")]*90, msg->axes[axis_mapping_.at("angular_y")]*90, 0);
+        q.normalize();
+        this->output.target_pos.orientation = tf2::toMsg(q);
         this->output.buttons.clear();
         for (uint8_t i = 0; i < msg->buttons.size(); i++)
         {

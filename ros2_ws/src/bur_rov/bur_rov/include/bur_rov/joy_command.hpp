@@ -6,6 +6,8 @@
 #include "sensor_msgs/msg/joy.hpp"
 #include "sensor_msgs/msg/imu.hpp"
 #include "bur_rov_msgs/msg/command.hpp"
+#include <tf2/LinearMath/Quaternion.h>
+#include <tf2_geometry_msgs/tf2_geometry_msgs.hpp>
 #include <iostream>
 #include <map>
 #include <vector>

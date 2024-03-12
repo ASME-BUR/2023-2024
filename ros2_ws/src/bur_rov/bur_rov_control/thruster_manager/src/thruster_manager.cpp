@@ -70,6 +70,7 @@ void Thruster_manager::cmd_Callback(const bur_rov_msgs::msg::Command::SharedPtr 
     {
         this->output.buttons.push_back(msg->buttons[i]);
     }
+    runNode();
 }
 
 void Thruster_manager::wrench_Callback(const geometry_msgs::msg::Wrench::SharedPtr msg)
@@ -80,7 +81,7 @@ void Thruster_manager::wrench_Callback(const geometry_msgs::msg::Wrench::SharedP
     pwr[3] = msg->torque.x;  // roll
     pwr[4] = -msg->torque.y; // pitch
     pwr[5] = -msg->torque.z; // yaw
-    runNode();
+    // runNode();
 }
 
 // Takes in thrust command in Newtons and returns motor commands in [-1,1] scaled accordingly with deadbands
@@ -167,6 +168,7 @@ void Thruster_manager::runNode()
     for (size_t i = 0; i < motors.size(); ++i)
     {
         this->output.thrusters.push_back(motor_comms[i]);
+        // this->output.thrusters.push_back(((float)this->output.buttons[i])*0.4);
 
         // Store the last command so we can ramp it
         last_motor_command[i] = motor_comms[i];

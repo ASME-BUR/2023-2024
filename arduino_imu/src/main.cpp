@@ -72,7 +72,8 @@ void timer_callback(rcl_timer_t *timer, int64_t last_call_time)
       IMU->readMessages(verbose);
       // IMU->printData();
     }
-    // imu_msg.header.stamp =;
+    imu_msg.header.stamp.sec = rmw_uros_epoch_millis();
+    imu_msg.header.stamp.nanosec = rmw_uros_epoch_nanos();
     imu_msg.linear_acceleration.x = (double)IMU->getAcceleration()[0];
     imu_msg.linear_acceleration.y = (double)IMU->getAcceleration()[1];
     imu_msg.linear_acceleration.z = (double)IMU->getAcceleration()[2];
@@ -108,12 +109,12 @@ bool create_entities()
   // // create node
   RCCHECK(rclc_node_init_default(&node, "arduino_node_imu", "", &support));
   // // create publisher
-  RCCHECK(rclc_publisher_init_default(&publisher, &node, ROSIDL_GET_MSG_TYPE_SUPPORT(sensor_msgs, msg, Imu), "imu"));
+  RCCHECK(rclc_publisher_init_best_effort(&publisher, &node, ROSIDL_GET_MSG_TYPE_SUPPORT(sensor_msgs, msg, Imu), "imu"));
   const unsigned int timer_timeout = 1;
   RCCHECK(rclc_timer_init_default(
       &timer,
       &support,
-      RCL_MS_TO_NS(timer_timeout),
+      RCL_MS_TO_NS(0.1),
       timer_callback));
   // create executor
   RCCHECK(rclc_executor_init(&executor, &support.context, 1, &allocator));
@@ -160,7 +161,7 @@ void loop()
   switch (state)
   {
   case WAITING_AGENT:
-    EXECUTE_EVERY_N_MS(100, state = (RMW_RET_OK == rmw_uros_ping_agent(100, 1)) ? AGENT_AVAILABLE : WAITING_AGENT;);
+    EXECUTE_EVERY_N_MS(1000, state = (RMW_RET_OK == rmw_uros_ping_agent(50, 1)) ? AGENT_AVAILABLE : WAITING_AGENT;);
     break;
   case AGENT_AVAILABLE:
     state = (true == create_entities()) ? AGENT_CONNECTED : WAITING_AGENT;
@@ -170,10 +171,10 @@ void loop()
     };
     break;
   case AGENT_CONNECTED:
-    EXECUTE_EVERY_N_MS(1000, state = (RMW_RET_OK == rmw_uros_ping_agent(100, 1)) ? AGENT_CONNECTED : AGENT_DISCONNECTED;);
+    EXECUTE_EVERY_N_MS(1000, state = (RMW_RET_OK == rmw_uros_ping_agent(50, 1)) ? AGENT_CONNECTED : AGENT_DISCONNECTED;);
     if (state == AGENT_CONNECTED)
     {
-      rclc_executor_spin_some(&executor, RCL_MS_TO_NS(5));
+      rclc_executor_spin_some(&executor, RCL_MS_TO_NS(1));
     }
     break;
   case AGENT_DISCONNECTED:

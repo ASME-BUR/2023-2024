@@ -103,13 +103,22 @@ namespace controller
 
       geometry_msgs::msg::Wrench controlEffort;
       // controlEffort.header = header;
-      controlEffort.force.x = clamp(linear_x.computeCommand(twist_setpoint.linear.x - twist_state.linear.x, dt), -1.0, 1.0);
-      controlEffort.force.y = clamp(linear_y.computeCommand(twist_setpoint.linear.y - twist_state.linear.y, dt), -1.0, 1.0);
-      controlEffort.force.z = clamp(linear_z.computeCommand(twist_setpoint.linear.z - twist_state.linear.z, dt), -1.0, 1.0);
+      controlEffort.force.x = linear_x.computeCommand(twist_setpoint.linear.x - twist_state.linear.x, dt);
+      controlEffort.force.y = linear_y.computeCommand(twist_setpoint.linear.y - twist_state.linear.y, dt);
+      controlEffort.force.z = linear_z.computeCommand(twist_setpoint.linear.z - twist_state.linear.z, dt);
 
-      controlEffort.torque.x = clamp(angular_x.computeCommand(twist_setpoint.angular.x - twist_state.angular.x, dt), -1.0, 1.0);
-      controlEffort.torque.y = clamp(angular_y.computeCommand(twist_setpoint.angular.y - twist_state.angular.y, dt), -1.0, 1.0);
-      controlEffort.torque.z = clamp(angular_z.computeCommand(twist_setpoint.angular.z - twist_state.angular.z, dt), -1.0, 1.0);
+      controlEffort.torque.x = angular_x.computeCommand(twist_setpoint.angular.x - twist_state.angular.x, dt);
+      controlEffort.torque.y = angular_y.computeCommand(twist_setpoint.angular.y - twist_state.angular.y, dt);
+      controlEffort.torque.z = angular_z.computeCommand(twist_setpoint.angular.z - twist_state.angular.z, dt);
+
+
+      // controlEffort.force.x = clamp(linear_x.computeCommand(twist_setpoint.linear.x - twist_state.linear.x, dt), -1.0, 1.0);
+      // controlEffort.force.y = clamp(linear_y.computeCommand(twist_setpoint.linear.y - twist_state.linear.y, dt), -1.0, 1.0);
+      // controlEffort.force.z = clamp(linear_z.computeCommand(twist_setpoint.linear.z - twist_state.linear.z, dt), -1.0, 1.0);
+
+      // controlEffort.torque.x = clamp(angular_x.computeCommand(twist_setpoint.angular.x - twist_state.angular.x, dt), -1.0, 1.0);
+      // controlEffort.torque.y = clamp(angular_y.computeCommand(twist_setpoint.angular.y - twist_state.angular.y, dt), -1.0, 1.0);
+      // controlEffort.torque.z = clamp(angular_z.computeCommand(twist_setpoint.angular.z - twist_state.angular.z, dt), -1.0, 1.0);
 
       pubControlEffort->publish(controlEffort);
     }

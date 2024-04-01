@@ -859,7 +859,7 @@
     (property "Reference" "R9" (at 132.08 86.36 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
-    (property "Value" "649" (at 132.08 88.9 0)
+    (property "Value" "1300" (at 132.08 88.9 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Footprint" "Resistor_SMD:R_0805_2012Metric" (at 130.556 87.884 90)

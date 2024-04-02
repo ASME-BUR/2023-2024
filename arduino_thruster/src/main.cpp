@@ -60,14 +60,21 @@ void (*resetFunc)(void) = 0;
 // subscription callback
 void sub_callback(const void *msgin)
 {
+
   const bur_rov_msgs__msg__ThrusterCommand *msg = (const bur_rov_msgs__msg__ThrusterCommand *)msgin;
-  for (uint8_t i = 0; i < MOTOR_COUNT; i++)
+  if (sizeof(msg->thrusters) != 0)
   {
-    motor[i].writeMicroseconds((int)(msg->thrusters[i] * 400 + 1500));
+    for (uint8_t i = 0; i < MOTOR_COUNT; i++)
+    {
+      motor[i].writeMicroseconds((int)(msg->thrusters[i] * 400 + 1500));
+    }
   }
-  for (uint8_t i = 0; i < UTIL_COUNT; i++)
+  if (sizeof(msg->buttons) != 0)
   {
-    digitalWrite(i * 2 + util_pin_begin, msg->buttons[i]);
+    for (uint8_t i = 0; i < UTIL_COUNT; i++)
+    {
+      digitalWrite(i * 2 + util_pin_begin, msg->buttons[i]);
+    }
   }
 }
 
@@ -128,15 +135,15 @@ void setup()
   for (uint8_t i = 0; i < MOTOR_COUNT; i++)
   {
     motor[i].attach(i + motor_pin_begin);
-    motor[i].writeMicroseconds(1500);
   }
   for (uint8_t i = 0; i < UTIL_COUNT; i++)
   {
     pinMode(i * 2 + util_pin_begin, OUTPUT);
   }
+  turn_off_outputs();
   // Initialize micro-ROS
-  Serial.begin(115200);
-  set_microros_serial_transports(Serial);
+  SerialUSB.begin(115200);
+  set_microros_serial_transports(SerialUSB);
 
   state = WAITING_AGENT;
 }
@@ -167,6 +174,7 @@ void loop()
     state = WAITING_AGENT;
     break;
   default:
+    turn_off_outputs();
     break;
   }
 }

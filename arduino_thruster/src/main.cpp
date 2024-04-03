@@ -49,7 +49,7 @@ enum states
   AGENT_DISCONNECTED
 } state;
 
-#define MOTOR_COUNT 9
+#define MOTOR_COUNT 8
 #define UTIL_COUNT 3
 const uint8_t util_pin_begin = 24;
 Servo motor[MOTOR_COUNT];
@@ -60,22 +60,21 @@ void (*resetFunc)(void) = 0;
 // subscription callback
 void sub_callback(const void *msgin)
 {
-
   const bur_rov_msgs__msg__ThrusterCommand *msg = (const bur_rov_msgs__msg__ThrusterCommand *)msgin;
-  if (sizeof(msg->thrusters) != 0)
+  // if (sizeof(msg->thrusters) == MOTOR_COUNT)
+  // {
+  for (int i = 0; i < MOTOR_COUNT; i++)
   {
-    for (uint8_t i = 0; i < MOTOR_COUNT; i++)
-    {
-      motor[i].writeMicroseconds((int)(msg->thrusters[i] * 400 + 1500));
-    }
+    motor[i].writeMicroseconds((int)(msg->thrusters[i] * 400 + 1500));
   }
-  if (sizeof(msg->buttons) != 0)
+  // }
+  // if (sizeof(msg->buttons) != 0)
+  // {
+  for (int i = 0; i < UTIL_COUNT; i++)
   {
-    for (uint8_t i = 0; i < UTIL_COUNT; i++)
-    {
-      digitalWrite(i * 2 + util_pin_begin, msg->buttons[i]);
-    }
+    digitalWrite(i * 2 + util_pin_begin, (msg->buttons[i]));
   }
+  // }
 }
 
 void turn_off_outputs()
@@ -105,7 +104,7 @@ bool create_entities()
   // create node
   RCCHECK(rclc_node_init_default(&node, "arduino_node_thruster", "", &support));
   // create subscriber
-  RCCHECK(rclc_subscription_init_default(&subscriber, &node,
+  RCCHECK(rclc_subscription_init_best_effort(&subscriber, &node,
                                          ROSIDL_GET_MSG_TYPE_SUPPORT(bur_rov_msgs, msg, ThrusterCommand),
                                          "thruster_command"));
 
@@ -153,6 +152,7 @@ void loop()
   switch (state)
   {
   case WAITING_AGENT:
+    turn_off_outputs();
     EXECUTE_EVERY_N_MS(500, state = (RMW_RET_OK == rmw_uros_ping_agent(200, 3)) ? AGENT_AVAILABLE : WAITING_AGENT;);
     break;
   case AGENT_AVAILABLE:

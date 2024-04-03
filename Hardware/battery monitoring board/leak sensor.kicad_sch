@@ -1035,9 +1035,9 @@
     (property "Sim.Pins" "1=B 2=E 3=C" (at 95.25 48.26 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (pin "3" (uuid 0bd5c029-1311-468e-ad0a-f34a0b12dff2))
     (pin "1" (uuid b0809805-0047-40b7-8889-ff6addfbf23d))
     (pin "2" (uuid 7983f03b-020f-456e-86df-e53927445bd3))
+    (pin "3" (uuid 0bd5c029-1311-468e-ad0a-f34a0b12dff2))
     (instances
       (project "leak sensor"
         (path "/127822e7-fd70-4fb4-952a-2fa8fdde2438"

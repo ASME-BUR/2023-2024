@@ -1,1 +1,0 @@
-/home/bur/ros2_ws/src/zed-ros2-examples/tutorials/zed_rgb_convert/launch/zed_rgb_convert.launch.py

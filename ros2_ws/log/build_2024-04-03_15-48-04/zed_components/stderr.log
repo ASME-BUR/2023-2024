@@ -1,5 +1,0 @@
-In file included from [01m[K/home/bur/ros2_ws/src/zed-ros2-wrapper/zed_components/src/zed_camera/include/zed_camera_component.hpp:19[m[K,
-                 from [01m[K/home/bur/ros2_ws/src/zed-ros2-wrapper/zed_components/src/zed_camera/src/zed_camera_component.cpp:22[m[K:
-[01m[K/usr/local/zed/include/sl/Fusion.hpp:68:64:[m[K [01;36m[Knote: [m[K#pragma message: ~ FUSION SDK is distributed in Early Access ~
-   68 | #pragma message("~ FUSION SDK is distributed in Early Access ~"[01;36m[K)[m[K
-      |                                                                [01;36m[K^[m[K

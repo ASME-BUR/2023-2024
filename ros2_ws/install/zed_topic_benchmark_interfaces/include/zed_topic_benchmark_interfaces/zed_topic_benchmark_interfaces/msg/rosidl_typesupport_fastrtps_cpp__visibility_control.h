@@ -1,1 +1,0 @@
-/home/bur/ros2_ws/build/zed_topic_benchmark_interfaces/rosidl_typesupport_fastrtps_cpp/zed_topic_benchmark_interfaces/msg/rosidl_typesupport_fastrtps_cpp__visibility_control.h

@@ -1,4 +1,0 @@
-Invoking command in '/home/bur/ros2_ws/build/zed_interfaces': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/bur/ros2_ws/build/zed_interfaces -- -j6 -l6
-Invoked command in '/home/bur/ros2_ws/build/zed_interfaces' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/bur/ros2_ws/build/zed_interfaces -- -j6 -l6
-Invoking command in '/home/bur/ros2_ws/build/zed_interfaces': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/bur/ros2_ws/build/zed_interfaces
-Invoked command in '/home/bur/ros2_ws/build/zed_interfaces' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/bur/ros2_ws/build/zed_interfaces

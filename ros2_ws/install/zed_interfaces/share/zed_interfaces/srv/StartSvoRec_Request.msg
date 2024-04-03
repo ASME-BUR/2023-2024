@@ -1,1 +1,0 @@
-/home/bur/ros2_ws/build/zed_interfaces/rosidl_cmake/srv/StartSvoRec_Request.msg

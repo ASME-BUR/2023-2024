@@ -1,1 +1,0 @@
-/home/bur/ros2_ws/src/zed-ros2-examples/tools/zed_benchmark_component/src/include/visibility_control.hpp

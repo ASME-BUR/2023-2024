@@ -1,1 +1,0 @@
-/home/bur/ros2_ws/src/zed-ros2-examples/zed_display_rviz2/launch/display_zed_cam.launch.py

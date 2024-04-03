@@ -65,14 +65,14 @@ void sub_callback(const void *msgin)
   // {
   for (int i = 0; i < MOTOR_COUNT; i++)
   {
-    motor[i].writeMicroseconds((int)(msg->thrusters[i] * 400 + 1500));
+    motor[i].writeMicroseconds((int)(msg->thrusters[i+1] * 400 + 1500));
   }
   // }
   // if (sizeof(msg->buttons) != 0)
   // {
   for (int i = 0; i < UTIL_COUNT; i++)
   {
-    digitalWrite(i * 2 + util_pin_begin, (msg->buttons[i]));
+    digitalWrite(i * 2 + util_pin_begin, (msg->buttons[i*3 - 2]));
   }
   // }
 }
@@ -130,12 +130,12 @@ void destroy_entities()
 void setup()
 {
   // Initialize motors and outputs
-  uint8_t motor_pin_begin = 3;
-  for (uint8_t i = 0; i < MOTOR_COUNT; i++)
+  int motor_pin_begin = 3;
+  for (int i = 0; i < MOTOR_COUNT; i++)
   {
     motor[i].attach(i + motor_pin_begin);
   }
-  for (uint8_t i = 0; i < UTIL_COUNT; i++)
+  for (int i = 0; i < UTIL_COUNT; i++)
   {
     pinMode(i * 2 + util_pin_begin, OUTPUT);
   }

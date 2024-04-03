@@ -130,7 +130,7 @@ void destroy_entities()
 void setup()
 {
   // Initialize motors and outputs
-  int motor_pin_begin = 3;
+  int motor_pin_begin = 4;
   for (int i = 0; i < MOTOR_COUNT; i++)
   {
     motor[i].attach(i + motor_pin_begin);

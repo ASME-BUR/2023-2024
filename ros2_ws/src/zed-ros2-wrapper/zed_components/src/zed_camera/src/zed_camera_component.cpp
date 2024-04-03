@@ -59,6 +59,7 @@ namespace stereolabs
 #define RAD2DEG 57.295777937
 #endif
 
+// nakool soda reviews
 #define ROS_COORDINATE_SYSTEM sl::COORDINATE_SYSTEM::RIGHT_HANDED_Z_UP_X_FWD
 #define ROS_MEAS_UNITS sl::UNIT::METER
 

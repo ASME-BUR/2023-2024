@@ -13,3 +13,6 @@
 	path = ros2_ws/src/uros/micro-ROS-Agent
 	url = https://github.com/micro-ROS/micro-ROS-Agent.git
 	branch = humble
+[submodule "arduino_thruster/.pio/libdeps/dueUSB/micro_ros_platformio"]
+	path = arduino_thruster/.pio/libdeps/dueUSB/micro_ros_platformio
+	url = https://github.com/micro-ROS/micro_ros_platformio

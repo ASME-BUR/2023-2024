@@ -1,0 +1,17 @@
+// generated from rosidl_adapter/resource/msg.idl.em
+// with input from zed_interfaces/msg/Skeleton3D.msg
+// generated code does not contain a copyright notice
+
+#include "zed_interfaces/msg/Keypoint3D.idl"
+
+module zed_interfaces {
+  module msg {
+    typedef zed_interfaces::msg::Keypoint3D zed_interfaces__msg__Keypoint3D;
+    typedef zed_interfaces__msg__Keypoint3D zed_interfaces__msg__Keypoint3D__70[70];
+    @verbatim (language="comment", text=
+      "Skeleton joints")
+    struct Skeleton3D {
+      zed_interfaces__msg__Keypoint3D__70 keypoints;
+    };
+  };
+};

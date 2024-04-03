@@ -1,0 +1,1 @@
+/home/bur/ros2_ws/build/zed_tutorial_video/ament_cmake_core/zed_tutorial_videoConfig.cmake

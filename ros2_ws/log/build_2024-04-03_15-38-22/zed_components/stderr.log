@@ -1,0 +1,17 @@
+CMake Error at CMakeLists.txt:129 (find_package):
+  By not providing "Findnmea_msgs.cmake" in CMAKE_MODULE_PATH this project
+  has asked CMake to find a package configuration file provided by
+  "nmea_msgs", but CMake did not find one.
+
+  Could not find a package configuration file provided by "nmea_msgs" with
+  any of the following names:
+
+    nmea_msgsConfig.cmake
+    nmea_msgs-config.cmake
+
+  Add the installation prefix of "nmea_msgs" to CMAKE_PREFIX_PATH or set
+  "nmea_msgs_DIR" to a directory containing one of the above files.  If
+  "nmea_msgs" provides a separate development package or SDK, be sure it has
+  been installed.
+
+

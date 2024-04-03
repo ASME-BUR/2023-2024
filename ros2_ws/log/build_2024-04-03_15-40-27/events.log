@@ -1,0 +1,506 @@
+[0.000000] (-) TimerEvent: {}
+[0.000498] (zed_interfaces) JobQueued: {'identifier': 'zed_interfaces', 'dependencies': OrderedDict()}
+[0.000767] (zed_components) JobQueued: {'identifier': 'zed_components', 'dependencies': OrderedDict([('zed_interfaces', '/home/bur/ros2_ws/install/zed_interfaces')])}
+[0.000954] (zed_wrapper) JobQueued: {'identifier': 'zed_wrapper', 'dependencies': OrderedDict([('zed_interfaces', '/home/bur/ros2_ws/install/zed_interfaces'), ('zed_components', '/home/bur/ros2_ws/install/zed_components')])}
+[0.001357] (zed_ros2) JobQueued: {'identifier': 'zed_ros2', 'dependencies': OrderedDict([('zed_interfaces', '/home/bur/ros2_ws/install/zed_interfaces'), ('zed_components', '/home/bur/ros2_ws/install/zed_components'), ('zed_wrapper', '/home/bur/ros2_ws/install/zed_wrapper')])}
+[0.001656] (zed_interfaces) JobStarted: {'identifier': 'zed_interfaces'}
+[0.022574] (zed_interfaces) JobProgress: {'identifier': 'zed_interfaces', 'progress': 'cmake'}
+[0.024159] (zed_interfaces) JobProgress: {'identifier': 'zed_interfaces', 'progress': 'build'}
+[0.025496] (zed_interfaces) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/bur/ros2_ws/build/zed_interfaces', '--', '-j6', '-l6'], 'cwd': '/home/bur/ros2_ws/build/zed_interfaces', 'env': OrderedDict([('GJS_DEBUG_TOPICS', 'JS ERROR;JS LOG'), ('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'bur'), ('SSH_AGENT_PID', '2553'), ('XDG_SESSION_TYPE', 'x11'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/aarch64-linux-gnu:/opt/ros/humble/lib:/home/bur/ros2_ws/install/zed_interfaces/lib:/usr/local/cuda-11.4/lib64:'), ('HOME', '/home/bur'), ('OLDPWD', '/home/bur/ros2_ws/src'), ('DESKTOP_SESSION', 'ubuntu'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('MANAGERPID', '2329'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('IM_CONFIG_PHASE', '1'), ('COLCON_PREFIX_PATH', '/home/bur/ros2_ws/install'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'bur'), ('JOURNAL_STREAM', '8:57445'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'bur'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('WINDOWPATH', '2'), ('PATH', '/opt/ros/humble/bin:/usr/local/cuda-11.4/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin'), ('SESSION_MANAGER', 'local/ubuntu:@/tmp/.ICE-unix/2589,unix/ubuntu:/tmp/.ICE-unix/2589'), ('INVOCATION_ID', '624c199e99f74008a224ca9b847bf6a7'), ('XDG_MENU_PREFIX', 'gnome-'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/8773b50c_0e56_401b_a59c_d0ccb0fd15b0'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':1'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/gdm/Xauthority'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('GNOME_TERMINAL_SERVICE', ':1.165'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/opt/ros/humble:/home/bur/ros2_ws/install/zed_interfaces'), ('SHELL', '/bin/bash'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('GJS_DEBUG_OUTPUT', 'stderr'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/bur/ros2_ws/build/zed_interfaces'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/opt/ros/humble/lib/python3.8/site-packages:/home/bur/ros2_ws/install/zed_interfaces/lib/python3.8/site-packages'), ('COLCON', '1'), ('VTE_VERSION', '6003'), ('CMAKE_PREFIX_PATH', '/home/bur/ros2_ws/install/zed_interfaces:/opt/ros/humble')]), 'shell': False}
+[0.099457] (-) TimerEvent: {}
+[0.153940] (zed_interfaces) StdoutLine: {'line': b'[  0%] Built target zed_interfaces__cpp\n'}
+[0.165072] (zed_interfaces) StdoutLine: {'line': b'[ 12%] Built target zed_interfaces__rosidl_generator_c\n'}
+[0.169196] (zed_interfaces) StdoutLine: {'line': b'[ 12%] Built target ament_cmake_python_symlink_zed_interfaces\n'}
+[0.199622] (-) TimerEvent: {}
+[0.211936] (zed_interfaces) StdoutLine: {'line': b'[ 24%] Built target zed_interfaces__rosidl_typesupport_cpp\n'}
+[0.220437] (zed_interfaces) StdoutLine: {'line': b'[ 36%] Built target zed_interfaces__rosidl_typesupport_fastrtps_cpp\n'}
+[0.231762] (zed_interfaces) StdoutLine: {'line': b'[ 48%] Built target zed_interfaces__rosidl_typesupport_introspection_cpp\n'}
+[0.242476] (zed_interfaces) StdoutLine: {'line': b'[ 60%] Built target zed_interfaces__rosidl_typesupport_c\n'}
+[0.247524] (zed_interfaces) StdoutLine: {'line': b'[ 72%] Built target zed_interfaces__rosidl_typesupport_fastrtps_c\n'}
+[0.280031] (zed_interfaces) StdoutLine: {'line': b'[ 84%] Built target zed_interfaces__rosidl_typesupport_introspection_c\n'}
+[0.299796] (-) TimerEvent: {}
+[0.326334] (zed_interfaces) StdoutLine: {'line': b'[ 84%] Built target zed_interfaces\n'}
+[0.375264] (zed_interfaces) StdoutLine: {'line': b'[ 85%] Built target zed_interfaces__py\n'}
+[0.399971] (-) TimerEvent: {}
+[0.454300] (zed_interfaces) StdoutLine: {'line': b'[ 96%] Built target zed_interfaces__rosidl_generator_py\n'}
+[0.500159] (-) TimerEvent: {}
+[0.513721] (zed_interfaces) StdoutLine: {'line': b'[100%] Built target zed_interfaces__rosidl_typesupport_c__pyext\n'}
+[0.514216] (zed_interfaces) StdoutLine: {'line': b'[100%] Built target zed_interfaces__rosidl_typesupport_introspection_c__pyext\n'}
+[0.514399] (zed_interfaces) StdoutLine: {'line': b'[100%] Built target zed_interfaces__rosidl_typesupport_fastrtps_c__pyext\n'}
+[0.600322] (-) TimerEvent: {}
+[0.700968] (-) TimerEvent: {}
+[0.801630] (-) TimerEvent: {}
+[0.861595] (zed_interfaces) StdoutLine: {'line': b'running egg_info\n'}
+[0.862830] (zed_interfaces) StdoutLine: {'line': b'writing zed_interfaces.egg-info/PKG-INFO\n'}
+[0.863376] (zed_interfaces) StdoutLine: {'line': b'writing dependency_links to zed_interfaces.egg-info/dependency_links.txt\n'}
+[0.863746] (zed_interfaces) StdoutLine: {'line': b'writing top-level names to zed_interfaces.egg-info/top_level.txt\n'}
+[0.901708] (-) TimerEvent: {}
+[0.962185] (zed_interfaces) StdoutLine: {'line': b"reading manifest file 'zed_interfaces.egg-info/SOURCES.txt'\n"}
+[0.963369] (zed_interfaces) StdoutLine: {'line': b"writing manifest file 'zed_interfaces.egg-info/SOURCES.txt'\n"}
+[1.001837] (-) TimerEvent: {}
+[1.034124] (zed_interfaces) StdoutLine: {'line': b'[100%] Built target ament_cmake_python_build_zed_interfaces_egg\n'}
+[1.062185] (zed_interfaces) CommandEnded: {'returncode': 0}
+[1.102006] (-) TimerEvent: {}
+[1.202673] (-) TimerEvent: {}
+[1.303370] (-) TimerEvent: {}
+[1.403960] (-) TimerEvent: {}
+[1.504770] (-) TimerEvent: {}
+[1.559985] (zed_interfaces) JobProgress: {'identifier': 'zed_interfaces', 'progress': 'install'}
+[1.586081] (zed_interfaces) Command: {'cmd': ['/usr/bin/cmake', '--install', '/home/bur/ros2_ws/build/zed_interfaces'], 'cwd': '/home/bur/ros2_ws/build/zed_interfaces', 'env': OrderedDict([('GJS_DEBUG_TOPICS', 'JS ERROR;JS LOG'), ('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'bur'), ('SSH_AGENT_PID', '2553'), ('XDG_SESSION_TYPE', 'x11'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/aarch64-linux-gnu:/opt/ros/humble/lib:/home/bur/ros2_ws/install/zed_interfaces/lib:/usr/local/cuda-11.4/lib64:'), ('HOME', '/home/bur'), ('OLDPWD', '/home/bur/ros2_ws/src'), ('DESKTOP_SESSION', 'ubuntu'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('MANAGERPID', '2329'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('IM_CONFIG_PHASE', '1'), ('COLCON_PREFIX_PATH', '/home/bur/ros2_ws/install'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'bur'), ('JOURNAL_STREAM', '8:57445'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'bur'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('WINDOWPATH', '2'), ('PATH', '/opt/ros/humble/bin:/usr/local/cuda-11.4/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin'), ('SESSION_MANAGER', 'local/ubuntu:@/tmp/.ICE-unix/2589,unix/ubuntu:/tmp/.ICE-unix/2589'), ('INVOCATION_ID', '624c199e99f74008a224ca9b847bf6a7'), ('XDG_MENU_PREFIX', 'gnome-'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/8773b50c_0e56_401b_a59c_d0ccb0fd15b0'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':1'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/gdm/Xauthority'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('GNOME_TERMINAL_SERVICE', ':1.165'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/opt/ros/humble:/home/bur/ros2_ws/install/zed_interfaces'), ('SHELL', '/bin/bash'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('GJS_DEBUG_OUTPUT', 'stderr'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/bur/ros2_ws/build/zed_interfaces'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/opt/ros/humble/lib/python3.8/site-packages:/home/bur/ros2_ws/install/zed_interfaces/lib/python3.8/site-packages'), ('COLCON', '1'), ('VTE_VERSION', '6003'), ('CMAKE_PREFIX_PATH', '/home/bur/ros2_ws/install/zed_interfaces:/opt/ros/humble')]), 'shell': False}
+[1.604942] (-) TimerEvent: {}
+[1.611339] (zed_interfaces) StdoutLine: {'line': b'-- Install configuration: "Release"\n'}
+[1.612683] (zed_interfaces) StdoutLine: {'line': b'-- Execute custom install script\n'}
+[1.613333] (zed_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/share/ament_index/resource_index/rosidl_interfaces/zed_interfaces\n'}
+[1.615577] (zed_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/include/zed_interfaces/zed_interfaces/msg/bounding_box2_df.h\n'}
+[1.615890] (zed_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/include/zed_interfaces/zed_interfaces/msg/bounding_box2_di.h\n'}
+[1.616207] (zed_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/include/zed_interfaces/zed_interfaces/msg/bounding_box3_d.h\n'}
+[1.616563] (zed_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/include/zed_interfaces/zed_interfaces/msg/depth_info_stamped.h\n'}
+[1.616859] (zed_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/include/zed_interfaces/zed_interfaces/msg/detail/bounding_box2_df__functions.h\n'}
+[1.617182] (zed_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/include/zed_interfaces/zed_interfaces/msg/detail/bounding_box2_df__struct.h\n'}
+[1.617529] (zed_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/include/zed_interfaces/zed_interfaces/msg/detail/bounding_box2_df__type_support.h\n'}
+[1.617854] (zed_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/include/zed_interfaces/zed_interfaces/msg/detail/bounding_box2_di__functions.h\n'}
+[1.618170] (zed_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/include/zed_interfaces/zed_interfaces/msg/detail/bounding_box2_di__struct.h\n'}
+[1.618521] (zed_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/include/zed_interfaces/zed_interfaces/msg/detail/bounding_box2_di__type_support.h\n'}
+[1.618807] (zed_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/include/zed_interfaces/zed_interfaces/msg/detail/bounding_box3_d__functions.h\n'}
+[1.619115] (zed_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/include/zed_interfaces/zed_interfaces/msg/detail/bounding_box3_d__struct.h\n'}
+[1.619425] (zed_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/include/zed_interfaces/zed_interfaces/msg/detail/bounding_box3_d__type_support.h\n'}
+[1.619740] (zed_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/include/zed_interfaces/zed_interfaces/msg/detail/depth_info_stamped__functions.h\n'}
+[1.620057] (zed_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/include/zed_interfaces/zed_interfaces/msg/detail/depth_info_stamped__struct.h\n'}
+[1.620367] (zed_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/include/zed_interfaces/zed_interfaces/msg/detail/depth_info_stamped__type_support.h\n'}
+[1.620678] (zed_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/include/zed_interfaces/zed_interfaces/msg/detail/heartbeat__functions.h\n'}
+[1.620990] (zed_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/include/zed_interfaces/zed_interfaces/msg/detail/heartbeat__struct.h\n'}
+[1.621303] (zed_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/include/zed_interfaces/zed_interfaces/msg/detail/heartbeat__type_support.h\n'}
+[1.621670] (zed_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/include/zed_interfaces/zed_interfaces/msg/detail/keypoint2_df__functions.h\n'}
+[1.621985] (zed_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/include/zed_interfaces/zed_interfaces/msg/detail/keypoint2_df__struct.h\n'}
+[1.622296] (zed_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/include/zed_interfaces/zed_interfaces/msg/detail/keypoint2_df__type_support.h\n'}
+[1.622606] (zed_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/include/zed_interfaces/zed_interfaces/msg/detail/keypoint2_di__functions.h\n'}
+[1.622921] (zed_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/include/zed_interfaces/zed_interfaces/msg/detail/keypoint2_di__struct.h\n'}
+[1.623230] (zed_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/include/zed_interfaces/zed_interfaces/msg/detail/keypoint2_di__type_support.h\n'}
+[1.623543] (zed_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/include/zed_interfaces/zed_interfaces/msg/detail/keypoint3_d__functions.h\n'}
+[1.623851] (zed_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/include/zed_interfaces/zed_interfaces/msg/detail/keypoint3_d__struct.h\n'}
+[1.624164] (zed_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/include/zed_interfaces/zed_interfaces/msg/detail/keypoint3_d__type_support.h\n'}
+[1.624480] (zed_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/include/zed_interfaces/zed_interfaces/msg/detail/object__functions.h\n'}
+[1.624792] (zed_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/include/zed_interfaces/zed_interfaces/msg/detail/object__struct.h\n'}
+[1.625112] (zed_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/include/zed_interfaces/zed_interfaces/msg/detail/object__type_support.h\n'}
+[1.625422] (zed_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/include/zed_interfaces/zed_interfaces/msg/detail/objects_stamped__functions.h\n'}
+[1.626032] (zed_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/include/zed_interfaces/zed_interfaces/msg/detail/objects_stamped__struct.h\n'}
+[1.626251] (zed_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/include/zed_interfaces/zed_interfaces/msg/detail/objects_stamped__type_support.h\n'}
+[1.626445] (zed_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/include/zed_interfaces/zed_interfaces/msg/detail/plane_stamped__functions.h\n'}
+[1.626718] (zed_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/include/zed_interfaces/zed_interfaces/msg/detail/plane_stamped__struct.h\n'}
+[1.627031] (zed_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/include/zed_interfaces/zed_interfaces/msg/detail/plane_stamped__type_support.h\n'}
+[1.627342] (zed_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/include/zed_interfaces/zed_interfaces/msg/detail/pos_track_status__functions.h\n'}
+[1.627653] (zed_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/include/zed_interfaces/zed_interfaces/msg/detail/pos_track_status__struct.h\n'}
+[1.627964] (zed_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/include/zed_interfaces/zed_interfaces/msg/detail/pos_track_status__type_support.h\n'}
+[1.628272] (zed_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/include/zed_interfaces/zed_interfaces/msg/detail/skeleton2_d__functions.h\n'}
+[1.628585] (zed_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/include/zed_interfaces/zed_interfaces/msg/detail/skeleton2_d__struct.h\n'}
+[1.628891] (zed_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/include/zed_interfaces/zed_interfaces/msg/detail/skeleton2_d__type_support.h\n'}
+[1.629201] (zed_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/include/zed_interfaces/zed_interfaces/msg/detail/skeleton3_d__functions.h\n'}
+[1.629530] (zed_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/include/zed_interfaces/zed_interfaces/msg/detail/skeleton3_d__struct.h\n'}
+[1.629843] (zed_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/include/zed_interfaces/zed_interfaces/msg/detail/skeleton3_d__type_support.h\n'}
+[1.630149] (zed_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/include/zed_interfaces/zed_interfaces/msg/heartbeat.h\n'}
+[1.630447] (zed_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/include/zed_interfaces/zed_interfaces/msg/keypoint2_df.h\n'}
+[1.630749] (zed_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/include/zed_interfaces/zed_interfaces/msg/keypoint2_di.h\n'}
+[1.631050] (zed_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/include/zed_interfaces/zed_interfaces/msg/keypoint3_d.h\n'}
+[1.631350] (zed_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/include/zed_interfaces/zed_interfaces/msg/object.h\n'}
+[1.631660] (zed_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/include/zed_interfaces/zed_interfaces/msg/objects_stamped.h\n'}
+[1.632022] (zed_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/include/zed_interfaces/zed_interfaces/msg/plane_stamped.h\n'}
+[1.632318] (zed_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/include/zed_interfaces/zed_interfaces/msg/pos_track_status.h\n'}
+[1.632597] (zed_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/include/zed_interfaces/zed_interfaces/msg/rosidl_generator_c__visibility_control.h\n'}
+[1.632880] (zed_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/include/zed_interfaces/zed_interfaces/msg/skeleton2_d.h\n'}
+[1.633175] (zed_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/include/zed_interfaces/zed_interfaces/msg/skeleton3_d.h\n'}
+[1.633504] (zed_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/include/zed_interfaces/zed_interfaces/srv/detail/set_pose__functions.h\n'}
+[1.633850] (zed_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/include/zed_interfaces/zed_interfaces/srv/detail/set_pose__struct.h\n'}
+[1.634148] (zed_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/include/zed_interfaces/zed_interfaces/srv/detail/set_pose__type_support.h\n'}
+[1.634454] (zed_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/include/zed_interfaces/zed_interfaces/srv/detail/set_roi__functions.h\n'}
+[1.634760] (zed_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/include/zed_interfaces/zed_interfaces/srv/detail/set_roi__struct.h\n'}
+[1.635068] (zed_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/include/zed_interfaces/zed_interfaces/srv/detail/set_roi__type_support.h\n'}
+[1.635377] (zed_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/include/zed_interfaces/zed_interfaces/srv/detail/start_svo_rec__functions.h\n'}
+[1.635739] (zed_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/include/zed_interfaces/zed_interfaces/srv/detail/start_svo_rec__struct.h\n'}
+[1.636005] (zed_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/include/zed_interfaces/zed_interfaces/srv/detail/start_svo_rec__type_support.h\n'}
+[1.636296] (zed_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/include/zed_interfaces/zed_interfaces/srv/set_pose.h\n'}
+[1.636596] (zed_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/include/zed_interfaces/zed_interfaces/srv/set_roi.h\n'}
+[1.636900] (zed_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/include/zed_interfaces/zed_interfaces/srv/start_svo_rec.h\n'}
+[1.637421] (zed_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/share/zed_interfaces/environment/library_path.sh\n'}
+[1.638415] (zed_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/share/zed_interfaces/environment/library_path.dsv\n'}
+[1.640437] (zed_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/include/zed_interfaces/zed_interfaces/msg/detail/bounding_box2_df__rosidl_typesupport_fastrtps_c.h\n'}
+[1.640879] (zed_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/include/zed_interfaces/zed_interfaces/msg/detail/bounding_box2_di__rosidl_typesupport_fastrtps_c.h\n'}
+[1.641317] (zed_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/include/zed_interfaces/zed_interfaces/msg/detail/bounding_box3_d__rosidl_typesupport_fastrtps_c.h\n'}
+[1.641624] (zed_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/include/zed_interfaces/zed_interfaces/msg/detail/depth_info_stamped__rosidl_typesupport_fastrtps_c.h\n'}
+[1.641856] (zed_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/include/zed_interfaces/zed_interfaces/msg/detail/heartbeat__rosidl_typesupport_fastrtps_c.h\n'}
+[1.642142] (zed_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/include/zed_interfaces/zed_interfaces/msg/detail/keypoint2_df__rosidl_typesupport_fastrtps_c.h\n'}
+[1.642464] (zed_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/include/zed_interfaces/zed_interfaces/msg/detail/keypoint2_di__rosidl_typesupport_fastrtps_c.h\n'}
+[1.642852] (zed_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/include/zed_interfaces/zed_interfaces/msg/detail/keypoint3_d__rosidl_typesupport_fastrtps_c.h\n'}
+[1.643145] (zed_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/include/zed_interfaces/zed_interfaces/msg/detail/object__rosidl_typesupport_fastrtps_c.h\n'}
+[1.643465] (zed_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/include/zed_interfaces/zed_interfaces/msg/detail/objects_stamped__rosidl_typesupport_fastrtps_c.h\n'}
+[1.643768] (zed_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/include/zed_interfaces/zed_interfaces/msg/detail/plane_stamped__rosidl_typesupport_fastrtps_c.h\n'}
+[1.644120] (zed_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/include/zed_interfaces/zed_interfaces/msg/detail/pos_track_status__rosidl_typesupport_fastrtps_c.h\n'}
+[1.644406] (zed_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/include/zed_interfaces/zed_interfaces/msg/detail/skeleton2_d__rosidl_typesupport_fastrtps_c.h\n'}
+[1.644710] (zed_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/include/zed_interfaces/zed_interfaces/msg/detail/skeleton3_d__rosidl_typesupport_fastrtps_c.h\n'}
+[1.645014] (zed_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/include/zed_interfaces/zed_interfaces/msg/rosidl_typesupport_fastrtps_c__visibility_control.h\n'}
+[1.645334] (zed_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/include/zed_interfaces/zed_interfaces/srv/detail/set_pose__rosidl_typesupport_fastrtps_c.h\n'}
+[1.645668] (zed_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/include/zed_interfaces/zed_interfaces/srv/detail/set_roi__rosidl_typesupport_fastrtps_c.h\n'}
+[1.646000] (zed_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/include/zed_interfaces/zed_interfaces/srv/detail/start_svo_rec__rosidl_typesupport_fastrtps_c.h\n'}
+[1.647921] (zed_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/include/zed_interfaces/zed_interfaces/msg/bounding_box2_df.hpp\n'}
+[1.648238] (zed_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/include/zed_interfaces/zed_interfaces/msg/bounding_box2_di.hpp\n'}
+[1.648554] (zed_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/include/zed_interfaces/zed_interfaces/msg/bounding_box3_d.hpp\n'}
+[1.648868] (zed_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/include/zed_interfaces/zed_interfaces/msg/depth_info_stamped.hpp\n'}
+[1.649194] (zed_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/include/zed_interfaces/zed_interfaces/msg/detail/bounding_box2_df__builder.hpp\n'}
+[1.649532] (zed_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/include/zed_interfaces/zed_interfaces/msg/detail/bounding_box2_df__struct.hpp\n'}
+[1.649851] (zed_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/include/zed_interfaces/zed_interfaces/msg/detail/bounding_box2_df__traits.hpp\n'}
+[1.650170] (zed_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/include/zed_interfaces/zed_interfaces/msg/detail/bounding_box2_di__builder.hpp\n'}
+[1.650481] (zed_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/include/zed_interfaces/zed_interfaces/msg/detail/bounding_box2_di__struct.hpp\n'}
+[1.650792] (zed_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/include/zed_interfaces/zed_interfaces/msg/detail/bounding_box2_di__traits.hpp\n'}
+[1.651103] (zed_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/include/zed_interfaces/zed_interfaces/msg/detail/bounding_box3_d__builder.hpp\n'}
+[1.651414] (zed_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/include/zed_interfaces/zed_interfaces/msg/detail/bounding_box3_d__struct.hpp\n'}
+[1.651730] (zed_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/include/zed_interfaces/zed_interfaces/msg/detail/bounding_box3_d__traits.hpp\n'}
+[1.652040] (zed_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/include/zed_interfaces/zed_interfaces/msg/detail/depth_info_stamped__builder.hpp\n'}
+[1.652357] (zed_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/include/zed_interfaces/zed_interfaces/msg/detail/depth_info_stamped__struct.hpp\n'}
+[1.652678] (zed_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/include/zed_interfaces/zed_interfaces/msg/detail/depth_info_stamped__traits.hpp\n'}
+[1.652990] (zed_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/include/zed_interfaces/zed_interfaces/msg/detail/heartbeat__builder.hpp\n'}
+[1.653302] (zed_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/include/zed_interfaces/zed_interfaces/msg/detail/heartbeat__struct.hpp\n'}
+[1.653653] (zed_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/include/zed_interfaces/zed_interfaces/msg/detail/heartbeat__traits.hpp\n'}
+[1.653968] (zed_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/include/zed_interfaces/zed_interfaces/msg/detail/keypoint2_df__builder.hpp\n'}
+[1.654278] (zed_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/include/zed_interfaces/zed_interfaces/msg/detail/keypoint2_df__struct.hpp\n'}
+[1.654585] (zed_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/include/zed_interfaces/zed_interfaces/msg/detail/keypoint2_df__traits.hpp\n'}
+[1.654893] (zed_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/include/zed_interfaces/zed_interfaces/msg/detail/keypoint2_di__builder.hpp\n'}
+[1.655202] (zed_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/include/zed_interfaces/zed_interfaces/msg/detail/keypoint2_di__struct.hpp\n'}
+[1.655509] (zed_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/include/zed_interfaces/zed_interfaces/msg/detail/keypoint2_di__traits.hpp\n'}
+[1.655813] (zed_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/include/zed_interfaces/zed_interfaces/msg/detail/keypoint3_d__builder.hpp\n'}
+[1.656122] (zed_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/include/zed_interfaces/zed_interfaces/msg/detail/keypoint3_d__struct.hpp\n'}
+[1.656430] (zed_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/include/zed_interfaces/zed_interfaces/msg/detail/keypoint3_d__traits.hpp\n'}
+[1.656742] (zed_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/include/zed_interfaces/zed_interfaces/msg/detail/object__builder.hpp\n'}
+[1.657054] (zed_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/include/zed_interfaces/zed_interfaces/msg/detail/object__struct.hpp\n'}
+[1.657361] (zed_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/include/zed_interfaces/zed_interfaces/msg/detail/object__traits.hpp\n'}
+[1.657692] (zed_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/include/zed_interfaces/zed_interfaces/msg/detail/objects_stamped__builder.hpp\n'}
+[1.658003] (zed_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/include/zed_interfaces/zed_interfaces/msg/detail/objects_stamped__struct.hpp\n'}
+[1.658307] (zed_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/include/zed_interfaces/zed_interfaces/msg/detail/objects_stamped__traits.hpp\n'}
+[1.658620] (zed_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/include/zed_interfaces/zed_interfaces/msg/detail/plane_stamped__builder.hpp\n'}
+[1.658963] (zed_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/include/zed_interfaces/zed_interfaces/msg/detail/plane_stamped__struct.hpp\n'}
+[1.659249] (zed_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/include/zed_interfaces/zed_interfaces/msg/detail/plane_stamped__traits.hpp\n'}
+[1.659550] (zed_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/include/zed_interfaces/zed_interfaces/msg/detail/pos_track_status__builder.hpp\n'}
+[1.659856] (zed_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/include/zed_interfaces/zed_interfaces/msg/detail/pos_track_status__struct.hpp\n'}
+[1.660162] (zed_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/include/zed_interfaces/zed_interfaces/msg/detail/pos_track_status__traits.hpp\n'}
+[1.660467] (zed_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/include/zed_interfaces/zed_interfaces/msg/detail/skeleton2_d__builder.hpp\n'}
+[1.660772] (zed_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/include/zed_interfaces/zed_interfaces/msg/detail/skeleton2_d__struct.hpp\n'}
+[1.661080] (zed_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/include/zed_interfaces/zed_interfaces/msg/detail/skeleton2_d__traits.hpp\n'}
+[1.661390] (zed_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/include/zed_interfaces/zed_interfaces/msg/detail/skeleton3_d__builder.hpp\n'}
+[1.661731] (zed_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/include/zed_interfaces/zed_interfaces/msg/detail/skeleton3_d__struct.hpp\n'}
+[1.662036] (zed_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/include/zed_interfaces/zed_interfaces/msg/detail/skeleton3_d__traits.hpp\n'}
+[1.662344] (zed_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/include/zed_interfaces/zed_interfaces/msg/heartbeat.hpp\n'}
+[1.662644] (zed_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/include/zed_interfaces/zed_interfaces/msg/keypoint2_df.hpp\n'}
+[1.662942] (zed_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/include/zed_interfaces/zed_interfaces/msg/keypoint2_di.hpp\n'}
+[1.663242] (zed_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/include/zed_interfaces/zed_interfaces/msg/keypoint3_d.hpp\n'}
+[1.663539] (zed_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/include/zed_interfaces/zed_interfaces/msg/object.hpp\n'}
+[1.663841] (zed_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/include/zed_interfaces/zed_interfaces/msg/objects_stamped.hpp\n'}
+[1.664150] (zed_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/include/zed_interfaces/zed_interfaces/msg/plane_stamped.hpp\n'}
+[1.664451] (zed_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/include/zed_interfaces/zed_interfaces/msg/pos_track_status.hpp\n'}
+[1.664750] (zed_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/include/zed_interfaces/zed_interfaces/msg/skeleton2_d.hpp\n'}
+[1.665053] (zed_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/include/zed_interfaces/zed_interfaces/msg/skeleton3_d.hpp\n'}
+[1.665364] (zed_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/include/zed_interfaces/zed_interfaces/srv/detail/set_pose__builder.hpp\n'}
+[1.665723] (zed_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/include/zed_interfaces/zed_interfaces/srv/detail/set_pose__struct.hpp\n'}
+[1.666035] (zed_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/include/zed_interfaces/zed_interfaces/srv/detail/set_pose__traits.hpp\n'}
+[1.666345] (zed_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/include/zed_interfaces/zed_interfaces/srv/detail/set_roi__builder.hpp\n'}
+[1.666654] (zed_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/include/zed_interfaces/zed_interfaces/srv/detail/set_roi__struct.hpp\n'}
+[1.666959] (zed_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/include/zed_interfaces/zed_interfaces/srv/detail/set_roi__traits.hpp\n'}
+[1.667269] (zed_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/include/zed_interfaces/zed_interfaces/srv/detail/start_svo_rec__builder.hpp\n'}
+[1.667576] (zed_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/include/zed_interfaces/zed_interfaces/srv/detail/start_svo_rec__struct.hpp\n'}
+[1.667883] (zed_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/include/zed_interfaces/zed_interfaces/srv/detail/start_svo_rec__traits.hpp\n'}
+[1.668186] (zed_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/include/zed_interfaces/zed_interfaces/srv/set_pose.hpp\n'}
+[1.668486] (zed_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/include/zed_interfaces/zed_interfaces/srv/set_roi.hpp\n'}
+[1.668786] (zed_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/include/zed_interfaces/zed_interfaces/srv/start_svo_rec.hpp\n'}
+[1.670909] (zed_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/include/zed_interfaces/zed_interfaces/msg/detail/bounding_box2_df__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[1.671240] (zed_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/include/zed_interfaces/zed_interfaces/msg/detail/bounding_box2_di__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[1.671575] (zed_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/include/zed_interfaces/zed_interfaces/msg/detail/bounding_box3_d__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[1.671897] (zed_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/include/zed_interfaces/zed_interfaces/msg/detail/depth_info_stamped__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[1.672221] (zed_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/include/zed_interfaces/zed_interfaces/msg/detail/heartbeat__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[1.672540] (zed_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/include/zed_interfaces/zed_interfaces/msg/detail/keypoint2_df__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[1.672867] (zed_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/include/zed_interfaces/zed_interfaces/msg/detail/keypoint2_di__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[1.673185] (zed_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/include/zed_interfaces/zed_interfaces/msg/detail/keypoint3_d__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[1.673544] (zed_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/include/zed_interfaces/zed_interfaces/msg/detail/object__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[1.673867] (zed_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/include/zed_interfaces/zed_interfaces/msg/detail/objects_stamped__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[1.674181] (zed_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/include/zed_interfaces/zed_interfaces/msg/detail/plane_stamped__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[1.674499] (zed_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/include/zed_interfaces/zed_interfaces/msg/detail/pos_track_status__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[1.674811] (zed_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/include/zed_interfaces/zed_interfaces/msg/detail/skeleton2_d__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[1.675124] (zed_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/include/zed_interfaces/zed_interfaces/msg/detail/skeleton3_d__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[1.675425] (zed_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/include/zed_interfaces/zed_interfaces/msg/rosidl_typesupport_fastrtps_cpp__visibility_control.h\n'}
+[1.675738] (zed_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/include/zed_interfaces/zed_interfaces/srv/detail/set_pose__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[1.676086] (zed_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/include/zed_interfaces/zed_interfaces/srv/detail/set_roi__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[1.676396] (zed_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/include/zed_interfaces/zed_interfaces/srv/detail/start_svo_rec__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[1.677745] (zed_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/include/zed_interfaces/zed_interfaces/msg/detail/bounding_box2_df__rosidl_typesupport_introspection_c.h\n'}
+[1.678074] (zed_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/include/zed_interfaces/zed_interfaces/msg/detail/bounding_box2_di__rosidl_typesupport_introspection_c.h\n'}
+[1.678405] (zed_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/include/zed_interfaces/zed_interfaces/msg/detail/bounding_box3_d__rosidl_typesupport_introspection_c.h\n'}
+[1.678736] (zed_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/include/zed_interfaces/zed_interfaces/msg/detail/depth_info_stamped__rosidl_typesupport_introspection_c.h\n'}
+[1.679063] (zed_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/include/zed_interfaces/zed_interfaces/msg/detail/heartbeat__rosidl_typesupport_introspection_c.h\n'}
+[1.679384] (zed_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/include/zed_interfaces/zed_interfaces/msg/detail/keypoint2_df__rosidl_typesupport_introspection_c.h\n'}
+[1.679709] (zed_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/include/zed_interfaces/zed_interfaces/msg/detail/keypoint2_di__rosidl_typesupport_introspection_c.h\n'}
+[1.680028] (zed_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/include/zed_interfaces/zed_interfaces/msg/detail/keypoint3_d__rosidl_typesupport_introspection_c.h\n'}
+[1.680347] (zed_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/include/zed_interfaces/zed_interfaces/msg/detail/object__rosidl_typesupport_introspection_c.h\n'}
+[1.680674] (zed_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/include/zed_interfaces/zed_interfaces/msg/detail/objects_stamped__rosidl_typesupport_introspection_c.h\n'}
+[1.680992] (zed_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/include/zed_interfaces/zed_interfaces/msg/detail/plane_stamped__rosidl_typesupport_introspection_c.h\n'}
+[1.681310] (zed_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/include/zed_interfaces/zed_interfaces/msg/detail/pos_track_status__rosidl_typesupport_introspection_c.h\n'}
+[1.681654] (zed_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/include/zed_interfaces/zed_interfaces/msg/detail/skeleton2_d__rosidl_typesupport_introspection_c.h\n'}
+[1.681969] (zed_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/include/zed_interfaces/zed_interfaces/msg/detail/skeleton3_d__rosidl_typesupport_introspection_c.h\n'}
+[1.682277] (zed_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/include/zed_interfaces/zed_interfaces/msg/rosidl_typesupport_introspection_c__visibility_control.h\n'}
+[1.682590] (zed_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/include/zed_interfaces/zed_interfaces/srv/detail/set_pose__rosidl_typesupport_introspection_c.h\n'}
+[1.682905] (zed_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/include/zed_interfaces/zed_interfaces/srv/detail/set_roi__rosidl_typesupport_introspection_c.h\n'}
+[1.683225] (zed_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/include/zed_interfaces/zed_interfaces/srv/detail/start_svo_rec__rosidl_typesupport_introspection_c.h\n'}
+[1.684567] (zed_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/include/zed_interfaces/zed_interfaces/msg/detail/bounding_box2_df__rosidl_typesupport_introspection_cpp.hpp\n'}
+[1.684902] (zed_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/include/zed_interfaces/zed_interfaces/msg/detail/bounding_box2_di__rosidl_typesupport_introspection_cpp.hpp\n'}
+[1.685233] (zed_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/include/zed_interfaces/zed_interfaces/msg/detail/bounding_box3_d__rosidl_typesupport_introspection_cpp.hpp\n'}
+[1.685600] (zed_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/include/zed_interfaces/zed_interfaces/msg/detail/depth_info_stamped__rosidl_typesupport_introspection_cpp.hpp\n'}
+[1.685931] (zed_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/include/zed_interfaces/zed_interfaces/msg/detail/heartbeat__rosidl_typesupport_introspection_cpp.hpp\n'}
+[1.686254] (zed_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/include/zed_interfaces/zed_interfaces/msg/detail/keypoint2_df__rosidl_typesupport_introspection_cpp.hpp\n'}
+[1.686577] (zed_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/include/zed_interfaces/zed_interfaces/msg/detail/keypoint2_di__rosidl_typesupport_introspection_cpp.hpp\n'}
+[1.686899] (zed_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/include/zed_interfaces/zed_interfaces/msg/detail/keypoint3_d__rosidl_typesupport_introspection_cpp.hpp\n'}
+[1.687220] (zed_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/include/zed_interfaces/zed_interfaces/msg/detail/object__rosidl_typesupport_introspection_cpp.hpp\n'}
+[1.687571] (zed_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/include/zed_interfaces/zed_interfaces/msg/detail/objects_stamped__rosidl_typesupport_introspection_cpp.hpp\n'}
+[1.687890] (zed_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/include/zed_interfaces/zed_interfaces/msg/detail/plane_stamped__rosidl_typesupport_introspection_cpp.hpp\n'}
+[1.688208] (zed_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/include/zed_interfaces/zed_interfaces/msg/detail/pos_track_status__rosidl_typesupport_introspection_cpp.hpp\n'}
+[1.688528] (zed_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/include/zed_interfaces/zed_interfaces/msg/detail/skeleton2_d__rosidl_typesupport_introspection_cpp.hpp\n'}
+[1.688845] (zed_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/include/zed_interfaces/zed_interfaces/msg/detail/skeleton3_d__rosidl_typesupport_introspection_cpp.hpp\n'}
+[1.689166] (zed_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/include/zed_interfaces/zed_interfaces/srv/detail/set_pose__rosidl_typesupport_introspection_cpp.hpp\n'}
+[1.689497] (zed_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/include/zed_interfaces/zed_interfaces/srv/detail/set_roi__rosidl_typesupport_introspection_cpp.hpp\n'}
+[1.689828] (zed_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/include/zed_interfaces/zed_interfaces/srv/detail/start_svo_rec__rosidl_typesupport_introspection_cpp.hpp\n'}
+[1.690311] (zed_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/share/zed_interfaces/environment/pythonpath.sh\n'}
+[1.690765] (zed_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/share/zed_interfaces/environment/pythonpath.dsv\n'}
+[1.691596] (zed_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/lib/python3.9/site-packages/zed_interfaces-4.0.0-py3.9.egg-info/PKG-INFO\n'}
+[1.691912] (zed_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/lib/python3.9/site-packages/zed_interfaces-4.0.0-py3.9.egg-info/SOURCES.txt\n'}
+[1.692258] (zed_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/lib/python3.9/site-packages/zed_interfaces-4.0.0-py3.9.egg-info/dependency_links.txt\n'}
+[1.692551] (zed_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/lib/python3.9/site-packages/zed_interfaces-4.0.0-py3.9.egg-info/top_level.txt\n'}
+[1.694822] (zed_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/lib/python3.9/site-packages/zed_interfaces/__init__.py\n'}
+[1.695089] (zed_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/lib/python3.9/site-packages/zed_interfaces/_zed_interfaces_s.ep.rosidl_typesupport_c.c\n'}
+[1.695391] (zed_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/lib/python3.9/site-packages/zed_interfaces/_zed_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c\n'}
+[1.695696] (zed_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/lib/python3.9/site-packages/zed_interfaces/_zed_interfaces_s.ep.rosidl_typesupport_introspection_c.c\n'}
+[1.695999] (zed_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/lib/python3.9/site-packages/zed_interfaces/libzed_interfaces__rosidl_generator_py.so\n'}
+[1.696311] (zed_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/lib/python3.9/site-packages/zed_interfaces/msg/__init__.py\n'}
+[1.696617] (zed_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/lib/python3.9/site-packages/zed_interfaces/msg/_bounding_box2_df.py\n'}
+[1.696929] (zed_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/lib/python3.9/site-packages/zed_interfaces/msg/_bounding_box2_df_s.c\n'}
+[1.697233] (zed_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/lib/python3.9/site-packages/zed_interfaces/msg/_bounding_box2_di.py\n'}
+[1.697558] (zed_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/lib/python3.9/site-packages/zed_interfaces/msg/_bounding_box2_di_s.c\n'}
+[1.697864] (zed_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/lib/python3.9/site-packages/zed_interfaces/msg/_bounding_box3_d.py\n'}
+[1.698171] (zed_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/lib/python3.9/site-packages/zed_interfaces/msg/_bounding_box3_d_s.c\n'}
+[1.698475] (zed_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/lib/python3.9/site-packages/zed_interfaces/msg/_depth_info_stamped.py\n'}
+[1.698776] (zed_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/lib/python3.9/site-packages/zed_interfaces/msg/_depth_info_stamped_s.c\n'}
+[1.699079] (zed_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/lib/python3.9/site-packages/zed_interfaces/msg/_heartbeat.py\n'}
+[1.699381] (zed_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/lib/python3.9/site-packages/zed_interfaces/msg/_heartbeat_s.c\n'}
+[1.699681] (zed_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/lib/python3.9/site-packages/zed_interfaces/msg/_keypoint2_df.py\n'}
+[1.699981] (zed_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/lib/python3.9/site-packages/zed_interfaces/msg/_keypoint2_df_s.c\n'}
+[1.700280] (zed_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/lib/python3.9/site-packages/zed_interfaces/msg/_keypoint2_di.py\n'}
+[1.700579] (zed_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/lib/python3.9/site-packages/zed_interfaces/msg/_keypoint2_di_s.c\n'}
+[1.700881] (zed_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/lib/python3.9/site-packages/zed_interfaces/msg/_keypoint3_d.py\n'}
+[1.701198] (zed_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/lib/python3.9/site-packages/zed_interfaces/msg/_keypoint3_d_s.c\n'}
+[1.701528] (zed_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/lib/python3.9/site-packages/zed_interfaces/msg/_object.py\n'}
+[1.701834] (zed_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/lib/python3.9/site-packages/zed_interfaces/msg/_object_s.c\n'}
+[1.702135] (zed_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/lib/python3.9/site-packages/zed_interfaces/msg/_objects_stamped.py\n'}
+[1.702433] (zed_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/lib/python3.9/site-packages/zed_interfaces/msg/_objects_stamped_s.c\n'}
+[1.702734] (zed_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/lib/python3.9/site-packages/zed_interfaces/msg/_plane_stamped.py\n'}
+[1.703033] (zed_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/lib/python3.9/site-packages/zed_interfaces/msg/_plane_stamped_s.c\n'}
+[1.703337] (zed_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/lib/python3.9/site-packages/zed_interfaces/msg/_pos_track_status.py\n'}
+[1.703639] (zed_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/lib/python3.9/site-packages/zed_interfaces/msg/_pos_track_status_s.c\n'}
+[1.703942] (zed_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/lib/python3.9/site-packages/zed_interfaces/msg/_skeleton2_d.py\n'}
+[1.704245] (zed_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/lib/python3.9/site-packages/zed_interfaces/msg/_skeleton2_d_s.c\n'}
+[1.704546] (zed_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/lib/python3.9/site-packages/zed_interfaces/msg/_skeleton3_d.py\n'}
+[1.704845] (zed_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/lib/python3.9/site-packages/zed_interfaces/msg/_skeleton3_d_s.c\n'}
+[1.704990] (-) TimerEvent: {}
+[1.705241] (zed_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/lib/python3.9/site-packages/zed_interfaces/srv/__init__.py\n'}
+[1.705464] (zed_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/lib/python3.9/site-packages/zed_interfaces/srv/_set_pose.py\n'}
+[1.705801] (zed_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/lib/python3.9/site-packages/zed_interfaces/srv/_set_pose_s.c\n'}
+[1.706144] (zed_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/lib/python3.9/site-packages/zed_interfaces/srv/_set_roi.py\n'}
+[1.706419] (zed_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/lib/python3.9/site-packages/zed_interfaces/srv/_set_roi_s.c\n'}
+[1.706713] (zed_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/lib/python3.9/site-packages/zed_interfaces/srv/_start_svo_rec.py\n'}
+[1.707013] (zed_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/lib/python3.9/site-packages/zed_interfaces/srv/_start_svo_rec_s.c\n'}
+[1.707308] (zed_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/lib/python3.9/site-packages/zed_interfaces/zed_interfaces_s__rosidl_typesupport_c.cpython-38-aarch64-linux-gnu.so\n'}
+[1.707609] (zed_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/lib/python3.9/site-packages/zed_interfaces/zed_interfaces_s__rosidl_typesupport_fastrtps_c.cpython-38-aarch64-linux-gnu.so\n'}
+[1.707911] (zed_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/lib/python3.9/site-packages/zed_interfaces/zed_interfaces_s__rosidl_typesupport_introspection_c.cpython-38-aarch64-linux-gnu.so\n'}
+[1.708643] (zed_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/lib/python3.9/site-packages/zed_interfaces/zed_interfaces_s__rosidl_typesupport_fastrtps_c.cpython-38-aarch64-linux-gnu.so\n'}
+[1.709375] (zed_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/lib/python3.9/site-packages/zed_interfaces/zed_interfaces_s__rosidl_typesupport_introspection_c.cpython-38-aarch64-linux-gnu.so\n'}
+[1.710054] (zed_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/lib/python3.9/site-packages/zed_interfaces/zed_interfaces_s__rosidl_typesupport_c.cpython-38-aarch64-linux-gnu.so\n'}
+[1.710557] (zed_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/share/zed_interfaces/msg/Object.idl\n'}
+[1.711023] (zed_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/share/zed_interfaces/msg/ObjectsStamped.idl\n'}
+[1.711491] (zed_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/share/zed_interfaces/msg/Keypoint2Di.idl\n'}
+[1.711956] (zed_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/share/zed_interfaces/msg/Keypoint2Df.idl\n'}
+[1.712415] (zed_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/share/zed_interfaces/msg/Keypoint3D.idl\n'}
+[1.712876] (zed_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/share/zed_interfaces/msg/BoundingBox2Di.idl\n'}
+[1.713332] (zed_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/share/zed_interfaces/msg/BoundingBox2Df.idl\n'}
+[1.713837] (zed_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/share/zed_interfaces/msg/BoundingBox3D.idl\n'}
+[1.714300] (zed_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/share/zed_interfaces/msg/Skeleton2D.idl\n'}
+[1.714751] (zed_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/share/zed_interfaces/msg/Skeleton3D.idl\n'}
+[1.715206] (zed_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/share/zed_interfaces/msg/DepthInfoStamped.idl\n'}
+[1.715659] (zed_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/share/zed_interfaces/msg/PlaneStamped.idl\n'}
+[1.716116] (zed_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/share/zed_interfaces/msg/PosTrackStatus.idl\n'}
+[1.716589] (zed_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/share/zed_interfaces/msg/Heartbeat.idl\n'}
+[1.717056] (zed_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/share/zed_interfaces/srv/SetPose.idl\n'}
+[1.717506] (zed_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/share/zed_interfaces/srv/StartSvoRec.idl\n'}
+[1.717964] (zed_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/share/zed_interfaces/srv/SetROI.idl\n'}
+[1.718420] (zed_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/share/zed_interfaces/msg/Object.msg\n'}
+[1.718871] (zed_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/share/zed_interfaces/msg/ObjectsStamped.msg\n'}
+[1.719310] (zed_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/share/zed_interfaces/msg/Keypoint2Di.msg\n'}
+[1.719761] (zed_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/share/zed_interfaces/msg/Keypoint2Df.msg\n'}
+[1.720200] (zed_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/share/zed_interfaces/msg/Keypoint3D.msg\n'}
+[1.720640] (zed_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/share/zed_interfaces/msg/BoundingBox2Di.msg\n'}
+[1.721091] (zed_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/share/zed_interfaces/msg/BoundingBox2Df.msg\n'}
+[1.721593] (zed_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/share/zed_interfaces/msg/BoundingBox3D.msg\n'}
+[1.722043] (zed_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/share/zed_interfaces/msg/Skeleton2D.msg\n'}
+[1.722490] (zed_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/share/zed_interfaces/msg/Skeleton3D.msg\n'}
+[1.722935] (zed_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/share/zed_interfaces/msg/DepthInfoStamped.msg\n'}
+[1.723385] (zed_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/share/zed_interfaces/msg/PlaneStamped.msg\n'}
+[1.723829] (zed_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/share/zed_interfaces/msg/PosTrackStatus.msg\n'}
+[1.724279] (zed_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/share/zed_interfaces/msg/Heartbeat.msg\n'}
+[1.724808] (zed_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/share/zed_interfaces/srv/SetPose.srv\n'}
+[1.725160] (zed_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/share/zed_interfaces/srv/SetPose_Request.msg\n'}
+[1.725620] (zed_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/share/zed_interfaces/srv/SetPose_Response.msg\n'}
+[1.726064] (zed_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/share/zed_interfaces/srv/StartSvoRec.srv\n'}
+[1.726557] (zed_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/share/zed_interfaces/srv/StartSvoRec_Request.msg\n'}
+[1.726975] (zed_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/share/zed_interfaces/srv/StartSvoRec_Response.msg\n'}
+[1.727409] (zed_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/share/zed_interfaces/srv/SetROI.srv\n'}
+[1.727846] (zed_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/share/zed_interfaces/srv/SetROI_Request.msg\n'}
+[1.728281] (zed_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/share/zed_interfaces/srv/SetROI_Response.msg\n'}
+[1.729149] (zed_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/share/zed_interfaces/meshes/zed.stl\n'}
+[1.729481] (zed_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/share/zed_interfaces/meshes/zed2.stl\n'}
+[1.729817] (zed_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/share/zed_interfaces/meshes/zed2i.stl\n'}
+[1.730099] (zed_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/share/zed_interfaces/meshes/zedm.stl\n'}
+[1.730395] (zed_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/share/zed_interfaces/meshes/zedx.stl\n'}
+[1.730695] (zed_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/share/zed_interfaces/meshes/zedxm.stl\n'}
+[1.731200] (zed_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/share/ament_index/resource_index/package_run_dependencies/zed_interfaces\n'}
+[1.731687] (zed_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/share/ament_index/resource_index/parent_prefix_path/zed_interfaces\n'}
+[1.732153] (zed_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/share/zed_interfaces/environment/ament_prefix_path.sh\n'}
+[1.732694] (zed_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/share/zed_interfaces/environment/ament_prefix_path.dsv\n'}
+[1.733222] (zed_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/share/zed_interfaces/environment/path.sh\n'}
+[1.733591] (zed_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/share/zed_interfaces/environment/path.dsv\n'}
+[1.733987] (zed_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/share/zed_interfaces/local_setup.bash\n'}
+[1.734403] (zed_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/share/zed_interfaces/local_setup.sh\n'}
+[1.734838] (zed_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/share/zed_interfaces/local_setup.zsh\n'}
+[1.735274] (zed_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/share/zed_interfaces/local_setup.dsv\n'}
+[1.735613] (zed_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/bur/ros2_ws/install/zed_interfaces/share/zed_interfaces/package.dsv\n'}
+[1.756076] (zed_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/share/ament_index/resource_index/packages/zed_interfaces\n'}
+[1.756447] (zed_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/share/zed_interfaces/cmake/rosidl_cmake-extras.cmake\n'}
+[1.756887] (zed_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/share/zed_interfaces/cmake/ament_cmake_export_dependencies-extras.cmake\n'}
+[1.757357] (zed_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/share/zed_interfaces/cmake/ament_cmake_export_include_directories-extras.cmake\n'}
+[1.757857] (zed_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/share/zed_interfaces/cmake/ament_cmake_export_libraries-extras.cmake\n'}
+[1.758300] (zed_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/share/zed_interfaces/cmake/ament_cmake_export_targets-extras.cmake\n'}
+[1.758744] (zed_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/share/zed_interfaces/cmake/rosidl_cmake_export_typesupport_targets-extras.cmake\n'}
+[1.759180] (zed_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/share/zed_interfaces/cmake/rosidl_cmake_export_typesupport_libraries-extras.cmake\n'}
+[1.759671] (zed_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/share/zed_interfaces/cmake/zed_interfacesConfig.cmake\n'}
+[1.759949] (zed_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/share/zed_interfaces/cmake/zed_interfacesConfig-version.cmake\n'}
+[1.760375] (zed_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/share/zed_interfaces/package.xml\n'}
+[1.760907] (zed_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/bur/ros2_ws/install/zed_interfaces/lib/libzed_interfaces__rosidl_generator_c.so\n'}
+[1.761606] (zed_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/bur/ros2_ws/install/zed_interfaces/lib/libzed_interfaces__rosidl_typesupport_fastrtps_c.so\n'}
+[1.762295] (zed_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/bur/ros2_ws/install/zed_interfaces/lib/libzed_interfaces__rosidl_typesupport_fastrtps_cpp.so\n'}
+[1.762977] (zed_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/bur/ros2_ws/install/zed_interfaces/lib/libzed_interfaces__rosidl_typesupport_introspection_c.so\n'}
+[1.763599] (zed_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/bur/ros2_ws/install/zed_interfaces/lib/libzed_interfaces__rosidl_typesupport_c.so\n'}
+[1.764234] (zed_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/bur/ros2_ws/install/zed_interfaces/lib/libzed_interfaces__rosidl_typesupport_introspection_cpp.so\n'}
+[1.764868] (zed_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/bur/ros2_ws/install/zed_interfaces/lib/libzed_interfaces__rosidl_typesupport_cpp.so\n'}
+[1.805077] (-) TimerEvent: {}
+[1.836707] (zed_interfaces) StdoutLine: {'line': b"Listing '/home/bur/ros2_ws/install/zed_interfaces/lib/python3.9/site-packages/zed_interfaces'...\n"}
+[1.837040] (zed_interfaces) StdoutLine: {'line': b"Listing '/home/bur/ros2_ws/install/zed_interfaces/lib/python3.9/site-packages/zed_interfaces/msg'...\n"}
+[1.837231] (zed_interfaces) StdoutLine: {'line': b"Listing '/home/bur/ros2_ws/install/zed_interfaces/lib/python3.9/site-packages/zed_interfaces/srv'...\n"}
+[1.850111] (zed_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/bur/ros2_ws/install/zed_interfaces/lib/libzed_interfaces__rosidl_generator_py.so\n'}
+[1.850674] (zed_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/bur/ros2_ws/install/zed_interfaces/share/zed_interfaces/cmake/export_zed_interfaces__rosidl_generator_cExport.cmake\n'}
+[1.850872] (zed_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/bur/ros2_ws/install/zed_interfaces/share/zed_interfaces/cmake/export_zed_interfaces__rosidl_generator_cExport-release.cmake\n'}
+[1.851207] (zed_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/bur/ros2_ws/install/zed_interfaces/share/zed_interfaces/cmake/export_zed_interfaces__rosidl_typesupport_fastrtps_cExport.cmake\n'}
+[1.851389] (zed_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/bur/ros2_ws/install/zed_interfaces/share/zed_interfaces/cmake/export_zed_interfaces__rosidl_typesupport_fastrtps_cExport-release.cmake\n'}
+[1.851683] (zed_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/bur/ros2_ws/install/zed_interfaces/share/zed_interfaces/cmake/export_zed_interfaces__rosidl_generator_cppExport.cmake\n'}
+[1.852040] (zed_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/bur/ros2_ws/install/zed_interfaces/share/zed_interfaces/cmake/export_zed_interfaces__rosidl_typesupport_fastrtps_cppExport.cmake\n'}
+[1.852215] (zed_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/bur/ros2_ws/install/zed_interfaces/share/zed_interfaces/cmake/export_zed_interfaces__rosidl_typesupport_fastrtps_cppExport-release.cmake\n'}
+[1.852518] (zed_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/bur/ros2_ws/install/zed_interfaces/share/zed_interfaces/cmake/zed_interfaces__rosidl_typesupport_introspection_cExport.cmake\n'}
+[1.852691] (zed_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/bur/ros2_ws/install/zed_interfaces/share/zed_interfaces/cmake/zed_interfaces__rosidl_typesupport_introspection_cExport-release.cmake\n'}
+[1.852964] (zed_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/bur/ros2_ws/install/zed_interfaces/share/zed_interfaces/cmake/zed_interfaces__rosidl_typesupport_cExport.cmake\n'}
+[1.853174] (zed_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/bur/ros2_ws/install/zed_interfaces/share/zed_interfaces/cmake/zed_interfaces__rosidl_typesupport_cExport-release.cmake\n'}
+[1.853466] (zed_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/bur/ros2_ws/install/zed_interfaces/share/zed_interfaces/cmake/zed_interfaces__rosidl_typesupport_introspection_cppExport.cmake\n'}
+[1.853656] (zed_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/bur/ros2_ws/install/zed_interfaces/share/zed_interfaces/cmake/zed_interfaces__rosidl_typesupport_introspection_cppExport-release.cmake\n'}
+[1.853917] (zed_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/bur/ros2_ws/install/zed_interfaces/share/zed_interfaces/cmake/zed_interfaces__rosidl_typesupport_cppExport.cmake\n'}
+[1.854090] (zed_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/bur/ros2_ws/install/zed_interfaces/share/zed_interfaces/cmake/zed_interfaces__rosidl_typesupport_cppExport-release.cmake\n'}
+[1.854366] (zed_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/bur/ros2_ws/install/zed_interfaces/share/zed_interfaces/cmake/export_zed_interfaces__rosidl_generator_pyExport.cmake\n'}
+[1.854565] (zed_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/bur/ros2_ws/install/zed_interfaces/share/zed_interfaces/cmake/export_zed_interfaces__rosidl_generator_pyExport-release.cmake\n'}
+[1.859928] (zed_interfaces) CommandEnded: {'returncode': 0}
+[1.905389] (-) TimerEvent: {}
+[2.006072] (-) TimerEvent: {}
+[2.106852] (-) TimerEvent: {}
+[2.207551] (-) TimerEvent: {}
+[2.308104] (-) TimerEvent: {}
+[2.408754] (-) TimerEvent: {}
+[2.430798] (zed_interfaces) JobEnded: {'identifier': 'zed_interfaces', 'rc': 0}
+[2.434210] (zed_components) JobStarted: {'identifier': 'zed_components'}
+[2.454229] (zed_components) JobProgress: {'identifier': 'zed_components', 'progress': 'cmake'}
+[2.455924] (zed_components) Command: {'cmd': ['/usr/bin/cmake', '/home/bur/ros2_ws/src/zed-ros2-wrapper/zed_components', '-DCMAKE_BUILD_TYPE=Release', '-DAMENT_CMAKE_SYMLINK_INSTALL=1', '-DCMAKE_INSTALL_PREFIX=/home/bur/ros2_ws/install/zed_components'], 'cwd': '/home/bur/ros2_ws/build/zed_components', 'env': OrderedDict([('GJS_DEBUG_TOPICS', 'JS ERROR;JS LOG'), ('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'bur'), ('SSH_AGENT_PID', '2553'), ('XDG_SESSION_TYPE', 'x11'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/bur/ros2_ws/install/zed_interfaces/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/aarch64-linux-gnu:/opt/ros/humble/lib:/usr/local/cuda-11.4/lib64'), ('HOME', '/home/bur'), ('OLDPWD', '/home/bur/ros2_ws/src'), ('DESKTOP_SESSION', 'ubuntu'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('MANAGERPID', '2329'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('IM_CONFIG_PHASE', '1'), ('COLCON_PREFIX_PATH', '/home/bur/ros2_ws/install'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'bur'), ('JOURNAL_STREAM', '8:57445'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'bur'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('WINDOWPATH', '2'), ('PATH', '/opt/ros/humble/bin:/usr/local/cuda-11.4/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin'), ('SESSION_MANAGER', 'local/ubuntu:@/tmp/.ICE-unix/2589,unix/ubuntu:/tmp/.ICE-unix/2589'), ('INVOCATION_ID', '624c199e99f74008a224ca9b847bf6a7'), ('XDG_MENU_PREFIX', 'gnome-'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/8773b50c_0e56_401b_a59c_d0ccb0fd15b0'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':1'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/gdm/Xauthority'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('GNOME_TERMINAL_SERVICE', ':1.165'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/opt/ros/humble:/home/bur/ros2_ws/install/zed_interfaces'), ('SHELL', '/bin/bash'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('GJS_DEBUG_OUTPUT', 'stderr'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/bur/ros2_ws/build/zed_components'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/bur/ros2_ws/install/zed_interfaces/lib/python3.9/site-packages:/opt/ros/humble/lib/python3.8/site-packages:/home/bur/ros2_ws/install/zed_interfaces/lib/python3.8/site-packages'), ('COLCON', '1'), ('VTE_VERSION', '6003'), ('CMAKE_PREFIX_PATH', '/home/bur/ros2_ws/install/zed_interfaces:/opt/ros/humble')]), 'shell': False}
+[2.508969] (-) TimerEvent: {}
+[2.547243] (zed_components) StdoutLine: {'line': b'-- Found CUDA: /usr/local/cuda-11.4 (found suitable version "11.4", minimum required is "11.4") \n'}
+[2.587424] (zed_components) StdoutLine: {'line': b'-- Found CUDA: /usr/local/cuda-11.4 (found version "11.4") \n'}
+[2.589269] (zed_components) StdoutLine: {'line': b'-- Found ament_cmake_auto: 1.3.6 (/opt/ros/humble/share/ament_cmake_auto/cmake)\n'}
+[2.609063] (-) TimerEvent: {}
+[2.709698] (-) TimerEvent: {}
+[2.810402] (-) TimerEvent: {}
+[2.911203] (-) TimerEvent: {}
+[2.999090] (zed_components) StdoutLine: {'line': b'-- Override CMake install command with custom implementation using symlinks instead of copying resources\n'}
+[3.011292] (-) TimerEvent: {}
+[3.111877] (-) TimerEvent: {}
+[3.212523] (-) TimerEvent: {}
+[3.268726] (zed_components) StdoutLine: {'line': b'-- Found rosidl_generator_c: 3.1.5 (/opt/ros/humble/share/rosidl_generator_c/cmake)\n'}
+[3.274249] (zed_components) StdoutLine: {'line': b'-- Found rosidl_adapter: 3.1.5 (/opt/ros/humble/share/rosidl_adapter/cmake)\n'}
+[3.287612] (zed_components) StdoutLine: {'line': b'-- Found rosidl_generator_cpp: 3.1.5 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)\n'}
+[3.312580] (-) TimerEvent: {}
+[3.313647] (zed_components) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c\n'}
+[3.351165] (zed_components) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp\n'}
+[3.412678] (-) TimerEvent: {}
+[3.513076] (-) TimerEvent: {}
+[3.613510] (-) TimerEvent: {}
+[3.713953] (-) TimerEvent: {}
+[3.814460] (-) TimerEvent: {}
+[3.914929] (-) TimerEvent: {}
+[4.004508] (zed_components) StdoutLine: {'line': b'-- Found rmw_implementation_cmake: 6.1.1 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)\n'}
+[4.007355] (zed_components) StdoutLine: {'line': b'-- Found rmw_fastrtps_cpp: 6.2.5 (/opt/ros/humble/share/rmw_fastrtps_cpp/cmake)\n'}
+[4.014985] (-) TimerEvent: {}
+[4.115385] (-) TimerEvent: {}
+[4.215977] (-) TimerEvent: {}
+[4.258031] (zed_components) StdoutLine: {'line': b"-- Using RMW implementation 'rmw_fastrtps_cpp' as default\n"}
+[4.316110] (-) TimerEvent: {}
+[4.416666] (-) TimerEvent: {}
+[4.517181] (-) TimerEvent: {}
+[4.617704] (-) TimerEvent: {}
+[4.718220] (-) TimerEvent: {}
+[4.818730] (-) TimerEvent: {}
+[4.919239] (-) TimerEvent: {}
+[5.019761] (-) TimerEvent: {}
+[5.120248] (-) TimerEvent: {}
+[5.220732] (-) TimerEvent: {}
+[5.321256] (-) TimerEvent: {}
+[5.421815] (-) TimerEvent: {}
+[5.522334] (-) TimerEvent: {}
+[5.622838] (-) TimerEvent: {}
+[5.723287] (-) TimerEvent: {}
+[5.823836] (-) TimerEvent: {}
+[5.924306] (-) TimerEvent: {}
+[6.024730] (-) TimerEvent: {}
+[6.032380] (zed_components) StdoutLine: {'line': b'-- Found eigen3_cmake_module: 0.1.1 (/opt/ros/humble/share/eigen3_cmake_module/cmake)\n'}
+[6.034937] (zed_components) StdoutLine: {'line': b'-- Ensuring Eigen3 include directory is part of orocos-kdl CMake target\n'}
+[6.124915] (-) TimerEvent: {}
+[6.225547] (-) TimerEvent: {}
+[6.326183] (-) TimerEvent: {}
+[6.426765] (-) TimerEvent: {}
+[6.527264] (-) TimerEvent: {}
+[6.562930] (zed_components) StderrLine: {'line': b'CMake Error at CMakeLists.txt:130 (find_package):\n'}
+[6.563525] (zed_components) StderrLine: {'line': b'  By not providing "Findgeographic_msgs.cmake" in CMAKE_MODULE_PATH this\n'}
+[6.563712] (zed_components) StderrLine: {'line': b'  project has asked CMake to find a package configuration file provided by\n'}
+[6.563854] (zed_components) StderrLine: {'line': b'  "geographic_msgs", but CMake did not find one.\n'}
+[6.563984] (zed_components) StderrLine: {'line': b'\n'}
+[6.564109] (zed_components) StderrLine: {'line': b'  Could not find a package configuration file provided by "geographic_msgs"\n'}
+[6.564230] (zed_components) StderrLine: {'line': b'  with any of the following names:\n'}
+[6.564347] (zed_components) StderrLine: {'line': b'\n'}
+[6.564460] (zed_components) StderrLine: {'line': b'    geographic_msgsConfig.cmake\n'}
+[6.564574] (zed_components) StderrLine: {'line': b'    geographic_msgs-config.cmake\n'}
+[6.564686] (zed_components) StderrLine: {'line': b'\n'}
+[6.564799] (zed_components) StderrLine: {'line': b'  Add the installation prefix of "geographic_msgs" to CMAKE_PREFIX_PATH or\n'}
+[6.564910] (zed_components) StderrLine: {'line': b'  set "geographic_msgs_DIR" to a directory containing one of the above files.\n'}
+[6.565024] (zed_components) StderrLine: {'line': b'  If "geographic_msgs" provides a separate development package or SDK, be\n'}
+[6.565136] (zed_components) StderrLine: {'line': b'  sure it has been installed.\n'}
+[6.565247] (zed_components) StderrLine: {'line': b'\n'}
+[6.565357] (zed_components) StderrLine: {'line': b'\n'}
+[6.570352] (zed_components) StdoutLine: {'line': b'-- Configuring incomplete, errors occurred!\n'}
+[6.570626] (zed_components) StdoutLine: {'line': b'See also "/home/bur/ros2_ws/build/zed_components/CMakeFiles/CMakeOutput.log".\n'}
+[6.570786] (zed_components) StdoutLine: {'line': b'See also "/home/bur/ros2_ws/build/zed_components/CMakeFiles/CMakeError.log".\n'}
+[6.596046] (zed_components) CommandEnded: {'returncode': 1}
+[6.627447] (-) TimerEvent: {}
+[6.644503] (zed_components) JobEnded: {'identifier': 'zed_components', 'rc': 1}
+[6.655883] (zed_wrapper) JobSkipped: {'identifier': 'zed_wrapper'}
+[6.656116] (zed_ros2) JobSkipped: {'identifier': 'zed_ros2'}
+[6.656229] (-) EventReactorShutdown: {}

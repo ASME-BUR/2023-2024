@@ -1,0 +1,48 @@
+[0.105s] Invoking command in '/home/bur/ros2_ws/build/zed_robot_integration': CMAKE_PREFIX_PATH=/home/bur/ros2_ws/install/zed_wrapper:/home/bur/ros2_ws/install/zed_components:/home/bur/ros2_ws/install/zed_interfaces:/home/bur/ros2_ws/install/zed_ros2:/opt/ros/humble LD_LIBRARY_PATH=/home/bur/ros2_ws/install/zed_components/lib:/home/bur/ros2_ws/install/zed_interfaces/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/aarch64-linux-gnu:/opt/ros/humble/lib:/usr/local/cuda-11.4/lib64 /usr/bin/cmake /home/bur/ros2_ws/src/zed-ros2-examples/tutorials/zed_robot_integration -DCMAKE_BUILD_TYPE=Release -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/bur/ros2_ws/install/zed_robot_integration
+[0.784s] -- The C compiler identification is GNU 9.4.0
+[0.784s] -- The CXX compiler identification is GNU 9.4.0
+[0.784s] -- Check for working C compiler: /usr/bin/cc
+[0.901s] -- Check for working C compiler: /usr/bin/cc -- works
+[0.903s] -- Detecting C compiler ABI info
+[1.219s] -- Detecting C compiler ABI info - done
+[1.243s] -- Detecting C compile features
+[1.245s] -- Detecting C compile features - done
+[1.251s] -- Check for working CXX compiler: /usr/bin/c++
+[1.558s] -- Check for working CXX compiler: /usr/bin/c++ -- works
+[1.568s] -- Detecting CXX compiler ABI info
+[2.035s] -- Detecting CXX compiler ABI info - done
+[2.085s] -- Detecting CXX compile features
+[2.087s] -- Detecting CXX compile features - done
+[2.100s] -- Found ament_cmake: 1.3.6 (/opt/ros/humble/share/ament_cmake/cmake)
+[2.718s] -- Found Python3: /usr/bin/python3.9 (found version "3.9.5") found components: Interpreter 
+[2.896s] -- Override CMake install command with custom implementation using symlinks instead of copying resources
+[3.281s] -- Configuring done
+[3.298s] -- Generating done
+[3.300s] -- Build files have been written to: /home/bur/ros2_ws/build/zed_robot_integration
+[3.317s] Invoked command in '/home/bur/ros2_ws/build/zed_robot_integration' returned '0': CMAKE_PREFIX_PATH=/home/bur/ros2_ws/install/zed_wrapper:/home/bur/ros2_ws/install/zed_components:/home/bur/ros2_ws/install/zed_interfaces:/home/bur/ros2_ws/install/zed_ros2:/opt/ros/humble LD_LIBRARY_PATH=/home/bur/ros2_ws/install/zed_components/lib:/home/bur/ros2_ws/install/zed_interfaces/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/aarch64-linux-gnu:/opt/ros/humble/lib:/usr/local/cuda-11.4/lib64 /usr/bin/cmake /home/bur/ros2_ws/src/zed-ros2-examples/tutorials/zed_robot_integration -DCMAKE_BUILD_TYPE=Release -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/bur/ros2_ws/install/zed_robot_integration
+[3.319s] Invoking command in '/home/bur/ros2_ws/build/zed_robot_integration': CMAKE_PREFIX_PATH=/home/bur/ros2_ws/install/zed_wrapper:/home/bur/ros2_ws/install/zed_components:/home/bur/ros2_ws/install/zed_interfaces:/home/bur/ros2_ws/install/zed_ros2:/opt/ros/humble LD_LIBRARY_PATH=/home/bur/ros2_ws/install/zed_components/lib:/home/bur/ros2_ws/install/zed_interfaces/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/aarch64-linux-gnu:/opt/ros/humble/lib:/usr/local/cuda-11.4/lib64 /usr/bin/cmake --build /home/bur/ros2_ws/build/zed_robot_integration -- -j6 -l6
+[3.471s] Invoked command in '/home/bur/ros2_ws/build/zed_robot_integration' returned '0': CMAKE_PREFIX_PATH=/home/bur/ros2_ws/install/zed_wrapper:/home/bur/ros2_ws/install/zed_components:/home/bur/ros2_ws/install/zed_interfaces:/home/bur/ros2_ws/install/zed_ros2:/opt/ros/humble LD_LIBRARY_PATH=/home/bur/ros2_ws/install/zed_components/lib:/home/bur/ros2_ws/install/zed_interfaces/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/aarch64-linux-gnu:/opt/ros/humble/lib:/usr/local/cuda-11.4/lib64 /usr/bin/cmake --build /home/bur/ros2_ws/build/zed_robot_integration -- -j6 -l6
+[3.580s] Invoking command in '/home/bur/ros2_ws/build/zed_robot_integration': CMAKE_PREFIX_PATH=/home/bur/ros2_ws/install/zed_wrapper:/home/bur/ros2_ws/install/zed_components:/home/bur/ros2_ws/install/zed_interfaces:/home/bur/ros2_ws/install/zed_ros2:/opt/ros/humble LD_LIBRARY_PATH=/home/bur/ros2_ws/install/zed_components/lib:/home/bur/ros2_ws/install/zed_interfaces/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/aarch64-linux-gnu:/opt/ros/humble/lib:/usr/local/cuda-11.4/lib64 /usr/bin/cmake --install /home/bur/ros2_ws/build/zed_robot_integration
+[3.608s] -- Install configuration: "Release"
+[3.610s] -- Execute custom install script
+[3.612s] -- Symlinking: /home/bur/ros2_ws/install/zed_robot_integration/share/zed_robot_integration//launch/view_dual_zed.launch.py
+[3.635s] -- Symlinking: /home/bur/ros2_ws/install/zed_robot_integration/share/zed_robot_integration//launch/view_mono_zed.launch.py
+[3.660s] -- Symlinking: /home/bur/ros2_ws/install/zed_robot_integration/share/zed_robot_integration//urdf/zed_robot_dual.urdf.xacro
+[3.687s] -- Symlinking: /home/bur/ros2_ws/install/zed_robot_integration/share/zed_robot_integration//urdf/zed_robot_mono.urdf.xacro
+[3.728s] -- Symlinking: /home/bur/ros2_ws/install/zed_robot_integration/share/zed_robot_integration//rviz2/view_config.rviz
+[3.770s] -- Symlinking: /home/bur/ros2_ws/install/zed_robot_integration/share/ament_index/resource_index/package_run_dependencies/zed_robot_integration
+[3.805s] -- Symlinking: /home/bur/ros2_ws/install/zed_robot_integration/share/ament_index/resource_index/parent_prefix_path/zed_robot_integration
+[3.831s] -- Symlinking: /home/bur/ros2_ws/install/zed_robot_integration/share/zed_robot_integration/environment/ament_prefix_path.sh
+[3.859s] -- Symlinking: /home/bur/ros2_ws/install/zed_robot_integration/share/zed_robot_integration/environment/ament_prefix_path.dsv
+[3.907s] -- Symlinking: /home/bur/ros2_ws/install/zed_robot_integration/share/zed_robot_integration/environment/path.sh
+[3.931s] -- Symlinking: /home/bur/ros2_ws/install/zed_robot_integration/share/zed_robot_integration/environment/path.dsv
+[3.975s] -- Symlinking: /home/bur/ros2_ws/install/zed_robot_integration/share/zed_robot_integration/local_setup.bash
+[4.000s] -- Symlinking: /home/bur/ros2_ws/install/zed_robot_integration/share/zed_robot_integration/local_setup.sh
+[4.040s] -- Symlinking: /home/bur/ros2_ws/install/zed_robot_integration/share/zed_robot_integration/local_setup.zsh
+[4.085s] -- Symlinking: /home/bur/ros2_ws/install/zed_robot_integration/share/zed_robot_integration/local_setup.dsv
+[4.121s] -- Symlinking: /home/bur/ros2_ws/install/zed_robot_integration/share/zed_robot_integration/package.dsv
+[4.186s] -- Symlinking: /home/bur/ros2_ws/install/zed_robot_integration/share/ament_index/resource_index/packages/zed_robot_integration
+[4.222s] -- Symlinking: /home/bur/ros2_ws/install/zed_robot_integration/share/zed_robot_integration/cmake/zed_robot_integrationConfig.cmake
+[4.253s] -- Symlinking: /home/bur/ros2_ws/install/zed_robot_integration/share/zed_robot_integration/cmake/zed_robot_integrationConfig-version.cmake
+[4.286s] -- Symlinking: /home/bur/ros2_ws/install/zed_robot_integration/share/zed_robot_integration/package.xml
+[4.326s] Invoked command in '/home/bur/ros2_ws/build/zed_robot_integration' returned '0': CMAKE_PREFIX_PATH=/home/bur/ros2_ws/install/zed_wrapper:/home/bur/ros2_ws/install/zed_components:/home/bur/ros2_ws/install/zed_interfaces:/home/bur/ros2_ws/install/zed_ros2:/opt/ros/humble LD_LIBRARY_PATH=/home/bur/ros2_ws/install/zed_components/lib:/home/bur/ros2_ws/install/zed_interfaces/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/aarch64-linux-gnu:/opt/ros/humble/lib:/usr/local/cuda-11.4/lib64 /usr/bin/cmake --install /home/bur/ros2_ws/build/zed_robot_integration

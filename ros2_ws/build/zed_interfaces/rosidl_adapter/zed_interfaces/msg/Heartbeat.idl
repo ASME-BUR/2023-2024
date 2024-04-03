@@ -1,0 +1,40 @@
+// generated from rosidl_adapter/resource/msg.idl.em
+// with input from zed_interfaces/msg/Heartbeat.msg
+// generated code does not contain a copyright notice
+
+
+module zed_interfaces {
+  module msg {
+    @verbatim (language="comment", text=
+      "Message to notify that the node is alive to other nodes")
+    struct Heartbeat {
+      @verbatim (language="comment", text=
+        "idx of the message")
+      uint64 beat_count;
+
+      @verbatim (language="comment", text=
+        "namespace of the node")
+      string node_ns;
+
+      @verbatim (language="comment", text=
+        "name of the node")
+      string node_name;
+
+      @verbatim (language="comment", text=
+        "full node name")
+      string full_name;
+
+      @verbatim (language="comment", text=
+        "serial number of the input camera")
+      uint32 camera_sn;
+
+      @verbatim (language="comment", text=
+        "data from an svo?")
+      boolean svo_mode;
+
+      @verbatim (language="comment", text=
+        "data from simulation?")
+      boolean simul_mode;
+    };
+  };
+};

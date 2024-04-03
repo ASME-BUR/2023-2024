@@ -1,0 +1,1 @@
+ament_cmake_symlink_install_targets("TARGET_FILES" "/home/bur/ros2_ws/build/zed_topic_benchmark/zed_topic_benchmark" "TARGETS" "zed_topic_benchmark" "ARCHIVE_DESTINATION" "lib" "LIBRARY_DESTINATION" "lib" "RUNTIME_DESTINATION" "lib/zed_topic_benchmark")

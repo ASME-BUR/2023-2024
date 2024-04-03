@@ -1,0 +1,27 @@
+-- Found ament_cmake_auto: 1.3.6 (/opt/ros/humble/share/ament_cmake_auto/cmake)
+-- Found Python3: /usr/bin/python3.9 (found version "3.9.5") found components: Interpreter 
+-- Override CMake install command with custom implementation using symlinks instead of copying resources
+-- Found ament_lint_auto: 0.12.9 (/opt/ros/humble/share/ament_lint_auto/cmake)
+-- Added test 'copyright' to check source files copyright and LICENSE
+-- Added test 'lint_cmake' to check CMake code style
+-- Added test 'xmllint' to check XML markup files
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /home/bur/ros2_ws/build/zed_ros2
+-- Install configuration: "Release"
+-- Execute custom install script
+-- Symlinking: /home/bur/ros2_ws/install/zed_ros2/share/ament_index/resource_index/package_run_dependencies/zed_ros2
+-- Symlinking: /home/bur/ros2_ws/install/zed_ros2/share/ament_index/resource_index/parent_prefix_path/zed_ros2
+-- Symlinking: /home/bur/ros2_ws/install/zed_ros2/share/zed_ros2/environment/ament_prefix_path.sh
+-- Symlinking: /home/bur/ros2_ws/install/zed_ros2/share/zed_ros2/environment/ament_prefix_path.dsv
+-- Symlinking: /home/bur/ros2_ws/install/zed_ros2/share/zed_ros2/environment/path.sh
+-- Symlinking: /home/bur/ros2_ws/install/zed_ros2/share/zed_ros2/environment/path.dsv
+-- Symlinking: /home/bur/ros2_ws/install/zed_ros2/share/zed_ros2/local_setup.bash
+-- Symlinking: /home/bur/ros2_ws/install/zed_ros2/share/zed_ros2/local_setup.sh
+-- Symlinking: /home/bur/ros2_ws/install/zed_ros2/share/zed_ros2/local_setup.zsh
+-- Symlinking: /home/bur/ros2_ws/install/zed_ros2/share/zed_ros2/local_setup.dsv
+-- Symlinking: /home/bur/ros2_ws/install/zed_ros2/share/zed_ros2/package.dsv
+-- Symlinking: /home/bur/ros2_ws/install/zed_ros2/share/ament_index/resource_index/packages/zed_ros2
+-- Symlinking: /home/bur/ros2_ws/install/zed_ros2/share/zed_ros2/cmake/zed_ros2Config.cmake
+-- Symlinking: /home/bur/ros2_ws/install/zed_ros2/share/zed_ros2/cmake/zed_ros2Config-version.cmake
+-- Symlinking: /home/bur/ros2_ws/install/zed_ros2/share/zed_ros2/package.xml

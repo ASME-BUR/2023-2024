@@ -1,0 +1,42 @@
+-- The C compiler identification is GNU 9.4.0
+-- The CXX compiler identification is GNU 9.4.0
+-- Check for working C compiler: /usr/bin/cc
+-- Check for working C compiler: /usr/bin/cc -- works
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Check for working CXX compiler: /usr/bin/c++
+-- Check for working CXX compiler: /usr/bin/c++ -- works
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- Found ament_cmake: 1.3.6 (/opt/ros/humble/share/ament_cmake/cmake)
+-- Found Python3: /usr/bin/python3.9 (found version "3.9.5") found components: Interpreter 
+-- Override CMake install command with custom implementation using symlinks instead of copying resources
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /home/bur/ros2_ws/build/zed_robot_integration
+-- Install configuration: "Release"
+-- Execute custom install script
+-- Symlinking: /home/bur/ros2_ws/install/zed_robot_integration/share/zed_robot_integration//launch/view_dual_zed.launch.py
+-- Symlinking: /home/bur/ros2_ws/install/zed_robot_integration/share/zed_robot_integration//launch/view_mono_zed.launch.py
+-- Symlinking: /home/bur/ros2_ws/install/zed_robot_integration/share/zed_robot_integration//urdf/zed_robot_dual.urdf.xacro
+-- Symlinking: /home/bur/ros2_ws/install/zed_robot_integration/share/zed_robot_integration//urdf/zed_robot_mono.urdf.xacro
+-- Symlinking: /home/bur/ros2_ws/install/zed_robot_integration/share/zed_robot_integration//rviz2/view_config.rviz
+-- Symlinking: /home/bur/ros2_ws/install/zed_robot_integration/share/ament_index/resource_index/package_run_dependencies/zed_robot_integration
+-- Symlinking: /home/bur/ros2_ws/install/zed_robot_integration/share/ament_index/resource_index/parent_prefix_path/zed_robot_integration
+-- Symlinking: /home/bur/ros2_ws/install/zed_robot_integration/share/zed_robot_integration/environment/ament_prefix_path.sh
+-- Symlinking: /home/bur/ros2_ws/install/zed_robot_integration/share/zed_robot_integration/environment/ament_prefix_path.dsv
+-- Symlinking: /home/bur/ros2_ws/install/zed_robot_integration/share/zed_robot_integration/environment/path.sh
+-- Symlinking: /home/bur/ros2_ws/install/zed_robot_integration/share/zed_robot_integration/environment/path.dsv
+-- Symlinking: /home/bur/ros2_ws/install/zed_robot_integration/share/zed_robot_integration/local_setup.bash
+-- Symlinking: /home/bur/ros2_ws/install/zed_robot_integration/share/zed_robot_integration/local_setup.sh
+-- Symlinking: /home/bur/ros2_ws/install/zed_robot_integration/share/zed_robot_integration/local_setup.zsh
+-- Symlinking: /home/bur/ros2_ws/install/zed_robot_integration/share/zed_robot_integration/local_setup.dsv
+-- Symlinking: /home/bur/ros2_ws/install/zed_robot_integration/share/zed_robot_integration/package.dsv
+-- Symlinking: /home/bur/ros2_ws/install/zed_robot_integration/share/ament_index/resource_index/packages/zed_robot_integration
+-- Symlinking: /home/bur/ros2_ws/install/zed_robot_integration/share/zed_robot_integration/cmake/zed_robot_integrationConfig.cmake
+-- Symlinking: /home/bur/ros2_ws/install/zed_robot_integration/share/zed_robot_integration/cmake/zed_robot_integrationConfig-version.cmake
+-- Symlinking: /home/bur/ros2_ws/install/zed_robot_integration/share/zed_robot_integration/package.xml

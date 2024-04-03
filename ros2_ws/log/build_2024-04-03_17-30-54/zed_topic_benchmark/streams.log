@@ -1,0 +1,78 @@
+[0.126s] Invoking command in '/home/bur/ros2_ws/build/zed_topic_benchmark': AMENT_PREFIX_PATH=/home/bur/ros2_ws/install/zed_topic_benchmark_component:/home/bur/ros2_ws/install/zed_topic_benchmark_interfaces:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/bur/ros2_ws/install/zed_topic_benchmark_component:/home/bur/ros2_ws/install/zed_topic_benchmark_interfaces:/home/bur/ros2_ws/install/zed_ros2:/home/bur/ros2_ws/install/zed_wrapper:/home/bur/ros2_ws/install/zed_components:/home/bur/ros2_ws/install/zed_interfaces:/opt/ros/humble LD_LIBRARY_PATH=/home/bur/ros2_ws/install/zed_topic_benchmark_component/lib:/home/bur/ros2_ws/install/zed_topic_benchmark_interfaces/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/aarch64-linux-gnu:/opt/ros/humble/lib:/home/bur/ros2_ws/install/zed_components/lib:/home/bur/ros2_ws/install/zed_interfaces/lib:/usr/local/cuda-11.4/lib64 PYTHONPATH=/home/bur/ros2_ws/install/zed_topic_benchmark_interfaces/lib/python3.9/site-packages:${PYTHONPATH} /usr/bin/cmake /home/bur/ros2_ws/src/zed-ros2-examples/tools/zed_benchmark -DCMAKE_BUILD_TYPE=Release -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/bur/ros2_ws/install/zed_topic_benchmark
+[0.825s] -- The C compiler identification is GNU 9.4.0
+[0.825s] -- The CXX compiler identification is GNU 9.4.0
+[0.825s] -- Check for working C compiler: /usr/bin/cc
+[1.129s] -- Check for working C compiler: /usr/bin/cc -- works
+[1.131s] -- Detecting C compiler ABI info
+[1.570s] -- Detecting C compiler ABI info - done
+[1.591s] -- Detecting C compile features
+[1.592s] -- Detecting C compile features - done
+[1.599s] -- Check for working CXX compiler: /usr/bin/c++
+[1.967s] -- Check for working CXX compiler: /usr/bin/c++ -- works
+[1.969s] -- Detecting CXX compiler ABI info
+[2.318s] -- Detecting CXX compiler ABI info - done
+[2.343s] -- Detecting CXX compile features
+[2.343s] -- Detecting CXX compile features - done
+[2.352s] -- Found ament_cmake_auto: 1.3.6 (/opt/ros/humble/share/ament_cmake_auto/cmake)
+[2.908s] -- Found Python3: /usr/bin/python3.9 (found version "3.9.5") found components: Interpreter 
+[3.103s] -- Override CMake install command with custom implementation using symlinks instead of copying resources
+[3.752s] -- Found rosidl_generator_c: 3.1.5 (/opt/ros/humble/share/rosidl_generator_c/cmake)
+[3.764s] -- Found rosidl_adapter: 3.1.5 (/opt/ros/humble/share/rosidl_adapter/cmake)
+[3.785s] -- Found rosidl_generator_cpp: 3.1.5 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)
+[3.827s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[3.918s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[4.226s] -- Found rmw_implementation_cmake: 6.1.1 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)
+[4.237s] -- Found rmw_fastrtps_cpp: 6.2.5 (/opt/ros/humble/share/rmw_fastrtps_cpp/cmake)
+[4.870s] -- Found OpenSSL: /usr/lib/aarch64-linux-gnu/libcrypto.so (found version "1.1.1f")  
+[4.978s] -- Found FastRTPS: /opt/ros/humble/include  
+[5.220s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[5.271s] -- Looking for pthread.h
+[5.699s] -- Looking for pthread.h - found
+[5.700s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD
+[6.007s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Failed
+[6.008s] -- Looking for pthread_create in pthreads
+[6.237s] -- Looking for pthread_create in pthreads - not found
+[6.238s] -- Looking for pthread_create in pthread
+[6.519s] -- Looking for pthread_create in pthread - found
+[6.521s] -- Found Threads: TRUE  
+[7.742s] -- Found ament_lint_auto: 0.12.9 (/opt/ros/humble/share/ament_lint_auto/cmake)
+[7.912s] -- Added test 'copyright' to check source files copyright and LICENSE
+[7.915s] -- Added test 'cppcheck' to perform static code analysis on C / C++ code
+[7.916s] -- Configured cppcheck include dirs: 
+[7.916s] -- Configured cppcheck exclude dirs and/or files: 
+[7.919s] -- Added test 'cpplint' to check C / C++ code against the Google style
+[7.919s] -- Configured cpplint exclude dirs and/or files: 
+[7.922s] -- Added test 'lint_cmake' to check CMake code style
+[7.924s] -- Added test 'uncrustify' to check C / C++ code style
+[7.924s] -- Configured uncrustify additional arguments: 
+[7.926s] -- Added test 'xmllint' to check XML markup files
+[7.940s] -- Configuring done
+[8.009s] -- Generating done
+[8.014s] -- Build files have been written to: /home/bur/ros2_ws/build/zed_topic_benchmark
+[8.074s] Invoked command in '/home/bur/ros2_ws/build/zed_topic_benchmark' returned '0': AMENT_PREFIX_PATH=/home/bur/ros2_ws/install/zed_topic_benchmark_component:/home/bur/ros2_ws/install/zed_topic_benchmark_interfaces:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/bur/ros2_ws/install/zed_topic_benchmark_component:/home/bur/ros2_ws/install/zed_topic_benchmark_interfaces:/home/bur/ros2_ws/install/zed_ros2:/home/bur/ros2_ws/install/zed_wrapper:/home/bur/ros2_ws/install/zed_components:/home/bur/ros2_ws/install/zed_interfaces:/opt/ros/humble LD_LIBRARY_PATH=/home/bur/ros2_ws/install/zed_topic_benchmark_component/lib:/home/bur/ros2_ws/install/zed_topic_benchmark_interfaces/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/aarch64-linux-gnu:/opt/ros/humble/lib:/home/bur/ros2_ws/install/zed_components/lib:/home/bur/ros2_ws/install/zed_interfaces/lib:/usr/local/cuda-11.4/lib64 PYTHONPATH=/home/bur/ros2_ws/install/zed_topic_benchmark_interfaces/lib/python3.9/site-packages:${PYTHONPATH} /usr/bin/cmake /home/bur/ros2_ws/src/zed-ros2-examples/tools/zed_benchmark -DCMAKE_BUILD_TYPE=Release -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/bur/ros2_ws/install/zed_topic_benchmark
+[8.076s] Invoking command in '/home/bur/ros2_ws/build/zed_topic_benchmark': AMENT_PREFIX_PATH=/home/bur/ros2_ws/install/zed_topic_benchmark_component:/home/bur/ros2_ws/install/zed_topic_benchmark_interfaces:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/bur/ros2_ws/install/zed_topic_benchmark_component:/home/bur/ros2_ws/install/zed_topic_benchmark_interfaces:/home/bur/ros2_ws/install/zed_ros2:/home/bur/ros2_ws/install/zed_wrapper:/home/bur/ros2_ws/install/zed_components:/home/bur/ros2_ws/install/zed_interfaces:/opt/ros/humble LD_LIBRARY_PATH=/home/bur/ros2_ws/install/zed_topic_benchmark_component/lib:/home/bur/ros2_ws/install/zed_topic_benchmark_interfaces/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/aarch64-linux-gnu:/opt/ros/humble/lib:/home/bur/ros2_ws/install/zed_components/lib:/home/bur/ros2_ws/install/zed_interfaces/lib:/usr/local/cuda-11.4/lib64 PYTHONPATH=/home/bur/ros2_ws/install/zed_topic_benchmark_interfaces/lib/python3.9/site-packages:${PYTHONPATH} /usr/bin/cmake --build /home/bur/ros2_ws/build/zed_topic_benchmark -- -j6 -l6
+[8.247s] [35m[1mScanning dependencies of target zed_topic_benchmark[0m
+[8.366s] [ 50%] [32mBuilding CXX object CMakeFiles/zed_topic_benchmark.dir/src/topic_benchmark_container.cpp.o[0m
+[17.701s] [100%] [32m[1mLinking CXX executable zed_topic_benchmark[0m
+[18.028s] [100%] Built target zed_topic_benchmark
+[18.054s] Invoked command in '/home/bur/ros2_ws/build/zed_topic_benchmark' returned '0': AMENT_PREFIX_PATH=/home/bur/ros2_ws/install/zed_topic_benchmark_component:/home/bur/ros2_ws/install/zed_topic_benchmark_interfaces:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/bur/ros2_ws/install/zed_topic_benchmark_component:/home/bur/ros2_ws/install/zed_topic_benchmark_interfaces:/home/bur/ros2_ws/install/zed_ros2:/home/bur/ros2_ws/install/zed_wrapper:/home/bur/ros2_ws/install/zed_components:/home/bur/ros2_ws/install/zed_interfaces:/opt/ros/humble LD_LIBRARY_PATH=/home/bur/ros2_ws/install/zed_topic_benchmark_component/lib:/home/bur/ros2_ws/install/zed_topic_benchmark_interfaces/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/aarch64-linux-gnu:/opt/ros/humble/lib:/home/bur/ros2_ws/install/zed_components/lib:/home/bur/ros2_ws/install/zed_interfaces/lib:/usr/local/cuda-11.4/lib64 PYTHONPATH=/home/bur/ros2_ws/install/zed_topic_benchmark_interfaces/lib/python3.9/site-packages:${PYTHONPATH} /usr/bin/cmake --build /home/bur/ros2_ws/build/zed_topic_benchmark -- -j6 -l6
+[18.114s] Invoking command in '/home/bur/ros2_ws/build/zed_topic_benchmark': AMENT_PREFIX_PATH=/home/bur/ros2_ws/install/zed_topic_benchmark_component:/home/bur/ros2_ws/install/zed_topic_benchmark_interfaces:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/bur/ros2_ws/install/zed_topic_benchmark_component:/home/bur/ros2_ws/install/zed_topic_benchmark_interfaces:/home/bur/ros2_ws/install/zed_ros2:/home/bur/ros2_ws/install/zed_wrapper:/home/bur/ros2_ws/install/zed_components:/home/bur/ros2_ws/install/zed_interfaces:/opt/ros/humble LD_LIBRARY_PATH=/home/bur/ros2_ws/install/zed_topic_benchmark_component/lib:/home/bur/ros2_ws/install/zed_topic_benchmark_interfaces/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/aarch64-linux-gnu:/opt/ros/humble/lib:/home/bur/ros2_ws/install/zed_components/lib:/home/bur/ros2_ws/install/zed_interfaces/lib:/usr/local/cuda-11.4/lib64 PYTHONPATH=/home/bur/ros2_ws/install/zed_topic_benchmark_interfaces/lib/python3.9/site-packages:${PYTHONPATH} /usr/bin/cmake --install /home/bur/ros2_ws/build/zed_topic_benchmark
+[18.133s] -- Install configuration: "Release"
+[18.134s] -- Execute custom install script
+[18.134s] -- Symlinking: /home/bur/ros2_ws/install/zed_topic_benchmark/lib/zed_topic_benchmark/zed_topic_benchmark
+[18.157s] -- Symlinking: /home/bur/ros2_ws/install/zed_topic_benchmark/share/ament_index/resource_index/package_run_dependencies/zed_topic_benchmark
+[18.181s] -- Symlinking: /home/bur/ros2_ws/install/zed_topic_benchmark/share/ament_index/resource_index/parent_prefix_path/zed_topic_benchmark
+[18.205s] -- Symlinking: /home/bur/ros2_ws/install/zed_topic_benchmark/share/zed_topic_benchmark/environment/ament_prefix_path.sh
+[18.230s] -- Symlinking: /home/bur/ros2_ws/install/zed_topic_benchmark/share/zed_topic_benchmark/environment/ament_prefix_path.dsv
+[18.254s] -- Symlinking: /home/bur/ros2_ws/install/zed_topic_benchmark/share/zed_topic_benchmark/environment/path.sh
+[18.277s] -- Symlinking: /home/bur/ros2_ws/install/zed_topic_benchmark/share/zed_topic_benchmark/environment/path.dsv
+[18.298s] -- Symlinking: /home/bur/ros2_ws/install/zed_topic_benchmark/share/zed_topic_benchmark/local_setup.bash
+[18.319s] -- Symlinking: /home/bur/ros2_ws/install/zed_topic_benchmark/share/zed_topic_benchmark/local_setup.sh
+[18.339s] -- Symlinking: /home/bur/ros2_ws/install/zed_topic_benchmark/share/zed_topic_benchmark/local_setup.zsh
+[18.361s] -- Symlinking: /home/bur/ros2_ws/install/zed_topic_benchmark/share/zed_topic_benchmark/local_setup.dsv
+[18.382s] -- Symlinking: /home/bur/ros2_ws/install/zed_topic_benchmark/share/zed_topic_benchmark/package.dsv
+[18.403s] -- Symlinking: /home/bur/ros2_ws/install/zed_topic_benchmark/share/ament_index/resource_index/packages/zed_topic_benchmark
+[18.427s] -- Symlinking: /home/bur/ros2_ws/install/zed_topic_benchmark/share/zed_topic_benchmark/cmake/zed_topic_benchmarkConfig.cmake
+[18.451s] -- Symlinking: /home/bur/ros2_ws/install/zed_topic_benchmark/share/zed_topic_benchmark/cmake/zed_topic_benchmarkConfig-version.cmake
+[18.475s] -- Symlinking: /home/bur/ros2_ws/install/zed_topic_benchmark/share/zed_topic_benchmark/package.xml
+[18.505s] Invoked command in '/home/bur/ros2_ws/build/zed_topic_benchmark' returned '0': AMENT_PREFIX_PATH=/home/bur/ros2_ws/install/zed_topic_benchmark_component:/home/bur/ros2_ws/install/zed_topic_benchmark_interfaces:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/bur/ros2_ws/install/zed_topic_benchmark_component:/home/bur/ros2_ws/install/zed_topic_benchmark_interfaces:/home/bur/ros2_ws/install/zed_ros2:/home/bur/ros2_ws/install/zed_wrapper:/home/bur/ros2_ws/install/zed_components:/home/bur/ros2_ws/install/zed_interfaces:/opt/ros/humble LD_LIBRARY_PATH=/home/bur/ros2_ws/install/zed_topic_benchmark_component/lib:/home/bur/ros2_ws/install/zed_topic_benchmark_interfaces/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/aarch64-linux-gnu:/opt/ros/humble/lib:/home/bur/ros2_ws/install/zed_components/lib:/home/bur/ros2_ws/install/zed_interfaces/lib:/usr/local/cuda-11.4/lib64 PYTHONPATH=/home/bur/ros2_ws/install/zed_topic_benchmark_interfaces/lib/python3.9/site-packages:${PYTHONPATH} /usr/bin/cmake --install /home/bur/ros2_ws/build/zed_topic_benchmark

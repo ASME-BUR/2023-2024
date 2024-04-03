@@ -1,0 +1,1 @@
+ament_cmake_symlink_install_targets("TARGET_FILES" "/home/bur/ros2_ws/build/zed_rgb_convert/zed_rgb_convert" "TARGETS" "zed_rgb_convert" "ARCHIVE_DESTINATION" "lib" "LIBRARY_DESTINATION" "lib" "RUNTIME_DESTINATION" "lib/zed_rgb_convert")

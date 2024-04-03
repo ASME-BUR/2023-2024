@@ -1,0 +1,36 @@
+[0.080s] Invoking command in '/home/bur/ros2_ws/build/zed_components': CMAKE_PREFIX_PATH=/home/bur/ros2_ws/install/zed_interfaces:/home/bur/ros2_ws/install/zed_ros2:/home/bur/ros2_ws/install/zed_wrapper:/home/bur/ros2_ws/install/zed_components:/opt/ros/humble LD_LIBRARY_PATH=/home/bur/ros2_ws/install/zed_interfaces/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/aarch64-linux-gnu:/opt/ros/humble/lib:/home/bur/ros2_ws/install/zed_components/lib:/usr/local/cuda-11.4/lib64 /usr/bin/cmake --build /home/bur/ros2_ws/build/zed_components -- -j6 -l6
+[0.306s] [100%] Built target zed_camera_component
+[0.354s] Invoked command in '/home/bur/ros2_ws/build/zed_components' returned '0': CMAKE_PREFIX_PATH=/home/bur/ros2_ws/install/zed_interfaces:/home/bur/ros2_ws/install/zed_ros2:/home/bur/ros2_ws/install/zed_wrapper:/home/bur/ros2_ws/install/zed_components:/opt/ros/humble LD_LIBRARY_PATH=/home/bur/ros2_ws/install/zed_interfaces/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/aarch64-linux-gnu:/opt/ros/humble/lib:/home/bur/ros2_ws/install/zed_components/lib:/usr/local/cuda-11.4/lib64 /usr/bin/cmake --build /home/bur/ros2_ws/build/zed_components -- -j6 -l6
+[0.466s] Invoking command in '/home/bur/ros2_ws/build/zed_components': CMAKE_PREFIX_PATH=/home/bur/ros2_ws/install/zed_interfaces:/home/bur/ros2_ws/install/zed_ros2:/home/bur/ros2_ws/install/zed_wrapper:/home/bur/ros2_ws/install/zed_components:/opt/ros/humble LD_LIBRARY_PATH=/home/bur/ros2_ws/install/zed_interfaces/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/aarch64-linux-gnu:/opt/ros/humble/lib:/home/bur/ros2_ws/install/zed_components/lib:/usr/local/cuda-11.4/lib64 /usr/bin/cmake --install /home/bur/ros2_ws/build/zed_components
+[0.912s] -- Install configuration: "Release"
+[0.912s] -- Execute custom install script
+[0.913s] -- Up-to-date symlink: /home/bur/ros2_ws/install/zed_components/lib/libzed_camera_component.so
+[0.913s] -- Up-to-date symlink: /home/bur/ros2_ws/install/zed_components/include/zed_components//cost_traversability.hpp
+[0.913s] -- Up-to-date symlink: /home/bur/ros2_ws/install/zed_components/include/zed_components//sl_types.hpp
+[0.913s] -- Up-to-date symlink: /home/bur/ros2_ws/install/zed_components/include/zed_components//zed_camera_component.hpp
+[0.913s] -- Up-to-date symlink: /home/bur/ros2_ws/install/zed_components/include/zed_components//sl_logging.hpp
+[0.913s] -- Up-to-date symlink: /home/bur/ros2_ws/install/zed_components/include/zed_components//sl_tools.hpp
+[0.913s] -- Up-to-date symlink: /home/bur/ros2_ws/install/zed_components/include/zed_components//sl_win_avg.hpp
+[0.914s] -- Up-to-date symlink: /home/bur/ros2_ws/install/zed_components/include/zed_components//visibility_control.hpp
+[0.914s] -- Up-to-date symlink: /home/bur/ros2_ws/install/zed_components/share/zed_components/environment/library_path.sh
+[0.914s] -- Up-to-date symlink: /home/bur/ros2_ws/install/zed_components/share/zed_components/environment/library_path.dsv
+[0.914s] -- Up-to-date symlink: /home/bur/ros2_ws/install/zed_components/share/ament_index/resource_index/package_run_dependencies/zed_components
+[0.914s] -- Up-to-date symlink: /home/bur/ros2_ws/install/zed_components/share/ament_index/resource_index/parent_prefix_path/zed_components
+[0.914s] -- Up-to-date symlink: /home/bur/ros2_ws/install/zed_components/share/zed_components/environment/ament_prefix_path.sh
+[0.914s] -- Up-to-date symlink: /home/bur/ros2_ws/install/zed_components/share/zed_components/environment/ament_prefix_path.dsv
+[0.914s] -- Up-to-date symlink: /home/bur/ros2_ws/install/zed_components/share/zed_components/environment/path.sh
+[0.915s] -- Up-to-date symlink: /home/bur/ros2_ws/install/zed_components/share/zed_components/environment/path.dsv
+[0.915s] -- Up-to-date symlink: /home/bur/ros2_ws/install/zed_components/share/zed_components/local_setup.bash
+[0.915s] -- Up-to-date symlink: /home/bur/ros2_ws/install/zed_components/share/zed_components/local_setup.sh
+[0.915s] -- Up-to-date symlink: /home/bur/ros2_ws/install/zed_components/share/zed_components/local_setup.zsh
+[0.915s] -- Up-to-date symlink: /home/bur/ros2_ws/install/zed_components/share/zed_components/local_setup.dsv
+[0.915s] -- Symlinking: /home/bur/ros2_ws/install/zed_components/share/zed_components/package.dsv
+[0.915s] -- Up-to-date symlink: /home/bur/ros2_ws/install/zed_components/share/ament_index/resource_index/packages/zed_components
+[0.915s] -- Up-to-date symlink: /home/bur/ros2_ws/install/zed_components/share/ament_index/resource_index/rclcpp_components/zed_components
+[0.916s] -- Up-to-date symlink: /home/bur/ros2_ws/install/zed_components/share/zed_components/cmake/ament_cmake_export_include_directories-extras.cmake
+[0.916s] -- Up-to-date symlink: /home/bur/ros2_ws/install/zed_components/share/zed_components/cmake/ament_cmake_export_libraries-extras.cmake
+[0.916s] -- Up-to-date symlink: /home/bur/ros2_ws/install/zed_components/share/zed_components/cmake/ament_cmake_export_dependencies-extras.cmake
+[0.916s] -- Up-to-date symlink: /home/bur/ros2_ws/install/zed_components/share/zed_components/cmake/zed_componentsConfig.cmake
+[0.916s] -- Up-to-date symlink: /home/bur/ros2_ws/install/zed_components/share/zed_components/cmake/zed_componentsConfig-version.cmake
+[0.916s] -- Up-to-date symlink: /home/bur/ros2_ws/install/zed_components/share/zed_components/package.xml
+[0.940s] Invoked command in '/home/bur/ros2_ws/build/zed_components' returned '0': CMAKE_PREFIX_PATH=/home/bur/ros2_ws/install/zed_interfaces:/home/bur/ros2_ws/install/zed_ros2:/home/bur/ros2_ws/install/zed_wrapper:/home/bur/ros2_ws/install/zed_components:/opt/ros/humble LD_LIBRARY_PATH=/home/bur/ros2_ws/install/zed_interfaces/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/aarch64-linux-gnu:/opt/ros/humble/lib:/home/bur/ros2_ws/install/zed_components/lib:/usr/local/cuda-11.4/lib64 /usr/bin/cmake --install /home/bur/ros2_ws/build/zed_components

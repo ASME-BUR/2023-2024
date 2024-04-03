@@ -1,0 +1,1176 @@
+[0.000000] (-) TimerEvent: {}
+[0.000853] (zed_interfaces) JobQueued: {'identifier': 'zed_interfaces', 'dependencies': OrderedDict()}
+[0.001198] (zed_components) JobQueued: {'identifier': 'zed_components', 'dependencies': OrderedDict([('zed_interfaces', '/home/bur/ros2_ws/install/zed_interfaces')])}
+[0.001533] (zed_wrapper) JobQueued: {'identifier': 'zed_wrapper', 'dependencies': OrderedDict([('zed_interfaces', '/home/bur/ros2_ws/install/zed_interfaces'), ('zed_components', '/home/bur/ros2_ws/install/zed_components')])}
+[0.001650] (zed_ros2) JobQueued: {'identifier': 'zed_ros2', 'dependencies': OrderedDict([('zed_interfaces', '/home/bur/ros2_ws/install/zed_interfaces'), ('zed_components', '/home/bur/ros2_ws/install/zed_components'), ('zed_wrapper', '/home/bur/ros2_ws/install/zed_wrapper')])}
+[0.001738] (zed_interfaces) JobStarted: {'identifier': 'zed_interfaces'}
+[0.023229] (zed_interfaces) JobProgress: {'identifier': 'zed_interfaces', 'progress': 'cmake'}
+[0.024496] (zed_interfaces) Command: {'cmd': ['/usr/bin/cmake', '/home/bur/ros2_ws/src/zed-ros2-wrapper/zed-ros2-interfaces', '-DCMAKE_BUILD_TYPE=Release', '-DAMENT_CMAKE_SYMLINK_INSTALL=1', '-DCMAKE_INSTALL_PREFIX=/home/bur/ros2_ws/install/zed_interfaces'], 'cwd': '/home/bur/ros2_ws/build/zed_interfaces', 'env': OrderedDict([('GJS_DEBUG_TOPICS', 'JS ERROR;JS LOG'), ('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'bur'), ('SSH_AGENT_PID', '2553'), ('XDG_SESSION_TYPE', 'x11'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/aarch64-linux-gnu:/opt/ros/humble/lib:/home/bur/ros2_ws/install/zed_interfaces/lib:/usr/local/cuda-11.4/lib64:'), ('HOME', '/home/bur'), ('OLDPWD', '/home/bur/ros2_ws/src'), ('DESKTOP_SESSION', 'ubuntu'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('MANAGERPID', '2329'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('IM_CONFIG_PHASE', '1'), ('COLCON_PREFIX_PATH', '/home/bur/ros2_ws/install'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'bur'), ('JOURNAL_STREAM', '8:57445'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'bur'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('WINDOWPATH', '2'), ('PATH', '/opt/ros/humble/bin:/usr/local/cuda-11.4/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin'), ('SESSION_MANAGER', 'local/ubuntu:@/tmp/.ICE-unix/2589,unix/ubuntu:/tmp/.ICE-unix/2589'), ('INVOCATION_ID', '624c199e99f74008a224ca9b847bf6a7'), ('XDG_MENU_PREFIX', 'gnome-'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/8773b50c_0e56_401b_a59c_d0ccb0fd15b0'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':1'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/gdm/Xauthority'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('GNOME_TERMINAL_SERVICE', ':1.165'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/opt/ros/humble:/home/bur/ros2_ws/install/zed_interfaces'), ('SHELL', '/bin/bash'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('GJS_DEBUG_OUTPUT', 'stderr'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/bur/ros2_ws/build/zed_interfaces'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/opt/ros/humble/lib/python3.8/site-packages:/home/bur/ros2_ws/install/zed_interfaces/lib/python3.8/site-packages'), ('COLCON', '1'), ('VTE_VERSION', '6003'), ('CMAKE_PREFIX_PATH', '/home/bur/ros2_ws/install/zed_interfaces:/opt/ros/humble')]), 'shell': False}
+[0.066232] (zed_interfaces) StdoutLine: {'line': b'-- Found ament_cmake_auto: 1.3.6 (/opt/ros/humble/share/ament_cmake_auto/cmake)\n'}
+[0.099010] (-) TimerEvent: {}
+[0.199702] (-) TimerEvent: {}
+[0.300403] (-) TimerEvent: {}
+[0.375465] (zed_interfaces) StdoutLine: {'line': b'-- Found Python3: /usr/bin/python3.9 (found version "3.9.5") found components: Interpreter \n'}
+[0.400520] (-) TimerEvent: {}
+[0.501086] (-) TimerEvent: {}
+[0.510639] (zed_interfaces) StdoutLine: {'line': b'-- Override CMake install command with custom implementation using symlinks instead of copying resources\n'}
+[0.601283] (-) TimerEvent: {}
+[0.701976] (-) TimerEvent: {}
+[0.802658] (-) TimerEvent: {}
+[0.826373] (zed_interfaces) StdoutLine: {'line': b'-- Found rosidl_generator_c: 3.1.5 (/opt/ros/humble/share/rosidl_generator_c/cmake)\n'}
+[0.836734] (zed_interfaces) StdoutLine: {'line': b'-- Found rosidl_adapter: 3.1.5 (/opt/ros/humble/share/rosidl_adapter/cmake)\n'}
+[0.853878] (zed_interfaces) StdoutLine: {'line': b'-- Found rosidl_generator_cpp: 3.1.5 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)\n'}
+[0.883558] (zed_interfaces) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c\n'}
+[0.902714] (-) TimerEvent: {}
+[0.926152] (zed_interfaces) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp\n'}
+[1.002898] (-) TimerEvent: {}
+[1.103484] (-) TimerEvent: {}
+[1.204087] (-) TimerEvent: {}
+[1.291278] (zed_interfaces) StdoutLine: {'line': b'-- Found ament_lint_auto: 0.12.9 (/opt/ros/humble/share/ament_lint_auto/cmake)\n'}
+[1.304207] (-) TimerEvent: {}
+[1.404721] (-) TimerEvent: {}
+[1.505385] (-) TimerEvent: {}
+[1.606057] (-) TimerEvent: {}
+[1.706711] (-) TimerEvent: {}
+[1.807362] (-) TimerEvent: {}
+[1.908050] (-) TimerEvent: {}
+[2.008847] (-) TimerEvent: {}
+[2.109460] (-) TimerEvent: {}
+[2.210171] (-) TimerEvent: {}
+[2.292302] (zed_interfaces) StdoutLine: {'line': b'-- Found ament_cmake_ros: 0.10.0 (/opt/ros/humble/share/ament_cmake_ros/cmake)\n'}
+[2.310292] (-) TimerEvent: {}
+[2.410880] (-) TimerEvent: {}
+[2.511544] (-) TimerEvent: {}
+[2.612290] (-) TimerEvent: {}
+[2.713043] (-) TimerEvent: {}
+[2.813670] (-) TimerEvent: {}
+[2.914317] (-) TimerEvent: {}
+[3.014962] (-) TimerEvent: {}
+[3.115607] (-) TimerEvent: {}
+[3.216277] (-) TimerEvent: {}
+[3.316911] (-) TimerEvent: {}
+[3.417517] (-) TimerEvent: {}
+[3.518163] (-) TimerEvent: {}
+[3.618808] (-) TimerEvent: {}
+[3.719423] (-) TimerEvent: {}
+[3.820063] (-) TimerEvent: {}
+[3.854541] (zed_interfaces) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c\n'}
+[3.920240] (-) TimerEvent: {}
+[4.020878] (-) TimerEvent: {}
+[4.121530] (-) TimerEvent: {}
+[4.222185] (-) TimerEvent: {}
+[4.322816] (-) TimerEvent: {}
+[4.423461] (-) TimerEvent: {}
+[4.482174] (zed_interfaces) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp\n'}
+[4.523597] (-) TimerEvent: {}
+[4.532565] (zed_interfaces) StdoutLine: {'line': b'-- Found PythonInterp: /usr/bin/python3 (found suitable version "3.8.10", minimum required is "3.6") \n'}
+[4.537185] (zed_interfaces) StdoutLine: {'line': b'-- Found python_cmake_module: 0.10.0 (/opt/ros/humble/share/python_cmake_module/cmake)\n'}
+[4.602139] (zed_interfaces) StdoutLine: {'line': b'-- Found PythonLibs: /usr/lib/aarch64-linux-gnu/libpython3.8.so (found suitable version "3.8.10", minimum required is "3.5") \n'}
+[4.602854] (zed_interfaces) StdoutLine: {'line': b'-- Using PYTHON_EXECUTABLE: /usr/bin/python3\n'}
+[4.603132] (zed_interfaces) StdoutLine: {'line': b'-- Using PYTHON_INCLUDE_DIRS: /usr/include/python3.8\n'}
+[4.603381] (zed_interfaces) StdoutLine: {'line': b'-- Using PYTHON_LIBRARIES: /usr/lib/aarch64-linux-gnu/libpython3.8.so\n'}
+[4.623679] (-) TimerEvent: {}
+[4.644432] (zed_interfaces) StdoutLine: {'line': b'-- Found PythonExtra: .so  \n'}
+[4.723868] (-) TimerEvent: {}
+[4.824500] (-) TimerEvent: {}
+[4.883502] (zed_interfaces) StdoutLine: {'line': b"-- Added test 'copyright' to check source files copyright and LICENSE\n"}
+[4.888248] (zed_interfaces) StdoutLine: {'line': b"-- Added test 'lint_cmake' to check CMake code style\n"}
+[4.892654] (zed_interfaces) StdoutLine: {'line': b"-- Added test 'xmllint' to check XML markup files\n"}
+[4.911054] (zed_interfaces) StdoutLine: {'line': b'-- Configuring done\n'}
+[4.924566] (-) TimerEvent: {}
+[5.025061] (-) TimerEvent: {}
+[5.070746] (zed_interfaces) StdoutLine: {'line': b'-- Generating done\n'}
+[5.076576] (zed_interfaces) StdoutLine: {'line': b'-- Build files have been written to: /home/bur/ros2_ws/build/zed_interfaces\n'}
+[5.098072] (zed_interfaces) CommandEnded: {'returncode': 0}
+[5.100342] (zed_interfaces) JobProgress: {'identifier': 'zed_interfaces', 'progress': 'build'}
+[5.102586] (zed_interfaces) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/bur/ros2_ws/build/zed_interfaces', '--', '-j6', '-l6'], 'cwd': '/home/bur/ros2_ws/build/zed_interfaces', 'env': OrderedDict([('GJS_DEBUG_TOPICS', 'JS ERROR;JS LOG'), ('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'bur'), ('SSH_AGENT_PID', '2553'), ('XDG_SESSION_TYPE', 'x11'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/aarch64-linux-gnu:/opt/ros/humble/lib:/home/bur/ros2_ws/install/zed_interfaces/lib:/usr/local/cuda-11.4/lib64:'), ('HOME', '/home/bur'), ('OLDPWD', '/home/bur/ros2_ws/src'), ('DESKTOP_SESSION', 'ubuntu'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('MANAGERPID', '2329'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('IM_CONFIG_PHASE', '1'), ('COLCON_PREFIX_PATH', '/home/bur/ros2_ws/install'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'bur'), ('JOURNAL_STREAM', '8:57445'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'bur'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('WINDOWPATH', '2'), ('PATH', '/opt/ros/humble/bin:/usr/local/cuda-11.4/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin'), ('SESSION_MANAGER', 'local/ubuntu:@/tmp/.ICE-unix/2589,unix/ubuntu:/tmp/.ICE-unix/2589'), ('INVOCATION_ID', '624c199e99f74008a224ca9b847bf6a7'), ('XDG_MENU_PREFIX', 'gnome-'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/8773b50c_0e56_401b_a59c_d0ccb0fd15b0'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':1'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/gdm/Xauthority'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('GNOME_TERMINAL_SERVICE', ':1.165'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/opt/ros/humble:/home/bur/ros2_ws/install/zed_interfaces'), ('SHELL', '/bin/bash'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('GJS_DEBUG_OUTPUT', 'stderr'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/bur/ros2_ws/build/zed_interfaces'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/opt/ros/humble/lib/python3.8/site-packages:/home/bur/ros2_ws/install/zed_interfaces/lib/python3.8/site-packages'), ('COLCON', '1'), ('VTE_VERSION', '6003'), ('CMAKE_PREFIX_PATH', '/home/bur/ros2_ws/install/zed_interfaces:/opt/ros/humble')]), 'shell': False}
+[5.125221] (-) TimerEvent: {}
+[5.202049] (zed_interfaces) StdoutLine: {'line': b'\x1b[35m\x1b[1mScanning dependencies of target ament_cmake_python_symlink_zed_interfaces\x1b[0m\n'}
+[5.202614] (zed_interfaces) StdoutLine: {'line': b'\x1b[35m\x1b[1mScanning dependencies of target zed_interfaces__cpp\x1b[0m\n'}
+[5.202933] (zed_interfaces) StdoutLine: {'line': b'[  0%] \x1b[34m\x1b[1mGenerating C code for ROS interfaces\x1b[0m\n'}
+[5.225386] (-) TimerEvent: {}
+[5.226862] (zed_interfaces) StdoutLine: {'line': b'[  0%] \x1b[34m\x1b[1mGenerating C++ code for ROS interfaces\x1b[0m\n'}
+[5.243783] (zed_interfaces) StdoutLine: {'line': b'[  0%] Built target ament_cmake_python_symlink_zed_interfaces\n'}
+[5.266376] (zed_interfaces) StdoutLine: {'line': b'\x1b[35m\x1b[1mScanning dependencies of target ament_cmake_python_build_zed_interfaces_egg\x1b[0m\n'}
+[5.325546] (-) TimerEvent: {}
+[5.426193] (-) TimerEvent: {}
+[5.526871] (-) TimerEvent: {}
+[5.627553] (-) TimerEvent: {}
+[5.728314] (-) TimerEvent: {}
+[5.829005] (-) TimerEvent: {}
+[5.929676] (-) TimerEvent: {}
+[5.965668] (zed_interfaces) StdoutLine: {'line': b'running egg_info\n'}
+[5.966810] (zed_interfaces) StdoutLine: {'line': b'creating zed_interfaces.egg-info\n'}
+[5.967260] (zed_interfaces) StdoutLine: {'line': b'writing zed_interfaces.egg-info/PKG-INFO\n'}
+[5.967712] (zed_interfaces) StdoutLine: {'line': b'writing dependency_links to zed_interfaces.egg-info/dependency_links.txt\n'}
+[5.968087] (zed_interfaces) StdoutLine: {'line': b'writing top-level names to zed_interfaces.egg-info/top_level.txt\n'}
+[5.968708] (zed_interfaces) StdoutLine: {'line': b"writing manifest file 'zed_interfaces.egg-info/SOURCES.txt'\n"}
+[6.029805] (-) TimerEvent: {}
+[6.072861] (zed_interfaces) StdoutLine: {'line': b"reading manifest file 'zed_interfaces.egg-info/SOURCES.txt'\n"}
+[6.073855] (zed_interfaces) StdoutLine: {'line': b"writing manifest file 'zed_interfaces.egg-info/SOURCES.txt'\n"}
+[6.129989] (-) TimerEvent: {}
+[6.151399] (zed_interfaces) StdoutLine: {'line': b'[  0%] Built target ament_cmake_python_build_zed_interfaces_egg\n'}
+[6.230157] (-) TimerEvent: {}
+[6.330803] (-) TimerEvent: {}
+[6.431438] (-) TimerEvent: {}
+[6.532036] (-) TimerEvent: {}
+[6.632650] (-) TimerEvent: {}
+[6.733255] (-) TimerEvent: {}
+[6.833875] (-) TimerEvent: {}
+[6.934497] (-) TimerEvent: {}
+[7.035077] (-) TimerEvent: {}
+[7.135631] (-) TimerEvent: {}
+[7.236254] (-) TimerEvent: {}
+[7.336873] (-) TimerEvent: {}
+[7.437494] (-) TimerEvent: {}
+[7.538133] (-) TimerEvent: {}
+[7.638754] (-) TimerEvent: {}
+[7.739400] (-) TimerEvent: {}
+[7.840017] (-) TimerEvent: {}
+[7.940626] (-) TimerEvent: {}
+[8.041210] (-) TimerEvent: {}
+[8.141824] (-) TimerEvent: {}
+[8.242483] (-) TimerEvent: {}
+[8.343198] (-) TimerEvent: {}
+[8.444110] (-) TimerEvent: {}
+[8.507213] (zed_interfaces) StdoutLine: {'line': b'[  0%] Built target zed_interfaces__cpp\n'}
+[8.533183] (zed_interfaces) StdoutLine: {'line': b'[  1%] \x1b[34m\x1b[1mGenerating C++ type support dispatch for ROS interfaces\x1b[0m\n'}
+[8.541935] (zed_interfaces) StdoutLine: {'line': b'[  2%] \x1b[34m\x1b[1mGenerating C++ type support for eProsima Fast-RTPS\x1b[0m\n'}
+[8.544228] (-) TimerEvent: {}
+[8.617217] (zed_interfaces) StdoutLine: {'line': b'[  2%] \x1b[34m\x1b[1mGenerating C++ introspection for ROS interfaces\x1b[0m\n'}
+[8.644444] (-) TimerEvent: {}
+[8.745149] (-) TimerEvent: {}
+[8.845848] (-) TimerEvent: {}
+[8.946542] (-) TimerEvent: {}
+[9.004877] (zed_interfaces) StdoutLine: {'line': b'\x1b[35m\x1b[1mScanning dependencies of target zed_interfaces__rosidl_generator_c\x1b[0m\n'}
+[9.046814] (-) TimerEvent: {}
+[9.053318] (zed_interfaces) StdoutLine: {'line': b'[  3%] \x1b[32mBuilding C object CMakeFiles/zed_interfaces__rosidl_generator_c.dir/rosidl_generator_c/zed_interfaces/msg/detail/object__functions.c.o\x1b[0m\n'}
+[9.053986] (zed_interfaces) StdoutLine: {'line': b'[  4%] \x1b[32mBuilding C object CMakeFiles/zed_interfaces__rosidl_generator_c.dir/rosidl_generator_c/zed_interfaces/msg/detail/objects_stamped__functions.c.o\x1b[0m\n'}
+[9.058791] (zed_interfaces) StdoutLine: {'line': b'[  4%] \x1b[32mBuilding C object CMakeFiles/zed_interfaces__rosidl_generator_c.dir/rosidl_generator_c/zed_interfaces/msg/detail/keypoint2_di__functions.c.o\x1b[0m\n'}
+[9.147013] (-) TimerEvent: {}
+[9.247730] (-) TimerEvent: {}
+[9.264796] (zed_interfaces) StdoutLine: {'line': b'[  5%] \x1b[32mBuilding C object CMakeFiles/zed_interfaces__rosidl_generator_c.dir/rosidl_generator_c/zed_interfaces/msg/detail/keypoint2_df__functions.c.o\x1b[0m\n'}
+[9.287553] (zed_interfaces) StdoutLine: {'line': b'[  6%] \x1b[32mBuilding C object CMakeFiles/zed_interfaces__rosidl_generator_c.dir/rosidl_generator_c/zed_interfaces/msg/detail/keypoint3_d__functions.c.o\x1b[0m\n'}
+[9.325500] (zed_interfaces) StdoutLine: {'line': b'[  6%] \x1b[32mBuilding C object CMakeFiles/zed_interfaces__rosidl_generator_c.dir/rosidl_generator_c/zed_interfaces/msg/detail/bounding_box2_di__functions.c.o\x1b[0m\n'}
+[9.347958] (-) TimerEvent: {}
+[9.448931] (-) TimerEvent: {}
+[9.481799] (zed_interfaces) StdoutLine: {'line': b'[  7%] \x1b[32mBuilding C object CMakeFiles/zed_interfaces__rosidl_generator_c.dir/rosidl_generator_c/zed_interfaces/msg/detail/bounding_box2_df__functions.c.o\x1b[0m\n'}
+[9.512523] (zed_interfaces) StdoutLine: {'line': b'[  7%] \x1b[32mBuilding C object CMakeFiles/zed_interfaces__rosidl_generator_c.dir/rosidl_generator_c/zed_interfaces/msg/detail/bounding_box3_d__functions.c.o\x1b[0m\n'}
+[9.549112] (-) TimerEvent: {}
+[9.561331] (zed_interfaces) StdoutLine: {'line': b'[  8%] \x1b[32mBuilding C object CMakeFiles/zed_interfaces__rosidl_generator_c.dir/rosidl_generator_c/zed_interfaces/msg/detail/skeleton2_d__functions.c.o\x1b[0m\n'}
+[9.649530] (-) TimerEvent: {}
+[9.706819] (zed_interfaces) StdoutLine: {'line': b'[  9%] \x1b[32mBuilding C object CMakeFiles/zed_interfaces__rosidl_generator_c.dir/rosidl_generator_c/zed_interfaces/msg/detail/skeleton3_d__functions.c.o\x1b[0m\n'}
+[9.750862] (-) TimerEvent: {}
+[9.770149] (zed_interfaces) StdoutLine: {'line': b'[  9%] \x1b[32mBuilding C object CMakeFiles/zed_interfaces__rosidl_generator_c.dir/rosidl_generator_c/zed_interfaces/msg/detail/depth_info_stamped__functions.c.o\x1b[0m\n'}
+[9.796097] (zed_interfaces) StdoutLine: {'line': b'[ 10%] \x1b[32mBuilding C object CMakeFiles/zed_interfaces__rosidl_generator_c.dir/rosidl_generator_c/zed_interfaces/msg/detail/plane_stamped__functions.c.o\x1b[0m\n'}
+[9.851050] (-) TimerEvent: {}
+[9.936238] (zed_interfaces) StdoutLine: {'line': b'[ 11%] \x1b[32mBuilding C object CMakeFiles/zed_interfaces__rosidl_generator_c.dir/rosidl_generator_c/zed_interfaces/msg/detail/pos_track_status__functions.c.o\x1b[0m\n'}
+[9.951245] (-) TimerEvent: {}
+[10.006244] (zed_interfaces) StdoutLine: {'line': b'[ 11%] \x1b[32mBuilding C object CMakeFiles/zed_interfaces__rosidl_generator_c.dir/rosidl_generator_c/zed_interfaces/msg/detail/heartbeat__functions.c.o\x1b[0m\n'}
+[10.045575] (zed_interfaces) StdoutLine: {'line': b'[ 12%] \x1b[32mBuilding C object CMakeFiles/zed_interfaces__rosidl_generator_c.dir/rosidl_generator_c/zed_interfaces/srv/detail/set_pose__functions.c.o\x1b[0m\n'}
+[10.051414] (-) TimerEvent: {}
+[10.138969] (zed_interfaces) StdoutLine: {'line': b'[ 12%] \x1b[32mBuilding C object CMakeFiles/zed_interfaces__rosidl_generator_c.dir/rosidl_generator_c/zed_interfaces/srv/detail/start_svo_rec__functions.c.o\x1b[0m\n'}
+[10.151640] (-) TimerEvent: {}
+[10.245823] (zed_interfaces) StdoutLine: {'line': b'[ 13%] \x1b[32mBuilding C object CMakeFiles/zed_interfaces__rosidl_generator_c.dir/rosidl_generator_c/zed_interfaces/srv/detail/set_roi__functions.c.o\x1b[0m\n'}
+[10.251805] (-) TimerEvent: {}
+[10.352754] (-) TimerEvent: {}
+[10.453448] (-) TimerEvent: {}
+[10.554127] (-) TimerEvent: {}
+[10.570060] (zed_interfaces) StdoutLine: {'line': b'[ 14%] \x1b[32m\x1b[1mLinking C shared library libzed_interfaces__rosidl_generator_c.so\x1b[0m\n'}
+[10.648339] (zed_interfaces) StdoutLine: {'line': b'[ 14%] Built target zed_interfaces__rosidl_generator_c\n'}
+[10.654304] (-) TimerEvent: {}
+[10.672431] (zed_interfaces) StdoutLine: {'line': b'[ 17%] \x1b[34m\x1b[1mGenerating C introspection for ROS interfaces\x1b[0m\n'}
+[10.672913] (zed_interfaces) StdoutLine: {'line': b'[ 17%] \x1b[34m\x1b[1mGenerating C type support for eProsima Fast-RTPS\x1b[0m\n'}
+[10.673291] (zed_interfaces) StdoutLine: {'line': b'[ 17%] \x1b[34m\x1b[1mGenerating C type support dispatch for ROS interfaces\x1b[0m\n'}
+[10.754534] (-) TimerEvent: {}
+[10.855517] (-) TimerEvent: {}
+[10.956487] (-) TimerEvent: {}
+[11.057409] (-) TimerEvent: {}
+[11.158342] (-) TimerEvent: {}
+[11.259357] (-) TimerEvent: {}
+[11.282349] (zed_interfaces) StdoutLine: {'line': b'\x1b[35m\x1b[1mScanning dependencies of target zed_interfaces__rosidl_typesupport_cpp\x1b[0m\n'}
+[11.347753] (zed_interfaces) StdoutLine: {'line': b'[ 17%] \x1b[32mBuilding CXX object CMakeFiles/zed_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/zed_interfaces/msg/object__type_support.cpp.o\x1b[0m\n'}
+[11.359583] (-) TimerEvent: {}
+[11.460343] (-) TimerEvent: {}
+[11.561045] (-) TimerEvent: {}
+[11.661738] (-) TimerEvent: {}
+[11.762739] (-) TimerEvent: {}
+[11.863457] (-) TimerEvent: {}
+[11.964129] (-) TimerEvent: {}
+[12.064877] (-) TimerEvent: {}
+[12.150677] (zed_interfaces) StdoutLine: {'line': b'[ 18%] \x1b[32mBuilding CXX object CMakeFiles/zed_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/zed_interfaces/msg/objects_stamped__type_support.cpp.o\x1b[0m\n'}
+[12.165059] (-) TimerEvent: {}
+[12.265760] (-) TimerEvent: {}
+[12.278947] (zed_interfaces) StdoutLine: {'line': b'\x1b[35m\x1b[1mScanning dependencies of target zed_interfaces__rosidl_typesupport_introspection_cpp\x1b[0m\n'}
+[12.332392] (zed_interfaces) StdoutLine: {'line': b'[ 19%] \x1b[32mBuilding CXX object CMakeFiles/zed_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/zed_interfaces/msg/detail/object__type_support.cpp.o\x1b[0m\n'}
+[12.356864] (zed_interfaces) StdoutLine: {'line': b'\x1b[35m\x1b[1mScanning dependencies of target zed_interfaces__rosidl_typesupport_fastrtps_cpp\x1b[0m\n'}
+[12.365945] (-) TimerEvent: {}
+[12.433857] (zed_interfaces) StdoutLine: {'line': b'[ 20%] \x1b[32mBuilding CXX object CMakeFiles/zed_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/zed_interfaces/msg/detail/dds_fastrtps/object__type_support.cpp.o\x1b[0m\n'}
+[12.466154] (-) TimerEvent: {}
+[12.566901] (-) TimerEvent: {}
+[12.667665] (-) TimerEvent: {}
+[12.768429] (-) TimerEvent: {}
+[12.869161] (-) TimerEvent: {}
+[12.874187] (zed_interfaces) StdoutLine: {'line': b'[ 21%] \x1b[32mBuilding CXX object CMakeFiles/zed_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/zed_interfaces/msg/keypoint2_di__type_support.cpp.o\x1b[0m\n'}
+[12.969346] (-) TimerEvent: {}
+[13.070201] (-) TimerEvent: {}
+[13.170960] (-) TimerEvent: {}
+[13.271613] (-) TimerEvent: {}
+[13.372351] (-) TimerEvent: {}
+[13.473133] (-) TimerEvent: {}
+[13.573964] (-) TimerEvent: {}
+[13.638511] (zed_interfaces) StdoutLine: {'line': b'[ 21%] \x1b[32mBuilding CXX object CMakeFiles/zed_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/zed_interfaces/msg/keypoint2_df__type_support.cpp.o\x1b[0m\n'}
+[13.674168] (-) TimerEvent: {}
+[13.746927] (zed_interfaces) StdoutLine: {'line': b'\x1b[35m\x1b[1mScanning dependencies of target zed_interfaces__rosidl_typesupport_c\x1b[0m\n'}
+[13.774375] (-) TimerEvent: {}
+[13.792667] (zed_interfaces) StdoutLine: {'line': b'[ 21%] \x1b[32mBuilding CXX object CMakeFiles/zed_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/zed_interfaces/msg/object__type_support.cpp.o\x1b[0m\n'}
+[13.874608] (-) TimerEvent: {}
+[13.875241] (zed_interfaces) StdoutLine: {'line': b'[ 22%] \x1b[32mBuilding CXX object CMakeFiles/zed_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/zed_interfaces/msg/objects_stamped__type_support.cpp.o\x1b[0m\n'}
+[13.957895] (zed_interfaces) StdoutLine: {'line': b'[ 23%] \x1b[32mBuilding CXX object CMakeFiles/zed_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/zed_interfaces/msg/keypoint2_di__type_support.cpp.o\x1b[0m\n'}
+[13.974822] (-) TimerEvent: {}
+[14.034907] (zed_interfaces) StdoutLine: {'line': b'[ 23%] \x1b[32mBuilding CXX object CMakeFiles/zed_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/zed_interfaces/msg/detail/dds_fastrtps/objects_stamped__type_support.cpp.o\x1b[0m\n'}
+[14.044351] (zed_interfaces) StdoutLine: {'line': b'[ 23%] \x1b[32mBuilding CXX object CMakeFiles/zed_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/zed_interfaces/msg/keypoint2_df__type_support.cpp.o\x1b[0m\n'}
+[14.060862] (zed_interfaces) StdoutLine: {'line': b'[ 23%] \x1b[32mBuilding CXX object CMakeFiles/zed_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/zed_interfaces/msg/detail/objects_stamped__type_support.cpp.o\x1b[0m\n'}
+[14.075033] (-) TimerEvent: {}
+[14.117372] (zed_interfaces) StdoutLine: {'line': b'[ 24%] \x1b[32mBuilding CXX object CMakeFiles/zed_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/zed_interfaces/msg/keypoint3_d__type_support.cpp.o\x1b[0m\n'}
+[14.175224] (-) TimerEvent: {}
+[14.191536] (zed_interfaces) StdoutLine: {'line': b'[ 24%] \x1b[32mBuilding CXX object CMakeFiles/zed_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/zed_interfaces/msg/bounding_box2_di__type_support.cpp.o\x1b[0m\n'}
+[14.267327] (zed_interfaces) StdoutLine: {'line': b'[ 25%] \x1b[32mBuilding CXX object CMakeFiles/zed_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/zed_interfaces/msg/bounding_box2_df__type_support.cpp.o\x1b[0m\n'}
+[14.275408] (-) TimerEvent: {}
+[14.342575] (zed_interfaces) StdoutLine: {'line': b'[ 26%] \x1b[32mBuilding CXX object CMakeFiles/zed_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/zed_interfaces/msg/bounding_box3_d__type_support.cpp.o\x1b[0m\n'}
+[14.375616] (-) TimerEvent: {}
+[14.406768] (zed_interfaces) StdoutLine: {'line': b'[ 27%] \x1b[32mBuilding CXX object CMakeFiles/zed_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/zed_interfaces/msg/keypoint3_d__type_support.cpp.o\x1b[0m\n'}
+[14.419681] (zed_interfaces) StdoutLine: {'line': b'[ 27%] \x1b[32mBuilding CXX object CMakeFiles/zed_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/zed_interfaces/msg/skeleton2_d__type_support.cpp.o\x1b[0m\n'}
+[14.475814] (-) TimerEvent: {}
+[14.494816] (zed_interfaces) StdoutLine: {'line': b'[ 28%] \x1b[32mBuilding CXX object CMakeFiles/zed_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/zed_interfaces/msg/skeleton3_d__type_support.cpp.o\x1b[0m\n'}
+[14.571252] (zed_interfaces) StdoutLine: {'line': b'[ 29%] \x1b[32mBuilding CXX object CMakeFiles/zed_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/zed_interfaces/msg/depth_info_stamped__type_support.cpp.o\x1b[0m\n'}
+[14.575999] (-) TimerEvent: {}
+[14.618754] (zed_interfaces) StdoutLine: {'line': b'\x1b[35m\x1b[1mScanning dependencies of target zed_interfaces__rosidl_typesupport_introspection_c\x1b[0m\n'}
+[14.647433] (zed_interfaces) StdoutLine: {'line': b'[ 29%] \x1b[32mBuilding CXX object CMakeFiles/zed_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/zed_interfaces/msg/plane_stamped__type_support.cpp.o\x1b[0m\n'}
+[14.675272] (zed_interfaces) StdoutLine: {'line': b'[ 30%] \x1b[32mBuilding C object CMakeFiles/zed_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/zed_interfaces/msg/detail/object__type_support.c.o\x1b[0m\n'}
+[14.676071] (-) TimerEvent: {}
+[14.726996] (zed_interfaces) StdoutLine: {'line': b'[ 31%] \x1b[32mBuilding CXX object CMakeFiles/zed_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/zed_interfaces/msg/pos_track_status__type_support.cpp.o\x1b[0m\n'}
+[14.776345] (-) TimerEvent: {}
+[14.808539] (zed_interfaces) StdoutLine: {'line': b'[ 31%] \x1b[32mBuilding CXX object CMakeFiles/zed_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/zed_interfaces/msg/heartbeat__type_support.cpp.o\x1b[0m\n'}
+[14.876528] (-) TimerEvent: {}
+[14.885353] (zed_interfaces) StdoutLine: {'line': b'[ 32%] \x1b[32mBuilding CXX object CMakeFiles/zed_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/zed_interfaces/srv/set_pose__type_support.cpp.o\x1b[0m\n'}
+[14.922564] (zed_interfaces) StdoutLine: {'line': b'[ 32%] \x1b[32mBuilding C object CMakeFiles/zed_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/zed_interfaces/msg/detail/objects_stamped__type_support.c.o\x1b[0m\n'}
+[14.976724] (-) TimerEvent: {}
+[15.029396] (zed_interfaces) StdoutLine: {'line': b'[ 33%] \x1b[32mBuilding CXX object CMakeFiles/zed_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/zed_interfaces/srv/start_svo_rec__type_support.cpp.o\x1b[0m\n'}
+[15.076911] (-) TimerEvent: {}
+[15.082362] (zed_interfaces) StdoutLine: {'line': b'[ 34%] \x1b[32mBuilding C object CMakeFiles/zed_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/zed_interfaces/msg/detail/keypoint2_di__type_support.c.o\x1b[0m\n'}
+[15.101022] (zed_interfaces) StdoutLine: {'line': b'\x1b[35m\x1b[1mScanning dependencies of target zed_interfaces__rosidl_typesupport_fastrtps_c\x1b[0m\n'}
+[15.177104] (-) TimerEvent: {}
+[15.179482] (zed_interfaces) StdoutLine: {'line': b'[ 34%] \x1b[32mBuilding CXX object CMakeFiles/zed_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/zed_interfaces/srv/set_roi__type_support.cpp.o\x1b[0m\n'}
+[15.209643] (zed_interfaces) StdoutLine: {'line': b'[ 34%] \x1b[32mBuilding CXX object CMakeFiles/zed_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/zed_interfaces/msg/detail/object__type_support_c.cpp.o\x1b[0m\n'}
+[15.222193] (zed_interfaces) StdoutLine: {'line': b'[ 35%] \x1b[32mBuilding CXX object CMakeFiles/zed_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/zed_interfaces/msg/bounding_box2_di__type_support.cpp.o\x1b[0m\n'}
+[15.237841] (zed_interfaces) StdoutLine: {'line': b'[ 35%] \x1b[32mBuilding C object CMakeFiles/zed_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/zed_interfaces/msg/detail/keypoint2_df__type_support.c.o\x1b[0m\n'}
+[15.263895] (zed_interfaces) StdoutLine: {'line': b'[ 36%] \x1b[32m\x1b[1mLinking CXX shared library libzed_interfaces__rosidl_typesupport_c.so\x1b[0m\n'}
+[15.277289] (-) TimerEvent: {}
+[15.343160] (zed_interfaces) StdoutLine: {'line': b'[ 37%] \x1b[32mBuilding C object CMakeFiles/zed_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/zed_interfaces/msg/detail/keypoint3_d__type_support.c.o\x1b[0m\n'}
+[15.349003] (zed_interfaces) StdoutLine: {'line': b'[ 37%] Built target zed_interfaces__rosidl_typesupport_c\n'}
+[15.369714] (zed_interfaces) StdoutLine: {'line': b'[ 38%] \x1b[32mBuilding CXX object CMakeFiles/zed_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/zed_interfaces/msg/detail/keypoint2_di__type_support.cpp.o\x1b[0m\n'}
+[15.377482] (-) TimerEvent: {}
+[15.449723] (zed_interfaces) StdoutLine: {'line': b'[ 39%] \x1b[32mBuilding C object CMakeFiles/zed_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/zed_interfaces/msg/detail/bounding_box2_di__type_support.c.o\x1b[0m\n'}
+[15.477684] (-) TimerEvent: {}
+[15.555434] (zed_interfaces) StdoutLine: {'line': b'[ 39%] \x1b[32mBuilding C object CMakeFiles/zed_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/zed_interfaces/msg/detail/bounding_box2_df__type_support.c.o\x1b[0m\n'}
+[15.577880] (-) TimerEvent: {}
+[15.661848] (zed_interfaces) StdoutLine: {'line': b'[ 40%] \x1b[32mBuilding C object CMakeFiles/zed_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/zed_interfaces/msg/detail/bounding_box3_d__type_support.c.o\x1b[0m\n'}
+[15.678081] (-) TimerEvent: {}
+[15.715530] (zed_interfaces) StdoutLine: {'line': b'[ 41%] \x1b[32mBuilding CXX object CMakeFiles/zed_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/zed_interfaces/msg/detail/dds_fastrtps/keypoint2_di__type_support.cpp.o\x1b[0m\n'}
+[15.772506] (zed_interfaces) StdoutLine: {'line': b'[ 42%] \x1b[32mBuilding C object CMakeFiles/zed_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/zed_interfaces/msg/detail/skeleton2_d__type_support.c.o\x1b[0m\n'}
+[15.776844] (zed_interfaces) StdoutLine: {'line': b'[ 42%] \x1b[32mBuilding C object CMakeFiles/zed_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/zed_interfaces/msg/detail/skeleton3_d__type_support.c.o\x1b[0m\n'}
+[15.778181] (-) TimerEvent: {}
+[15.879168] (-) TimerEvent: {}
+[15.880084] (zed_interfaces) StdoutLine: {'line': b'[ 44%] \x1b[32mBuilding CXX object CMakeFiles/zed_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/zed_interfaces/msg/detail/dds_fastrtps/keypoint2_df__type_support.cpp.o\x1b[0m\n'}
+[15.880511] (zed_interfaces) StdoutLine: {'line': b'[ 44%] \x1b[32mBuilding C object CMakeFiles/zed_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/zed_interfaces/msg/detail/depth_info_stamped__type_support.c.o\x1b[0m\n'}
+[15.954554] (zed_interfaces) StdoutLine: {'line': b'[ 44%] \x1b[32mBuilding CXX object CMakeFiles/zed_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/zed_interfaces/msg/bounding_box2_df__type_support.cpp.o\x1b[0m\n'}
+[15.979365] (-) TimerEvent: {}
+[15.980680] (zed_interfaces) StdoutLine: {'line': b'[ 45%] \x1b[32mBuilding C object CMakeFiles/zed_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/zed_interfaces/msg/detail/plane_stamped__type_support.c.o\x1b[0m\n'}
+[16.079570] (-) TimerEvent: {}
+[16.101342] (zed_interfaces) StdoutLine: {'line': b'[ 45%] \x1b[32mBuilding C object CMakeFiles/zed_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/zed_interfaces/msg/detail/pos_track_status__type_support.c.o\x1b[0m\n'}
+[16.179799] (-) TimerEvent: {}
+[16.195353] (zed_interfaces) StdoutLine: {'line': b'[ 46%] \x1b[32mBuilding C object CMakeFiles/zed_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/zed_interfaces/msg/detail/heartbeat__type_support.c.o\x1b[0m\n'}
+[16.279988] (-) TimerEvent: {}
+[16.288492] (zed_interfaces) StdoutLine: {'line': b'[ 46%] \x1b[32mBuilding C object CMakeFiles/zed_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/zed_interfaces/srv/detail/set_pose__type_support.c.o\x1b[0m\n'}
+[16.380242] (-) TimerEvent: {}
+[16.395733] (zed_interfaces) StdoutLine: {'line': b'[ 47%] \x1b[32mBuilding CXX object CMakeFiles/zed_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/zed_interfaces/msg/detail/keypoint2_df__type_support.cpp.o\x1b[0m\n'}
+[16.402245] (zed_interfaces) StdoutLine: {'line': b'[ 48%] \x1b[32mBuilding CXX object CMakeFiles/zed_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/zed_interfaces/msg/detail/objects_stamped__type_support_c.cpp.o\x1b[0m\n'}
+[16.435194] (zed_interfaces) StdoutLine: {'line': b'[ 49%] \x1b[32mBuilding C object CMakeFiles/zed_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/zed_interfaces/srv/detail/start_svo_rec__type_support.c.o\x1b[0m\n'}
+[16.480383] (-) TimerEvent: {}
+[16.544090] (zed_interfaces) StdoutLine: {'line': b'[ 50%] \x1b[32mBuilding C object CMakeFiles/zed_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/zed_interfaces/srv/detail/set_roi__type_support.c.o\x1b[0m\n'}
+[16.580592] (-) TimerEvent: {}
+[16.655361] (zed_interfaces) StdoutLine: {'line': b'[ 50%] \x1b[32m\x1b[1mLinking C shared library libzed_interfaces__rosidl_typesupport_introspection_c.so\x1b[0m\n'}
+[16.676425] (zed_interfaces) StdoutLine: {'line': b'[ 51%] \x1b[32mBuilding CXX object CMakeFiles/zed_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/zed_interfaces/msg/bounding_box3_d__type_support.cpp.o\x1b[0m\n'}
+[16.680777] (-) TimerEvent: {}
+[16.753940] (zed_interfaces) StdoutLine: {'line': b'[ 51%] Built target zed_interfaces__rosidl_typesupport_introspection_c\n'}
+[16.775856] (zed_interfaces) StdoutLine: {'line': b'[ 52%] \x1b[32mBuilding CXX object CMakeFiles/zed_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/zed_interfaces/msg/detail/keypoint2_di__type_support_c.cpp.o\x1b[0m\n'}
+[16.776701] (zed_interfaces) StdoutLine: {'line': b'[ 52%] \x1b[32mBuilding CXX object CMakeFiles/zed_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/zed_interfaces/msg/detail/keypoint2_df__type_support_c.cpp.o\x1b[0m\n'}
+[16.780954] (-) TimerEvent: {}
+[16.881641] (-) TimerEvent: {}
+[16.938776] (zed_interfaces) StdoutLine: {'line': b'[ 52%] \x1b[32mBuilding CXX object CMakeFiles/zed_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/zed_interfaces/msg/detail/dds_fastrtps/keypoint3_d__type_support.cpp.o\x1b[0m\n'}
+[16.981843] (-) TimerEvent: {}
+[17.082589] (-) TimerEvent: {}
+[17.183368] (-) TimerEvent: {}
+[17.284084] (-) TimerEvent: {}
+[17.369201] (zed_interfaces) StdoutLine: {'line': b'[ 53%] \x1b[32mBuilding CXX object CMakeFiles/zed_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/zed_interfaces/msg/skeleton2_d__type_support.cpp.o\x1b[0m\n'}
+[17.383568] (zed_interfaces) StdoutLine: {'line': b'[ 53%] \x1b[32mBuilding CXX object CMakeFiles/zed_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/zed_interfaces/msg/skeleton3_d__type_support.cpp.o\x1b[0m\n'}
+[17.384152] (-) TimerEvent: {}
+[17.477283] (zed_interfaces) StdoutLine: {'line': b'[ 53%] \x1b[32mBuilding CXX object CMakeFiles/zed_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/zed_interfaces/msg/detail/keypoint3_d__type_support.cpp.o\x1b[0m\n'}
+[17.484399] (-) TimerEvent: {}
+[17.585404] (-) TimerEvent: {}
+[17.674428] (zed_interfaces) StdoutLine: {'line': b'[ 54%] \x1b[32mBuilding CXX object CMakeFiles/zed_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/zed_interfaces/msg/detail/keypoint3_d__type_support_c.cpp.o\x1b[0m\n'}
+[17.681701] (zed_interfaces) StdoutLine: {'line': b'[ 55%] \x1b[32mBuilding CXX object CMakeFiles/zed_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/zed_interfaces/msg/detail/bounding_box2_di__type_support_c.cpp.o\x1b[0m\n'}
+[17.685570] (-) TimerEvent: {}
+[17.786541] (-) TimerEvent: {}
+[17.887268] (-) TimerEvent: {}
+[17.987742] (zed_interfaces) StdoutLine: {'line': b'[ 56%] \x1b[32mBuilding CXX object CMakeFiles/zed_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/zed_interfaces/msg/detail/dds_fastrtps/bounding_box2_di__type_support.cpp.o\x1b[0m\n'}
+[17.988336] (-) TimerEvent: {}
+[18.065877] (zed_interfaces) StdoutLine: {'line': b'[ 57%] \x1b[32mBuilding CXX object CMakeFiles/zed_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/zed_interfaces/msg/depth_info_stamped__type_support.cpp.o\x1b[0m\n'}
+[18.077099] (zed_interfaces) StdoutLine: {'line': b'[ 57%] \x1b[32mBuilding CXX object CMakeFiles/zed_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/zed_interfaces/msg/plane_stamped__type_support.cpp.o\x1b[0m\n'}
+[18.088558] (-) TimerEvent: {}
+[18.189297] (-) TimerEvent: {}
+[18.290060] (-) TimerEvent: {}
+[18.390820] (-) TimerEvent: {}
+[18.491626] (-) TimerEvent: {}
+[18.566502] (zed_interfaces) StdoutLine: {'line': b'[ 58%] \x1b[32mBuilding CXX object CMakeFiles/zed_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/zed_interfaces/msg/detail/bounding_box2_di__type_support.cpp.o\x1b[0m\n'}
+[18.581363] (zed_interfaces) StdoutLine: {'line': b'[ 59%] \x1b[32mBuilding CXX object CMakeFiles/zed_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/zed_interfaces/msg/detail/bounding_box2_df__type_support.cpp.o\x1b[0m\n'}
+[18.591828] (-) TimerEvent: {}
+[18.621244] (zed_interfaces) StdoutLine: {'line': b'[ 59%] \x1b[32mBuilding CXX object CMakeFiles/zed_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/zed_interfaces/msg/detail/bounding_box2_df__type_support_c.cpp.o\x1b[0m\n'}
+[18.692053] (-) TimerEvent: {}
+[18.768117] (zed_interfaces) StdoutLine: {'line': b'[ 60%] \x1b[32mBuilding CXX object CMakeFiles/zed_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/zed_interfaces/msg/pos_track_status__type_support.cpp.o\x1b[0m\n'}
+[18.781030] (zed_interfaces) StdoutLine: {'line': b'[ 61%] \x1b[32mBuilding CXX object CMakeFiles/zed_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/zed_interfaces/msg/heartbeat__type_support.cpp.o\x1b[0m\n'}
+[18.792314] (-) TimerEvent: {}
+[18.893041] (-) TimerEvent: {}
+[18.993806] (-) TimerEvent: {}
+[19.067968] (zed_interfaces) StdoutLine: {'line': b'[ 61%] \x1b[32mBuilding CXX object CMakeFiles/zed_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/zed_interfaces/msg/detail/dds_fastrtps/bounding_box2_df__type_support.cpp.o\x1b[0m\n'}
+[19.094012] (-) TimerEvent: {}
+[19.194741] (-) TimerEvent: {}
+[19.295475] (-) TimerEvent: {}
+[19.396296] (-) TimerEvent: {}
+[19.449123] (zed_interfaces) StdoutLine: {'line': b'[ 61%] \x1b[32mBuilding CXX object CMakeFiles/zed_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/zed_interfaces/srv/set_pose__type_support.cpp.o\x1b[0m\n'}
+[19.479037] (zed_interfaces) StdoutLine: {'line': b'[ 62%] \x1b[32mBuilding CXX object CMakeFiles/zed_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/zed_interfaces/srv/start_svo_rec__type_support.cpp.o\x1b[0m\n'}
+[19.496476] (-) TimerEvent: {}
+[19.553324] (zed_interfaces) StdoutLine: {'line': b'[ 63%] \x1b[32mBuilding CXX object CMakeFiles/zed_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/zed_interfaces/msg/detail/bounding_box3_d__type_support_c.cpp.o\x1b[0m\n'}
+[19.596671] (-) TimerEvent: {}
+[19.664553] (zed_interfaces) StdoutLine: {'line': b'[ 63%] \x1b[32mBuilding CXX object CMakeFiles/zed_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/zed_interfaces/msg/detail/bounding_box3_d__type_support.cpp.o\x1b[0m\n'}
+[19.665131] (zed_interfaces) StdoutLine: {'line': b'[ 63%] \x1b[32mBuilding CXX object CMakeFiles/zed_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/zed_interfaces/msg/detail/skeleton2_d__type_support_c.cpp.o\x1b[0m\n'}
+[19.696858] (-) TimerEvent: {}
+[19.797596] (-) TimerEvent: {}
+[19.898356] (-) TimerEvent: {}
+[19.999205] (-) TimerEvent: {}
+[20.100022] (-) TimerEvent: {}
+[20.167341] (zed_interfaces) StdoutLine: {'line': b'[ 64%] \x1b[32mBuilding CXX object CMakeFiles/zed_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/zed_interfaces/srv/set_roi__type_support.cpp.o\x1b[0m\n'}
+[20.173403] (zed_interfaces) StdoutLine: {'line': b'[ 65%] \x1b[32mBuilding CXX object CMakeFiles/zed_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/zed_interfaces/msg/detail/skeleton2_d__type_support.cpp.o\x1b[0m\n'}
+[20.177131] (zed_interfaces) StdoutLine: {'line': b'[ 66%] \x1b[32mBuilding CXX object CMakeFiles/zed_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/zed_interfaces/msg/detail/dds_fastrtps/bounding_box3_d__type_support.cpp.o\x1b[0m\n'}
+[20.200232] (-) TimerEvent: {}
+[20.301021] (-) TimerEvent: {}
+[20.401740] (-) TimerEvent: {}
+[20.485144] (zed_interfaces) StdoutLine: {'line': b'[ 67%] \x1b[32mBuilding CXX object CMakeFiles/zed_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/zed_interfaces/msg/detail/dds_fastrtps/skeleton2_d__type_support.cpp.o\x1b[0m\n'}
+[20.501959] (-) TimerEvent: {}
+[20.599430] (zed_interfaces) StdoutLine: {'line': b'[ 68%] \x1b[32mBuilding CXX object CMakeFiles/zed_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/zed_interfaces/msg/detail/skeleton3_d__type_support_c.cpp.o\x1b[0m\n'}
+[20.602094] (-) TimerEvent: {}
+[20.702743] (-) TimerEvent: {}
+[20.739872] (zed_interfaces) StdoutLine: {'line': b'[ 69%] \x1b[32mBuilding CXX object CMakeFiles/zed_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/zed_interfaces/msg/detail/depth_info_stamped__type_support_c.cpp.o\x1b[0m\n'}
+[20.802942] (-) TimerEvent: {}
+[20.903683] (-) TimerEvent: {}
+[20.915212] (zed_interfaces) StdoutLine: {'line': b'[ 69%] \x1b[32m\x1b[1mLinking CXX shared library libzed_interfaces__rosidl_typesupport_cpp.so\x1b[0m\n'}
+[21.003891] (-) TimerEvent: {}
+[21.013327] (zed_interfaces) StdoutLine: {'line': b'[ 69%] Built target zed_interfaces__rosidl_typesupport_cpp\n'}
+[21.036129] (zed_interfaces) StdoutLine: {'line': b'[ 69%] \x1b[32mBuilding CXX object CMakeFiles/zed_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/zed_interfaces/msg/detail/skeleton3_d__type_support.cpp.o\x1b[0m\n'}
+[21.104120] (-) TimerEvent: {}
+[21.205086] (-) TimerEvent: {}
+[21.225348] (zed_interfaces) StdoutLine: {'line': b'[ 70%] \x1b[32mBuilding CXX object CMakeFiles/zed_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/zed_interfaces/msg/detail/depth_info_stamped__type_support.cpp.o\x1b[0m\n'}
+[21.283940] (zed_interfaces) StdoutLine: {'line': b'[ 71%] \x1b[32mBuilding CXX object CMakeFiles/zed_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/zed_interfaces/msg/detail/plane_stamped__type_support.cpp.o\x1b[0m\n'}
+[21.305274] (-) TimerEvent: {}
+[21.406222] (-) TimerEvent: {}
+[21.507174] (-) TimerEvent: {}
+[21.526004] (zed_interfaces) StdoutLine: {'line': b'[ 71%] \x1b[32mBuilding CXX object CMakeFiles/zed_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/zed_interfaces/msg/detail/plane_stamped__type_support_c.cpp.o\x1b[0m\n'}
+[21.562087] (zed_interfaces) StdoutLine: {'line': b'[ 71%] \x1b[32mBuilding CXX object CMakeFiles/zed_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/zed_interfaces/msg/detail/dds_fastrtps/skeleton3_d__type_support.cpp.o\x1b[0m\n'}
+[21.607401] (-) TimerEvent: {}
+[21.663506] (zed_interfaces) StdoutLine: {'line': b'[ 72%] \x1b[32mBuilding CXX object CMakeFiles/zed_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/zed_interfaces/msg/detail/dds_fastrtps/depth_info_stamped__type_support.cpp.o\x1b[0m\n'}
+[21.707605] (-) TimerEvent: {}
+[21.808363] (-) TimerEvent: {}
+[21.909067] (-) TimerEvent: {}
+[22.009784] (-) TimerEvent: {}
+[22.110526] (-) TimerEvent: {}
+[22.139674] (zed_interfaces) StdoutLine: {'line': b'[ 73%] \x1b[32mBuilding CXX object CMakeFiles/zed_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/zed_interfaces/msg/detail/dds_fastrtps/plane_stamped__type_support.cpp.o\x1b[0m\n'}
+[22.210735] (-) TimerEvent: {}
+[22.263628] (zed_interfaces) StdoutLine: {'line': b'[ 73%] \x1b[32mBuilding CXX object CMakeFiles/zed_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/zed_interfaces/msg/detail/pos_track_status__type_support.cpp.o\x1b[0m\n'}
+[22.311001] (-) TimerEvent: {}
+[22.411774] (-) TimerEvent: {}
+[22.477185] (zed_interfaces) StdoutLine: {'line': b'[ 74%] \x1b[32mBuilding CXX object CMakeFiles/zed_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/zed_interfaces/msg/detail/heartbeat__type_support.cpp.o\x1b[0m\n'}
+[22.492646] (zed_interfaces) StdoutLine: {'line': b'[ 75%] \x1b[32mBuilding CXX object CMakeFiles/zed_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/zed_interfaces/msg/detail/pos_track_status__type_support_c.cpp.o\x1b[0m\n'}
+[22.512009] (-) TimerEvent: {}
+[22.613028] (-) TimerEvent: {}
+[22.679196] (zed_interfaces) StdoutLine: {'line': b'[ 75%] \x1b[32mBuilding CXX object CMakeFiles/zed_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/zed_interfaces/msg/detail/dds_fastrtps/pos_track_status__type_support.cpp.o\x1b[0m\n'}
+[22.713219] (-) TimerEvent: {}
+[22.731905] (zed_interfaces) StdoutLine: {'line': b'[ 76%] \x1b[32mBuilding CXX object CMakeFiles/zed_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/zed_interfaces/msg/detail/dds_fastrtps/heartbeat__type_support.cpp.o\x1b[0m\n'}
+[22.813428] (-) TimerEvent: {}
+[22.914172] (-) TimerEvent: {}
+[23.014964] (-) TimerEvent: {}
+[23.115692] (-) TimerEvent: {}
+[23.216431] (-) TimerEvent: {}
+[23.251746] (zed_interfaces) StdoutLine: {'line': b'[ 77%] \x1b[32mBuilding CXX object CMakeFiles/zed_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/zed_interfaces/srv/detail/set_pose__type_support.cpp.o\x1b[0m\n'}
+[23.284071] (zed_interfaces) StdoutLine: {'line': b'[ 77%] \x1b[32mBuilding CXX object CMakeFiles/zed_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/zed_interfaces/srv/detail/dds_fastrtps/set_pose__type_support.cpp.o\x1b[0m\n'}
+[23.316624] (-) TimerEvent: {}
+[23.393359] (zed_interfaces) StdoutLine: {'line': b'[ 78%] \x1b[32mBuilding CXX object CMakeFiles/zed_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/zed_interfaces/msg/detail/heartbeat__type_support_c.cpp.o\x1b[0m\n'}
+[23.416813] (-) TimerEvent: {}
+[23.517537] (-) TimerEvent: {}
+[23.564639] (zed_interfaces) StdoutLine: {'line': b'[ 78%] \x1b[32mBuilding CXX object CMakeFiles/zed_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/zed_interfaces/srv/detail/set_pose__type_support_c.cpp.o\x1b[0m\n'}
+[23.617749] (-) TimerEvent: {}
+[23.718502] (-) TimerEvent: {}
+[23.739946] (zed_interfaces) StdoutLine: {'line': b'[ 79%] \x1b[32mBuilding CXX object CMakeFiles/zed_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/zed_interfaces/srv/detail/dds_fastrtps/start_svo_rec__type_support.cpp.o\x1b[0m\n'}
+[23.818722] (-) TimerEvent: {}
+[23.919500] (-) TimerEvent: {}
+[23.942265] (zed_interfaces) StdoutLine: {'line': b'[ 80%] \x1b[32mBuilding CXX object CMakeFiles/zed_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/zed_interfaces/srv/detail/dds_fastrtps/set_roi__type_support.cpp.o\x1b[0m\n'}
+[24.019686] (-) TimerEvent: {}
+[24.120712] (-) TimerEvent: {}
+[24.221668] (-) TimerEvent: {}
+[24.322680] (-) TimerEvent: {}
+[24.401123] (zed_interfaces) StdoutLine: {'line': b'[ 81%] \x1b[32mBuilding CXX object CMakeFiles/zed_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/zed_interfaces/srv/detail/start_svo_rec__type_support_c.cpp.o\x1b[0m\n'}
+[24.422913] (-) TimerEvent: {}
+[24.432373] (zed_interfaces) StdoutLine: {'line': b'[ 81%] \x1b[32mBuilding CXX object CMakeFiles/zed_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/zed_interfaces/srv/detail/start_svo_rec__type_support.cpp.o\x1b[0m\n'}
+[24.451569] (zed_interfaces) StdoutLine: {'line': b'[ 82%] \x1b[32mBuilding CXX object CMakeFiles/zed_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/zed_interfaces/srv/detail/set_roi__type_support.cpp.o\x1b[0m\n'}
+[24.523112] (-) TimerEvent: {}
+[24.611342] (zed_interfaces) StdoutLine: {'line': b'[ 83%] \x1b[32mBuilding CXX object CMakeFiles/zed_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/zed_interfaces/srv/detail/set_roi__type_support_c.cpp.o\x1b[0m\n'}
+[24.623342] (-) TimerEvent: {}
+[24.724481] (-) TimerEvent: {}
+[24.825441] (-) TimerEvent: {}
+[24.926405] (-) TimerEvent: {}
+[25.027361] (-) TimerEvent: {}
+[25.127606] (zed_interfaces) StdoutLine: {'line': b'[ 83%] \x1b[32m\x1b[1mLinking CXX shared library libzed_interfaces__rosidl_typesupport_fastrtps_cpp.so\x1b[0m\n'}
+[25.128346] (-) TimerEvent: {}
+[25.229169] (-) TimerEvent: {}
+[25.288819] (zed_interfaces) StdoutLine: {'line': b'[ 83%] Built target zed_interfaces__rosidl_typesupport_fastrtps_cpp\n'}
+[25.329346] (-) TimerEvent: {}
+[25.430035] (-) TimerEvent: {}
+[25.530714] (-) TimerEvent: {}
+[25.550996] (zed_interfaces) StdoutLine: {'line': b'[ 84%] \x1b[32m\x1b[1mLinking CXX shared library libzed_interfaces__rosidl_typesupport_introspection_cpp.so\x1b[0m\n'}
+[25.630882] (-) TimerEvent: {}
+[25.663678] (zed_interfaces) StdoutLine: {'line': b'[ 84%] \x1b[32m\x1b[1mLinking CXX shared library libzed_interfaces__rosidl_typesupport_fastrtps_c.so\x1b[0m\n'}
+[25.711204] (zed_interfaces) StdoutLine: {'line': b'[ 84%] Built target zed_interfaces__rosidl_typesupport_introspection_cpp\n'}
+[25.731052] (-) TimerEvent: {}
+[25.808610] (zed_interfaces) StdoutLine: {'line': b'[ 84%] Built target zed_interfaces__rosidl_typesupport_fastrtps_c\n'}
+[25.828735] (zed_interfaces) StdoutLine: {'line': b'\x1b[35m\x1b[1mScanning dependencies of target zed_interfaces\x1b[0m\n'}
+[25.831103] (-) TimerEvent: {}
+[25.851713] (zed_interfaces) StdoutLine: {'line': b'[ 84%] Built target zed_interfaces\n'}
+[25.873867] (zed_interfaces) StdoutLine: {'line': b'\x1b[35m\x1b[1mScanning dependencies of target zed_interfaces__py\x1b[0m\n'}
+[25.896748] (zed_interfaces) StdoutLine: {'line': b'[ 85%] \x1b[34m\x1b[1mGenerating Python code for ROS interfaces\x1b[0m\n'}
+[25.931251] (-) TimerEvent: {}
+[26.031801] (-) TimerEvent: {}
+[26.132360] (-) TimerEvent: {}
+[26.232921] (-) TimerEvent: {}
+[26.333521] (-) TimerEvent: {}
+[26.434096] (-) TimerEvent: {}
+[26.534659] (-) TimerEvent: {}
+[26.635239] (-) TimerEvent: {}
+[26.735772] (-) TimerEvent: {}
+[26.836448] (-) TimerEvent: {}
+[26.937148] (-) TimerEvent: {}
+[27.037698] (-) TimerEvent: {}
+[27.138198] (-) TimerEvent: {}
+[27.238871] (-) TimerEvent: {}
+[27.339377] (-) TimerEvent: {}
+[27.439869] (-) TimerEvent: {}
+[27.540370] (-) TimerEvent: {}
+[27.640821] (-) TimerEvent: {}
+[27.741267] (-) TimerEvent: {}
+[27.841709] (-) TimerEvent: {}
+[27.942153] (-) TimerEvent: {}
+[28.042608] (-) TimerEvent: {}
+[28.143118] (-) TimerEvent: {}
+[28.243642] (-) TimerEvent: {}
+[28.344158] (-) TimerEvent: {}
+[28.444665] (-) TimerEvent: {}
+[28.545163] (-) TimerEvent: {}
+[28.645658] (-) TimerEvent: {}
+[28.746152] (-) TimerEvent: {}
+[28.846643] (-) TimerEvent: {}
+[28.947108] (-) TimerEvent: {}
+[29.047585] (-) TimerEvent: {}
+[29.148091] (-) TimerEvent: {}
+[29.248564] (-) TimerEvent: {}
+[29.349015] (-) TimerEvent: {}
+[29.449465] (-) TimerEvent: {}
+[29.549905] (-) TimerEvent: {}
+[29.650426] (-) TimerEvent: {}
+[29.751064] (-) TimerEvent: {}
+[29.851631] (-) TimerEvent: {}
+[29.952171] (-) TimerEvent: {}
+[30.052725] (-) TimerEvent: {}
+[30.153219] (-) TimerEvent: {}
+[30.253627] (-) TimerEvent: {}
+[30.354094] (-) TimerEvent: {}
+[30.454577] (-) TimerEvent: {}
+[30.555061] (-) TimerEvent: {}
+[30.655541] (-) TimerEvent: {}
+[30.756027] (-) TimerEvent: {}
+[30.856523] (-) TimerEvent: {}
+[30.957032] (-) TimerEvent: {}
+[31.057615] (-) TimerEvent: {}
+[31.158119] (-) TimerEvent: {}
+[31.258584] (-) TimerEvent: {}
+[31.359034] (-) TimerEvent: {}
+[31.459456] (-) TimerEvent: {}
+[31.559979] (-) TimerEvent: {}
+[31.659045] (zed_interfaces) StdoutLine: {'line': b'[ 85%] Built target zed_interfaces__py\n'}
+[31.660031] (-) TimerEvent: {}
+[31.680251] (zed_interfaces) StdoutLine: {'line': b'\x1b[35m\x1b[1mScanning dependencies of target zed_interfaces__rosidl_generator_py\x1b[0m\n'}
+[31.760214] (-) TimerEvent: {}
+[31.794131] (zed_interfaces) StdoutLine: {'line': b'[ 86%] \x1b[32mBuilding C object CMakeFiles/zed_interfaces__rosidl_generator_py.dir/rosidl_generator_py/zed_interfaces/msg/_object_s.c.o\x1b[0m\n'}
+[31.794734] (zed_interfaces) StdoutLine: {'line': b'[ 86%] \x1b[32mBuilding C object CMakeFiles/zed_interfaces__rosidl_generator_py.dir/rosidl_generator_py/zed_interfaces/msg/_objects_stamped_s.c.o\x1b[0m\n'}
+[31.794919] (zed_interfaces) StdoutLine: {'line': b'[ 88%] \x1b[32mBuilding C object CMakeFiles/zed_interfaces__rosidl_generator_py.dir/rosidl_generator_py/zed_interfaces/msg/_keypoint2_di_s.c.o\x1b[0m\n'}
+[31.795176] (zed_interfaces) StdoutLine: {'line': b'[ 88%] \x1b[32mBuilding C object CMakeFiles/zed_interfaces__rosidl_generator_py.dir/rosidl_generator_py/zed_interfaces/msg/_bounding_box2_di_s.c.o\x1b[0m\n'}
+[31.795357] (zed_interfaces) StdoutLine: {'line': b'[ 88%] \x1b[32mBuilding C object CMakeFiles/zed_interfaces__rosidl_generator_py.dir/rosidl_generator_py/zed_interfaces/msg/_keypoint3_d_s.c.o\x1b[0m\n'}
+[31.795582] (zed_interfaces) StdoutLine: {'line': b'[ 88%] \x1b[32mBuilding C object CMakeFiles/zed_interfaces__rosidl_generator_py.dir/rosidl_generator_py/zed_interfaces/msg/_keypoint2_df_s.c.o\x1b[0m\n'}
+[31.860391] (-) TimerEvent: {}
+[31.961106] (-) TimerEvent: {}
+[32.048293] (zed_interfaces) StdoutLine: {'line': b'[ 89%] \x1b[32mBuilding C object CMakeFiles/zed_interfaces__rosidl_generator_py.dir/rosidl_generator_py/zed_interfaces/msg/_bounding_box2_df_s.c.o\x1b[0m\n'}
+[32.051711] (zed_interfaces) StdoutLine: {'line': b'[ 89%] \x1b[32mBuilding C object CMakeFiles/zed_interfaces__rosidl_generator_py.dir/rosidl_generator_py/zed_interfaces/msg/_skeleton2_d_s.c.o\x1b[0m\n'}
+[32.052360] (zed_interfaces) StdoutLine: {'line': b'[ 90%] \x1b[32mBuilding C object CMakeFiles/zed_interfaces__rosidl_generator_py.dir/rosidl_generator_py/zed_interfaces/msg/_bounding_box3_d_s.c.o\x1b[0m\n'}
+[32.058096] (zed_interfaces) StdoutLine: {'line': b'[ 91%] \x1b[32mBuilding C object CMakeFiles/zed_interfaces__rosidl_generator_py.dir/rosidl_generator_py/zed_interfaces/msg/_skeleton3_d_s.c.o\x1b[0m\n'}
+[32.061238] (-) TimerEvent: {}
+[32.086718] (zed_interfaces) StdoutLine: {'line': b'[ 92%] \x1b[32mBuilding C object CMakeFiles/zed_interfaces__rosidl_generator_py.dir/rosidl_generator_py/zed_interfaces/msg/_depth_info_stamped_s.c.o\x1b[0m\n'}
+[32.161463] (-) TimerEvent: {}
+[32.229061] (zed_interfaces) StdoutLine: {'line': b'[ 92%] \x1b[32mBuilding C object CMakeFiles/zed_interfaces__rosidl_generator_py.dir/rosidl_generator_py/zed_interfaces/msg/_plane_stamped_s.c.o\x1b[0m\n'}
+[32.261667] (-) TimerEvent: {}
+[32.312862] (zed_interfaces) StdoutLine: {'line': b'[ 93%] \x1b[32mBuilding C object CMakeFiles/zed_interfaces__rosidl_generator_py.dir/rosidl_generator_py/zed_interfaces/msg/_pos_track_status_s.c.o\x1b[0m\n'}
+[32.328348] (zed_interfaces) StdoutLine: {'line': b'[ 93%] \x1b[32mBuilding C object CMakeFiles/zed_interfaces__rosidl_generator_py.dir/rosidl_generator_py/zed_interfaces/srv/_set_pose_s.c.o\x1b[0m\n'}
+[32.329122] (zed_interfaces) StdoutLine: {'line': b'[ 94%] \x1b[32mBuilding C object CMakeFiles/zed_interfaces__rosidl_generator_py.dir/rosidl_generator_py/zed_interfaces/msg/_heartbeat_s.c.o\x1b[0m\n'}
+[32.343694] (zed_interfaces) StdoutLine: {'line': b'[ 95%] \x1b[32mBuilding C object CMakeFiles/zed_interfaces__rosidl_generator_py.dir/rosidl_generator_py/zed_interfaces/srv/_start_svo_rec_s.c.o\x1b[0m\n'}
+[32.361861] (-) TimerEvent: {}
+[32.366937] (zed_interfaces) StdoutLine: {'line': b'[ 95%] \x1b[32mBuilding C object CMakeFiles/zed_interfaces__rosidl_generator_py.dir/rosidl_generator_py/zed_interfaces/srv/_set_roi_s.c.o\x1b[0m\n'}
+[32.462066] (-) TimerEvent: {}
+[32.563052] (-) TimerEvent: {}
+[32.663788] (zed_interfaces) StdoutLine: {'line': b'[ 96%] \x1b[32m\x1b[1mLinking C shared library rosidl_generator_py/zed_interfaces/libzed_interfaces__rosidl_generator_py.so\x1b[0m\n'}
+[32.664305] (-) TimerEvent: {}
+[32.750111] (zed_interfaces) StdoutLine: {'line': b'[ 96%] Built target zed_interfaces__rosidl_generator_py\n'}
+[32.764506] (-) TimerEvent: {}
+[32.771106] (zed_interfaces) StdoutLine: {'line': b'\x1b[35m\x1b[1mScanning dependencies of target zed_interfaces__rosidl_typesupport_c__pyext\x1b[0m\n'}
+[32.771545] (zed_interfaces) StdoutLine: {'line': b'\x1b[35m\x1b[1mScanning dependencies of target zed_interfaces__rosidl_typesupport_introspection_c__pyext\x1b[0m\n'}
+[32.771717] (zed_interfaces) StdoutLine: {'line': b'\x1b[35m\x1b[1mScanning dependencies of target zed_interfaces__rosidl_typesupport_fastrtps_c__pyext\x1b[0m\n'}
+[32.819556] (zed_interfaces) StdoutLine: {'line': b'[ 99%] \x1b[32mBuilding C object CMakeFiles/zed_interfaces__rosidl_typesupport_c__pyext.dir/rosidl_generator_py/zed_interfaces/_zed_interfaces_s.ep.rosidl_typesupport_c.c.o\x1b[0m\n'}
+[32.820125] (zed_interfaces) StdoutLine: {'line': b'[ 99%] \x1b[32mBuilding C object CMakeFiles/zed_interfaces__rosidl_typesupport_fastrtps_c__pyext.dir/rosidl_generator_py/zed_interfaces/_zed_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c.o\x1b[0m\n'}
+[32.820424] (zed_interfaces) StdoutLine: {'line': b'[ 99%] \x1b[32mBuilding C object CMakeFiles/zed_interfaces__rosidl_typesupport_introspection_c__pyext.dir/rosidl_generator_py/zed_interfaces/_zed_interfaces_s.ep.rosidl_typesupport_introspection_c.c.o\x1b[0m\n'}
+[32.864695] (-) TimerEvent: {}
+[32.965381] (-) TimerEvent: {}
+[33.066082] (-) TimerEvent: {}
+[33.166754] (-) TimerEvent: {}
+[33.267412] (-) TimerEvent: {}
+[33.368101] (-) TimerEvent: {}
+[33.468814] (-) TimerEvent: {}
+[33.569493] (-) TimerEvent: {}
+[33.589101] (zed_interfaces) StdoutLine: {'line': b'[ 99%] \x1b[32m\x1b[1mLinking C shared library rosidl_generator_py/zed_interfaces/zed_interfaces_s__rosidl_typesupport_c.cpython-38-aarch64-linux-gnu.so\x1b[0m\n'}
+[33.589649] (zed_interfaces) StdoutLine: {'line': b'[ 99%] \x1b[32m\x1b[1mLinking C shared library rosidl_generator_py/zed_interfaces/zed_interfaces_s__rosidl_typesupport_fastrtps_c.cpython-38-aarch64-linux-gnu.so\x1b[0m\n'}
+[33.589826] (zed_interfaces) StdoutLine: {'line': b'[100%] \x1b[32m\x1b[1mLinking C shared library rosidl_generator_py/zed_interfaces/zed_interfaces_s__rosidl_typesupport_introspection_c.cpython-38-aarch64-linux-gnu.so\x1b[0m\n'}
+[33.669666] (-) TimerEvent: {}
+[33.679818] (zed_interfaces) StdoutLine: {'line': b'[100%] Built target zed_interfaces__rosidl_typesupport_c__pyext\n'}
+[33.680407] (zed_interfaces) StdoutLine: {'line': b'[100%] Built target zed_interfaces__rosidl_typesupport_fastrtps_c__pyext\n'}
+[33.680607] (zed_interfaces) StdoutLine: {'line': b'[100%] Built target zed_interfaces__rosidl_typesupport_introspection_c__pyext\n'}
+[33.709090] (zed_interfaces) CommandEnded: {'returncode': 0}
+[33.769873] (-) TimerEvent: {}
+[33.870776] (-) TimerEvent: {}
+[33.971326] (-) TimerEvent: {}
+[34.071968] (-) TimerEvent: {}
+[34.172635] (-) TimerEvent: {}
+[34.191269] (zed_interfaces) JobProgress: {'identifier': 'zed_interfaces', 'progress': 'install'}
+[34.218005] (zed_interfaces) Command: {'cmd': ['/usr/bin/cmake', '--install', '/home/bur/ros2_ws/build/zed_interfaces'], 'cwd': '/home/bur/ros2_ws/build/zed_interfaces', 'env': OrderedDict([('GJS_DEBUG_TOPICS', 'JS ERROR;JS LOG'), ('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'bur'), ('SSH_AGENT_PID', '2553'), ('XDG_SESSION_TYPE', 'x11'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/aarch64-linux-gnu:/opt/ros/humble/lib:/home/bur/ros2_ws/install/zed_interfaces/lib:/usr/local/cuda-11.4/lib64:'), ('HOME', '/home/bur'), ('OLDPWD', '/home/bur/ros2_ws/src'), ('DESKTOP_SESSION', 'ubuntu'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('MANAGERPID', '2329'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('IM_CONFIG_PHASE', '1'), ('COLCON_PREFIX_PATH', '/home/bur/ros2_ws/install'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'bur'), ('JOURNAL_STREAM', '8:57445'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'bur'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('WINDOWPATH', '2'), ('PATH', '/opt/ros/humble/bin:/usr/local/cuda-11.4/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin'), ('SESSION_MANAGER', 'local/ubuntu:@/tmp/.ICE-unix/2589,unix/ubuntu:/tmp/.ICE-unix/2589'), ('INVOCATION_ID', '624c199e99f74008a224ca9b847bf6a7'), ('XDG_MENU_PREFIX', 'gnome-'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/8773b50c_0e56_401b_a59c_d0ccb0fd15b0'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':1'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/gdm/Xauthority'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('GNOME_TERMINAL_SERVICE', ':1.165'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/opt/ros/humble:/home/bur/ros2_ws/install/zed_interfaces'), ('SHELL', '/bin/bash'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('GJS_DEBUG_OUTPUT', 'stderr'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/bur/ros2_ws/build/zed_interfaces'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/opt/ros/humble/lib/python3.8/site-packages:/home/bur/ros2_ws/install/zed_interfaces/lib/python3.8/site-packages'), ('COLCON', '1'), ('VTE_VERSION', '6003'), ('CMAKE_PREFIX_PATH', '/home/bur/ros2_ws/install/zed_interfaces:/opt/ros/humble')]), 'shell': False}
+[34.240600] (zed_interfaces) StdoutLine: {'line': b'-- Install configuration: "Release"\n'}
+[34.241900] (zed_interfaces) StdoutLine: {'line': b'-- Execute custom install script\n'}
+[34.242613] (zed_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/bur/ros2_ws/install/zed_interfaces/share/ament_index/resource_index/rosidl_interfaces/zed_interfaces\n'}
+[34.263148] (zed_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/bur/ros2_ws/install/zed_interfaces/include/zed_interfaces/zed_interfaces/msg/bounding_box2_df.h\n'}
+[34.272743] (-) TimerEvent: {}
+[34.281625] (zed_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/bur/ros2_ws/install/zed_interfaces/include/zed_interfaces/zed_interfaces/msg/bounding_box2_di.h\n'}
+[34.299256] (zed_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/bur/ros2_ws/install/zed_interfaces/include/zed_interfaces/zed_interfaces/msg/bounding_box3_d.h\n'}
+[34.318295] (zed_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/bur/ros2_ws/install/zed_interfaces/include/zed_interfaces/zed_interfaces/msg/depth_info_stamped.h\n'}
+[34.336679] (zed_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/bur/ros2_ws/install/zed_interfaces/include/zed_interfaces/zed_interfaces/msg/detail/bounding_box2_df__functions.h\n'}
+[34.356270] (zed_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/bur/ros2_ws/install/zed_interfaces/include/zed_interfaces/zed_interfaces/msg/detail/bounding_box2_df__struct.h\n'}
+[34.372893] (-) TimerEvent: {}
+[34.376095] (zed_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/bur/ros2_ws/install/zed_interfaces/include/zed_interfaces/zed_interfaces/msg/detail/bounding_box2_df__type_support.h\n'}
+[34.394410] (zed_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/bur/ros2_ws/install/zed_interfaces/include/zed_interfaces/zed_interfaces/msg/detail/bounding_box2_di__functions.h\n'}
+[34.414732] (zed_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/bur/ros2_ws/install/zed_interfaces/include/zed_interfaces/zed_interfaces/msg/detail/bounding_box2_di__struct.h\n'}
+[34.434212] (zed_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/bur/ros2_ws/install/zed_interfaces/include/zed_interfaces/zed_interfaces/msg/detail/bounding_box2_di__type_support.h\n'}
+[34.452445] (zed_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/bur/ros2_ws/install/zed_interfaces/include/zed_interfaces/zed_interfaces/msg/detail/bounding_box3_d__functions.h\n'}
+[34.471605] (zed_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/bur/ros2_ws/install/zed_interfaces/include/zed_interfaces/zed_interfaces/msg/detail/bounding_box3_d__struct.h\n'}
+[34.472960] (-) TimerEvent: {}
+[34.490071] (zed_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/bur/ros2_ws/install/zed_interfaces/include/zed_interfaces/zed_interfaces/msg/detail/bounding_box3_d__type_support.h\n'}
+[34.508450] (zed_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/bur/ros2_ws/install/zed_interfaces/include/zed_interfaces/zed_interfaces/msg/detail/depth_info_stamped__functions.h\n'}
+[34.525892] (zed_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/bur/ros2_ws/install/zed_interfaces/include/zed_interfaces/zed_interfaces/msg/detail/depth_info_stamped__struct.h\n'}
+[34.543494] (zed_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/bur/ros2_ws/install/zed_interfaces/include/zed_interfaces/zed_interfaces/msg/detail/depth_info_stamped__type_support.h\n'}
+[34.561195] (zed_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/bur/ros2_ws/install/zed_interfaces/include/zed_interfaces/zed_interfaces/msg/detail/heartbeat__functions.h\n'}
+[34.573063] (-) TimerEvent: {}
+[34.578576] (zed_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/bur/ros2_ws/install/zed_interfaces/include/zed_interfaces/zed_interfaces/msg/detail/heartbeat__struct.h\n'}
+[34.596216] (zed_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/bur/ros2_ws/install/zed_interfaces/include/zed_interfaces/zed_interfaces/msg/detail/heartbeat__type_support.h\n'}
+[34.616298] (zed_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/bur/ros2_ws/install/zed_interfaces/include/zed_interfaces/zed_interfaces/msg/detail/keypoint2_df__functions.h\n'}
+[34.635503] (zed_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/bur/ros2_ws/install/zed_interfaces/include/zed_interfaces/zed_interfaces/msg/detail/keypoint2_df__struct.h\n'}
+[34.655215] (zed_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/bur/ros2_ws/install/zed_interfaces/include/zed_interfaces/zed_interfaces/msg/detail/keypoint2_df__type_support.h\n'}
+[34.672805] (zed_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/bur/ros2_ws/install/zed_interfaces/include/zed_interfaces/zed_interfaces/msg/detail/keypoint2_di__functions.h\n'}
+[34.673105] (-) TimerEvent: {}
+[34.691763] (zed_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/bur/ros2_ws/install/zed_interfaces/include/zed_interfaces/zed_interfaces/msg/detail/keypoint2_di__struct.h\n'}
+[34.711090] (zed_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/bur/ros2_ws/install/zed_interfaces/include/zed_interfaces/zed_interfaces/msg/detail/keypoint2_di__type_support.h\n'}
+[34.731829] (zed_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/bur/ros2_ws/install/zed_interfaces/include/zed_interfaces/zed_interfaces/msg/detail/keypoint3_d__functions.h\n'}
+[34.751062] (zed_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/bur/ros2_ws/install/zed_interfaces/include/zed_interfaces/zed_interfaces/msg/detail/keypoint3_d__struct.h\n'}
+[34.768649] (zed_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/bur/ros2_ws/install/zed_interfaces/include/zed_interfaces/zed_interfaces/msg/detail/keypoint3_d__type_support.h\n'}
+[34.773206] (-) TimerEvent: {}
+[34.788228] (zed_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/bur/ros2_ws/install/zed_interfaces/include/zed_interfaces/zed_interfaces/msg/detail/object__functions.h\n'}
+[34.807897] (zed_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/bur/ros2_ws/install/zed_interfaces/include/zed_interfaces/zed_interfaces/msg/detail/object__struct.h\n'}
+[34.827919] (zed_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/bur/ros2_ws/install/zed_interfaces/include/zed_interfaces/zed_interfaces/msg/detail/object__type_support.h\n'}
+[34.846970] (zed_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/bur/ros2_ws/install/zed_interfaces/include/zed_interfaces/zed_interfaces/msg/detail/objects_stamped__functions.h\n'}
+[34.865209] (zed_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/bur/ros2_ws/install/zed_interfaces/include/zed_interfaces/zed_interfaces/msg/detail/objects_stamped__struct.h\n'}
+[34.873322] (-) TimerEvent: {}
+[34.884277] (zed_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/bur/ros2_ws/install/zed_interfaces/include/zed_interfaces/zed_interfaces/msg/detail/objects_stamped__type_support.h\n'}
+[34.903773] (zed_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/bur/ros2_ws/install/zed_interfaces/include/zed_interfaces/zed_interfaces/msg/detail/plane_stamped__functions.h\n'}
+[34.922825] (zed_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/bur/ros2_ws/install/zed_interfaces/include/zed_interfaces/zed_interfaces/msg/detail/plane_stamped__struct.h\n'}
+[34.943269] (zed_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/bur/ros2_ws/install/zed_interfaces/include/zed_interfaces/zed_interfaces/msg/detail/plane_stamped__type_support.h\n'}
+[34.961053] (zed_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/bur/ros2_ws/install/zed_interfaces/include/zed_interfaces/zed_interfaces/msg/detail/pos_track_status__functions.h\n'}
+[34.973421] (-) TimerEvent: {}
+[34.979932] (zed_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/bur/ros2_ws/install/zed_interfaces/include/zed_interfaces/zed_interfaces/msg/detail/pos_track_status__struct.h\n'}
+[34.999412] (zed_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/bur/ros2_ws/install/zed_interfaces/include/zed_interfaces/zed_interfaces/msg/detail/pos_track_status__type_support.h\n'}
+[35.017185] (zed_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/bur/ros2_ws/install/zed_interfaces/include/zed_interfaces/zed_interfaces/msg/detail/skeleton2_d__functions.h\n'}
+[35.036360] (zed_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/bur/ros2_ws/install/zed_interfaces/include/zed_interfaces/zed_interfaces/msg/detail/skeleton2_d__struct.h\n'}
+[35.055575] (zed_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/bur/ros2_ws/install/zed_interfaces/include/zed_interfaces/zed_interfaces/msg/detail/skeleton2_d__type_support.h\n'}
+[35.073552] (-) TimerEvent: {}
+[35.074324] (zed_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/bur/ros2_ws/install/zed_interfaces/include/zed_interfaces/zed_interfaces/msg/detail/skeleton3_d__functions.h\n'}
+[35.092987] (zed_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/bur/ros2_ws/install/zed_interfaces/include/zed_interfaces/zed_interfaces/msg/detail/skeleton3_d__struct.h\n'}
+[35.112694] (zed_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/bur/ros2_ws/install/zed_interfaces/include/zed_interfaces/zed_interfaces/msg/detail/skeleton3_d__type_support.h\n'}
+[35.132036] (zed_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/bur/ros2_ws/install/zed_interfaces/include/zed_interfaces/zed_interfaces/msg/heartbeat.h\n'}
+[35.150522] (zed_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/bur/ros2_ws/install/zed_interfaces/include/zed_interfaces/zed_interfaces/msg/keypoint2_df.h\n'}
+[35.170252] (zed_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/bur/ros2_ws/install/zed_interfaces/include/zed_interfaces/zed_interfaces/msg/keypoint2_di.h\n'}
+[35.173635] (-) TimerEvent: {}
+[35.189262] (zed_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/bur/ros2_ws/install/zed_interfaces/include/zed_interfaces/zed_interfaces/msg/keypoint3_d.h\n'}
+[35.207383] (zed_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/bur/ros2_ws/install/zed_interfaces/include/zed_interfaces/zed_interfaces/msg/object.h\n'}
+[35.227071] (zed_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/bur/ros2_ws/install/zed_interfaces/include/zed_interfaces/zed_interfaces/msg/objects_stamped.h\n'}
+[35.245747] (zed_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/bur/ros2_ws/install/zed_interfaces/include/zed_interfaces/zed_interfaces/msg/plane_stamped.h\n'}
+[35.263960] (zed_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/bur/ros2_ws/install/zed_interfaces/include/zed_interfaces/zed_interfaces/msg/pos_track_status.h\n'}
+[35.273753] (-) TimerEvent: {}
+[35.282339] (zed_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/bur/ros2_ws/install/zed_interfaces/include/zed_interfaces/zed_interfaces/msg/rosidl_generator_c__visibility_control.h\n'}
+[35.301164] (zed_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/bur/ros2_ws/install/zed_interfaces/include/zed_interfaces/zed_interfaces/msg/skeleton2_d.h\n'}
+[35.318948] (zed_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/bur/ros2_ws/install/zed_interfaces/include/zed_interfaces/zed_interfaces/msg/skeleton3_d.h\n'}
+[35.337826] (zed_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/bur/ros2_ws/install/zed_interfaces/include/zed_interfaces/zed_interfaces/srv/detail/set_pose__functions.h\n'}
+[35.354943] (zed_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/bur/ros2_ws/install/zed_interfaces/include/zed_interfaces/zed_interfaces/srv/detail/set_pose__struct.h\n'}
+[35.372721] (zed_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/bur/ros2_ws/install/zed_interfaces/include/zed_interfaces/zed_interfaces/srv/detail/set_pose__type_support.h\n'}
+[35.373852] (-) TimerEvent: {}
+[35.391086] (zed_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/bur/ros2_ws/install/zed_interfaces/include/zed_interfaces/zed_interfaces/srv/detail/set_roi__functions.h\n'}
+[35.408951] (zed_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/bur/ros2_ws/install/zed_interfaces/include/zed_interfaces/zed_interfaces/srv/detail/set_roi__struct.h\n'}
+[35.427770] (zed_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/bur/ros2_ws/install/zed_interfaces/include/zed_interfaces/zed_interfaces/srv/detail/set_roi__type_support.h\n'}
+[35.445768] (zed_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/bur/ros2_ws/install/zed_interfaces/include/zed_interfaces/zed_interfaces/srv/detail/start_svo_rec__functions.h\n'}
+[35.463437] (zed_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/bur/ros2_ws/install/zed_interfaces/include/zed_interfaces/zed_interfaces/srv/detail/start_svo_rec__struct.h\n'}
+[35.473950] (-) TimerEvent: {}
+[35.482929] (zed_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/bur/ros2_ws/install/zed_interfaces/include/zed_interfaces/zed_interfaces/srv/detail/start_svo_rec__type_support.h\n'}
+[35.502732] (zed_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/bur/ros2_ws/install/zed_interfaces/include/zed_interfaces/zed_interfaces/srv/set_pose.h\n'}
+[35.522642] (zed_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/bur/ros2_ws/install/zed_interfaces/include/zed_interfaces/zed_interfaces/srv/set_roi.h\n'}
+[35.540749] (zed_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/bur/ros2_ws/install/zed_interfaces/include/zed_interfaces/zed_interfaces/srv/start_svo_rec.h\n'}
+[35.561593] (zed_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/bur/ros2_ws/install/zed_interfaces/share/zed_interfaces/environment/library_path.sh\n'}
+[35.574107] (-) TimerEvent: {}
+[35.581008] (zed_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/bur/ros2_ws/install/zed_interfaces/share/zed_interfaces/environment/library_path.dsv\n'}
+[35.602972] (zed_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/bur/ros2_ws/install/zed_interfaces/include/zed_interfaces/zed_interfaces/msg/detail/bounding_box2_df__rosidl_typesupport_fastrtps_c.h\n'}
+[35.621575] (zed_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/bur/ros2_ws/install/zed_interfaces/include/zed_interfaces/zed_interfaces/msg/detail/bounding_box2_di__rosidl_typesupport_fastrtps_c.h\n'}
+[35.639776] (zed_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/bur/ros2_ws/install/zed_interfaces/include/zed_interfaces/zed_interfaces/msg/detail/bounding_box3_d__rosidl_typesupport_fastrtps_c.h\n'}
+[35.657790] (zed_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/bur/ros2_ws/install/zed_interfaces/include/zed_interfaces/zed_interfaces/msg/detail/depth_info_stamped__rosidl_typesupport_fastrtps_c.h\n'}
+[35.674225] (-) TimerEvent: {}
+[35.675440] (zed_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/bur/ros2_ws/install/zed_interfaces/include/zed_interfaces/zed_interfaces/msg/detail/heartbeat__rosidl_typesupport_fastrtps_c.h\n'}
+[35.693679] (zed_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/bur/ros2_ws/install/zed_interfaces/include/zed_interfaces/zed_interfaces/msg/detail/keypoint2_df__rosidl_typesupport_fastrtps_c.h\n'}
+[35.712029] (zed_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/bur/ros2_ws/install/zed_interfaces/include/zed_interfaces/zed_interfaces/msg/detail/keypoint2_di__rosidl_typesupport_fastrtps_c.h\n'}
+[35.731108] (zed_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/bur/ros2_ws/install/zed_interfaces/include/zed_interfaces/zed_interfaces/msg/detail/keypoint3_d__rosidl_typesupport_fastrtps_c.h\n'}
+[35.749318] (zed_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/bur/ros2_ws/install/zed_interfaces/include/zed_interfaces/zed_interfaces/msg/detail/object__rosidl_typesupport_fastrtps_c.h\n'}
+[35.767732] (zed_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/bur/ros2_ws/install/zed_interfaces/include/zed_interfaces/zed_interfaces/msg/detail/objects_stamped__rosidl_typesupport_fastrtps_c.h\n'}
+[35.774319] (-) TimerEvent: {}
+[35.785405] (zed_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/bur/ros2_ws/install/zed_interfaces/include/zed_interfaces/zed_interfaces/msg/detail/plane_stamped__rosidl_typesupport_fastrtps_c.h\n'}
+[35.802797] (zed_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/bur/ros2_ws/install/zed_interfaces/include/zed_interfaces/zed_interfaces/msg/detail/pos_track_status__rosidl_typesupport_fastrtps_c.h\n'}
+[35.820653] (zed_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/bur/ros2_ws/install/zed_interfaces/include/zed_interfaces/zed_interfaces/msg/detail/skeleton2_d__rosidl_typesupport_fastrtps_c.h\n'}
+[35.838609] (zed_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/bur/ros2_ws/install/zed_interfaces/include/zed_interfaces/zed_interfaces/msg/detail/skeleton3_d__rosidl_typesupport_fastrtps_c.h\n'}
+[35.855964] (zed_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/bur/ros2_ws/install/zed_interfaces/include/zed_interfaces/zed_interfaces/msg/rosidl_typesupport_fastrtps_c__visibility_control.h\n'}
+[35.873429] (zed_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/bur/ros2_ws/install/zed_interfaces/include/zed_interfaces/zed_interfaces/srv/detail/set_pose__rosidl_typesupport_fastrtps_c.h\n'}
+[35.874397] (-) TimerEvent: {}
+[35.891310] (zed_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/bur/ros2_ws/install/zed_interfaces/include/zed_interfaces/zed_interfaces/srv/detail/set_roi__rosidl_typesupport_fastrtps_c.h\n'}
+[35.909359] (zed_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/bur/ros2_ws/install/zed_interfaces/include/zed_interfaces/zed_interfaces/srv/detail/start_svo_rec__rosidl_typesupport_fastrtps_c.h\n'}
+[35.929314] (zed_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/bur/ros2_ws/install/zed_interfaces/include/zed_interfaces/zed_interfaces/msg/bounding_box2_df.hpp\n'}
+[35.947512] (zed_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/bur/ros2_ws/install/zed_interfaces/include/zed_interfaces/zed_interfaces/msg/bounding_box2_di.hpp\n'}
+[35.965286] (zed_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/bur/ros2_ws/install/zed_interfaces/include/zed_interfaces/zed_interfaces/msg/bounding_box3_d.hpp\n'}
+[35.974518] (-) TimerEvent: {}
+[35.984555] (zed_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/bur/ros2_ws/install/zed_interfaces/include/zed_interfaces/zed_interfaces/msg/depth_info_stamped.hpp\n'}
+[36.002814] (zed_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/bur/ros2_ws/install/zed_interfaces/include/zed_interfaces/zed_interfaces/msg/detail/bounding_box2_df__builder.hpp\n'}
+[36.021119] (zed_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/bur/ros2_ws/install/zed_interfaces/include/zed_interfaces/zed_interfaces/msg/detail/bounding_box2_df__struct.hpp\n'}
+[36.040828] (zed_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/bur/ros2_ws/install/zed_interfaces/include/zed_interfaces/zed_interfaces/msg/detail/bounding_box2_df__traits.hpp\n'}
+[36.060866] (zed_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/bur/ros2_ws/install/zed_interfaces/include/zed_interfaces/zed_interfaces/msg/detail/bounding_box2_di__builder.hpp\n'}
+[36.074643] (-) TimerEvent: {}
+[36.080095] (zed_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/bur/ros2_ws/install/zed_interfaces/include/zed_interfaces/zed_interfaces/msg/detail/bounding_box2_di__struct.hpp\n'}
+[36.100318] (zed_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/bur/ros2_ws/install/zed_interfaces/include/zed_interfaces/zed_interfaces/msg/detail/bounding_box2_di__traits.hpp\n'}
+[36.118755] (zed_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/bur/ros2_ws/install/zed_interfaces/include/zed_interfaces/zed_interfaces/msg/detail/bounding_box3_d__builder.hpp\n'}
+[36.138208] (zed_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/bur/ros2_ws/install/zed_interfaces/include/zed_interfaces/zed_interfaces/msg/detail/bounding_box3_d__struct.hpp\n'}
+[36.157326] (zed_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/bur/ros2_ws/install/zed_interfaces/include/zed_interfaces/zed_interfaces/msg/detail/bounding_box3_d__traits.hpp\n'}
+[36.174757] (-) TimerEvent: {}
+[36.175697] (zed_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/bur/ros2_ws/install/zed_interfaces/include/zed_interfaces/zed_interfaces/msg/detail/depth_info_stamped__builder.hpp\n'}
+[36.193564] (zed_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/bur/ros2_ws/install/zed_interfaces/include/zed_interfaces/zed_interfaces/msg/detail/depth_info_stamped__struct.hpp\n'}
+[36.212388] (zed_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/bur/ros2_ws/install/zed_interfaces/include/zed_interfaces/zed_interfaces/msg/detail/depth_info_stamped__traits.hpp\n'}
+[36.231214] (zed_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/bur/ros2_ws/install/zed_interfaces/include/zed_interfaces/zed_interfaces/msg/detail/heartbeat__builder.hpp\n'}
+[36.249385] (zed_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/bur/ros2_ws/install/zed_interfaces/include/zed_interfaces/zed_interfaces/msg/detail/heartbeat__struct.hpp\n'}
+[36.267302] (zed_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/bur/ros2_ws/install/zed_interfaces/include/zed_interfaces/zed_interfaces/msg/detail/heartbeat__traits.hpp\n'}
+[36.274824] (-) TimerEvent: {}
+[36.285740] (zed_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/bur/ros2_ws/install/zed_interfaces/include/zed_interfaces/zed_interfaces/msg/detail/keypoint2_df__builder.hpp\n'}
+[36.305525] (zed_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/bur/ros2_ws/install/zed_interfaces/include/zed_interfaces/zed_interfaces/msg/detail/keypoint2_df__struct.hpp\n'}
+[36.325566] (zed_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/bur/ros2_ws/install/zed_interfaces/include/zed_interfaces/zed_interfaces/msg/detail/keypoint2_df__traits.hpp\n'}
+[36.343925] (zed_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/bur/ros2_ws/install/zed_interfaces/include/zed_interfaces/zed_interfaces/msg/detail/keypoint2_di__builder.hpp\n'}
+[36.362602] (zed_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/bur/ros2_ws/install/zed_interfaces/include/zed_interfaces/zed_interfaces/msg/detail/keypoint2_di__struct.hpp\n'}
+[36.374963] (-) TimerEvent: {}
+[36.380567] (zed_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/bur/ros2_ws/install/zed_interfaces/include/zed_interfaces/zed_interfaces/msg/detail/keypoint2_di__traits.hpp\n'}
+[36.398585] (zed_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/bur/ros2_ws/install/zed_interfaces/include/zed_interfaces/zed_interfaces/msg/detail/keypoint3_d__builder.hpp\n'}
+[36.418001] (zed_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/bur/ros2_ws/install/zed_interfaces/include/zed_interfaces/zed_interfaces/msg/detail/keypoint3_d__struct.hpp\n'}
+[36.436869] (zed_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/bur/ros2_ws/install/zed_interfaces/include/zed_interfaces/zed_interfaces/msg/detail/keypoint3_d__traits.hpp\n'}
+[36.456274] (zed_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/bur/ros2_ws/install/zed_interfaces/include/zed_interfaces/zed_interfaces/msg/detail/object__builder.hpp\n'}
+[36.477866] (-) TimerEvent: {}
+[36.507802] (zed_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/bur/ros2_ws/install/zed_interfaces/include/zed_interfaces/zed_interfaces/msg/detail/object__struct.hpp\n'}
+[36.526874] (zed_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/bur/ros2_ws/install/zed_interfaces/include/zed_interfaces/zed_interfaces/msg/detail/object__traits.hpp\n'}
+[36.547409] (zed_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/bur/ros2_ws/install/zed_interfaces/include/zed_interfaces/zed_interfaces/msg/detail/objects_stamped__builder.hpp\n'}
+[36.565841] (zed_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/bur/ros2_ws/install/zed_interfaces/include/zed_interfaces/zed_interfaces/msg/detail/objects_stamped__struct.hpp\n'}
+[36.577944] (-) TimerEvent: {}
+[36.583855] (zed_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/bur/ros2_ws/install/zed_interfaces/include/zed_interfaces/zed_interfaces/msg/detail/objects_stamped__traits.hpp\n'}
+[36.603273] (zed_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/bur/ros2_ws/install/zed_interfaces/include/zed_interfaces/zed_interfaces/msg/detail/plane_stamped__builder.hpp\n'}
+[36.621709] (zed_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/bur/ros2_ws/install/zed_interfaces/include/zed_interfaces/zed_interfaces/msg/detail/plane_stamped__struct.hpp\n'}
+[36.640138] (zed_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/bur/ros2_ws/install/zed_interfaces/include/zed_interfaces/zed_interfaces/msg/detail/plane_stamped__traits.hpp\n'}
+[36.659856] (zed_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/bur/ros2_ws/install/zed_interfaces/include/zed_interfaces/zed_interfaces/msg/detail/pos_track_status__builder.hpp\n'}
+[36.678074] (-) TimerEvent: {}
+[36.679104] (zed_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/bur/ros2_ws/install/zed_interfaces/include/zed_interfaces/zed_interfaces/msg/detail/pos_track_status__struct.hpp\n'}
+[36.697189] (zed_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/bur/ros2_ws/install/zed_interfaces/include/zed_interfaces/zed_interfaces/msg/detail/pos_track_status__traits.hpp\n'}
+[36.715498] (zed_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/bur/ros2_ws/install/zed_interfaces/include/zed_interfaces/zed_interfaces/msg/detail/skeleton2_d__builder.hpp\n'}
+[36.734101] (zed_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/bur/ros2_ws/install/zed_interfaces/include/zed_interfaces/zed_interfaces/msg/detail/skeleton2_d__struct.hpp\n'}
+[36.751876] (zed_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/bur/ros2_ws/install/zed_interfaces/include/zed_interfaces/zed_interfaces/msg/detail/skeleton2_d__traits.hpp\n'}
+[36.771161] (zed_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/bur/ros2_ws/install/zed_interfaces/include/zed_interfaces/zed_interfaces/msg/detail/skeleton3_d__builder.hpp\n'}
+[36.778144] (-) TimerEvent: {}
+[36.789029] (zed_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/bur/ros2_ws/install/zed_interfaces/include/zed_interfaces/zed_interfaces/msg/detail/skeleton3_d__struct.hpp\n'}
+[36.806926] (zed_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/bur/ros2_ws/install/zed_interfaces/include/zed_interfaces/zed_interfaces/msg/detail/skeleton3_d__traits.hpp\n'}
+[36.826106] (zed_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/bur/ros2_ws/install/zed_interfaces/include/zed_interfaces/zed_interfaces/msg/heartbeat.hpp\n'}
+[36.843858] (zed_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/bur/ros2_ws/install/zed_interfaces/include/zed_interfaces/zed_interfaces/msg/keypoint2_df.hpp\n'}
+[36.863705] (zed_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/bur/ros2_ws/install/zed_interfaces/include/zed_interfaces/zed_interfaces/msg/keypoint2_di.hpp\n'}
+[36.878232] (-) TimerEvent: {}
+[36.882954] (zed_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/bur/ros2_ws/install/zed_interfaces/include/zed_interfaces/zed_interfaces/msg/keypoint3_d.hpp\n'}
+[36.901405] (zed_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/bur/ros2_ws/install/zed_interfaces/include/zed_interfaces/zed_interfaces/msg/object.hpp\n'}
+[36.921295] (zed_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/bur/ros2_ws/install/zed_interfaces/include/zed_interfaces/zed_interfaces/msg/objects_stamped.hpp\n'}
+[36.939491] (zed_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/bur/ros2_ws/install/zed_interfaces/include/zed_interfaces/zed_interfaces/msg/plane_stamped.hpp\n'}
+[36.957731] (zed_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/bur/ros2_ws/install/zed_interfaces/include/zed_interfaces/zed_interfaces/msg/pos_track_status.hpp\n'}
+[36.975942] (zed_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/bur/ros2_ws/install/zed_interfaces/include/zed_interfaces/zed_interfaces/msg/skeleton2_d.hpp\n'}
+[36.978337] (-) TimerEvent: {}
+[36.995334] (zed_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/bur/ros2_ws/install/zed_interfaces/include/zed_interfaces/zed_interfaces/msg/skeleton3_d.hpp\n'}
+[37.013957] (zed_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/bur/ros2_ws/install/zed_interfaces/include/zed_interfaces/zed_interfaces/srv/detail/set_pose__builder.hpp\n'}
+[37.033586] (zed_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/bur/ros2_ws/install/zed_interfaces/include/zed_interfaces/zed_interfaces/srv/detail/set_pose__struct.hpp\n'}
+[37.052000] (zed_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/bur/ros2_ws/install/zed_interfaces/include/zed_interfaces/zed_interfaces/srv/detail/set_pose__traits.hpp\n'}
+[37.071109] (zed_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/bur/ros2_ws/install/zed_interfaces/include/zed_interfaces/zed_interfaces/srv/detail/set_roi__builder.hpp\n'}
+[37.078432] (-) TimerEvent: {}
+[37.088922] (zed_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/bur/ros2_ws/install/zed_interfaces/include/zed_interfaces/zed_interfaces/srv/detail/set_roi__struct.hpp\n'}
+[37.107864] (zed_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/bur/ros2_ws/install/zed_interfaces/include/zed_interfaces/zed_interfaces/srv/detail/set_roi__traits.hpp\n'}
+[37.127173] (zed_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/bur/ros2_ws/install/zed_interfaces/include/zed_interfaces/zed_interfaces/srv/detail/start_svo_rec__builder.hpp\n'}
+[37.145535] (zed_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/bur/ros2_ws/install/zed_interfaces/include/zed_interfaces/zed_interfaces/srv/detail/start_svo_rec__struct.hpp\n'}
+[37.165114] (zed_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/bur/ros2_ws/install/zed_interfaces/include/zed_interfaces/zed_interfaces/srv/detail/start_svo_rec__traits.hpp\n'}
+[37.178507] (-) TimerEvent: {}
+[37.183827] (zed_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/bur/ros2_ws/install/zed_interfaces/include/zed_interfaces/zed_interfaces/srv/set_pose.hpp\n'}
+[37.203756] (zed_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/bur/ros2_ws/install/zed_interfaces/include/zed_interfaces/zed_interfaces/srv/set_roi.hpp\n'}
+[37.223994] (zed_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/bur/ros2_ws/install/zed_interfaces/include/zed_interfaces/zed_interfaces/srv/start_svo_rec.hpp\n'}
+[37.247007] (zed_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/bur/ros2_ws/install/zed_interfaces/include/zed_interfaces/zed_interfaces/msg/detail/bounding_box2_df__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[37.265421] (zed_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/bur/ros2_ws/install/zed_interfaces/include/zed_interfaces/zed_interfaces/msg/detail/bounding_box2_di__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[37.278602] (-) TimerEvent: {}
+[37.282758] (zed_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/bur/ros2_ws/install/zed_interfaces/include/zed_interfaces/zed_interfaces/msg/detail/bounding_box3_d__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[37.304548] (zed_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/bur/ros2_ws/install/zed_interfaces/include/zed_interfaces/zed_interfaces/msg/detail/depth_info_stamped__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[37.323455] (zed_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/bur/ros2_ws/install/zed_interfaces/include/zed_interfaces/zed_interfaces/msg/detail/heartbeat__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[37.342384] (zed_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/bur/ros2_ws/install/zed_interfaces/include/zed_interfaces/zed_interfaces/msg/detail/keypoint2_df__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[37.361405] (zed_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/bur/ros2_ws/install/zed_interfaces/include/zed_interfaces/zed_interfaces/msg/detail/keypoint2_di__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[37.378739] (-) TimerEvent: {}
+[37.380892] (zed_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/bur/ros2_ws/install/zed_interfaces/include/zed_interfaces/zed_interfaces/msg/detail/keypoint3_d__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[37.399492] (zed_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/bur/ros2_ws/install/zed_interfaces/include/zed_interfaces/zed_interfaces/msg/detail/object__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[37.419902] (zed_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/bur/ros2_ws/install/zed_interfaces/include/zed_interfaces/zed_interfaces/msg/detail/objects_stamped__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[37.437877] (zed_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/bur/ros2_ws/install/zed_interfaces/include/zed_interfaces/zed_interfaces/msg/detail/plane_stamped__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[37.456448] (zed_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/bur/ros2_ws/install/zed_interfaces/include/zed_interfaces/zed_interfaces/msg/detail/pos_track_status__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[37.474710] (zed_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/bur/ros2_ws/install/zed_interfaces/include/zed_interfaces/zed_interfaces/msg/detail/skeleton2_d__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[37.478862] (-) TimerEvent: {}
+[37.495013] (zed_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/bur/ros2_ws/install/zed_interfaces/include/zed_interfaces/zed_interfaces/msg/detail/skeleton3_d__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[37.514616] (zed_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/bur/ros2_ws/install/zed_interfaces/include/zed_interfaces/zed_interfaces/msg/rosidl_typesupport_fastrtps_cpp__visibility_control.h\n'}
+[37.532728] (zed_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/bur/ros2_ws/install/zed_interfaces/include/zed_interfaces/zed_interfaces/srv/detail/set_pose__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[37.551800] (zed_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/bur/ros2_ws/install/zed_interfaces/include/zed_interfaces/zed_interfaces/srv/detail/set_roi__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[37.571590] (zed_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/bur/ros2_ws/install/zed_interfaces/include/zed_interfaces/zed_interfaces/srv/detail/start_svo_rec__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[37.578966] (-) TimerEvent: {}
+[37.590441] (zed_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/bur/ros2_ws/install/zed_interfaces/include/zed_interfaces/zed_interfaces/msg/detail/bounding_box2_df__rosidl_typesupport_introspection_c.h\n'}
+[37.609041] (zed_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/bur/ros2_ws/install/zed_interfaces/include/zed_interfaces/zed_interfaces/msg/detail/bounding_box2_di__rosidl_typesupport_introspection_c.h\n'}
+[37.628861] (zed_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/bur/ros2_ws/install/zed_interfaces/include/zed_interfaces/zed_interfaces/msg/detail/bounding_box3_d__rosidl_typesupport_introspection_c.h\n'}
+[37.647880] (zed_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/bur/ros2_ws/install/zed_interfaces/include/zed_interfaces/zed_interfaces/msg/detail/depth_info_stamped__rosidl_typesupport_introspection_c.h\n'}
+[37.667509] (zed_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/bur/ros2_ws/install/zed_interfaces/include/zed_interfaces/zed_interfaces/msg/detail/heartbeat__rosidl_typesupport_introspection_c.h\n'}
+[37.679069] (-) TimerEvent: {}
+[37.686053] (zed_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/bur/ros2_ws/install/zed_interfaces/include/zed_interfaces/zed_interfaces/msg/detail/keypoint2_df__rosidl_typesupport_introspection_c.h\n'}
+[37.703843] (zed_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/bur/ros2_ws/install/zed_interfaces/include/zed_interfaces/zed_interfaces/msg/detail/keypoint2_di__rosidl_typesupport_introspection_c.h\n'}
+[37.723860] (zed_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/bur/ros2_ws/install/zed_interfaces/include/zed_interfaces/zed_interfaces/msg/detail/keypoint3_d__rosidl_typesupport_introspection_c.h\n'}
+[37.743187] (zed_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/bur/ros2_ws/install/zed_interfaces/include/zed_interfaces/zed_interfaces/msg/detail/object__rosidl_typesupport_introspection_c.h\n'}
+[37.760911] (zed_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/bur/ros2_ws/install/zed_interfaces/include/zed_interfaces/zed_interfaces/msg/detail/objects_stamped__rosidl_typesupport_introspection_c.h\n'}
+[37.779357] (zed_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/bur/ros2_ws/install/zed_interfaces/include/zed_interfaces/zed_interfaces/msg/detail/plane_stamped__rosidl_typesupport_introspection_c.h\n'}
+[37.779891] (-) TimerEvent: {}
+[37.798268] (zed_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/bur/ros2_ws/install/zed_interfaces/include/zed_interfaces/zed_interfaces/msg/detail/pos_track_status__rosidl_typesupport_introspection_c.h\n'}
+[37.817306] (zed_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/bur/ros2_ws/install/zed_interfaces/include/zed_interfaces/zed_interfaces/msg/detail/skeleton2_d__rosidl_typesupport_introspection_c.h\n'}
+[37.835971] (zed_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/bur/ros2_ws/install/zed_interfaces/include/zed_interfaces/zed_interfaces/msg/detail/skeleton3_d__rosidl_typesupport_introspection_c.h\n'}
+[37.854558] (zed_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/bur/ros2_ws/install/zed_interfaces/include/zed_interfaces/zed_interfaces/msg/rosidl_typesupport_introspection_c__visibility_control.h\n'}
+[37.872794] (zed_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/bur/ros2_ws/install/zed_interfaces/include/zed_interfaces/zed_interfaces/srv/detail/set_pose__rosidl_typesupport_introspection_c.h\n'}
+[37.879995] (-) TimerEvent: {}
+[37.890459] (zed_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/bur/ros2_ws/install/zed_interfaces/include/zed_interfaces/zed_interfaces/srv/detail/set_roi__rosidl_typesupport_introspection_c.h\n'}
+[37.907868] (zed_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/bur/ros2_ws/install/zed_interfaces/include/zed_interfaces/zed_interfaces/srv/detail/start_svo_rec__rosidl_typesupport_introspection_c.h\n'}
+[37.930310] (zed_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/bur/ros2_ws/install/zed_interfaces/include/zed_interfaces/zed_interfaces/msg/detail/bounding_box2_df__rosidl_typesupport_introspection_cpp.hpp\n'}
+[37.949571] (zed_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/bur/ros2_ws/install/zed_interfaces/include/zed_interfaces/zed_interfaces/msg/detail/bounding_box2_di__rosidl_typesupport_introspection_cpp.hpp\n'}
+[37.967327] (zed_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/bur/ros2_ws/install/zed_interfaces/include/zed_interfaces/zed_interfaces/msg/detail/bounding_box3_d__rosidl_typesupport_introspection_cpp.hpp\n'}
+[37.980118] (-) TimerEvent: {}
+[37.985220] (zed_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/bur/ros2_ws/install/zed_interfaces/include/zed_interfaces/zed_interfaces/msg/detail/depth_info_stamped__rosidl_typesupport_introspection_cpp.hpp\n'}
+[38.003828] (zed_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/bur/ros2_ws/install/zed_interfaces/include/zed_interfaces/zed_interfaces/msg/detail/heartbeat__rosidl_typesupport_introspection_cpp.hpp\n'}
+[38.023149] (zed_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/bur/ros2_ws/install/zed_interfaces/include/zed_interfaces/zed_interfaces/msg/detail/keypoint2_df__rosidl_typesupport_introspection_cpp.hpp\n'}
+[38.041439] (zed_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/bur/ros2_ws/install/zed_interfaces/include/zed_interfaces/zed_interfaces/msg/detail/keypoint2_di__rosidl_typesupport_introspection_cpp.hpp\n'}
+[38.060974] (zed_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/bur/ros2_ws/install/zed_interfaces/include/zed_interfaces/zed_interfaces/msg/detail/keypoint3_d__rosidl_typesupport_introspection_cpp.hpp\n'}
+[38.078428] (zed_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/bur/ros2_ws/install/zed_interfaces/include/zed_interfaces/zed_interfaces/msg/detail/object__rosidl_typesupport_introspection_cpp.hpp\n'}
+[38.080205] (-) TimerEvent: {}
+[38.095750] (zed_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/bur/ros2_ws/install/zed_interfaces/include/zed_interfaces/zed_interfaces/msg/detail/objects_stamped__rosidl_typesupport_introspection_cpp.hpp\n'}
+[38.113837] (zed_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/bur/ros2_ws/install/zed_interfaces/include/zed_interfaces/zed_interfaces/msg/detail/plane_stamped__rosidl_typesupport_introspection_cpp.hpp\n'}
+[38.131763] (zed_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/bur/ros2_ws/install/zed_interfaces/include/zed_interfaces/zed_interfaces/msg/detail/pos_track_status__rosidl_typesupport_introspection_cpp.hpp\n'}
+[38.149469] (zed_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/bur/ros2_ws/install/zed_interfaces/include/zed_interfaces/zed_interfaces/msg/detail/skeleton2_d__rosidl_typesupport_introspection_cpp.hpp\n'}
+[38.166619] (zed_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/bur/ros2_ws/install/zed_interfaces/include/zed_interfaces/zed_interfaces/msg/detail/skeleton3_d__rosidl_typesupport_introspection_cpp.hpp\n'}
+[38.180294] (-) TimerEvent: {}
+[38.183809] (zed_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/bur/ros2_ws/install/zed_interfaces/include/zed_interfaces/zed_interfaces/srv/detail/set_pose__rosidl_typesupport_introspection_cpp.hpp\n'}
+[38.203530] (zed_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/bur/ros2_ws/install/zed_interfaces/include/zed_interfaces/zed_interfaces/srv/detail/set_roi__rosidl_typesupport_introspection_cpp.hpp\n'}
+[38.221430] (zed_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/bur/ros2_ws/install/zed_interfaces/include/zed_interfaces/zed_interfaces/srv/detail/start_svo_rec__rosidl_typesupport_introspection_cpp.hpp\n'}
+[38.240131] (zed_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/bur/ros2_ws/install/zed_interfaces/share/zed_interfaces/environment/pythonpath.sh\n'}
+[38.258112] (zed_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/bur/ros2_ws/install/zed_interfaces/share/zed_interfaces/environment/pythonpath.dsv\n'}
+[38.276241] (zed_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/bur/ros2_ws/install/zed_interfaces/lib/python3.9/site-packages/zed_interfaces-4.0.0-py3.9.egg-info/PKG-INFO\n'}
+[38.280371] (-) TimerEvent: {}
+[38.295073] (zed_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/bur/ros2_ws/install/zed_interfaces/lib/python3.9/site-packages/zed_interfaces-4.0.0-py3.9.egg-info/SOURCES.txt\n'}
+[38.314714] (zed_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/bur/ros2_ws/install/zed_interfaces/lib/python3.9/site-packages/zed_interfaces-4.0.0-py3.9.egg-info/dependency_links.txt\n'}
+[38.333302] (zed_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/bur/ros2_ws/install/zed_interfaces/lib/python3.9/site-packages/zed_interfaces-4.0.0-py3.9.egg-info/top_level.txt\n'}
+[38.357377] (zed_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/bur/ros2_ws/install/zed_interfaces/lib/python3.9/site-packages/zed_interfaces/__init__.py\n'}
+[38.375357] (zed_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/bur/ros2_ws/install/zed_interfaces/lib/python3.9/site-packages/zed_interfaces/_zed_interfaces_s.ep.rosidl_typesupport_c.c\n'}
+[38.380476] (-) TimerEvent: {}
+[38.393856] (zed_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/bur/ros2_ws/install/zed_interfaces/lib/python3.9/site-packages/zed_interfaces/_zed_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c\n'}
+[38.411822] (zed_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/bur/ros2_ws/install/zed_interfaces/lib/python3.9/site-packages/zed_interfaces/_zed_interfaces_s.ep.rosidl_typesupport_introspection_c.c\n'}
+[38.430814] (zed_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/bur/ros2_ws/install/zed_interfaces/lib/python3.9/site-packages/zed_interfaces/libzed_interfaces__rosidl_generator_py.so\n'}
+[38.449624] (zed_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/bur/ros2_ws/install/zed_interfaces/lib/python3.9/site-packages/zed_interfaces/msg/__init__.py\n'}
+[38.469092] (zed_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/bur/ros2_ws/install/zed_interfaces/lib/python3.9/site-packages/zed_interfaces/msg/_bounding_box2_df.py\n'}
+[38.480593] (-) TimerEvent: {}
+[38.487676] (zed_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/bur/ros2_ws/install/zed_interfaces/lib/python3.9/site-packages/zed_interfaces/msg/_bounding_box2_df_s.c\n'}
+[38.505812] (zed_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/bur/ros2_ws/install/zed_interfaces/lib/python3.9/site-packages/zed_interfaces/msg/_bounding_box2_di.py\n'}
+[38.524643] (zed_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/bur/ros2_ws/install/zed_interfaces/lib/python3.9/site-packages/zed_interfaces/msg/_bounding_box2_di_s.c\n'}
+[38.543926] (zed_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/bur/ros2_ws/install/zed_interfaces/lib/python3.9/site-packages/zed_interfaces/msg/_bounding_box3_d.py\n'}
+[38.563563] (zed_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/bur/ros2_ws/install/zed_interfaces/lib/python3.9/site-packages/zed_interfaces/msg/_bounding_box3_d_s.c\n'}
+[38.580664] (-) TimerEvent: {}
+[38.581511] (zed_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/bur/ros2_ws/install/zed_interfaces/lib/python3.9/site-packages/zed_interfaces/msg/_depth_info_stamped.py\n'}
+[38.599825] (zed_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/bur/ros2_ws/install/zed_interfaces/lib/python3.9/site-packages/zed_interfaces/msg/_depth_info_stamped_s.c\n'}
+[38.621446] (zed_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/bur/ros2_ws/install/zed_interfaces/lib/python3.9/site-packages/zed_interfaces/msg/_heartbeat.py\n'}
+[38.640291] (zed_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/bur/ros2_ws/install/zed_interfaces/lib/python3.9/site-packages/zed_interfaces/msg/_heartbeat_s.c\n'}
+[38.658603] (zed_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/bur/ros2_ws/install/zed_interfaces/lib/python3.9/site-packages/zed_interfaces/msg/_keypoint2_df.py\n'}
+[38.676903] (zed_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/bur/ros2_ws/install/zed_interfaces/lib/python3.9/site-packages/zed_interfaces/msg/_keypoint2_df_s.c\n'}
+[38.680745] (-) TimerEvent: {}
+[38.694822] (zed_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/bur/ros2_ws/install/zed_interfaces/lib/python3.9/site-packages/zed_interfaces/msg/_keypoint2_di.py\n'}
+[38.713493] (zed_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/bur/ros2_ws/install/zed_interfaces/lib/python3.9/site-packages/zed_interfaces/msg/_keypoint2_di_s.c\n'}
+[38.732854] (zed_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/bur/ros2_ws/install/zed_interfaces/lib/python3.9/site-packages/zed_interfaces/msg/_keypoint3_d.py\n'}
+[38.751135] (zed_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/bur/ros2_ws/install/zed_interfaces/lib/python3.9/site-packages/zed_interfaces/msg/_keypoint3_d_s.c\n'}
+[38.769546] (zed_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/bur/ros2_ws/install/zed_interfaces/lib/python3.9/site-packages/zed_interfaces/msg/_object.py\n'}
+[38.780855] (-) TimerEvent: {}
+[38.788544] (zed_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/bur/ros2_ws/install/zed_interfaces/lib/python3.9/site-packages/zed_interfaces/msg/_object_s.c\n'}
+[38.807591] (zed_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/bur/ros2_ws/install/zed_interfaces/lib/python3.9/site-packages/zed_interfaces/msg/_objects_stamped.py\n'}
+[38.827991] (zed_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/bur/ros2_ws/install/zed_interfaces/lib/python3.9/site-packages/zed_interfaces/msg/_objects_stamped_s.c\n'}
+[38.848025] (zed_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/bur/ros2_ws/install/zed_interfaces/lib/python3.9/site-packages/zed_interfaces/msg/_plane_stamped.py\n'}
+[38.866032] (zed_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/bur/ros2_ws/install/zed_interfaces/lib/python3.9/site-packages/zed_interfaces/msg/_plane_stamped_s.c\n'}
+[38.880987] (-) TimerEvent: {}
+[38.884339] (zed_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/bur/ros2_ws/install/zed_interfaces/lib/python3.9/site-packages/zed_interfaces/msg/_pos_track_status.py\n'}
+[38.903146] (zed_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/bur/ros2_ws/install/zed_interfaces/lib/python3.9/site-packages/zed_interfaces/msg/_pos_track_status_s.c\n'}
+[38.923448] (zed_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/bur/ros2_ws/install/zed_interfaces/lib/python3.9/site-packages/zed_interfaces/msg/_skeleton2_d.py\n'}
+[38.942370] (zed_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/bur/ros2_ws/install/zed_interfaces/lib/python3.9/site-packages/zed_interfaces/msg/_skeleton2_d_s.c\n'}
+[38.962348] (zed_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/bur/ros2_ws/install/zed_interfaces/lib/python3.9/site-packages/zed_interfaces/msg/_skeleton3_d.py\n'}
+[38.980696] (zed_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/bur/ros2_ws/install/zed_interfaces/lib/python3.9/site-packages/zed_interfaces/msg/_skeleton3_d_s.c\n'}
+[38.981093] (-) TimerEvent: {}
+[38.999494] (zed_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/bur/ros2_ws/install/zed_interfaces/lib/python3.9/site-packages/zed_interfaces/srv/__init__.py\n'}
+[39.018436] (zed_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/bur/ros2_ws/install/zed_interfaces/lib/python3.9/site-packages/zed_interfaces/srv/_set_pose.py\n'}
+[39.037220] (zed_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/bur/ros2_ws/install/zed_interfaces/lib/python3.9/site-packages/zed_interfaces/srv/_set_pose_s.c\n'}
+[39.057067] (zed_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/bur/ros2_ws/install/zed_interfaces/lib/python3.9/site-packages/zed_interfaces/srv/_set_roi.py\n'}
+[39.075971] (zed_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/bur/ros2_ws/install/zed_interfaces/lib/python3.9/site-packages/zed_interfaces/srv/_set_roi_s.c\n'}
+[39.081205] (-) TimerEvent: {}
+[39.094243] (zed_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/bur/ros2_ws/install/zed_interfaces/lib/python3.9/site-packages/zed_interfaces/srv/_start_svo_rec.py\n'}
+[39.112696] (zed_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/bur/ros2_ws/install/zed_interfaces/lib/python3.9/site-packages/zed_interfaces/srv/_start_svo_rec_s.c\n'}
+[39.132478] (zed_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/bur/ros2_ws/install/zed_interfaces/lib/python3.9/site-packages/zed_interfaces/zed_interfaces_s__rosidl_typesupport_c.cpython-38-aarch64-linux-gnu.so\n'}
+[39.151873] (zed_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/bur/ros2_ws/install/zed_interfaces/lib/python3.9/site-packages/zed_interfaces/zed_interfaces_s__rosidl_typesupport_fastrtps_c.cpython-38-aarch64-linux-gnu.so\n'}
+[39.170952] (zed_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/bur/ros2_ws/install/zed_interfaces/lib/python3.9/site-packages/zed_interfaces/zed_interfaces_s__rosidl_typesupport_introspection_c.cpython-38-aarch64-linux-gnu.so\n'}
+[39.181290] (-) TimerEvent: {}
+[39.190304] (zed_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/lib/python3.9/site-packages/zed_interfaces/zed_interfaces_s__rosidl_typesupport_fastrtps_c.cpython-38-aarch64-linux-gnu.so\n'}
+[39.191716] (zed_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/lib/python3.9/site-packages/zed_interfaces/zed_interfaces_s__rosidl_typesupport_introspection_c.cpython-38-aarch64-linux-gnu.so\n'}
+[39.193201] (zed_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/lib/python3.9/site-packages/zed_interfaces/zed_interfaces_s__rosidl_typesupport_c.cpython-38-aarch64-linux-gnu.so\n'}
+[39.194222] (zed_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/bur/ros2_ws/install/zed_interfaces/share/zed_interfaces/msg/Object.idl\n'}
+[39.213684] (zed_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/bur/ros2_ws/install/zed_interfaces/share/zed_interfaces/msg/ObjectsStamped.idl\n'}
+[39.233170] (zed_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/bur/ros2_ws/install/zed_interfaces/share/zed_interfaces/msg/Keypoint2Di.idl\n'}
+[39.253247] (zed_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/bur/ros2_ws/install/zed_interfaces/share/zed_interfaces/msg/Keypoint2Df.idl\n'}
+[39.273285] (zed_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/bur/ros2_ws/install/zed_interfaces/share/zed_interfaces/msg/Keypoint3D.idl\n'}
+[39.281387] (-) TimerEvent: {}
+[39.291983] (zed_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/bur/ros2_ws/install/zed_interfaces/share/zed_interfaces/msg/BoundingBox2Di.idl\n'}
+[39.311655] (zed_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/bur/ros2_ws/install/zed_interfaces/share/zed_interfaces/msg/BoundingBox2Df.idl\n'}
+[39.331402] (zed_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/bur/ros2_ws/install/zed_interfaces/share/zed_interfaces/msg/BoundingBox3D.idl\n'}
+[39.349360] (zed_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/bur/ros2_ws/install/zed_interfaces/share/zed_interfaces/msg/Skeleton2D.idl\n'}
+[39.367628] (zed_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/bur/ros2_ws/install/zed_interfaces/share/zed_interfaces/msg/Skeleton3D.idl\n'}
+[39.381527] (-) TimerEvent: {}
+[39.387275] (zed_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/bur/ros2_ws/install/zed_interfaces/share/zed_interfaces/msg/DepthInfoStamped.idl\n'}
+[39.408649] (zed_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/bur/ros2_ws/install/zed_interfaces/share/zed_interfaces/msg/PlaneStamped.idl\n'}
+[39.429298] (zed_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/bur/ros2_ws/install/zed_interfaces/share/zed_interfaces/msg/PosTrackStatus.idl\n'}
+[39.448962] (zed_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/bur/ros2_ws/install/zed_interfaces/share/zed_interfaces/msg/Heartbeat.idl\n'}
+[39.467539] (zed_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/bur/ros2_ws/install/zed_interfaces/share/zed_interfaces/srv/SetPose.idl\n'}
+[39.481669] (-) TimerEvent: {}
+[39.486380] (zed_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/bur/ros2_ws/install/zed_interfaces/share/zed_interfaces/srv/StartSvoRec.idl\n'}
+[39.507380] (zed_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/bur/ros2_ws/install/zed_interfaces/share/zed_interfaces/srv/SetROI.idl\n'}
+[39.526374] (zed_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/bur/ros2_ws/install/zed_interfaces/share/zed_interfaces/msg/Object.msg\n'}
+[39.544773] (zed_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/bur/ros2_ws/install/zed_interfaces/share/zed_interfaces/msg/ObjectsStamped.msg\n'}
+[39.564527] (zed_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/bur/ros2_ws/install/zed_interfaces/share/zed_interfaces/msg/Keypoint2Di.msg\n'}
+[39.581774] (-) TimerEvent: {}
+[39.582593] (zed_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/bur/ros2_ws/install/zed_interfaces/share/zed_interfaces/msg/Keypoint2Df.msg\n'}
+[39.600109] (zed_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/bur/ros2_ws/install/zed_interfaces/share/zed_interfaces/msg/Keypoint3D.msg\n'}
+[39.618757] (zed_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/bur/ros2_ws/install/zed_interfaces/share/zed_interfaces/msg/BoundingBox2Di.msg\n'}
+[39.637901] (zed_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/bur/ros2_ws/install/zed_interfaces/share/zed_interfaces/msg/BoundingBox2Df.msg\n'}
+[39.657329] (zed_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/bur/ros2_ws/install/zed_interfaces/share/zed_interfaces/msg/BoundingBox3D.msg\n'}
+[39.676126] (zed_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/bur/ros2_ws/install/zed_interfaces/share/zed_interfaces/msg/Skeleton2D.msg\n'}
+[39.681887] (-) TimerEvent: {}
+[39.695201] (zed_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/bur/ros2_ws/install/zed_interfaces/share/zed_interfaces/msg/Skeleton3D.msg\n'}
+[39.714119] (zed_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/bur/ros2_ws/install/zed_interfaces/share/zed_interfaces/msg/DepthInfoStamped.msg\n'}
+[39.735789] (zed_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/bur/ros2_ws/install/zed_interfaces/share/zed_interfaces/msg/PlaneStamped.msg\n'}
+[39.755923] (zed_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/bur/ros2_ws/install/zed_interfaces/share/zed_interfaces/msg/PosTrackStatus.msg\n'}
+[39.777380] (zed_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/bur/ros2_ws/install/zed_interfaces/share/zed_interfaces/msg/Heartbeat.msg\n'}
+[39.782016] (-) TimerEvent: {}
+[39.797442] (zed_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/bur/ros2_ws/install/zed_interfaces/share/zed_interfaces/srv/SetPose.srv\n'}
+[39.818933] (zed_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/bur/ros2_ws/install/zed_interfaces/share/zed_interfaces/srv/SetPose_Request.msg\n'}
+[39.838028] (zed_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/bur/ros2_ws/install/zed_interfaces/share/zed_interfaces/srv/SetPose_Response.msg\n'}
+[39.857611] (zed_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/bur/ros2_ws/install/zed_interfaces/share/zed_interfaces/srv/StartSvoRec.srv\n'}
+[39.875715] (zed_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/bur/ros2_ws/install/zed_interfaces/share/zed_interfaces/srv/StartSvoRec_Request.msg\n'}
+[39.882122] (-) TimerEvent: {}
+[39.895534] (zed_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/bur/ros2_ws/install/zed_interfaces/share/zed_interfaces/srv/StartSvoRec_Response.msg\n'}
+[39.914685] (zed_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/bur/ros2_ws/install/zed_interfaces/share/zed_interfaces/srv/SetROI.srv\n'}
+[39.933583] (zed_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/bur/ros2_ws/install/zed_interfaces/share/zed_interfaces/srv/SetROI_Request.msg\n'}
+[39.953500] (zed_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/bur/ros2_ws/install/zed_interfaces/share/zed_interfaces/srv/SetROI_Response.msg\n'}
+[39.973962] (zed_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/bur/ros2_ws/install/zed_interfaces/share/zed_interfaces/meshes/zed.stl\n'}
+[39.982219] (-) TimerEvent: {}
+[39.993916] (zed_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/bur/ros2_ws/install/zed_interfaces/share/zed_interfaces/meshes/zed2.stl\n'}
+[40.012040] (zed_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/bur/ros2_ws/install/zed_interfaces/share/zed_interfaces/meshes/zed2i.stl\n'}
+[40.032473] (zed_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/bur/ros2_ws/install/zed_interfaces/share/zed_interfaces/meshes/zedm.stl\n'}
+[40.050929] (zed_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/bur/ros2_ws/install/zed_interfaces/share/zed_interfaces/meshes/zedx.stl\n'}
+[40.071505] (zed_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/bur/ros2_ws/install/zed_interfaces/share/zed_interfaces/meshes/zedxm.stl\n'}
+[40.082333] (-) TimerEvent: {}
+[40.093301] (zed_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/bur/ros2_ws/install/zed_interfaces/share/ament_index/resource_index/package_run_dependencies/zed_interfaces\n'}
+[40.111906] (zed_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/bur/ros2_ws/install/zed_interfaces/share/ament_index/resource_index/parent_prefix_path/zed_interfaces\n'}
+[40.132006] (zed_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/bur/ros2_ws/install/zed_interfaces/share/zed_interfaces/environment/ament_prefix_path.sh\n'}
+[40.152748] (zed_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/bur/ros2_ws/install/zed_interfaces/share/zed_interfaces/environment/ament_prefix_path.dsv\n'}
+[40.172628] (zed_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/bur/ros2_ws/install/zed_interfaces/share/zed_interfaces/environment/path.sh\n'}
+[40.182426] (-) TimerEvent: {}
+[40.192713] (zed_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/bur/ros2_ws/install/zed_interfaces/share/zed_interfaces/environment/path.dsv\n'}
+[40.211180] (zed_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/bur/ros2_ws/install/zed_interfaces/share/zed_interfaces/local_setup.bash\n'}
+[40.231047] (zed_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/bur/ros2_ws/install/zed_interfaces/share/zed_interfaces/local_setup.sh\n'}
+[40.250923] (zed_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/bur/ros2_ws/install/zed_interfaces/share/zed_interfaces/local_setup.zsh\n'}
+[40.268777] (zed_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/bur/ros2_ws/install/zed_interfaces/share/zed_interfaces/local_setup.dsv\n'}
+[40.282523] (-) TimerEvent: {}
+[40.287892] (zed_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/bur/ros2_ws/install/zed_interfaces/share/zed_interfaces/package.dsv\n'}
+[40.307766] (zed_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/bur/ros2_ws/install/zed_interfaces/share/ament_index/resource_index/packages/zed_interfaces\n'}
+[40.328158] (zed_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/bur/ros2_ws/install/zed_interfaces/share/zed_interfaces/cmake/rosidl_cmake-extras.cmake\n'}
+[40.346073] (zed_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/bur/ros2_ws/install/zed_interfaces/share/zed_interfaces/cmake/ament_cmake_export_dependencies-extras.cmake\n'}
+[40.363790] (zed_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/bur/ros2_ws/install/zed_interfaces/share/zed_interfaces/cmake/ament_cmake_export_include_directories-extras.cmake\n'}
+[40.381663] (zed_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/bur/ros2_ws/install/zed_interfaces/share/zed_interfaces/cmake/ament_cmake_export_libraries-extras.cmake\n'}
+[40.382594] (-) TimerEvent: {}
+[40.399820] (zed_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/bur/ros2_ws/install/zed_interfaces/share/zed_interfaces/cmake/ament_cmake_export_targets-extras.cmake\n'}
+[40.418007] (zed_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/bur/ros2_ws/install/zed_interfaces/share/zed_interfaces/cmake/rosidl_cmake_export_typesupport_targets-extras.cmake\n'}
+[40.436771] (zed_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/bur/ros2_ws/install/zed_interfaces/share/zed_interfaces/cmake/rosidl_cmake_export_typesupport_libraries-extras.cmake\n'}
+[40.454655] (zed_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/bur/ros2_ws/install/zed_interfaces/share/zed_interfaces/cmake/zed_interfacesConfig.cmake\n'}
+[40.472167] (zed_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/bur/ros2_ws/install/zed_interfaces/share/zed_interfaces/cmake/zed_interfacesConfig-version.cmake\n'}
+[40.482690] (-) TimerEvent: {}
+[40.490163] (zed_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/bur/ros2_ws/install/zed_interfaces/share/zed_interfaces/package.xml\n'}
+[40.507839] (zed_interfaces) StdoutLine: {'line': b'-- Installing: /home/bur/ros2_ws/install/zed_interfaces/lib/libzed_interfaces__rosidl_generator_c.so\n'}
+[40.509128] (zed_interfaces) StdoutLine: {'line': b'-- Set runtime path of "/home/bur/ros2_ws/install/zed_interfaces/lib/libzed_interfaces__rosidl_generator_c.so" to ""\n'}
+[40.509642] (zed_interfaces) StdoutLine: {'line': b'-- Installing: /home/bur/ros2_ws/install/zed_interfaces/lib/libzed_interfaces__rosidl_typesupport_fastrtps_c.so\n'}
+[40.510998] (zed_interfaces) StdoutLine: {'line': b'-- Set runtime path of "/home/bur/ros2_ws/install/zed_interfaces/lib/libzed_interfaces__rosidl_typesupport_fastrtps_c.so" to ""\n'}
+[40.511234] (zed_interfaces) StdoutLine: {'line': b'-- Installing: /home/bur/ros2_ws/install/zed_interfaces/lib/libzed_interfaces__rosidl_typesupport_fastrtps_cpp.so\n'}
+[40.512079] (zed_interfaces) StdoutLine: {'line': b'-- Set runtime path of "/home/bur/ros2_ws/install/zed_interfaces/lib/libzed_interfaces__rosidl_typesupport_fastrtps_cpp.so" to ""\n'}
+[40.512341] (zed_interfaces) StdoutLine: {'line': b'-- Installing: /home/bur/ros2_ws/install/zed_interfaces/lib/libzed_interfaces__rosidl_typesupport_introspection_c.so\n'}
+[40.513529] (zed_interfaces) StdoutLine: {'line': b'-- Set runtime path of "/home/bur/ros2_ws/install/zed_interfaces/lib/libzed_interfaces__rosidl_typesupport_introspection_c.so" to ""\n'}
+[40.513957] (zed_interfaces) StdoutLine: {'line': b'-- Installing: /home/bur/ros2_ws/install/zed_interfaces/lib/libzed_interfaces__rosidl_typesupport_c.so\n'}
+[40.515118] (zed_interfaces) StdoutLine: {'line': b'-- Set runtime path of "/home/bur/ros2_ws/install/zed_interfaces/lib/libzed_interfaces__rosidl_typesupport_c.so" to ""\n'}
+[40.515353] (zed_interfaces) StdoutLine: {'line': b'-- Installing: /home/bur/ros2_ws/install/zed_interfaces/lib/libzed_interfaces__rosidl_typesupport_introspection_cpp.so\n'}
+[40.516329] (zed_interfaces) StdoutLine: {'line': b'-- Set runtime path of "/home/bur/ros2_ws/install/zed_interfaces/lib/libzed_interfaces__rosidl_typesupport_introspection_cpp.so" to ""\n'}
+[40.516537] (zed_interfaces) StdoutLine: {'line': b'-- Installing: /home/bur/ros2_ws/install/zed_interfaces/lib/libzed_interfaces__rosidl_typesupport_cpp.so\n'}
+[40.517186] (zed_interfaces) StdoutLine: {'line': b'-- Set runtime path of "/home/bur/ros2_ws/install/zed_interfaces/lib/libzed_interfaces__rosidl_typesupport_cpp.so" to ""\n'}
+[40.582788] (-) TimerEvent: {}
+[40.677223] (zed_interfaces) StdoutLine: {'line': b"Listing '/home/bur/ros2_ws/install/zed_interfaces/lib/python3.9/site-packages/zed_interfaces'...\n"}
+[40.677775] (zed_interfaces) StdoutLine: {'line': b"Compiling '/home/bur/ros2_ws/install/zed_interfaces/lib/python3.9/site-packages/zed_interfaces/__init__.py'...\n"}
+[40.677937] (zed_interfaces) StdoutLine: {'line': b"Listing '/home/bur/ros2_ws/install/zed_interfaces/lib/python3.9/site-packages/zed_interfaces/msg'...\n"}
+[40.678072] (zed_interfaces) StdoutLine: {'line': b"Compiling '/home/bur/ros2_ws/install/zed_interfaces/lib/python3.9/site-packages/zed_interfaces/msg/__init__.py'...\n"}
+[40.678203] (zed_interfaces) StdoutLine: {'line': b"Compiling '/home/bur/ros2_ws/install/zed_interfaces/lib/python3.9/site-packages/zed_interfaces/msg/_bounding_box2_df.py'...\n"}
+[40.678328] (zed_interfaces) StdoutLine: {'line': b"Compiling '/home/bur/ros2_ws/install/zed_interfaces/lib/python3.9/site-packages/zed_interfaces/msg/_bounding_box2_di.py'...\n"}
+[40.678448] (zed_interfaces) StdoutLine: {'line': b"Compiling '/home/bur/ros2_ws/install/zed_interfaces/lib/python3.9/site-packages/zed_interfaces/msg/_bounding_box3_d.py'...\n"}
+[40.678567] (zed_interfaces) StdoutLine: {'line': b"Compiling '/home/bur/ros2_ws/install/zed_interfaces/lib/python3.9/site-packages/zed_interfaces/msg/_depth_info_stamped.py'...\n"}
+[40.678686] (zed_interfaces) StdoutLine: {'line': b"Compiling '/home/bur/ros2_ws/install/zed_interfaces/lib/python3.9/site-packages/zed_interfaces/msg/_heartbeat.py'...\n"}
+[40.678802] (zed_interfaces) StdoutLine: {'line': b"Compiling '/home/bur/ros2_ws/install/zed_interfaces/lib/python3.9/site-packages/zed_interfaces/msg/_keypoint2_df.py'...\n"}
+[40.678919] (zed_interfaces) StdoutLine: {'line': b"Compiling '/home/bur/ros2_ws/install/zed_interfaces/lib/python3.9/site-packages/zed_interfaces/msg/_keypoint2_di.py'...\n"}
+[40.679036] (zed_interfaces) StdoutLine: {'line': b"Compiling '/home/bur/ros2_ws/install/zed_interfaces/lib/python3.9/site-packages/zed_interfaces/msg/_keypoint3_d.py'...\n"}
+[40.679150] (zed_interfaces) StdoutLine: {'line': b"Compiling '/home/bur/ros2_ws/install/zed_interfaces/lib/python3.9/site-packages/zed_interfaces/msg/_object.py'...\n"}
+[40.679264] (zed_interfaces) StdoutLine: {'line': b"Compiling '/home/bur/ros2_ws/install/zed_interfaces/lib/python3.9/site-packages/zed_interfaces/msg/_objects_stamped.py'...\n"}
+[40.679378] (zed_interfaces) StdoutLine: {'line': b"Compiling '/home/bur/ros2_ws/install/zed_interfaces/lib/python3.9/site-packages/zed_interfaces/msg/_plane_stamped.py'...\n"}
+[40.679489] (zed_interfaces) StdoutLine: {'line': b"Compiling '/home/bur/ros2_ws/install/zed_interfaces/lib/python3.9/site-packages/zed_interfaces/msg/_pos_track_status.py'...\n"}
+[40.679602] (zed_interfaces) StdoutLine: {'line': b"Compiling '/home/bur/ros2_ws/install/zed_interfaces/lib/python3.9/site-packages/zed_interfaces/msg/_skeleton2_d.py'...\n"}
+[40.679713] (zed_interfaces) StdoutLine: {'line': b"Compiling '/home/bur/ros2_ws/install/zed_interfaces/lib/python3.9/site-packages/zed_interfaces/msg/_skeleton3_d.py'...\n"}
+[40.679826] (zed_interfaces) StdoutLine: {'line': b"Listing '/home/bur/ros2_ws/install/zed_interfaces/lib/python3.9/site-packages/zed_interfaces/srv'...\n"}
+[40.679939] (zed_interfaces) StdoutLine: {'line': b"Compiling '/home/bur/ros2_ws/install/zed_interfaces/lib/python3.9/site-packages/zed_interfaces/srv/__init__.py'...\n"}
+[40.680051] (zed_interfaces) StdoutLine: {'line': b"Compiling '/home/bur/ros2_ws/install/zed_interfaces/lib/python3.9/site-packages/zed_interfaces/srv/_set_pose.py'...\n"}
+[40.680234] (zed_interfaces) StdoutLine: {'line': b"Compiling '/home/bur/ros2_ws/install/zed_interfaces/lib/python3.9/site-packages/zed_interfaces/srv/_set_roi.py'...\n"}
+[40.680370] (zed_interfaces) StdoutLine: {'line': b"Compiling '/home/bur/ros2_ws/install/zed_interfaces/lib/python3.9/site-packages/zed_interfaces/srv/_start_svo_rec.py'...\n"}
+[40.682867] (-) TimerEvent: {}
+[40.691227] (zed_interfaces) StdoutLine: {'line': b'-- Installing: /home/bur/ros2_ws/install/zed_interfaces/lib/libzed_interfaces__rosidl_generator_py.so\n'}
+[40.691988] (zed_interfaces) StdoutLine: {'line': b'-- Set runtime path of "/home/bur/ros2_ws/install/zed_interfaces/lib/libzed_interfaces__rosidl_generator_py.so" to ""\n'}
+[40.692304] (zed_interfaces) StdoutLine: {'line': b'-- Installing: /home/bur/ros2_ws/install/zed_interfaces/share/zed_interfaces/cmake/export_zed_interfaces__rosidl_generator_cExport.cmake\n'}
+[40.693093] (zed_interfaces) StdoutLine: {'line': b'-- Installing: /home/bur/ros2_ws/install/zed_interfaces/share/zed_interfaces/cmake/export_zed_interfaces__rosidl_generator_cExport-release.cmake\n'}
+[40.693723] (zed_interfaces) StdoutLine: {'line': b'-- Installing: /home/bur/ros2_ws/install/zed_interfaces/share/zed_interfaces/cmake/export_zed_interfaces__rosidl_typesupport_fastrtps_cExport.cmake\n'}
+[40.694158] (zed_interfaces) StdoutLine: {'line': b'-- Installing: /home/bur/ros2_ws/install/zed_interfaces/share/zed_interfaces/cmake/export_zed_interfaces__rosidl_typesupport_fastrtps_cExport-release.cmake\n'}
+[40.694865] (zed_interfaces) StdoutLine: {'line': b'-- Installing: /home/bur/ros2_ws/install/zed_interfaces/share/zed_interfaces/cmake/export_zed_interfaces__rosidl_generator_cppExport.cmake\n'}
+[40.695628] (zed_interfaces) StdoutLine: {'line': b'-- Installing: /home/bur/ros2_ws/install/zed_interfaces/share/zed_interfaces/cmake/export_zed_interfaces__rosidl_typesupport_fastrtps_cppExport.cmake\n'}
+[40.696264] (zed_interfaces) StdoutLine: {'line': b'-- Installing: /home/bur/ros2_ws/install/zed_interfaces/share/zed_interfaces/cmake/export_zed_interfaces__rosidl_typesupport_fastrtps_cppExport-release.cmake\n'}
+[40.697045] (zed_interfaces) StdoutLine: {'line': b'-- Installing: /home/bur/ros2_ws/install/zed_interfaces/share/zed_interfaces/cmake/zed_interfaces__rosidl_typesupport_introspection_cExport.cmake\n'}
+[40.697663] (zed_interfaces) StdoutLine: {'line': b'-- Installing: /home/bur/ros2_ws/install/zed_interfaces/share/zed_interfaces/cmake/zed_interfaces__rosidl_typesupport_introspection_cExport-release.cmake\n'}
+[40.698384] (zed_interfaces) StdoutLine: {'line': b'-- Installing: /home/bur/ros2_ws/install/zed_interfaces/share/zed_interfaces/cmake/zed_interfaces__rosidl_typesupport_cExport.cmake\n'}
+[40.698983] (zed_interfaces) StdoutLine: {'line': b'-- Installing: /home/bur/ros2_ws/install/zed_interfaces/share/zed_interfaces/cmake/zed_interfaces__rosidl_typesupport_cExport-release.cmake\n'}
+[40.699731] (zed_interfaces) StdoutLine: {'line': b'-- Installing: /home/bur/ros2_ws/install/zed_interfaces/share/zed_interfaces/cmake/zed_interfaces__rosidl_typesupport_introspection_cppExport.cmake\n'}
+[40.700375] (zed_interfaces) StdoutLine: {'line': b'-- Installing: /home/bur/ros2_ws/install/zed_interfaces/share/zed_interfaces/cmake/zed_interfaces__rosidl_typesupport_introspection_cppExport-release.cmake\n'}
+[40.701102] (zed_interfaces) StdoutLine: {'line': b'-- Installing: /home/bur/ros2_ws/install/zed_interfaces/share/zed_interfaces/cmake/zed_interfaces__rosidl_typesupport_cppExport.cmake\n'}
+[40.701709] (zed_interfaces) StdoutLine: {'line': b'-- Installing: /home/bur/ros2_ws/install/zed_interfaces/share/zed_interfaces/cmake/zed_interfaces__rosidl_typesupport_cppExport-release.cmake\n'}
+[40.702441] (zed_interfaces) StdoutLine: {'line': b'-- Installing: /home/bur/ros2_ws/install/zed_interfaces/share/zed_interfaces/cmake/export_zed_interfaces__rosidl_generator_pyExport.cmake\n'}
+[40.703046] (zed_interfaces) StdoutLine: {'line': b'-- Installing: /home/bur/ros2_ws/install/zed_interfaces/share/zed_interfaces/cmake/export_zed_interfaces__rosidl_generator_pyExport-release.cmake\n'}
+[40.710300] (zed_interfaces) CommandEnded: {'returncode': 0}
+[40.783094] (-) TimerEvent: {}
+[40.883746] (-) TimerEvent: {}
+[40.984416] (-) TimerEvent: {}
+[41.084957] (-) TimerEvent: {}
+[41.185722] (-) TimerEvent: {}
+[41.266619] (zed_interfaces) JobEnded: {'identifier': 'zed_interfaces', 'rc': 0}
+[41.269051] (zed_components) JobStarted: {'identifier': 'zed_components'}
+[41.286742] (-) TimerEvent: {}
+[41.287693] (zed_components) JobProgress: {'identifier': 'zed_components', 'progress': 'cmake'}
+[41.288234] (zed_components) Command: {'cmd': ['/usr/bin/cmake', '/home/bur/ros2_ws/src/zed-ros2-wrapper/zed_components', '-DCMAKE_BUILD_TYPE=Release', '-DAMENT_CMAKE_SYMLINK_INSTALL=1', '-DCMAKE_INSTALL_PREFIX=/home/bur/ros2_ws/install/zed_components'], 'cwd': '/home/bur/ros2_ws/build/zed_components', 'env': OrderedDict([('GJS_DEBUG_TOPICS', 'JS ERROR;JS LOG'), ('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'bur'), ('SSH_AGENT_PID', '2553'), ('XDG_SESSION_TYPE', 'x11'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/bur/ros2_ws/install/zed_interfaces/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/aarch64-linux-gnu:/opt/ros/humble/lib:/usr/local/cuda-11.4/lib64'), ('HOME', '/home/bur'), ('OLDPWD', '/home/bur/ros2_ws/src'), ('DESKTOP_SESSION', 'ubuntu'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('MANAGERPID', '2329'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('IM_CONFIG_PHASE', '1'), ('COLCON_PREFIX_PATH', '/home/bur/ros2_ws/install'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'bur'), ('JOURNAL_STREAM', '8:57445'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'bur'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('WINDOWPATH', '2'), ('PATH', '/opt/ros/humble/bin:/usr/local/cuda-11.4/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin'), ('SESSION_MANAGER', 'local/ubuntu:@/tmp/.ICE-unix/2589,unix/ubuntu:/tmp/.ICE-unix/2589'), ('INVOCATION_ID', '624c199e99f74008a224ca9b847bf6a7'), ('XDG_MENU_PREFIX', 'gnome-'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/8773b50c_0e56_401b_a59c_d0ccb0fd15b0'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':1'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/gdm/Xauthority'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('GNOME_TERMINAL_SERVICE', ':1.165'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/opt/ros/humble:/home/bur/ros2_ws/install/zed_interfaces'), ('SHELL', '/bin/bash'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('GJS_DEBUG_OUTPUT', 'stderr'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/bur/ros2_ws/build/zed_components'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/bur/ros2_ws/install/zed_interfaces/lib/python3.9/site-packages:/opt/ros/humble/lib/python3.8/site-packages:/home/bur/ros2_ws/install/zed_interfaces/lib/python3.8/site-packages'), ('COLCON', '1'), ('VTE_VERSION', '6003'), ('CMAKE_PREFIX_PATH', '/home/bur/ros2_ws/install/zed_interfaces:/opt/ros/humble')]), 'shell': False}
+[41.386937] (-) TimerEvent: {}
+[41.397857] (zed_components) StdoutLine: {'line': b'-- The C compiler identification is GNU 9.4.0\n'}
+[41.487081] (-) TimerEvent: {}
+[41.494353] (zed_components) StdoutLine: {'line': b'-- The CXX compiler identification is GNU 9.4.0\n'}
+[41.502438] (zed_components) StdoutLine: {'line': b'-- Check for working C compiler: /usr/bin/cc\n'}
+[41.587254] (-) TimerEvent: {}
+[41.633978] (zed_components) StdoutLine: {'line': b'-- Check for working C compiler: /usr/bin/cc -- works\n'}
+[41.636155] (zed_components) StdoutLine: {'line': b'-- Detecting C compiler ABI info\n'}
+[41.687428] (-) TimerEvent: {}
+[41.775984] (zed_components) StdoutLine: {'line': b'-- Detecting C compiler ABI info - done\n'}
+[41.787517] (-) TimerEvent: {}
+[41.810938] (zed_components) StdoutLine: {'line': b'-- Detecting C compile features\n'}
+[41.811757] (zed_components) StdoutLine: {'line': b'-- Detecting C compile features - done\n'}
+[41.817289] (zed_components) StdoutLine: {'line': b'-- Check for working CXX compiler: /usr/bin/c++\n'}
+[41.887718] (-) TimerEvent: {}
+[41.963772] (zed_components) StdoutLine: {'line': b'-- Check for working CXX compiler: /usr/bin/c++ -- works\n'}
+[41.966740] (zed_components) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info\n'}
+[41.987791] (-) TimerEvent: {}
+[42.088338] (-) TimerEvent: {}
+[42.123710] (zed_components) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info - done\n'}
+[42.158892] (zed_components) StdoutLine: {'line': b'-- Detecting CXX compile features\n'}
+[42.160124] (zed_components) StdoutLine: {'line': b'-- Detecting CXX compile features - done\n'}
+[42.168309] (zed_components) StdoutLine: {'line': b'-- Looking for sgemm_\n'}
+[42.188424] (-) TimerEvent: {}
+[42.288964] (-) TimerEvent: {}
+[42.301579] (zed_components) StdoutLine: {'line': b'-- Looking for sgemm_ - not found\n'}
+[42.303770] (zed_components) StdoutLine: {'line': b'-- Looking for pthread.h\n'}
+[42.389140] (-) TimerEvent: {}
+[42.449517] (zed_components) StdoutLine: {'line': b'-- Looking for pthread.h - found\n'}
+[42.450134] (zed_components) StdoutLine: {'line': b'-- Performing Test CMAKE_HAVE_LIBC_PTHREAD\n'}
+[42.489259] (-) TimerEvent: {}
+[42.589836] (-) TimerEvent: {}
+[42.598321] (zed_components) StdoutLine: {'line': b'-- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Failed\n'}
+[42.598894] (zed_components) StdoutLine: {'line': b'-- Looking for pthread_create in pthreads\n'}
+[42.690020] (-) TimerEvent: {}
+[42.726108] (zed_components) StdoutLine: {'line': b'-- Looking for pthread_create in pthreads - not found\n'}
+[42.726849] (zed_components) StdoutLine: {'line': b'-- Looking for pthread_create in pthread\n'}
+[42.790217] (-) TimerEvent: {}
+[42.863167] (zed_components) StdoutLine: {'line': b'-- Looking for pthread_create in pthread - found\n'}
+[42.865220] (zed_components) StdoutLine: {'line': b'-- Found Threads: TRUE  \n'}
+[42.890316] (-) TimerEvent: {}
+[42.920432] (zed_components) StdoutLine: {'line': b'-- Looking for sgemm_\n'}
+[42.990576] (-) TimerEvent: {}
+[43.091232] (-) TimerEvent: {}
+[43.093926] (zed_components) StdoutLine: {'line': b'-- Looking for sgemm_ - found\n'}
+[43.095693] (zed_components) StdoutLine: {'line': b'-- Found BLAS: /usr/lib/aarch64-linux-gnu/libopenblas.so  \n'}
+[43.131182] (zed_components) StdoutLine: {'line': b'-- Found CUDA: /usr/local/cuda-11.4 (found suitable version "11.4", minimum required is "11.4") \n'}
+[43.177412] (zed_components) StdoutLine: {'line': b'-- Found CUDA: /usr/local/cuda-11.4 (found version "11.4") \n'}
+[43.181909] (zed_components) StdoutLine: {'line': b'-- Found ament_cmake_auto: 1.3.6 (/opt/ros/humble/share/ament_cmake_auto/cmake)\n'}
+[43.191280] (-) TimerEvent: {}
+[43.291756] (-) TimerEvent: {}
+[43.392446] (-) TimerEvent: {}
+[43.467642] (zed_components) StdoutLine: {'line': b'-- Found Python3: /usr/bin/python3.9 (found version "3.9.5") found components: Interpreter \n'}
+[43.492544] (-) TimerEvent: {}
+[43.593088] (-) TimerEvent: {}
+[43.594901] (zed_components) StdoutLine: {'line': b'-- Override CMake install command with custom implementation using symlinks instead of copying resources\n'}
+[43.693264] (-) TimerEvent: {}
+[43.793928] (-) TimerEvent: {}
+[43.894604] (-) TimerEvent: {}
+[43.901200] (zed_components) StdoutLine: {'line': b'-- Found rosidl_generator_c: 3.1.5 (/opt/ros/humble/share/rosidl_generator_c/cmake)\n'}
+[43.910133] (zed_components) StdoutLine: {'line': b'-- Found rosidl_adapter: 3.1.5 (/opt/ros/humble/share/rosidl_adapter/cmake)\n'}
+[43.927296] (zed_components) StdoutLine: {'line': b'-- Found rosidl_generator_cpp: 3.1.5 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)\n'}
+[43.957258] (zed_components) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c\n'}
+[43.994662] (-) TimerEvent: {}
+[44.000331] (zed_components) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp\n'}
+[44.094793] (-) TimerEvent: {}
+[44.195256] (-) TimerEvent: {}
+[44.295717] (-) TimerEvent: {}
+[44.396220] (-) TimerEvent: {}
+[44.496672] (-) TimerEvent: {}
+[44.597126] (-) TimerEvent: {}
+[44.693976] (zed_components) StdoutLine: {'line': b'-- Found rmw_implementation_cmake: 6.1.1 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)\n'}
+[44.697195] (-) TimerEvent: {}
+[44.698496] (zed_components) StdoutLine: {'line': b'-- Found rmw_fastrtps_cpp: 6.2.5 (/opt/ros/humble/share/rmw_fastrtps_cpp/cmake)\n'}
+[44.797373] (-) TimerEvent: {}
+[44.897969] (-) TimerEvent: {}
+[44.940458] (zed_components) StdoutLine: {'line': b'-- Found OpenSSL: /usr/lib/aarch64-linux-gnu/libcrypto.so (found version "1.1.1f")  \n'}
+[44.990574] (zed_components) StdoutLine: {'line': b'-- Found FastRTPS: /opt/ros/humble/include  \n'}
+[44.998027] (-) TimerEvent: {}
+[45.093107] (zed_components) StdoutLine: {'line': b"-- Using RMW implementation 'rmw_fastrtps_cpp' as default\n"}
+[45.098137] (-) TimerEvent: {}
+[45.198636] (-) TimerEvent: {}
+[45.299112] (-) TimerEvent: {}
+[45.399636] (-) TimerEvent: {}
+[45.500170] (-) TimerEvent: {}
+[45.600798] (-) TimerEvent: {}
+[45.701459] (-) TimerEvent: {}
+[45.802078] (-) TimerEvent: {}
+[45.902682] (-) TimerEvent: {}
+[46.003216] (-) TimerEvent: {}
+[46.103843] (-) TimerEvent: {}
+[46.204668] (-) TimerEvent: {}
+[46.305270] (-) TimerEvent: {}
+[46.405880] (-) TimerEvent: {}
+[46.506442] (-) TimerEvent: {}
+[46.606972] (-) TimerEvent: {}
+[46.707488] (-) TimerEvent: {}
+[46.807967] (-) TimerEvent: {}
+[46.845963] (zed_components) StdoutLine: {'line': b'-- Found eigen3_cmake_module: 0.1.1 (/opt/ros/humble/share/eigen3_cmake_module/cmake)\n'}
+[46.848493] (zed_components) StdoutLine: {'line': b'-- Found Eigen3: TRUE (found version "3.3.7") \n'}
+[46.848998] (zed_components) StdoutLine: {'line': b'-- Ensuring Eigen3 include directory is part of orocos-kdl CMake target\n'}
+[46.908072] (-) TimerEvent: {}
+[47.008584] (-) TimerEvent: {}
+[47.109051] (-) TimerEvent: {}
+[47.209453] (-) TimerEvent: {}
+[47.309886] (-) TimerEvent: {}
+[47.397112] (zed_components) StderrLine: {'line': b'CMake Error at CMakeLists.txt:129 (find_package):\n'}
+[47.397839] (zed_components) StderrLine: {'line': b'  By not providing "Findnmea_msgs.cmake" in CMAKE_MODULE_PATH this project\n'}
+[47.398150] (zed_components) StderrLine: {'line': b'  has asked CMake to find a package configuration file provided by\n'}
+[47.398413] (zed_components) StderrLine: {'line': b'  "nmea_msgs", but CMake did not find one.\n'}
+[47.398656] (zed_components) StderrLine: {'line': b'\n'}
+[47.398889] (zed_components) StderrLine: {'line': b'  Could not find a package configuration file provided by "nmea_msgs" with\n'}
+[47.399153] (zed_components) StderrLine: {'line': b'  any of the following names:\n'}
+[47.399379] (zed_components) StderrLine: {'line': b'\n'}
+[47.399596] (zed_components) StderrLine: {'line': b'    nmea_msgsConfig.cmake\n'}
+[47.399808] (zed_components) StderrLine: {'line': b'    nmea_msgs-config.cmake\n'}
+[47.400047] (zed_components) StderrLine: {'line': b'\n'}
+[47.400344] (zed_components) StderrLine: {'line': b'  Add the installation prefix of "nmea_msgs" to CMAKE_PREFIX_PATH or set\n'}
+[47.400587] (zed_components) StderrLine: {'line': b'  "nmea_msgs_DIR" to a directory containing one of the above files.  If\n'}
+[47.400809] (zed_components) StderrLine: {'line': b'  "nmea_msgs" provides a separate development package or SDK, be sure it has\n'}
+[47.401025] (zed_components) StderrLine: {'line': b'  been installed.\n'}
+[47.401237] (zed_components) StderrLine: {'line': b'\n'}
+[47.401449] (zed_components) StderrLine: {'line': b'\n'}
+[47.405390] (zed_components) StdoutLine: {'line': b'-- Configuring incomplete, errors occurred!\n'}
+[47.405695] (zed_components) StdoutLine: {'line': b'See also "/home/bur/ros2_ws/build/zed_components/CMakeFiles/CMakeOutput.log".\n'}
+[47.405935] (zed_components) StdoutLine: {'line': b'See also "/home/bur/ros2_ws/build/zed_components/CMakeFiles/CMakeError.log".\n'}
+[47.409959] (-) TimerEvent: {}
+[47.433701] (zed_components) CommandEnded: {'returncode': 1}
+[47.480315] (zed_components) JobEnded: {'identifier': 'zed_components', 'rc': 1}
+[47.491671] (zed_wrapper) JobSkipped: {'identifier': 'zed_wrapper'}
+[47.491874] (zed_ros2) JobSkipped: {'identifier': 'zed_ros2'}
+[47.491967] (-) EventReactorShutdown: {}

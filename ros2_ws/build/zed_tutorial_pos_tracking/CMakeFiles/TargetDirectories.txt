@@ -1,0 +1,11 @@
+/home/bur/ros2_ws/build/zed_tutorial_pos_tracking/CMakeFiles/install/strip.dir
+/home/bur/ros2_ws/build/zed_tutorial_pos_tracking/CMakeFiles/install/local.dir
+/home/bur/ros2_ws/build/zed_tutorial_pos_tracking/CMakeFiles/install.dir
+/home/bur/ros2_ws/build/zed_tutorial_pos_tracking/CMakeFiles/list_install_components.dir
+/home/bur/ros2_ws/build/zed_tutorial_pos_tracking/CMakeFiles/rebuild_cache.dir
+/home/bur/ros2_ws/build/zed_tutorial_pos_tracking/CMakeFiles/edit_cache.dir
+/home/bur/ros2_ws/build/zed_tutorial_pos_tracking/CMakeFiles/test.dir
+/home/bur/ros2_ws/build/zed_tutorial_pos_tracking/CMakeFiles/zed_tutorial_pos_tracking.dir
+/home/bur/ros2_ws/build/zed_tutorial_pos_tracking/CMakeFiles/zed_tutorial_pos_tracking_files.dir
+/home/bur/ros2_ws/build/zed_tutorial_pos_tracking/CMakeFiles/zed_tutorial_pos_tracking_uninstall.dir
+/home/bur/ros2_ws/build/zed_tutorial_pos_tracking/CMakeFiles/uninstall.dir

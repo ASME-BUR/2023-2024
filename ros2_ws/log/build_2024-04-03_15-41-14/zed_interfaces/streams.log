@@ -1,0 +1,388 @@
+[0.031s] Invoking command in '/home/bur/ros2_ws/build/zed_interfaces': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/bur/ros2_ws/build/zed_interfaces -- -j6 -l6
+[0.152s] [  0%] Built target zed_interfaces__cpp
+[0.166s] [ 12%] Built target zed_interfaces__rosidl_generator_c
+[0.166s] [ 12%] Built target ament_cmake_python_symlink_zed_interfaces
+[0.214s] [ 44%] Built target zed_interfaces__rosidl_typesupport_introspection_cpp
+[0.214s] [ 48%] Built target zed_interfaces__rosidl_typesupport_fastrtps_cpp
+[0.214s] [ 44%] Built target zed_interfaces__rosidl_typesupport_cpp
+[0.225s] [ 60%] Built target zed_interfaces__rosidl_typesupport_c
+[0.234s] [ 84%] Built target zed_interfaces__rosidl_typesupport_fastrtps_c
+[0.234s] [ 84%] Built target zed_interfaces__rosidl_typesupport_introspection_c
+[0.280s] [ 84%] Built target zed_interfaces
+[0.329s] [ 85%] Built target zed_interfaces__py
+[0.408s] [ 96%] Built target zed_interfaces__rosidl_generator_py
+[0.469s] [100%] Built target zed_interfaces__rosidl_typesupport_fastrtps_c__pyext
+[0.469s] [100%] Built target zed_interfaces__rosidl_typesupport_c__pyext
+[0.470s] [100%] Built target zed_interfaces__rosidl_typesupport_introspection_c__pyext
+[0.903s] running egg_info
+[0.905s] writing zed_interfaces.egg-info/PKG-INFO
+[0.905s] writing dependency_links to zed_interfaces.egg-info/dependency_links.txt
+[0.905s] writing top-level names to zed_interfaces.egg-info/top_level.txt
+[1.004s] reading manifest file 'zed_interfaces.egg-info/SOURCES.txt'
+[1.005s] writing manifest file 'zed_interfaces.egg-info/SOURCES.txt'
+[1.075s] [100%] Built target ament_cmake_python_build_zed_interfaces_egg
+[1.104s] Invoked command in '/home/bur/ros2_ws/build/zed_interfaces' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/bur/ros2_ws/build/zed_interfaces -- -j6 -l6
+[1.630s] Invoking command in '/home/bur/ros2_ws/build/zed_interfaces': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/bur/ros2_ws/build/zed_interfaces
+[1.652s] -- Install configuration: "Release"
+[1.653s] -- Execute custom install script
+[1.654s] -- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/share/ament_index/resource_index/rosidl_interfaces/zed_interfaces
+[1.656s] -- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/include/zed_interfaces/zed_interfaces/msg/bounding_box2_df.h
+[1.657s] -- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/include/zed_interfaces/zed_interfaces/msg/bounding_box2_di.h
+[1.657s] -- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/include/zed_interfaces/zed_interfaces/msg/bounding_box3_d.h
+[1.657s] -- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/include/zed_interfaces/zed_interfaces/msg/depth_info_stamped.h
+[1.658s] -- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/include/zed_interfaces/zed_interfaces/msg/detail/bounding_box2_df__functions.h
+[1.658s] -- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/include/zed_interfaces/zed_interfaces/msg/detail/bounding_box2_df__struct.h
+[1.658s] -- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/include/zed_interfaces/zed_interfaces/msg/detail/bounding_box2_df__type_support.h
+[1.659s] -- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/include/zed_interfaces/zed_interfaces/msg/detail/bounding_box2_di__functions.h
+[1.659s] -- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/include/zed_interfaces/zed_interfaces/msg/detail/bounding_box2_di__struct.h
+[1.659s] -- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/include/zed_interfaces/zed_interfaces/msg/detail/bounding_box2_di__type_support.h
+[1.659s] -- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/include/zed_interfaces/zed_interfaces/msg/detail/bounding_box3_d__functions.h
+[1.660s] -- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/include/zed_interfaces/zed_interfaces/msg/detail/bounding_box3_d__struct.h
+[1.660s] -- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/include/zed_interfaces/zed_interfaces/msg/detail/bounding_box3_d__type_support.h
+[1.660s] -- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/include/zed_interfaces/zed_interfaces/msg/detail/depth_info_stamped__functions.h
+[1.661s] -- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/include/zed_interfaces/zed_interfaces/msg/detail/depth_info_stamped__struct.h
+[1.661s] -- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/include/zed_interfaces/zed_interfaces/msg/detail/depth_info_stamped__type_support.h
+[1.661s] -- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/include/zed_interfaces/zed_interfaces/msg/detail/heartbeat__functions.h
+[1.662s] -- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/include/zed_interfaces/zed_interfaces/msg/detail/heartbeat__struct.h
+[1.662s] -- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/include/zed_interfaces/zed_interfaces/msg/detail/heartbeat__type_support.h
+[1.662s] -- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/include/zed_interfaces/zed_interfaces/msg/detail/keypoint2_df__functions.h
+[1.663s] -- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/include/zed_interfaces/zed_interfaces/msg/detail/keypoint2_df__struct.h
+[1.663s] -- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/include/zed_interfaces/zed_interfaces/msg/detail/keypoint2_df__type_support.h
+[1.663s] -- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/include/zed_interfaces/zed_interfaces/msg/detail/keypoint2_di__functions.h
+[1.663s] -- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/include/zed_interfaces/zed_interfaces/msg/detail/keypoint2_di__struct.h
+[1.664s] -- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/include/zed_interfaces/zed_interfaces/msg/detail/keypoint2_di__type_support.h
+[1.664s] -- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/include/zed_interfaces/zed_interfaces/msg/detail/keypoint3_d__functions.h
+[1.664s] -- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/include/zed_interfaces/zed_interfaces/msg/detail/keypoint3_d__struct.h
+[1.665s] -- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/include/zed_interfaces/zed_interfaces/msg/detail/keypoint3_d__type_support.h
+[1.665s] -- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/include/zed_interfaces/zed_interfaces/msg/detail/object__functions.h
+[1.665s] -- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/include/zed_interfaces/zed_interfaces/msg/detail/object__struct.h
+[1.666s] -- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/include/zed_interfaces/zed_interfaces/msg/detail/object__type_support.h
+[1.666s] -- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/include/zed_interfaces/zed_interfaces/msg/detail/objects_stamped__functions.h
+[1.666s] -- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/include/zed_interfaces/zed_interfaces/msg/detail/objects_stamped__struct.h
+[1.667s] -- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/include/zed_interfaces/zed_interfaces/msg/detail/objects_stamped__type_support.h
+[1.667s] -- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/include/zed_interfaces/zed_interfaces/msg/detail/plane_stamped__functions.h
+[1.667s] -- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/include/zed_interfaces/zed_interfaces/msg/detail/plane_stamped__struct.h
+[1.668s] -- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/include/zed_interfaces/zed_interfaces/msg/detail/plane_stamped__type_support.h
+[1.668s] -- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/include/zed_interfaces/zed_interfaces/msg/detail/pos_track_status__functions.h
+[1.668s] -- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/include/zed_interfaces/zed_interfaces/msg/detail/pos_track_status__struct.h
+[1.669s] -- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/include/zed_interfaces/zed_interfaces/msg/detail/pos_track_status__type_support.h
+[1.669s] -- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/include/zed_interfaces/zed_interfaces/msg/detail/skeleton2_d__functions.h
+[1.669s] -- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/include/zed_interfaces/zed_interfaces/msg/detail/skeleton2_d__struct.h
+[1.669s] -- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/include/zed_interfaces/zed_interfaces/msg/detail/skeleton2_d__type_support.h
+[1.670s] -- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/include/zed_interfaces/zed_interfaces/msg/detail/skeleton3_d__functions.h
+[1.670s] -- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/include/zed_interfaces/zed_interfaces/msg/detail/skeleton3_d__struct.h
+[1.670s] -- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/include/zed_interfaces/zed_interfaces/msg/detail/skeleton3_d__type_support.h
+[1.671s] -- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/include/zed_interfaces/zed_interfaces/msg/heartbeat.h
+[1.671s] -- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/include/zed_interfaces/zed_interfaces/msg/keypoint2_df.h
+[1.671s] -- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/include/zed_interfaces/zed_interfaces/msg/keypoint2_di.h
+[1.672s] -- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/include/zed_interfaces/zed_interfaces/msg/keypoint3_d.h
+[1.672s] -- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/include/zed_interfaces/zed_interfaces/msg/object.h
+[1.672s] -- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/include/zed_interfaces/zed_interfaces/msg/objects_stamped.h
+[1.673s] -- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/include/zed_interfaces/zed_interfaces/msg/plane_stamped.h
+[1.673s] -- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/include/zed_interfaces/zed_interfaces/msg/pos_track_status.h
+[1.673s] -- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/include/zed_interfaces/zed_interfaces/msg/rosidl_generator_c__visibility_control.h
+[1.674s] -- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/include/zed_interfaces/zed_interfaces/msg/skeleton2_d.h
+[1.674s] -- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/include/zed_interfaces/zed_interfaces/msg/skeleton3_d.h
+[1.674s] -- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/include/zed_interfaces/zed_interfaces/srv/detail/set_pose__functions.h
+[1.675s] -- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/include/zed_interfaces/zed_interfaces/srv/detail/set_pose__struct.h
+[1.675s] -- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/include/zed_interfaces/zed_interfaces/srv/detail/set_pose__type_support.h
+[1.675s] -- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/include/zed_interfaces/zed_interfaces/srv/detail/set_roi__functions.h
+[1.675s] -- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/include/zed_interfaces/zed_interfaces/srv/detail/set_roi__struct.h
+[1.676s] -- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/include/zed_interfaces/zed_interfaces/srv/detail/set_roi__type_support.h
+[1.676s] -- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/include/zed_interfaces/zed_interfaces/srv/detail/start_svo_rec__functions.h
+[1.677s] -- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/include/zed_interfaces/zed_interfaces/srv/detail/start_svo_rec__struct.h
+[1.677s] -- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/include/zed_interfaces/zed_interfaces/srv/detail/start_svo_rec__type_support.h
+[1.677s] -- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/include/zed_interfaces/zed_interfaces/srv/set_pose.h
+[1.678s] -- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/include/zed_interfaces/zed_interfaces/srv/set_roi.h
+[1.678s] -- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/include/zed_interfaces/zed_interfaces/srv/start_svo_rec.h
+[1.678s] -- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/share/zed_interfaces/environment/library_path.sh
+[1.679s] -- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/share/zed_interfaces/environment/library_path.dsv
+[1.681s] -- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/include/zed_interfaces/zed_interfaces/msg/detail/bounding_box2_df__rosidl_typesupport_fastrtps_c.h
+[1.681s] -- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/include/zed_interfaces/zed_interfaces/msg/detail/bounding_box2_di__rosidl_typesupport_fastrtps_c.h
+[1.682s] -- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/include/zed_interfaces/zed_interfaces/msg/detail/bounding_box3_d__rosidl_typesupport_fastrtps_c.h
+[1.682s] -- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/include/zed_interfaces/zed_interfaces/msg/detail/depth_info_stamped__rosidl_typesupport_fastrtps_c.h
+[1.682s] -- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/include/zed_interfaces/zed_interfaces/msg/detail/heartbeat__rosidl_typesupport_fastrtps_c.h
+[1.683s] -- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/include/zed_interfaces/zed_interfaces/msg/detail/keypoint2_df__rosidl_typesupport_fastrtps_c.h
+[1.683s] -- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/include/zed_interfaces/zed_interfaces/msg/detail/keypoint2_di__rosidl_typesupport_fastrtps_c.h
+[1.683s] -- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/include/zed_interfaces/zed_interfaces/msg/detail/keypoint3_d__rosidl_typesupport_fastrtps_c.h
+[1.683s] -- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/include/zed_interfaces/zed_interfaces/msg/detail/object__rosidl_typesupport_fastrtps_c.h
+[1.684s] -- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/include/zed_interfaces/zed_interfaces/msg/detail/objects_stamped__rosidl_typesupport_fastrtps_c.h
+[1.684s] -- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/include/zed_interfaces/zed_interfaces/msg/detail/plane_stamped__rosidl_typesupport_fastrtps_c.h
+[1.684s] -- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/include/zed_interfaces/zed_interfaces/msg/detail/pos_track_status__rosidl_typesupport_fastrtps_c.h
+[1.685s] -- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/include/zed_interfaces/zed_interfaces/msg/detail/skeleton2_d__rosidl_typesupport_fastrtps_c.h
+[1.685s] -- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/include/zed_interfaces/zed_interfaces/msg/detail/skeleton3_d__rosidl_typesupport_fastrtps_c.h
+[1.685s] -- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/include/zed_interfaces/zed_interfaces/msg/rosidl_typesupport_fastrtps_c__visibility_control.h
+[1.686s] -- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/include/zed_interfaces/zed_interfaces/srv/detail/set_pose__rosidl_typesupport_fastrtps_c.h
+[1.686s] -- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/include/zed_interfaces/zed_interfaces/srv/detail/set_roi__rosidl_typesupport_fastrtps_c.h
+[1.686s] -- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/include/zed_interfaces/zed_interfaces/srv/detail/start_svo_rec__rosidl_typesupport_fastrtps_c.h
+[1.688s] -- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/include/zed_interfaces/zed_interfaces/msg/bounding_box2_df.hpp
+[1.689s] -- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/include/zed_interfaces/zed_interfaces/msg/bounding_box2_di.hpp
+[1.689s] -- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/include/zed_interfaces/zed_interfaces/msg/bounding_box3_d.hpp
+[1.689s] -- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/include/zed_interfaces/zed_interfaces/msg/depth_info_stamped.hpp
+[1.689s] -- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/include/zed_interfaces/zed_interfaces/msg/detail/bounding_box2_df__builder.hpp
+[1.690s] -- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/include/zed_interfaces/zed_interfaces/msg/detail/bounding_box2_df__struct.hpp
+[1.690s] -- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/include/zed_interfaces/zed_interfaces/msg/detail/bounding_box2_df__traits.hpp
+[1.690s] -- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/include/zed_interfaces/zed_interfaces/msg/detail/bounding_box2_di__builder.hpp
+[1.691s] -- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/include/zed_interfaces/zed_interfaces/msg/detail/bounding_box2_di__struct.hpp
+[1.691s] -- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/include/zed_interfaces/zed_interfaces/msg/detail/bounding_box2_di__traits.hpp
+[1.691s] -- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/include/zed_interfaces/zed_interfaces/msg/detail/bounding_box3_d__builder.hpp
+[1.692s] -- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/include/zed_interfaces/zed_interfaces/msg/detail/bounding_box3_d__struct.hpp
+[1.692s] -- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/include/zed_interfaces/zed_interfaces/msg/detail/bounding_box3_d__traits.hpp
+[1.692s] -- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/include/zed_interfaces/zed_interfaces/msg/detail/depth_info_stamped__builder.hpp
+[1.693s] -- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/include/zed_interfaces/zed_interfaces/msg/detail/depth_info_stamped__struct.hpp
+[1.693s] -- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/include/zed_interfaces/zed_interfaces/msg/detail/depth_info_stamped__traits.hpp
+[1.693s] -- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/include/zed_interfaces/zed_interfaces/msg/detail/heartbeat__builder.hpp
+[1.694s] -- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/include/zed_interfaces/zed_interfaces/msg/detail/heartbeat__struct.hpp
+[1.694s] -- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/include/zed_interfaces/zed_interfaces/msg/detail/heartbeat__traits.hpp
+[1.694s] -- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/include/zed_interfaces/zed_interfaces/msg/detail/keypoint2_df__builder.hpp
+[1.694s] -- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/include/zed_interfaces/zed_interfaces/msg/detail/keypoint2_df__struct.hpp
+[1.695s] -- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/include/zed_interfaces/zed_interfaces/msg/detail/keypoint2_df__traits.hpp
+[1.695s] -- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/include/zed_interfaces/zed_interfaces/msg/detail/keypoint2_di__builder.hpp
+[1.695s] -- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/include/zed_interfaces/zed_interfaces/msg/detail/keypoint2_di__struct.hpp
+[1.696s] -- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/include/zed_interfaces/zed_interfaces/msg/detail/keypoint2_di__traits.hpp
+[1.696s] -- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/include/zed_interfaces/zed_interfaces/msg/detail/keypoint3_d__builder.hpp
+[1.696s] -- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/include/zed_interfaces/zed_interfaces/msg/detail/keypoint3_d__struct.hpp
+[1.697s] -- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/include/zed_interfaces/zed_interfaces/msg/detail/keypoint3_d__traits.hpp
+[1.697s] -- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/include/zed_interfaces/zed_interfaces/msg/detail/object__builder.hpp
+[1.697s] -- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/include/zed_interfaces/zed_interfaces/msg/detail/object__struct.hpp
+[1.698s] -- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/include/zed_interfaces/zed_interfaces/msg/detail/object__traits.hpp
+[1.698s] -- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/include/zed_interfaces/zed_interfaces/msg/detail/objects_stamped__builder.hpp
+[1.698s] -- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/include/zed_interfaces/zed_interfaces/msg/detail/objects_stamped__struct.hpp
+[1.699s] -- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/include/zed_interfaces/zed_interfaces/msg/detail/objects_stamped__traits.hpp
+[1.699s] -- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/include/zed_interfaces/zed_interfaces/msg/detail/plane_stamped__builder.hpp
+[1.699s] -- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/include/zed_interfaces/zed_interfaces/msg/detail/plane_stamped__struct.hpp
+[1.699s] -- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/include/zed_interfaces/zed_interfaces/msg/detail/plane_stamped__traits.hpp
+[1.700s] -- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/include/zed_interfaces/zed_interfaces/msg/detail/pos_track_status__builder.hpp
+[1.700s] -- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/include/zed_interfaces/zed_interfaces/msg/detail/pos_track_status__struct.hpp
+[1.700s] -- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/include/zed_interfaces/zed_interfaces/msg/detail/pos_track_status__traits.hpp
+[1.701s] -- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/include/zed_interfaces/zed_interfaces/msg/detail/skeleton2_d__builder.hpp
+[1.701s] -- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/include/zed_interfaces/zed_interfaces/msg/detail/skeleton2_d__struct.hpp
+[1.701s] -- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/include/zed_interfaces/zed_interfaces/msg/detail/skeleton2_d__traits.hpp
+[1.702s] -- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/include/zed_interfaces/zed_interfaces/msg/detail/skeleton3_d__builder.hpp
+[1.702s] -- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/include/zed_interfaces/zed_interfaces/msg/detail/skeleton3_d__struct.hpp
+[1.702s] -- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/include/zed_interfaces/zed_interfaces/msg/detail/skeleton3_d__traits.hpp
+[1.703s] -- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/include/zed_interfaces/zed_interfaces/msg/heartbeat.hpp
+[1.703s] -- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/include/zed_interfaces/zed_interfaces/msg/keypoint2_df.hpp
+[1.703s] -- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/include/zed_interfaces/zed_interfaces/msg/keypoint2_di.hpp
+[1.704s] -- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/include/zed_interfaces/zed_interfaces/msg/keypoint3_d.hpp
+[1.704s] -- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/include/zed_interfaces/zed_interfaces/msg/object.hpp
+[1.704s] -- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/include/zed_interfaces/zed_interfaces/msg/objects_stamped.hpp
+[1.705s] -- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/include/zed_interfaces/zed_interfaces/msg/plane_stamped.hpp
+[1.705s] -- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/include/zed_interfaces/zed_interfaces/msg/pos_track_status.hpp
+[1.705s] -- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/include/zed_interfaces/zed_interfaces/msg/skeleton2_d.hpp
+[1.705s] -- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/include/zed_interfaces/zed_interfaces/msg/skeleton3_d.hpp
+[1.706s] -- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/include/zed_interfaces/zed_interfaces/srv/detail/set_pose__builder.hpp
+[1.706s] -- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/include/zed_interfaces/zed_interfaces/srv/detail/set_pose__struct.hpp
+[1.706s] -- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/include/zed_interfaces/zed_interfaces/srv/detail/set_pose__traits.hpp
+[1.707s] -- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/include/zed_interfaces/zed_interfaces/srv/detail/set_roi__builder.hpp
+[1.707s] -- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/include/zed_interfaces/zed_interfaces/srv/detail/set_roi__struct.hpp
+[1.707s] -- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/include/zed_interfaces/zed_interfaces/srv/detail/set_roi__traits.hpp
+[1.708s] -- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/include/zed_interfaces/zed_interfaces/srv/detail/start_svo_rec__builder.hpp
+[1.708s] -- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/include/zed_interfaces/zed_interfaces/srv/detail/start_svo_rec__struct.hpp
+[1.708s] -- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/include/zed_interfaces/zed_interfaces/srv/detail/start_svo_rec__traits.hpp
+[1.708s] -- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/include/zed_interfaces/zed_interfaces/srv/set_pose.hpp
+[1.709s] -- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/include/zed_interfaces/zed_interfaces/srv/set_roi.hpp
+[1.709s] -- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/include/zed_interfaces/zed_interfaces/srv/start_svo_rec.hpp
+[1.711s] -- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/include/zed_interfaces/zed_interfaces/msg/detail/bounding_box2_df__rosidl_typesupport_fastrtps_cpp.hpp
+[1.711s] -- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/include/zed_interfaces/zed_interfaces/msg/detail/bounding_box2_di__rosidl_typesupport_fastrtps_cpp.hpp
+[1.712s] -- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/include/zed_interfaces/zed_interfaces/msg/detail/bounding_box3_d__rosidl_typesupport_fastrtps_cpp.hpp
+[1.712s] -- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/include/zed_interfaces/zed_interfaces/msg/detail/depth_info_stamped__rosidl_typesupport_fastrtps_cpp.hpp
+[1.712s] -- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/include/zed_interfaces/zed_interfaces/msg/detail/heartbeat__rosidl_typesupport_fastrtps_cpp.hpp
+[1.713s] -- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/include/zed_interfaces/zed_interfaces/msg/detail/keypoint2_df__rosidl_typesupport_fastrtps_cpp.hpp
+[1.713s] -- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/include/zed_interfaces/zed_interfaces/msg/detail/keypoint2_di__rosidl_typesupport_fastrtps_cpp.hpp
+[1.713s] -- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/include/zed_interfaces/zed_interfaces/msg/detail/keypoint3_d__rosidl_typesupport_fastrtps_cpp.hpp
+[1.714s] -- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/include/zed_interfaces/zed_interfaces/msg/detail/object__rosidl_typesupport_fastrtps_cpp.hpp
+[1.714s] -- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/include/zed_interfaces/zed_interfaces/msg/detail/objects_stamped__rosidl_typesupport_fastrtps_cpp.hpp
+[1.714s] -- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/include/zed_interfaces/zed_interfaces/msg/detail/plane_stamped__rosidl_typesupport_fastrtps_cpp.hpp
+[1.715s] -- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/include/zed_interfaces/zed_interfaces/msg/detail/pos_track_status__rosidl_typesupport_fastrtps_cpp.hpp
+[1.715s] -- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/include/zed_interfaces/zed_interfaces/msg/detail/skeleton2_d__rosidl_typesupport_fastrtps_cpp.hpp
+[1.715s] -- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/include/zed_interfaces/zed_interfaces/msg/detail/skeleton3_d__rosidl_typesupport_fastrtps_cpp.hpp
+[1.716s] -- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/include/zed_interfaces/zed_interfaces/msg/rosidl_typesupport_fastrtps_cpp__visibility_control.h
+[1.716s] -- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/include/zed_interfaces/zed_interfaces/srv/detail/set_pose__rosidl_typesupport_fastrtps_cpp.hpp
+[1.716s] -- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/include/zed_interfaces/zed_interfaces/srv/detail/set_roi__rosidl_typesupport_fastrtps_cpp.hpp
+[1.717s] -- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/include/zed_interfaces/zed_interfaces/srv/detail/start_svo_rec__rosidl_typesupport_fastrtps_cpp.hpp
+[1.718s] -- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/include/zed_interfaces/zed_interfaces/msg/detail/bounding_box2_df__rosidl_typesupport_introspection_c.h
+[1.718s] -- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/include/zed_interfaces/zed_interfaces/msg/detail/bounding_box2_di__rosidl_typesupport_introspection_c.h
+[1.719s] -- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/include/zed_interfaces/zed_interfaces/msg/detail/bounding_box3_d__rosidl_typesupport_introspection_c.h
+[1.719s] -- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/include/zed_interfaces/zed_interfaces/msg/detail/depth_info_stamped__rosidl_typesupport_introspection_c.h
+[1.719s] -- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/include/zed_interfaces/zed_interfaces/msg/detail/heartbeat__rosidl_typesupport_introspection_c.h
+[1.720s] -- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/include/zed_interfaces/zed_interfaces/msg/detail/keypoint2_df__rosidl_typesupport_introspection_c.h
+[1.720s] -- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/include/zed_interfaces/zed_interfaces/msg/detail/keypoint2_di__rosidl_typesupport_introspection_c.h
+[1.720s] -- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/include/zed_interfaces/zed_interfaces/msg/detail/keypoint3_d__rosidl_typesupport_introspection_c.h
+[1.720s] -- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/include/zed_interfaces/zed_interfaces/msg/detail/object__rosidl_typesupport_introspection_c.h
+[1.721s] -- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/include/zed_interfaces/zed_interfaces/msg/detail/objects_stamped__rosidl_typesupport_introspection_c.h
+[1.721s] -- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/include/zed_interfaces/zed_interfaces/msg/detail/plane_stamped__rosidl_typesupport_introspection_c.h
+[1.721s] -- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/include/zed_interfaces/zed_interfaces/msg/detail/pos_track_status__rosidl_typesupport_introspection_c.h
+[1.722s] -- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/include/zed_interfaces/zed_interfaces/msg/detail/skeleton2_d__rosidl_typesupport_introspection_c.h
+[1.722s] -- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/include/zed_interfaces/zed_interfaces/msg/detail/skeleton3_d__rosidl_typesupport_introspection_c.h
+[1.722s] -- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/include/zed_interfaces/zed_interfaces/msg/rosidl_typesupport_introspection_c__visibility_control.h
+[1.723s] -- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/include/zed_interfaces/zed_interfaces/srv/detail/set_pose__rosidl_typesupport_introspection_c.h
+[1.723s] -- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/include/zed_interfaces/zed_interfaces/srv/detail/set_roi__rosidl_typesupport_introspection_c.h
+[1.723s] -- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/include/zed_interfaces/zed_interfaces/srv/detail/start_svo_rec__rosidl_typesupport_introspection_c.h
+[1.725s] -- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/include/zed_interfaces/zed_interfaces/msg/detail/bounding_box2_df__rosidl_typesupport_introspection_cpp.hpp
+[1.725s] -- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/include/zed_interfaces/zed_interfaces/msg/detail/bounding_box2_di__rosidl_typesupport_introspection_cpp.hpp
+[1.725s] -- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/include/zed_interfaces/zed_interfaces/msg/detail/bounding_box3_d__rosidl_typesupport_introspection_cpp.hpp
+[1.726s] -- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/include/zed_interfaces/zed_interfaces/msg/detail/depth_info_stamped__rosidl_typesupport_introspection_cpp.hpp
+[1.726s] -- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/include/zed_interfaces/zed_interfaces/msg/detail/heartbeat__rosidl_typesupport_introspection_cpp.hpp
+[1.726s] -- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/include/zed_interfaces/zed_interfaces/msg/detail/keypoint2_df__rosidl_typesupport_introspection_cpp.hpp
+[1.726s] -- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/include/zed_interfaces/zed_interfaces/msg/detail/keypoint2_di__rosidl_typesupport_introspection_cpp.hpp
+[1.727s] -- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/include/zed_interfaces/zed_interfaces/msg/detail/keypoint3_d__rosidl_typesupport_introspection_cpp.hpp
+[1.727s] -- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/include/zed_interfaces/zed_interfaces/msg/detail/object__rosidl_typesupport_introspection_cpp.hpp
+[1.727s] -- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/include/zed_interfaces/zed_interfaces/msg/detail/objects_stamped__rosidl_typesupport_introspection_cpp.hpp
+[1.728s] -- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/include/zed_interfaces/zed_interfaces/msg/detail/plane_stamped__rosidl_typesupport_introspection_cpp.hpp
+[1.728s] -- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/include/zed_interfaces/zed_interfaces/msg/detail/pos_track_status__rosidl_typesupport_introspection_cpp.hpp
+[1.728s] -- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/include/zed_interfaces/zed_interfaces/msg/detail/skeleton2_d__rosidl_typesupport_introspection_cpp.hpp
+[1.729s] -- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/include/zed_interfaces/zed_interfaces/msg/detail/skeleton3_d__rosidl_typesupport_introspection_cpp.hpp
+[1.729s] -- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/include/zed_interfaces/zed_interfaces/srv/detail/set_pose__rosidl_typesupport_introspection_cpp.hpp
+[1.729s] -- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/include/zed_interfaces/zed_interfaces/srv/detail/set_roi__rosidl_typesupport_introspection_cpp.hpp
+[1.730s] -- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/include/zed_interfaces/zed_interfaces/srv/detail/start_svo_rec__rosidl_typesupport_introspection_cpp.hpp
+[1.730s] -- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/share/zed_interfaces/environment/pythonpath.sh
+[1.731s] -- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/share/zed_interfaces/environment/pythonpath.dsv
+[1.731s] -- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/lib/python3.9/site-packages/zed_interfaces-4.0.0-py3.9.egg-info/PKG-INFO
+[1.732s] -- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/lib/python3.9/site-packages/zed_interfaces-4.0.0-py3.9.egg-info/SOURCES.txt
+[1.732s] -- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/lib/python3.9/site-packages/zed_interfaces-4.0.0-py3.9.egg-info/dependency_links.txt
+[1.733s] -- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/lib/python3.9/site-packages/zed_interfaces-4.0.0-py3.9.egg-info/top_level.txt
+[1.736s] -- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/lib/python3.9/site-packages/zed_interfaces/__init__.py
+[1.736s] -- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/lib/python3.9/site-packages/zed_interfaces/_zed_interfaces_s.ep.rosidl_typesupport_c.c
+[1.736s] -- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/lib/python3.9/site-packages/zed_interfaces/_zed_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c
+[1.737s] -- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/lib/python3.9/site-packages/zed_interfaces/_zed_interfaces_s.ep.rosidl_typesupport_introspection_c.c
+[1.737s] -- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/lib/python3.9/site-packages/zed_interfaces/libzed_interfaces__rosidl_generator_py.so
+[1.737s] -- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/lib/python3.9/site-packages/zed_interfaces/msg/__init__.py
+[1.737s] -- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/lib/python3.9/site-packages/zed_interfaces/msg/_bounding_box2_df.py
+[1.738s] -- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/lib/python3.9/site-packages/zed_interfaces/msg/_bounding_box2_df_s.c
+[1.738s] -- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/lib/python3.9/site-packages/zed_interfaces/msg/_bounding_box2_di.py
+[1.738s] -- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/lib/python3.9/site-packages/zed_interfaces/msg/_bounding_box2_di_s.c
+[1.739s] -- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/lib/python3.9/site-packages/zed_interfaces/msg/_bounding_box3_d.py
+[1.739s] -- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/lib/python3.9/site-packages/zed_interfaces/msg/_bounding_box3_d_s.c
+[1.739s] -- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/lib/python3.9/site-packages/zed_interfaces/msg/_depth_info_stamped.py
+[1.740s] -- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/lib/python3.9/site-packages/zed_interfaces/msg/_depth_info_stamped_s.c
+[1.740s] -- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/lib/python3.9/site-packages/zed_interfaces/msg/_heartbeat.py
+[1.740s] -- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/lib/python3.9/site-packages/zed_interfaces/msg/_heartbeat_s.c
+[1.741s] -- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/lib/python3.9/site-packages/zed_interfaces/msg/_keypoint2_df.py
+[1.741s] -- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/lib/python3.9/site-packages/zed_interfaces/msg/_keypoint2_df_s.c
+[1.741s] -- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/lib/python3.9/site-packages/zed_interfaces/msg/_keypoint2_di.py
+[1.741s] -- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/lib/python3.9/site-packages/zed_interfaces/msg/_keypoint2_di_s.c
+[1.742s] -- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/lib/python3.9/site-packages/zed_interfaces/msg/_keypoint3_d.py
+[1.742s] -- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/lib/python3.9/site-packages/zed_interfaces/msg/_keypoint3_d_s.c
+[1.742s] -- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/lib/python3.9/site-packages/zed_interfaces/msg/_object.py
+[1.743s] -- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/lib/python3.9/site-packages/zed_interfaces/msg/_object_s.c
+[1.743s] -- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/lib/python3.9/site-packages/zed_interfaces/msg/_objects_stamped.py
+[1.743s] -- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/lib/python3.9/site-packages/zed_interfaces/msg/_objects_stamped_s.c
+[1.744s] -- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/lib/python3.9/site-packages/zed_interfaces/msg/_plane_stamped.py
+[1.744s] -- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/lib/python3.9/site-packages/zed_interfaces/msg/_plane_stamped_s.c
+[1.744s] -- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/lib/python3.9/site-packages/zed_interfaces/msg/_pos_track_status.py
+[1.745s] -- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/lib/python3.9/site-packages/zed_interfaces/msg/_pos_track_status_s.c
+[1.745s] -- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/lib/python3.9/site-packages/zed_interfaces/msg/_skeleton2_d.py
+[1.745s] -- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/lib/python3.9/site-packages/zed_interfaces/msg/_skeleton2_d_s.c
+[1.745s] -- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/lib/python3.9/site-packages/zed_interfaces/msg/_skeleton3_d.py
+[1.746s] -- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/lib/python3.9/site-packages/zed_interfaces/msg/_skeleton3_d_s.c
+[1.746s] -- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/lib/python3.9/site-packages/zed_interfaces/srv/__init__.py
+[1.746s] -- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/lib/python3.9/site-packages/zed_interfaces/srv/_set_pose.py
+[1.747s] -- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/lib/python3.9/site-packages/zed_interfaces/srv/_set_pose_s.c
+[1.747s] -- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/lib/python3.9/site-packages/zed_interfaces/srv/_set_roi.py
+[1.747s] -- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/lib/python3.9/site-packages/zed_interfaces/srv/_set_roi_s.c
+[1.748s] -- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/lib/python3.9/site-packages/zed_interfaces/srv/_start_svo_rec.py
+[1.748s] -- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/lib/python3.9/site-packages/zed_interfaces/srv/_start_svo_rec_s.c
+[1.748s] -- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/lib/python3.9/site-packages/zed_interfaces/zed_interfaces_s__rosidl_typesupport_c.cpython-38-aarch64-linux-gnu.so
+[1.749s] -- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/lib/python3.9/site-packages/zed_interfaces/zed_interfaces_s__rosidl_typesupport_fastrtps_c.cpython-38-aarch64-linux-gnu.so
+[1.749s] -- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/lib/python3.9/site-packages/zed_interfaces/zed_interfaces_s__rosidl_typesupport_introspection_c.cpython-38-aarch64-linux-gnu.so
+[1.750s] -- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/lib/python3.9/site-packages/zed_interfaces/zed_interfaces_s__rosidl_typesupport_fastrtps_c.cpython-38-aarch64-linux-gnu.so
+[1.750s] -- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/lib/python3.9/site-packages/zed_interfaces/zed_interfaces_s__rosidl_typesupport_introspection_c.cpython-38-aarch64-linux-gnu.so
+[1.751s] -- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/lib/python3.9/site-packages/zed_interfaces/zed_interfaces_s__rosidl_typesupport_c.cpython-38-aarch64-linux-gnu.so
+[1.751s] -- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/share/zed_interfaces/msg/Object.idl
+[1.752s] -- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/share/zed_interfaces/msg/ObjectsStamped.idl
+[1.752s] -- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/share/zed_interfaces/msg/Keypoint2Di.idl
+[1.753s] -- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/share/zed_interfaces/msg/Keypoint2Df.idl
+[1.753s] -- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/share/zed_interfaces/msg/Keypoint3D.idl
+[1.754s] -- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/share/zed_interfaces/msg/BoundingBox2Di.idl
+[1.754s] -- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/share/zed_interfaces/msg/BoundingBox2Df.idl
+[1.755s] -- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/share/zed_interfaces/msg/BoundingBox3D.idl
+[1.755s] -- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/share/zed_interfaces/msg/Skeleton2D.idl
+[1.755s] -- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/share/zed_interfaces/msg/Skeleton3D.idl
+[1.756s] -- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/share/zed_interfaces/msg/DepthInfoStamped.idl
+[1.756s] -- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/share/zed_interfaces/msg/PlaneStamped.idl
+[1.757s] -- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/share/zed_interfaces/msg/PosTrackStatus.idl
+[1.757s] -- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/share/zed_interfaces/msg/Heartbeat.idl
+[1.758s] -- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/share/zed_interfaces/srv/SetPose.idl
+[1.758s] -- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/share/zed_interfaces/srv/StartSvoRec.idl
+[1.759s] -- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/share/zed_interfaces/srv/SetROI.idl
+[1.759s] -- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/share/zed_interfaces/msg/Object.msg
+[1.760s] -- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/share/zed_interfaces/msg/ObjectsStamped.msg
+[1.760s] -- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/share/zed_interfaces/msg/Keypoint2Di.msg
+[1.760s] -- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/share/zed_interfaces/msg/Keypoint2Df.msg
+[1.761s] -- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/share/zed_interfaces/msg/Keypoint3D.msg
+[1.761s] -- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/share/zed_interfaces/msg/BoundingBox2Di.msg
+[1.762s] -- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/share/zed_interfaces/msg/BoundingBox2Df.msg
+[1.762s] -- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/share/zed_interfaces/msg/BoundingBox3D.msg
+[1.763s] -- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/share/zed_interfaces/msg/Skeleton2D.msg
+[1.763s] -- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/share/zed_interfaces/msg/Skeleton3D.msg
+[1.764s] -- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/share/zed_interfaces/msg/DepthInfoStamped.msg
+[1.764s] -- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/share/zed_interfaces/msg/PlaneStamped.msg
+[1.764s] -- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/share/zed_interfaces/msg/PosTrackStatus.msg
+[1.765s] -- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/share/zed_interfaces/msg/Heartbeat.msg
+[1.765s] -- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/share/zed_interfaces/srv/SetPose.srv
+[1.766s] -- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/share/zed_interfaces/srv/SetPose_Request.msg
+[1.766s] -- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/share/zed_interfaces/srv/SetPose_Response.msg
+[1.767s] -- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/share/zed_interfaces/srv/StartSvoRec.srv
+[1.767s] -- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/share/zed_interfaces/srv/StartSvoRec_Request.msg
+[1.768s] -- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/share/zed_interfaces/srv/StartSvoRec_Response.msg
+[1.768s] -- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/share/zed_interfaces/srv/SetROI.srv
+[1.768s] -- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/share/zed_interfaces/srv/SetROI_Request.msg
+[1.769s] -- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/share/zed_interfaces/srv/SetROI_Response.msg
+[1.770s] -- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/share/zed_interfaces/meshes/zed.stl
+[1.770s] -- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/share/zed_interfaces/meshes/zed2.stl
+[1.770s] -- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/share/zed_interfaces/meshes/zed2i.stl
+[1.771s] -- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/share/zed_interfaces/meshes/zedm.stl
+[1.771s] -- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/share/zed_interfaces/meshes/zedx.stl
+[1.771s] -- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/share/zed_interfaces/meshes/zedxm.stl
+[1.772s] -- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/share/ament_index/resource_index/package_run_dependencies/zed_interfaces
+[1.772s] -- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/share/ament_index/resource_index/parent_prefix_path/zed_interfaces
+[1.773s] -- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/share/zed_interfaces/environment/ament_prefix_path.sh
+[1.773s] -- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/share/zed_interfaces/environment/ament_prefix_path.dsv
+[1.774s] -- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/share/zed_interfaces/environment/path.sh
+[1.774s] -- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/share/zed_interfaces/environment/path.dsv
+[1.775s] -- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/share/zed_interfaces/local_setup.bash
+[1.775s] -- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/share/zed_interfaces/local_setup.sh
+[1.775s] -- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/share/zed_interfaces/local_setup.zsh
+[1.776s] -- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/share/zed_interfaces/local_setup.dsv
+[1.776s] -- Symlinking: /home/bur/ros2_ws/install/zed_interfaces/share/zed_interfaces/package.dsv
+[1.797s] -- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/share/ament_index/resource_index/packages/zed_interfaces
+[1.797s] -- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/share/zed_interfaces/cmake/rosidl_cmake-extras.cmake
+[1.797s] -- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/share/zed_interfaces/cmake/ament_cmake_export_dependencies-extras.cmake
+[1.798s] -- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/share/zed_interfaces/cmake/ament_cmake_export_include_directories-extras.cmake
+[1.798s] -- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/share/zed_interfaces/cmake/ament_cmake_export_libraries-extras.cmake
+[1.799s] -- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/share/zed_interfaces/cmake/ament_cmake_export_targets-extras.cmake
+[1.799s] -- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/share/zed_interfaces/cmake/rosidl_cmake_export_typesupport_targets-extras.cmake
+[1.799s] -- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/share/zed_interfaces/cmake/rosidl_cmake_export_typesupport_libraries-extras.cmake
+[1.800s] -- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/share/zed_interfaces/cmake/zed_interfacesConfig.cmake
+[1.800s] -- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/share/zed_interfaces/cmake/zed_interfacesConfig-version.cmake
+[1.801s] -- Up-to-date symlink: /home/bur/ros2_ws/install/zed_interfaces/share/zed_interfaces/package.xml
+[1.801s] -- Up-to-date: /home/bur/ros2_ws/install/zed_interfaces/lib/libzed_interfaces__rosidl_generator_c.so
+[1.802s] -- Up-to-date: /home/bur/ros2_ws/install/zed_interfaces/lib/libzed_interfaces__rosidl_typesupport_fastrtps_c.so
+[1.802s] -- Up-to-date: /home/bur/ros2_ws/install/zed_interfaces/lib/libzed_interfaces__rosidl_typesupport_fastrtps_cpp.so
+[1.803s] -- Up-to-date: /home/bur/ros2_ws/install/zed_interfaces/lib/libzed_interfaces__rosidl_typesupport_introspection_c.so
+[1.804s] -- Up-to-date: /home/bur/ros2_ws/install/zed_interfaces/lib/libzed_interfaces__rosidl_typesupport_c.so
+[1.805s] -- Up-to-date: /home/bur/ros2_ws/install/zed_interfaces/lib/libzed_interfaces__rosidl_typesupport_introspection_cpp.so
+[1.805s] -- Up-to-date: /home/bur/ros2_ws/install/zed_interfaces/lib/libzed_interfaces__rosidl_typesupport_cpp.so
+[1.878s] Listing '/home/bur/ros2_ws/install/zed_interfaces/lib/python3.9/site-packages/zed_interfaces'...
+[1.879s] Listing '/home/bur/ros2_ws/install/zed_interfaces/lib/python3.9/site-packages/zed_interfaces/msg'...
+[1.879s] Listing '/home/bur/ros2_ws/install/zed_interfaces/lib/python3.9/site-packages/zed_interfaces/srv'...
+[1.891s] -- Up-to-date: /home/bur/ros2_ws/install/zed_interfaces/lib/libzed_interfaces__rosidl_generator_py.so
+[1.892s] -- Up-to-date: /home/bur/ros2_ws/install/zed_interfaces/share/zed_interfaces/cmake/export_zed_interfaces__rosidl_generator_cExport.cmake
+[1.892s] -- Up-to-date: /home/bur/ros2_ws/install/zed_interfaces/share/zed_interfaces/cmake/export_zed_interfaces__rosidl_generator_cExport-release.cmake
+[1.892s] -- Up-to-date: /home/bur/ros2_ws/install/zed_interfaces/share/zed_interfaces/cmake/export_zed_interfaces__rosidl_typesupport_fastrtps_cExport.cmake
+[1.892s] -- Up-to-date: /home/bur/ros2_ws/install/zed_interfaces/share/zed_interfaces/cmake/export_zed_interfaces__rosidl_typesupport_fastrtps_cExport-release.cmake
+[1.893s] -- Up-to-date: /home/bur/ros2_ws/install/zed_interfaces/share/zed_interfaces/cmake/export_zed_interfaces__rosidl_generator_cppExport.cmake
+[1.893s] -- Up-to-date: /home/bur/ros2_ws/install/zed_interfaces/share/zed_interfaces/cmake/export_zed_interfaces__rosidl_typesupport_fastrtps_cppExport.cmake
+[1.893s] -- Up-to-date: /home/bur/ros2_ws/install/zed_interfaces/share/zed_interfaces/cmake/export_zed_interfaces__rosidl_typesupport_fastrtps_cppExport-release.cmake
+[1.893s] -- Up-to-date: /home/bur/ros2_ws/install/zed_interfaces/share/zed_interfaces/cmake/zed_interfaces__rosidl_typesupport_introspection_cExport.cmake
+[1.894s] -- Up-to-date: /home/bur/ros2_ws/install/zed_interfaces/share/zed_interfaces/cmake/zed_interfaces__rosidl_typesupport_introspection_cExport-release.cmake
+[1.894s] -- Up-to-date: /home/bur/ros2_ws/install/zed_interfaces/share/zed_interfaces/cmake/zed_interfaces__rosidl_typesupport_cExport.cmake
+[1.894s] -- Up-to-date: /home/bur/ros2_ws/install/zed_interfaces/share/zed_interfaces/cmake/zed_interfaces__rosidl_typesupport_cExport-release.cmake
+[1.894s] -- Up-to-date: /home/bur/ros2_ws/install/zed_interfaces/share/zed_interfaces/cmake/zed_interfaces__rosidl_typesupport_introspection_cppExport.cmake
+[1.895s] -- Up-to-date: /home/bur/ros2_ws/install/zed_interfaces/share/zed_interfaces/cmake/zed_interfaces__rosidl_typesupport_introspection_cppExport-release.cmake
+[1.895s] -- Up-to-date: /home/bur/ros2_ws/install/zed_interfaces/share/zed_interfaces/cmake/zed_interfaces__rosidl_typesupport_cppExport.cmake
+[1.895s] -- Up-to-date: /home/bur/ros2_ws/install/zed_interfaces/share/zed_interfaces/cmake/zed_interfaces__rosidl_typesupport_cppExport-release.cmake
+[1.895s] -- Up-to-date: /home/bur/ros2_ws/install/zed_interfaces/share/zed_interfaces/cmake/export_zed_interfaces__rosidl_generator_pyExport.cmake
+[1.895s] -- Up-to-date: /home/bur/ros2_ws/install/zed_interfaces/share/zed_interfaces/cmake/export_zed_interfaces__rosidl_generator_pyExport-release.cmake
+[1.901s] Invoked command in '/home/bur/ros2_ws/build/zed_interfaces' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/bur/ros2_ws/build/zed_interfaces

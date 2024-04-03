@@ -1,0 +1,139 @@
+[0.064s] Invoking command in '/home/bur/ros2_ws/build/rviz_plugin_zed_od': CMAKE_PREFIX_PATH=/home/bur/ros2_ws/install/zed_interfaces:/home/bur/ros2_ws/install/zed_ros2:/home/bur/ros2_ws/install/zed_wrapper:/home/bur/ros2_ws/install/zed_components:/opt/ros/humble LD_LIBRARY_PATH=/home/bur/ros2_ws/install/zed_interfaces/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/aarch64-linux-gnu:/opt/ros/humble/lib:/home/bur/ros2_ws/install/zed_components/lib:/usr/local/cuda-11.4/lib64 /usr/bin/cmake /home/bur/ros2_ws/src/zed-ros2-examples/rviz-plugin-zed-od -DCMAKE_BUILD_TYPE=Release -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/bur/ros2_ws/install/rviz_plugin_zed_od
+[0.319s] -- The C compiler identification is GNU 9.4.0
+[0.385s] -- The CXX compiler identification is GNU 9.4.0
+[0.397s] -- Check for working C compiler: /usr/bin/cc
+[0.606s] -- Check for working C compiler: /usr/bin/cc -- works
+[0.607s] -- Detecting C compiler ABI info
+[0.840s] -- Detecting C compiler ABI info - done
+[0.864s] -- Detecting C compile features
+[0.864s] -- Detecting C compile features - done
+[0.871s] -- Check for working CXX compiler: /usr/bin/c++
+[1.077s] -- Check for working CXX compiler: /usr/bin/c++ -- works
+[1.079s] -- Detecting CXX compiler ABI info
+[1.275s] -- Detecting CXX compiler ABI info - done
+[1.296s] -- Detecting CXX compile features
+[1.296s] -- Detecting CXX compile features - done
+[1.298s] -- Enabling tests requiring a display
+[1.301s] -- Found ament_cmake_auto: 1.3.6 (/opt/ros/humble/share/ament_cmake_auto/cmake)
+[1.735s] -- Found Python3: /usr/bin/python3.9 (found version "3.9.5") found components: Interpreter 
+[1.889s] -- Override CMake install command with custom implementation using symlinks instead of copying resources
+[2.233s] -- Setting OGRE_DIR to: '/opt/ros/humble/share/rviz_ogre_vendor/cmake/../../../opt/rviz_ogre_vendor/lib/OGRE/cmake'
+[2.238s] -- Found OGRE
+[2.239s] --   static     : OFF
+[2.239s] --   components : HLMS;MeshLodGenerator;Overlay;Paging;Property;RTShaderSystem;Terrain;Volume
+[2.239s] --   plugins    : Plugin_BSPSceneManager;Plugin_OctreeSceneManager;Plugin_PCZSceneManager;Plugin_ParticleFX;RenderSystem_GL;RenderSystem_GL3Plus;Codec_STBI
+[2.239s] --   media      : /opt/ros/humble/opt/rviz_ogre_vendor/share/OGRE/Media
+[2.240s] -- OGRE_LIBRARIES: OgreHLMS;OgreMeshLodGenerator;OgreOverlay;OgrePaging;OgreProperty;OgreRTShaderSystem;OgreTerrain;OgreVolume;OgreMain
+[2.240s] -- OGRE_LIBRARY_DIRS: /opt/ros/humble/opt/rviz_ogre_vendor/lib
+[2.240s] -- OGRE_PLUGINS: Plugin_BSPSceneManager;Plugin_OctreeSceneManager;Plugin_PCZSceneManager;Plugin_ParticleFX;RenderSystem_GL;RenderSystem_GL3Plus;Codec_STBI
+[2.240s] -- OGRE_PLUGIN_DIR: /opt/ros/humble/opt/rviz_ogre_vendor/lib/OGRE
+[2.241s] -- rviz_ogre_vendor::OgreOverlay for IMPORTED_LOCATION_RELEASE: /opt/ros/humble/opt/rviz_ogre_vendor/lib/libOgreOverlay.so
+[2.241s] -- rviz_ogre_vendor::OgreOverlay for IMPORTED_LOCATION_DEBUG: /opt/ros/humble/opt/rviz_ogre_vendor/lib/libOgreOverlay.so
+[2.241s] -- rviz_ogre_vendor::OgreMain for IMPORTED_LOCATION_RELEASE: /opt/ros/humble/opt/rviz_ogre_vendor/lib/libOgreMain.so
+[2.241s] -- rviz_ogre_vendor::OgreMain for IMPORTED_LOCATION_DEBUG: /opt/ros/humble/opt/rviz_ogre_vendor/lib/libOgreMain.so
+[2.315s] -- Found ZLIB: /usr/lib/aarch64-linux-gnu/libz.so (found version "1.2.11") 
+[2.329s] -- Found OpenGL: /usr/lib/aarch64-linux-gnu/libOpenGL.so   
+[2.663s] -- Found X11: /usr/include   
+[2.665s] -- Looking for XOpenDisplay in /usr/lib/aarch64-linux-gnu/libX11.so;/usr/lib/aarch64-linux-gnu/libXext.so
+[2.928s] -- Looking for XOpenDisplay in /usr/lib/aarch64-linux-gnu/libX11.so;/usr/lib/aarch64-linux-gnu/libXext.so - found
+[2.928s] -- Looking for gethostbyname
+[3.314s] -- Looking for gethostbyname - found
+[3.314s] -- Looking for connect
+[3.741s] -- Looking for connect - found
+[3.743s] -- Looking for remove
+[4.219s] -- Looking for remove - found
+[4.222s] -- Looking for shmat
+[4.648s] -- Looking for shmat - found
+[4.648s] -- Looking for IceConnectionNumber in ICE
+[5.141s] -- Looking for IceConnectionNumber in ICE - found
+[5.149s] -- rviz_ogre_vendor::RenderSystem_GL for IMPORTED_LOCATION_RELEASE: _render_system_gl_static_library_abs-NOTFOUND
+[5.158s] -- rviz_ogre_vendor::RenderSystem_GL for IMPORTED_LOCATION_DEBUG: _render_system_gl_static_library_abs-NOTFOUND
+[5.357s] -- Found rosidl_generator_c: 3.1.5 (/opt/ros/humble/share/rosidl_generator_c/cmake)
+[5.395s] -- Found rosidl_adapter: 3.1.5 (/opt/ros/humble/share/rosidl_adapter/cmake)
+[5.440s] -- Found rosidl_generator_cpp: 3.1.5 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)
+[5.528s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[5.725s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[7.014s] -- Found rviz_common: 11.2.9 (/opt/ros/humble/share/rviz_common/cmake)
+[7.097s] -- library: libassimp.so.5
+[7.731s] -- library: /usr/lib/aarch64-linux-gnu/libcurl.so
+[8.287s] -- Found rmw_implementation_cmake: 6.1.1 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)
+[8.303s] -- Found rmw_fastrtps_cpp: 6.2.5 (/opt/ros/humble/share/rmw_fastrtps_cpp/cmake)
+[8.522s] -- Found TinyXML2 via Config file: TinyXML2_DIR-NOTFOUND
+[8.855s] -- Found OpenSSL: /usr/lib/aarch64-linux-gnu/libcrypto.so (found version "1.1.1f")  
+[8.866s] -- Found TinyXML2 via Config file: TinyXML2_DIR-NOTFOUND
+[8.911s] -- Found FastRTPS: /opt/ros/humble/include  
+[8.940s] -- Found TinyXML2 via Config file: TinyXML2_DIR-NOTFOUND
+[8.968s] -- Found TinyXML2 via Config file: TinyXML2_DIR-NOTFOUND
+[9.004s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[9.032s] -- Looking for pthread.h
+[9.296s] -- Looking for pthread.h - found
+[9.296s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD
+[9.571s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Failed
+[9.572s] -- Looking for pthread_create in pthreads
+[9.762s] -- Looking for pthread_create in pthreads - not found
+[9.763s] -- Looking for pthread_create in pthread
+[10.051s] -- Looking for pthread_create in pthread - found
+[10.054s] -- Found Threads: TRUE  
+[10.730s] -- Found Eigen3: TRUE (found version "3.3.7") 
+[10.731s] -- Ensuring Eigen3 include directory is part of orocos-kdl CMake target
+[11.946s] -- Found ament_lint_auto: 0.12.9 (/opt/ros/humble/share/ament_lint_auto/cmake)
+[12.043s] -- Added test 'copyright' to check source files copyright and LICENSE
+[12.048s] -- Added test 'cppcheck' to perform static code analysis on C / C++ code
+[12.053s] -- Configured cppcheck include dirs: /home/bur/ros2_ws/src/zed-ros2-examples/rviz-plugin-zed-od/src/include;/home/bur/ros2_ws/src/zed-ros2-examples/rviz-plugin-zed-od/src/plugin/include;$<BUILD_INTERFACE:/home/bur/ros2_ws/src/zed-ros2-examples/rviz-plugin-zed-od/include>
+[12.053s] -- Configured cppcheck exclude dirs and/or files: 
+[12.057s] -- Added test 'cpplint' to check C / C++ code against the Google style
+[12.058s] -- Configured cpplint exclude dirs and/or files: 
+[12.061s] -- Added test 'lint_cmake' to check CMake code style
+[12.065s] -- Added test 'uncrustify' to check C / C++ code style
+[12.065s] -- Configured uncrustify additional arguments: 
+[12.068s] -- Added test 'xmllint' to check XML markup files
+[12.088s] -- Configuring done
+[12.245s] -- Generating done
+[12.251s] -- Build files have been written to: /home/bur/ros2_ws/build/rviz_plugin_zed_od
+[12.305s] Invoked command in '/home/bur/ros2_ws/build/rviz_plugin_zed_od' returned '0': CMAKE_PREFIX_PATH=/home/bur/ros2_ws/install/zed_interfaces:/home/bur/ros2_ws/install/zed_ros2:/home/bur/ros2_ws/install/zed_wrapper:/home/bur/ros2_ws/install/zed_components:/opt/ros/humble LD_LIBRARY_PATH=/home/bur/ros2_ws/install/zed_interfaces/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/aarch64-linux-gnu:/opt/ros/humble/lib:/home/bur/ros2_ws/install/zed_components/lib:/usr/local/cuda-11.4/lib64 /usr/bin/cmake /home/bur/ros2_ws/src/zed-ros2-examples/rviz-plugin-zed-od -DCMAKE_BUILD_TYPE=Release -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/bur/ros2_ws/install/rviz_plugin_zed_od
+[12.307s] Invoking command in '/home/bur/ros2_ws/build/rviz_plugin_zed_od': CMAKE_PREFIX_PATH=/home/bur/ros2_ws/install/zed_interfaces:/home/bur/ros2_ws/install/zed_ros2:/home/bur/ros2_ws/install/zed_wrapper:/home/bur/ros2_ws/install/zed_components:/opt/ros/humble LD_LIBRARY_PATH=/home/bur/ros2_ws/install/zed_interfaces/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/aarch64-linux-gnu:/opt/ros/humble/lib:/home/bur/ros2_ws/install/zed_components/lib:/usr/local/cuda-11.4/lib64 /usr/bin/cmake --build /home/bur/ros2_ws/build/rviz_plugin_zed_od -- -j6 -l6
+[14.079s] [35m[1mScanning dependencies of target rviz_plugin_zed_od_autogen[0m
+[14.080s] [ 20%] [34m[1mAutomatic MOC and UIC for target rviz_plugin_zed_od[0m
+[14.219s] [ 20%] Built target rviz_plugin_zed_od_autogen
+[14.249s] [35m[1mScanning dependencies of target rviz_plugin_zed_od[0m
+[14.729s] [ 40%] [32mBuilding CXX object CMakeFiles/rviz_plugin_zed_od.dir/rviz_plugin_zed_od_autogen/mocs_compilation.cpp.o[0m
+[14.745s] [ 80%] [32mBuilding CXX object CMakeFiles/rviz_plugin_zed_od.dir/src/plugin/src/zed_od_display.cpp.o[0m
+[14.745s] [ 80%] [32mBuilding CXX object CMakeFiles/rviz_plugin_zed_od.dir/src/plugin/src/zed_od_info.cpp.o[0m
+[81.199s] [100%] [32m[1mLinking CXX shared library librviz_plugin_zed_od.so[0m
+[83.157s] [100%] Built target rviz_plugin_zed_od
+[83.193s] Invoked command in '/home/bur/ros2_ws/build/rviz_plugin_zed_od' returned '0': CMAKE_PREFIX_PATH=/home/bur/ros2_ws/install/zed_interfaces:/home/bur/ros2_ws/install/zed_ros2:/home/bur/ros2_ws/install/zed_wrapper:/home/bur/ros2_ws/install/zed_components:/opt/ros/humble LD_LIBRARY_PATH=/home/bur/ros2_ws/install/zed_interfaces/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/aarch64-linux-gnu:/opt/ros/humble/lib:/home/bur/ros2_ws/install/zed_components/lib:/usr/local/cuda-11.4/lib64 /usr/bin/cmake --build /home/bur/ros2_ws/build/rviz_plugin_zed_od -- -j6 -l6
+[83.263s] Invoking command in '/home/bur/ros2_ws/build/rviz_plugin_zed_od': CMAKE_PREFIX_PATH=/home/bur/ros2_ws/install/zed_interfaces:/home/bur/ros2_ws/install/zed_ros2:/home/bur/ros2_ws/install/zed_wrapper:/home/bur/ros2_ws/install/zed_components:/opt/ros/humble LD_LIBRARY_PATH=/home/bur/ros2_ws/install/zed_interfaces/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/aarch64-linux-gnu:/opt/ros/humble/lib:/home/bur/ros2_ws/install/zed_components/lib:/usr/local/cuda-11.4/lib64 /usr/bin/cmake --install /home/bur/ros2_ws/build/rviz_plugin_zed_od
+[83.288s] -- Install configuration: "Release"
+[83.289s] -- Execute custom install script
+[83.290s] -- Symlinking: /home/bur/ros2_ws/install/rviz_plugin_zed_od/share/rviz_plugin_zed_od//plugins_description.xml
+[83.322s] -- Symlinking: /home/bur/ros2_ws/install/rviz_plugin_zed_od/share/rviz_plugin_zed_od/environment/library_path.sh
+[83.353s] -- Symlinking: /home/bur/ros2_ws/install/rviz_plugin_zed_od/share/rviz_plugin_zed_od/environment/library_path.dsv
+[83.377s] -- Symlinking: /home/bur/ros2_ws/install/rviz_plugin_zed_od/include/rviz_plugin_zed_od//visibility_control.hpp
+[83.399s] -- Symlinking: /home/bur/ros2_ws/install/rviz_plugin_zed_od/include/rviz_plugin_zed_od//zed_body_parts.hpp
+[83.419s] -- Symlinking: /home/bur/ros2_ws/install/rviz_plugin_zed_od/include/rviz_plugin_zed_od//zed_od_display.hpp
+[83.441s] -- Symlinking: /home/bur/ros2_ws/install/rviz_plugin_zed_od/include/rviz_plugin_zed_od//zed_od_info.hpp
+[83.467s] -- Symlinking: /home/bur/ros2_ws/install/rviz_plugin_zed_od/share/rviz_plugin_zed_od/icons/ZedObjDet.png
+[83.489s] -- Symlinking: /home/bur/ros2_ws/install/rviz_plugin_zed_od/share/ament_index/resource_index/package_run_dependencies/rviz_plugin_zed_od
+[83.512s] -- Symlinking: /home/bur/ros2_ws/install/rviz_plugin_zed_od/share/ament_index/resource_index/parent_prefix_path/rviz_plugin_zed_od
+[83.535s] -- Symlinking: /home/bur/ros2_ws/install/rviz_plugin_zed_od/share/rviz_plugin_zed_od/environment/ament_prefix_path.sh
+[83.557s] -- Symlinking: /home/bur/ros2_ws/install/rviz_plugin_zed_od/share/rviz_plugin_zed_od/environment/ament_prefix_path.dsv
+[83.579s] -- Symlinking: /home/bur/ros2_ws/install/rviz_plugin_zed_od/share/rviz_plugin_zed_od/environment/path.sh
+[83.601s] -- Symlinking: /home/bur/ros2_ws/install/rviz_plugin_zed_od/share/rviz_plugin_zed_od/environment/path.dsv
+[83.622s] -- Symlinking: /home/bur/ros2_ws/install/rviz_plugin_zed_od/share/rviz_plugin_zed_od/local_setup.bash
+[83.644s] -- Symlinking: /home/bur/ros2_ws/install/rviz_plugin_zed_od/share/rviz_plugin_zed_od/local_setup.sh
+[83.666s] -- Symlinking: /home/bur/ros2_ws/install/rviz_plugin_zed_od/share/rviz_plugin_zed_od/local_setup.zsh
+[83.687s] -- Symlinking: /home/bur/ros2_ws/install/rviz_plugin_zed_od/share/rviz_plugin_zed_od/local_setup.dsv
+[83.709s] -- Symlinking: /home/bur/ros2_ws/install/rviz_plugin_zed_od/share/rviz_plugin_zed_od/package.dsv
+[83.732s] -- Symlinking: /home/bur/ros2_ws/install/rviz_plugin_zed_od/share/ament_index/resource_index/packages/rviz_plugin_zed_od
+[83.752s] -- Symlinking: /home/bur/ros2_ws/install/rviz_plugin_zed_od/share/ament_index/resource_index/rviz_common__pluginlib__plugin/rviz_plugin_zed_od
+[83.784s] -- Symlinking: /home/bur/ros2_ws/install/rviz_plugin_zed_od/share/rviz_plugin_zed_od/cmake/ament_cmake_export_include_directories-extras.cmake
+[83.814s] -- Symlinking: /home/bur/ros2_ws/install/rviz_plugin_zed_od/share/rviz_plugin_zed_od/cmake/ament_cmake_export_targets-extras.cmake
+[83.836s] -- Symlinking: /home/bur/ros2_ws/install/rviz_plugin_zed_od/share/rviz_plugin_zed_od/cmake/ament_cmake_export_dependencies-extras.cmake
+[83.859s] -- Symlinking: /home/bur/ros2_ws/install/rviz_plugin_zed_od/share/rviz_plugin_zed_od/cmake/rviz_plugin_zed_odConfig.cmake
+[83.881s] -- Symlinking: /home/bur/ros2_ws/install/rviz_plugin_zed_od/share/rviz_plugin_zed_od/cmake/rviz_plugin_zed_odConfig-version.cmake
+[83.904s] -- Symlinking: /home/bur/ros2_ws/install/rviz_plugin_zed_od/share/rviz_plugin_zed_od/package.xml
+[83.926s] -- Installing: /home/bur/ros2_ws/install/rviz_plugin_zed_od/lib/librviz_plugin_zed_od.so
+[83.929s] -- Set runtime path of "/home/bur/ros2_ws/install/rviz_plugin_zed_od/lib/librviz_plugin_zed_od.so" to ""
+[83.930s] -- Installing: /home/bur/ros2_ws/install/rviz_plugin_zed_od/share/rviz_plugin_zed_od/cmake/rviz_plugin_zed_odExport.cmake
+[83.930s] -- Installing: /home/bur/ros2_ws/install/rviz_plugin_zed_od/share/rviz_plugin_zed_od/cmake/rviz_plugin_zed_odExport-release.cmake
+[83.940s] Invoked command in '/home/bur/ros2_ws/build/rviz_plugin_zed_od' returned '0': CMAKE_PREFIX_PATH=/home/bur/ros2_ws/install/zed_interfaces:/home/bur/ros2_ws/install/zed_ros2:/home/bur/ros2_ws/install/zed_wrapper:/home/bur/ros2_ws/install/zed_components:/opt/ros/humble LD_LIBRARY_PATH=/home/bur/ros2_ws/install/zed_interfaces/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/aarch64-linux-gnu:/opt/ros/humble/lib:/home/bur/ros2_ws/install/zed_components/lib:/usr/local/cuda-11.4/lib64 /usr/bin/cmake --install /home/bur/ros2_ws/build/rviz_plugin_zed_od

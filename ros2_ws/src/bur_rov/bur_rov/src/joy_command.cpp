@@ -63,7 +63,7 @@ void JoyCommand::imu_callback(const sensor_msgs::msg::Imu::SharedPtr msg)
     this->output.current_vel.angular.y = -msg->angular_velocity.x;
     this->output.current_vel.angular.z = msg->angular_velocity.z;
     rclcpp::Time now = this->now();
-    double acceleration[3] = {msg->linear_acceleration.y, -msg->linear_acceleration.x, msg->linear_acceleration.z};
+    double acceleration[3] = {msg->linear_acceleration.y, -msg->linear_acceleration.x, msg->linear_acceleration.z + 9.80665};
     vel_calc(acceleration, now, prev_time);
     this->output.current_vel.linear.x = velocity[0];
     this->output.current_vel.linear.y = velocity[1];

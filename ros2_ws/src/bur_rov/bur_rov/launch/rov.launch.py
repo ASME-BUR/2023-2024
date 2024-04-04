@@ -20,6 +20,12 @@ def generate_launch_description():
             '/motor_param_test.launch.py'
         ])
     )
+    thruster_manager = IncludeLaunchDescription(
+        PythonLaunchDescriptionSource([os.path.join(
+            get_package_share_directory('thruster_manager'), 'launch'),
+            '/motor_param_test.launch.py'
+        ])
+    )
 
 
     return LaunchDescription([

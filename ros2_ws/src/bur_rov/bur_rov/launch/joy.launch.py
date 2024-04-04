@@ -22,7 +22,7 @@ def generate_launch_description():
                 name="joy_command",
                 parameters=[
                     {"joy_topic": "joy"},
-                    {"pose_topic": "pose"},
+                    {"pose_topic": "depth_sensor"},
                     {"imu_topic": "imu"},
                     {"velocity": 1.0},
                     {"cmd_pub_topic": "command"},

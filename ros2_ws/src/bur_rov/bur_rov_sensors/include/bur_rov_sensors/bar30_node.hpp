@@ -20,8 +20,8 @@ public:
     // void run();
 
 private:
-    // rclcpp::Publisher<geometry_msgs::msg::PoseWithCovarianceStamped>::SharedPtr pub_;
-    rclcpp::Publisher<geometry_msgs::msg::Pose>::SharedPtr pub_;
+    rclcpp::Publisher<geometry_msgs::msg::PoseWithCovarianceStamped>::SharedPtr pub_;
+    // rclcpp::Publisher<geometry_msgs::msg::Pose>::SharedPtr pub_;
     // North(x)-East(y)-Down(z) Coordinate
     void timer_Callback();
     rclcpp::TimerBase::SharedPtr timer_;

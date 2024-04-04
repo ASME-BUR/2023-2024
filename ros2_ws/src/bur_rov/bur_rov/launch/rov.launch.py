@@ -20,15 +20,16 @@ def generate_launch_description():
             '/motor_param_test.launch.py'
         ])
     )
-    thruster_manager = IncludeLaunchDescription(
+    depth_sensor = IncludeLaunchDescription(
         PythonLaunchDescriptionSource([os.path.join(
-            get_package_share_directory('thruster_manager'), 'launch'),
-            '/motor_param_test.launch.py'
+            get_package_share_directory('bur_rov_sensors'), 'launch'),
+            '/bar30.launch.py'
         ])
     )
 
 
     return LaunchDescription([
         thruster_manager,
-        controller_launch
+        controller_launch,
+        depth_sensor
     ])

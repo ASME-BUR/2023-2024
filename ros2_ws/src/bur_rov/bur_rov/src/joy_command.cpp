@@ -1,6 +1,7 @@
 #include "joy_command.hpp"
 #include <Eigen/Dense>
 #include <iostream>
+#include <cmath>
 
 JoyCommand::JoyCommand() : rclcpp::Node("joy_command")
 {
@@ -16,7 +17,8 @@ JoyCommand::JoyCommand() : rclcpp::Node("joy_command")
                                                                bind(&JoyCommand::joy_callback, this, placeholders::_1));
     pose_sub = this->create_subscription<geometry_msgs::msg::PoseWithCovarianceStamped>(this->get_parameter("pose_topic").as_string(), 10,
                                                                                         bind(&JoyCommand::pose_callback, this, placeholders::_1));
-    imu_sub = this->create_subscription<sensor_msgs::msg::Imu>(this->get_parameter("imu_topic").as_string(), 10,
+    const rclcpp::QoS qos_profile = rclcpp::QoS(rclcpp::KeepLast(10)).best_effort().durability_volatile();
+    imu_sub = this->create_subscription<sensor_msgs::msg::Imu>(this->get_parameter("imu_topic").as_string(), qos_profile,
                                                                bind(&JoyCommand::imu_callback, this, placeholders::_1));
     vel_cap = this->get_parameter("velocity").as_double();
     this->get_parameters("axis_mapping", axis_mapping_);
@@ -40,7 +42,7 @@ void JoyCommand::joy_callback(const sensor_msgs::msg::Joy::SharedPtr msg)
 
 
         tf2::Quaternion q;
-        q.setRPY(msg->axes[axis_mapping_.at("angular_x")] * 90, msg->axes[axis_mapping_.at("angular_y")] * 90, 0);
+        q.setRPY(msg->axes[axis_mapping_.at("angular_x")] * M_PI_2, msg->axes[axis_mapping_.at("angular_y")] * M_PI_2, 0);
         q.normalize();
         this->output.target_pos.orientation = tf2::toMsg(q);
         this->output.buttons.clear();
@@ -52,7 +54,7 @@ void JoyCommand::joy_callback(const sensor_msgs::msg::Joy::SharedPtr msg)
 
         auto debug_msg = geometry_msgs::msg::PoseStamped();
         debug_msg.header.stamp = this->now();
-        debug_msg.header.frame_id = "imu_data";
+        debug_msg.header.frame_id = "map";
     
         debug_msg.pose.orientation.w = this->output.target_pos.orientation.w;
         debug_msg.pose.orientation.x = this->output.target_pos.orientation.x;
@@ -95,7 +97,7 @@ void JoyCommand::imu_callback(const sensor_msgs::msg::Imu::SharedPtr msg)
 
     auto debug_msg = geometry_msgs::msg::PoseStamped();
     debug_msg.header.stamp = this->now();
-    debug_msg.header.frame_id = "imu_data";
+    debug_msg.header.frame_id = "map";
    
     debug_msg.pose.orientation.w = this->output.current_pos.orientation.w;
     debug_msg.pose.orientation.x = this->output.current_pos.orientation.x;

@@ -102,7 +102,7 @@ namespace controller
       double dt = (time - lastTime).nanoseconds();
 
       std_msgs::msg::Header header;
-      header.frame_id = "/target_wrench";
+      header.frame_id = "map";
       header.stamp = this->get_clock()->now();
 
       geometry_msgs::msg::Wrench controlEffort;

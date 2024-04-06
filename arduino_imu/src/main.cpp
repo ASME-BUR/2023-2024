@@ -120,7 +120,7 @@ void loop()
       if (digitalRead(DRDY))
       {
         IMU->readMessages(verbose);
-        imu_msg.header.stamp.sec = rmw_uros_epoch_millis();
+        imu_msg.header.stamp.sec = rmw_uros_epoch_nanos()/10^9;
         imu_msg.header.stamp.nanosec = rmw_uros_epoch_nanos();
         imu_msg.linear_acceleration.x = (double)IMU->getAcceleration()[0];
         imu_msg.linear_acceleration.y = (double)IMU->getAcceleration()[1];

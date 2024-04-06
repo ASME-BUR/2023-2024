@@ -33,6 +33,21 @@ def generate_launch_description():
                     {"axis_mapping.angular_y": 5},
                     {"axis_mapping.angular_z": 3},
                     ],
+            ),
+            Node(
+                package="tf2_ros",               
+                executable="static_transform_publisher",
+                parameters=[
+                    {"x": 0},
+                    {"y": 0},
+                    {"z": 0},
+                    {"roll": 0},
+                    {"pitch": 0},
+                    {"yaw": 0},
+                    {"frame-id": "map"},
+                    {"child-frame-id": "my_frame"}
+                ]
             )
+
         ]
     )

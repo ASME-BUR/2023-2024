@@ -1,28 +1,5 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 install/
 build/
 log/
 .vscode/
 src/.vscode
-=======
-build/ 
-install/ 
-log/
->>>>>>> pid-controller
-=======
-build/ 
-install/ 
-log/
->>>>>>> pid-controller
-=======
-build/
-install/
-log/
-src/micro_ros_setup
-src/uros
-src/ros2.repos
-.vscode/
-src/.vscode
->>>>>>> micro-ros-arduino

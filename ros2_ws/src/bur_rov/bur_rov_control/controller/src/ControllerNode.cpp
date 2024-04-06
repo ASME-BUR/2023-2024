@@ -29,6 +29,9 @@ namespace controller
     pubControlEffort = this->create_publisher<geometry_msgs::msg::Wrench>(
         this->get_parameter("pub_topic").as_string(), 1);
 
+    debugControlEffort = this->create_publisher<geometry_msgs::msg::WrenchStamped>(
+        "control_effort_debug", 1);
+
     int publish_rate = 100;
     // publish_rate = this->get_parameter("~publish_rate").as_int();
 
@@ -122,6 +125,8 @@ namespace controller
       double targetPitch = asin(2 * (targetQuaternion.w() * targetQuaternion.y() - targetQuaternion.z() * targetQuaternion.x()));
 
 
+
+
       controlEffort.torque.x = angular_x.computeCommand(targetRoll-currentRoll, dt);
       controlEffort.torque.y = angular_y.computeCommand(targetPitch-currentPitch, dt);
       
@@ -134,7 +139,13 @@ namespace controller
       // controlEffort.torque.y = clamp(angular_y.computeCommand(twist_setpoint.angular.y - twist_state.angular.y, dt), -1.0, 1.0);
       // controlEffort.torque.z = clamp(angular_z.computeCommand(twist_setpoint.angular.z - twist_state.angular.z, dt), -1.0, 1.0);
 
+      geometry_msgs::msg::WrenchStamped debug_msg;
+
+      debug_msg.header = header;
+      debug_msg.wrench = controlEffort;
+
       pubControlEffort->publish(controlEffort);
+      debugControlEffort->publish(debug_msg);
     }
     lastTime = time;
     }else{

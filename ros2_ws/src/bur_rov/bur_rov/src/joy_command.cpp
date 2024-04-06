@@ -1,4 +1,5 @@
 #include "joy_command.hpp"
+#include <Eigen/Dense>
 #include <iostream>
 
 JoyCommand::JoyCommand() : rclcpp::Node("joy_command")
@@ -20,6 +21,10 @@ JoyCommand::JoyCommand() : rclcpp::Node("joy_command")
     vel_cap = this->get_parameter("velocity").as_double();
     this->get_parameters("axis_mapping", axis_mapping_);
     prev_time = this->now();
+
+    debug_imu_pub = this->create_publisher<geometry_msgs::msg::PoseStamped>("imu_debug", 10);
+
+    debug_joy_pub = this->create_publisher<geometry_msgs::msg::PoseStamped>("joy_debug", 10);
 }
 
 void JoyCommand::joy_callback(const sensor_msgs::msg::Joy::SharedPtr msg)
@@ -32,6 +37,8 @@ void JoyCommand::joy_callback(const sensor_msgs::msg::Joy::SharedPtr msg)
         this->output.target_vel.angular.x = vel_cap * msg->axes[axis_mapping_.at("angular_x")];
         this->output.target_vel.angular.y = vel_cap * msg->axes[axis_mapping_.at("angular_y")];
         this->output.target_vel.angular.z = vel_cap * msg->axes[axis_mapping_.at("angular_z")];
+
+
         tf2::Quaternion q;
         q.setRPY(msg->axes[axis_mapping_.at("angular_x")] * 90, msg->axes[axis_mapping_.at("angular_y")] * 90, 0);
         q.normalize();
@@ -42,6 +49,21 @@ void JoyCommand::joy_callback(const sensor_msgs::msg::Joy::SharedPtr msg)
             this->output.buttons.push_back(msg->buttons[i]);
         }
         cmd_pub->publish(output);
+
+        auto debug_msg = geometry_msgs::msg::PoseStamped();
+        debug_msg.header.stamp = this->now();
+        debug_msg.header.frame_id = "imu_data";
+    
+        debug_msg.pose.orientation.w = this->output.target_pos.orientation.w;
+        debug_msg.pose.orientation.x = this->output.target_pos.orientation.x;
+        debug_msg.pose.orientation.y = this->output.target_pos.orientation.y;
+        debug_msg.pose.orientation.z = this->output.target_pos.orientation.z;
+
+        debug_msg.pose.position.x=0;
+        debug_msg.pose.position.y=0;
+        debug_msg.pose.position.z=0;
+
+        debug_joy_pub->publish(debug_msg);
     }
 }
 
@@ -70,6 +92,21 @@ void JoyCommand::imu_callback(const sensor_msgs::msg::Imu::SharedPtr msg)
     this->output.current_vel.linear.z = velocity[2];
     cmd_pub->publish(output);
     prev_time = this->now();
+
+    auto debug_msg = geometry_msgs::msg::PoseStamped();
+    debug_msg.header.stamp = this->now();
+    debug_msg.header.frame_id = "imu_data";
+   
+    debug_msg.pose.orientation.w = this->output.current_pos.orientation.w;
+    debug_msg.pose.orientation.x = this->output.current_pos.orientation.x;
+    debug_msg.pose.orientation.y = this->output.current_pos.orientation.y;
+    debug_msg.pose.orientation.z = this->output.current_pos.orientation.z;
+
+    debug_msg.pose.position.x=0;
+    debug_msg.pose.position.y=0;
+    debug_msg.pose.position.z=0;
+
+    debug_imu_pub->publish(debug_msg);
 }
 
 double* JoyCommand::vel_calc(double acceleration[3], rclcpp::Time current_time, rclcpp::Time previous_time)

@@ -30,6 +30,9 @@ private:
     rclcpp::Subscription<sensor_msgs::msg::Joy>::SharedPtr joy_sub;
     rclcpp::Subscription<geometry_msgs::msg::PoseWithCovarianceStamped>::SharedPtr pose_sub;
     rclcpp::Subscription<sensor_msgs::msg::Imu>::SharedPtr imu_sub;
+
+    rclcpp::Publisher<geometry_msgs::msg::PoseStamped>::SharedPtr debug_imu_pub;
+    rclcpp::Publisher<geometry_msgs::msg::PoseStamped>::SharedPtr debug_joy_pub;
     geometry_msgs::msg::Pose pose;
     bur_rov_msgs::msg::Command output;
     float vel_cap;

@@ -23,6 +23,7 @@ Imu_node::Imu_node() : rclcpp::Node("imu"), count(0)
         imu->configureOutputs(modes, hz, 4);
         imu_pub = this->create_publisher<sensor_msgs::msg::Imu>("imu_data", 10);
         imu_eul_pub = this->create_publisher<geometry_msgs::msg::Vector3>("imu_euler", 10);
+        
         int n = sizeof(hz) / sizeof(hz[0]);
         int period = 0.5 * (1000 / (*max_element(hz, hz + n)));
         timer_ = this->create_wall_timer(chrono::milliseconds(period), bind(&Imu_node::timer_Callback, this));
@@ -79,6 +80,8 @@ void Imu_node::timer_Callback()
     msg_euler.z = imu->getEulerAngles()[2];
 
     imu_eul_pub->publish(msg_euler);
+
+
 }
 
 int main(int argc, char *argv[])

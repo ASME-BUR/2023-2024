@@ -6,6 +6,7 @@
 #include <geometry_msgs/msg/twist.hpp>
 #include "bur_rov_msgs/msg/command.hpp"
 #include <geometry_msgs/msg/wrench.hpp>
+#include <geometry_msgs/msg/wrench_stamped.hpp>
 #include <geometry_msgs/msg/pose.hpp>
 #include <std_msgs/msg/header.hpp>
 #include <pid.hpp>
@@ -24,6 +25,7 @@ namespace controller
     // publishers
 
     rclcpp::Publisher<geometry_msgs::msg::Wrench>::SharedPtr pubControlEffort;
+    rclcpp::Publisher<geometry_msgs::msg::WrenchStamped>::SharedPtr debugControlEffort;
 
     rclcpp::Subscription<bur_rov_msgs::msg::Command>::SharedPtr state_setpoint_sub;
 

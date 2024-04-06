@@ -4,6 +4,7 @@
 #include "rclcpp/rclcpp.hpp"
 #include "sensor_msgs/msg/imu.hpp"
 #include "geometry_msgs/msg/vector3.hpp"
+#include "geometry_msgs/msg/pose_stamped.hpp"
 #include "MTi.h"
 #include <cmath>
 #include <chrono>
@@ -21,6 +22,7 @@ public:
 
 private:
     rclcpp::Publisher<sensor_msgs::msg::Imu>::SharedPtr imu_pub;
+    
     rclcpp::Publisher<geometry_msgs::msg::Vector3>::SharedPtr imu_eul_pub;
     // North(x)-East(y)-Down(z) Coordinate
     void timer_Callback();

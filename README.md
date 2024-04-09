@@ -9,5 +9,3 @@ To start the ZED ROS Node, run:
 ```sh
 ros2 launch zed_wrapper zed_camera.launch.py camera_model:=zedm
 ```
-
-`

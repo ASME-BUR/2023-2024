@@ -150,6 +150,7 @@ void setup()
 
   // Configure serial transport
   SerialUSB.begin(250000);
+  delay(1000);
   set_microros_serial_transports(SerialUSB);
   state = WAITING_AGENT;
 

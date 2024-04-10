@@ -36,7 +36,7 @@ namespace controller
     // publish_rate = this->get_parameter("~publish_rate").as_int();
 
     pubTimer_ = this->create_wall_timer(
-        std::chrono::seconds(static_cast<int>(1.0 / publish_rate)), std::bind(&ControllerNode::publishState, this));
+        std::chrono::milliseconds(1000 / publish_rate), std::bind(&ControllerNode::publishState, this));
 
     linear_x = control_toolbox::Pid(0.0, 0.0, 0.0, 1.0, -1.0, true);
     linear_y = control_toolbox::Pid(0.0, 0.0, 0.0, 1.0, -1.0, true);
@@ -70,7 +70,7 @@ namespace controller
     this->declare_parameter("~angular_z/i", rclcpp::PARAMETER_DOUBLE);
     this->declare_parameter("~angular_z/d", rclcpp::PARAMETER_DOUBLE);
 
-    this->declare_parameter("~active", rclcpp::PARAMETER_BOOL);
+    // this->declare_parameter("~active", rclcpp::PARAMETER_BOOL);
   }
 
   void ControllerNode::currentCommandCallback(const bur_rov_msgs::msg::Command::SharedPtr msg)
@@ -79,13 +79,14 @@ namespace controller
     this->pose_setpoint = msg->target_pos;
     this->twist_state = msg->current_vel;
     this->twist_setpoint = msg->target_vel;
+    active = msg->buttons[13];
   }
 
   void ControllerNode::publishState()
   {
-    bool active = false;
+    // bool active = false;
     
-    this->get_parameter("~active", active);
+    // this->get_parameter("~active", active);
 
     if(active){
     linear_x.setGains(this->get_parameter("~linear_x/p").as_double(), this->get_parameter("~linear_x/i").as_double(), this->get_parameter("~linear_x/d").as_double(), 1.0, -1.0, true);

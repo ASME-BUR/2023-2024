@@ -53,6 +53,7 @@ namespace controller
     void publishState();
 
     rclcpp::Time lastTime;
+    bool active = false;
   };
 } 
 

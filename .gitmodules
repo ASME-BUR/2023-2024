@@ -17,6 +17,6 @@
 	path = arduino_thruster/.pio/libdeps/dueUSB/micro_ros_platformio
 	url = https://github.com/micro-ROS/micro_ros_platformio
 [submodule "ESKF"]
-	path = ros2_ws/src/ESKF
-	url = https://github.com/ASME-BUR/ESKF.git
+	path = ros2_ws/src/bur_auv/eskf
+	url = https://github.com/ASME-BUR/eskf.git
 	branch = humble

@@ -8,18 +8,22 @@ def generate_launch_description():
             Node(
                 package="micro_ros_agent",
                 executable="micro_ros_agent",
-                parameters=[
-                    {"transport": "serial",
-                     "dev": "/dev/ttyACM0"}
-                ]
+                # parameters=[
+                #     {"transport": "serial",
+                #      "dev": "/dev/ttyACM1"}
+                # ],
+                output='screen',
+                arguments=["serial", "-D", "/dev/ttyACM0", "-v6", "-b", "250000"]
             ),
             Node(
                 package="micro_ros_agent",
                 executable="micro_ros_agent",
-                parameters=[
-                    {"transport": "serial",
-                     "dev": "/dev/ttyACM1"}
-                ]
+                # parameters=[
+                #     {"transport": "serial",
+                #      "dev": "/dev/ttyACM1"}
+                # ],
+                output='screen',
+                arguments=["serial", "-D", "/dev/ttyACM1", "-v4"]
             )
         ]
     )

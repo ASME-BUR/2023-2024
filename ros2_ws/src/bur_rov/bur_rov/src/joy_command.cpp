@@ -78,16 +78,16 @@ void JoyCommand::pose_callback(const geometry_msgs::msg::PoseWithCovarianceStamp
 void JoyCommand::imu_callback(const sensor_msgs::msg::Imu::SharedPtr msg)
 {
     // IMU output is ENU, everything else is NWU coordinates so we need to swap some axes
-    this->output.current_pos.orientation.x = msg->orientation.y;
-    this->output.current_pos.orientation.y = -msg->orientation.x;
+    this->output.current_pos.orientation.x = msg->orientation.x;
+    this->output.current_pos.orientation.y = msg->orientation.y;
     this->output.current_pos.orientation.z = msg->orientation.z;
     this->output.current_pos.orientation.w = msg->orientation.w;
 
-    this->output.current_vel.angular.x = msg->angular_velocity.y;
-    this->output.current_vel.angular.y = -msg->angular_velocity.x;
+    this->output.current_vel.angular.x = msg->angular_velocity.x;
+    this->output.current_vel.angular.y = msg->angular_velocity.y;
     this->output.current_vel.angular.z = msg->angular_velocity.z;
     rclcpp::Time now = this->now();
-    double acceleration[3] = {msg->linear_acceleration.y, -msg->linear_acceleration.x, msg->linear_acceleration.z + 9.80665};
+    double acceleration[3] = {msg->linear_acceleration.x, msg->linear_acceleration.y, msg->linear_acceleration.z + 9.80665};
     vel_calc(acceleration, now, prev_time);
     this->output.current_vel.linear.x = velocity[0];
     this->output.current_vel.linear.y = velocity[1];

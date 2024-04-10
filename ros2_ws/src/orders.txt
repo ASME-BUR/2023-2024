@@ -1,0 +1,6 @@
+imu (may need to change port):
+
+ros2 run micro_ros_agent micro_ros_agent serial -D /dev/ttyACM0 -v 6 -b 250000
+
+thrusters:
+ros2 run micro_ros_agent micro_ros_agent serial -D /dev/ttyACM1

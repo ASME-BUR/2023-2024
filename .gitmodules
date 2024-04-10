@@ -1,4 +1,4 @@
 [submodule "ESKF"]
 	path = ros2_ws/src/ESKF
-	url = https://github.com/ASME-BUR/ESKF.git
+	url = https://github.com/ASME-BUR/eskf.git
 	branch = humble

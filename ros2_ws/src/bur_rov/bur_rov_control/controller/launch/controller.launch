@@ -9,7 +9,7 @@
     <param name="~linear_x/i" value="0.0" type="float"/>
     <param name="~linear_x/d" value="0.0" type="float"/>
 
-    <param name="~linear_y/p" value="1.0" type="float"/>
+    <param name="~linear_y/p" value="0.0" type="float"/>
     <param name="~linear_y/i" value="0.0" type="float"/>
     <param name="~linear_y/d" value="0.0" type="float"/>
 
@@ -17,11 +17,11 @@
     <param name="~linear_z/i" value="0.0" type="float"/>
     <param name="~linear_z/d" value="0.0" type="float"/>
 
-    <param name="~angular_x/p" value="1.0" type="float"/>
+    <param name="~angular_x/p" value="0.0" type="float"/>
     <param name="~angular_x/i" value="0.0" type="float"/>
     <param name="~angular_x/d" value="0.0" type="float"/>
 
-    <param name="~angular_y/p" value="1.0" type="float"/>
+    <param name="~angular_y/p" value="0.0" type="float"/>
     <param name="~angular_y/i" value="0.0" type="float"/>
     <param name="~angular_y/d" value="0.0" type="float"/>
 

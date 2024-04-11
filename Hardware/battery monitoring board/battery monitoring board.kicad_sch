@@ -743,10 +743,6 @@
     (stroke (width 0) (type default))
     (uuid 157f7064-9e2f-403f-9515-df0690fb5c09)
   )
-  (wire (pts (xy 104.14 85.09) (xy 104.14 66.04))
-    (stroke (width 0) (type default))
-    (uuid 17b63542-5645-4daa-832f-e3c36edb4647)
-  )
   (wire (pts (xy 62.23 153.67) (xy 62.23 144.78))
     (stroke (width 0) (type default))
     (uuid 1addff6b-68fb-406d-af40-38072bb445b5)
@@ -766,10 +762,6 @@
   (wire (pts (xy 55.88 134.62) (xy 64.77 134.62))
     (stroke (width 0) (type default))
     (uuid 33c5f58e-2fee-4d36-9fb2-603e0d44471f)
-  )
-  (wire (pts (xy 88.9 66.04) (xy 87.63 66.04))
-    (stroke (width 0) (type default))
-    (uuid 394b1fa9-e40e-4bcb-a897-ca52a21dba20)
   )
   (wire (pts (xy 109.22 77.47) (xy 153.67 77.47))
     (stroke (width 0) (type default))
@@ -899,10 +891,6 @@
     (stroke (width 0) (type default))
     (uuid b5748953-2966-463f-925d-8af376349fc4)
   )
-  (wire (pts (xy 109.22 85.09) (xy 104.14 85.09))
-    (stroke (width 0) (type default))
-    (uuid b71d6756-dd98-4a2c-a714-4065ae60a0b1)
-  )
   (wire (pts (xy 95.25 139.7) (xy 105.41 139.7))
     (stroke (width 0) (type default))
     (uuid c2ee70bb-fbdd-481a-ba3d-9dec390d3b08)
@@ -944,36 +932,10 @@
     (uuid f90dc68d-c0ab-4357-99b7-e78dea9093b9)
   )
 
-  (symbol (lib_id "Device:R_US") (at 92.71 66.04 90) (unit 1)
-    (in_bom yes) (on_board yes) (dnp no)
-    (uuid 0bd66cff-93af-49e0-abb8-27f600762509)
-    (property "Reference" "R25" (at 91.44 63.5 90)
-      (effects (font (size 1.27 1.27)) (justify right))
-    )
-    (property "Value" "147" (at 90.17 68.58 90)
-      (effects (font (size 1.27 1.27)) (justify right))
-    )
-    (property "Footprint" "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder" (at 92.964 65.024 90)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Datasheet" "~" (at 92.71 66.04 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (pin "1" (uuid abfd6037-b6aa-4b50-a847-ac07b303edb5))
-    (pin "2" (uuid 51b2d438-62fb-464a-bd5b-fc469bd9ebfb))
-    (instances
-      (project "battery monitoring board"
-        (path "/bf623d80-ca5a-491f-9daa-4dffbeba5279"
-          (reference "R25") (unit 1)
-        )
-      )
-    )
-  )
-
   (symbol (lib_id "Device:LED") (at 100.33 58.42 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 152a16bc-d1b4-4835-a1b3-0c72cd2cd2ce)
-    (property "Reference" "D6" (at 100.33 55.88 0)
+    (property "Reference" "D2" (at 100.33 55.88 0)
       (effects (font (size 1.27 1.27)))
     )
     (property "Value" "Green LED" (at 100.33 62.23 0)
@@ -990,7 +952,7 @@
     (instances
       (project "battery monitoring board"
         (path "/bf623d80-ca5a-491f-9daa-4dffbeba5279"
-          (reference "D6") (unit 1)
+          (reference "D2") (unit 1)
         )
       )
     )
@@ -1002,7 +964,7 @@
     (property "Reference" "R1" (at 91.44 46.99 90)
       (effects (font (size 1.27 1.27)) (justify right))
     )
-    (property "Value" "147" (at 90.17 52.07 90)
+    (property "Value" "150" (at 90.17 52.07 90)
       (effects (font (size 1.27 1.27)) (justify right))
     )
     (property "Footprint" "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder" (at 92.964 48.514 90)
@@ -1017,31 +979,6 @@
       (project "battery monitoring board"
         (path "/bf623d80-ca5a-491f-9daa-4dffbeba5279"
           (reference "R1") (unit 1)
-        )
-      )
-    )
-  )
-
-  (symbol (lib_id "PCM_4ms_Power-symbol:GND") (at 87.63 66.04 270) (unit 1)
-    (in_bom yes) (on_board yes) (dnp no)
-    (uuid 25b1b56e-671f-426b-a64c-7c69f3031665)
-    (property "Reference" "#PWR036" (at 81.28 66.04 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Value" "GND" (at 86.36 68.58 90)
-      (effects (font (size 1.27 1.27)))
-    )
-    (property "Footprint" "" (at 87.63 66.04 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Datasheet" "" (at 87.63 66.04 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (pin "1" (uuid 7f3d2aee-c26a-4169-868e-76ac2ea3b157))
-    (instances
-      (project "battery monitoring board"
-        (path "/bf623d80-ca5a-491f-9daa-4dffbeba5279"
-          (reference "#PWR036") (unit 1)
         )
       )
     )
@@ -1130,7 +1067,7 @@
   (symbol (lib_id "power:+3V3") (at 124.46 58.42 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 2fc644c2-d9c7-4c25-8ad5-664ad5a69a62)
-    (property "Reference" "#PWR03" (at 124.46 62.23 0)
+    (property "Reference" "#PWR09" (at 124.46 62.23 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "+3V3" (at 122.682 54.61 0)
@@ -1146,7 +1083,7 @@
     (instances
       (project "battery monitoring board"
         (path "/bf623d80-ca5a-491f-9daa-4dffbeba5279"
-          (reference "#PWR03") (unit 1)
+          (reference "#PWR09") (unit 1)
         )
       )
     )
@@ -1174,7 +1111,7 @@
           (reference "#PWR030") (unit 1)
         )
         (path "/bf623d80-ca5a-491f-9daa-4dffbeba5279"
-          (reference "#PWR031") (unit 1)
+          (reference "#PWR07") (unit 1)
         )
       )
     )
@@ -1183,7 +1120,7 @@
   (symbol (lib_id "PCM_4ms_Power-symbol:GND") (at 77.47 149.86 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 446f7264-a585-4ec1-9245-b18eecf73291)
-    (property "Reference" "#PWR033" (at 77.47 156.21 0)
+    (property "Reference" "#PWR02" (at 77.47 156.21 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (at 77.47 154.432 0)
@@ -1199,7 +1136,7 @@
     (instances
       (project "battery monitoring board"
         (path "/bf623d80-ca5a-491f-9daa-4dffbeba5279"
-          (reference "#PWR033") (unit 1)
+          (reference "#PWR02") (unit 1)
         )
       )
     )
@@ -1234,7 +1171,7 @@
   (symbol (lib_id "PCM_4ms_Power-symbol:GND") (at 191.77 73.66 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 798b053c-7140-4caf-85f9-48c8696a02e7)
-    (property "Reference" "#PWR06" (at 191.77 80.01 0)
+    (property "Reference" "#PWR012" (at 191.77 80.01 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (at 194.31 76.2 0)
@@ -1250,7 +1187,7 @@
     (instances
       (project "battery monitoring board"
         (path "/bf623d80-ca5a-491f-9daa-4dffbeba5279"
-          (reference "#PWR06") (unit 1)
+          (reference "#PWR012") (unit 1)
         )
       )
     )
@@ -1259,7 +1196,7 @@
   (symbol (lib_id "PCM_4ms_Power-symbol:GND") (at 121.92 113.03 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 79b262c3-d97e-4d70-b20e-5e156d037ee6)
-    (property "Reference" "#PWR02" (at 121.92 119.38 0)
+    (property "Reference" "#PWR08" (at 121.92 119.38 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (at 121.92 117.602 0)
@@ -1275,7 +1212,7 @@
     (instances
       (project "battery monitoring board"
         (path "/bf623d80-ca5a-491f-9daa-4dffbeba5279"
-          (reference "#PWR02") (unit 1)
+          (reference "#PWR08") (unit 1)
         )
       )
     )
@@ -1284,7 +1221,7 @@
   (symbol (lib_id "PCM_4ms_Power-symbol:GND") (at 85.09 149.86 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 7a1f44d2-3d01-42d1-af6f-59cb36695e31)
-    (property "Reference" "#PWR034" (at 85.09 156.21 0)
+    (property "Reference" "#PWR03" (at 85.09 156.21 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (at 85.09 154.432 0)
@@ -1300,7 +1237,7 @@
     (instances
       (project "battery monitoring board"
         (path "/bf623d80-ca5a-491f-9daa-4dffbeba5279"
-          (reference "#PWR034") (unit 1)
+          (reference "#PWR03") (unit 1)
         )
       )
     )
@@ -1335,7 +1272,7 @@
   (symbol (lib_id "PCM_4ms_Power-symbol:GND") (at 87.63 58.42 270) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 8c978ad9-f42e-42b9-8c65-77ba861a2542)
-    (property "Reference" "#PWR035" (at 81.28 58.42 0)
+    (property "Reference" "#PWR05" (at 81.28 58.42 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (at 86.36 60.96 90)
@@ -1351,7 +1288,7 @@
     (instances
       (project "battery monitoring board"
         (path "/bf623d80-ca5a-491f-9daa-4dffbeba5279"
-          (reference "#PWR035") (unit 1)
+          (reference "#PWR05") (unit 1)
         )
       )
     )
@@ -1360,10 +1297,10 @@
   (symbol (lib_id "Device:R_US") (at 92.71 58.42 90) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 8f029da5-b5df-4eff-bf46-b838416e1ed7)
-    (property "Reference" "R24" (at 91.44 55.88 90)
+    (property "Reference" "R2" (at 91.44 55.88 90)
       (effects (font (size 1.27 1.27)) (justify right))
     )
-    (property "Value" "147" (at 90.17 60.96 90)
+    (property "Value" "150" (at 90.17 60.96 90)
       (effects (font (size 1.27 1.27)) (justify right))
     )
     (property "Footprint" "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder" (at 92.964 57.404 90)
@@ -1377,7 +1314,7 @@
     (instances
       (project "battery monitoring board"
         (path "/bf623d80-ca5a-491f-9daa-4dffbeba5279"
-          (reference "R24") (unit 1)
+          (reference "R2") (unit 1)
         )
       )
     )
@@ -1386,7 +1323,7 @@
   (symbol (lib_id "PCM_4ms_Power-symbol:+5V") (at 77.47 120.65 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 9695ace1-96e0-49a8-be6b-f76b257b0053)
-    (property "Reference" "#PWR032" (at 77.47 124.46 0)
+    (property "Reference" "#PWR01" (at 77.47 124.46 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "+5V" (at 78.486 116.84 0)
@@ -1402,7 +1339,7 @@
     (instances
       (project "battery monitoring board"
         (path "/bf623d80-ca5a-491f-9daa-4dffbeba5279"
-          (reference "#PWR032") (unit 1)
+          (reference "#PWR01") (unit 1)
         )
       )
     )
@@ -1411,13 +1348,13 @@
   (symbol (lib_id "Analog_ADC:MCP3008") (at 80.01 134.62 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 9721e277-3323-4cff-957b-d26a940b29de)
-    (property "Reference" "U2" (at 86.36 119.38 0)
+    (property "Reference" "U1" (at 86.36 119.38 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "MCP3008" (at 86.36 121.92 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
-    (property "Footprint" "" (at 82.55 132.08 0)
+    (property "Footprint" "PCM_Package_SO_AKL:SOIC-16_3.9x9.9mm_P1.27mm" (at 82.55 132.08 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "http://ww1.microchip.com/downloads/en/DeviceDoc/21295d.pdf" (at 82.55 132.08 0)
@@ -1442,7 +1379,7 @@
     (instances
       (project "battery monitoring board"
         (path "/bf623d80-ca5a-491f-9daa-4dffbeba5279"
-          (reference "U2") (unit 1)
+          (reference "U1") (unit 1)
         )
       )
     )
@@ -1451,7 +1388,7 @@
   (symbol (lib_id "PCM_4ms_Power-symbol:GND") (at 87.63 49.53 270) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 9bdc7213-22e5-465c-a7ec-68c5daa7d01f)
-    (property "Reference" "#PWR01" (at 81.28 49.53 0)
+    (property "Reference" "#PWR04" (at 81.28 49.53 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (at 86.36 52.07 90)
@@ -1467,7 +1404,7 @@
     (instances
       (project "battery monitoring board"
         (path "/bf623d80-ca5a-491f-9daa-4dffbeba5279"
-          (reference "#PWR01") (unit 1)
+          (reference "#PWR04") (unit 1)
         )
       )
     )
@@ -1476,7 +1413,7 @@
   (symbol (lib_id "PCM_4ms_Power-symbol:+5V") (at 127 58.42 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid b34bc405-81d3-467c-bb46-0d4b0bf6e492)
-    (property "Reference" "#PWR04" (at 127 62.23 0)
+    (property "Reference" "#PWR010" (at 127 62.23 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "+5V" (at 128.016 54.61 0)
@@ -1492,7 +1429,7 @@
     (instances
       (project "battery monitoring board"
         (path "/bf623d80-ca5a-491f-9daa-4dffbeba5279"
-          (reference "#PWR04") (unit 1)
+          (reference "#PWR010") (unit 1)
         )
       )
     )
@@ -1501,7 +1438,7 @@
   (symbol (lib_id "PCM_4ms_Power-symbol:GND") (at 147.32 73.66 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid bf8bc524-ab7e-421a-b8a5-928f86e71004)
-    (property "Reference" "#PWR05" (at 147.32 80.01 0)
+    (property "Reference" "#PWR011" (at 147.32 80.01 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (at 149.86 76.2 0)
@@ -1517,33 +1454,7 @@
     (instances
       (project "battery monitoring board"
         (path "/bf623d80-ca5a-491f-9daa-4dffbeba5279"
-          (reference "#PWR05") (unit 1)
-        )
-      )
-    )
-  )
-
-  (symbol (lib_id "Device:LED") (at 100.33 66.04 0) (unit 1)
-    (in_bom yes) (on_board yes) (dnp no)
-    (uuid ef0430d7-757d-410d-b5d4-a3d0a07229cc)
-    (property "Reference" "D7" (at 100.33 63.5 0)
-      (effects (font (size 1.27 1.27)))
-    )
-    (property "Value" "Green LED" (at 100.33 69.85 0)
-      (effects (font (size 1.27 1.27)))
-    )
-    (property "Footprint" "Diode_SMD:D_0805_2012Metric_Pad1.15x1.40mm_HandSolder" (at 100.33 66.04 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Datasheet" "~" (at 100.33 66.04 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (pin "1" (uuid 2d9a7bc5-ba2c-4b1c-b910-47dcbeaa8f06))
-    (pin "2" (uuid f2c4f02c-03c9-41fa-98f5-44c5fe24faca))
-    (instances
-      (project "battery monitoring board"
-        (path "/bf623d80-ca5a-491f-9daa-4dffbeba5279"
-          (reference "D7") (unit 1)
+          (reference "#PWR011") (unit 1)
         )
       )
     )

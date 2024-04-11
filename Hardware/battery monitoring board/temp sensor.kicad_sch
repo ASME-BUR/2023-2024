@@ -727,13 +727,13 @@
   (symbol (lib_id "Connector:TestPoint") (at 68.8733 107.188 180) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 03416576-5b23-4de0-8441-6b4c6f05b812)
-    (property "Reference" "TP5" (at 63.5 109.22 0)
+    (property "Reference" "TP6" (at 63.5 109.22 0)
       (effects (font (size 1.27 1.27)) (justify right))
     )
     (property "Value" "TestPoint" (at 58.42 111.76 0)
       (effects (font (size 1.27 1.27)) (justify right))
     )
-    (property "Footprint" "Library:Test Pads" (at 63.7933 107.188 0)
+    (property "Footprint" "PCM_4ms_TestPoint:TestPoint_Pad_06" (at 63.7933 107.188 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "~" (at 63.7933 107.188 0)
@@ -743,7 +743,7 @@
     (instances
       (project "battery monitoring board"
         (path "/bf623d80-ca5a-491f-9daa-4dffbeba5279/5ec2dbdf-a276-4d4c-99fc-008475c1e770"
-          (reference "TP5") (unit 1)
+          (reference "TP6") (unit 1)
         )
       )
     )
@@ -804,7 +804,7 @@
   (symbol (lib_id "PCM_4ms_Power-symbol:GND") (at 141.224 108.966 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 3d593f93-16be-48b1-a639-8d78653caeb4)
-    (property "Reference" "#PWR013" (at 141.224 115.316 0)
+    (property "Reference" "#PWR019" (at 141.224 115.316 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (at 141.224 114.3 0)
@@ -820,7 +820,7 @@
     (instances
       (project "battery monitoring board"
         (path "/bf623d80-ca5a-491f-9daa-4dffbeba5279/5ec2dbdf-a276-4d4c-99fc-008475c1e770"
-          (reference "#PWR013") (unit 1)
+          (reference "#PWR019") (unit 1)
         )
       )
     )
@@ -829,7 +829,7 @@
   (symbol (lib_id "power:+3V3") (at 202.438 80.518 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 4086809e-9880-44a6-8cf2-f2c1e40f93a8)
-    (property "Reference" "#PWR016" (at 202.438 84.328 0)
+    (property "Reference" "#PWR022" (at 202.438 84.328 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "+3V3" (at 202.438 75.184 0)
@@ -845,7 +845,7 @@
     (instances
       (project "battery monitoring board"
         (path "/bf623d80-ca5a-491f-9daa-4dffbeba5279/5ec2dbdf-a276-4d4c-99fc-008475c1e770"
-          (reference "#PWR016") (unit 1)
+          (reference "#PWR022") (unit 1)
         )
       )
     )
@@ -854,7 +854,7 @@
   (symbol (lib_id "Device:R_US") (at 177.8 86.614 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 4701e2ad-0e5d-4bee-ad4c-744c855504c1)
-    (property "Reference" "R9" (at 180.34 85.344 0)
+    (property "Reference" "R11" (at 180.34 85.344 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "10k" (at 180.34 87.884 0)
@@ -871,7 +871,7 @@
     (instances
       (project "battery monitoring board"
         (path "/bf623d80-ca5a-491f-9daa-4dffbeba5279/5ec2dbdf-a276-4d4c-99fc-008475c1e770"
-          (reference "R9") (unit 1)
+          (reference "R11") (unit 1)
         )
       )
     )
@@ -880,13 +880,13 @@
   (symbol (lib_id "Connector:TestPoint") (at 117.2073 107.188 180) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 5243bf2d-2ad5-4b72-92e1-aea79316a0e3)
-    (property "Reference" "TP7" (at 119.4952 109.22 0)
+    (property "Reference" "TP8" (at 119.4952 109.22 0)
       (effects (font (size 1.27 1.27)) (justify right))
     )
     (property "Value" "TestPoint" (at 119.4952 111.76 0)
       (effects (font (size 1.27 1.27)) (justify right))
     )
-    (property "Footprint" "Library:Test Pads" (at 112.1273 107.188 0)
+    (property "Footprint" "PCM_4ms_TestPoint:TestPoint_Pad_06" (at 112.1273 107.188 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "~" (at 112.1273 107.188 0)
@@ -896,7 +896,7 @@
     (instances
       (project "battery monitoring board"
         (path "/bf623d80-ca5a-491f-9daa-4dffbeba5279/5ec2dbdf-a276-4d4c-99fc-008475c1e770"
-          (reference "TP7") (unit 1)
+          (reference "TP8") (unit 1)
         )
       )
     )
@@ -905,13 +905,13 @@
   (symbol (lib_id "Connector:TestPoint") (at 68.834 91.186 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 5438b128-2388-4627-a822-4b06e3ee13f9)
-    (property "Reference" "TP4" (at 63.5 86.36 0)
+    (property "Reference" "TP5" (at 63.5 86.36 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "TestPoint" (at 58.42 88.9 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
-    (property "Footprint" "Library:Test Pads" (at 73.914 91.186 0)
+    (property "Footprint" "PCM_4ms_TestPoint:TestPoint_Pad_06" (at 73.914 91.186 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "~" (at 73.914 91.186 0)
@@ -921,7 +921,7 @@
     (instances
       (project "battery monitoring board"
         (path "/bf623d80-ca5a-491f-9daa-4dffbeba5279/5ec2dbdf-a276-4d4c-99fc-008475c1e770"
-          (reference "TP4") (unit 1)
+          (reference "TP5") (unit 1)
         )
       )
     )
@@ -930,13 +930,13 @@
   (symbol (lib_id "Connector:TestPoint") (at 166.1092 96.266 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 5ad2c877-2e85-44e8-ad70-138e0f7fec5b)
-    (property "Reference" "TP8" (at 161.29 90.17 0)
+    (property "Reference" "TP9" (at 161.29 90.17 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "TestPoint" (at 155.9382 92.1753 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
-    (property "Footprint" "Library:Test Pads" (at 171.1892 96.266 0)
+    (property "Footprint" "PCM_4ms_TestPoint:TestPoint_Pad_06" (at 171.1892 96.266 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "~" (at 171.1892 96.266 0)
@@ -946,7 +946,7 @@
     (instances
       (project "battery monitoring board"
         (path "/bf623d80-ca5a-491f-9daa-4dffbeba5279/5ec2dbdf-a276-4d4c-99fc-008475c1e770"
-          (reference "TP8") (unit 1)
+          (reference "TP9") (unit 1)
         )
       )
     )
@@ -955,13 +955,13 @@
   (symbol (lib_id "Connector:TestPoint") (at 168.2309 101.346 180) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 7ba2df60-a7fc-42ff-b011-2149692b9be6)
-    (property "Reference" "TP9" (at 166.37 106.68 0)
+    (property "Reference" "TP10" (at 166.37 106.68 0)
       (effects (font (size 1.27 1.27)) (justify right))
     )
     (property "Value" "TestPoint" (at 163.83 107.95 0)
       (effects (font (size 1.27 1.27)) (justify right))
     )
-    (property "Footprint" "Library:Test Pads" (at 163.1509 101.346 0)
+    (property "Footprint" "PCM_4ms_TestPoint:TestPoint_Pad_06" (at 163.1509 101.346 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "~" (at 163.1509 101.346 0)
@@ -971,7 +971,7 @@
     (instances
       (project "battery monitoring board"
         (path "/bf623d80-ca5a-491f-9daa-4dffbeba5279/5ec2dbdf-a276-4d4c-99fc-008475c1e770"
-          (reference "TP9") (unit 1)
+          (reference "TP10") (unit 1)
         )
       )
     )
@@ -980,7 +980,7 @@
   (symbol (lib_id "Device:R_US") (at 177.8 107.696 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 8577fdd0-a081-4338-9b1e-aab93a9af89e)
-    (property "Reference" "R10" (at 180.34 106.426 0)
+    (property "Reference" "R12" (at 180.34 106.426 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "10k" (at 180.34 108.966 0)
@@ -997,7 +997,7 @@
     (instances
       (project "battery monitoring board"
         (path "/bf623d80-ca5a-491f-9daa-4dffbeba5279/5ec2dbdf-a276-4d4c-99fc-008475c1e770"
-          (reference "R10") (unit 1)
+          (reference "R12") (unit 1)
         )
       )
     )
@@ -1006,7 +1006,7 @@
   (symbol (lib_id "Device:C") (at 103.124 98.806 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 8fb2e9d6-3cea-4e47-92ae-57f3d806b5da)
-    (property "Reference" "C4" (at 106.68 97.536 0)
+    (property "Reference" "C5" (at 106.68 97.536 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "0.01u" (at 106.68 100.076 0)
@@ -1023,7 +1023,7 @@
     (instances
       (project "battery monitoring board"
         (path "/bf623d80-ca5a-491f-9daa-4dffbeba5279/5ec2dbdf-a276-4d4c-99fc-008475c1e770"
-          (reference "C4") (unit 1)
+          (reference "C5") (unit 1)
         )
       )
     )
@@ -1032,7 +1032,7 @@
   (symbol (lib_id "Device:C_Small") (at 218.44 83.058 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 9e08e52b-2aa7-4017-ada2-1611d8ad37f6)
-    (property "Reference" "C6" (at 221.234 81.7943 0)
+    (property "Reference" "C7" (at 221.234 81.7943 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "10u" (at 221.234 84.3343 0)
@@ -1049,7 +1049,7 @@
     (instances
       (project "battery monitoring board"
         (path "/bf623d80-ca5a-491f-9daa-4dffbeba5279/5ec2dbdf-a276-4d4c-99fc-008475c1e770"
-          (reference "C6") (unit 1)
+          (reference "C7") (unit 1)
         )
       )
     )
@@ -1058,13 +1058,13 @@
   (symbol (lib_id "Connector:TestPoint") (at 117.1908 91.186 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid a28c3425-2bd7-4011-9407-fadc12f1ff00)
-    (property "Reference" "TP6" (at 119.4937 86.614 0)
+    (property "Reference" "TP7" (at 119.4937 86.614 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "TestPoint" (at 119.4937 89.154 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
-    (property "Footprint" "Library:Test Pads" (at 122.2708 91.186 0)
+    (property "Footprint" "PCM_4ms_TestPoint:TestPoint_Pad_06" (at 122.2708 91.186 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "~" (at 122.2708 91.186 0)
@@ -1074,7 +1074,7 @@
     (instances
       (project "battery monitoring board"
         (path "/bf623d80-ca5a-491f-9daa-4dffbeba5279/5ec2dbdf-a276-4d4c-99fc-008475c1e770"
-          (reference "TP6") (unit 1)
+          (reference "TP7") (unit 1)
         )
       )
     )
@@ -1083,7 +1083,7 @@
   (symbol (lib_id "power:+3V3") (at 177.8 111.506 180) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid ae242d33-ecd3-4fbd-bd3a-4f9d84992fa1)
-    (property "Reference" "#PWR015" (at 177.8 107.696 0)
+    (property "Reference" "#PWR021" (at 177.8 107.696 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "+3V3" (at 177.8 116.84 0)
@@ -1099,7 +1099,7 @@
     (instances
       (project "battery monitoring board"
         (path "/bf623d80-ca5a-491f-9daa-4dffbeba5279/5ec2dbdf-a276-4d4c-99fc-008475c1e770"
-          (reference "#PWR015") (unit 1)
+          (reference "#PWR021") (unit 1)
         )
       )
     )
@@ -1133,7 +1133,7 @@
           (reference "U1") (unit 1)
         )
         (path "/bf623d80-ca5a-491f-9daa-4dffbeba5279/5ec2dbdf-a276-4d4c-99fc-008475c1e770"
-          (reference "U1") (unit 1)
+          (reference "U2") (unit 1)
         )
       )
     )
@@ -1142,7 +1142,7 @@
   (symbol (lib_id "Device:C_Small") (at 202.438 83.058 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid b5df1827-9a8a-4a8e-82e1-f7785724d638)
-    (property "Reference" "C5" (at 205.74 81.7943 0)
+    (property "Reference" "C6" (at 205.74 81.7943 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "10u" (at 205.74 84.3343 0)
@@ -1159,7 +1159,7 @@
     (instances
       (project "battery monitoring board"
         (path "/bf623d80-ca5a-491f-9daa-4dffbeba5279/5ec2dbdf-a276-4d4c-99fc-008475c1e770"
-          (reference "C5") (unit 1)
+          (reference "C6") (unit 1)
         )
       )
     )
@@ -1168,7 +1168,7 @@
   (symbol (lib_id "Device:D") (at 188.468 93.726 180) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid c775f6e2-5b42-403d-9ac2-0cffc1a48344)
-    (property "Reference" "D2" (at 188.468 87.63 0)
+    (property "Reference" "D4" (at 188.468 87.63 0)
       (effects (font (size 1.27 1.27)))
     )
     (property "Value" "D" (at 188.468 90.17 0)
@@ -1191,7 +1191,7 @@
     (instances
       (project "battery monitoring board"
         (path "/bf623d80-ca5a-491f-9daa-4dffbeba5279/5ec2dbdf-a276-4d4c-99fc-008475c1e770"
-          (reference "D2") (unit 1)
+          (reference "D4") (unit 1)
         )
       )
     )
@@ -1200,7 +1200,7 @@
   (symbol (lib_id "PCM_4ms_Power-symbol:GND") (at 202.438 85.598 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid cc47b152-8f11-4220-a39a-2f6345b19498)
-    (property "Reference" "#PWR017" (at 202.438 91.948 0)
+    (property "Reference" "#PWR023" (at 202.438 91.948 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (at 202.438 90.932 0)
@@ -1216,7 +1216,7 @@
     (instances
       (project "battery monitoring board"
         (path "/bf623d80-ca5a-491f-9daa-4dffbeba5279/5ec2dbdf-a276-4d4c-99fc-008475c1e770"
-          (reference "#PWR017") (unit 1)
+          (reference "#PWR023") (unit 1)
         )
       )
     )
@@ -1225,13 +1225,13 @@
   (symbol (lib_id "Connector:TestPoint") (at 168.2646 93.726 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid ce41bdce-399b-46c2-b43b-b926fe3d41d3)
-    (property "Reference" "TP10" (at 166.37 86.36 0)
+    (property "Reference" "TP11" (at 166.37 86.36 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "TestPoint" (at 164.1558 88.4033 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
-    (property "Footprint" "Library:Test Pads" (at 173.3446 93.726 0)
+    (property "Footprint" "PCM_4ms_TestPoint:TestPoint_Pad_06" (at 173.3446 93.726 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "~" (at 173.3446 93.726 0)
@@ -1241,7 +1241,7 @@
     (instances
       (project "battery monitoring board"
         (path "/bf623d80-ca5a-491f-9daa-4dffbeba5279/5ec2dbdf-a276-4d4c-99fc-008475c1e770"
-          (reference "TP10") (unit 1)
+          (reference "TP11") (unit 1)
         )
       )
     )
@@ -1250,7 +1250,7 @@
   (symbol (lib_id "Device:D") (at 188.722 101.346 180) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid d0b91de6-c593-4492-b4b8-2812043ad231)
-    (property "Reference" "D3" (at 188.468 104.902 0)
+    (property "Reference" "D5" (at 188.468 104.902 0)
       (effects (font (size 1.27 1.27)))
     )
     (property "Value" "D" (at 188.468 107.442 0)
@@ -1273,7 +1273,7 @@
     (instances
       (project "battery monitoring board"
         (path "/bf623d80-ca5a-491f-9daa-4dffbeba5279/5ec2dbdf-a276-4d4c-99fc-008475c1e770"
-          (reference "D3") (unit 1)
+          (reference "D5") (unit 1)
         )
       )
     )
@@ -1282,7 +1282,7 @@
   (symbol (lib_id "PCM_4ms_Power-symbol:GND") (at 218.44 85.598 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid e838e141-766b-4859-9b77-39a60f7bef7b)
-    (property "Reference" "#PWR019" (at 218.44 91.948 0)
+    (property "Reference" "#PWR025" (at 218.44 91.948 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (at 218.44 90.932 0)
@@ -1298,7 +1298,7 @@
     (instances
       (project "battery monitoring board"
         (path "/bf623d80-ca5a-491f-9daa-4dffbeba5279/5ec2dbdf-a276-4d4c-99fc-008475c1e770"
-          (reference "#PWR019") (unit 1)
+          (reference "#PWR025") (unit 1)
         )
       )
     )
@@ -1313,7 +1313,7 @@
     (property "Value" "Conn_01x02" (at 56.134 95.504 0)
       (effects (font (size 1.27 1.27)))
     )
-    (property "Footprint" "Library:TE_282836-2" (at 56.769 106.045 0)
+    (property "Footprint" "4ms_Connector:Pins_1x02_2.54mm_TH" (at 56.769 106.045 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "" (at 56.134 101.6 0)
@@ -1342,7 +1342,7 @@
   (symbol (lib_id "power:+3V3") (at 218.44 80.518 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid ee392fdf-8020-4ffc-9315-9db975a33f08)
-    (property "Reference" "#PWR018" (at 218.44 84.328 0)
+    (property "Reference" "#PWR024" (at 218.44 84.328 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "+3V3" (at 218.44 75.184 0)
@@ -1358,7 +1358,7 @@
     (instances
       (project "battery monitoring board"
         (path "/bf623d80-ca5a-491f-9daa-4dffbeba5279/5ec2dbdf-a276-4d4c-99fc-008475c1e770"
-          (reference "#PWR018") (unit 1)
+          (reference "#PWR024") (unit 1)
         )
       )
     )
@@ -1367,7 +1367,7 @@
   (symbol (lib_id "power:+3V3") (at 141.224 88.646 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid f2b22cab-f70d-4712-8443-8658921e99d8)
-    (property "Reference" "#PWR012" (at 141.224 92.456 0)
+    (property "Reference" "#PWR018" (at 141.224 92.456 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "+3V3" (at 141.224 83.82 0)
@@ -1383,7 +1383,7 @@
     (instances
       (project "battery monitoring board"
         (path "/bf623d80-ca5a-491f-9daa-4dffbeba5279/5ec2dbdf-a276-4d4c-99fc-008475c1e770"
-          (reference "#PWR012") (unit 1)
+          (reference "#PWR018") (unit 1)
         )
       )
     )
@@ -1392,7 +1392,7 @@
   (symbol (lib_id "power:+3V3") (at 177.8 82.804 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid fb9cb4cc-b31a-4bf3-8bcf-2e3ed533c45c)
-    (property "Reference" "#PWR014" (at 177.8 86.614 0)
+    (property "Reference" "#PWR020" (at 177.8 86.614 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "+3V3" (at 177.8 77.47 0)
@@ -1408,7 +1408,7 @@
     (instances
       (project "battery monitoring board"
         (path "/bf623d80-ca5a-491f-9daa-4dffbeba5279/5ec2dbdf-a276-4d4c-99fc-008475c1e770"
-          (reference "#PWR014") (unit 1)
+          (reference "#PWR020") (unit 1)
         )
       )
     )

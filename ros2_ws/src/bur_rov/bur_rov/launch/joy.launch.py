@@ -37,16 +37,14 @@ def generate_launch_description():
             Node(
                 package="tf2_ros",               
                 executable="static_transform_publisher",
-                parameters=[
-                    {"x": 0},
-                    {"y": 0},
-                    {"z": 0},
-                    {"roll": 0},
-                    {"pitch": 0},
-                    {"yaw": 0},
-                    {"frame-id": "map"},
-                    {"child-frame-id": "my_frame"}
-                ]
+                arguments = ['--x', '0',
+                             '--y', '0',
+                             '--z', '0', 
+                             '--yaw', '0', 
+                             '--pitch', '0', 
+                             '--roll', '0', 
+                             '--frame-id', 'world', 
+                             '--child-frame-id', 'map']
             )
 
         ]

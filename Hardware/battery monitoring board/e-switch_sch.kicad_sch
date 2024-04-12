@@ -942,7 +942,7 @@
     (property "Reference" "J5" (at 31.75 44.45 0)
       (effects (font (size 1.27 1.27)))
     )
-    (property "Value" "Conn_01x02" (at 27.94 46.99 0)
+    (property "Value" "- 9V BAT +" (at 27.94 46.99 0)
       (effects (font (size 1.27 1.27)))
     )
     (property "Footprint" "Library:DEANS" (at 35.56 45.72 0)

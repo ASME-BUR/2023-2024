@@ -846,10 +846,10 @@
           (reference "TP9") (unit 1)
         )
         (path "/bf623d80-ca5a-491f-9daa-4dffbeba5279/986cc9e1-c37e-4aa2-b3b5-8e2dcbe750c5"
-          (reference "TP2") (unit 1)
+          (reference "2") (unit 1)
         )
         (path "/bf623d80-ca5a-491f-9daa-4dffbeba5279/26c6129c-8fb5-4658-8c7a-1dc4298981ba"
-          (reference "TP16") (unit 1)
+          (reference "2") (unit 1)
         )
       )
     )
@@ -981,10 +981,10 @@
           (reference "TP9") (unit 1)
         )
         (path "/bf623d80-ca5a-491f-9daa-4dffbeba5279/986cc9e1-c37e-4aa2-b3b5-8e2dcbe750c5"
-          (reference "TP1") (unit 1)
+          (reference "1") (unit 1)
         )
         (path "/bf623d80-ca5a-491f-9daa-4dffbeba5279/26c6129c-8fb5-4658-8c7a-1dc4298981ba"
-          (reference "TP15") (unit 1)
+          (reference "1") (unit 1)
         )
       )
     )
@@ -1168,7 +1168,7 @@
     (property "Value" "S5B-XH-A" (at 23.495 21.59 0)
       (effects (font (size 1.27 1.27)))
     )
-    (property "Footprint" "S5B-XH-A:JST_S5B-XH-A" (at 26.67 31.75 0)
+    (property "Footprint" "Connector_JST:JST_XH_B5B-XH-A_1x05_P2.50mm_Vertical" (at 26.67 31.75 0)
       (effects (font (size 1.27 1.27)) (justify bottom) hide)
     )
     (property "Datasheet" "" (at 26.67 31.75 0)
@@ -1229,10 +1229,10 @@
           (reference "J1") (unit 1)
         )
         (path "/bf623d80-ca5a-491f-9daa-4dffbeba5279/986cc9e1-c37e-4aa2-b3b5-8e2dcbe750c5"
-          (reference "J3") (unit 1)
+          (reference "J3 -") (unit 1)
         )
         (path "/bf623d80-ca5a-491f-9daa-4dffbeba5279/26c6129c-8fb5-4658-8c7a-1dc4298981ba"
-          (reference "J10") (unit 1)
+          (reference "J9 +") (unit 1)
         )
       )
     )
@@ -1263,10 +1263,10 @@
           (reference "TP9") (unit 1)
         )
         (path "/bf623d80-ca5a-491f-9daa-4dffbeba5279/986cc9e1-c37e-4aa2-b3b5-8e2dcbe750c5"
-          (reference "TP4") (unit 1)
+          (reference "4") (unit 1)
         )
         (path "/bf623d80-ca5a-491f-9daa-4dffbeba5279/26c6129c-8fb5-4658-8c7a-1dc4298981ba"
-          (reference "TP18") (unit 1)
+          (reference "4") (unit 1)
         )
       )
     )
@@ -1297,10 +1297,10 @@
           (reference "TP9") (unit 1)
         )
         (path "/bf623d80-ca5a-491f-9daa-4dffbeba5279/986cc9e1-c37e-4aa2-b3b5-8e2dcbe750c5"
-          (reference "TP3") (unit 1)
+          (reference "3") (unit 1)
         )
         (path "/bf623d80-ca5a-491f-9daa-4dffbeba5279/26c6129c-8fb5-4658-8c7a-1dc4298981ba"
-          (reference "TP17") (unit 1)
+          (reference "3") (unit 1)
         )
       )
     )

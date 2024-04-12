@@ -930,7 +930,7 @@
   (symbol (lib_id "Connector:TestPoint") (at 166.1092 96.266 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 5ad2c877-2e85-44e8-ad70-138e0f7fec5b)
-    (property "Reference" "so" (at 161.29 90.17 0)
+    (property "Reference" "so1" (at 161.29 90.17 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "TestPoint" (at 155.9382 92.1753 0)
@@ -946,7 +946,7 @@
     (instances
       (project "battery monitoring board"
         (path "/bf623d80-ca5a-491f-9daa-4dffbeba5279/5ec2dbdf-a276-4d4c-99fc-008475c1e770"
-          (reference "so") (unit 1)
+          (reference "so1") (unit 1)
         )
       )
     )
@@ -955,7 +955,7 @@
   (symbol (lib_id "Connector:TestPoint") (at 168.2309 101.346 180) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 7ba2df60-a7fc-42ff-b011-2149692b9be6)
-    (property "Reference" "cs_t" (at 166.37 106.68 0)
+    (property "Reference" "cs_t1" (at 166.37 106.68 0)
       (effects (font (size 1.27 1.27)) (justify right))
     )
     (property "Value" "TestPoint" (at 163.83 107.95 0)
@@ -971,7 +971,7 @@
     (instances
       (project "battery monitoring board"
         (path "/bf623d80-ca5a-491f-9daa-4dffbeba5279/5ec2dbdf-a276-4d4c-99fc-008475c1e770"
-          (reference "cs_t") (unit 1)
+          (reference "cs_t1") (unit 1)
         )
       )
     )
@@ -1225,7 +1225,7 @@
   (symbol (lib_id "Connector:TestPoint") (at 168.2646 93.726 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid ce41bdce-399b-46c2-b43b-b926fe3d41d3)
-    (property "Reference" "sck" (at 166.37 86.36 0)
+    (property "Reference" "sck1" (at 166.37 86.36 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "TestPoint" (at 164.1558 88.4033 0)
@@ -1241,7 +1241,7 @@
     (instances
       (project "battery monitoring board"
         (path "/bf623d80-ca5a-491f-9daa-4dffbeba5279/5ec2dbdf-a276-4d4c-99fc-008475c1e770"
-          (reference "sck") (unit 1)
+          (reference "sck1") (unit 1)
         )
       )
     )

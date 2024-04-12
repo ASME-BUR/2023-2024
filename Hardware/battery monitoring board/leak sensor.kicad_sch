@@ -671,7 +671,7 @@
       )
       (project "battery monitoring board"
         (path "/bf623d80-ca5a-491f-9daa-4dffbeba5279/7fa71be0-4e2c-431c-85f4-b0f15423b53d"
-          (reference "- J6 +") (unit 1)
+          (reference "- J6 +1") (unit 1)
         )
       )
     )
@@ -702,7 +702,7 @@
       )
       (project "battery monitoring board"
         (path "/bf623d80-ca5a-491f-9daa-4dffbeba5279/7fa71be0-4e2c-431c-85f4-b0f15423b53d"
-          (reference "- J8 +") (unit 1)
+          (reference "- J8 +1") (unit 1)
         )
       )
     )
@@ -763,7 +763,7 @@
           (reference "TP9") (unit 1)
         )
         (path "/bf623d80-ca5a-491f-9daa-4dffbeba5279/7fa71be0-4e2c-431c-85f4-b0f15423b53d"
-          (reference "Leak") (unit 1)
+          (reference "Leak1") (unit 1)
         )
       )
     )
@@ -917,7 +917,7 @@
       )
       (project "battery monitoring board"
         (path "/bf623d80-ca5a-491f-9daa-4dffbeba5279/7fa71be0-4e2c-431c-85f4-b0f15423b53d"
-          (reference "- J7 +") (unit 1)
+          (reference "- J7 +1") (unit 1)
         )
       )
     )
@@ -948,7 +948,7 @@
       )
       (project "battery monitoring board"
         (path "/bf623d80-ca5a-491f-9daa-4dffbeba5279/7fa71be0-4e2c-431c-85f4-b0f15423b53d"
-          (reference " - J5 +") (unit 1)
+          (reference " - J5 +1") (unit 1)
         )
       )
     )

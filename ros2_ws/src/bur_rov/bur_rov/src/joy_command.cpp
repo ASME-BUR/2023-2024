@@ -1,5 +1,6 @@
 #include "joy_command.hpp"
 #include <Eigen/Dense>
+#include <Eigen/Geometry>
 #include <iostream>
 #include <cmath>
 
@@ -34,7 +35,7 @@ void JoyCommand::joy_callback(const sensor_msgs::msg::Joy::SharedPtr msg)
     if (!msg->axes.empty())
     {
         this->output.target_vel.linear.x = vel_cap * msg->axes[axis_mapping_.at("linear_x")];
-        this->output.target_vel.linear.y = vel_cap * msg->axes[axis_mapping_.at("linear_y")];
+        this->output.target_vel.linear.y = vel_cap * -msg->axes[axis_mapping_.at("linear_y")];
         this->output.target_vel.linear.z = vel_cap * msg->axes[axis_mapping_.at("linear_z")];
         this->output.target_vel.angular.x = vel_cap * msg->axes[axis_mapping_.at("angular_x")];
         this->output.target_vel.angular.y = vel_cap * msg->axes[axis_mapping_.at("angular_y")];
@@ -87,11 +88,30 @@ void JoyCommand::imu_callback(const sensor_msgs::msg::Imu::SharedPtr msg)
     this->output.current_vel.angular.y = msg->angular_velocity.y;
     this->output.current_vel.angular.z = msg->angular_velocity.z;
     rclcpp::Time now = this->now();
-    double acceleration[3] = {msg->linear_acceleration.x, msg->linear_acceleration.y, msg->linear_acceleration.z + 9.80665};
-    // vel_calc(acceleration, now, prev_time);
-    // this->output.current_vel.linear.x = velocity[0];
-    // this->output.current_vel.linear.y = velocity[1];
-    // this->output.current_vel.linear.z = velocity[2];
+    double acceleration[3] = {msg->linear_acceleration.x, msg->linear_acceleration.y, -msg->linear_acceleration.z};
+
+    // Gravity adjustment
+    Eigen::Quaterniond orientation;
+    orientation.x() = msg->orientation.x;
+    orientation.y() = msg->orientation.y;
+    orientation.z() = msg->orientation.z;
+    orientation.w() = msg->orientation.w;
+
+    Eigen::Matrix3d rotationMatrix = orientation.toRotationMatrix();
+    Eigen::Vector3d gravity = {0, 0, 9.80665};
+    Eigen::Vector3d gravityOffset = rotationMatrix * gravity;
+
+    acceleration[0] -= gravityOffset[0];
+    acceleration[1] -= gravityOffset[1];
+    acceleration[2] += gravityOffset[2];
+
+
+    vel_calc(acceleration, now, prev_time);
+
+    this->output.current_vel.linear.x = velocity[0];
+    this->output.current_vel.linear.y = velocity[1];
+    this->output.current_vel.linear.z = velocity[2];
+
     cmd_pub->publish(output);
     prev_time = this->now();
 

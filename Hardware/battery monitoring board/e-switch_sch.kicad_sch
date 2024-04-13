@@ -839,7 +839,7 @@
           (reference "TP1") (unit 1)
         )
         (path "/bf623d80-ca5a-491f-9daa-4dffbeba5279/d1e89632-1041-42ed-815d-03472eda859a"
-          (reference "TP14") (unit 1)
+          (reference "TP2") (unit 1)
         )
       )
     )
@@ -848,7 +848,7 @@
   (symbol (lib_id "power:GND") (at 86.36 92.71 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 1e0fae94-6d91-4826-99a0-cf0aa896d844)
-    (property "Reference" "#PWR031" (at 86.36 99.06 0)
+    (property "Reference" "#PWR032" (at 86.36 99.06 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (at 86.36 97.79 0)
@@ -864,7 +864,7 @@
     (instances
       (project "battery monitoring board"
         (path "/bf623d80-ca5a-491f-9daa-4dffbeba5279/d1e89632-1041-42ed-815d-03472eda859a"
-          (reference "#PWR031") (unit 1)
+          (reference "#PWR032") (unit 1)
         )
       )
       (project "e-switch_sch"
@@ -930,7 +930,7 @@
           (reference "R14") (unit 1)
         )
         (path "/bf623d80-ca5a-491f-9daa-4dffbeba5279/d1e89632-1041-42ed-815d-03472eda859a"
-          (reference "R18") (unit 1)
+          (reference "R17") (unit 1)
         )
       )
     )
@@ -964,7 +964,7 @@
           (reference "J8") (unit 1)
         )
         (path "/bf623d80-ca5a-491f-9daa-4dffbeba5279/d1e89632-1041-42ed-815d-03472eda859a"
-          (reference "J9") (unit 1)
+          (reference "J10") (unit 1)
         )
       )
     )
@@ -973,7 +973,7 @@
   (symbol (lib_id "PCM_4ms_Power-symbol:GND") (at 44.45 50.8 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 77025453-0053-4631-ae4a-107a161a7e61)
-    (property "Reference" "#PWR030" (at 44.45 57.15 0)
+    (property "Reference" "#PWR031" (at 44.45 57.15 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (at 44.45 55.88 0)
@@ -989,7 +989,7 @@
     (instances
       (project "battery monitoring board"
         (path "/bf623d80-ca5a-491f-9daa-4dffbeba5279/d1e89632-1041-42ed-815d-03472eda859a"
-          (reference "#PWR030") (unit 1)
+          (reference "#PWR031") (unit 1)
         )
       )
     )
@@ -998,7 +998,7 @@
   (symbol (lib_id "PCM_4ms_Power-symbol:+9V") (at 44.45 44.45 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 774813e9-e0db-44ff-8327-23df773a6ff9)
-    (property "Reference" "#PWR029" (at 44.45 48.26 0)
+    (property "Reference" "#PWR030" (at 44.45 48.26 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "+9V" (at 44.45 39.37 0)
@@ -1014,7 +1014,7 @@
     (instances
       (project "battery monitoring board"
         (path "/bf623d80-ca5a-491f-9daa-4dffbeba5279/d1e89632-1041-42ed-815d-03472eda859a"
-          (reference "#PWR029") (unit 1)
+          (reference "#PWR030") (unit 1)
         )
       )
     )
@@ -1042,7 +1042,7 @@
           (reference "TP1") (unit 1)
         )
         (path "/bf623d80-ca5a-491f-9daa-4dffbeba5279/d1e89632-1041-42ed-815d-03472eda859a"
-          (reference "TP13") (unit 1)
+          (reference "TP1") (unit 1)
         )
       )
     )
@@ -1051,7 +1051,7 @@
   (symbol (lib_id "Device:R_US") (at 62.23 76.2 90) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid bc31cf32-c760-4e29-9a66-cbcd422b2b77)
-    (property "Reference" "R17" (at 62.23 69.85 90)
+    (property "Reference" "R16" (at 62.23 69.85 90)
       (effects (font (size 1.27 1.27)))
     )
     (property "Value" "220" (at 62.23 72.39 90)
@@ -1068,7 +1068,7 @@
     (instances
       (project "battery monitoring board"
         (path "/bf623d80-ca5a-491f-9daa-4dffbeba5279/d1e89632-1041-42ed-815d-03472eda859a"
-          (reference "R17") (unit 1)
+          (reference "R16") (unit 1)
         )
       )
       (project "e-switch_sch"
@@ -1082,7 +1082,7 @@
   (symbol (lib_id "Device:D") (at 72.39 67.31 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid cc51e136-796e-49af-914f-e581d07eb004)
-    (property "Reference" "D7" (at 72.39 62.738 0)
+    (property "Reference" "D6" (at 72.39 62.738 0)
       (effects (font (size 1.27 1.27)))
     )
     (property "Value" "1N4007" (at 72.39 64.77 0)
@@ -1105,7 +1105,7 @@
     (instances
       (project "battery monitoring board"
         (path "/bf623d80-ca5a-491f-9daa-4dffbeba5279/d1e89632-1041-42ed-815d-03472eda859a"
-          (reference "D7") (unit 1)
+          (reference "D6") (unit 1)
         )
       )
     )
@@ -1142,7 +1142,7 @@
   (symbol (lib_id "Device:R_US") (at 71.12 85.09 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid efe8caf2-fbda-4613-895d-82e02e36303b)
-    (property "Reference" "R19" (at 73.66 83.82 0)
+    (property "Reference" "R18" (at 73.66 83.82 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "4.7k" (at 73.66 86.36 0)
@@ -1159,7 +1159,7 @@
     (instances
       (project "battery monitoring board"
         (path "/bf623d80-ca5a-491f-9daa-4dffbeba5279/d1e89632-1041-42ed-815d-03472eda859a"
-          (reference "R19") (unit 1)
+          (reference "R18") (unit 1)
         )
       )
       (project "e-switch_sch"
@@ -1193,7 +1193,7 @@
           (reference "D4") (unit 1)
         )
         (path "/bf623d80-ca5a-491f-9daa-4dffbeba5279/d1e89632-1041-42ed-815d-03472eda859a"
-          (reference "D8") (unit 1)
+          (reference "D7") (unit 1)
         )
       )
     )

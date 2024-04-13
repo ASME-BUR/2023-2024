@@ -91,18 +91,16 @@ void JoyCommand::imu_callback(const sensor_msgs::msg::Imu::SharedPtr msg)
     double acceleration[3] = {msg->linear_acceleration.x, msg->linear_acceleration.y, -msg->linear_acceleration.z};
 
     // Gravity adjustment
-    Eigen::Quaterniond orientation;
-    orientation.x() = msg->orientation.x;
-    orientation.y() = msg->orientation.y;
-    orientation.z() = msg->orientation.z;
-    orientation.w() = msg->orientation.w;
+    Eigen::Quaterniond orientation(msg->orientation.w,
+        msg->orientation.x,
+        msg->orientation.y,
+        msg->orientation.z);
 
-    Eigen::Matrix3d rotationMatrix = orientation.toRotationMatrix();
     Eigen::Vector3d gravity = {0, 0, 9.80665};
-    Eigen::Vector3d gravityOffset = rotationMatrix * gravity;
+    Eigen::Vector3d gravityOffset = orientation * gravity;
 
-    acceleration[0] -= gravityOffset[0];
-    acceleration[1] -= gravityOffset[1];
+    acceleration[0] += gravityOffset[0];
+    acceleration[1] += gravityOffset[1];
     acceleration[2] += gravityOffset[2];
 
 

@@ -47,14 +47,15 @@ void Thruster_manager::setVariables()
     TORQUE_MAX = this->get_parameter("max_torque").as_double();
     THRUST_MAX_FWD_N = THRUST_MAX_FWD * KGF2N;
     THRUST_MAX_BWD_N = THRUST_MAX_BWD * KGF2N;
+    last_motor_command.resize(8, 0);
     for (int i = 0; i < this->get_parameter("num_motors").as_int(); ++i)
     {
-        motors[i]["surge"] = this->get_parameter(string("motor" + to_string(i) + ".surge")).as_double();
-        motors[i]["sway"] = this->get_parameter(string("motor" + to_string(i) + ".sway")).as_double();
-        motors[i]["heave"] = this->get_parameter(string("motor" + to_string(i) + ".heave")).as_double();
-        motors[i]["roll"] = this->get_parameter(string("motor" + to_string(i) + ".roll")).as_double();
-        motors[i]["pitch"] = this->get_parameter(string("motor" + to_string(i) + ".pitch")).as_double();
-        motors[i]["yaw"] = this->get_parameter(string("motor" + to_string(i) + ".yaw")).as_double();
+        motors[i]["surge"] = this->get_parameter(string(motor_names[i] + ".surge")).as_double();
+        motors[i]["sway"] = this->get_parameter(string(motor_names[i] + ".sway")).as_double();
+        motors[i]["heave"] = this->get_parameter(string(motor_names[i] + ".heave")).as_double();
+        motors[i]["roll"] = this->get_parameter(string(motor_names[i] + ".roll")).as_double();
+        motors[i]["pitch"] = this->get_parameter(string(motor_names[i] + ".pitch")).as_double();
+        motors[i]["yaw"] = this->get_parameter(string(motor_names[i] + ".yaw")).as_double();
     }
 }
 
@@ -70,7 +71,7 @@ void Thruster_manager::cmd_Callback(const bur_rov_msgs::msg::Command::SharedPtr 
     {
         this->output.buttons.push_back(msg->buttons[i]);
     }
-    runNode();
+    // runNode();
 }
 
 void Thruster_manager::wrench_Callback(const geometry_msgs::msg::Wrench::SharedPtr msg)
@@ -81,7 +82,7 @@ void Thruster_manager::wrench_Callback(const geometry_msgs::msg::Wrench::SharedP
     pwr[3] = msg->torque.x;  // roll
     pwr[4] = -msg->torque.y; // pitch
     pwr[5] = -msg->torque.z; // yaw
-    // runNode();
+    runNode();
 }
 
 // Takes in thrust command in Newtons and returns motor commands in [-1,1] scaled accordingly with deadbands
@@ -155,29 +156,23 @@ void Thruster_manager::runNode()
     std::vector<float> motor_comms(motors.size(), 0);
     // Publish message
     this->output.thrusters.clear();
-    // if (this->output.buttons[3])
-    // {
-    for (size_t i = 0; i < des_motor_thrusts.size(); ++i)
+    for (size_t i = 0; i < motors.size(); ++i)
     {
         double m_comms = thrust_to_motor_comm(des_motor_thrusts[i]);
         m_comms = CommonFunctions::Clamp(m_comms, -1.0, 1.0); // Clamp just in case
-        // motor_comms[i] = (float)rateLimitMotorCommand(m_comms, last_motor_command[i]);
-        motor_comms[i] = (float)CommonFunctions::Clamp(m_comms, last_motor_command[i] - max_step_per_loop, last_motor_command[i] + max_step_per_loop);
-    }
-    // }
-    for (size_t i = 0; i < motors.size(); ++i)
-    {
-        this->output.thrusters.push_back(motor_comms[i]);
-        // this->output.thrusters.push_back(((float)this->output.buttons[i])*0.4);
-
+        // std::cout << "m_comms " << i << " " << m_comms << " last_cmd " << last_motor_command[i]<< std::endl;
+        motor_comms[i] = (float)rateLimitMotorCommand(m_comms, last_motor_command[i]);
+        this->output.thrusters.push_back(CommonFunctions::Clamp(motor_comms[i], -1.0, 1.0));
         // Store the last command so we can ramp it
         last_motor_command[i] = motor_comms[i];
     }
     cmd_pub->publish(this->output);
 } // End of run node
 
-void Thruster_manager::shutdown(){
-    for (size_t i=0;i<motors.size();i++){
+void Thruster_manager::shutdown()
+{
+    for (size_t i = 0; i < motors.size(); i++)
+    {
         this->output.thrusters.push_back(0);
     }
     cmd_pub->publish(this->output);

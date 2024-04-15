@@ -77,10 +77,10 @@ private:
     map<int, std::map<std::string, double>> motors;
     vector<std::string> allocation_priorities;
     vector<std::string> motor_names;
-    array<double, 6> last_motor_command = {0};
+    vector<double> last_motor_command;
     array<double, 6> pwr = {0};
     array<double, 6> pwr_limit = {1.0, 1.0, 1.0, 1.0, 1.0, 1.0};
-    double max_step_per_loop = 1;
+    double max_step_per_loop = 0.25;
     bool enable_priorities = true;
 
     double MOTOR_FORWARD_BACKWARD_RATIO; // BlueROV T200 produce 5.25kgf forward, 4.1 kgf backwards, at 16V
@@ -89,8 +89,8 @@ private:
     double KGF2N = 9.80665;              // kg-f to Newton ant
     double THRUST_DEADBAND_EPS;
     double MOTOR_DRIVER_DEADBAND; // Scale from 0 to 1
-    double FORCE_MAX = 60.0;      // N
-    double TORQUE_MAX = 8.0;      // N-m
+    double FORCE_MAX;      // N
+    double TORQUE_MAX;      // N-m
     double THRUST_MAX_FWD_N;
     double THRUST_MAX_BWD_N;
 };

@@ -295,7 +295,7 @@ uint8_t MS5837::crc4(uint16_t n_prom[])
 bool MS5837::write(uint8_t msg)
 {
 	char msg_char = (char)msg;
-	std::cout << "writing" << msg << endl;
+	std::cout << "writing" << hex << msg << endl;
 	if (i2c_write_byte(pi, handle, msg_char) != 0)
 	{
 		// cout << "failed to write: " << hex << int(msg) << endl;

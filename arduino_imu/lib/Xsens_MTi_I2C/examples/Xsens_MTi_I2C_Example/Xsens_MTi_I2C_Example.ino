@@ -26,14 +26,14 @@ MTi *MyMTi = NULL;
 
 
 void setup() {
-  Serial.begin(115200);             //Initialize communication for serial monitor output (Ctrl+Shift+M)
+  SerialUSB.begin(115200);             //Initialize communication for serial monitor output (Ctrl+Shift+M)
   Wire.begin();                     //Initialize Wire library for I2C communication
   pinMode(DRDY, INPUT);             //Data Ready pin, indicates whether data/notifications are available to be read
 
   MyMTi = new MTi(ADDRESS, DRDY);   //Create our new MTi object
 
   if (!MyMTi->detect(1000)) {       //Check if MTi is detected before moving on
-    Serial.println("Please check your hardware connections.");
+    SerialUSB.println("Please check your hardware connections.");
     while (1) {
       //Cannot continue because no MTi was detected.
     }

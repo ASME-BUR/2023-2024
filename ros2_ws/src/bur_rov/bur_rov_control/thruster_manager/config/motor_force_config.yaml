@@ -1,7 +1,7 @@
 thruster_manager:
   ros__parameters:
-    max_force: 100.0
-    max_torque: 30.0
+    max_force: 60.0
+    max_torque: 40.0
     num_motors: 8
 
     motor2:

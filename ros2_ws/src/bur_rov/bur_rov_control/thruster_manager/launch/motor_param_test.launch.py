@@ -16,10 +16,11 @@ def generate_launch_description():
         package = 'thruster_manager',
         name = 'thruster_manager',
         executable = 'thruster_manager',
+        output = 'screen',
         parameters = [config,
                       {"wrench_sub_topic": "wrench"},
                       {"cmd_sub_topic": "command"},
-                      {"thrust_cmd_pub_topic": "thruster_command"}
+                      {"thrust_cmd_pub_topic": "thruster_command"},
                       ]
     )
 

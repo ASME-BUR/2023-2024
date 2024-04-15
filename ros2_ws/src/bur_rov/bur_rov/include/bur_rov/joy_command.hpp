@@ -3,6 +3,7 @@
 
 #include "rclcpp/rclcpp.hpp"
 #include "geometry_msgs/msg/pose_with_covariance_stamped.hpp"
+#include "geometry_msgs/msg/vector3_stamped.hpp"
 #include "sensor_msgs/msg/joy.hpp"
 #include "sensor_msgs/msg/imu.hpp"
 #include "bur_rov_msgs/msg/command.hpp"
@@ -27,6 +28,8 @@ private:
     void imu_callback(const sensor_msgs::msg::Imu::SharedPtr msg);
     double* vel_calc(double acceleration[3], rclcpp::Time current_time, rclcpp::Time previous_time);
     rclcpp::Publisher<bur_rov_msgs::msg::Command>::SharedPtr cmd_pub;
+    rclcpp::Publisher<geometry_msgs::msg::Vector3Stamped>::SharedPtr imu_euler;
+    rclcpp::Publisher<geometry_msgs::msg::Vector3Stamped>::SharedPtr joy_euler;
     rclcpp::Subscription<sensor_msgs::msg::Joy>::SharedPtr joy_sub;
     rclcpp::Subscription<geometry_msgs::msg::PoseWithCovarianceStamped>::SharedPtr pose_sub;
     rclcpp::Subscription<sensor_msgs::msg::Imu>::SharedPtr imu_sub;

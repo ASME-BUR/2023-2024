@@ -7,13 +7,10 @@ def generate_launch_description():
         [
             Node(
                 package="bur_rov_sensors",
-                executable="bar30_node",
-                name="bar30",
+                executable="lps_node",
+                name="lps",
                 parameters=[
-                    # {"pi_address": "10.42.0.24"},
-                    {"fluid_density": 1005.0},
-                    {'rate': 30},
-
+                    {"pi_address": "10.42.0.24"},
                 ],
             )
         ]

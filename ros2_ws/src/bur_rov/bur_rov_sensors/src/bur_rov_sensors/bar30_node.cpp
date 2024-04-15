@@ -4,7 +4,7 @@ using std::placeholders::_1;
 
 Bar30_node::Bar30_node() : rclcpp::Node("bar30"), count(0)
 {
-    this->declare_parameter("pi_address", "192.168.8.157");
+    this->declare_parameter("pi_address", "NULL");
     this->declare_parameter("pi_port", "8888");
     this->declare_parameter("rate", 30);
     this->declare_parameter("fluid_density", 1029.0);
@@ -61,7 +61,10 @@ void Bar30_node::timer_Callback()
 int main(int argc, char *argv[])
 {
     rclcpp::init(argc, argv);
-    rclcpp::spin(std::make_shared<Bar30_node>());
+    while(rclcpp::ok()){
+        rclcpp::spin_some(std::make_shared<Bar30_node>());
+    }
+    // rclcpp::spin(std::make_shared<Bar30_node>());
     rclcpp::shutdown();
     return 0;
 }

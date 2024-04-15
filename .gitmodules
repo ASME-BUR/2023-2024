@@ -20,3 +20,6 @@
 	path = ros2_ws/src/bur_auv/eskf
 	url = https://github.com/ASME-BUR/eskf.git
 	branch = humble
+[submodule "ros2_ws/src/ros2_usb_camera"]
+	path = ros2_ws/src/ros2_usb_camera
+	url = https://github.com/klintan/ros2_usb_camera.git

@@ -44,11 +44,11 @@ void Xbus::readPipeStatus(uint8_t address, bool verbose)
   measurementSize = (uint16_t)status[2] | ((uint16_t)status[3] << 8);
   if (verbose)
   {
-    Serial.print("notification: ");
-    Serial.print(notificationSize);
-    Serial.print(" measurement: ");
-    Serial.print(measurementSize);
-    Serial.println();
+    SerialUSB.print("notification: ");
+    SerialUSB.print(notificationSize);
+    SerialUSB.print(" measurement: ");
+    SerialUSB.print(measurementSize);
+    SerialUSB.println();
   }
   Wire1.endTransmission(true);
 }
@@ -67,13 +67,13 @@ void Xbus::readPipeNotif(uint8_t address, bool verbose)
       datanotif[i] = Wire1.read();
       if (verbose)
       {
-        Serial.print(datanotif[i], HEX);
-        Serial.print(" ");
+        SerialUSB.print(datanotif[i], HEX);
+        SerialUSB.print(" ");
       }
     }
     if (verbose)
     {
-      Serial.println();
+      SerialUSB.println();
     }
   }
   Wire1.endTransmission(true);
@@ -140,13 +140,13 @@ void Xbus::readPipeMeas(uint8_t address, bool verbose)
       datameas[i] = Wire1.read();
       if (verbose)
       {
-        Serial.print(datameas[i], HEX);
-        Serial.print(" ");
+        SerialUSB.print(datameas[i], HEX);
+        SerialUSB.print(" ");
       }
     }
     if (verbose)
     {
-      Serial.println();
+      SerialUSB.println();
     }
   }
   Wire1.endTransmission(true);
@@ -200,7 +200,7 @@ void Xbus::parseNotification(uint8_t *notif, bool verbose)
   {
     if (verbose)
     {
-      Serial.println("Received WakeUp message.");
+      SerialUSB.println("Received WakeUp message.");
     }
     break;
   }
@@ -208,8 +208,8 @@ void Xbus::parseNotification(uint8_t *notif, bool verbose)
   {
     if (verbose)
     {
-      Serial.print("Received an error with code: ");
-      Serial.println(notif[2]);
+      SerialUSB.print("Received an error with code: ");
+      SerialUSB.println(notif[2]);
     }
     break;
   }
@@ -218,8 +218,8 @@ void Xbus::parseNotification(uint8_t *notif, bool verbose)
     if (verbose)
     {
       uint32_t warn = (uint32_t)notif[5] | ((uint32_t)notif[4] << 8);
-      Serial.print("Received a warning with code: ");
-      Serial.println(warn);
+      SerialUSB.print("Received a warning with code: ");
+      SerialUSB.println(warn);
     }
     break;
   }
@@ -227,12 +227,12 @@ void Xbus::parseNotification(uint8_t *notif, bool verbose)
   {
     if (verbose)
     {
-      Serial.print("Product code is: ");
+      SerialUSB.print("Product code is: ");
       for (int i = 2; i < notificationSize - 1; i++)
       {
-        Serial.print(char(notif[i]));
+        SerialUSB.print(char(notif[i]));
       }
-      Serial.println();
+      SerialUSB.println();
       productCode = char(notif[6]); // Store the product code (MTi-#) for later usage
     }
     break;
@@ -241,12 +241,12 @@ void Xbus::parseNotification(uint8_t *notif, bool verbose)
   {
     if (verbose)
     {
-      Serial.print("Firmware version is: ");
-      Serial.print(notif[2]);
-      Serial.print(".");
-      Serial.print(notif[3]);
-      Serial.print(".");
-      Serial.println(notif[4]);
+      SerialUSB.print("Firmware version is: ");
+      SerialUSB.print(notif[2]);
+      SerialUSB.print(".");
+      SerialUSB.print(notif[3]);
+      SerialUSB.print(".");
+      SerialUSB.println(notif[4]);
     }
     break;
   }
@@ -254,7 +254,7 @@ void Xbus::parseNotification(uint8_t *notif, bool verbose)
   {
     if (verbose)
     {
-      Serial.println("Received GoToConfigACK.");
+      SerialUSB.println("Received GoToConfigACK.");
       configState = true;
       break;
     }
@@ -263,7 +263,7 @@ void Xbus::parseNotification(uint8_t *notif, bool verbose)
   {
     if (verbose)
     {
-      Serial.println("Received GoToMeasurementACK.");
+      SerialUSB.println("Received GoToMeasurementACK.");
       configState = false;
       break;
     }
@@ -272,7 +272,7 @@ void Xbus::parseNotification(uint8_t *notif, bool verbose)
   {
     if (verbose)
     {
-      Serial.println("Received SetOutputConfigurationACK.");
+      SerialUSB.println("Received SetOutputConfigurationACK.");
       break;
     }
   }
@@ -280,13 +280,13 @@ void Xbus::parseNotification(uint8_t *notif, bool verbose)
   {
     if (verbose)
     {
-      Serial.print("Received undefined notification: ");
+      SerialUSB.print("Received undefined notification: ");
       for (int i = 0; i < notificationSize - 1; i++)
       {
-        Serial.print(notif[i], HEX);
-        Serial.print(" ");
+        SerialUSB.print(notif[i], HEX);
+        SerialUSB.print(" ");
       }
-      Serial.println();
+      SerialUSB.println();
       break;
     }
   }

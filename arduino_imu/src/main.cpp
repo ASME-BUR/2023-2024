@@ -41,7 +41,8 @@ MTi *IMU = NULL;
 bool verbose = false;
 
 // Publisher and msg obj
-rcl_publisher_t publisher;
+rcl_publisher_t publisher_imu;
+rcl_publisher_t publisher_mag;
 sensor_msgs__msg__Imu imu_msg;
 sensor_msgs__msg__MagneticField mag_msg;
 rcl_allocator_t allocator;
@@ -70,32 +71,50 @@ void timer_callback(rcl_timer_t *timer, int64_t last_call_time)
     if (digitalRead(DRDY))
     {
       IMU->readMessages(verbose);
-      // IMU->printData();
-      imu_msg.header.stamp.sec = rmw_uros_epoch_millis();
+      imu_msg.header.stamp.sec = rmw_uros_epoch_nanos() / pow(10, 9);
       imu_msg.header.stamp.nanosec = rmw_uros_epoch_nanos();
-      imu_msg.linear_acceleration.y = -(double)IMU->getAcceleration()[0];
-      imu_msg.linear_acceleration.x = (double)IMU->getAcceleration()[1];
-      imu_msg.linear_acceleration.z = (double)IMU->getAcceleration()[2];
-      imu_msg.orientation.w = (double)IMU->getQuat()[0];
-      imu_msg.orientation.y = -(double)IMU->getQuat()[1];
-      imu_msg.orientation.x = (double)IMU->getQuat()[2];
-      imu_msg.orientation.z = (double)IMU->getQuat()[3];
-      imu_msg.angular_velocity.y = -(double)IMU->getRateOfTurn()[0];
-      imu_msg.angular_velocity.x = (double)IMU->getRateOfTurn()[1];
-      imu_msg.angular_velocity.z = (double)IMU->getRateOfTurn()[2];
+      imu_msg.linear_acceleration.x = IMU->getAcceleration()[1];
+      imu_msg.linear_acceleration.y = -IMU->getAcceleration()[0];
+      imu_msg.linear_acceleration.z = IMU->getAcceleration()[2];
+      imu_msg.orientation.w = IMU->getQuat()[0];
+      imu_msg.orientation.x = IMU->getQuat()[2];
+      imu_msg.orientation.y = -IMU->getQuat()[1];
+      imu_msg.orientation.z = IMU->getQuat()[3];
+      imu_msg.angular_velocity.x = IMU->getRateOfTurn()[1];
+      imu_msg.angular_velocity.y = -IMU->getRateOfTurn()[0];
+      imu_msg.angular_velocity.z = IMU->getRateOfTurn()[2];
+
+      mag_msg.header.stamp.sec = rmw_uros_epoch_nanos() / pow(10, 9);
+      mag_msg.header.stamp.nanosec = rmw_uros_epoch_nanos();
+      mag_msg.magnetic_field.x = (double)IMU->getMag()[1];
+      mag_msg.magnetic_field.y = -(double)IMU->getMag()[0];
+      mag_msg.magnetic_field.z = (double)IMU->getMag()[2];
 
       // Set covariance values
-      double linear_acceleration_covariance[9] = {0, 0, 0, 0, 0, 0, 0, 0, 0};
-      double angular_velocity_covariance[9] = {0, 0, 0, 0, 0, 0, 0, 0, 0};
-      double orientation_covariance[9] = {0, 0, 0, 0, 0, 0, 0, 0, 0};
+      // 70 * pow(10, -9) * sqrt(float(hz))
+      double linear_acceleration_covariance[9] = {0.0000007, 0, 0,
+                                                  0, 0.0000007, 0,
+                                                  0, 0, 0.0000007};
+      // 0.003 * (PI / 180) * sqrt(float(hz))
+      double angular_velocity_covariance[9] = {0.000523598775598, 0, 0,
+                                               0, 0.000523598775598, 0,
+                                               0, 0, 0.000523598775598};
+      double orientation_covariance[9] = {0.008726646259972, 0, 0,
+                                          0, 0.008726646259972, 0,
+                                          0, 0, 0.034906585039887};
+      double magnetic_covariance[9] = {0.00005, 0, 0,
+                                       0, 0.00005, 0,
+                                       0, 0, 0.00005};
+
       for (int i = 0; i < 9; i++)
       {
         imu_msg.linear_acceleration_covariance[i] = linear_acceleration_covariance[i];
         imu_msg.angular_velocity_covariance[i] = angular_velocity_covariance[i];
         imu_msg.orientation_covariance[i] = orientation_covariance[i];
+        mag_msg.magnetic_field_covariance[i] = magnetic_covariance[i];
       };
-      // publish
-      rcl_publish(&publisher, &imu_msg, NULL);
+      rcl_publish(&publisher_imu, &imu_msg, NULL);
+      rcl_publish(&publisher_mag, &mag_msg, NULL);
     }
   }
 }
@@ -109,7 +128,8 @@ bool create_entities()
   // // create node
   RCCHECK(rclc_node_init_default(&node, "arduino_node_imu", "", &support));
   // // create publisher
-  RCCHECK(rclc_publisher_init_best_effort(&publisher, &node, ROSIDL_GET_MSG_TYPE_SUPPORT(sensor_msgs, msg, Imu), "imu"));
+  RCCHECK(rclc_publisher_init_best_effort(&publisher_imu, &node, ROSIDL_GET_MSG_TYPE_SUPPORT(sensor_msgs, msg, Imu), "imu"));
+  RCCHECK(rclc_publisher_init_best_effort(&publisher_mag, &node, ROSIDL_GET_MSG_TYPE_SUPPORT(sensor_msgs, msg, MagneticField), "mag"));
   const float timer_timeout = 0.7;
   RCCHECK(rclc_timer_init_default(
       &timer,
@@ -127,7 +147,8 @@ void destroy_entities()
   rmw_context_t *rmw_context = rcl_context_get_rmw_context(&support.context);
   (void)rmw_uros_set_context_entity_destroy_session_timeout(rmw_context, 0);
 
-  rcl_publisher_fini(&publisher, &node);
+  rcl_publisher_fini(&publisher_imu, &node);
+  rcl_publisher_fini(&publisher_mag, &node);
   rcl_timer_fini(&timer);
   rclc_executor_fini(&executor);
   rcl_node_fini(&node);
@@ -140,14 +161,6 @@ void setup()
   IMU = new MTi(ADDRESS, DRDY);
   Wire1.begin(); // Initialize Wire1 library for I2C communication
   pinMode(DRDY, INPUT);
-  // IMU->detect(1000, verbose);
-  // // Check if MTi is detected before moving on
-  // IMU->goToConfig(verbose); // Switch device to Config mode
-  // // IMU->requestDeviceInfo(verbose);   // Request the device's product code and firmware version
-  // IMU->configureOutputs(60, verbose); // Configure the device's outputs based on its functionality. See MTi::configureOutputs() for more alternative output configurations.
-  // // IMU->requestOutputs(verbose);
-  // IMU->requestOutputs(verbose);
-
   // Configure serial transport
   SerialUSB.begin(250000);
   delay(1000);
@@ -162,7 +175,7 @@ void loop()
   switch (state)
   {
   case WAITING_AGENT:
-    EXECUTE_EVERY_N_MS(1000, state = (RMW_RET_OK == rmw_uros_ping_agent(50, 1)) ? AGENT_AVAILABLE : WAITING_AGENT;);
+    EXECUTE_EVERY_N_MS(500, state = (RMW_RET_OK == rmw_uros_ping_agent(50, 1)) ? AGENT_AVAILABLE : WAITING_AGENT;);
     break;
   case AGENT_AVAILABLE:
     state = (true == create_entities()) ? AGENT_CONNECTED : WAITING_AGENT;
@@ -172,7 +185,7 @@ void loop()
     };
     break;
   case AGENT_CONNECTED:
-    EXECUTE_EVERY_N_MS(1000, state = (RMW_RET_OK == rmw_uros_ping_agent(50, 1)) ? AGENT_CONNECTED : AGENT_DISCONNECTED;);
+    EXECUTE_EVERY_N_MS(200, state = (RMW_RET_OK == rmw_uros_ping_agent(50, 1)) ? AGENT_CONNECTED : AGENT_DISCONNECTED;);
     if (state == AGENT_CONNECTED)
     {
       rclc_executor_spin_some(&executor, RCL_MS_TO_NS(10));

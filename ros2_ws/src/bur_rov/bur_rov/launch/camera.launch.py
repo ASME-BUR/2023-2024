@@ -12,16 +12,16 @@ def generate_launch_description():
                 parameters=[
                     {"image_width": 1600},
                     {"image_height": 1200},
-                    {"camera_id": 2},
+                    {"camera_id": 0},
                     {"fps": 30.0},
                 ],
                 arguments=[],
             ),
-            Node(
-                package="image_transport",
-                executable="republish",
-                arguments=["--ros-args", "--remap", "in:=image_raw",
-                           "--remap", "out:=image_raw_compressed"],
-            ),
+            # Node(
+            #     package="image_transport",
+            #     executable="republish",
+            #     arguments=["--ros-args", "--remap", "in:=image_raw",
+            #                "--remap", "out:=image_raw_compressed"],
+            # ),
         ]
     )

@@ -27,3 +27,10 @@ ros2 run micro_ros_agent micro_ros_agent serial --dev /dev/ttyACM0
 
 - Serial indicates the transport type
 - --dev is the port
+
+### ZED
+To start the ZED ROS Node, run:
+
+```sh
+ros2 launch zed_wrapper zed_camera.launch.py camera_model:=zedm
+```

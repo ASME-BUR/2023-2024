@@ -254,6 +254,10 @@ namespace eskf {
     vec3 corrected_delta_ang = imu_sample_delayed_.delta_ang - state_.gyro_bias;
     vec3 corrected_delta_vel = imu_sample_delayed_.delta_vel - state_.accel_bias; 
     
+     printf("Accel Bias \n");
+    std::cout << state_.accel_bias.coeff(0, 0)<<" "<< state_.accel_bias.coeff(1, 0)<<" "<<state_.accel_bias.coeff(2, 0);
+    printf("\n \n");
+
     // convert the delta angle to a delta quaternion
     quat dq;
     dq = from_axis_angle(corrected_delta_ang);
@@ -279,6 +283,14 @@ namespace eskf {
         
     // predict position states via trapezoidal integration of velocity
     state_.pos += (vel_last + state_.vel) * imu_sample_delayed_.delta_vel_dt * 0.5f;
+
+    printf("Velocity \n");
+    std::cout << state_.vel.coeff(0, 0)<<" "<< state_.vel.coeff(1, 0)<<" "<<state_.vel.coeff(2, 0);
+    printf("\n \n");
+
+    printf("Integrated Pos \n");
+    std::cout << state_.pos.coeff(0, 0)<<" "<< state_.pos.coeff(1, 0)<<" "<< state_.pos.coeff(2, 0);
+    printf("\n \n");
         
     constrainStates();
         

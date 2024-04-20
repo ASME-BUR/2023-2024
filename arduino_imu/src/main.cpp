@@ -70,25 +70,26 @@ void timer_callback(rcl_timer_t *timer, int64_t last_call_time)
   {
     if (digitalRead(DRDY))
     {
+      rmw_uros_sync_session(100);
       IMU->readMessages(verbose);
-      imu_msg.header.stamp.sec = rmw_uros_epoch_nanos() / pow(10, 9);
+      imu_msg.header.stamp.sec = rmw_uros_epoch_millis() / pow(10, 3);
       imu_msg.header.stamp.nanosec = rmw_uros_epoch_nanos();
-      imu_msg.linear_acceleration.x = IMU->getAcceleration()[1];
-      imu_msg.linear_acceleration.y = -IMU->getAcceleration()[0];
+      imu_msg.linear_acceleration.x = IMU->getAcceleration()[0];
+      imu_msg.linear_acceleration.y = IMU->getAcceleration()[1];
       imu_msg.linear_acceleration.z = IMU->getAcceleration()[2];
       imu_msg.orientation.w = IMU->getQuat()[0];
-      imu_msg.orientation.x = IMU->getQuat()[2];
-      imu_msg.orientation.y = -IMU->getQuat()[1];
+      imu_msg.orientation.x = IMU->getQuat()[1];
+      imu_msg.orientation.y = IMU->getQuat()[2];
       imu_msg.orientation.z = IMU->getQuat()[3];
-      imu_msg.angular_velocity.x = IMU->getRateOfTurn()[1];
-      imu_msg.angular_velocity.y = -IMU->getRateOfTurn()[0];
+      imu_msg.angular_velocity.x = IMU->getRateOfTurn()[0];
+      imu_msg.angular_velocity.y = IMU->getRateOfTurn()[1];
       imu_msg.angular_velocity.z = IMU->getRateOfTurn()[2];
 
       mag_msg.header.stamp.sec = rmw_uros_epoch_nanos() / pow(10, 9);
       mag_msg.header.stamp.nanosec = rmw_uros_epoch_nanos();
-      mag_msg.magnetic_field.x = (double)IMU->getMag()[1];
-      mag_msg.magnetic_field.y = -(double)IMU->getMag()[0];
-      mag_msg.magnetic_field.z = (double)IMU->getMag()[2];
+      mag_msg.magnetic_field.x = IMU->getMag()[0];
+      mag_msg.magnetic_field.y = IMU->getMag()[1];
+      mag_msg.magnetic_field.z = IMU->getMag()[2];
 
       // Set covariance values
       // 70 * pow(10, -9) * sqrt(float(hz))

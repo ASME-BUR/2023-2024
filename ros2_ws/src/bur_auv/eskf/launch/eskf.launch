@@ -6,31 +6,31 @@
   <arg name="imu_topic" default="/imu"/>
 
   <!-- MAG topic to use -->
-  <arg name="mag_topic" default="/mavros/imu/mag"/>
+  <arg name="mag_topic" default="/mag"/>
 
   <!-- VISION topic to use -->
   <arg name="vision_topic" default="/zed/zed_node/pose_with_covariance"/>
 
   <!-- GPS topic to use -->
-  <arg name="gps_topic" default="/mavros/global_position/local"/>
+  <!-- <arg name="gps_topic" default="/mavros/global_position/local"/> -->
 
   <!-- OPTICAL FLOW topic to use -->
-  <arg name="optical_flow_topic" default="/mavros/px4flow/raw/optical_flow_rad"/>
+  <!-- <arg name="optical_flow_topic" default="/mavros/px4flow/raw/optical_flow_rad"/> -->
 
   <!-- EXTENDED STATE topic to use -->
-  <arg name="extended_state_topic" default="/mavros/extended_state"/>
+  <!-- <arg name="extended_state_topic" default="/mavros/extended_state"/> -->
 
   <!-- RANGEFINDER topic to use -->
-  <arg name="rangefinder_topic" default="/mavros/distance_sensor/hrlv_ez4_pub"/>
+  <!-- <arg name="rangefinder_topic" default="/mavros/distance_sensor/hrlv_ez4_pub"/> -->
 
   <node pkg="eskf" name="$(var eskf_node)" exec="eskf_node" output="screen">
     <remap from="imu" to="$(var imu_topic)"/>
     <remap from="vision" to="$(var vision_topic)"/>
-    <remap from="gps" to="$(var gps_topic)"/>
-    <remap from="optical_flow" to="$(var optical_flow_topic)"/>
+    <!-- <remap from="gps" to="$(var gps_topic)"/> -->
+    <!-- <remap from="optical_flow" to="$(var optical_flow_topic)"/> -->
     <remap from="mag" to="$(var mag_topic)"/>
-    <remap from="extended_state" to="$(var extended_state_topic)"/>
-    <remap from="rangefinder" to="$(var rangefinder_topic)"/>
+    <!-- <remap from="extended_state" to="$(var extended_state_topic)"/> -->
+    <!-- <remap from="rangefinder" to="$(var rangefinder_topic)"/> -->
 
     <param name="fusion_mask" value="7"  type="int"/>
     <!-- 

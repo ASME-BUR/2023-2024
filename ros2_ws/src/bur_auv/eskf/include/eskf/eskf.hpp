@@ -3,7 +3,7 @@
 
 #include <common.h>
 #include <RingBuffer.hpp>
-
+#include <iostream>
 namespace eskf {
 
   class ESKF {

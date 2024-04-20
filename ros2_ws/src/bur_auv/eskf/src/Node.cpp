@@ -1,3 +1,5 @@
+#include <iostream>
+
 #include "Node.hpp"
 
 namespace eskf
@@ -8,7 +10,7 @@ namespace eskf
     this->declare_parameter("fusion_mask", rclcpp::PARAMETER_INTEGER);
     this->declare_parameter("publish_rate", rclcpp::PARAMETER_INTEGER);
 
-    const rclcpp::QoS qos_profile = rclcpp::QoS(rclcpp::KeepLast(10)).best_effort().durability_volatile();
+    const rclcpp::QoS qos_profile = rclcpp::QoS(rclcpp::KeepLast(1)).best_effort().durability_volatile();
     RCLCPP_INFO(this->get_logger(), "Subscribing to imu.");
     subImu_ = this->create_subscription<sensor_msgs::msg::Imu>(
         "imu", qos_profile, std::bind(&Node::inputCallback, this, std::placeholders::_1));
@@ -56,6 +58,7 @@ namespace eskf
         std::chrono::seconds(static_cast<int>(1.0 / publish_rate)), std::bind(&Node::publishState, this));
   }
 
+
   void Node::inputCallback(const sensor_msgs::msg::Imu::SharedPtr imuMsg)
   {
     RCLCPP_INFO(this->get_logger(), "Callback Entered");
@@ -64,7 +67,8 @@ namespace eskf
 
     rclcpp::Time header_time;
     //change later
-    header_time = this->get_clock()->now();
+    // header_time = this->get_clock()->now();
+    header_time = imuMsg.header.stamp;
     
     if (prevStampImu_.seconds() != 0)
     {
@@ -81,18 +85,19 @@ namespace eskf
 
        
       //  run kalman filter
-      eskf_.run(wm, am, static_cast<uint64_t>(header_time.seconds())/1e6f, delta);
-      RCLCPP_INFO(this->get_logger(), "ESKF Updated");
+      eskf_.run(wm, am, static_cast<uint64_t>(header_time.seconds())/1e6f, delta * 1e-9);
+      // RCLCPP_INFO(this->get_logger(), "ESKF Updated");
     }
     prevStampImu_ = header_time;
   }
 
   void Node::visionCallback(const geometry_msgs::msg::PoseWithCovarianceStamped::SharedPtr poseMsg)
   {
-    RCLCPP_INFO(this->get_logger(), "Vision Callback Entered");
+    // RCLCPP_INFO(this->get_logger(), "Vision Callback Entered");
     rclcpp::Time header_time;
     // header_time = rclcpp::Time(static_cast<int32_t>(poseMsg->header.stamp.sec), static_cast<uint32_t>(poseMsg->header.stamp.nanosec), RCL_SYSTEM_TIME);
-    header_time = this->get_clock()->now();
+    // header_time = this->get_clock()->now();
+    header_time = poseMsg.header.stamp
     if (prevStampVisionPose_.seconds() != 0)
     {
         rclcpp::Duration diff = header_time - prevStampVisionPose_;
@@ -102,8 +107,9 @@ namespace eskf
       quat z_q = quat(poseMsg->pose.pose.orientation.w, poseMsg->pose.pose.orientation.x, poseMsg->pose.pose.orientation.y, poseMsg->pose.pose.orientation.z);
       vec3 z_p = vec3(poseMsg->pose.pose.position.x, poseMsg->pose.pose.position.y, poseMsg->pose.pose.position.z);
       // update vision
-      eskf_.updateVision(z_q, z_p, static_cast<uint64_t>(header_time.seconds()/1e6f), delta);
-       RCLCPP_INFO(this->get_logger(), "Vision Updated");
+      std::cout<<z_p<<std::endl;
+      eskf_.updateVision(z_q, z_p, static_cast<uint64_t>(header_time.seconds()/1e6f), delta * 1e-9);
+      //  RCLCPP_INFO(this->get_logger(), "Vision Updated");
     }
     prevStampVisionPose_ = header_time;
   }
@@ -120,7 +126,7 @@ namespace eskf
       vec3 z_v = vec3(odomMsg->twist.twist.linear.x, odomMsg->twist.twist.linear.y, odomMsg->twist.twist.linear.z);
       vec3 z_p = vec3(odomMsg->pose.pose.position.x, odomMsg->pose.pose.position.y, odomMsg->pose.pose.position.z);
       // update gps
-      eskf_.updateGps(z_v, z_p, static_cast<uint64_t>(header_time.seconds()/1e6f), delta);
+      eskf_.updateGps(z_v, z_p, static_cast<uint64_t>(header_time.seconds()/1e6f), delta * 1e-9);
     }
     prevStampGpsPose_ = header_time;
   }
@@ -135,7 +141,7 @@ namespace eskf
 
       // get mag measurements
       vec3 m = vec3(magMsg->magnetic_field.x * 1e4f, magMsg->magnetic_field.y * 1e4f, magMsg->magnetic_field.z * 1e4f);
-      eskf_.updateMagnetometer(m, static_cast<uint64_t>(header_time.seconds()/1e6f), delta);
+      eskf_.updateMagnetometer(m, static_cast<uint64_t>(header_time.seconds()/1e6f), delta * 1e-9);
     }
     prevStampMagPose_ = header_time;
   }
@@ -149,7 +155,7 @@ namespace eskf
       const double delta = (header_time - prevStampRangeFinderPose_).seconds();
 
       // get rangefinder measurements
-      eskf_.updateRangeFinder(rangeMsg->range, static_cast<uint64_t>(header_time.seconds()/1e6f), delta);
+      eskf_.updateRangeFinder(rangeMsg->range, static_cast<uint64_t>(header_time.seconds()/1e6f), delta * 1e-9);
     }
     prevStampRangeFinderPose_ = header_time;
   }

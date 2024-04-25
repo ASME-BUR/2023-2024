@@ -11,6 +11,7 @@
 #include <std_msgs/msg/header.hpp>
 #include <pid.hpp>
 #include <algorithm> // clamp
+#include "utility_func.hpp"
 #include <message_filters/subscriber.h>
 
 namespace controller
@@ -54,7 +55,9 @@ namespace controller
 
     rclcpp::Time lastTime;
     bool active = false;
+    EulerAngles setpoint_angle;
+    EulerAngles state_angle;
   };
-} 
+}
 
 #endif

@@ -68,7 +68,7 @@ namespace eskf
     rclcpp::Time header_time;
     //change later
     // header_time = this->get_clock()->now();
-    header_time = imuMsg.header.stamp;
+    header_time = imuMsg->header.stamp;
     
     if (prevStampImu_.seconds() != 0)
     {
@@ -97,7 +97,7 @@ namespace eskf
     rclcpp::Time header_time;
     // header_time = rclcpp::Time(static_cast<int32_t>(poseMsg->header.stamp.sec), static_cast<uint32_t>(poseMsg->header.stamp.nanosec), RCL_SYSTEM_TIME);
     // header_time = this->get_clock()->now();
-    header_time = poseMsg.header.stamp
+    header_time = poseMsg->header.stamp;
     if (prevStampVisionPose_.seconds() != 0)
     {
         rclcpp::Duration diff = header_time - prevStampVisionPose_;

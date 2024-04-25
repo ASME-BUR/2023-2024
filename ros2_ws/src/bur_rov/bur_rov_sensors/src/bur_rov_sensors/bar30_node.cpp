@@ -22,6 +22,7 @@ Bar30_node::Bar30_node() : rclcpp::Node("bar30"), count(0)
     {
         sensor->setFluidDensity(this->get_parameter("fluid_density").as_double());
         sensor->setOSR(5);
+        sensor->setModel(1);
         pub_ = this->create_publisher<geometry_msgs::msg::PoseWithCovarianceStamped>("depth_sensor", 10);
         // pub_ = this->create_publisher<geometry_msgs::msg::Pose>("depth_sensor", 10);
         int period = 1000/this->get_parameter("rate").as_int();
@@ -61,10 +62,10 @@ void Bar30_node::timer_Callback()
 int main(int argc, char *argv[])
 {
     rclcpp::init(argc, argv);
-    while(rclcpp::ok()){
-        rclcpp::spin_some(std::make_shared<Bar30_node>());
-    }
-    // rclcpp::spin(std::make_shared<Bar30_node>());
+    // while(rclcpp::ok()){
+        // rclcpp::spin_some(std::make_shared<Bar30_node>());
+    // }
+    rclcpp::spin(std::make_shared<Bar30_node>());
     rclcpp::shutdown();
     return 0;
 }

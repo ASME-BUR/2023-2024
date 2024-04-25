@@ -8,7 +8,7 @@ JoyCommand::JoyCommand() : rclcpp::Node("joy_command")
 {
     this->declare_parameter("cmd_pub_topic", "command");
     this->declare_parameter("joy_topic", "joy");
-    this->declare_parameter("pose_topic", "pose");
+    this->declare_parameter("pose_topic", "depth_sensor");
     this->declare_parameter("imu_topic", "imu");
     this->declare_parameter("velocity", 0.5);
     const std::map<std::string, int> &axis_mapping = {{"linear_x", 1}, {"linear_y", 0}, {"linear_z", 2}, {"angular_x", 3}, {"angular_y", 4}, {"angular_z", 5}};

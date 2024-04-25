@@ -20,7 +20,7 @@ int pi;
 int main()
 {
   // signal(SIGINT, signal_callback_handler);
-  pi = pigpio_start("192.168.8.157", NULL);
+  pi = pigpio_start("10.42.0.24", NULL);
   // cout << pi << endl;
   sensor = new MS5837(pi);
   cout << "Starting" << endl;
@@ -39,8 +39,9 @@ int main()
   }
   // .init sets the sensor model for us but we can override it if required.
   // Uncomment the next line to force the sensor model to the MS5837_30BA.
-  sensor->setModel(0x1A);
+  sensor->setModel(1);
   sensor->setOSR(5);
+  cout << "model" << sensor->getModel() << endl;
 
   sensor->setFluidDensity(997); // kg/m^3 (freshwater, 1029 for seawater)
   cout << hex << int(sensor->getModel()) << endl;

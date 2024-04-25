@@ -51,6 +51,10 @@ rcl_node_t node;
 rcl_timer_t timer;
 rclc_executor_t executor;
 bool micro_ros_init_successful;
+// float accel_offset[3] = {0};
+// float quat_offset[4] = {0};
+// float mag_offset[3] = {0};
+// float omega_offset[3] = {0};
 
 enum states
 {
@@ -74,8 +78,8 @@ void timer_callback(rcl_timer_t *timer, int64_t last_call_time)
       IMU->readMessages(verbose);
       imu_msg.header.stamp.sec = rmw_uros_epoch_millis() / pow(10, 3);
       imu_msg.header.stamp.nanosec = rmw_uros_epoch_nanos();
-      imu_msg.linear_acceleration.x = IMU->getAcceleration()[0];
-      imu_msg.linear_acceleration.y = IMU->getAcceleration()[1];
+      imu_msg.linear_acceleration.x = IMU->getAcceleration()[0] - accel_offset[0];
+      imu_msg.linear_acceleration.y = IMU->getAcceleration()[1] - accel_offset[1];
       imu_msg.linear_acceleration.z = IMU->getAcceleration()[2];
       imu_msg.orientation.w = IMU->getQuat()[0];
       imu_msg.orientation.x = IMU->getQuat()[1];
@@ -169,6 +173,25 @@ void setup()
   state = WAITING_AGENT;
 
   IMU->goToMeasurement(); // Switch device to Measurement mode
+  // u_long current = millis();
+  // while (current - millis() < 20000)
+  // {
+  //   if (digitalRead(DRDY))
+  //   {
+  //     IMU->readMessages(verbose);
+  //     for (size_t i = 0; i < 3; i++)
+  //     {
+  //       accel_offset[i] = 0.5 * accel_offset[i] + 0.5 * IMU->getAcceleration()[i];
+  //       mag_offset[i] = 0.9 * mag_offset[i] + 0.1 * IMU->getMag()[i];
+  //       omega_offset[i] = 0.9 * omega_offset[i] + 0.1 * IMU->getRateOfTurn()[i];
+  //     }
+  //     for (size_t i = 0; i < 4; i++)
+  //     {
+  //       quat_offset[i] = 0.9 * quat_offset[i] + 0.1 * IMU->getQuat()[i];
+  //     }
+  //   }
+  // }
+  // accel_offset[2] = accel_offset[2] + 9.80665;
 }
 
 void loop()

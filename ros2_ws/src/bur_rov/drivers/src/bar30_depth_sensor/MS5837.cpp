@@ -48,10 +48,12 @@ bool MS5837::init()
 	// Set _model according to the sensor version
 	if (version == MS5837_02BA01)
 	{
+		cout << "version: MS5837_02BA01" << endl;
 		_model = MS5837_02BA;
 	}
 	else if (version == MS5837_02BA21)
 	{
+		cout << "version: MS5837_02BA21" << endl;
 		_model = MS5837_02BA;
 	}
 	else if (version == MS5837_30BA26)

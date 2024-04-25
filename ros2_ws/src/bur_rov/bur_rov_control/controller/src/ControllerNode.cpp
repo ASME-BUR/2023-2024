@@ -80,11 +80,11 @@ namespace controller
     twist_setpoint = msg->target_vel;
     active = msg->buttons[13];
     state_angle = ToEulerAngles(msg->current_pos.orientation.w, msg->current_pos.orientation.x, msg->current_pos.orientation.y, msg->current_pos.orientation.z);
-    if (twist_setpoint.linear.z == 0)
+    if (abs(twist_setpoint.linear.z) <= 0.1)
     {
       pose_setpoint.position.z = pose_state.position.z;
     }
-    if (twist_setpoint.angular.z == 0)
+    if (abs(twist_setpoint.angular.z) <= 0.1)
     {
       setpoint_angle = ToEulerAngles(pose_setpoint.orientation.w, pose_setpoint.orientation.x, pose_setpoint.orientation.y, pose_setpoint.orientation.z);
     }
@@ -117,16 +117,18 @@ namespace controller
           controlEffort.force.x = linear_x.computeCommand(twist_setpoint.linear.x - twist_state.linear.x, dt);
           controlEffort.force.y = linear_y.computeCommand(twist_setpoint.linear.y - twist_state.linear.y, dt);
 
-          if (twist_setpoint.linear.z == 0)
+          if (abs(twist_setpoint.linear.z) <= 0)
           {
+            RCLCPP_INFO(this->get_logger(), "depth hold");
             controlEffort.force.z = linear_z.computeCommand(pose_setpoint.position.z - pose_state.position.z, dt);
           }
           else
           {
             controlEffort.force.z = linear_z.computeCommand(twist_setpoint.linear.z - twist_state.linear.z, dt);
           }
-          if (twist_setpoint.angular.z == 0)
+          if (abs(twist_setpoint.angular.z) <= 0)
           {
+            RCLCPP_INFO(this->get_logger(), "yaw hold");
             controlEffort.force.z = angular_z.computeCommand(angle_wrap_pi(setpoint_angle.z - state_angle.z), dt);
           }
           else

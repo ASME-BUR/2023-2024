@@ -10,7 +10,7 @@ def generate_launch_description():
                 executable="bar30_node",
                 name="bar30",
                 parameters=[
-                    # {"pi_address": "10.42.0.24"},
+                    {"pi_address": "10.42.0.24"},
                     {"fluid_density": 1005.0},
                     {'rate': 30},
 

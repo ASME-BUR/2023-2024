@@ -34,6 +34,7 @@ include_directories(
 
 add_library(PID SHARED
   src/pid.cpp
+  src/utility_func.cpp
 )
 
 target_link_libraries(PID 
@@ -58,6 +59,7 @@ install(TARGETS PID
 # Build main filter
 add_executable(${PROJECT_NAME}
   src/ControllerNode.cpp
+  src/utility_func.cpp
 )
 
 # Link relevant libraries

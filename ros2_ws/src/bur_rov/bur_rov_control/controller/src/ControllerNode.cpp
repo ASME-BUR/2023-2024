@@ -28,11 +28,8 @@ namespace controller
         this->get_parameter("sub_topic").as_string(), 1,
         std::bind(&ControllerNode::currentCommandCallback, this, std::placeholders::_1));
 
-    pubControlEffort = this->create_publisher<geometry_msgs::msg::Wrench>(
+    pubControlEffort = this->create_publisher<geometry_msgs::msg::WrenchStamped>(
         this->get_parameter("pub_topic").as_string(), 1);
-
-    debugControlEffort = this->create_publisher<geometry_msgs::msg::WrenchStamped>(
-        "control_effort_debug", 1);
 
     int publish_rate = this->get_parameter("publish_rate").as_int();
 
@@ -47,29 +44,57 @@ namespace controller
     angular_y = control_toolbox::Pid(0.0, 0.0, 0.0, 1.0, -1.0, true);
     angular_z = control_toolbox::Pid(0.0, 0.0, 0.0, 1.0, -1.0, true);
 
-    this->declare_parameter("linear_x/p", rclcpp::PARAMETER_DOUBLE);
-    this->declare_parameter("linear_x/i", rclcpp::PARAMETER_DOUBLE);
-    this->declare_parameter("linear_x/d", rclcpp::PARAMETER_DOUBLE);
+    this->declare_parameter("linear_x/p", 0.0);
+    this->declare_parameter("linear_x/i", 0.0);
+    this->declare_parameter("linear_x/d", 0.0);
 
-    this->declare_parameter("linear_y/p", rclcpp::PARAMETER_DOUBLE);
-    this->declare_parameter("linear_y/i", rclcpp::PARAMETER_DOUBLE);
-    this->declare_parameter("linear_y/d", rclcpp::PARAMETER_DOUBLE);
+    this->declare_parameter("linear_y/p", 0.0);
+    this->declare_parameter("linear_y/i", 0.0);
+    this->declare_parameter("linear_y/d", 0.0);
 
-    this->declare_parameter("linear_z/p", rclcpp::PARAMETER_DOUBLE);
-    this->declare_parameter("linear_z/i", rclcpp::PARAMETER_DOUBLE);
-    this->declare_parameter("linear_z/d", rclcpp::PARAMETER_DOUBLE);
+    this->declare_parameter("linear_z/p", 0.0);
+    this->declare_parameter("linear_z/i", 0.0);
+    this->declare_parameter("linear_z/d", 0.0);
 
-    this->declare_parameter("angular_x/p", rclcpp::PARAMETER_DOUBLE);
-    this->declare_parameter("angular_x/i", rclcpp::PARAMETER_DOUBLE);
-    this->declare_parameter("angular_x/d", rclcpp::PARAMETER_DOUBLE);
+    this->declare_parameter("angular_x/p", 0.0);
+    this->declare_parameter("angular_x/i", 0.0);
+    this->declare_parameter("angular_x/d", 0.0);
 
-    this->declare_parameter("angular_y/p", rclcpp::PARAMETER_DOUBLE);
-    this->declare_parameter("angular_y/i", rclcpp::PARAMETER_DOUBLE);
-    this->declare_parameter("angular_y/d", rclcpp::PARAMETER_DOUBLE);
+    this->declare_parameter("angular_y/p", 0.0);
+    this->declare_parameter("angular_y/i", 0.0);
+    this->declare_parameter("angular_y/d", 0.0);
 
-    this->declare_parameter("angular_z/p", rclcpp::PARAMETER_DOUBLE);
-    this->declare_parameter("angular_z/i", rclcpp::PARAMETER_DOUBLE);
-    this->declare_parameter("angular_z/d", rclcpp::PARAMETER_DOUBLE);
+    this->declare_parameter("angular_z/p", 0.0);
+    this->declare_parameter("angular_z/i", 0.0);
+    this->declare_parameter("angular_z/d", 0.0);
+  }
+
+  rcl_interfaces::msg::SetParametersResult ControllerNode::parametersCallback(
+      const std::vector<rclcpp::Parameter> &parameters)
+  {
+    rcl_interfaces::msg::SetParametersResult result;
+    result.successful = true;
+    result.reason = "success";
+    for (const auto &param : parameters)
+    {
+      RCLCPP_INFO(this->get_logger(), "%s", param.get_name().c_str());
+      RCLCPP_INFO(this->get_logger(), "%s", param.get_type_name().c_str());
+      RCLCPP_INFO(this->get_logger(), "%s", param.value_to_string().c_str());
+    }
+    new_params = true;
+    return result;
+  }
+
+  void ControllerNode::setConstants()
+  {
+    RCLCPP_INFO(this->get_logger(), "Setting PID Gains");
+    linear_x.setGains(this->get_parameter("linear_x/p").as_double(), this->get_parameter("linear_x/i").as_double(), this->get_parameter("linear_x/d").as_double(), 1.0, -1.0, true);
+    linear_y.setGains(this->get_parameter("linear_y/p").as_double(), this->get_parameter("linear_y/i").as_double(), this->get_parameter("linear_y/d").as_double(), 1.0, -1.0, true);
+    linear_z.setGains(this->get_parameter("linear_z/p").as_double(), this->get_parameter("linear_z/i").as_double(), this->get_parameter("linear_z/d").as_double(), 1.0, -1.0, true);
+    angular_x.setGains(this->get_parameter("angular_x/p").as_double(), this->get_parameter("angular_x/i").as_double(), this->get_parameter("angular_x/d").as_double(), 1.0, -1.0, true);
+    angular_y.setGains(this->get_parameter("angular_y/p").as_double(), this->get_parameter("angular_y/i").as_double(), this->get_parameter("angular_y/d").as_double(), 1.0, -1.0, true);
+    angular_z.setGains(this->get_parameter("angular_z/p").as_double(), this->get_parameter("angular_z/i").as_double(), this->get_parameter("angular_z/d").as_double(), 1.0, -1.0, true);
+    new_params = false;
   }
 
   void ControllerNode::currentCommandCallback(const bur_rov_msgs::msg::Command::SharedPtr msg)
@@ -92,48 +117,40 @@ namespace controller
 
   void ControllerNode::publishState()
   {
+    geometry_msgs::msg::WrenchStamped controlEffort;
+    controlEffort.header.stamp = this->get_clock()->now();
     if (active)
     {
-      linear_x.setGains(this->get_parameter("linear_x/p").as_double(), this->get_parameter("linear_x/i").as_double(), this->get_parameter("linear_x/d").as_double(), 1.0, -1.0, true);
-      linear_y.setGains(this->get_parameter("linear_y/p").as_double(), this->get_parameter("linear_y/i").as_double(), this->get_parameter("linear_y/d").as_double(), 1.0, -1.0, true);
-      linear_z.setGains(this->get_parameter("linear_z/p").as_double(), this->get_parameter("linear_z/i").as_double(), this->get_parameter("linear_z/d").as_double(), 1.0, -1.0, true);
-
-      angular_x.setGains(this->get_parameter("angular_x/p").as_double(), this->get_parameter("angular_x/i").as_double(), this->get_parameter("angular_x/d").as_double(), 1.0, -1.0, true);
-      angular_y.setGains(this->get_parameter("angular_y/p").as_double(), this->get_parameter("angular_y/i").as_double(), this->get_parameter("angular_y/d").as_double(), 1.0, -1.0, true);
-      angular_z.setGains(this->get_parameter("angular_z/p").as_double(), this->get_parameter("angular_z/i").as_double(), this->get_parameter("angular_z/d").as_double(), 1.0, -1.0, true);
-
       rclcpp::Time time = this->get_clock()->now(); // might have to change the now ????
+      if (new_params)
+      {
+        setConstants();
+      }
       if (lastTime.seconds() != 0)
       {
         double dt = (time - lastTime).nanoseconds();
         if (dt != 0)
         {
-          std_msgs::msg::Header header;
-          header.frame_id = "map";
-          header.stamp = this->get_clock()->now();
-
-          geometry_msgs::msg::Wrench controlEffort;
-          // controlEffort.header = header;
-          controlEffort.force.x = linear_x.computeCommand(twist_setpoint.linear.x - twist_state.linear.x, dt);
-          controlEffort.force.y = linear_y.computeCommand(twist_setpoint.linear.y - twist_state.linear.y, dt);
+          controlEffort.wrench.force.x = linear_x.computeCommand(twist_setpoint.linear.x - twist_state.linear.x, dt);
+          controlEffort.wrench.force.y = linear_y.computeCommand(twist_setpoint.linear.y - twist_state.linear.y, dt);
 
           if (abs(twist_setpoint.linear.z) <= 0)
           {
             RCLCPP_INFO(this->get_logger(), "depth hold");
-            controlEffort.force.z = linear_z.computeCommand(pose_setpoint.position.z - pose_state.position.z, dt);
+            controlEffort.wrench.force.z = linear_z.computeCommand(pose_setpoint.position.z - pose_state.position.z, dt);
           }
           else
           {
-            controlEffort.force.z = linear_z.computeCommand(twist_setpoint.linear.z - twist_state.linear.z, dt);
+            controlEffort.wrench.force.z = linear_z.computeCommand(twist_setpoint.linear.z - twist_state.linear.z, dt);
           }
           if (abs(twist_setpoint.angular.z) <= 0)
           {
             RCLCPP_INFO(this->get_logger(), "yaw hold");
-            controlEffort.force.z = angular_z.computeCommand(angle_wrap_pi(setpoint_angle.z - state_angle.z), dt);
+            controlEffort.wrench.force.z = angular_z.computeCommand(angle_wrap_pi(setpoint_angle.z - state_angle.z), dt);
           }
           else
           {
-            controlEffort.force.z = angular_z.computeCommand(twist_setpoint.angular.z - twist_state.angular.z, dt);
+            controlEffort.wrench.force.z = angular_z.computeCommand(twist_setpoint.angular.z - twist_state.angular.z, dt);
           }
 
           // Eigen::Quaternionf currentQuaternion(pose_state.orientation.w, pose_state.orientation.x, pose_state.orientation.y, pose_state.orientation.z);            // Example current quaternion (w, x, y, z)
@@ -148,34 +165,22 @@ namespace controller
           // 1 - 2 * (targetQuaternion.x() * targetQuaternion.x() + targetQuaternion.y() * targetQuaternion.y()));
           // double targetPitch = asin(2 * (targetQuaternion.w() * targetQuaternion.y() - targetQuaternion.z() * targetQuaternion.x()));
 
-          controlEffort.torque.x = angular_x.computeCommand(angle_wrap_pi(setpoint_angle.x - state_angle.x), dt);
-          controlEffort.torque.y = angular_y.computeCommand(angle_wrap_pi(setpoint_angle.y - state_angle.y), dt);
-
-          geometry_msgs::msg::WrenchStamped debug_msg;
-
-          debug_msg.header = header;
-          debug_msg.wrench = controlEffort;
-
-          pubControlEffort->publish(controlEffort);
-          debugControlEffort->publish(debug_msg);
+          controlEffort.wrench.torque.x = angular_x.computeCommand(angle_wrap_pi(setpoint_angle.x - state_angle.x), dt);
+          controlEffort.wrench.torque.y = angular_y.computeCommand(angle_wrap_pi(setpoint_angle.y - state_angle.y), dt);
         }
       }
       lastTime = time;
     }
     else
     {
-      geometry_msgs::msg::Wrench controlEffort;
-      // controlEffort.header = header;
-      controlEffort.force.x = 0;
-      controlEffort.force.y = 0;
-      controlEffort.force.z = 0;
-
-      controlEffort.torque.x = 0;
-      controlEffort.torque.y = 0;
-      controlEffort.torque.z = 0;
-
-      pubControlEffort->publish(controlEffort);
+      controlEffort.wrench.force.x = 0;
+      controlEffort.wrench.force.y = 0;
+      controlEffort.wrench.force.z = 0;
+      controlEffort.wrench.torque.x = 0;
+      controlEffort.wrench.torque.y = 0;
+      controlEffort.wrench.torque.z = 0;
     }
+    pubControlEffort->publish(controlEffort);
   }
 }
 

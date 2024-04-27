@@ -4,15 +4,16 @@
 #include <memory>
 #include "rclcpp/rclcpp.hpp"
 #include <geometry_msgs/msg/twist.hpp>
+#include "rcl_interfaces/msg/set_parameters_result.hpp"
 #include "bur_rov_msgs/msg/command.hpp"
-#include <geometry_msgs/msg/wrench.hpp>
 #include <geometry_msgs/msg/wrench_stamped.hpp>
 #include <geometry_msgs/msg/pose.hpp>
 #include <std_msgs/msg/header.hpp>
-#include <pid.hpp>
+#include <control_toolbox/pid.hpp>
+#include <vector>
 #include <algorithm> // clamp
 #include "utility_func.hpp"
-#include <message_filters/subscriber.h>
+// #include <message_filters/subscriber.h>
 
 namespace controller
 {
@@ -25,9 +26,7 @@ namespace controller
   private:
     // publishers
 
-    rclcpp::Publisher<geometry_msgs::msg::Wrench>::SharedPtr pubControlEffort;
-    rclcpp::Publisher<geometry_msgs::msg::WrenchStamped>::SharedPtr debugControlEffort;
-
+    rclcpp::Publisher<geometry_msgs::msg::WrenchStamped>::SharedPtr pubControlEffort;
     rclcpp::Subscription<bur_rov_msgs::msg::Command>::SharedPtr state_setpoint_sub;
 
     rclcpp::Time prevTime;
@@ -52,9 +51,14 @@ namespace controller
     //  callbacks
     void currentCommandCallback(const bur_rov_msgs::msg::Command::SharedPtr msg);
     void publishState();
+    void setConstants();
+    rcl_interfaces::msg::SetParametersResult parametersCallback(
+        const std::vector<rclcpp::Parameter> &parameters);
+    rclcpp::node_interfaces::OnSetParametersCallbackHandle::SharedPtr param_callback_;
 
     rclcpp::Time lastTime;
     bool active = false;
+    bool new_params = true;
     EulerAngles setpoint_angle;
     EulerAngles state_angle;
   };

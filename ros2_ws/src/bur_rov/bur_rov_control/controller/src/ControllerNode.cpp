@@ -146,11 +146,11 @@ namespace controller
           if (abs(twist_setpoint.angular.z) <= 0)
           {
             RCLCPP_INFO(this->get_logger(), "yaw hold");
-            controlEffort.wrench.force.z = angular_z.computeCommand(angle_wrap_pi(setpoint_angle.z - state_angle.z), dt);
+            controlEffort.wrench.torque.z = angular_z.computeCommand(angle_wrap_pi(setpoint_angle.z - state_angle.z), dt);
           }
           else
           {
-            controlEffort.wrench.force.z = angular_z.computeCommand(twist_setpoint.angular.z - twist_state.angular.z, dt);
+            controlEffort.wrench.torque.z = angular_z.computeCommand(twist_setpoint.angular.z - twist_state.angular.z, dt);
           }
 
           // Eigen::Quaternionf currentQuaternion(pose_state.orientation.w, pose_state.orientation.x, pose_state.orientation.y, pose_state.orientation.z);            // Example current quaternion (w, x, y, z)

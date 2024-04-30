@@ -5,6 +5,7 @@
 #include <rclc/rclc.h>
 #include <rclc/executor.h>
 #include <rmw_microros/rmw_microros.h>
+#include <micro_ros_utilities/string_utilities.h>
 
 #include <sensor_msgs/msg/imu.h>
 #include <sensor_msgs/msg/magnetic_field.h>
@@ -78,6 +79,7 @@ void timer_callback(rcl_timer_t *timer, int64_t last_call_time)
       IMU->readMessages(verbose);
       imu_msg.header.stamp.sec = rmw_uros_epoch_millis() / pow(10, 3);
       imu_msg.header.stamp.nanosec = rmw_uros_epoch_nanos();
+      imu_msg.header.frame_id = micro_ros_string_utilities_init("odom");
       imu_msg.linear_acceleration.x = IMU->getAcceleration()[0];
       imu_msg.linear_acceleration.y = IMU->getAcceleration()[1];
       imu_msg.linear_acceleration.z = IMU->getAcceleration()[2];
@@ -91,6 +93,7 @@ void timer_callback(rcl_timer_t *timer, int64_t last_call_time)
 
       mag_msg.header.stamp.sec = rmw_uros_epoch_nanos() / pow(10, 9);
       mag_msg.header.stamp.nanosec = rmw_uros_epoch_nanos();
+      mag_msg.header.frame_id = micro_ros_string_utilities_init("odom");
       mag_msg.magnetic_field.x = IMU->getMag()[0];
       mag_msg.magnetic_field.y = IMU->getMag()[1];
       mag_msg.magnetic_field.z = IMU->getMag()[2];
@@ -171,27 +174,9 @@ void setup()
   delay(1000);
   set_microros_serial_transports(SerialUSB);
   state = WAITING_AGENT;
-
+  // IMU->configureOutputs(100);
+  IMU->resetAlignment();
   IMU->goToMeasurement(); // Switch device to Measurement mode
-  // u_long current = millis();
-  // while (current - millis() < 20000)
-  // {
-  //   if (digitalRead(DRDY))
-  //   {
-  //     IMU->readMessages(verbose);
-  //     for (size_t i = 0; i < 3; i++)
-  //     {
-  //       accel_offset[i] = 0.5 * accel_offset[i] + 0.5 * IMU->getAcceleration()[i];
-  //       mag_offset[i] = 0.9 * mag_offset[i] + 0.1 * IMU->getMag()[i];
-  //       omega_offset[i] = 0.9 * omega_offset[i] + 0.1 * IMU->getRateOfTurn()[i];
-  //     }
-  //     for (size_t i = 0; i < 4; i++)
-  //     {
-  //       quat_offset[i] = 0.9 * quat_offset[i] + 0.1 * IMU->getQuat()[i];
-  //     }
-  //   }
-  // }
-  // accel_offset[2] = accel_offset[2] + 9.80665;
 }
 
 void loop()

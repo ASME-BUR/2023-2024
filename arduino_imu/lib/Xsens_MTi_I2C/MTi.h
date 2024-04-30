@@ -14,6 +14,10 @@ public:
   void requestDeviceInfo(bool verbose = false);
   void configureOutputs(uint16_t freq, bool verbose = false);
   void requestOutputs(bool verbose = false);
+  void resetInclination(bool verbose = false);
+  void resetHeading(bool verbose = false);
+  void resetAlignment(bool verbose = false);
+  void saveReset(bool verbose = false);
   void goToConfig(bool verbose = false);
   void goToMeasurement(bool verbose = false);
   void readMessages(bool verbose = false);

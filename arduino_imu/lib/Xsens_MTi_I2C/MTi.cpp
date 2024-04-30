@@ -90,6 +90,77 @@ void MTi::requestDeviceInfo(bool verbose)
   readMessages(verbose);
 }
 
+void MTi::resetInclination(bool verbose)
+{
+  if (!xbus.configState)
+  {
+    goToConfig(verbose);
+  }
+  readMessages(verbose); // Clear the measurement/notification pipes (without printing) before configuring.
+  if (verbose)
+  {
+    SerialUSB.println("Resetting Inclination...");
+  }
+  uint8_t msg[] = {0xA4, 0x02, 0x00, 0x03}; // msg Xbus message
+  sendMessage(msg, sizeof(msg), verbose);
+  delay(100);
+
+  readMessages(verbose);
+}
+
+void MTi::resetHeading(bool verbose)
+{
+  if (!xbus.configState)
+  {
+    goToConfig(verbose);
+  }
+  readMessages(verbose); // Clear the measurement/notification pipes (without printing) before configuring.
+  if (verbose)
+  {
+    SerialUSB.println("Resetting Heading...");
+  }
+  uint8_t msg[] = {0xA4, 0x02, 0x00, 0x01}; // msg Xbus message
+  sendMessage(msg, sizeof(msg), verbose);
+  delay(100);
+
+  readMessages(verbose);
+}
+
+void MTi::resetAlignment(bool verbose)
+{
+  if (!xbus.configState)
+  {
+    goToConfig(verbose);
+  }
+  readMessages(verbose); // Clear the measurement/notification pipes (without printing) before configuring.
+  if (verbose)
+  {
+    SerialUSB.println("Resetting Alignment...");
+  }
+  uint8_t msg[] = {0xA4, 0x02, 0x00, 0x04}; // msg Xbus message
+  sendMessage(msg, sizeof(msg), verbose);
+  delay(100);
+
+  readMessages(verbose);
+}
+
+void MTi::saveReset(bool verbose){
+    if (!xbus.configState)
+  {
+    goToConfig(verbose);
+  }
+  readMessages(verbose); // Clear the measurement/notification pipes (without printing) before configuring.
+  if (verbose)
+  {
+    SerialUSB.println("Storing Orientation Reset...");
+  }
+  uint8_t msg[] = {0xA4, 0x02, 0x00, 0x00}; // msg Xbus message
+  sendMessage(msg, sizeof(msg), verbose);
+  delay(100);
+
+  readMessages(verbose);
+}
+
 void MTi::goToConfig(bool verbose)
 {
   SerialUSB.println("Entering configuration mode.");

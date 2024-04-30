@@ -1,6 +1,5 @@
-#include "ControllerNode.h"
-#include <Eigen/Dense>
-#include <iostream> 
+#include "ControllerNode.hpp"
+#include <iostream>
 namespace controller
 {
   template <typename T>
@@ -28,11 +27,8 @@ namespace controller
         this->get_parameter("sub_topic").as_string(), 1,
         std::bind(&ControllerNode::currentCommandCallback, this, std::placeholders::_1));
 
-    pubControlEffort = this->create_publisher<geometry_msgs::msg::Wrench>(
+    pubControlEffort = this->create_publisher<geometry_msgs::msg::WrenchStamped>(
         this->get_parameter("pub_topic").as_string(), 1);
-
-    debugControlEffort = this->create_publisher<geometry_msgs::msg::WrenchStamped>(
-        "control_effort_debug", 1);
 
     int publish_rate = this->get_parameter("publish_rate").as_int();
 
@@ -79,13 +75,20 @@ namespace controller
     twist_state = msg->current_vel;
     twist_setpoint = msg->target_vel;
     active = msg->buttons[13];
-    state_angle = ToEulerAngles(msg->current_pos.orientation.w, msg->current_pos.orientation.x, msg->current_pos.orientation.y, msg->current_pos.orientation.z);
+    double roll, pitch, yaw;
+    tf2::Quaternion q = tf2::Quaternion(msg->current_pos.orientation.w, msg->current_pos.orientation.x, msg->current_pos.orientation.y, msg->current_pos.orientation.z);
+    tf2::Matrix3x3 rot_matrix = tf2::Matrix3x3(q);
+    rot_matrix.getRPY(roll, pitch, yaw);
+    state_angle = tf2::Vector3(roll, pitch, yaw);
+    q = tf2::Quaternion(msg->target_pos.orientation.w, msg->target_pos.orientation.x, msg->target_pos.orientation.y, msg->target_pos.orientation.z);
+    rot_matrix = tf2::Matrix3x3(q);
+    rot_matrix.getRPY(roll, pitch, yaw);
+    setpoint_angle = tf2::Vector3(roll, pitch, yaw);
     if (abs(twist_setpoint.linear.z) <= 0.1 && depth_hold == false)
     {
       pose_setpoint.position.z = msg->current_pos.position.z;
       depth_hold = true;
     }
-    setpoint_angle = ToEulerAngles(msg->current_pos.orientation.w, msg->current_pos.orientation.x, msg->current_pos.orientation.y, msg->current_pos.orientation.z);
   }
 
   void ControllerNode::publishState()
@@ -100,82 +103,62 @@ namespace controller
       angular_y.setGains(this->get_parameter("angular_y/p").as_double(), this->get_parameter("angular_y/i").as_double(), this->get_parameter("angular_y/d").as_double(), 1.0, -1.0, true);
       angular_z.setGains(this->get_parameter("angular_z/p").as_double(), this->get_parameter("angular_z/i").as_double(), this->get_parameter("angular_z/d").as_double(), 1.0, -1.0, true);
 
-      rclcpp::Time time = this->get_clock()->now(); // might have to change the now ????
+      rclcpp::Time time = this->now(); // might have to change the now ????
       if (lastTime.seconds() != 0)
       {
-        double dt = (time - lastTime).nanoseconds()/pow(10, 9);
+        double dt = (time - lastTime).nanoseconds() / pow(10, 9);
         if (dt != 0)
         {
-          std_msgs::msg::Header header;
-          header.frame_id = "map";
-          header.stamp = this->get_clock()->now();
-
-          geometry_msgs::msg::Wrench controlEffort;
-          // controlEffort.header = header;
-          controlEffort.force.x = linear_x.computeCommand(twist_setpoint.linear.x - twist_state.linear.x, dt);
-          controlEffort.force.y = linear_y.computeCommand(twist_setpoint.linear.y - twist_state.linear.y, dt);
+          geometry_msgs::msg::WrenchStamped controlEffort;
+          controlEffort.header.stamp = this->now();
+          controlEffort.header.frame_id = "map";
+          controlEffort.wrench.force.x = linear_x.computeCommand(twist_setpoint.linear.x - twist_state.linear.x, dt);
+          controlEffort.wrench.force.y = linear_y.computeCommand(twist_setpoint.linear.y - twist_state.linear.y, dt);
           RCLCPP_INFO(this->get_logger(), "depth hold");
           // std::cout << pose_setpoint.position.z << std::endl;
           // std::cout << pose_state.position.z << std::endl;
-          std::cout << twist_setpoint.linear.z << std::endl;
-          std::cout << twist_state.linear.z << std::endl;
-          if (abs(twist_setpoint.linear.z) <= 0.1)
+          // std::cout << twist_setpoint.linear.z << std::endl;
+          // std::cout << twist_state.linear.z << std::endl;
+          if (depth_hold)
           {
             RCLCPP_INFO(this->get_logger(), "depth hold");
-            controlEffort.force.z = linear_z.computeCommand(pose_setpoint.position.z - pose_state.position.z, dt);
+            controlEffort.wrench.force.z = linear_z.computeCommand(pose_setpoint.position.z - pose_state.position.z, dt);
           }
           else
           {
-            controlEffort.force.z = linear_z.computeCommand(twist_setpoint.linear.z - twist_state.linear.z, dt);
+            controlEffort.wrench.force.z = linear_z.computeCommand(twist_setpoint.linear.z - twist_state.linear.z, dt);
             depth_hold = false;
           }
-          // if (abs(twist_setpoint.angular.z) <= 0)
-          // {
-          // RCLCPP_INFO(this->get_logger(), "yaw hold");
-          // controlEffort.force.z = angular_z.computeCommand(angle_wrap_pi(setpoint_angle.z - state_angle.z), dt);
-          // }
-          // else
-          // {
-          controlEffort.force.z = angular_z.computeCommand(twist_setpoint.angular.z - twist_state.angular.z, dt);
-          // }
 
-          // Eigen::Quaternionf currentQuaternion(pose_state.orientation.w, pose_state.orientation.x, pose_state.orientation.y, pose_state.orientation.z);            // Example current quaternion (w, x, y, z)
-          // Eigen::Quaternionf targetQuaternion(pose_setpoint.orientation.w, pose_setpoint.orientation.x, pose_setpoint.orientation.y, pose_setpoint.orientation.z); // Example target quaternion (w, x, y, z)
-
-          // Extracting roll and pitch from quaternions
-          // double currentRoll = atan2(2 * (currentQuaternion.w() * currentQuaternion.x() + currentQuaternion.y() * currentQuaternion.z()),
-          //  1 - 2 * (currentQuaternion.x() * currentQuaternion.x() + currentQuaternion.y() * currentQuaternion.y()));
-          // double currentPitch = asin(2 * (currentQuaternion.w() * currentQuaternion.y() - currentQuaternion.z() * currentQuaternion.x()));
-
-          // double targetRoll = atan2(2 * (targetQuaternion.w() * targetQuaternion.x() + targetQuaternion.y() * targetQuaternion.z()),
-          // 1 - 2 * (targetQuaternion.x() * targetQuaternion.x() + targetQuaternion.y() * targetQuaternion.y()));
-          // double targetPitch = asin(2 * (targetQuaternion.w() * targetQuaternion.y() - targetQuaternion.z() * targetQuaternion.x()));
-
-          controlEffort.torque.x = angular_x.computeCommand(angle_wrap_pi(setpoint_angle.x - state_angle.x), dt);
-          controlEffort.torque.y = angular_y.computeCommand(angle_wrap_pi(setpoint_angle.y - state_angle.y), dt);
-
-          geometry_msgs::msg::WrenchStamped debug_msg;
-
-          debug_msg.header = header;
-          debug_msg.wrench = controlEffort;
+          if (abs(twist_setpoint.angular.z) <= 0)
+          {
+            RCLCPP_INFO(this->get_logger(), "yaw hold");
+            controlEffort.wrench.force.z = angular_z.computeCommand(angle_wrap_pi(setpoint_angle.getZ() - state_angle.getZ()), dt);
+          }
+          else
+          {
+            controlEffort.wrench.force.z = angular_z.computeCommand(twist_setpoint.angular.z - twist_state.angular.z, dt);
+          }
+          controlEffort.wrench.torque.x = angular_x.computeCommand(angle_wrap_pi(setpoint_angle.getX() - state_angle.getX()), dt);
+          controlEffort.wrench.torque.y = angular_y.computeCommand(angle_wrap_pi(setpoint_angle.getY() - state_angle.getY()), dt);
 
           pubControlEffort->publish(controlEffort);
-          debugControlEffort->publish(debug_msg);
         }
       }
       lastTime = time;
     }
     else
     {
-      geometry_msgs::msg::Wrench controlEffort;
-      // controlEffort.header = header;
-      controlEffort.force.x = 0;
-      controlEffort.force.y = 0;
-      controlEffort.force.z = 0;
+      geometry_msgs::msg::WrenchStamped controlEffort;
+      controlEffort.header.stamp;
+      controlEffort.header.frame_id = "map";
+      controlEffort.wrench.force.x = 0;
+      controlEffort.wrench.force.y = 0;
+      controlEffort.wrench.force.z = 0;
 
-      controlEffort.torque.x = 0;
-      controlEffort.torque.y = 0;
-      controlEffort.torque.z = 0;
+      controlEffort.wrench.torque.x = 0;
+      controlEffort.wrench.torque.y = 0;
+      controlEffort.wrench.torque.z = 0;
 
       pubControlEffort->publish(controlEffort);
     }

@@ -8,6 +8,7 @@
 #include "sensor_msgs/msg/imu.hpp"
 #include "bur_rov_msgs/msg/command.hpp"
 #include <tf2/LinearMath/Quaternion.h>
+#include <tf2/utils.h>
 #include <tf2_geometry_msgs/tf2_geometry_msgs.hpp>
 #include <iostream>
 #include <map>
@@ -26,17 +27,18 @@ private:
     void joy_callback(const sensor_msgs::msg::Joy::SharedPtr msg);
     void pose_callback(const geometry_msgs::msg::PoseWithCovarianceStamped::SharedPtr msg);
     void imu_callback(const sensor_msgs::msg::Imu::SharedPtr msg);
-    double* vel_calc(double acceleration[3], rclcpp::Time current_time, rclcpp::Time previous_time);
+    double *vel_calc(double acceleration[3], rclcpp::Time current_time, rclcpp::Time previous_time);
+
     rclcpp::Publisher<bur_rov_msgs::msg::Command>::SharedPtr cmd_pub;
     rclcpp::Publisher<geometry_msgs::msg::Vector3Stamped>::SharedPtr imu_euler;
     rclcpp::Publisher<geometry_msgs::msg::Vector3Stamped>::SharedPtr joy_euler;
+    rclcpp::Publisher<geometry_msgs::msg::PoseStamped>::SharedPtr debug_imu_pub;
+    rclcpp::Publisher<geometry_msgs::msg::PoseStamped>::SharedPtr debug_joy_pub;
+
     rclcpp::Subscription<sensor_msgs::msg::Joy>::SharedPtr joy_sub;
     rclcpp::Subscription<geometry_msgs::msg::PoseWithCovarianceStamped>::SharedPtr pose_sub;
     rclcpp::Subscription<sensor_msgs::msg::Imu>::SharedPtr imu_sub;
-    // rclcpp::QoS qos_profile;
-    rclcpp::Publisher<geometry_msgs::msg::PoseStamped>::SharedPtr debug_imu_pub;
-    rclcpp::Publisher<geometry_msgs::msg::PoseStamped>::SharedPtr debug_joy_pub;
-    geometry_msgs::msg::Pose pose;
+    
     bur_rov_msgs::msg::Command output;
     float vel_cap;
     double v_0[3] = {};

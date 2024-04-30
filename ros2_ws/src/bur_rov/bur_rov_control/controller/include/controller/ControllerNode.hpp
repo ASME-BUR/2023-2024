@@ -5,14 +5,13 @@
 #include "rclcpp/rclcpp.hpp"
 #include <geometry_msgs/msg/twist.hpp>
 #include "bur_rov_msgs/msg/command.hpp"
-#include <geometry_msgs/msg/wrench.hpp>
 #include <geometry_msgs/msg/wrench_stamped.hpp>
 #include <geometry_msgs/msg/pose.hpp>
-#include <std_msgs/msg/header.hpp>
-#include <pid.hpp>
-#include <algorithm> // clamp
+#include <control_toolbox/pid.hpp>
+#include <algorithm>
 #include "utility_func.hpp"
-#include <message_filters/subscriber.h>
+#include <tf2/LinearMath/Quaternion.h>
+#include <tf2/utils.h>
 
 namespace controller
 {
@@ -25,8 +24,7 @@ namespace controller
   private:
     // publishers
 
-    rclcpp::Publisher<geometry_msgs::msg::Wrench>::SharedPtr pubControlEffort;
-    rclcpp::Publisher<geometry_msgs::msg::WrenchStamped>::SharedPtr debugControlEffort;
+    rclcpp::Publisher<geometry_msgs::msg::WrenchStamped>::SharedPtr pubControlEffort;
 
     rclcpp::Subscription<bur_rov_msgs::msg::Command>::SharedPtr state_setpoint_sub;
 
@@ -55,8 +53,8 @@ namespace controller
 
     rclcpp::Time lastTime;
     bool active = false;
-    EulerAngles setpoint_angle;
-    EulerAngles state_angle;
+    tf2::Vector3 setpoint_angle;
+    tf2::Vector3 state_angle;
     bool depth_hold = false;
   };
 }

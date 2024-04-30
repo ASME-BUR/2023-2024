@@ -56,6 +56,8 @@ namespace controller
     tf2::Vector3 setpoint_angle;
     tf2::Vector3 state_angle;
     bool depth_hold = false;
+    bool yaw_hold = false;
+    double yaw_hold_pos;
   };
 }
 

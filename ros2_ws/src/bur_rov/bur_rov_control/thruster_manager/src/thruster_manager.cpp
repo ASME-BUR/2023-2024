@@ -26,7 +26,7 @@ Thruster_manager::Thruster_manager() : rclcpp::Node("thruster_manager")
         motor_names.push_back(string("motor" + to_string(i)));
     }
 
-    wrench_sub = this->create_subscription<geometry_msgs::msg::Wrench>(
+    wrench_sub = this->create_subscription<geometry_msgs::msg::WrenchStamped>(
         this->get_parameter("wrench_sub_topic").as_string(), 1, std::bind(&Thruster_manager::wrench_Callback, this, _1));
     cmd_sub = this->create_subscription<bur_rov_msgs::msg::Command>(
         this->get_parameter("cmd_sub_topic").as_string(), 1, std::bind(&Thruster_manager::cmd_Callback, this, _1));
@@ -74,14 +74,14 @@ void Thruster_manager::cmd_Callback(const bur_rov_msgs::msg::Command::SharedPtr 
     // runNode();
 }
 
-void Thruster_manager::wrench_Callback(const geometry_msgs::msg::Wrench::SharedPtr msg)
+void Thruster_manager::wrench_Callback(const geometry_msgs::msg::WrenchStamped::SharedPtr msg)
 {
-    pwr[0] = msg->force.x;   // surge
-    pwr[1] = -msg->force.y;  // sway
-    pwr[2] = -msg->force.z;  // heave
-    pwr[3] = msg->torque.x;  // roll
-    pwr[4] = -msg->torque.y; // pitch
-    pwr[5] = -msg->torque.z; // yaw
+    pwr[0] = msg->wrench.force.x;   // surge
+    pwr[1] = -msg->wrench.force.y;  // sway
+    pwr[2] = -msg->wrench.force.z;  // heave
+    pwr[3] = msg->wrench.torque.x;  // roll
+    pwr[4] = -msg->wrench.torque.y; // pitch
+    pwr[5] = -msg->wrench.torque.z; // yaw
     runNode();
 }
 

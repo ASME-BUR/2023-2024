@@ -75,19 +75,38 @@ namespace controller
     twist_state = msg->current_vel;
     twist_setpoint = msg->target_vel;
     active = msg->buttons[13];
-    double roll, pitch, yaw;
-    tf2::Quaternion q = tf2::Quaternion(msg->current_pos.orientation.w, msg->current_pos.orientation.x, msg->current_pos.orientation.y, msg->current_pos.orientation.z);
+    double roll_state, pitch_state, yaw_state;
+    tf2::Quaternion q = tf2::Quaternion(msg->current_pos.orientation.x, msg->current_pos.orientation.y, msg->current_pos.orientation.z, msg->current_pos.orientation.w);
     tf2::Matrix3x3 rot_matrix = tf2::Matrix3x3(q);
-    rot_matrix.getRPY(roll, pitch, yaw);
-    state_angle = tf2::Vector3(roll, pitch, yaw);
-    q = tf2::Quaternion(msg->target_pos.orientation.w, msg->target_pos.orientation.x, msg->target_pos.orientation.y, msg->target_pos.orientation.z);
+    rot_matrix.getRPY(roll_state, pitch_state, yaw_state);
+    state_angle = tf2::Vector3(roll_state, pitch_state, yaw_state);
+    double roll_setpoint, pitch_setpoint, yaw_setpoint;
+    q = tf2::Quaternion(msg->target_pos.orientation.x, msg->target_pos.orientation.y, msg->target_pos.orientation.z, msg->target_pos.orientation.w);
     rot_matrix = tf2::Matrix3x3(q);
-    rot_matrix.getRPY(roll, pitch, yaw);
-    setpoint_angle = tf2::Vector3(roll, pitch, yaw);
+    rot_matrix.getRPY(roll_setpoint, pitch_setpoint, yaw_setpoint);
+    if (abs(twist_setpoint.angular.z) <= 0.1 && yaw_hold == false)
+    {
+      yaw_setpoint = yaw_state;
+      yaw_hold_pos = yaw_state;
+      yaw_hold = true;
+    }
+    else if (yaw_hold && abs(twist_setpoint.angular.z) <= 0.1)
+    {
+      yaw_setpoint = yaw_hold_pos;
+    }
+    else
+    {
+      yaw_hold = false;
+    }
+    setpoint_angle = tf2::Vector3(roll_setpoint, pitch_setpoint, yaw_setpoint);
     if (abs(twist_setpoint.linear.z) <= 0.1 && depth_hold == false)
     {
       pose_setpoint.position.z = msg->current_pos.position.z;
       depth_hold = true;
+    }
+    else
+    {
+      depth_hold = false;
     }
   }
 
@@ -106,7 +125,7 @@ namespace controller
       rclcpp::Time time = this->now(); // might have to change the now ????
       if (lastTime.seconds() != 0)
       {
-        double dt = (time - lastTime).nanoseconds() / pow(10, 9);
+        double dt = (time - lastTime).nanoseconds();
         if (dt != 0)
         {
           geometry_msgs::msg::WrenchStamped controlEffort;
@@ -114,30 +133,34 @@ namespace controller
           controlEffort.header.frame_id = "map";
           controlEffort.wrench.force.x = linear_x.computeCommand(twist_setpoint.linear.x - twist_state.linear.x, dt);
           controlEffort.wrench.force.y = linear_y.computeCommand(twist_setpoint.linear.y - twist_state.linear.y, dt);
-          RCLCPP_INFO(this->get_logger(), "depth hold");
           // std::cout << pose_setpoint.position.z << std::endl;
           // std::cout << pose_state.position.z << std::endl;
-          // std::cout << twist_setpoint.linear.z << std::endl;
-          // std::cout << twist_state.linear.z << std::endl;
+          std::cout << twist_setpoint.linear.z << std::endl;
+          std::cout << twist_state.linear.z << std::endl;
           if (depth_hold)
           {
             RCLCPP_INFO(this->get_logger(), "depth hold");
             controlEffort.wrench.force.z = linear_z.computeCommand(pose_setpoint.position.z - pose_state.position.z, dt);
+            // std::cout << controlEffort.wrench.force.z << std::endl;
           }
           else
           {
             controlEffort.wrench.force.z = linear_z.computeCommand(twist_setpoint.linear.z - twist_state.linear.z, dt);
+            // std::cout << controlEffort.wrench.force.z << std::endl;
             depth_hold = false;
           }
 
-          if (abs(twist_setpoint.angular.z) <= 0)
+          if (yaw_hold)
           {
             RCLCPP_INFO(this->get_logger(), "yaw hold");
-            controlEffort.wrench.force.z = angular_z.computeCommand(angle_wrap_pi(setpoint_angle.getZ() - state_angle.getZ()), dt);
+            controlEffort.wrench.torque.z = angular_z.computeCommand(angle_wrap_pi(setpoint_angle.getZ() - state_angle.getZ()), dt);
+            std::cout << "torque z: " << controlEffort.wrench.torque.z << std::endl;
           }
           else
           {
-            controlEffort.wrench.force.z = angular_z.computeCommand(twist_setpoint.angular.z - twist_state.angular.z, dt);
+            controlEffort.wrench.torque.z = angular_z.computeCommand(twist_setpoint.angular.z - twist_state.angular.z, dt);
+            std::cout << "torque z: " << controlEffort.wrench.torque.z << std::endl;
+            yaw_hold = false;
           }
           controlEffort.wrench.torque.x = angular_x.computeCommand(angle_wrap_pi(setpoint_angle.getX() - state_angle.getX()), dt);
           controlEffort.wrench.torque.y = angular_y.computeCommand(angle_wrap_pi(setpoint_angle.getY() - state_angle.getY()), dt);
@@ -150,7 +173,7 @@ namespace controller
     else
     {
       geometry_msgs::msg::WrenchStamped controlEffort;
-      controlEffort.header.stamp;
+      controlEffort.header.stamp = this->now();
       controlEffort.header.frame_id = "map";
       controlEffort.wrench.force.x = 0;
       controlEffort.wrench.force.y = 0;

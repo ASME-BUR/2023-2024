@@ -61,10 +61,12 @@ namespace eskf
 
   void Node::inputCallback(const sensor_msgs::msg::Imu::SharedPtr imuMsg)
   {
-    RCLCPP_INFO(this->get_logger(), "Callback Entered");
+    // RCLCPP_INFO(this->get_logger(), "Callback Entered");
     vec3 wm = vec3(imuMsg->angular_velocity.x, imuMsg->angular_velocity.y, imuMsg->angular_velocity.z);          //  measured angular rate
     vec3 am = vec3(imuMsg->linear_acceleration.x, imuMsg->linear_acceleration.y, imuMsg->linear_acceleration.z); //  measured linear acceleration
-
+    quat q = quat(imuMsg->orientation.w, imuMsg->orientation.x, imuMsg->orientation.y, imuMsg->orientation.z);
+    
+    // std::cout<<"Imu: "<<am<<std::endl;
     rclcpp::Time header_time;
     //change later
     // header_time = this->get_clock()->now();
@@ -85,7 +87,8 @@ namespace eskf
 
        
       //  run kalman filter
-      eskf_.run(wm, am, static_cast<uint64_t>(header_time.seconds())/1e6f, delta * 1e-9);
+      eskf_.run(wm, am, q, static_cast<uint64_t>(header_time.seconds())/1e6f, delta * 1e-9);
+      // std::cout<<"Imu dt: "<<delta * 1e-9<<std::endl;
       // RCLCPP_INFO(this->get_logger(), "ESKF Updated");
     }
     prevStampImu_ = header_time;
@@ -107,7 +110,7 @@ namespace eskf
       quat z_q = quat(poseMsg->pose.pose.orientation.w, poseMsg->pose.pose.orientation.x, poseMsg->pose.pose.orientation.y, poseMsg->pose.pose.orientation.z);
       vec3 z_p = vec3(poseMsg->pose.pose.position.x, poseMsg->pose.pose.position.y, poseMsg->pose.pose.position.z);
       // update vision
-      std::cout<<z_p<<std::endl;
+      // std::cout<<z_p<<std::endl;
       eskf_.updateVision(z_q, z_p, static_cast<uint64_t>(header_time.seconds()/1e6f), delta * 1e-9);
       //  RCLCPP_INFO(this->get_logger(), "Vision Updated");
     }

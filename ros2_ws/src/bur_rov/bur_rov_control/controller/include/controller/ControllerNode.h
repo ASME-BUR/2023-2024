@@ -57,6 +57,7 @@ namespace controller
     bool active = false;
     EulerAngles setpoint_angle;
     EulerAngles state_angle;
+    bool depth_hold = false;
   };
 }
 

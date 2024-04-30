@@ -66,6 +66,7 @@ namespace eskf {
     vec3    delta_vel;      ///< delta velocity in body frame (integrated accelerometer measurements) (m/sec)
     scalar_t  delta_ang_dt; ///< delta angle integration period (sec)
     scalar_t  delta_vel_dt; ///< delta velocity integration period (sec)
+    quat quaternion;
     uint64_t  time_us;      ///< timestamp of the measurement (uSec)
   };
 

@@ -1,6 +1,6 @@
 #include "ControllerNode.h"
 #include <Eigen/Dense>
-
+#include <iostream> 
 namespace controller
 {
   template <typename T>
@@ -80,14 +80,12 @@ namespace controller
     twist_setpoint = msg->target_vel;
     active = msg->buttons[13];
     state_angle = ToEulerAngles(msg->current_pos.orientation.w, msg->current_pos.orientation.x, msg->current_pos.orientation.y, msg->current_pos.orientation.z);
-    if (abs(twist_setpoint.linear.z) <= 0.1)
+    if (abs(twist_setpoint.linear.z) <= 0.1 && depth_hold == false)
     {
-      pose_setpoint.position.z = pose_state.position.z;
+      pose_setpoint.position.z = msg->current_pos.position.z;
+      depth_hold = true;
     }
-    if (abs(twist_setpoint.angular.z) <= 0.1)
-    {
-      setpoint_angle = ToEulerAngles(pose_setpoint.orientation.w, pose_setpoint.orientation.x, pose_setpoint.orientation.y, pose_setpoint.orientation.z);
-    }
+    setpoint_angle = ToEulerAngles(msg->current_pos.orientation.w, msg->current_pos.orientation.x, msg->current_pos.orientation.y, msg->current_pos.orientation.z);
   }
 
   void ControllerNode::publishState()
@@ -105,7 +103,7 @@ namespace controller
       rclcpp::Time time = this->get_clock()->now(); // might have to change the now ????
       if (lastTime.seconds() != 0)
       {
-        double dt = (time - lastTime).nanoseconds();
+        double dt = (time - lastTime).nanoseconds()/pow(10, 9);
         if (dt != 0)
         {
           std_msgs::msg::Header header;
@@ -116,8 +114,12 @@ namespace controller
           // controlEffort.header = header;
           controlEffort.force.x = linear_x.computeCommand(twist_setpoint.linear.x - twist_state.linear.x, dt);
           controlEffort.force.y = linear_y.computeCommand(twist_setpoint.linear.y - twist_state.linear.y, dt);
-
-          if (abs(twist_setpoint.linear.z) <= 0)
+          RCLCPP_INFO(this->get_logger(), "depth hold");
+          // std::cout << pose_setpoint.position.z << std::endl;
+          // std::cout << pose_state.position.z << std::endl;
+          std::cout << twist_setpoint.linear.z << std::endl;
+          std::cout << twist_state.linear.z << std::endl;
+          if (abs(twist_setpoint.linear.z) <= 0.1)
           {
             RCLCPP_INFO(this->get_logger(), "depth hold");
             controlEffort.force.z = linear_z.computeCommand(pose_setpoint.position.z - pose_state.position.z, dt);
@@ -125,16 +127,17 @@ namespace controller
           else
           {
             controlEffort.force.z = linear_z.computeCommand(twist_setpoint.linear.z - twist_state.linear.z, dt);
+            depth_hold = false;
           }
-          if (abs(twist_setpoint.angular.z) <= 0)
-          {
-            RCLCPP_INFO(this->get_logger(), "yaw hold");
-            controlEffort.force.z = angular_z.computeCommand(angle_wrap_pi(setpoint_angle.z - state_angle.z), dt);
-          }
-          else
-          {
-            controlEffort.force.z = angular_z.computeCommand(twist_setpoint.angular.z - twist_state.angular.z, dt);
-          }
+          // if (abs(twist_setpoint.angular.z) <= 0)
+          // {
+          // RCLCPP_INFO(this->get_logger(), "yaw hold");
+          // controlEffort.force.z = angular_z.computeCommand(angle_wrap_pi(setpoint_angle.z - state_angle.z), dt);
+          // }
+          // else
+          // {
+          controlEffort.force.z = angular_z.computeCommand(twist_setpoint.angular.z - twist_state.angular.z, dt);
+          // }
 
           // Eigen::Quaternionf currentQuaternion(pose_state.orientation.w, pose_state.orientation.x, pose_state.orientation.y, pose_state.orientation.z);            // Example current quaternion (w, x, y, z)
           // Eigen::Quaternionf targetQuaternion(pose_setpoint.orientation.w, pose_setpoint.orientation.x, pose_setpoint.orientation.y, pose_setpoint.orientation.z); // Example target quaternion (w, x, y, z)

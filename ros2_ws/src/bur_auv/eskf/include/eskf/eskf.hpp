@@ -15,7 +15,7 @@ namespace eskf {
 
     void setFusionMask(int fusion_mask);
 
-    void run(const vec3& w, const vec3& a, uint64_t time_us, scalar_t dt);
+    void run(const vec3& w, const vec3& a, const quat& quaternion, uint64_t time_us, scalar_t dt);
     void updateVision(const quat& q, const vec3& p, uint64_t time_us, scalar_t dt);
     void updateGps(const vec3& v, const vec3& p, uint64_t time_us, scalar_t dt);
     void updateOpticalFlow(const vec2& int_xy, const vec2& int_xy_gyro, uint32_t integration_time_us, scalar_t distance, uint8_t quality, uint64_t time_us, scalar_t dt);
@@ -130,6 +130,8 @@ namespace eskf {
       * FRD to FLU: -PI rotation about X(forward)
       */
     const quat q_FLU2FRD = quat(0, 1, 0, 0);
+
+    vec3 init_accel = vec3(0,0,0);
 
     ///< filter times
     const unsigned FILTER_UPDATE_PERIOD_MS = 12;	///< ekf prediction period in milliseconds - this should ideally be an integer multiple of the IMU time delta

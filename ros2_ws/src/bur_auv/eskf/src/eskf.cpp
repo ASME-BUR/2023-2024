@@ -212,10 +212,12 @@ namespace eskf {
     return false;
   }
   
-  void ESKF::run(const vec3 &w, const vec3 &a, uint64_t time_us, scalar_t dt) {
+  void ESKF::run(const vec3 &w, const vec3 &a, const quat& quaternion, uint64_t time_us, scalar_t dt) {
     // convert FLU to FRD body frame IMU data
     vec3 gyro_b = q_FLU2FRD.toRotationMatrix() * w;
     vec3 accel_b = q_FLU2FRD.toRotationMatrix() * a;
+    quat quaternion_ = (quaternion);
+    quaternion_.normalize();
 
     vec3 delta_ang = vec3(gyro_b.x(), gyro_b.y(), gyro_b.z()) * dt; // current delta angle  (rad)
     vec3 delta_vel = vec3(accel_b.x(), accel_b.y(), accel_b.z()) * dt; //current delta velocity (m/s)
@@ -227,6 +229,7 @@ namespace eskf {
     imu_sample_new.delta_ang_dt = dt;
     imu_sample_new.delta_vel_dt = dt;
     imu_sample_new.time_us = time_us;
+    imu_sample_new.quaternion = quaternion_;
     
     time_last_imu_ = time_us;
         
@@ -251,8 +254,8 @@ namespace eskf {
     if(!imu_updated_) return;
     
     // apply imu bias corrections
-    vec3 corrected_delta_ang = imu_sample_delayed_.delta_ang - state_.gyro_bias;
-    vec3 corrected_delta_vel = imu_sample_delayed_.delta_vel - state_.accel_bias; 
+    vec3 corrected_delta_ang = imu_sample_delayed_.delta_ang - state_.gyro_bias ;
+    vec3 corrected_delta_vel = imu_sample_delayed_.delta_vel ; 
     
      printf("Accel Bias \n");
     std::cout << state_.accel_bias.coeff(0, 0)<<" "<< state_.accel_bias.coeff(1, 0)<<" "<<state_.accel_bias.coeff(2, 0);
@@ -260,9 +263,9 @@ namespace eskf {
 
     // convert the delta angle to a delta quaternion
     quat dq;
-    dq = from_axis_angle(corrected_delta_ang);
+    dq = imu_sample_delayed_.quaternion;
     // rotate the previous quaternion by the delta quaternion using a quaternion multiplication
-    state_.quat_nominal = state_.quat_nominal * dq;
+    state_.quat_nominal = imu_sample_delayed_.quaternion;
     // quaternions must be normalised whenever they are modified
     state_.quat_nominal.normalize();
     
@@ -274,14 +277,30 @@ namespace eskf {
     
     // Calculate an earth frame delta velocity
     vec3 corrected_delta_vel_ef = R_to_earth_ * corrected_delta_vel;
-        
+
+    // corrected_delta_vel(0) -= -0.795 * imu_sample_delayed_.delta_vel_dt;
+    // corrected_delta_vel(1) -= 0.675 * imu_sample_delayed_.delta_vel_dt;
+    // corrected_delta_vel(2) -= 0 * imu_sample_delayed_.delta_vel_dt; 
+
+    if(init_accel(0)==0&&init_accel(1)==0&&init_accel(2)==0 && imu_sample_delayed_.delta_vel_dt!=0){
+      init_accel = (corrected_delta_vel_ef/ imu_sample_delayed_.delta_vel_dt);
+      init_accel(2) += kOneG;
+    }
+
+    corrected_delta_vel_ef -= init_accel * imu_sample_delayed_.delta_vel_dt;
+
+    vec3 accel_debug =  ((corrected_delta_vel_ef/ imu_sample_delayed_.delta_vel_dt));
+    printf("Accel Debug");
+    std::cout << accel_debug.coeff(0, 0)<<" "<< accel_debug.coeff(1, 0)<<" "<<accel_debug.coeff(2, 0);
+    printf("\n \n");
+
     // calculate the increment in velocity using the current orientation
     state_.vel += corrected_delta_vel_ef;
 
     // compensate for acceleration due to gravity
     state_.vel(2) += kOneG * imu_sample_delayed_.delta_vel_dt;
         
-    // predict position states via trapezoidal integration of velocity
+    // predict position states via trapezoidal integration of veloc- state_.accel_biasity
     state_.pos += (vel_last + state_.vel) * imu_sample_delayed_.delta_vel_dt * 0.5f;
 
     printf("Velocity \n");

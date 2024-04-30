@@ -78,8 +78,8 @@ void timer_callback(rcl_timer_t *timer, int64_t last_call_time)
       IMU->readMessages(verbose);
       imu_msg.header.stamp.sec = rmw_uros_epoch_millis() / pow(10, 3);
       imu_msg.header.stamp.nanosec = rmw_uros_epoch_nanos();
-      imu_msg.linear_acceleration.x = IMU->getAcceleration()[0] - accel_offset[0];
-      imu_msg.linear_acceleration.y = IMU->getAcceleration()[1] - accel_offset[1];
+      imu_msg.linear_acceleration.x = IMU->getAcceleration()[0];
+      imu_msg.linear_acceleration.y = IMU->getAcceleration()[1];
       imu_msg.linear_acceleration.z = IMU->getAcceleration()[2];
       imu_msg.orientation.w = IMU->getQuat()[0];
       imu_msg.orientation.x = IMU->getQuat()[1];

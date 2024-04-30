@@ -58,7 +58,7 @@ namespace stereolabs {
 #endif
 
 // nakool soda reviews
-#define ROS_COORDINATE_SYSTEM sl::COORDINATE_SYSTEM::RIGHT_HANDED_Z_UP
+#define ROS_COORDINATE_SYSTEM sl::COORDINATE_SYSTEM::RIGHT_HANDED_Z_UP_X_FWD
 #define ROS_MEAS_UNITS sl::UNIT::METER
 // #define X_MULTIPLIER -1;
 // #define Y_MULTIPLIER -1;

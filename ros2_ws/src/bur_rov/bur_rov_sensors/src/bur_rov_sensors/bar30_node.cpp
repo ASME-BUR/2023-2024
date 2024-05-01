@@ -47,8 +47,8 @@ void Bar30_node::timer_Callback()
     // Bar30->printData();
     sensor->read();
     msg.header.stamp = this->now();
-    msg.header.frame_id = "depth_sensor";
-    msg.pose.pose.position.z = sensor->depth();
+    msg.header.frame_id = "map";
+    msg.pose.pose.position.z = -sensor->depth();
     msg.pose.covariance = {0, 0, 0, 0, 0, 0,
                            0, 0, 0, 0, 0, 0,
                            0, 0, 0.002, 0, 0, 0,

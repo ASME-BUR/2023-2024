@@ -77,8 +77,9 @@ void timer_callback(rcl_timer_t *timer, int64_t last_call_time)
     {
       rmw_uros_sync_session(100);
       IMU->readMessages(verbose);
-      imu_msg.header.stamp.sec = rmw_uros_epoch_nanos() / pow(10, 9);
+      imu_msg.header.stamp.sec = rmw_uros_epoch_millis() / pow(10, 3);
       imu_msg.header.stamp.nanosec = rmw_uros_epoch_nanos();
+      imu_msg.header.frame_id = micro_ros_string_utilities_init("odom");
       imu_msg.linear_acceleration.x = IMU->getAcceleration()[0];
       imu_msg.linear_acceleration.y = IMU->getAcceleration()[1];
       imu_msg.linear_acceleration.z = IMU->getAcceleration()[2];
@@ -92,9 +93,34 @@ void timer_callback(rcl_timer_t *timer, int64_t last_call_time)
 
       mag_msg.header.stamp.sec = rmw_uros_epoch_nanos() / pow(10, 9);
       mag_msg.header.stamp.nanosec = rmw_uros_epoch_nanos();
+      mag_msg.header.frame_id = micro_ros_string_utilities_init("odom");
       mag_msg.magnetic_field.x = IMU->getMag()[0];
       mag_msg.magnetic_field.y = IMU->getMag()[1];
       mag_msg.magnetic_field.z = IMU->getMag()[2];
+
+      // Set covariance values
+      // 70 * pow(10, -9) * sqrt(float(hz))
+      double linear_acceleration_covariance[9] = {0.0000007, 0, 0,
+                                                  0, 0.0000007, 0,
+                                                  0, 0, 0.0000007};
+      // 0.003 * (PI / 180) * sqrt(float(hz))
+      double angular_velocity_covariance[9] = {0.000523598775598, 0, 0,
+                                               0, 0.000523598775598, 0,
+                                               0, 0, 0.000523598775598};
+      double orientation_covariance[9] = {0.008726646259972, 0, 0,
+                                          0, 0.008726646259972, 0,
+                                          0, 0, 0.034906585039887};
+      double magnetic_covariance[9] = {0.00005, 0, 0,
+                                       0, 0.00005, 0,
+                                       0, 0, 0.00005};
+
+      for (int i = 0; i < 9; i++)
+      {
+        imu_msg.linear_acceleration_covariance[i] = linear_acceleration_covariance[i];
+        imu_msg.angular_velocity_covariance[i] = angular_velocity_covariance[i];
+        imu_msg.orientation_covariance[i] = orientation_covariance[i];
+        mag_msg.magnetic_field_covariance[i] = magnetic_covariance[i];
+      };
       rcl_publish(&publisher_imu, &imu_msg, NULL);
       rcl_publish(&publisher_mag, &mag_msg, NULL);
     }
@@ -150,31 +176,6 @@ void setup()
   set_microros_serial_transports(SerialUSB);
   state = WAITING_AGENT;
   // IMU->configureOutputs(100);
-  imu_msg.header.frame_id = micro_ros_string_utilities_init("odom");
-  mag_msg.header.frame_id = micro_ros_string_utilities_init("odom");
-  // Set covariance values
-  // 70 * pow(10, -9) * sqrt(float(hz))
-  double linear_acceleration_covariance[9] = {0.0000007, 0, 0,
-                                              0, 0.0000007, 0,
-                                              0, 0, 0.0000007};
-  // 0.003 * (PI / 180) * sqrt(float(hz))
-  double angular_velocity_covariance[9] = {0.000523598775598, 0, 0,
-                                           0, 0.000523598775598, 0,
-                                           0, 0, 0.000523598775598};
-  double orientation_covariance[9] = {0.008726646259972, 0, 0,
-                                      0, 0.008726646259972, 0,
-                                      0, 0, 0.034906585039887};
-  double magnetic_covariance[9] = {0.00005, 0, 0,
-                                   0, 0.00005, 0,
-                                   0, 0, 0.00005};
-
-  for (int i = 0; i < 9; i++)
-  {
-    imu_msg.linear_acceleration_covariance[i] = linear_acceleration_covariance[i];
-    imu_msg.angular_velocity_covariance[i] = angular_velocity_covariance[i];
-    imu_msg.orientation_covariance[i] = orientation_covariance[i];
-    mag_msg.magnetic_field_covariance[i] = magnetic_covariance[i];
-  };
   IMU->resetAlignment();
   IMU->goToMeasurement(); // Switch device to Measurement mode
 }

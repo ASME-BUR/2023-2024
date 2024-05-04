@@ -3509,7 +3509,8 @@ void ZedCamera::initPublishers() {
   // RCLCPP_INFO_STREAM(get_logger(),
   //                    "Advertised on topic: " << mPubRawRgbGray.getTopic());
   // RCLCPP_INFO_STREAM(get_logger(),
-  //                    "Advertised on topic: " << mPubRawRgbGray.getInfoTopic());
+  //                    "Advertised on topic: " <<
+  //                    mPubRawRgbGray.getInfoTopic());
   mPubLeft = image_transport::create_camera_publisher(
       this, left_topic, mVideoQos.get_rmw_qos_profile());
   RCLCPP_INFO_STREAM(get_logger(),
@@ -3533,7 +3534,8 @@ void ZedCamera::initPublishers() {
   // RCLCPP_INFO_STREAM(get_logger(),
   //                    "Advertised on topic: " << mPubRawLeftGray.getTopic());
   // RCLCPP_INFO_STREAM(get_logger(),
-  //                    "Advertised on topic: " << mPubRawLeftGray.getInfoTopic());
+  //                    "Advertised on topic: " <<
+  //                    mPubRawLeftGray.getInfoTopic());
   // mPubRight = image_transport::create_camera_publisher(
   //     this, right_topic, mVideoQos.get_rmw_qos_profile());
   // RCLCPP_INFO_STREAM(get_logger(),
@@ -3545,7 +3547,8 @@ void ZedCamera::initPublishers() {
   // RCLCPP_INFO_STREAM(get_logger(),
   //                    "Advertised on topic: " << mPubRightGray.getTopic());
   // RCLCPP_INFO_STREAM(get_logger(),
-  //                    "Advertised on topic: " << mPubRightGray.getInfoTopic());
+  //                    "Advertised on topic: " <<
+  //                    mPubRightGray.getInfoTopic());
   // mPubRawRight = image_transport::create_camera_publisher(
   //     this, right_raw_topic, mVideoQos.get_rmw_qos_profile());
   // RCLCPP_INFO_STREAM(get_logger(),
@@ -3557,7 +3560,8 @@ void ZedCamera::initPublishers() {
   // RCLCPP_INFO_STREAM(get_logger(),
   //                    "Advertised on topic: " << mPubRawRightGray.getTopic());
   // RCLCPP_INFO_STREAM(
-  //     get_logger(), "Advertised on topic: " << mPubRawRightGray.getInfoTopic());
+  //     get_logger(), "Advertised on topic: " <<
+  //     mPubRawRightGray.getInfoTopic());
 
   // if (!mDepthDisabled) {
   //   mPubDepth = image_transport::create_camera_publisher(
@@ -3587,7 +3591,8 @@ void ZedCamera::initPublishers() {
     // mPubConfMap =
     //     create_publisher<sensor_msgs::msg::Image>(conf_map_topic, mDepthQos);
     // RCLCPP_INFO_STREAM(
-    //     get_logger(), "Advertised on topic: " << mPubConfMap->get_topic_name());
+    //     get_logger(), "Advertised on topic: " <<
+    //     mPubConfMap->get_topic_name());
     // mPubDisparity = create_publisher<stereo_msgs::msg::DisparityImage>(
     //     disparity_topic, mDepthQos);
     // RCLCPP_INFO_STREAM(get_logger(), "Advertised on topic: "
@@ -3602,13 +3607,16 @@ void ZedCamera::initPublishers() {
   // ----> Pos Tracking
   if (!mDepthDisabled) {
     // mPubPose =
-    //     create_publisher<geometry_msgs::msg::PoseStamped>(mPoseTopic, mPoseQos);
+    //     create_publisher<geometry_msgs::msg::PoseStamped>(mPoseTopic,
+    //     mPoseQos);
     // RCLCPP_INFO_STREAM(get_logger(),
-    //                    "Advertised on topic: " << mPubPose->get_topic_name());
+    //                    "Advertised on topic: " <<
+    //                    mPubPose->get_topic_name());
     // mPubPoseStatus = create_publisher<zed_interfaces::msg::PosTrackStatus>(
     //     mPoseStatusTopic, mPoseQos);
     // RCLCPP_INFO_STREAM(get_logger(), "Advertised on topic: "
-    //                                      << mPubPoseStatus->get_topic_name());
+    //                                      <<
+    //                                      mPubPoseStatus->get_topic_name());
     mPubPoseCov =
         create_publisher<geometry_msgs::msg::PoseWithCovarianceStamped>(
             mPoseCovTopic, mPoseQos);
@@ -3620,7 +3628,8 @@ void ZedCamera::initPublishers() {
     // mPubOdomStatus = create_publisher<zed_interfaces::msg::PosTrackStatus>(
     //     mOdomStatusTopic, mPoseQos);
     // RCLCPP_INFO_STREAM(get_logger(), "Advertised on topic: "
-    //                                      << mPubOdomStatus->get_topic_name());
+    //                                      <<
+    //                                      mPubOdomStatus->get_topic_name());
     // mPubPosePath =
     //     create_publisher<nav_msgs::msg::Path>(mMapPathTopic, mPoseQos);
     // RCLCPP_INFO_STREAM(get_logger(), "Advertised on topic: "
@@ -3631,9 +3640,11 @@ void ZedCamera::initPublishers() {
     //                                      << mPubOdomPath->get_topic_name());
     // if (mGnssFusionEnabled) {
     //   mPubGnssPose =
-    //       create_publisher<nav_msgs::msg::Odometry>(mGnssPoseTopic, mPoseQos);
+    //       create_publisher<nav_msgs::msg::Odometry>(mGnssPoseTopic,
+    //       mPoseQos);
     //   RCLCPP_INFO_STREAM(get_logger(), "Advertised on topic (GNSS): "
-    //                                        << mPubGnssPose->get_topic_name());
+    //                                        <<
+    //                                        mPubGnssPose->get_topic_name());
     //   mPubGnssPoseStatus =
     //       create_publisher<zed_interfaces::msg::PosTrackStatus>(
     //           mGnssPoseStatusTopic, mPoseQos);
@@ -3644,7 +3655,8 @@ void ZedCamera::initPublishers() {
     //       mGeoPoseTopic, mPoseQos);
     //   RCLCPP_INFO_STREAM(get_logger(), "Advertised on topic (GNSS): "
     //                                        << mPubGeoPose->get_topic_name());
-    //   mPubGeoPoseStatus = create_publisher<zed_interfaces::msg::PosTrackStatus>(
+    //   mPubGeoPoseStatus =
+    //   create_publisher<zed_interfaces::msg::PosTrackStatus>(
     //       mGeoPoseStatusTopic, mPoseQos);
     //   RCLCPP_INFO_STREAM(get_logger(),
     //                      "Advertised on topic (GNSS): "
@@ -3659,7 +3671,8 @@ void ZedCamera::initPublishers() {
       // mPubFusedCloud = create_publisher<sensor_msgs::msg::PointCloud2>(
       //     mPointcloudFusedTopic, mMappingQos);
       // RCLCPP_INFO_STREAM(get_logger(), "Advertised on topic "
-      //                                      << mPubFusedCloud->get_topic_name()
+      //                                      <<
+      //                                      mPubFusedCloud->get_topic_name()
       //                                      << " @ " << mFusedPcPubRate
       //                                      << " Hz");
     }
@@ -3667,27 +3680,30 @@ void ZedCamera::initPublishers() {
     std::string marker_topic = "plane_marker";
     std::string plane_topic = "plane";
     // Rviz markers publisher
-    // mPubMarker = create_publisher<visualization_msgs::msg::Marker>(marker_topic,
+    // mPubMarker =
+    // create_publisher<visualization_msgs::msg::Marker>(marker_topic,
     //                                                                mMappingQos);
     // RCLCPP_INFO_STREAM(get_logger(),
-    //                    "Advertised on topic: " << mPubMarker->get_topic_name());
+    //                    "Advertised on topic: " <<
+    //                    mPubMarker->get_topic_name());
     // // Detected planes publisher
     // mPubPlane = create_publisher<zed_interfaces::msg::PlaneStamped>(
     //     plane_topic, mMappingQos);
     // RCLCPP_INFO_STREAM(get_logger(),
-    //                    "Advertised on topic: " << mPubPlane->get_topic_name());
+    //                    "Advertised on topic: " <<
+    //                    mPubPlane->get_topic_name());
   }
   // <---- Mapping
 
   // ----> Sensors
   if (!sl_tools::isZED(mCamRealModel)) {
-    // mPubImu = create_publisher<sensor_msgs::msg::Imu>(imu_topic, mSensQos);
-    // RCLCPP_INFO_STREAM(get_logger(),
-    //                    "Advertised on topic: " << mPubImu->get_topic_name());
-    // mPubImuRaw =
-    //     create_publisher<sensor_msgs::msg::Imu>(imu_topic_raw, mSensQos);
-    // RCLCPP_INFO_STREAM(get_logger(),
-    //                    "Advertised on topic: " << mPubImuRaw->get_topic_name());
+    mPubImu = create_publisher<sensor_msgs::msg::Imu>(imu_topic, mSensQos);
+    RCLCPP_INFO_STREAM(get_logger(),
+                       "Advertised on topic: " << mPubImu->get_topic_name());
+    mPubImuRaw =
+        create_publisher<sensor_msgs::msg::Imu>(imu_topic_raw, mSensQos);
+    RCLCPP_INFO_STREAM(get_logger(),
+                       "Advertised on topic: " << mPubImuRaw->get_topic_name());
 
     // if (sl_tools::isZED2OrZED2i(mCamRealModel) ||
     //     sl_tools::isZEDX(mCamRealModel)) {
@@ -3695,46 +3711,49 @@ void ZedCamera::initPublishers() {
     //       imu_temp_topic, mSensQos);
     //   RCLCPP_INFO_STREAM(get_logger(), "Advertised on topic: "
     //                                        << mPubImuTemp->get_topic_name());
-    }
-
-    // if (sl_tools::isZED2OrZED2i(mCamRealModel)) {
-    //   mPubImuMag = create_publisher<sensor_msgs::msg::MagneticField>(
-    //       imu_mag_topic, mSensQos);
-    //   RCLCPP_INFO_STREAM(get_logger(), "Advertised on topic: "
-    //                                        << mPubImuMag->get_topic_name());
-    //   mPubPressure = create_publisher<sensor_msgs::msg::FluidPressure>(
-    //       pressure_topic, mSensQos);
-    //   RCLCPP_INFO_STREAM(get_logger(), "Advertised on topic: "
-    //                                        << mPubPressure->get_topic_name());
-    //   mPubTempL = create_publisher<sensor_msgs::msg::Temperature>(
-    //       temp_topic_left, mSensQos);
-    //   RCLCPP_INFO_STREAM(
-    //       get_logger(), "Advertised on topic: " << mPubTempL->get_topic_name());
-    //   mPubTempR = create_publisher<sensor_msgs::msg::Temperature>(
-    //       temp_topic_right, mSensQos);
-    //   RCLCPP_INFO_STREAM(
-    //       get_logger(), "Advertised on topic: " << mPubTempR->get_topic_name());
-    // }
-
-    // ----> Camera/imu transform message
-    // std::string cam_imu_tr_topic = mTopicRoot + "left_cam_imu_transform";
-    // mPubCamImuTransf = create_publisher<geometry_msgs::msg::TransformStamped>(
-    //     cam_imu_tr_topic, mSensQos);
-
-    // RCLCPP_INFO_STREAM(get_logger(), "Advertised on topic: "
-    //                                      << mPubCamImuTransf->get_topic_name());
-
-    // sl::Orientation sl_rot = mSlCamImuTransf.getOrientation();
-    // sl::Translation sl_tr = mSlCamImuTransf.getTranslation();
-    // RCLCPP_INFO(get_logger(), "Camera-IMU Translation: \n %g %g %g", sl_tr.x,
-    //             sl_tr.y, sl_tr.z);
-    // RCLCPP_INFO(get_logger(), "Camera-IMU Rotation:\n%s",
-    //             sl_rot.getRotationMatrix().getInfos().c_str());
-
-    // publishImuFrameAndTopic();
-    // <---- Camera/imu transform message
   }
-  // <---- Sensors
+
+  // if (sl_tools::isZED2OrZED2i(mCamRealModel)) {
+  //   mPubImuMag = create_publisher<sensor_msgs::msg::MagneticField>(
+  //       imu_mag_topic, mSensQos);
+  //   RCLCPP_INFO_STREAM(get_logger(), "Advertised on topic: "
+  //                                        << mPubImuMag->get_topic_name());
+  //   mPubPressure = create_publisher<sensor_msgs::msg::FluidPressure>(
+  //       pressure_topic, mSensQos);
+  //   RCLCPP_INFO_STREAM(get_logger(), "Advertised on topic: "
+  //                                        << mPubPressure->get_topic_name());
+  //   mPubTempL = create_publisher<sensor_msgs::msg::Temperature>(
+  //       temp_topic_left, mSensQos);
+  //   RCLCPP_INFO_STREAM(
+  //       get_logger(), "Advertised on topic: " <<
+  //       mPubTempL->get_topic_name());
+  //   mPubTempR = create_publisher<sensor_msgs::msg::Temperature>(
+  //       temp_topic_right, mSensQos);
+  //   RCLCPP_INFO_STREAM(
+  //       get_logger(), "Advertised on topic: " <<
+  //       mPubTempR->get_topic_name());
+  // }
+
+  // ----> Camera/imu transform message
+  // std::string cam_imu_tr_topic = mTopicRoot + "left_cam_imu_transform";
+  // mPubCamImuTransf = create_publisher<geometry_msgs::msg::TransformStamped>(
+  //     cam_imu_tr_topic, mSensQos);
+
+  // RCLCPP_INFO_STREAM(get_logger(), "Advertised on topic: "
+  //                                      <<
+  //                                      mPubCamImuTransf->get_topic_name());
+
+  // sl::Orientation sl_rot = mSlCamImuTransf.getOrientation();
+  // sl::Translation sl_tr = mSlCamImuTransf.getTranslation();
+  // RCLCPP_INFO(get_logger(), "Camera-IMU Translation: \n %g %g %g", sl_tr.x,
+  //             sl_tr.y, sl_tr.z);
+  // RCLCPP_INFO(get_logger(), "Camera-IMU Rotation:\n%s",
+  //             sl_rot.getRotationMatrix().getInfos().c_str());
+
+  // publishImuFrameAndTopic();
+  // <---- Camera/imu transform message
+}
+// <---- Sensors
 }
 
 void ZedCamera::initSubscribers() {

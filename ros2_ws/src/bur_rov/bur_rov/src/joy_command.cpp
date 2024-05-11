@@ -56,14 +56,14 @@ void JoyCommand::joy_callback(const sensor_msgs::msg::Joy::SharedPtr msg)
         // Debug
         auto joy_euler_msg = geometry_msgs::msg::Vector3Stamped();
         joy_euler_msg.header.stamp = this->now();
-        joy_euler_msg.header.frame_id = "map";
+        joy_euler_msg.header.frame_id = "odom";
         joy_euler_msg.vector.x = msg->axes[axis_mapping_.at("angular_x")] * M_PI_2;
         joy_euler_msg.vector.y = msg->axes[axis_mapping_.at("angular_y")] * M_PI_2;
         joy_euler->publish(joy_euler_msg);
 
         auto debug_msg = geometry_msgs::msg::PoseStamped();
         debug_msg.header.stamp = this->now();
-        debug_msg.header.frame_id = "map";
+        debug_msg.header.frame_id = "odom";
         debug_msg.pose.orientation.w = q.getW();
         debug_msg.pose.orientation.x = q.getX();
         debug_msg.pose.orientation.y = q.getY();
@@ -86,7 +86,7 @@ void JoyCommand::pose_callback(const geometry_msgs::msg::PoseWithCovarianceStamp
 void JoyCommand::imu_callback(const sensor_msgs::msg::Imu::SharedPtr msg)
 {
     output.header.stamp = this->now();
-    output.header.frame_id = "map";
+    output.header.frame_id = "odom";
     output.current_pos.orientation.x = msg->orientation.x;
     output.current_pos.orientation.y = msg->orientation.y;
     output.current_pos.orientation.z = msg->orientation.z;
@@ -119,7 +119,7 @@ void JoyCommand::imu_callback(const sensor_msgs::msg::Imu::SharedPtr msg)
 
     auto debug_msg = geometry_msgs::msg::PoseStamped();
     debug_msg.header.stamp = this->now();
-    debug_msg.header.frame_id = "map";
+    debug_msg.header.frame_id = "odom";
     debug_msg.pose.orientation.w = output.current_pos.orientation.w;
     debug_msg.pose.orientation.x = output.current_pos.orientation.x;
     debug_msg.pose.orientation.y = output.current_pos.orientation.y;
@@ -132,7 +132,7 @@ void JoyCommand::imu_callback(const sensor_msgs::msg::Imu::SharedPtr msg)
 
     auto imu_euler_msg = geometry_msgs::msg::Vector3Stamped();
     imu_euler_msg.header.stamp = this->now();
-    imu_euler_msg.header.frame_id = "map";
+    imu_euler_msg.header.frame_id = "odom";
 
     double roll, pitch, yaw;
     rot_matrix.getRPY(roll, pitch, yaw);

@@ -15,7 +15,7 @@
 
 from launch import LaunchDescription
 from ament_index_python.packages import get_package_share_directory
-import launch_ros.actions
+from launch_ros.actions import Node
 import os
 import yaml
 from launch.substitutions import EnvironmentVariable
@@ -25,13 +25,73 @@ from launch.actions import DeclareLaunchArgument
 
 def generate_launch_description():
     return LaunchDescription([
-        launch_ros.actions.Node(
+        Node(
             package='robot_localization',
             executable='ekf_node',
             name='ekf_filter_node',
             output='screen',
             parameters=[
-                os.path.join(get_package_share_directory("bur_auv_control"), 'launch', 'ekf.yaml')
+                os.path.join(get_package_share_directory("bur_auv_control"), 'params', 'ekf.yaml')
             ],
            ),
+        Node(
+            package="tf2_ros",               
+            executable="static_transform_publisher",
+            arguments = ['--x', '0',
+                            '--y', '-0.5',
+                            '--z', '0', 
+                            '--yaw', '0', 
+                            '--pitch', '0', 
+                            '--roll', '0', 
+                            '--frame-id', 'base_link', 
+                            '--child-frame-id', 'imu']
+        ),
+        Node(
+            package="tf2_ros",               
+            executable="static_transform_publisher",
+            arguments = ['--x', '0',
+                            '--y', '-0.5',
+                            '--z', '0.1', 
+                            '--yaw', '0', 
+                            '--pitch', '0', 
+                            '--roll', '0', 
+                            '--frame-id', 'base_link', 
+                            '--child-frame-id', 'depth_sensor']
+        ),
+        # Node(
+        #         package="tf2_ros",               
+        #         executable="static_transform_publisher",
+        #         arguments = ['--x', '0',
+        #                      '--y', '0',
+        #                      '--z', '0', 
+        #                      '--yaw', '0', 
+        #                      '--pitch', '0', 
+        #                      '--roll', '0', 
+        #                      '--frame-id', 'world', 
+        #                      '--child-frame-id', 'map']
+        # ),
+        # Node(
+        #     package="tf2_ros",               
+        #     executable="static_transform_publisher",
+        #     arguments = ['--x', '0',
+        #                     '--y', '0',
+        #                     '--z', '0', 
+        #                     '--yaw', '0', 
+        #                     '--pitch', '0', 
+        #                     '--roll', '0', 
+        #                     '--frame-id', 'map', 
+        #                     '--child-frame-id', 'odom']
+        # ),
+        # Node(
+        #     package="tf2_ros",               
+        #     executable="static_transform_publisher",
+        #     arguments = ['--x', '0',
+        #                     '--y', '0',
+        #                     '--z', '0', 
+        #                     '--yaw', '0', 
+        #                     '--pitch', '0', 
+        #                     '--roll', '0', 
+        #                     '--frame-id', 'odom', 
+        #                     '--child-frame-id', 'base_link']
+        # ),
 ])

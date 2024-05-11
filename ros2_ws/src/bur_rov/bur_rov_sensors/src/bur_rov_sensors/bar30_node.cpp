@@ -51,7 +51,7 @@ void Bar30_node::timer_Callback()
     msg.pose.pose.position.z = sensor->depth();
     msg.pose.covariance = {0, 0, 0, 0, 0, 0,
                            0, 0, 0, 0, 0, 0,
-                           0, 0, 0.002, 0, 0, 0,
+                           0, 0, 0.06, 0, 0, 0,
                            0, 0, 0, 0, 0, 0,
                            0, 0, 0, 0, 0, 0,
                            0, 0, 0, 0, 0, 0};

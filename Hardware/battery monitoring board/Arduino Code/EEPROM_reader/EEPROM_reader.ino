@@ -1,7 +1,5 @@
 #include <EEPROM.h>
 
-int current = 0; //current address to read
-
 void setup() {
   // put your setup code here, to run once:
 
@@ -33,21 +31,23 @@ void loop() {
 
 void getData() {
   // put your main code here, to run repeatedly:
-  Serial.print("DATA AT POSITION ");
-  Serial.println(current);
+  Serial.println("DATA:");
   Serial.print("Leak Boolean: ");
-  Serial.println(EEPROM.read(current));
+  Serial.println(EEPROM.read(0));
 
-  byte byte1 = EEPROM.read(current+1);
-  byte byte2 = EEPROM.read(current+2);
+  byte byte1 = EEPROM.read(1);
+  byte byte2 = EEPROM.read(2);
   int temp = (byte1 << 8) | byte2;
   Serial.print("Temperature reading: ");
   Serial.println(temp);
 
   Serial.print("Voltage Readings:");
-  for (int i = 0; i < 8; i++) {
+  for (int i = 0; i < 16; i+=2) {
+    byte byte1 = EEPROM.read(3+i);
+    byte byte2 = EEPROM.read(4+i);
+    int voltage = (byte1 << 8) | byte2;
     Serial.print(" ");
-    Serial.print(EEPROM.read(current+3+i));
+    Serial.print(voltage);
   }
   Serial.println(" ");
   Serial.println(" ----------------------------------- ");

@@ -23,10 +23,11 @@ Bar30_node::Bar30_node() : rclcpp::Node("bar30"), count(0)
         sensor->setFluidDensity(this->get_parameter("fluid_density").as_double());
         sensor->setOSR(5);
         sensor->setModel(1);
-        pub_ = this->create_publisher<geometry_msgs::msg::PoseWithCovarianceStamped>("depth_sensor", 10);
-        // pub_ = this->create_publisher<geometry_msgs::msg::Pose>("depth_sensor", 10);
+        depth_pub = this->create_publisher<geometry_msgs::msg::PoseWithCovarianceStamped>("depth_sensor", 10);
+        pressure_pub = this->create_publisher<std_msgs::msg::Float32>("pressure", 10);
+        temp_pub = this->create_publisher<std_msgs::msg::Float32>("temp", 10);
         int period = 1000/this->get_parameter("rate").as_int();
-        timer_ = this->create_wall_timer(chrono::milliseconds(period), bind(&Bar30_node::timer_Callback, this));
+        timer = this->create_wall_timer(chrono::milliseconds(period), bind(&Bar30_node::timer_Callback, this));
         RCLCPP_INFO(this->get_logger(), "Publishing to topic: Bar30_data at '%i' hz", 1000 / period);
     }
     else
@@ -42,20 +43,25 @@ Bar30_node::~Bar30_node()
 
 void Bar30_node::timer_Callback()
 {
-    auto msg = geometry_msgs::msg::PoseWithCovarianceStamped();
-    // auto msg = geometry_msgs::msg::Pose();
-    // Bar30->printData();
+    auto depth_msg = geometry_msgs::msg::PoseWithCovarianceStamped();
+    auto pressure_msg = std_msgs::msg::Float32();
+    auto temp_msg = std_msgs::msg::Float32();
     sensor->read();
-    msg.header.stamp = this->now();
-    msg.header.frame_id = "depth_sensor";
-    msg.pose.pose.position.z = sensor->depth();
-    msg.pose.covariance = {0, 0, 0, 0, 0, 0,
+    depth_msg.header.stamp = this->now();
+    depth_msg.header.frame_id = "depth_sensor";
+    depth_msg.pose.pose.position.z = sensor->depth();
+    depth_msg.pose.covariance = {0, 0, 0, 0, 0, 0,
                            0, 0, 0, 0, 0, 0,
                            0, 0, 0.06, 0, 0, 0,
                            0, 0, 0, 0, 0, 0,
                            0, 0, 0, 0, 0, 0,
                            0, 0, 0, 0, 0, 0};
-    pub_->publish(msg);
+
+    pressure_msg.data = sensor->pressure();
+    temp_msg.data = sensor->temperature();
+    pressure_pub->publish(pressure_msg);
+    temp_pub->publish(temp_msg);
+    depth_pub->publish(depth_msg);
     count++;
 }
 

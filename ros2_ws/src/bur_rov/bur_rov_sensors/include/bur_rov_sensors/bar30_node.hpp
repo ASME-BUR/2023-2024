@@ -3,7 +3,7 @@
 
 #include "rclcpp/rclcpp.hpp"
 #include "geometry_msgs/msg/pose_with_covariance_stamped.hpp"
-#include "geometry_msgs/msg/pose.hpp"
+#include "std_msgs/msg/float32.hpp"
 #include "MS5837.h"
 #include <cmath>
 #include <chrono>
@@ -20,11 +20,11 @@ public:
     // void run();
 
 private:
-    rclcpp::Publisher<geometry_msgs::msg::PoseWithCovarianceStamped>::SharedPtr pub_;
-    // rclcpp::Publisher<geometry_msgs::msg::Pose>::SharedPtr pub_;
-    // North(x)-East(y)-Down(z) Coordinate
+    rclcpp::Publisher<geometry_msgs::msg::PoseWithCovarianceStamped>::SharedPtr depth_pub;
+    rclcpp::Publisher<std_msgs::msg::Float32>::SharedPtr pressure_pub;
+    rclcpp::Publisher<std_msgs::msg::Float32>::SharedPtr temp_pub;
     void timer_Callback();
-    rclcpp::TimerBase::SharedPtr timer_;
+    rclcpp::TimerBase::SharedPtr timer;
     unique_ptr<MS5837> sensor;
     int pi;
     size_t count;

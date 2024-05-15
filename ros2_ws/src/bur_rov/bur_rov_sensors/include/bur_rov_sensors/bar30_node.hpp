@@ -3,6 +3,7 @@
 
 #include "rclcpp/rclcpp.hpp"
 #include "geometry_msgs/msg/pose_with_covariance_stamped.hpp"
+#include "nav_msgs/msg/odometry.hpp"
 #include "std_msgs/msg/float32.hpp"
 #include "MS5837.h"
 #include <cmath>
@@ -21,6 +22,7 @@ public:
 
 private:
     rclcpp::Publisher<geometry_msgs::msg::PoseWithCovarianceStamped>::SharedPtr depth_pub;
+    rclcpp::Publisher<nav_msgs::msg::Odometry>::SharedPtr depth_pub2;
     rclcpp::Publisher<std_msgs::msg::Float32>::SharedPtr pressure_pub;
     rclcpp::Publisher<std_msgs::msg::Float32>::SharedPtr temp_pub;
     void timer_Callback();

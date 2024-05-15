@@ -24,6 +24,7 @@ Bar30_node::Bar30_node() : rclcpp::Node("bar30"), count(0)
         sensor->setOSR(5);
         sensor->setModel(1);
         depth_pub = this->create_publisher<geometry_msgs::msg::PoseWithCovarianceStamped>("depth_sensor", 10);
+        depth_pub2 = this->create_publisher<nav_msgs::msg::Odometry>("depth_sensor2", 10);
         pressure_pub = this->create_publisher<std_msgs::msg::Float32>("pressure", 10);
         temp_pub = this->create_publisher<std_msgs::msg::Float32>("temp", 10);
         int period = 1000/this->get_parameter("rate").as_int();
@@ -44,21 +45,33 @@ Bar30_node::~Bar30_node()
 void Bar30_node::timer_Callback()
 {
     auto depth_msg = geometry_msgs::msg::PoseWithCovarianceStamped();
+    auto depth_msg2 = nav_msgs::msg::Odometry();
     auto pressure_msg = std_msgs::msg::Float32();
     auto temp_msg = std_msgs::msg::Float32();
     sensor->read();
     depth_msg.header.stamp = this->now();
     depth_msg.header.frame_id = "depth_sensor";
     depth_msg.pose.pose.position.z = sensor->depth();
-    depth_msg.pose.covariance = {0, 0, 0, 0, 0, 0,
-                           0, 0, 0, 0, 0, 0,
-                           0, 0, 0.06, 0, 0, 0,
-                           0, 0, 0, 0, 0, 0,
-                           0, 0, 0, 0, 0, 0,
-                           0, 0, 0, 0, 0, 0};
+    depth_msg.pose.covariance = {0.005, 0.005, 0.005, 0.005, 0.005, 0.005,
+                                0.005, 0.005, 0.005, 0.005, 0.005, 0.005,
+                                0.005, 0.005, 0.005, 0.005, 0.005, 0.005,
+                                0.005, 0.005, 0.005, 0.005, 0.005, 0.005,
+                                0.005, 0.005, 0.005, 0.005, 0.005, 0.005,
+                                0.005, 0.005, 0.005, 0.005, 0.005, 0.005,};
 
+    depth_msg2.header.stamp = this->now();
+    depth_msg2.header.frame_id = "odom";
+    depth_msg2.child_frame_id = "base_link";
+    depth_msg2.pose.pose.position.z = sensor->depth();
+    depth_msg2.pose.covariance = {0.005, 0.005, 0.005, 0.005, 0.005, 0.005,
+                                0.005, 0.005, 0.005, 0.005, 0.005, 0.005,
+                                0.005, 0.005, 0.005, 0.005, 0.005, 0.005,
+                                0.005, 0.005, 0.005, 0.005, 0.005, 0.005,
+                                0.005, 0.005, 0.005, 0.005, 0.005, 0.005,
+                                0.005, 0.005, 0.005, 0.005, 0.005, 0.005,};
     pressure_msg.data = sensor->pressure();
     temp_msg.data = sensor->temperature();
+    depth_pub2->publish(depth_msg2);
     pressure_pub->publish(pressure_msg);
     temp_pub->publish(temp_msg);
     depth_pub->publish(depth_msg);

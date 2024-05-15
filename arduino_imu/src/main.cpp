@@ -79,21 +79,21 @@ void timer_callback(rcl_timer_t *timer, int64_t last_call_time)
       IMU->readMessages(verbose);
       imu_msg.header.stamp.sec = rmw_uros_epoch_nanos() / pow(10, 9);
       imu_msg.header.stamp.nanosec = rmw_uros_epoch_nanos();
-      imu_msg.linear_acceleration.y = IMU->getAcceleration()[0];
-      imu_msg.linear_acceleration.x = -IMU->getAcceleration()[1];
+      imu_msg.linear_acceleration.x = IMU->getAcceleration()[0];
+      imu_msg.linear_acceleration.y = IMU->getAcceleration()[1];
       imu_msg.linear_acceleration.z = IMU->getAcceleration()[2];
       imu_msg.orientation.w = IMU->getQuat()[0];
-      imu_msg.orientation.y = IMU->getQuat()[1];
-      imu_msg.orientation.x = -IMU->getQuat()[2];
+      imu_msg.orientation.x = IMU->getQuat()[1];
+      imu_msg.orientation.y = IMU->getQuat()[2];
       imu_msg.orientation.z = IMU->getQuat()[3];
-      imu_msg.angular_velocity.y = IMU->getRateOfTurn()[0];
-      imu_msg.angular_velocity.x = IMU->getRateOfTurn()[1];
+      imu_msg.angular_velocity.x = IMU->getRateOfTurn()[0];
+      imu_msg.angular_velocity.y = IMU->getRateOfTurn()[1];
       imu_msg.angular_velocity.z = IMU->getRateOfTurn()[2];
 
       mag_msg.header.stamp.sec = rmw_uros_epoch_nanos() / pow(10, 9);
       mag_msg.header.stamp.nanosec = rmw_uros_epoch_nanos();
-      mag_msg.magnetic_field.y = IMU->getMag()[0];
-      mag_msg.magnetic_field.x = -IMU->getMag()[1];
+      mag_msg.magnetic_field.x = IMU->getMag()[0];
+      mag_msg.magnetic_field.y = IMU->getMag()[1];
       mag_msg.magnetic_field.z = IMU->getMag()[2];
       rcl_publish(&publisher_imu, &imu_msg, NULL);
       rcl_publish(&publisher_mag, &mag_msg, NULL);
@@ -149,7 +149,7 @@ void setup()
   delay(1000);
   set_microros_serial_transports(SerialUSB);
   state = WAITING_AGENT;
-  // IMU->configureOutputs(100);
+  IMU->configureOutputs(100);
   imu_msg.header.frame_id = micro_ros_string_utilities_init("imu");
   mag_msg.header.frame_id = micro_ros_string_utilities_init("mag");
   // Set covariance values
@@ -161,9 +161,9 @@ void setup()
   double angular_velocity_covariance[9] = {0.000523598775598, 0, 0,
                                            0, 0.000523598775598, 0,
                                            0, 0, 0.000523598775598};
-  double orientation_covariance[9] = {0.008726646259972, 0, 0,
-                                      0, 0.008726646259972, 0,
-                                      0, 0, 0.034906585039887};
+  double orientation_covariance[9] = {0.000000008726646259972, 0, 0,
+                                      0, 0.000000008726646259972, 0,
+                                      0, 0, 0.000000034906585039887};
   double magnetic_covariance[9] = {0.00005, 0, 0,
                                    0, 0.00005, 0,
                                    0, 0, 0.00005};
@@ -175,7 +175,7 @@ void setup()
     imu_msg.orientation_covariance[i] = orientation_covariance[i];
     mag_msg.magnetic_field_covariance[i] = magnetic_covariance[i];
   };
-  IMU->resetAlignment();
+  IMU->resetInclination();
   IMU->goToMeasurement(); // Switch device to Measurement mode
 }
 

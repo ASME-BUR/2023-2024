@@ -18,6 +18,7 @@ find_package(rclcpp REQUIRED)
 find_package(sensor_msgs REQUIRED)
 find_package(drivers REQUIRED)
 find_package(geometry_msgs REQUIRED)
+find_package(nav_msgs REQUIRED)
 
 include_directories(include/${PROJECT_NAME})
 
@@ -30,7 +31,7 @@ include_directories(include/${PROJECT_NAME})
 #              "$<INSTALL_INTERFACE:include>")
 
 add_executable(bar30_node src/${PROJECT_NAME}/bar30_node.cpp)
-ament_target_dependencies(bar30_node rclcpp geometry_msgs)
+ament_target_dependencies(bar30_node rclcpp geometry_msgs nav_msgs)
 target_link_libraries(bar30_node drivers::bar30_depth_sensor)
 
 target_include_directories(

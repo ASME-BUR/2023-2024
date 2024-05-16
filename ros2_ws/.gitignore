@@ -4,3 +4,4 @@ log/
 .vscode/
 src/.vscode
 ros2bags/
+setup.zsh

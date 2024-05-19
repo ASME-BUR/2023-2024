@@ -23,3 +23,9 @@
 [submodule "ros2_ws/src/ros2_usb_camera"]
 	path = ros2_ws/src/ros2_usb_camera
 	url = https://github.com/klintan/ros2_usb_camera.git
+[submodule "ros2_ws/src/bur_auv/orca4"]
+	path = ros2_ws/src/bur_auv/orca4
+	url = https://github.com/clydemcqueen/orca4.git
+[submodule "ros2_ws/src/bur_auv/ros2_shared"]
+	path = ros2_ws/src/bur_auv/ros2_shared
+	url = https://github.com/ptrmu/ros2_shared.git

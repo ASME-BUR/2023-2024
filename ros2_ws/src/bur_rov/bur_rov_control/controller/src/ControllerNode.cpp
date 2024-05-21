@@ -70,18 +70,18 @@ namespace controller
 
   void ControllerNode::currentCommandCallback(const bur_rov_msgs::msg::Command::SharedPtr msg)
   {
-    pose_state = msg->current_pos;
-    pose_setpoint = msg->target_pos;
-    twist_state = msg->current_vel;
-    twist_setpoint = msg->target_vel;
-    active = msg->buttons[13];
+    pose_state = msg->current_pos.pose;
+    pose_setpoint = msg->target_pos.pose;
+    twist_state = msg->current_vel.twist;
+    twist_setpoint = msg->target_vel.twist;
+    active = msg->buttons[9];
     double roll_state, pitch_state, yaw_state;
-    tf2::Quaternion q = tf2::Quaternion(msg->current_pos.orientation.x, msg->current_pos.orientation.y, msg->current_pos.orientation.z, msg->current_pos.orientation.w);
+    tf2::Quaternion q = tf2::Quaternion(msg->current_pos.pose.orientation.x, msg->current_pos.pose.orientation.y, msg->current_pos.pose.orientation.z, msg->current_pos.pose.orientation.w);
     tf2::Matrix3x3 rot_matrix = tf2::Matrix3x3(q);
     rot_matrix.getRPY(roll_state, pitch_state, yaw_state);
     state_angle = tf2::Vector3(roll_state, pitch_state, yaw_state);
     double roll_setpoint, pitch_setpoint, yaw_setpoint;
-    q = tf2::Quaternion(msg->target_pos.orientation.x, msg->target_pos.orientation.y, msg->target_pos.orientation.z, msg->target_pos.orientation.w);
+    q = tf2::Quaternion(msg->target_pos.pose.orientation.x, msg->target_pos.pose.orientation.y, msg->target_pos.pose.orientation.z, msg->target_pos.pose.orientation.w);
     rot_matrix = tf2::Matrix3x3(q);
     rot_matrix.getRPY(roll_setpoint, pitch_setpoint, yaw_setpoint);
     if (abs(twist_setpoint.angular.z) <= 0.1 && yaw_hold == false)
@@ -101,7 +101,7 @@ namespace controller
     setpoint_angle = tf2::Vector3(roll_setpoint, pitch_setpoint, yaw_setpoint);
     if (abs(twist_setpoint.linear.z) <= 0.1 && depth_hold == false)
     {
-      pose_setpoint.position.z = msg->current_pos.position.z;
+      pose_setpoint.position.z = msg->current_pos.pose.position.z;
       depth_hold = true;
     }
     else

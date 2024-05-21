@@ -6,6 +6,7 @@
 #include "geometry_msgs/msg/vector3_stamped.hpp"
 #include "sensor_msgs/msg/joy.hpp"
 #include "sensor_msgs/msg/imu.hpp"
+#include "nav_msgs/msg/odometry.hpp"
 #include "bur_rov_msgs/msg/command.hpp"
 #include <tf2/LinearMath/Quaternion.h>
 #include <tf2/utils.h>
@@ -27,6 +28,7 @@ private:
     void joy_callback(const sensor_msgs::msg::Joy::SharedPtr msg);
     void pose_callback(const geometry_msgs::msg::PoseWithCovarianceStamped::SharedPtr msg);
     void imu_callback(const sensor_msgs::msg::Imu::SharedPtr msg);
+    void odom_callback(const nav_msgs::msg::Odometry::SharedPtr msg);
     double *vel_calc(double acceleration[3], rclcpp::Time current_time, rclcpp::Time previous_time);
 
     rclcpp::Publisher<bur_rov_msgs::msg::Command>::SharedPtr cmd_pub;
@@ -38,9 +40,11 @@ private:
     rclcpp::Subscription<sensor_msgs::msg::Joy>::SharedPtr joy_sub;
     rclcpp::Subscription<geometry_msgs::msg::PoseWithCovarianceStamped>::SharedPtr pose_sub;
     rclcpp::Subscription<sensor_msgs::msg::Imu>::SharedPtr imu_sub;
+    rclcpp::Subscription<nav_msgs::msg::Odometry>::SharedPtr odom_sub;
     
     bur_rov_msgs::msg::Command output;
-    float vel_cap;
+    geometry_msgs::msg::Vector3Stamped joy_euler_msg;
+    float multiplier;
     double v_0[3] = {};
     double velocity[3] = {};
     rclcpp::Time prev_time;

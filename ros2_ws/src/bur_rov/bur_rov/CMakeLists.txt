@@ -17,18 +17,19 @@ find_package(tf2 REQUIRED)
 find_package(tf2_ros REQUIRED)
 find_package(tf2_geometry_msgs REQUIRED)
 find_package(joy REQUIRED)
+find_package(nav_msgs REQUIRED)
 # find_package(state_estimation REQUIRED)
 # find_package(controller REQUIRED)
 
 include_directories(include/${PROJECT_NAME})
 
 add_executable(joy_command src/joy_command.cpp)
-ament_target_dependencies(joy_command tf2 tf2_geometry_msgs rclcpp sensor_msgs bur_rov_msgs joy)
+ament_target_dependencies(joy_command tf2 tf2_geometry_msgs nav_msgs rclcpp sensor_msgs bur_rov_msgs joy)
 
 install(TARGETS joy_command DESTINATION lib/${PROJECT_NAME})
 
 # Install launch files.
-install(DIRECTORY launch DESTINATION share/${PROJECT_NAME}/)
+install(DIRECTORY launch config DESTINATION share/${PROJECT_NAME}/)
 
 if(BUILD_TESTING)
   find_package(ament_lint_auto REQUIRED)

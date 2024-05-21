@@ -23,3 +23,6 @@
 [submodule "ros2_ws/src/ros2_usb_camera"]
 	path = ros2_ws/src/ros2_usb_camera
 	url = https://github.com/klintan/ros2_usb_camera.git
+[submodule "ros2_ws/src/bur_rov/bur_rov_msgs"]
+	path = ros2_ws/src/bur_rov/bur_rov_msgs
+	url = https://github.com/ASME-BUR/bur_rov_msgs.git

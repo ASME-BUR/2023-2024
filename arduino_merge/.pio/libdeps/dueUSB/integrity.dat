@@ -1,2 +1,3 @@
-arduino-libraries/Servo@1.2.1
 https://github.com/micro-ROS/micro_ros_platformio
+Wire
+arduino-libraries/Servo@1.2.1

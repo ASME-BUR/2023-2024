@@ -13,6 +13,11 @@
 
 #include <Servo.h>
 #include "bur_rov_msgs/msg/thruster_command.h"
+#include <sensor_msgs/msg/imu.h>
+#include <sensor_msgs/msg/magnetic_field.h>
+
+#include "MTi.h"
+#include <Wire.h>
 
 #define RCCHECK(fn)              \
   {                              \
@@ -47,6 +52,8 @@ enum states
 
 #define MOTOR_COUNT 8
 #define UTIL_COUNT 3
+#define DRDY 3       // Arduino Digital IO pin used as input for MTi-DRDY
+#define ADDRESS 0x6B // MTi I2C address 0x6B (default I2C address for MTi 1-series)
 
 // Restart arduino
 void (*resetFunc)(void) = 0;

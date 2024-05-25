@@ -32,7 +32,3 @@
 [submodule "ros2_ws/src/bur_auv/ros2_shared"]
 	path = ros2_ws/src/submodules/ros2_shared
 	url = https://github.com/ptrmu/ros2_shared
-[submodule "ros2_ws/src/submodules/BehaviorTree.CPP"]
-	path = ros2_ws/src/submodules/BehaviorTree.CPP
-	url = https://github.com/BehaviorTree/BehaviorTree.CPP
-	branch = v3.8

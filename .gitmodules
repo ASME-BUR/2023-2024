@@ -26,3 +26,9 @@
 [submodule "ros2_ws/src/bur_rov/bur_rov_msgs"]
 	path = ros2_ws/src/bur_rov/bur_rov_msgs
 	url = https://github.com/ASME-BUR/bur_rov_msgs.git
+[submodule "ros2_ws/src/bur_auv/orca4"]
+	path = ros2_ws/src/bur_auv/orca4
+	url = https://github.com/clydemcqueen/orca4
+[submodule "ros2_ws/src/bur_auv/ros2_shared"]
+	path = ros2_ws/src/bur_auv/ros2_shared
+	url = https://github.com/ptrmu/ros2_shared

@@ -1,0 +1,25 @@
+ <root BTCPP_format="4" >
+    <BehaviorTree ID="MainTree">
+        <PipelineSequence>
+            <SubTree ID="GateTask"/>
+            <SubTree ID="TorpedoTask"/>
+        </PipelineSequence>
+    </BehaviorTree>
+
+    <BehaviorTree ID="GateTask">
+        <Fallback>
+            <GateVisited name="gate_visited"/>
+            <VisitGate name="visit_gate"/>
+        </Fallback>
+    </BehaviorTree>
+
+    <BehaviorTree ID="TorpedoTask">
+        <Fallback>
+            <TorpedoVisited name="torpedo_visited"/>
+            <Sequence name="torpedo_sequence">
+                <VisitTorpedo name="visit_torpedo"/>
+                <FireTorpedo name="fire_torpedo"/>
+            </Sequence>
+        </Fallback>    
+    </BehaviorTree>
+ </root>

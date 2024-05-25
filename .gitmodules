@@ -1,16 +1,16 @@
 [submodule "ros2_ws/src/micro_ros_setup"]
-	path = ros2_ws/src/micro_ros_setup
+	path = ros2_ws/src/submodules/micro_ros_setup
 	url = https://github.com/micro-ROS/micro_ros_setup.git
 	branch = humble
 [submodule "ros2_ws/src/arduino/lib/Xsens_MTi_I2C"]
 	path = ros2_ws/src/arduino/lib/Xsens_MTi_I2C
 	url = https://github.com/ASME-BUR/Xsens_MTi_I2C.git
 [submodule "ros2_ws/src/uros/micro_ros_msgs"]
-	path = ros2_ws/src/uros/micro_ros_msgs
+	path = ros2_ws/src/submodules/uros/micro_ros_msgs
 	url = https://github.com/micro-ROS/micro_ros_msgs.git
 	branch = humble
 [submodule "ros2_ws/src/uros/micro-ROS-Agent"]
-	path = ros2_ws/src/uros/micro-ROS-Agent
+	path = ros2_ws/src/submodules/uros/micro-ROS-Agent
 	url = https://github.com/micro-ROS/micro-ROS-Agent.git
 	branch = humble
 [submodule "arduino_thruster/.pio/libdeps/dueUSB/micro_ros_platformio"]
@@ -21,7 +21,7 @@
 	url = https://github.com/ASME-BUR/eskf.git
 	branch = humble
 [submodule "ros2_ws/src/ros2_usb_camera"]
-	path = ros2_ws/src/ros2_usb_camera
+	path = ros2_ws/src/submodules/ros2_usb_camera
 	url = https://github.com/klintan/ros2_usb_camera.git
 [submodule "ros2_ws/src/bur_rov/bur_rov_msgs"]
 	path = ros2_ws/src/bur_rov/bur_rov_msgs

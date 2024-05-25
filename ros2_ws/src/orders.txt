@@ -4,3 +4,9 @@ ros2 run micro_ros_agent micro_ros_agent serial -D /dev/ttyACM0 -v 6 -b 250000
 
 thrusters:
 ros2 run micro_ros_agent micro_ros_agent serial -D /dev/ttyACM1
+
+test thrusters:
+ros2 topic pub thruster_command bur_rov_msgs/ThrusterCommand 'thrusters: [1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]'
+
+
+ros2 launch zed_wrapper zed_camera.launch.py camera_model:=zedm publish_tf:=false publish_map_tf:=false

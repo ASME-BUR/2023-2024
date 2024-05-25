@@ -10,6 +10,7 @@ joy_command:
     joy_topic: "joy"
     depth_topic: "depth_sensor"
     pose_topic: "set_pose"
+    twist_topic: "set_twist"
     publish_rate: 100
     imu_topic: "imu"
     multiplier: 1.0

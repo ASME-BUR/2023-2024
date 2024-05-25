@@ -58,6 +58,7 @@ private:
 
     bur_rov_msgs::msg::Command output;
     geometry_msgs::msg::Vector3Stamped joy_euler_msg;
+    bool new_params = false;
     bool using_joy;
     bool using_ekf;
     float multiplier;

@@ -5,7 +5,7 @@
 JoyCommand::JoyCommand() : rclcpp::Node("joy_command")
 {
     this->declare_parameter("cmd_pub_topic", "command");
-    this->declare_parameter("twist_topic", "twist");
+    this->declare_parameter("twist_topic", "set_twist");
     this->declare_parameter("joy_topic", "joy");
     this->declare_parameter("depth_topic", "depth_sensor");
     this->declare_parameter("pose_topic", "set_pose");
@@ -46,6 +46,7 @@ void JoyCommand::set_constants()
     using_ekf = this->get_parameter("using_ekf").as_bool();
     multiplier = this->get_parameter("multiplier").as_double();
     this->get_parameters("axis_mapping", axis_mapping_);
+    new_params = false;
 }
 rcl_interfaces::msg::SetParametersResult JoyCommand::parametersCallback(
     const vector<rclcpp::Parameter> &parameters)
@@ -59,7 +60,7 @@ rcl_interfaces::msg::SetParametersResult JoyCommand::parametersCallback(
         RCLCPP_INFO(this->get_logger(), "%s", param.get_type_name().c_str());
         RCLCPP_INFO(this->get_logger(), "%s", param.value_to_string().c_str());
     }
-    set_constants();
+    new_params = true;
     return result;
 }
 
@@ -67,7 +68,6 @@ void JoyCommand::joy_callback(const sensor_msgs::msg::Joy::SharedPtr msg)
 {
     if (using_joy)
     {
-
         if (!msg->axes.empty())
         {
             output.header.stamp = this->now();
@@ -106,7 +106,6 @@ void JoyCommand::joy_callback(const sensor_msgs::msg::Joy::SharedPtr msg)
             {
                 output.buttons.push_back(msg->buttons[i]);
             }
-            cmd_pub->publish(output);
 
             auto debug_msg = geometry_msgs::msg::PoseStamped();
             debug_msg.header.stamp = this->now();
@@ -154,11 +153,8 @@ void JoyCommand::imu_callback(const sensor_msgs::msg::Imu::SharedPtr msg)
     output.current_pos.header.stamp = this->now();
     output.current_pos.header.frame_id = "imu";
     output.current_pos.header = msg->header;
-    output.current_pos.pose.orientation.x = msg->orientation.x;
-    output.current_pos.pose.orientation.y = msg->orientation.y;
-    output.current_pos.pose.orientation.z = msg->orientation.z;
-    output.current_pos.pose.orientation.w = msg->orientation.w;
-
+    output.current_pos.pose.orientation = msg->orientation;
+    
     output.current_vel.header.frame_id = "imu";
     output.current_vel.twist.angular.x = msg->angular_velocity.x;
     output.current_vel.twist.angular.y = msg->angular_velocity.y;
@@ -223,6 +219,10 @@ void JoyCommand::odom_callback(const nav_msgs::msg::Odometry::SharedPtr msg)
 
 void JoyCommand::timer_callback()
 {
+    if (new_params)
+    {
+        set_constants();
+    }
     cmd_pub->publish(output);
 }
 

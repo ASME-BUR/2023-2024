@@ -8,7 +8,9 @@ joy:
 joy_command:
   ros__parameters:
     joy_topic: "joy"
-    pose_topic: "depth_sensor"
+    depth_topic: "depth_sensor"
+    pose_topic: "set_pose"
+    publish_rate: 100
     imu_topic: "imu"
     multiplier: 1.0
     cmd_pub_topic: "command"

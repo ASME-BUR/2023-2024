@@ -14,13 +14,18 @@ find_package(ament_index_cpp REQUIRED)
 find_package(geometry_msgs REQUIRED)
 find_package(std_msgs REQUIRED)
 find_package(nav2_behavior_tree REQUIRED)
+find_package(orca_nav2 REQUIRED)
+# find_package(pure_pursuit_controller_3d REQUIRED)
+
 
 set(THIS_PACKAGE_INCLUDE_DEPENDS
     behaviortree_cpp_v3
     rclcpp
     geometry_msgs
     std_msgs
-    nav2_behavior_tree)
+    nav2_behavior_tree
+    orca_nav2
+    )
 
 # macro to remove some boiler plate
 function(add_target_dependencies target)
@@ -33,7 +38,7 @@ endfunction()
 # EXECUTABLES
 
 add_executable(bur_planner src/bur_planner.cpp)
-add_target_dependencies(bur_planner)
+add_target_dependencies(bur_planner pure_pursuit_controller_3d)
 
 # target_link_libraries(${PROJECT_NAME}
 # ${rclcpp_LIBRARIES}

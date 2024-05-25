@@ -3,6 +3,8 @@
 #include "bur_planner.h"
 #include "rclcpp/rclcpp.hpp"
 
+#include "orca_nav2/param_macro.hpp"
+
 using namespace BurNodes;
 
 int main(int argc, char * argv[])

@@ -9,7 +9,7 @@ def generate_launch_description():
     config = os.path.join(
         get_package_share_directory('thruster_manager'),
         'config',
-        'motor_force_config.yaml'
+        'motor_force_config3.yaml'
         )
         
     node=Node(
@@ -21,6 +21,7 @@ def generate_launch_description():
                       {"wrench_sub_topic": "control_effort"},
                       {"cmd_sub_topic": "command"},
                       {"thrust_cmd_pub_topic": "thruster_command"},
+                      {"test_mode": False}
                       ]
     )
 

@@ -93,6 +93,8 @@ private:
     double TORQUE_MAX;      // N-m
     double THRUST_MAX_FWD_N;
     double THRUST_MAX_BWD_N;
+
+    bool test_mode = false;
 };
 
 #endif

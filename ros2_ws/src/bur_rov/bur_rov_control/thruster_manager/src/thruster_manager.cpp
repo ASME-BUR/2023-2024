@@ -74,6 +74,13 @@ void Thruster_manager::cmd_Callback(const bur_rov_msgs::msg::Command::SharedPtr 
     {
         this->output.buttons.push_back(msg->buttons[i]);
     }
+
+    if(this->test_mode) {
+        this->output.thrusters.clear();
+        for (size_t i = 0; i < 8; ++i) {
+            this->output.thrusters.push_back(0.4 * output.buttons[i]);
+        }
+    }
     // runNode();
 }
 
@@ -157,10 +164,10 @@ void Thruster_manager::runNode()
 
     // Convert motor thrusts to commands
     std::vector<float> motor_comms(motors.size(), 0);
-    // Publish message
-    this->output.thrusters.clear();
 
+    // Publish message
     if(this->test_mode == false) {
+        this->output.thrusters.clear();
         for (size_t i = 0; i < motors.size(); ++i) {
             double m_comms = thrust_to_motor_comm(des_motor_thrusts[i]);
             m_comms = CommonFunctions::Clamp(m_comms, -1.0, 1.0); // Clamp just in case
@@ -169,10 +176,6 @@ void Thruster_manager::runNode()
             this->output.thrusters.push_back(CommonFunctions::Clamp(motor_comms[i], -1.0, 1.0));
             // Store the last command so we can ramp it
             last_motor_command[i] = motor_comms[i];
-        }
-    } else {
-        for (size_t i = 0; i < motors.size(); ++i) {
-            this->output.thrusters.push_back(output.buttons[i]);
         }
     }
 

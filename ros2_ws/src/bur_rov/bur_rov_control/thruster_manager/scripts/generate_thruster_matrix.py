@@ -57,45 +57,51 @@ CoM = np.array([0, 0, 0]) / 1000
 
 # Units in mm
 thruster_locations = np.array([
-    [-368.79653, 256.83809, 38.1],
-    [-264.87636, 233.15, -35.71352],
-    [264.87636, 233.15, -35.71352],
-    [264.87636, -233.15, -35.71352],
-    [368.79653, -256.83809, 38.1],
-    [-368.79653, -256.83809, 38.1],
-    [-264.87636, -233.15, -35.71352],
-    [368.79653, 256.83809, 38.1]
+    [-368.79653, 256.83809, -38.1],
+    [368.79653, 256.83809, -38.1],
+    [-264.87636, 233.15, 35.71352],
+    [264.87636, 233.15, 35.71352],
+    [-264.87636, -233.15, 35.71352],
+    [-368.79653, -256.83809, -38.1],
+    [368.79653, -256.83809, -38.1],
+    [264.87636, -233.15, 35.71352],
 ]) / 1000
+
+# Prevents up/down thrusters from having nonzero surge/sway
+thruster_locations[:, 2] = 0
 
 deg = 45
 s = np.sin(np.deg2rad(deg))
 c = np.cos(np.deg2rad(deg))
 thruster_orientations = np.array([
                                 [-c, -s, 0],
-                                [0, 0, -1],
-                                [0, 0, 1],
-                                [0, 0, -1],
-                                [c, s, 0],
                                 [c, -s, 0],
                                 [0, 0, 1],
-                                [-c, s, 0]
+                                [0, 0, -1],
+                                [0, 0, -1],
+                                [-c, s, 0],
+                                [c, s, 0],
+                                [0, 0, 1]
                                 ])
 
 CoM = transform(CoM, coordinate_system_in=coordinate_system, coordinate_system_out=CoordinateSystems.ENU)
 thruster_locations = transform(thruster_locations, coordinate_system_in=coordinate_system, coordinate_system_out=CoordinateSystems.ENU)
 thruster_orientations = transform(thruster_orientations, coordinate_system_in=coordinate_system, coordinate_system_out=CoordinateSystems.ENU)
-print("thruster_locations", thruster_locations)
-print("thruster orientations", thruster_orientations)
+print("thruster_locations\n", thruster_locations)
+print("thruster orientations\n", thruster_orientations)
 
 thruster_locations = thruster_locations - CoM
 # Compute torques
 Torque = np.cross(thruster_locations, thruster_orientations)
+print("Torque\n", Torque)
+
 # Stack to get Force-Torque conversion matrix
 A = np.vstack((thruster_orientations.T, Torque.T))
 Ainv = np.linalg.pinv(A)
 Ainv = np.around(Ainv, 6)
 
-print("Ainv", Ainv)
+print("A\n", A)
+print("Ainv\n", Ainv)
 
 # Convert numpy arrays to lists
 Ainv = Ainv.tolist()
@@ -108,8 +114,8 @@ for i in range(len(Ainv)):
         'surge': Ainv[i][0],
         'sway': Ainv[i][1],
         'heave': Ainv[i][2],
-        'roll': Ainv[i][3],
-        'pitch': Ainv[i][4],
+        'pitch': Ainv[i][3], # Note: not the usual order of roll-pitch-yaw
+        'roll': Ainv[i][4],
         'yaw': Ainv[i][5]
     }
     motors_data[f'motor{i}'] = motor_data

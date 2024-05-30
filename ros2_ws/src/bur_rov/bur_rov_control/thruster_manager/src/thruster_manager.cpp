@@ -17,6 +17,7 @@ Thruster_manager::Thruster_manager() : rclcpp::Node("thruster_manager")
     this->declare_parameter("max_force", 60.0);
     this->declare_parameter("max_torque", 8.0);
     this->declare_parameter("num_motors", 8);
+    this->declare_parameter("test_mode", false);
     // Parameter Lists
     const std::map<std::string, double> &motor = {{"surge", 0.0}, {"sway", 0.0}, {"heave", 0.0}, {"roll", 0.0}, {"pitch", 0.0}, {"yaw", 0.0}};
 
@@ -32,6 +33,7 @@ Thruster_manager::Thruster_manager() : rclcpp::Node("thruster_manager")
         this->get_parameter("cmd_sub_topic").as_string(), 1, std::bind(&Thruster_manager::cmd_Callback, this, _1));
     cmd_pub = this->create_publisher<bur_rov_msgs::msg::ThrusterCommand>(
         this->get_parameter("thrust_cmd_pub_topic").as_string(), 1);
+    test_mode = this->get_parameter("test_mode").as_bool();
 
     setVariables();
 }
@@ -57,6 +59,7 @@ void Thruster_manager::setVariables()
         motors[i]["pitch"] = this->get_parameter(string(motor_names[i] + ".pitch")).as_double();
         motors[i]["yaw"] = this->get_parameter(string(motor_names[i] + ".yaw")).as_double();
     }
+
 }
 
 void Thruster_manager::cmd_Callback(const bur_rov_msgs::msg::Command::SharedPtr msg)
@@ -156,16 +159,23 @@ void Thruster_manager::runNode()
     std::vector<float> motor_comms(motors.size(), 0);
     // Publish message
     this->output.thrusters.clear();
-    for (size_t i = 0; i < motors.size(); ++i)
-    {
-        double m_comms = thrust_to_motor_comm(des_motor_thrusts[i]);
-        m_comms = CommonFunctions::Clamp(m_comms, -1.0, 1.0); // Clamp just in case
-        // std::cout << "m_comms " << i << " " << m_comms << " last_cmd " << last_motor_command[i]<< std::endl;
-        motor_comms[i] = (float)rateLimitMotorCommand(m_comms, last_motor_command[i]);
-        this->output.thrusters.push_back(CommonFunctions::Clamp(motor_comms[i], -1.0, 1.0));
-        // Store the last command so we can ramp it
-        last_motor_command[i] = motor_comms[i];
+
+    if(this->test_mode == false) {
+        for (size_t i = 0; i < motors.size(); ++i) {
+            double m_comms = thrust_to_motor_comm(des_motor_thrusts[i]);
+            m_comms = CommonFunctions::Clamp(m_comms, -1.0, 1.0); // Clamp just in case
+            // std::cout << "m_comms " << i << " " << m_comms << " last_cmd " << last_motor_command[i]<< std::endl;
+            motor_comms[i] = (float)rateLimitMotorCommand(m_comms, last_motor_command[i]);
+            this->output.thrusters.push_back(CommonFunctions::Clamp(motor_comms[i], -1.0, 1.0));
+            // Store the last command so we can ramp it
+            last_motor_command[i] = motor_comms[i];
+        }
+    } else {
+        for (size_t i = 0; i < motors.size(); ++i) {
+            this->output.thrusters.push_back(output.buttons[i]);
+        }
     }
+
     cmd_pub->publish(this->output);
 } // End of run node
 

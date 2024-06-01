@@ -7,14 +7,22 @@ namespace controller
   {
 
     this->declare_parameter("sub_topic", "command");
+    this->declare_parameter("target_vel_topic", "/cmd_vel");
     this->declare_parameter("pub_topic", "control_effort");
     this->declare_parameter("publish_rate", 100);
+    this->declare_parameter("use_command_target", false);
 
     state_setpoint_sub = this->create_subscription<bur_rov_msgs::msg::Command>(
         this->get_parameter("sub_topic").as_string(), 1,
         std::bind(&ControllerNode::currentCommandCallback, this, std::placeholders::_1));
+    target_vel_sub = this->create_subscription<geometry_msgs::msg::Twist>(
+        this->get_parameter("target_vel_topic").as_string(), 1,
+        std::bind(&ControllerNode::targetVelCallback, this, std::placeholders::_1));
+
     param_callback = this->add_on_set_parameters_callback(bind(&ControllerNode::parametersCallback, this, std::placeholders::_1));
     pubControlEffort = this->create_publisher<geometry_msgs::msg::WrenchStamped>(this->get_parameter("pub_topic").as_string(), 1);
+
+    use_command_target = this->get_parameter("use_command_target").as_bool();
 
     int publish_rate = this->get_parameter("publish_rate").as_int();
 
@@ -94,7 +102,11 @@ namespace controller
     pose_state = msg->current_pos.pose;
     pose_setpoint = msg->target_pos.pose;
     twist_state = msg->current_vel.twist;
-    twist_setpoint = msg->target_vel.twist;
+
+    if(use_command_target) {
+      twist_setpoint = msg->target_vel.twist;
+    }
+
     active = msg->buttons[9];
 
     double roll_state, pitch_state, yaw_state;
@@ -130,6 +142,13 @@ namespace controller
     else
     {
       depth_hold = false;
+    }
+  }
+
+  void ControllerNode::targetVelCallback(const geometry_msgs::msg::Twist::SharedPtr msg)
+  {
+    if(!use_command_target) {
+      twist_setpoint = *msg;
     }
   }
 

@@ -29,6 +29,7 @@ namespace controller
     rclcpp::Publisher<geometry_msgs::msg::WrenchStamped>::SharedPtr pubControlEffort;
 
     rclcpp::Subscription<bur_rov_msgs::msg::Command>::SharedPtr state_setpoint_sub;
+    rclcpp::Subscription<geometry_msgs::msg::Twist>::SharedPtr target_vel_sub;
 
     rclcpp::Time prevTime;
 
@@ -54,12 +55,14 @@ namespace controller
         const std::vector<rclcpp::Parameter> &parameters);
     rclcpp::node_interfaces::OnSetParametersCallbackHandle::SharedPtr param_callback;
     void currentCommandCallback(const bur_rov_msgs::msg::Command::SharedPtr msg);
+    void targetVelCallback(const geometry_msgs::msg::Twist::SharedPtr msg);
     void set_constants();
     void publishState();
 
     rclcpp::Time lastTime;
     bool active = false;
     bool new_params = false;
+    bool use_command_target = false;
     tf2::Vector3 setpoint_angle;
     tf2::Vector3 state_angle;
     bool depth_hold = false;

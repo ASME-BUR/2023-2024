@@ -7,19 +7,23 @@ set(CMAKE_POSITION_INDEPENDENT_CODE ON)
 
 # DEPENDENCIES
 find_package(ament_cmake REQUIRED)
+find_package(ament_index_cpp REQUIRED)
 find_package(rclcpp REQUIRED )
 find_package(rclcpp_action REQUIRED )
-find_package(behaviortree_cpp_v3 REQUIRED )
-find_package(ament_index_cpp REQUIRED)
+
 find_package(geometry_msgs REQUIRED)
+find_package(nav_msgs REQUIRED)
 find_package(std_msgs REQUIRED)
+
+find_package(behaviortree_cpp_v3 REQUIRED )
 find_package(nav2_behavior_tree REQUIRED)
 
 set(THIS_PACKAGE_INCLUDE_DEPENDS
-    behaviortree_cpp_v3
     rclcpp
     geometry_msgs
+    nav_msgs
     std_msgs
+    behaviortree_cpp_v3
     nav2_behavior_tree)
 
 # macro to remove some boiler plate
@@ -31,6 +35,7 @@ function(add_target_dependencies target)
 endfunction()
 
 # EXECUTABLES
+include_directories(include/${PROJECT_NAME})
 
 add_executable(bur_planner src/bur_planner.cpp)
 add_target_dependencies(bur_planner)
@@ -44,7 +49,7 @@ add_target_dependencies(bur_planner)
 install(TARGETS bur_planner
   DESTINATION lib/${PROJECT_NAME})
 
-install(DIRECTORY launch behavior_trees
+install(DIRECTORY behavior_trees launch params
   DESTINATION share/${PROJECT_NAME}/)
 
 if(BUILD_TESTING)

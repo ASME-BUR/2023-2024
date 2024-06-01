@@ -1,0 +1,38 @@
+<root main_tree_to_execute="MainTree">
+    <BehaviorTree ID="MainTree">
+        <PipelineSequence>
+            <SubTree ID="GoUnderGate"/>
+            <SubTree ID="GoAroundMarker"/>
+            <SubTree ID="ReturnUnderGate"/>
+        </PipelineSequence>
+    </BehaviorTree>
+
+    <BehaviorTree ID="GoUnderGate">
+        <GoalUpdater input_goal={goal} goal_updater_topic="bur_planner/gate_position">
+        <Subtree ID="NavigatePathThroughPoses" target={goal}>
+    </BehaviorTree>
+
+    <!-- <BehaviorTree ID="GoAroundMarker">
+        <GoalUpdater input_goal={goal} goal_updater_topic="bur_planner/marker_target">
+        <Subtree ID="NavigatePathThroughPoses" target={goal}>
+    </BehaviorTree> -->
+
+    <BehaviorTree ID="ReturnUnderGate">
+        <GoalUpdater input_goal={goal} goal_updater_topic="bur_planner/start_position">
+        <Subtree ID="NavigatePathThroughPoses" target={goal}>
+    </BehaviorTree>
+
+    <BehaviorTree ID="NavigatePathThroughPoses">
+        <RecoveryNode number_of_retries="6" name="NavigateRecovery">            
+            <PipelineSequence name="NavigateWithReplanning">
+                <RateController hz="0.5">
+                    <ComputePathToPose goal="{target}" path="{path}" planner_id="GridBased"/>
+                </RateController>
+                <FollowPath path="{path}" controller_id="FollowPath" goal_checker_id="goal_checker"/>
+            </PipelineSequence>
+            <ReactiveFallback name="RecoveryFallback">
+                <GoalUpdated/>
+                <Wait wait_duration="5"/>
+            </ReactiveFallback>
+        </RecoveryNode>
+</root>

@@ -1,43 +1,66 @@
 #include "behaviortree_cpp_v3/bt_factory.h"
-
-#include "bur_planner.h"
 #include "rclcpp/rclcpp.hpp"
 
-using namespace BurNodes;
+#include "bur_planner.h"
+
+#include "nav2_behavior_tree/behavior_tree_engine.hpp"
+
+
+namespace bur_planner {
+    BurPlanner::BurPlanner() : rclcpp::Node::Node("bur_planner")
+    {
+        this->declare_parameter("localizer_topic", "/odometry_filtered");
+        this->declare_parameter("vision_topic", "/vision");
+        this->declare_parameter("publish_rate", 10);
+
+        localizer_sub = this->create_subscription<nav_msgs::msg::Odometry>(
+            this->get_parameter("localizer_topic").as_string(), 
+            10, std::bind(&BurPlanner::localizer_callback, this, std::placeholders::_1));
+        
+        start_pub = this->create_publisher<geometry_msgs::msg::PoseStamped>(
+            "bur_planner/start_position", 1);
+        gate_pub = this->create_publisher<geometry_msgs::msg::PoseStamped>(
+            "bur_planner/gate_position", 1);
+        
+        start_position.position.x = 0;
+        start_position.position.y = 0;
+        start_position.position.z = 0;
+
+        gate_position.position.x = 2;
+        gate_position.position.y = 0;
+        gate_position.position.z = 0;
+
+        int publish_rate = this->get_parameter("publish_rate").as_int();
+
+        pubTimer_ = this->create_wall_timer(
+            std::chrono::milliseconds(1000 / publish_rate), 
+            std::bind(&BurPlanner::publish_targets, this));
+    }
+
+    void BurPlanner::publish_targets() {
+        geometry_msgs::msg::PoseStamped start_msg;
+        start_msg.pose = start_position;
+
+        geometry_msgs::msg::PoseStamped gate_msg;
+        gate_msg.pose = gate_position;
+
+        start_pub->publish(start_msg);
+        gate_pub->publish(gate_msg);
+    }
+
+    void BurPlanner::localizer_callback(const nav_msgs::msg::Odometry::SharedPtr msg) {
+        current_pos = msg->pose.pose;
+        current_vel = msg->twist.twist;
+    }
+}
 
 int main(int argc, char * argv[])
 {
-    BehaviorTreeFactory factory;
-
-    factory.registerNodeType<nav2_behavior_tree::PipelineSequence>("PipelineSequence");
-
-    factory.registerSimpleCondition("FireTorpedo", [&](TreeNode&) { return FireTorpedo(); });
-
-    factory.registerSimpleCondition("GateVisited", [&](TreeNode&) { return GateVisited(); });
-    factory.registerSimpleCondition("BuoyVisited", [&](TreeNode&) { return BuoyVisited(); });
-    factory.registerSimpleCondition("BinVisited", [&](TreeNode&) { return BinVisited(); });
-    factory.registerSimpleCondition("TorpedoVisited", [&](TreeNode&) { return TorpedoVisited(); });
-    factory.registerSimpleCondition("SamplesVisited", [&](TreeNode&) { return SamplesVisited(); });
-
     rclcpp::init(argc, argv);
 
-    std::shared_ptr<LocationTracker> location_tracker;
+    rclcpp::spin(std::make_shared<bur_planner::BurPlanner>());
 
-    factory.registerSimpleAction("VisitGate", [&](TreeNode&){ return location_tracker->visit_gate(); } );
-    factory.registerSimpleAction("VisitBuoy", [&](TreeNode&){ return location_tracker->visit_buoy(); } );
-    factory.registerSimpleAction("VisitBin", [&](TreeNode&){ return location_tracker->visit_bin(); } );
-    factory.registerSimpleAction("VisitTorpedo", [&](TreeNode&){ return location_tracker->visit_torpedo(); } );
-    factory.registerSimpleAction("VisitSamples", [&](TreeNode&){ return location_tracker->visit_samples(); } );
-
-    factory.registerBehaviorTreeFromFile(argv[1]);
-    auto tree = factory.createTree("MainTree");
-    
-    while(true) {
-        tree.tickRootWhileRunning();
-    }
-
-    rclcpp::spin(location_tracker);
-    rclcpp::shutdown(); 
+    rclcpp::shutdown();
 
     return 0;
 }

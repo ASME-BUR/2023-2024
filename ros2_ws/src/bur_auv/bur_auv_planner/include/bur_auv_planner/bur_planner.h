@@ -8,6 +8,7 @@
 
 #include "nav_msgs/msg/odometry.hpp"
 
+
 namespace bur_planner {
     class BurPlanner : public rclcpp::Node {
         public:
@@ -18,7 +19,6 @@ namespace bur_planner {
             rclcpp::Subscription<nav_msgs::msg::Odometry>::SharedPtr vision_sub;
 
             rclcpp::Publisher<geometry_msgs::msg::PoseStamped>::SharedPtr start_pub;
-            // rclcpp::Publisher<vector<geometry_msgs::msg::PoseStamped>>::SharedPtr marker_pub;
             rclcpp::Publisher<geometry_msgs::msg::PoseStamped>::SharedPtr gate_pub;
 
             geometry_msgs::msg::Pose current_pos;

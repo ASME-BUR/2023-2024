@@ -1,21 +1,15 @@
 <root main_tree_to_execute="MainTree">
     <BehaviorTree ID="MainTree">
-        <PipelineSequence>
+        <Sequence>
             <SubTree ID="GoUnderGate"/>
-            <SubTree ID="GoAroundMarker"/>
             <SubTree ID="ReturnUnderGate"/>
-        </PipelineSequence>
+        </Sequence>
     </BehaviorTree>
 
     <BehaviorTree ID="GoUnderGate">
         <GoalUpdater input_goal={goal} goal_updater_topic="bur_planner/gate_position">
         <Subtree ID="NavigatePathThroughPoses" target={goal}>
     </BehaviorTree>
-
-    <!-- <BehaviorTree ID="GoAroundMarker">
-        <GoalUpdater input_goal={goal} goal_updater_topic="bur_planner/marker_target">
-        <Subtree ID="NavigatePathThroughPoses" target={goal}>
-    </BehaviorTree> -->
 
     <BehaviorTree ID="ReturnUnderGate">
         <GoalUpdater input_goal={goal} goal_updater_topic="bur_planner/start_position">

@@ -8,13 +8,13 @@ thruster_manager:
       roll: 0.0
       surge: -0.353553
       sway: -0.353553
-      yaw: -0.565112
+      yaw: 0.565112
     motor1:
       heave: 0.0
       pitch: 0.0
       roll: 0.0
-      surge: -0.353553
-      sway: 0.353553
+      surge: 0.353553
+      sway: -0.353553
       yaw: 0.565112
     motor2:
       heave: -0.25
@@ -41,8 +41,8 @@ thruster_manager:
       heave: 0.0
       pitch: 0.0
       roll: 0.0
-      surge: 0.353553
-      sway: -0.353553
+      surge: -0.353553
+      sway: 0.353553
       yaw: 0.565112
     motor6:
       heave: 0.0
@@ -50,7 +50,7 @@ thruster_manager:
       roll: 0.0
       surge: 0.353553
       sway: 0.353553
-      yaw: -0.565112
+      yaw: 0.565112
     motor7:
       heave: -0.25
       pitch: -0.943837

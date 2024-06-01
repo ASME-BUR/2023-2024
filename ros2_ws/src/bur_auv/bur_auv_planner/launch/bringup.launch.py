@@ -47,7 +47,8 @@ def generate_launch_description():
     planner_dir = get_package_share_directory('bur_auv_planner')
     nav2_bt_file = os.path.join(planner_dir, 'behavior_trees', 'prequal_tree.xml')
     nav2_params_file = os.path.join(planner_dir, 'params', 'nav2_params.yaml')
-    orca_params_file = LaunchConfiguration('orca_params_file')
+
+    # orca_params_file = os.path.join(orca_bringup_dir, 'params', 'orca_params.yaml')
 
     # Rewrite to add the full path
     # The rewriter will only rewrite existing keys
@@ -55,18 +56,18 @@ def generate_launch_description():
         source_file=nav2_params_file,
         param_rewrites={
             'default_nav_to_pose_bt_xml': nav2_bt_file,
+            'odom_topic': '/odom'
         },
         convert_types=True)
 
     return LaunchDescription([
-
         # Include the rest of Nav2
         IncludeLaunchDescription(
             PythonLaunchDescriptionSource(os.path.join(orca_bringup_dir, 'launch', 'navigation_launch.py')),
             launch_arguments={
                 'namespace': '',
                 'use_sim_time': 'False',
-                'autostart': 'False',
+                'autostart': 'True',
                 'params_file': configured_nav2_params,
                 'use_composition': 'False',
                 'use_respawn': 'False',

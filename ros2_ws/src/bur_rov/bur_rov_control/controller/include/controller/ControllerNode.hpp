@@ -2,6 +2,7 @@
 #define CONTROLLER
 
 #include <memory>
+#include <vector>
 #include "rclcpp/rclcpp.hpp"
 #include <geometry_msgs/msg/twist.hpp>
 #include "bur_rov_msgs/msg/command.hpp"
@@ -12,6 +13,7 @@
 #include "utility_func.hpp"
 #include <tf2/LinearMath/Quaternion.h>
 #include <tf2/utils.h>
+#include "rcl_interfaces/msg/set_parameters_result.hpp"
 
 namespace controller
 {
@@ -48,11 +50,16 @@ namespace controller
     geometry_msgs::msg::Twist twist_setpoint;
 
     //  callbacks
+    rcl_interfaces::msg::SetParametersResult parametersCallback(
+        const std::vector<rclcpp::Parameter> &parameters);
+    rclcpp::node_interfaces::OnSetParametersCallbackHandle::SharedPtr param_callback;
     void currentCommandCallback(const bur_rov_msgs::msg::Command::SharedPtr msg);
+    void set_constants();
     void publishState();
 
     rclcpp::Time lastTime;
     bool active = false;
+    bool new_params = false;
     tf2::Vector3 setpoint_angle;
     tf2::Vector3 state_angle;
     bool depth_hold = false;

@@ -111,8 +111,8 @@ motors_data = {}
 print(len(Ainv))
 for i in range(len(Ainv)):
     motor_data = {
-        'surge': Ainv[i][0],
-        'sway': Ainv[i][1],
+        'surge': -Ainv[i][1],
+        'sway': Ainv[i][0],
         'heave': Ainv[i][2],
         'pitch': Ainv[i][3], # Note: not the usual order of roll-pitch-yaw
         'roll': Ainv[i][4],

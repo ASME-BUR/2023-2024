@@ -77,8 +77,8 @@ void JoyCommand::joy_callback(const sensor_msgs::msg::Joy::SharedPtr msg)
             output.target_vel.twist.linear.x = multiplier * -msg->axes[abs(axis_mapping_.at("linear_x"))];
             output.target_vel.twist.linear.y = multiplier * msg->axes[abs(axis_mapping_.at("linear_y"))];
             output.target_vel.twist.linear.z = multiplier * msg->axes[abs(axis_mapping_.at("linear_z"))];
-            output.target_vel.twist.angular.x = multiplier * msg->axes[abs(axis_mapping_.at("angular_x"))];
-            output.target_vel.twist.angular.y = multiplier * msg->axes[abs(axis_mapping_.at("angular_y"))];
+            output.target_vel.twist.angular.x = multiplier * -msg->axes[abs(axis_mapping_.at("angular_x"))];
+            output.target_vel.twist.angular.y = multiplier * -msg->axes[abs(axis_mapping_.at("angular_y"))];
             output.target_vel.twist.angular.z = multiplier * msg->axes[abs(axis_mapping_.at("angular_z"))];
 
             // Debug

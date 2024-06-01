@@ -17,4 +17,7 @@ EulerAngles ToEulerAngles(double w, double x, double y, double z);
 // angle wrap -180 to 180
 double angle_wrap_pi(double angle);
 
+template <typename T>
+T clamp(T val, T low, T high);
+
 #endif

@@ -101,7 +101,7 @@ namespace controller
     tf2::Quaternion q = tf2::Quaternion(msg->current_pos.pose.orientation.x, msg->current_pos.pose.orientation.y, msg->current_pos.pose.orientation.z, msg->current_pos.pose.orientation.w);
     tf2::Matrix3x3 rot_matrix = tf2::Matrix3x3(q);
     rot_matrix.getRPY(roll_state, pitch_state, yaw_state);
-    state_angle = tf2::Vector3(-roll_state, -pitch_state, yaw_state);
+    state_angle = tf2::Vector3(pitch_state, roll_state, yaw_state);
 
     double roll_setpoint, pitch_setpoint, yaw_setpoint;
     q = tf2::Quaternion(msg->target_pos.pose.orientation.x, msg->target_pos.pose.orientation.y, msg->target_pos.pose.orientation.z, msg->target_pos.pose.orientation.w);
@@ -154,9 +154,9 @@ namespace controller
           controlEffort.wrench.force.y = linear_y.computeCommand(twist_setpoint.linear.y - twist_state.linear.y, dt);
           controlEffort.wrench.torque.x = angular_x.computeCommand(angle_wrap_pi(setpoint_angle.getX() - state_angle.getX()), dt);
           controlEffort.wrench.torque.y = angular_y.computeCommand(angle_wrap_pi(setpoint_angle.getY() - state_angle.getY()), dt);
-          std::cout << "state x: " << state_angle.getX() << std::endl;
-          std::cout << "setpoint x: " << setpoint_angle.getX() << std::endl;
-          std::cout << "angle_wrap x: " << angle_wrap_pi(setpoint_angle.getX() - state_angle.getX()) << std::endl;
+          // std::cout << "state x: " << state_angle.getX() << std::endl;
+          // std::cout << "setpoint x: " << setpoint_angle.getX() << std::endl;
+          // std::cout << "angle_wrap x: " << angle_wrap_pi(setpoint_angle.getX() - state_angle.getX()) << std::endl;
           // std::cout << "angle_wrap y: " << angle_wrap_pi(setpoint_angle.getY() - state_angle.getY()) << std::endl;
           // std::cout << pose_setpoint.position.z << std::endl;
           // std::cout << pose_state.position.z << std::endl;
@@ -178,15 +178,15 @@ namespace controller
           if (yaw_hold)
           {
             // RCLCPP_INFO(this->get_logger(), "yaw hold");
-            // std::cout << "state: " << state_angle.getZ() << std::endl;
-            // std::cout << "setpoint: " << setpoint_angle.getZ() << std::endl;
-            // std::cout << "angle_wrap error: " << angle_wrap_pi(setpoint_angle.getZ() - state_angle.getZ()) << std::endl;
+            std::cout << "state: " << state_angle.getZ() << std::endl;
+            std::cout << "setpoint: " << setpoint_angle.getZ() << std::endl;
+            std::cout << "angle_wrap error: " << angle_wrap_pi(setpoint_angle.getZ() - state_angle.getZ()) << std::endl;
             controlEffort.wrench.torque.z = angular_z.computeCommand(angle_wrap_pi(setpoint_angle.getZ() - state_angle.getZ()), dt);
-            // std::cout << "torque z: " << controlEffort.wrench.torque.z << std::endl;
+            std::cout << "torque z: " << controlEffort.wrench.torque.z << std::endl;
           }
           else
           {
-            controlEffort.wrench.torque.z = angular_z.computeCommand(twist_setpoint.angular.z - twist_state.angular.z, dt);
+            controlEffort.wrench.torque.z = -angular_z.computeCommand(twist_setpoint.angular.z - twist_state.angular.z, dt);
             // std::cout << "no hold torque z: " << controlEffort.wrench.torque.z << std::endl;
             yaw_hold = false;
           }

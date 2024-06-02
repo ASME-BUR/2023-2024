@@ -9,7 +9,7 @@
 namespace bur_planner {
     BurPlanner::BurPlanner() : rclcpp::Node::Node("bur_planner")
     {
-        this->declare_parameter("localizer_topic", "/odometry_filtered");
+        this->declare_parameter("localizer_topic", "/odometry/filtered");
         this->declare_parameter("vision_topic", "/vision");
         this->declare_parameter("publish_rate", 10);
 

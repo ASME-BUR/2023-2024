@@ -13,7 +13,7 @@ def generate_launch_description():
                 executable="bur_planner",
                 name="bur_planner",
                 parameters=[
-                    {"localizer_topic": "/odometry_filtered"},
+                    {"localizer_topic": "/odometry/filtered"},
                     {"vision_topic": "/vision"},
                     {"publish_rate": 10},
                 ],

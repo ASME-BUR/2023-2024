@@ -1,19 +1,21 @@
 <root main_tree_to_execute="MainTree">
     <BehaviorTree ID="MainTree">
         <Sequence>
-            <SubTree ID="GoUnderGate"/>
-            <SubTree ID="ReturnUnderGate"/>
+            <SubTree ID="GoUnderGate" __shared_blackboard="true"/>
+            <SubTree ID="ReturnUnderGate" __shared_blackboard="true"/>
         </Sequence>
     </BehaviorTree>
 
     <BehaviorTree ID="GoUnderGate">
-        <GoalUpdater input_goal={goal} goal_updater_topic="bur_planner/gate_position">
-        <Subtree ID="NavigatePathThroughPoses" target={goal}>
+        <GoalUpdater input_goal="{goal}">
+            <SubTree ID="NavigatePathThroughPoses" target="{goal}"/>
+        </GoalUpdater>
     </BehaviorTree>
 
     <BehaviorTree ID="ReturnUnderGate">
-        <GoalUpdater input_goal={goal} goal_updater_topic="bur_planner/start_position">
-        <Subtree ID="NavigatePathThroughPoses" target={goal}>
+        <GoalUpdater input_goal="{goal}">
+            <SubTree ID="NavigatePathThroughPoses" target="{goal}"/>
+        </GoalUpdater>
     </BehaviorTree>
 
     <BehaviorTree ID="NavigatePathThroughPoses">
@@ -29,4 +31,5 @@
                 <Wait wait_duration="5"/>
             </ReactiveFallback>
         </RecoveryNode>
+    </BehaviorTree>
 </root>

@@ -78,10 +78,11 @@ private:
     vector<std::string> allocation_priorities;
     vector<std::string> motor_names;
     vector<double> last_motor_command;
+    vector<double> flip_motors;
     array<double, 6> pwr = {0};
     array<double, 6> pwr_limit = {1.0, 1.0, 1.0, 1.0, 1.0, 1.0};
-    double max_step_per_loop = 0.25;
     bool enable_priorities = true;
+    double max_step_per_loop = 0;
 
     double MOTOR_FORWARD_BACKWARD_RATIO; // BlueROV T200 produce 5.25kgf forward, 4.1 kgf backwards, at 16V
     double THRUST_MAX_FWD;               // kg-f @ 16V

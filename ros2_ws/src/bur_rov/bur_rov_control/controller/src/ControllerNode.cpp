@@ -113,7 +113,7 @@ namespace controller
     tf2::Quaternion q = tf2::Quaternion(msg->current_pos.pose.orientation.x, msg->current_pos.pose.orientation.y, msg->current_pos.pose.orientation.z, msg->current_pos.pose.orientation.w);
     tf2::Matrix3x3 rot_matrix = tf2::Matrix3x3(q);
     rot_matrix.getRPY(roll_state, pitch_state, yaw_state);
-    state_angle = tf2::Vector3(pitch_state, roll_state, yaw_state);
+    state_angle = tf2::Vector3(pitch_state, -roll_state, yaw_state);
 
     double roll_setpoint, pitch_setpoint, yaw_setpoint;
     q = tf2::Quaternion(msg->target_pos.pose.orientation.x, msg->target_pos.pose.orientation.y, msg->target_pos.pose.orientation.z, msg->target_pos.pose.orientation.w);
@@ -205,7 +205,7 @@ namespace controller
           }
           else
           {
-            controlEffort.wrench.torque.z = -angular_z.computeCommand(twist_setpoint.angular.z - twist_state.angular.z, dt);
+            controlEffort.wrench.torque.z = angular_z.computeCommand(twist_setpoint.angular.z - twist_state.angular.z, dt);
             // std::cout << "no hold torque z: " << controlEffort.wrench.torque.z << std::endl;
             yaw_hold = false;
           }

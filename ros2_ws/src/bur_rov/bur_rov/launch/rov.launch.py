@@ -26,10 +26,24 @@ def generate_launch_description():
             '/bar30.launch.py'
         ])
     )
+    camera = IncludeLaunchDescription(
+        PythonLaunchDescriptionSource([os.path.join(
+            get_package_share_directory('bur_rov'), 'launch'),
+            '/camera.launch.py'
+        ])
+    )
+    arduino = IncludeLaunchDescription(
+        PythonLaunchDescriptionSource([os.path.join(
+            get_package_share_directory('bur_rov'), 'launch'),
+            '/micro_ros.launch.py'
+        ])
+    )
 
 
     return LaunchDescription([
         thruster_manager,
         controller_launch,
-        depth_sensor
+        depth_sensor,
+        camera,
+        arduino
     ])

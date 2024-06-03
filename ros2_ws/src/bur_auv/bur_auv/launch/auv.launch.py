@@ -14,6 +14,13 @@ def generate_launch_description():
             '/ekf.launch.py'
         ])
     )
+    rov = IncludeLaunchDescription(
+        PythonLaunchDescriptionSource([os.path.join(
+            get_package_share_directory('bur_rov'), 'launch'),
+            '/rov.launch.py'
+        ])
+    )
     return LaunchDescription([
         ekf_launch,
+        rov,
     ])

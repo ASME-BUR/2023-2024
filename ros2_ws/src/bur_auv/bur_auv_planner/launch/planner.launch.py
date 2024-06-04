@@ -15,7 +15,7 @@ def generate_launch_description():
                 parameters=[
                     {"localizer_topic": "/odometry/filtered"},
                     {"vision_topic": "/vision"},
-                    {"publish_rate": 10},
+                    {"publish_rate": 1},
                 ],
                 arguments=[],
             ),

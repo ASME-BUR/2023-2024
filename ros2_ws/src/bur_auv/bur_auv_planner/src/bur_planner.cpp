@@ -20,7 +20,7 @@ namespace bur_planner {
         start_pub = this->create_publisher<geometry_msgs::msg::PoseStamped>(
             "bur_planner/start_position", 1);
         gate_pub = this->create_publisher<geometry_msgs::msg::PoseStamped>(
-            "bur_planner/gate_position", 1);
+            "goal_pose", 1);
         
         start_position.position.x = 0;
         start_position.position.y = 0;
@@ -39,9 +39,11 @@ namespace bur_planner {
 
     void BurPlanner::publish_targets() {
         geometry_msgs::msg::PoseStamped start_msg;
+        start_msg.header.frame_id = "map";
         start_msg.pose = start_position;
 
         geometry_msgs::msg::PoseStamped gate_msg;
+        gate_msg.header.frame_id = "map";
         gate_msg.pose = gate_position;
 
         start_pub->publish(start_msg);

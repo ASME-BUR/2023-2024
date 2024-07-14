@@ -76,6 +76,7 @@ class YoloNode(Node):
 
     def frame_forward_callback(self):
         msg = String()
+        print(self.frame)
         results = self.model(self.frame)
         labels, cord = results.xyxyn[0][:,-1], results.xyxyn[0][:,:-1]
         for l in labels:

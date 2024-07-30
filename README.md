@@ -4,6 +4,15 @@
 
 All completed code goes here
 
+## Dependencies
+Requires Ubuntu 22.04 + ROS2 Humble
+
+Package dependencies:
+- `controller`: `ros-<DISTRO>-control-toolbox`
+- `eskf`: `ros-<DISTRO>-robot-localization`, `ros-<DISTRO>-mavros`
+- `bur_auv`: `ros-<DISTRO>-navigation2`
+- `usb_camera_driver`: `ros-<DISTRO>-image-common`
+- `drivers`: `pigpio`; see https://github.com/joan2937/pigpio/tree/master
 
 ## Run Instructions
 To run as an ROV, run: 

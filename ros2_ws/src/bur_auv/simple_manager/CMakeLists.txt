@@ -33,7 +33,7 @@ endfunction()
 
 # EXECUTABLES
 
-add_executable(simple_manager src/simple_manager.cpp)
+add_executable(simple_manager src/manager_node.cpp src/bt_nodes.cpp)
 
 add_target_dependencies(simple_manager)
 
@@ -50,7 +50,7 @@ add_target_dependencies(simple_manager)
 install(TARGETS simple_manager
   DESTINATION lib/${PROJECT_NAME})
 
-install(DIRECTORY behavior_trees launch
+install(DIRECTORY behavior_trees launch params
   DESTINATION share/${PROJECT_NAME}/)
 
 

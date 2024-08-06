@@ -134,15 +134,15 @@ namespace controller
       yaw_hold = false;
     }
     setpoint_angle = tf2::Vector3(-roll_setpoint, -pitch_setpoint, yaw_setpoint);
-    if (abs(twist_setpoint.linear.z) <= 0.1 && depth_hold == false)
-    {
-      pose_setpoint.position.z = msg->current_pos.pose.position.z;
-      depth_hold = true;
-    }
-    else
-    {
-      depth_hold = false;
-    }
+    // if (abs(twist_setpoint.linear.z) <= 0.1 && depth_hold == false)
+    // {
+    pose_setpoint.position.z = msg->target_pos.pose.position.z;
+    depth_hold = true;
+    // }
+    // else
+    // {
+      // depth_hold = false;
+    // }
   }
 
   void ControllerNode::targetVelCallback(const geometry_msgs::msg::Twist::SharedPtr msg)
@@ -168,9 +168,9 @@ namespace controller
         {
           geometry_msgs::msg::WrenchStamped controlEffort;
           controlEffort.header.stamp = this->now();
-          controlEffort.header.frame_id = "map";
-          controlEffort.wrench.force.x = linear_x.computeCommand(twist_setpoint.linear.x - twist_state.linear.x, dt);
-          controlEffort.wrench.force.y = linear_y.computeCommand(twist_setpoint.linear.y - twist_state.linear.y, dt);
+          controlEffort.header.frame_id = "base_link";
+          controlEffort.wrench.force.x = linear_x.computeCommand(pose_setpoint.position.x - pose_state.position.x, dt);
+          controlEffort.wrench.force.y = linear_y.computeCommand(pose_setpoint.position.y - pose_state.position.y, dt);
           controlEffort.wrench.torque.x = angular_x.computeCommand(angle_wrap_pi(setpoint_angle.getX() - state_angle.getX()), dt);
           controlEffort.wrench.torque.y = angular_y.computeCommand(angle_wrap_pi(setpoint_angle.getY() - state_angle.getY()), dt);
           // std::cout << "state x: " << state_angle.getX() << std::endl;
@@ -181,18 +181,18 @@ namespace controller
           // std::cout << pose_state.position.z << std::endl;
           // std::cout << twist_setpoint.linear.z << std::endl;
           // std::cout << twist_state.linear.z << std::endl;
-          if (depth_hold)
-          {
+          // if (depth_hold)
+          // {
             // RCLCPP_INFO(this->get_logger(), "depth hold");
-            controlEffort.wrench.force.z = linear_z.computeCommand(pose_setpoint.position.z - pose_state.position.z, dt);
+          controlEffort.wrench.force.z = linear_z.computeCommand(pose_setpoint.position.z - pose_state.position.z, dt);
             // std::cout << controlEffort.wrench.force.z << std::endl;
-          }
-          else
-          {
-            controlEffort.wrench.force.z = linear_z.computeCommand(twist_setpoint.linear.z - twist_state.linear.z, dt);
+          // }
+          // else
+          // {
+            // controlEffort.wrench.force.z = linear_z.computeCommand(twist_setpoint.linear.z - twist_state.linear.z, dt);
             // std::cout << controlEffort.wrench.force.z << std::endl;
-            depth_hold = false;
-          }
+            // depth_hold = false;
+          // }
 
           if (yaw_hold)
           {

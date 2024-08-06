@@ -2,18 +2,19 @@ simple_manager:
   ros__parameters:
     localizer_topic: "/odometry/filtered"
     vision_topic: "/vision"
-
+    
     goal_topic: "/goal_pose"
     pub_rate: 10
 
     behavior_tree: "manager.launch.py should replace me"
     tick_rate: 10
 
+    auto_shutdown: false
+
     start_position:
       x: 0.0
       y: 0.0
       z: 0.0
-
     gate_position:
       x: 20.0
       y: 0.0

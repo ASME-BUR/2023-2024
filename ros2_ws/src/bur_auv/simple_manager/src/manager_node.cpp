@@ -37,6 +37,24 @@ SimpleManager::SimpleManager() : rclcpp::Node::Node("simple_manager")
 
 }
 
+void SimpleManager::initialize_targets() {
+    this->declare_parameter("start_position.x", 0.0);
+    this->declare_parameter("start_position.y", 0.0);
+    this->declare_parameter("start_position.z", 0.0);
+
+    this->declare_parameter("gate_position.x", 5.0);
+    this->declare_parameter("gate_position.y", 0.0);
+    this->declare_parameter("gate_position.z", 0.0);
+
+    this->start_position_->position.x = this->get_parameter("start_position.x").as_double();
+    this->start_position_->position.y = this->get_parameter("start_position.y").as_double();
+    this->start_position_->position.z = this->get_parameter("start_position.z").as_double();
+
+    this->gate_position_->position.x = this->get_parameter("gate_position.x").as_double();
+    this->gate_position_->position.y = this->get_parameter("gate_position.y").as_double();
+    this->gate_position_->position.z = this->get_parameter("gate_position.z").as_double();
+}
+
 void SimpleManager::initialize_tree(BT::BehaviorTreeFactory &factory) {
     factory.registerBehaviorTreeFromFile(this->get_parameter("behavior_tree").as_string());
     this->behavior_tree_ = factory.createTree("MainTree");
@@ -78,8 +96,12 @@ int main(int argc, char * argv[])
 
     auto target = std::make_shared<geometry_msgs::msg::Pose>();
     target->position.x = 5.0;
+    manager->gate_position_ = target;
 
     auto start_position = std::make_shared<geometry_msgs::msg::Pose>();
+    manager->start_position_ = start_position;
+
+    manager->initialize_targets();
 
     factory.registerNodeType<GoToTarget>("GoToGate", manager, start_position);
     factory.registerNodeType<GoToTarget>("GoPastGate", manager, target);

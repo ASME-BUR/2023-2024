@@ -24,6 +24,7 @@ BT::NodeStatus GoToTarget::getStatus() {
             + pow(this->target_pos_ptr_->position.y - this->node_->getCurrentPosition().position.y, 2)
             + pow(this->target_pos_ptr_->position.z - this->node_->getCurrentPosition().position.z, 2));
 
+
     if(dist < this->tolerance_radius) {
         this->successful = true;
         return BT::NodeStatus::SUCCESS;

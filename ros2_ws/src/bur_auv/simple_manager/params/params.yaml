@@ -7,4 +7,4 @@ simple_manager:
     pub_rate: 10
 
     behavior_tree: "manager.launch.py should replace me"
-    tick_rate: 1
+    tick_rate: 10

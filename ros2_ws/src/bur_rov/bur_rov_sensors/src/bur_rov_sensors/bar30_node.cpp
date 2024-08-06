@@ -51,7 +51,7 @@ void Bar30_node::timer_Callback()
     sensor->read();
     depth_msg.header.stamp = this->now();
     depth_msg.header.frame_id = "depth_sensor";
-    depth_msg.pose.pose.position.z = sensor->depth();
+    depth_msg.pose.pose.position.z = -sensor->depth();
     depth_msg.pose.covariance = {0.005, 0.005, 0.005, 0.005, 0.005, 0.005,
                                 0.005, 0.005, 0.005, 0.005, 0.005, 0.005,
                                 0.005, 0.005, 0.005, 0.005, 0.005, 0.005,
@@ -62,7 +62,7 @@ void Bar30_node::timer_Callback()
     depth_msg2.header.stamp = this->now();
     depth_msg2.header.frame_id = "odom";
     depth_msg2.child_frame_id = "base_link";
-    depth_msg2.pose.pose.position.z = sensor->depth();
+    depth_msg2.pose.pose.position.z = -sensor->depth();
     depth_msg2.pose.covariance = {0.005, 0.005, 0.005, 0.005, 0.005, 0.005,
                                 0.005, 0.005, 0.005, 0.005, 0.005, 0.005,
                                 0.005, 0.005, 0.005, 0.005, 0.005, 0.005,

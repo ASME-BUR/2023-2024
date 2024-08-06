@@ -185,7 +185,7 @@ namespace controller
           // if (depth_hold)
           // {
             // RCLCPP_INFO(this->get_logger(), "depth hold");
-          controlEffort.wrench.force.z = linear_z.computeCommand(pose_setpoint.position.z - pose_state.position.z, dt);
+          controlEffort.wrench.force.z = linear_z.computeCommand(twist_setpoint.linear.z - pose_state.position.z, dt);
             // std::cout << controlEffort.wrench.force.z << std::endl;
           // }
           // else

@@ -22,4 +22,4 @@ joy_command:
     axis_mapping.angular_y: 6
     axis_mapping.angular_z: 0
     using_joy: True
-    using_ekf: True
+    using_ekf: False

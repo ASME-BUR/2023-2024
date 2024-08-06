@@ -42,7 +42,7 @@ private:
         }
         if (delta_t < 10.0 && delta_t >= 5.0)
         {
-            values[1] = -1.0;
+            values[1] = -0.7;
             message.buttons.clear();
             buttons[9] = 1;
             for (size_t i = 0; i < buttons.size(); i++)
@@ -50,10 +50,10 @@ private:
                 message.buttons.push_back(buttons[i]);
             }
         }
-        else if (delta_t < 20.0 && delta_t >= 10.0)
+        else if (delta_t < 45.0 && delta_t >= 10.0)
         {
-            values[1] = -1.0;
-            values[3] = 1.0;
+            values[1] = -0.7;
+            // values[4] = 1.0;
             buttons[9] = 1;
             message.buttons.clear();
             for (size_t i = 0; i < buttons.size(); i++)

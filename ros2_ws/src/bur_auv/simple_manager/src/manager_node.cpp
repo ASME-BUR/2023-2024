@@ -22,7 +22,7 @@ SimpleManager::SimpleManager() : rclcpp::Node::Node("simple_manager")
         this->get_parameter("localizer_topic").as_string(), 
         10, std::bind(&SimpleManager::localizer_callback, this, std::placeholders::_1));
 
-    goal_pose_pub_ = this->create_publisher<geometry_msgs::msg::Pose>(
+    goal_pose_pub_ = this->create_publisher<geometry_msgs::msg::PoseStamped>(
         this->get_parameter("goal_topic").as_string(), 10);
 
     pubTimer_ = this->create_wall_timer(
@@ -58,7 +58,9 @@ void SimpleManager::set_goal_pose(geometry_msgs::msg::Pose target_pos) {
 }
 
 void SimpleManager::publish_goal_pose() {
-    this->goal_pose_pub_->publish(this->goal_pose_);
+    geometry_msgs::msg::PoseStamped msg;
+    msg.pose = this->goal_pose_;
+    this->goal_pose_pub_->publish(msg);
 }
 
 void SimpleManager::tick_behavior() {
@@ -74,7 +76,14 @@ int main(int argc, char * argv[])
 
     auto manager = std::make_shared<SimpleManager>();
 
-    factory.registerNodeType<IncrementCounter>("IncrementCounter", manager);
+    auto target = std::make_shared<geometry_msgs::msg::Pose>();
+    target->position.x = 2.0;
+
+    auto start_position = std::make_shared<geometry_msgs::msg::Pose>();
+
+    factory.registerNodeType<GoToTarget>("GoToGate", manager, start_position);
+    factory.registerNodeType<GoToTarget>("GoPastGate", manager, target);
+    factory.registerNodeType<GoToTarget>("GoBackToStart", manager, start_position);
 
     manager->initialize_tree(factory);
 

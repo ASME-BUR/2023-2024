@@ -35,7 +35,7 @@ class GoToTarget : public BT::StatefulActionNode
 
         bool successful = false;
 
-        int tolerance_radius = 0.5;
+        float tolerance_radius = 0.5;
 
 };
 

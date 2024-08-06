@@ -8,10 +8,10 @@
     </BehaviorTree>
 
     <BehaviorTree ID="GateTask">
-        <Sequence>
+        <SequenceWithMemory>
             <GoToGate />
             <GoPastGate />
             <GoBackToStart />
-        </Sequence>
+        </SequenceWithMemory>
     </BehaviorTree>
  </root>

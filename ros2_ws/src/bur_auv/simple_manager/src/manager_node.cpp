@@ -64,7 +64,7 @@ void SimpleManager::publish_goal_pose() {
 }
 
 void SimpleManager::tick_behavior() {
-    this->behavior_tree_.tickOnce();
+    BT::NodeStatus status = this->behavior_tree_.tickOnce();
 }
 
 int main(int argc, char * argv[])

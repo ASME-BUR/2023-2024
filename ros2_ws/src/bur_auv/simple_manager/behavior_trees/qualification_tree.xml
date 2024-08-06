@@ -9,9 +9,14 @@
 
     <BehaviorTree ID="GateTask">
         <SequenceWithMemory>
-            <GoToGate />
-            <GoPastGate />
-            <GoBackToStart />
+            <Sequence>
+                <UpdateStartTarget target="{goal}" />
+                <GoToTarget target="{goal}"/>
+            </Sequence>
+            <Sequence>
+                <UpdateGateTarget target="{goal}" />
+                <GoToTarget target="{goal}"/>
+            </Sequence>
         </SequenceWithMemory>
     </BehaviorTree>
  </root>

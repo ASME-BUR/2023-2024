@@ -35,7 +35,7 @@ void JoyCommand::create_subscribers()
     joy_sub = this->create_subscription<sensor_msgs::msg::Joy>(this->get_parameter("joy_topic").as_string(), 10, bind(&JoyCommand::joy_callback, this, placeholders::_1));
     twist_sub = this->create_subscription<geometry_msgs::msg::TwistStamped>(this->get_parameter("twist_topic").as_string(), 10, bind(&JoyCommand::twist_callback, this, placeholders::_1));
     odom_sub = this->create_subscription<nav_msgs::msg::Odometry>("/odometry/filtered", 10, bind(&JoyCommand::odom_callback, this, placeholders::_1));
-    pose_sub = this->create_subscription<geometry_msgs::msg::PoseStamped>(this->get_parameter("pose_topic").as_string(), 10, bind(&JoyCommand::pose_callback, this, placeholders::_1));
+    pose_sub = this->create_subscription<nav_msgs::msg::Odometry>("next_waypoint", 10, bind(&JoyCommand::pose_callback, this, placeholders::_1));
     depth_sub = this->create_subscription<geometry_msgs::msg::PoseWithCovarianceStamped>(this->get_parameter("depth_topic").as_string(), 10, bind(&JoyCommand::depth_callback, this, placeholders::_1));
     const rclcpp::QoS qos_profile = rclcpp::QoS(rclcpp::KeepLast(10)).best_effort().durability_volatile();
     imu_sub = this->create_subscription<sensor_msgs::msg::Imu>(this->get_parameter("imu_topic").as_string(), qos_profile, bind(&JoyCommand::imu_callback, this, placeholders::_1));
@@ -140,11 +140,17 @@ void JoyCommand::twist_callback(const geometry_msgs::msg::TwistStamped::SharedPt
     }
 }
 
-void JoyCommand::pose_callback(const geometry_msgs::msg::PoseStamped::SharedPtr msg)
+void JoyCommand::pose_callback(const nav_msgs::msg::Odometry::SharedPtr msg)
 {
     if (using_ekf)
     {
-        output.target_pos = *msg;
+        output.target_pos.pose.position.x = msg->pose.pose.position.x;
+        output.target_pos.pose.position.y = msg->pose.pose.position.y;
+        output.target_pos.pose.position.z = msg->pose.pose.position.z;
+        output.target_pos.pose.orientation.x = msg->pose.pose.orientation.x;
+        output.target_pos.pose.orientation.y = msg->pose.pose.orientation.y;
+        output.target_pos.pose.orientation.z = msg->pose.pose.orientation.z;
+        output.target_pos.pose.orientation.w = msg->pose.pose.orientation.w;
     }
 }
 

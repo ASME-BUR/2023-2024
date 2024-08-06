@@ -15,6 +15,9 @@ SimpleManager::SimpleManager() : rclcpp::Node::Node("simple_manager")
     this->declare_parameter("behavior_tree", "tree.xml");
     this->declare_parameter("tick_rate", 10);
 
+    this->declare_parameter("auto_shutdown", false);
+
+
     int pub_rate = this->get_parameter("pub_rate").as_int();
     int tick_rate = this->get_parameter("tick_rate").as_int();
 
@@ -83,6 +86,11 @@ void SimpleManager::publish_goal_pose() {
 
 void SimpleManager::tick_behavior() {
     BT::NodeStatus status = this->behavior_tree_.tickOnce();
+
+    if(status == BT::NodeStatus::SUCCESS &&
+        this->get_parameter("auto_shutdown").as_bool()) {
+        rclcpp::shutdown();
+    }
 }
 
 int main(int argc, char * argv[])
@@ -110,7 +118,7 @@ int main(int argc, char * argv[])
     manager->initialize_tree(factory);
 
     rclcpp::spin(manager);
-    rclcpp::shutdown(); 
+    // rclcpp::shutdown(); 
 
     return 0;
 }

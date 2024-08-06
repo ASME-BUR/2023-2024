@@ -111,9 +111,10 @@ int main(int argc, char * argv[])
 
     manager->initialize_targets();
 
-    factory.registerNodeType<GoToTarget>("GoToGate", manager, start_position);
-    factory.registerNodeType<GoToTarget>("GoPastGate", manager, target);
-    factory.registerNodeType<GoToTarget>("GoBackToStart", manager, start_position);
+    factory.registerNodeType<UpdateTarget>("UpdateStartTarget", start_position);
+    factory.registerNodeType<UpdateTarget>("UpdateGateTarget", target);
+
+    factory.registerNodeType<GoToTarget>("GoToTarget", manager);
 
     manager->initialize_tree(factory);
 

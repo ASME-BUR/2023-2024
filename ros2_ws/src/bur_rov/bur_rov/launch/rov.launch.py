@@ -45,5 +45,5 @@ def generate_launch_description():
         controller_launch,
         depth_sensor,
         camera,
-        arduino
+        # arduino
     ])

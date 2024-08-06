@@ -29,7 +29,7 @@ public:
 private:
     void joy_callback(const sensor_msgs::msg::Joy::SharedPtr msg);
     void depth_callback(const geometry_msgs::msg::PoseWithCovarianceStamped::SharedPtr msg);
-    void pose_callback(const geometry_msgs::msg::PoseStamped::SharedPtr msg);
+    void pose_callback(const nav_msgs::msg::Odometry::SharedPtr msg);
     void twist_callback(const geometry_msgs::msg::TwistStamped::SharedPtr msg);
     void imu_callback(const sensor_msgs::msg::Imu::SharedPtr msg);
     void odom_callback(const nav_msgs::msg::Odometry::SharedPtr msg);
@@ -47,7 +47,7 @@ private:
     rclcpp::Subscription<sensor_msgs::msg::Joy>::SharedPtr joy_sub;
     rclcpp::Subscription<geometry_msgs::msg::TwistStamped>::SharedPtr twist_sub;
     rclcpp::Subscription<geometry_msgs::msg::PoseWithCovarianceStamped>::SharedPtr depth_sub;
-    rclcpp::Subscription<geometry_msgs::msg::PoseStamped>::SharedPtr pose_sub;
+    rclcpp::Subscription<nav_msgs::msg::Odometry>::SharedPtr pose_sub;
     rclcpp::Subscription<sensor_msgs::msg::Imu>::SharedPtr imu_sub;
     rclcpp::Subscription<nav_msgs::msg::Odometry>::SharedPtr odom_sub;
     rclcpp::TimerBase::SharedPtr timer;

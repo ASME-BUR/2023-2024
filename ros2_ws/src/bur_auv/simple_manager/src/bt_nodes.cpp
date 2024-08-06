@@ -2,8 +2,20 @@
 #include "bt_nodes.h"
 
 #include <cmath>
+#include <iostream>
 
-BT::NodeStatus GoToTarget::tick() {
+
+BT::NodeStatus GoToTarget::onStart() {
+    return this->getStatus();
+}
+
+
+BT::NodeStatus GoToTarget::onRunning() {
+    return this->getStatus();
+}
+
+
+BT::NodeStatus GoToTarget::getStatus() {
     if(this->successful) {
         return BT::NodeStatus::SUCCESS;
     }

@@ -30,6 +30,11 @@ class SimpleManager : public rclcpp::Node
 
         void set_goal_pose(geometry_msgs::msg::Pose target_pos);
 
+        // Target Locations
+        geometry_msgs::msg::Pose start_position_;
+        geometry_msgs::msg::Pose gate_position_;
+        std::vector<geometry_msgs::msg::Pose> marker_poses_;
+
         int i = 0;
 
     private:
@@ -39,7 +44,7 @@ class SimpleManager : public rclcpp::Node
         rclcpp::Subscription<nav_msgs::msg::Odometry>::SharedPtr localizer_sub_;
         rclcpp::Subscription<nav_msgs::msg::Odometry>::SharedPtr vision_sub_;
         
-        rclcpp::Publisher<geometry_msgs::msg::Pose>::SharedPtr goal_pose_pub_;
+        rclcpp::Publisher<geometry_msgs::msg::PoseStamped>::SharedPtr goal_pose_pub_;
 
         geometry_msgs::msg::Pose current_pos_;
         geometry_msgs::msg::Twist current_vel_;
@@ -50,11 +55,6 @@ class SimpleManager : public rclcpp::Node
 
         std::shared_ptr<tf2_ros::TransformListener> tf_listener_;
         std::unique_ptr<tf2_ros::Buffer> tf_buffer_;
-
-        // Target Locations
-        geometry_msgs::msg::Pose start_position_;
-        geometry_msgs::msg::Pose gate_position_;
-        std::vector<geometry_msgs::msg::Pose> marker_poses_;
 
         rclcpp::TimerBase::SharedPtr pubTimer_;
         rclcpp::TimerBase::SharedPtr btTimer_;

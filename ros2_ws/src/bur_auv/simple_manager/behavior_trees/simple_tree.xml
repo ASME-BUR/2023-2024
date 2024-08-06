@@ -1,9 +1,9 @@
  <root BTCPP_format="4" >
     <BehaviorTree ID="MainTree">
-        <Sequence>
+        <SequenceWithMemory>
             <SubTree ID="GateTask"/>
             <SubTree ID="TorpedoTask"/>
-        </Sequence>
+        </SequenceWithMemory>
     </BehaviorTree>
 
     <BehaviorTree ID="GateTask">

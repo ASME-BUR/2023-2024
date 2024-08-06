@@ -23,16 +23,15 @@ class SimpleManager : public rclcpp::Node
         SimpleManager();
 
         void initialize_tree(BT::BehaviorTreeFactory &factory);
+        void initialize_targets();
 
         geometry_msgs::msg::Pose const getCurrentPosition() { return current_pos_; }
-        geometry_msgs::msg::Pose const getStartPosition()   { return start_position_; }
-        geometry_msgs::msg::Pose const getGatePosition()    { return gate_position_;}
 
         void set_goal_pose(geometry_msgs::msg::Pose target_pos);
 
         // Target Locations
-        geometry_msgs::msg::Pose start_position_;
-        geometry_msgs::msg::Pose gate_position_;
+        std::shared_ptr<geometry_msgs::msg::Pose> start_position_;
+        std::shared_ptr<geometry_msgs::msg::Pose> gate_position_;
         std::vector<geometry_msgs::msg::Pose> marker_poses_;
 
 

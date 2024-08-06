@@ -43,11 +43,11 @@ void SimpleManager::initialize_tree(BT::BehaviorTreeFactory &factory) {
 }
 
 void SimpleManager::localizer_callback(const nav_msgs::msg::Odometry::SharedPtr msg) {
-    try {
-        this->baselink2Odom = tf_buffer_->lookupTransform("odom", "base_link", tf2::TimePointZero);
-    } catch (const tf2::TransformException& ex) {
-        RCLCPP_INFO(this->get_logger(), "Could no transform base_link to odom: %s", ex.what());
-    }
+    // try {
+    //     this->baselink2Odom = tf_buffer_->lookupTransform("odom", "base_link", tf2::TimePointZero);
+    // } catch (const tf2::TransformException& ex) {
+    //     RCLCPP_INFO(this->get_logger(), "Could no transform base_link to odom: %s", ex.what());
+    // }
 
     this->current_pos_ = msg->pose.pose;
     this->current_vel_ = msg->twist.twist;
@@ -77,7 +77,7 @@ int main(int argc, char * argv[])
     auto manager = std::make_shared<SimpleManager>();
 
     auto target = std::make_shared<geometry_msgs::msg::Pose>();
-    target->position.x = 2.0;
+    target->position.x = 5.0;
 
     auto start_position = std::make_shared<geometry_msgs::msg::Pose>();
 

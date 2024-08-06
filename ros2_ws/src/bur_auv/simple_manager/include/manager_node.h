@@ -35,7 +35,6 @@ class SimpleManager : public rclcpp::Node
         geometry_msgs::msg::Pose gate_position_;
         std::vector<geometry_msgs::msg::Pose> marker_poses_;
 
-        int i = 0;
 
     private:
     

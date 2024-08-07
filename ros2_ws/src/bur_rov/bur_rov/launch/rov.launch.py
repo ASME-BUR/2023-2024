@@ -39,11 +39,19 @@ def generate_launch_description():
         ])
     )
 
+    joy = IncludeLaunchDescription(
+        PythonLaunchDescriptionSource([os.path.join(
+            get_package_share_directory('bur_rov'), 'launch'),
+            '/joy.launch.py'
+        ])
+    )
+
 
     return LaunchDescription([
         thruster_manager,
         controller_launch,
-        # depth_sensor,
+        depth_sensor,
         # camera,
-        # arduino
+        joy,
+        arduino
     ])

@@ -29,9 +29,9 @@
     <param name="angular_y/i" value="0.0" type="float"/>
     <param name="angular_y/d" value="0.0" type="float"/>
 
-    <param name="angular_z/p" value="3.0" type="float"/>
-    <param name="angular_z/i" value="0.0" type="float"/>
-    <param name="angular_z/d" value="1.0" type="float"/>
+    <param name="angular_z/p" value="2.0" type="float"/>
+    <param name="angular_z/i" value="0.01" type="float"/>
+    <param name="angular_z/d" value="0.5" type="float"/>
     <!-- <param name="angular_z/p" value="10.0" type="float"/>
     <param name="angular_z/i" value="0.0" type="float"/>
     <param name="angular_z/d" value="5.0" type="float"/> -->

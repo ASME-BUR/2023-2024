@@ -163,7 +163,7 @@ namespace controller
 
   void ControllerNode::publishState()
   {
-    if (active && twist_setpoint.linear.z > 0)
+    if (active && pose_state.position.z < 0)
     {
       if (new_params)
       {

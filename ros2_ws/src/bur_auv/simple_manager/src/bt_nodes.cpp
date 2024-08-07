@@ -4,6 +4,10 @@
 #include <cmath>
 #include <iostream>
 
+BT::NodeStatus FireTorpedo::tick() {
+    return BT::NodeStatus::SUCCESS;
+}
+
 
 BT::NodeStatus UpdateTarget::getTarget() {
     setOutput("target",  *this->target_pos_ptr_);

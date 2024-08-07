@@ -8,11 +8,30 @@
 
 #include "manager_node.h"
 
+class FireTorpedo : public BT::SyncActionNode
+{
+    public:
+        FireTorpedo(const std::string& name, const BT::NodeConfiguration& config,
+                          const std::shared_ptr<SimpleManager> ptr, 
+                          const std::string pub_topic):
+            BT::SyncActionNode(name, config),
+            node_(ptr),
+            pub_topic_(pub_topic) {}
+
+        static BT::PortsList providedPorts() { return {}; }
+
+        BT::NodeStatus tick() override;
+    
+    private:
+        std::shared_ptr<SimpleManager> node_;
+        std::string pub_topic_;
+};
+
 class UpdateTarget : public BT::StatefulActionNode
 {
     public:
         UpdateTarget(const std::string& name, const BT::NodeConfiguration& config,
-                          std::shared_ptr<geometry_msgs::msg::Pose> target):
+                          const std::shared_ptr<geometry_msgs::msg::Pose> target):
             BT::StatefulActionNode(name, config),
             target_pos_ptr_(target) {}
 
@@ -31,7 +50,6 @@ class UpdateTarget : public BT::StatefulActionNode
         std::shared_ptr<geometry_msgs::msg::Pose> target_pos_ptr_;
 
         BT::NodeStatus getTarget();
-
 };
 
 
@@ -39,7 +57,7 @@ class GoToTarget : public BT::StatefulActionNode
 {
     public:
         GoToTarget(const std::string& name, const BT::NodeConfiguration& config,
-                          std::shared_ptr<SimpleManager> ptr):
+                          const std::shared_ptr<SimpleManager> ptr):
             BT::StatefulActionNode(name, config),
             node_(ptr) {}
 

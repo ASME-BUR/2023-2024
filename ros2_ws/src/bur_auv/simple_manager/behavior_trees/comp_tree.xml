@@ -3,6 +3,8 @@
         <SequenceWithMemory>
             <RetryUntilSuccessful num_attempts="6">
                 <SubTree ID="GateTask"/>
+                <SubTree ID="BuoyTask"/>
+                <SubTree ID="OctagonTask"/>
             </RetryUntilSuccessful>
         </SequenceWithMemory>
     </BehaviorTree>
@@ -26,7 +28,7 @@
                 <UpdateBuoyTarget target="{goal}" />
                 <GoToTarget target="{goal}"/>
             </Sequence>
-            <!--<FireTorpedo>-->
+            <FireTorpedo>
         </SequenceWithMemory>
     </BehaviorTree>
 

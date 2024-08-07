@@ -116,6 +116,8 @@ int main(int argc, char * argv[])
 
     factory.registerNodeType<GoToTarget>("GoToTarget", manager);
 
+    factory.registerNodeType<FireTorpedo>("FireTorpedo", manager, "");
+
     manager->initialize_tree(factory);
 
     rclcpp::spin(manager);

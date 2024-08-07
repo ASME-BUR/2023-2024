@@ -177,7 +177,7 @@ void Planner::find_path(std::vector<Eigen::Vector<float, 4>> waypoints)
         }
     }
     waypoint_msg.pose.pose = path_msg.poses.front().pose;
-    path_msg.header.frame_id = "base_link";
+    path_msg.header.frame_id = "map";
     new_pose = false;
 }
 

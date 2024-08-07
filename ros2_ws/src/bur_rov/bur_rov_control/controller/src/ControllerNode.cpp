@@ -103,11 +103,18 @@ namespace controller
     pose_setpoint = msg->target_pos.pose;
     twist_state = msg->current_vel.twist;
 
-    if(use_command_target) {
+    if (use_command_target)
+    {
       twist_setpoint = msg->target_vel.twist;
     }
-
-    active = msg->buttons[9];
+    if (!msg->buttons.empty())
+    {
+      active = msg->buttons[9];
+    }
+    else
+    {
+      active = false;
+    }
 
     double roll_state, pitch_state, yaw_state;
     tf2::Quaternion q = tf2::Quaternion(msg->current_pos.pose.orientation.x, msg->current_pos.pose.orientation.y, msg->current_pos.pose.orientation.z, msg->current_pos.pose.orientation.w);
@@ -138,24 +145,25 @@ namespace controller
     // {
     // pose_setpoint.position.z = msg->current_pos.pose.position.z;
     pose_setpoint.position.z = msg->target_vel.twist.linear.z;
-      // depth_hold = true;
+    // depth_hold = true;
     // }
     // else
     // {
-      // depth_hold = false;
+    // depth_hold = false;
     // }
   }
 
   void ControllerNode::targetVelCallback(const geometry_msgs::msg::Twist::SharedPtr msg)
   {
-    if(!use_command_target) {
+    if (!use_command_target)
+    {
       twist_setpoint = *msg;
     }
   }
 
   void ControllerNode::publishState()
   {
-    if (active)
+    if (active && twist_setpoint.linear.z > 0)
     {
       if (new_params)
       {
@@ -184,25 +192,25 @@ namespace controller
           // std::cout << twist_state.linear.z << std::endl;
           // if (depth_hold)
           // {
-            // RCLCPP_INFO(this->get_logger(), "depth hold");
+          // RCLCPP_INFO(this->get_logger(), "depth hold");
           controlEffort.wrench.force.z = linear_z.computeCommand(twist_setpoint.linear.z - pose_state.position.z, dt);
-            // std::cout << controlEffort.wrench.force.z << std::endl;
+          // std::cout << controlEffort.wrench.force.z << std::endl;
           // }
           // else
           // {
-            // controlEffort.wrench.force.z = linear_z.computeCommand(twist_setpoint.linear.z - twist_state.linear.z, dt);
-            // std::cout << controlEffort.wrench.force.z << std::endl;
-            // depth_hold = false;
+          // controlEffort.wrench.force.z = linear_z.computeCommand(twist_setpoint.linear.z - twist_state.linear.z, dt);
+          // std::cout << controlEffort.wrench.force.z << std::endl;
+          // depth_hold = false;
           // }
 
           if (yaw_hold)
           {
             // RCLCPP_INFO(this->get_logger(), "yaw hold");
-            std::cout << "state: " << state_angle.getZ() << std::endl;
-            std::cout << "setpoint: " << setpoint_angle.getZ() << std::endl;
-            std::cout << "angle_wrap error: " << angle_wrap_pi(setpoint_angle.getZ() - state_angle.getZ()) << std::endl;
+            // std::cout << "state: " << state_angle.getZ() << std::endl;
+            // std::cout << "setpoint: " << setpoint_angle.getZ() << std::endl;
+            // std::cout << "angle_wrap error: " << angle_wrap_pi(setpoint_angle.getZ() - state_angle.getZ()) << std::endl;
             controlEffort.wrench.torque.z = angular_z.computeCommand(angle_wrap_pi(setpoint_angle.getZ() - state_angle.getZ()), dt);
-            std::cout << "torque z: " << controlEffort.wrench.torque.z << std::endl;
+            // std::cout << "torque z: " << controlEffort.wrench.torque.z << std::endl;
           }
           else
           {

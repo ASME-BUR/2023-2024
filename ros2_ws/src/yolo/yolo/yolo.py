@@ -8,7 +8,8 @@ from sensor_msgs.msg import Image, PointCloud2
 import sensor_msgs_py.point_cloud2 as pc2
 import sensor_msgs.msg as sensor_msgs
 from cv_bridge import CvBridge
-from std_msgs.msg import String
+from std_msgs.msg import String, Int32MultiArray, Float32MultiArray
+from geometry_msgs.msg import PoseArray, Pose
 import torch
 import numpy as np
 
@@ -17,7 +18,7 @@ class YoloNode(Node):
     def __init__(self):
         super().__init__("yolo_node")
         # SET UP MODEL 
-        self.model = torch.hub.load("ultralytics/yolov5", "custom", "yolov5s.pt") 
+        self.model = torch.hub.load("ultralytics/yolov5", "custom", "best.pt") 
         self.model_classes = self.model.names
         self.device = 'cuda' if torch.cuda.is_available() else 'cpu'
         print("Used ", self.device)    
@@ -30,19 +31,21 @@ class YoloNode(Node):
         )
         self.img_subscriber  # prevent unused variable warning
 
-        self.depth_subscriber = self.create_subscription(
-            PointCloud2,
-            "/zed/zed_node/point_cloud/cloud_registered",
-            self.depth_callback,
-            rclpy.qos.qos_profile_sensor_data,
-        )
-        self.depth_subscriber  # prevent unused variable warning
+        # self.depth_subscriber = self.create_subscription(
+        #     PointCloud2,
+        #     "/zed/zed_node/point_cloud/cloud_registered",
+        #     self.depth_callback,
+        #     rclpy.qos.qos_profile_sensor_data,
+        # )
+        # self.depth_subscriber  # prevent unused variable warning
 
         timer_period = 0.5  # seconds
         self.timer = self.create_timer(timer_period, self.frame_forward_callback)
 
         # CREATE PUBLISHER OF CLASS LABEL WITH DISTANCE TO CENTER, CROPPED CLOUD, 
-        self.publisher_ = self.create_publisher(String, "yolo_detections", 10)
+        self.bbox_publisher = self.create_publisher(PoseArray, "yolo_detections", 10)
+        self.label_publisher = self.create_publisher(Int32MultiArray, "yolo_labels", 10)
+        self.conf_publisher = self.create_publisher(Float32MultiArray, "yolo_conf", 10)
 
         self.detect_results = ""
         self.frame = [] 
@@ -64,7 +67,6 @@ class YoloNode(Node):
 
         return (X, Y, Z)
 
-
     def depth_callback(self, msg):
         height, width, channels = self.frame.shape
         self.depth = [[(0, 0, 0) for _ in range(width)] for _ in range(height)]
@@ -75,17 +77,59 @@ class YoloNode(Node):
         self.crop_depth(self.detect_results)
 
     def frame_forward_callback(self):
-        msg = String()
-        print(self.frame)
+        # Create messages for labels, bounding boxes, and confidence scores
+        msg_labels = Int32MultiArray()
+        msg_bboxes = PoseArray()
+        msg_conf = Float32MultiArray()
+
+        if self.frame is None or len(self.frame) == 0:
+            print("Error: The frame is empty or not properly initialized.")
+            return
+
         results = self.model(self.frame)
-        labels, cord = results.xyxyn[0][:,-1], results.xyxyn[0][:,:-1]
-        for l in labels:
-            print(self.class_to_labels(l))
-        msg.data = "FPS:" 
-        self.publisher_.publish(msg)
+        detections = results.pandas().xyxy[0]
+        print(detections)
+
+        # Extract labels and publish them
+        labels = detections['class'].astype(int).tolist()
+        msg_labels.data = labels
+        print(labels)
+        self.label_publisher.publish(msg_labels)
+
+        # Extract bounding boxes and confidence scores, then publish them
+        poses = []
+        confs = []
+        cord = []
+        for _, entry in detections.iterrows():
+            x_min, y_min, x_max, y_max, conf = entry[:5]
+            x_center = (x_min + x_max) / 2
+            y_center = (y_min + y_max) / 2
+            width = x_max - x_min
+            height = y_max - y_min
+
+            pose = Pose()
+            pose.position.x = x_center
+            pose.position.y = y_center
+            pose.position.z = 0.0  # Assuming you don't need Z dimension for bounding boxes
+            pose.orientation.x = width
+            pose.orientation.y = height
+            pose.orientation.z = 0.0
+            pose.orientation.w = 0.0
+
+            poses.append(pose)
+            confs.append(conf)
+            cord.append([x_min, y_min, x_max, y_max])
+
+        msg_bboxes.poses = poses
+        msg_conf.data = confs
+
+        # Publish bounding boxes and confidence scores
+        self.bbox_publisher.publish(msg_bboxes)
+        self.conf_publisher.publish(msg_conf)
+
+        # Update model and detection results
         self.model.to(self.device)
         self.detect_results = labels, cord
-    
     def class_to_labels(self, x):
         return self.model_classes[int(x)]
     

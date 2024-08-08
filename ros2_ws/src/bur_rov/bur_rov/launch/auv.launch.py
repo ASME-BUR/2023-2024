@@ -1,7 +1,7 @@
 import os
 
 from ament_index_python.packages import get_package_share_directory
-
+from launch_ros.actions import Node
 from launch import LaunchDescription
 from launch.actions import IncludeLaunchDescription
 from launch.launch_description_sources import PythonLaunchDescriptionSource
@@ -39,11 +39,22 @@ def generate_launch_description():
         ])
     )
 
+    joy = Node(
+        package="bur_rov",
+        executable="joy_command",
+        name="joy_command",
+        parameters=[{"using_joy": False},
+        {"using_ekf": True},
+        os.path.join(get_package_share_directory("bur_rov"), 'config', 'ps4.yaml')
+        ],
+    )
+
 
     return LaunchDescription([
         thruster_manager,
         controller_launch,
         # depth_sensor,
         # camera,
+        joy,
         # arduino
     ])

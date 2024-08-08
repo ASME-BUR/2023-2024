@@ -6,14 +6,13 @@
     <param name="sub_topic" value="command"/>
     <param name="target_vel_topic" value="/cmd_vel"/>
     <param name="pub_topic" value="control_effort"/>
-
-    <param name="use_command_target" value="true"/>
-
-    <param name="linear_x/p" value="0.1" type="float"/>
+    <param name="publish_rate" value="30"/>
+    <param name="using_joy" value="false"/>
+    <param name="linear_x/p" value="1.0" type="float"/>
     <param name="linear_x/i" value="0.0" type="float"/>
     <param name="linear_x/d" value="0.0" type="float"/>
 
-    <param name="linear_y/p" value="0.1" type="float"/>
+    <param name="linear_y/p" value="1.0" type="float"/>
     <param name="linear_y/i" value="0.0" type="float"/>
     <param name="linear_y/d" value="0.0" type="float"/>
 
@@ -22,11 +21,11 @@
     <param name="linear_z/d" value="5.0" type="float"/>
 
     <param name="angular_x/p" value="0.5" type="float"/>
-    <param name="angular_x/i" value="0.1" type="float"/>
+    <param name="angular_x/i" value="0.0" type="float"/>
     <param name="angular_x/d" value="0.0" type="float"/>
 
     <param name="angular_y/p" value="0.5" type="float"/>
-    <param name="angular_y/i" value="0.1" type="float"/>
+    <param name="angular_y/i" value="0.0" type="float"/>
     <param name="angular_y/d" value="0.0" type="float"/>
 
     <param name="angular_z/p" value="3.0" type="float"/>

@@ -55,6 +55,7 @@ class Thruster_manager : public rclcpp::Node
 {
 public:
     Thruster_manager();
+    ~Thruster_manager();
     void runNode();
     void shutdown();
 

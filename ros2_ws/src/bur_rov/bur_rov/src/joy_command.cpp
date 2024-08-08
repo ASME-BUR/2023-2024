@@ -35,7 +35,7 @@ void JoyCommand::create_subscribers()
     joy_sub = this->create_subscription<sensor_msgs::msg::Joy>(this->get_parameter("joy_topic").as_string(), 10, bind(&JoyCommand::joy_callback, this, placeholders::_1));
     twist_sub = this->create_subscription<geometry_msgs::msg::TwistStamped>(this->get_parameter("twist_topic").as_string(), 10, bind(&JoyCommand::twist_callback, this, placeholders::_1));
     odom_sub = this->create_subscription<nav_msgs::msg::Odometry>("/odometry/filtered", 10, bind(&JoyCommand::odom_callback, this, placeholders::_1));
-    pose_sub = this->create_subscription<nav_msgs::msg::Odometry>("next_waypoint", 10, bind(&JoyCommand::pose_callback, this, placeholders::_1));
+    pose_sub = this->create_subscription<nav_msgs::msg::Odometry>("next_waypoint", 10, bind(&JoyCommand::des_pose_callback, this, placeholders::_1));
     depth_sub = this->create_subscription<geometry_msgs::msg::PoseWithCovarianceStamped>(this->get_parameter("depth_topic").as_string(), 10, bind(&JoyCommand::depth_callback, this, placeholders::_1));
     const rclcpp::QoS qos_profile = rclcpp::QoS(rclcpp::KeepLast(10)).best_effort().durability_volatile();
     imu_sub = this->create_subscription<sensor_msgs::msg::Imu>(this->get_parameter("imu_topic").as_string(), qos_profile, bind(&JoyCommand::imu_callback, this, placeholders::_1));
@@ -74,11 +74,11 @@ void JoyCommand::joy_callback(const sensor_msgs::msg::Joy::SharedPtr msg)
             output.header.frame_id = "odom";
             output.target_vel.header.stamp = this->now();
             output.target_vel.header.frame_id = "odom";
-            output.target_vel.twist.linear.x = multiplier * -msg->axes[abs(axis_mapping_.at("linear_x"))];
+            output.target_vel.twist.linear.x = multiplier * msg->axes[abs(axis_mapping_.at("linear_x"))];
             output.target_vel.twist.linear.y = multiplier * msg->axes[abs(axis_mapping_.at("linear_y"))];
             output.target_vel.twist.linear.z = multiplier * msg->axes[abs(axis_mapping_.at("linear_z"))];
             output.target_vel.twist.angular.x = multiplier * -msg->axes[abs(axis_mapping_.at("angular_x"))];
-            output.target_vel.twist.angular.y = multiplier * -msg->axes[abs(axis_mapping_.at("angular_y"))];
+            output.target_vel.twist.angular.y = multiplier * msg->axes[abs(axis_mapping_.at("angular_y"))];
             output.target_vel.twist.angular.z = multiplier * msg->axes[abs(axis_mapping_.at("angular_z"))];
 
             // Debug
@@ -125,11 +125,8 @@ void JoyCommand::joy_callback(const sensor_msgs::msg::Joy::SharedPtr msg)
 
 void JoyCommand::depth_callback(const geometry_msgs::msg::PoseWithCovarianceStamped::SharedPtr msg)
 {
-    if (!using_ekf)
-    {
-        output.current_pos.header.stamp = this->now();
-        output.current_pos.pose.position.z = msg->pose.pose.position.z;
-    }
+    output.current_pos.header.stamp = this->now();
+    output.current_pos.pose.position.z = msg->pose.pose.position.z;
 }
 
 void JoyCommand::twist_callback(const geometry_msgs::msg::TwistStamped::SharedPtr msg)
@@ -140,7 +137,7 @@ void JoyCommand::twist_callback(const geometry_msgs::msg::TwistStamped::SharedPt
     }
 }
 
-void JoyCommand::pose_callback(const nav_msgs::msg::Odometry::SharedPtr msg)
+void JoyCommand::des_pose_callback(const nav_msgs::msg::Odometry::SharedPtr msg)
 {
     if (using_ekf)
     {
@@ -156,40 +153,25 @@ void JoyCommand::pose_callback(const nav_msgs::msg::Odometry::SharedPtr msg)
 
 void JoyCommand::imu_callback(const sensor_msgs::msg::Imu::SharedPtr msg)
 {
-    output.current_pos.header.stamp = this->now();
-    output.current_pos.header.frame_id = "imu";
-    output.current_pos.header = msg->header;
-    output.current_pos.pose.orientation = msg->orientation;
-    
-    output.current_vel.header.frame_id = "imu";
-    output.current_vel.twist.angular.x = msg->angular_velocity.x;
-    output.current_vel.twist.angular.y = msg->angular_velocity.y;
-    output.current_vel.twist.angular.z = msg->angular_velocity.z;
+    if (!using_ekf)
+    {
+        output.current_pos.header.stamp = this->now();
+        output.current_pos.header.frame_id = "imu";
+        output.current_pos.header = msg->header;
+        output.current_pos.pose.orientation = msg->orientation;
 
-    // OLD VELOCITY CALC
-    // rclcpp::Time now = this->now();
-    // double acceleration[3] = {msg->linear_acceleration.x, msg->linear_acceleration.y, -msg->linear_acceleration.z};
+        output.current_vel.header.frame_id = "imu";
+        output.current_vel.twist.angular.x = msg->angular_velocity.x;
+        output.current_vel.twist.angular.y = msg->angular_velocity.y;
+        output.current_vel.twist.angular.z = msg->angular_velocity.z;
+    }
 
-    // Gravity adjustment
-    // tf2::Vector3 gravity = tf2::Vector3(0, 0, 9.80665);
     tf2::Quaternion q = tf2::Quaternion(msg->orientation.w, msg->orientation.x, msg->orientation.y, msg->orientation.z);
     tf2::Matrix3x3 rot_matrix = tf2::Matrix3x3(q);
-    // tf2::Vector3 gravityOffset = tf2::Vector3(rot_matrix * gravity);
-
-    // acceleration[0] += gravityOffset[0];
-    // acceleration[1] += gravityOffset[1];
-    // acceleration[2] += gravityOffset[2];
-
-    // vel_calc(acceleration, now, prev_time);
-
-    // output.current_vel.linear.x = velocity[0];
-    // output.current_vel.linear.y = velocity[1];
-    // output.current_vel.linear.z = velocity[2];
-    // prev_time = this->now();
 
     auto debug_msg = geometry_msgs::msg::PoseStamped();
     debug_msg.header.stamp = this->now();
-    debug_msg.header.frame_id = "odom";
+    debug_msg.header.frame_id = "base_link";
     debug_msg.pose.orientation.w = output.current_pos.pose.orientation.w;
     debug_msg.pose.orientation.x = output.current_pos.pose.orientation.x;
     debug_msg.pose.orientation.y = output.current_pos.pose.orientation.y;
@@ -201,7 +183,7 @@ void JoyCommand::imu_callback(const sensor_msgs::msg::Imu::SharedPtr msg)
 
     auto imu_euler_msg = geometry_msgs::msg::Vector3Stamped();
     imu_euler_msg.header.stamp = this->now();
-    imu_euler_msg.header.frame_id = "odom";
+    imu_euler_msg.header.frame_id = "base_link";
     double roll, pitch, yaw;
     rot_matrix.getRPY(roll, pitch, yaw);
     imu_euler_msg.vector.x = roll;
@@ -215,9 +197,15 @@ void JoyCommand::odom_callback(const nav_msgs::msg::Odometry::SharedPtr msg)
     if (using_ekf)
     {
         output.header.stamp = this->now();
-        output.header.frame_id = "odom";
+        output.header.frame_id = "base_link";
         output.current_pos.header = msg->header;
-        output.current_pos.pose.position = msg->pose.pose.position;
+        output.current_pos.pose.position.x = msg->pose.pose.position.x;
+        output.current_pos.pose.position.y = msg->pose.pose.position.y;
+        // use the depth sensor z position bc it updates more frequently
+        output.current_pos.pose.orientation.x = msg->pose.pose.orientation.x;
+        output.current_pos.pose.orientation.y = msg->pose.pose.orientation.y;
+        output.current_pos.pose.orientation.z = msg->pose.pose.orientation.z;
+        output.current_pos.pose.orientation.w = msg->pose.pose.orientation.w;
         output.current_vel.header = msg->header;
         output.current_vel.twist = msg->twist.twist;
     }

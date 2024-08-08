@@ -39,6 +39,21 @@ Thruster_manager::Thruster_manager() : rclcpp::Node("thruster_manager")
     setVariables();
 }
 
+Thruster_manager::~Thruster_manager()
+{
+    RCLCPP_INFO(this->get_logger(), "Destructing, stopping all thrusters");
+    this->output.auxilary.clear();
+    this->output.buttons.clear();
+    for (uint8_t i = 0; i < 8; i++)
+    {
+        this->output.auxilary.push_back(0);
+    }
+    for (uint8_t i = 0; i < 3; i++)
+    {
+        this->output.buttons.push_back(0);
+    }
+}
+
 void Thruster_manager::setVariables()
 {
     THRUST_MAX_FWD = this->get_parameter("thrust_max_fwd").as_double();

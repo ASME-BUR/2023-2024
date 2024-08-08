@@ -49,7 +49,7 @@ def transform(matrix, coordinate_system_in=CoordinateSystems.ENU, coordinate_sys
 # Can calculate using whatever coordinate system (NED, NWU, ENU), just be consistent
 coordinate_system_in = CoordinateSystems.NED
 coordinate_system_out = CoordinateSystems.ENU
-filename = 'motor_force_config_true.yaml'
+filename = 'motor_force_config_ENU.yaml'
 # Full path to the output file
 output_path = os.path.join('src/bur_rov/bur_rov_control/thruster_manager/config', filename)
 # Thruster locations (m) relative to CoM

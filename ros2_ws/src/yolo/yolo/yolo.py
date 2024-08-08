@@ -119,6 +119,8 @@ class YoloNode(Node):
             msg[idx].label = labels[idx]
             msg[idx].bbox = pose
             msg[idx].conf = conf
+            msg[idx].width = width
+            msg[idx].height = height
 
             idx += 1
 

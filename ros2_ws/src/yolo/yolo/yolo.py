@@ -12,6 +12,7 @@ from std_msgs.msg import String, Int32MultiArray, Float32MultiArray
 from geometry_msgs.msg import PoseArray, Pose
 import torch
 import numpy as np
+from yolo_msgs.msg import CVDetection, CVDetections
 
 
 class YoloNode(Node):
@@ -43,9 +44,7 @@ class YoloNode(Node):
         self.timer = self.create_timer(timer_period, self.frame_forward_callback)
 
         # CREATE PUBLISHER OF CLASS LABEL WITH DISTANCE TO CENTER, CROPPED CLOUD, 
-        self.bbox_publisher = self.create_publisher(PoseArray, "yolo_detections", 10)
-        self.label_publisher = self.create_publisher(Int32MultiArray, "yolo_labels", 10)
-        self.conf_publisher = self.create_publisher(Float32MultiArray, "yolo_conf", 10)
+        self.yolo_publisher = self.create_publisher(CVDetections, "yolo_detections", 10)
 
         self.detect_results = ""
         self.frame = [] 
@@ -78,9 +77,7 @@ class YoloNode(Node):
 
     def frame_forward_callback(self):
         # Create messages for labels, bounding boxes, and confidence scores
-        msg_labels = Int32MultiArray()
-        msg_bboxes = PoseArray()
-        msg_conf = Float32MultiArray()
+        msg = CVDetections()
 
         if self.frame is None or len(self.frame) == 0:
             print("Error: The frame is empty or not properly initialized.")
@@ -92,14 +89,14 @@ class YoloNode(Node):
 
         # Extract labels and publish them
         labels = detections['class'].astype(int).tolist()
-        msg_labels.data = labels
         print(labels)
-        self.label_publisher.publish(msg_labels)
 
         # Extract bounding boxes and confidence scores, then publish them
         poses = []
         confs = []
         cord = []
+
+        idx = 0
         for _, entry in detections.iterrows():
             x_min, y_min, x_max, y_max, conf = entry[:5]
             x_center = (x_min + x_max) / 2
@@ -116,20 +113,22 @@ class YoloNode(Node):
             pose.orientation.z = 0.0
             pose.orientation.w = 0.0
 
-            poses.append(pose)
-            confs.append(conf)
             cord.append([x_min, y_min, x_max, y_max])
 
-        msg_bboxes.poses = poses
-        msg_conf.data = confs
+            msg.append(CVDetection())
+            msg[idx].label = labels[idx]
+            msg[idx].bbox = pose
+            msg[idx].conf = conf
+
+            idx += 1
 
         # Publish bounding boxes and confidence scores
-        self.bbox_publisher.publish(msg_bboxes)
-        self.conf_publisher.publish(msg_conf)
+        self.yolo_publisher.publish(msg)
 
         # Update model and detection results
         self.model.to(self.device)
         self.detect_results = labels, cord
+
     def class_to_labels(self, x):
         return self.model_classes[int(x)]
     

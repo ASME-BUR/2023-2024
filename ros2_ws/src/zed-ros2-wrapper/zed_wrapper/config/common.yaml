@@ -67,7 +67,7 @@
             publish_tf: true # [usually overwritten by launch file] publish `odom -> camera_link` TF
             publish_map_tf: true # [usually overwritten by launch file] publish `map -> odom` TF
             map_frame: 'map'
-            odometry_frame: 'odom'
+            odometry_frame: 'odom'cd
             area_memory_db_path: ''
             area_memory: true # Enable to detect loop closure
             depth_min_range: 0.0 # Set this value for removing fixed zones of the robot in the FoV of the camerafrom the visual odometry evaluation

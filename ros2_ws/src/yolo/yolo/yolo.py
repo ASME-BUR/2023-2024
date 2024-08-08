@@ -9,7 +9,7 @@ import sensor_msgs_py.point_cloud2 as pc2
 import sensor_msgs.msg as sensor_msgs
 from cv_bridge import CvBridge
 from std_msgs.msg import String, Int32MultiArray, Float32MultiArray
-from geometry_msgs.msg import PoseArray, Pose
+from geometry_msgs.msg import PoseArray, Pose, PoseStamped
 import torch
 import numpy as np
 from yolo_msgs.msg import CVDetection, CVDetections
@@ -116,11 +116,9 @@ class YoloNode(Node):
             cord.append([x_min, y_min, x_max, y_max])
 
             msg.detected.append(CVDetection())
-            msg[idx].label = labels[idx]
-            msg[idx].bbox = pose
-            msg[idx].conf = conf
-            msg[idx].width = width
-            msg[idx].height = height
+            msg.detected[idx].label = labels[idx]
+            msg.detected[idx].bbox.pose = pose
+            msg.detected[idx].conf = conf
 
             idx += 1
 

@@ -19,7 +19,7 @@ class YoloNode(Node):
     def __init__(self):
         super().__init__("yolo_node")
         # SET UP MODEL 
-        self.model = torch.hub.load("ultralytics/yolov5", "custom", "best.pt") 
+        self.model = torch.hub.load("ultralytics/yolov5", "custom", "best_new.pt") 
         self.model_classes = self.model.names
         self.device = 'cuda' if torch.cuda.is_available() else 'cpu'
         print("Used ", self.device)    
@@ -115,7 +115,7 @@ class YoloNode(Node):
 
             cord.append([x_min, y_min, x_max, y_max])
 
-            msg.append(CVDetection())
+            msg.detected.append(CVDetection())
             msg[idx].label = labels[idx]
             msg[idx].bbox = pose
             msg[idx].conf = conf

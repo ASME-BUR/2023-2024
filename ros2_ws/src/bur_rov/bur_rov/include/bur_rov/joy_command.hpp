@@ -29,7 +29,7 @@ public:
 private:
     void joy_callback(const sensor_msgs::msg::Joy::SharedPtr msg);
     void depth_callback(const geometry_msgs::msg::PoseWithCovarianceStamped::SharedPtr msg);
-    void pose_callback(const nav_msgs::msg::Odometry::SharedPtr msg);
+    void des_pose_callback(const nav_msgs::msg::Odometry::SharedPtr msg);
     void twist_callback(const geometry_msgs::msg::TwistStamped::SharedPtr msg);
     void imu_callback(const sensor_msgs::msg::Imu::SharedPtr msg);
     void odom_callback(const nav_msgs::msg::Odometry::SharedPtr msg);

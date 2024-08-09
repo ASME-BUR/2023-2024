@@ -1,34 +1,34 @@
  <root BTCPP_format="4" >
     <BehaviorTree ID="MainTree">
-        <SequenceWithMemory>
-            <SubTree ID="GateTask"/>
-            <!-- <SubTree ID="BuoyTask"/>
-            <SubTree ID="OctagonTask"/> -->
-        </SequenceWithMemory>
+        <Sequence>
+            <!--<SubTree ID="GateTask"/>-->
+            <SubTree ID="BuoyTask"/>
+            <!--<SubTree ID="OctagonTask"/> -->
+        </Sequence>
     </BehaviorTree>
 
     <BehaviorTree ID="GateTask">
-        <SequenceWithMemory>
+        <Sequence>
             <Submerge />
             <GoToGate />
-            <!-- <BarrelRoll />
-            <GoPastGate /> -->
-        </SequenceWithMemory>
+            <YawRoll />
+            <GoPastGate />
+        </Sequence>
     </BehaviorTree>
 
-    <!--<BehaviorTree ID="BuoyTask">
-        <SequenceWithMemory>
+    <BehaviorTree ID="BuoyTask">
+        <Sequence>
             <TurnTowardsBuoy />
             <DriveAtBuoy />
             <FireTorpedoes />
             <DriveIntoBuoy />
-        </SequenceWithMemory>
+        </Sequence>
     </BehaviorTree>
 
-    <BehaviorTree ID="OctagonTask">
-        <SequenceWithMemory>
+    <!--<BehaviorTree ID="OctagonTask">
+        <Sequence>
             <TurnTowardsOctagon />
             <DriveTowardsOctagon />
-        </SequenceWithMemory
+        </Sequence
     </BehaviorTree>-->
  </root>

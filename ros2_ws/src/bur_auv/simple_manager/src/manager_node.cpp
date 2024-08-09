@@ -12,13 +12,14 @@ SimpleManager::SimpleManager() : rclcpp::Node::Node("simple_manager")
 
     this->declare_parameter("goal_topic", "/goal_pose");
     this->declare_parameter("joy_topic", "/joy");
+    this->declare_parameter("waypoint_topic", "/des_pose");
     this->declare_parameter("pub_rate", 10);
 
     this->declare_parameter("behavior_tree", "tree.xml");
     this->declare_parameter("tick_rate", 10);
 
-    this->declare_parameter("auto_shutdown", false);
-
+    this->declare_parameter("auto_shutdown", true);
+    this->declare_parameter("wait_for_depth", false);
 
     int pub_rate = this->get_parameter("pub_rate").as_int();
     int tick_rate = this->get_parameter("tick_rate").as_int();
@@ -34,6 +35,8 @@ SimpleManager::SimpleManager() : rclcpp::Node::Node("simple_manager")
         this->get_parameter("goal_topic").as_string(), 10);
     joy_pub_ = this->create_publisher<sensor_msgs::msg::Joy>(
         this->get_parameter("joy_topic").as_string(), 10);
+    odometry_pub_ = this->create_publisher<nav_msgs::msg::Odometry>(
+        this->get_parameter("waypoint_topic").as_string(), 10);
 
     pubTimer_ = this->create_wall_timer(
         std::chrono::milliseconds(1000 / pub_rate), 
@@ -100,6 +103,10 @@ void SimpleManager::vision_callback(const yolo_msgs::msg::CVDetections::SharedPt
     }
 }
 
+void SimpleManager::depth_callback(const geometry_msgs::msg::PoseWithCovarianceStamped::SharedPtr msg) {
+    this->depth = msg->pose.pose.position.z;
+}
+
 void SimpleManager::set_goal_pose(geometry_msgs::msg::Pose target_pos) {
     this->goal_pose_ = target_pos;
 }
@@ -108,6 +115,11 @@ void SimpleManager::publish_joy_msg(sensor_msgs::msg::Joy joy_msg) {
     this->joy_pub_->publish(joy_msg);
 }
 
+void SimpleManager::publish_odometry_msg(nav_msgs::msg::Odometry odometry_msg) {
+    this->odometry_pub_->publish(odometry_msg);
+}
+
+
 void SimpleManager::publish_goal_pose() {
     geometry_msgs::msg::PoseStamped msg;
     msg.pose = this->goal_pose_;
@@ -115,10 +127,14 @@ void SimpleManager::publish_goal_pose() {
 }
 
 void SimpleManager::tick_behavior() {
+    if(depth > 0 && this->get_parameter("wait_for_depth").as_bool()) { return; }
     BT::NodeStatus status = this->behavior_tree_.tickOnce();
 
     if(status == BT::NodeStatus::SUCCESS &&
         this->get_parameter("auto_shutdown").as_bool()) {
+        rclcpp::shutdown();
+    } else if (status == BT::NodeStatus::FAILURE) {
+        RCLCPP_INFO(this->get_logger(), "Tree failed");
         rclcpp::shutdown();
     }
 }
@@ -137,7 +153,7 @@ int main(int argc, char * argv[])
     std::vector<double> values(9, 0);
     std::vector<int> buttons(10, 0);
 
-    values[1] = -0.7;
+    values[2] = -0.7;
     buttons[9] = 1;
     for (size_t i = 0; i < values.size(); i++) {
             submerge_msg.axes.push_back(values[i]);
@@ -151,8 +167,8 @@ int main(int argc, char * argv[])
     values = std::vector<double>(9, 0);
     buttons = std::vector<int>(10, 0);
     
-    values[1] = -0.7;
-    values[4] = 1.0;
+    values[2] = -0.7;
+    values[0] = 1.0;
     buttons[9] = 1;
     for (size_t i = 0; i < values.size(); i++) {
             forward_msg.axes.push_back(values[i]);
@@ -161,25 +177,31 @@ int main(int argc, char * argv[])
             forward_msg.buttons.push_back(buttons[i]);
     }
 
-    sensor_msgs::msg::Joy barrel_roll_msg;
+    sensor_msgs::msg::Joy yaw_roll_msg;
 
     values = std::vector<double>(9, 0);
     buttons = std::vector<int>(10, 0);
-    
-    values[1] = -0.7;
-    values[4] = 1.0;
+
+    values[5] = -1.0;
+    values[0] = 1.0;
     buttons[9] = 1;
     for (size_t i = 0; i < values.size(); i++) {
-            forward_msg.axes.push_back(values[i]);
+            yaw_roll_msg.axes.push_back(values[i]);
     }
     for (size_t i = 0; i < buttons.size(); i++) {
-            forward_msg.buttons.push_back(buttons[i]);
+            yaw_roll_msg.buttons.push_back(buttons[i]);
     }
 
     factory.registerNodeType<DriveForDuration>("Submerge", manager, submerge_msg, 5);
     factory.registerNodeType<DriveForDuration>("GoToGate", manager, forward_msg, 15);
-    factory.registerNodeType<DriveForDuration>("BarrelRoll", manager, barrel_roll_msg, 15);
+    factory.registerNodeType<DriveForDuration>("YawRoll", manager, yaw_roll_msg, 15);
     factory.registerNodeType<DriveForDuration>("GoPastGate", manager, forward_msg, 5);
+
+    factory.registerNodeType<TurnTowardsBuoy>("TurnTowardsBuoy", manager);
+    factory.registerNodeType<DriveAtDetected>("DriveAtBuoy", manager, YOLO_BUOY);
+    factory.registerNodeType<FireTorpedo>("FireTorpedoes", manager);
+    factory.registerNodeType<DriveForDuration>("DriveIntoBuoy", manager, forward_msg, 5);
+
 
     manager->initialize_tree(factory);
 

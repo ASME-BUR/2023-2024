@@ -7,6 +7,7 @@
 #include "behaviortree_cpp/bt_factory.h"
 
 #include "geometry_msgs/msg/pose_stamped.hpp"
+#include "geometry_msgs/msg/pose_with_covariance_stamped.hpp"
 #include "geometry_msgs/msg/twist.hpp"
 #include "geometry_msgs/msg/transform_stamped.hpp"
 #include "nav_msgs/msg/odometry.hpp"
@@ -37,6 +38,7 @@ class SimpleManager : public rclcpp::Node
 
         void set_goal_pose(geometry_msgs::msg::Pose target_pos);
         void publish_joy_msg(sensor_msgs::msg::Joy joy_msg);
+        void publish_odometry_msg(nav_msgs::msg::Odometry);
 
         // Target Locations
         std::shared_ptr<geometry_msgs::msg::Pose> start_position_;
@@ -54,9 +56,12 @@ class SimpleManager : public rclcpp::Node
 
         rclcpp::Subscription<nav_msgs::msg::Odometry>::SharedPtr localizer_sub_;
         rclcpp::Subscription<yolo_msgs::msg::CVDetections>::SharedPtr vision_sub_;
+        rclcpp::Subscription<geometry_msgs::msg::PoseWithCovarianceStamped>::SharedPtr depth_sub_;
         
         rclcpp::Publisher<geometry_msgs::msg::PoseStamped>::SharedPtr goal_pose_pub_;
         rclcpp::Publisher<sensor_msgs::msg::Joy>::SharedPtr joy_pub_;
+        rclcpp::Publisher<nav_msgs::msg::Odometry>::SharedPtr odometry_pub_;
+
 
         geometry_msgs::msg::Pose current_pos_;
         geometry_msgs::msg::Twist current_vel_;
@@ -71,12 +76,15 @@ class SimpleManager : public rclcpp::Node
         rclcpp::TimerBase::SharedPtr pubTimer_;
         rclcpp::TimerBase::SharedPtr btTimer_;
 
+        double depth = 1000;
+
         void tick_behavior();
 
         // ROS Callbacks
         void publish_goal_pose();
         void localizer_callback(const nav_msgs::msg::Odometry::SharedPtr msg);
         void vision_callback(const yolo_msgs::msg::CVDetections::SharedPtr msg);
+        void depth_callback(const geometry_msgs::msg::PoseWithCovarianceStamped::SharedPtr msg);
 };
 
 #endif

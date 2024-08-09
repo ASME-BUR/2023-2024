@@ -11,6 +11,7 @@ SimpleManager::SimpleManager() : rclcpp::Node::Node("simple_manager")
     this->declare_parameter("vision_topic", "/vision");
 
     this->declare_parameter("goal_topic", "/goal_pose");
+    this->declare_parameter("joy_topic", "/joy");
     this->declare_parameter("pub_rate", 10);
 
     this->declare_parameter("behavior_tree", "tree.xml");
@@ -31,6 +32,8 @@ SimpleManager::SimpleManager() : rclcpp::Node::Node("simple_manager")
 
     goal_pose_pub_ = this->create_publisher<geometry_msgs::msg::PoseStamped>(
         this->get_parameter("goal_topic").as_string(), 10);
+    joy_pub_ = this->create_publisher<sensor_msgs::msg::Joy>(
+        this->get_parameter("joy_topic").as_string(), 10);
 
     pubTimer_ = this->create_wall_timer(
         std::chrono::milliseconds(1000 / pub_rate), 
@@ -181,7 +184,6 @@ int main(int argc, char * argv[])
     manager->initialize_tree(factory);
 
     rclcpp::spin(manager);
-    // rclcpp::shutdown(); 
 
     return 0;
 }

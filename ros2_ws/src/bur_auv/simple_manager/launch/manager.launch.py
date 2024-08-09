@@ -10,7 +10,7 @@ from nav2_common.launch import RewrittenYaml
 def generate_launch_description():
     manager_dir = get_package_share_directory('simple_manager')
     params_file = os.path.join(manager_dir, 'params', 'params.yaml')
-    bt_file = os.path.join(manager_dir, 'behavior_trees', 'qualification_tree.xml')
+    bt_file = os.path.join(manager_dir, 'behavior_trees', 'real_comp_tree.xml')
 
     configured_params = RewrittenYaml(
         source_file=params_file,

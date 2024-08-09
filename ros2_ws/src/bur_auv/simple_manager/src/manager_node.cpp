@@ -12,6 +12,7 @@ SimpleManager::SimpleManager() : rclcpp::Node::Node("simple_manager")
 
     this->declare_parameter("goal_topic", "/goal_pose");
     this->declare_parameter("joy_topic", "/joy");
+    this->declare_parameter("waypoint_topic", "/des_pose");
     this->declare_parameter("pub_rate", 10);
 
     this->declare_parameter("behavior_tree", "tree.xml");
@@ -34,6 +35,8 @@ SimpleManager::SimpleManager() : rclcpp::Node::Node("simple_manager")
         this->get_parameter("goal_topic").as_string(), 10);
     joy_pub_ = this->create_publisher<sensor_msgs::msg::Joy>(
         this->get_parameter("joy_topic").as_string(), 10);
+    odometry_pub_ = this->create_publisher<nav_msgs::msg::Odometry>(
+        this->get_parameter("waypoint_topic").as_string(), 10);
 
     pubTimer_ = this->create_wall_timer(
         std::chrono::milliseconds(1000 / pub_rate), 
@@ -108,6 +111,11 @@ void SimpleManager::publish_joy_msg(sensor_msgs::msg::Joy joy_msg) {
     this->joy_pub_->publish(joy_msg);
 }
 
+void SimpleManager::publish_odometry_msg(nav_msgs::msg::Odometry odometry_msg) {
+    this->odometry_pub_->publish(odometry_msg);
+}
+
+
 void SimpleManager::publish_goal_pose() {
     geometry_msgs::msg::PoseStamped msg;
     msg.pose = this->goal_pose_;
@@ -119,6 +127,9 @@ void SimpleManager::tick_behavior() {
 
     if(status == BT::NodeStatus::SUCCESS &&
         this->get_parameter("auto_shutdown").as_bool()) {
+        rclcpp::shutdown();
+    } else if (status == BT::NodeStatus::FAILURE) {
+        RCLCPP_INFO(this->get_logger(), "Tree failed");
         rclcpp::shutdown();
     }
 }
@@ -181,10 +192,10 @@ int main(int argc, char * argv[])
     factory.registerNodeType<DriveForDuration>("YawRoll", manager, yaw_roll_msg, 15);
     factory.registerNodeType<DriveForDuration>("GoPastGate", manager, forward_msg, 5);
 
-    // factory.registerNodeType<TurnTowardsBuoy>("TurnTowardsBuoy", manager);
-    // factory.registerNodeType<DriveAtDetected>("DriveAtBuoy", manager, YOLO_BUOY);
-    // factory.registerNodeType<DriveForDuration>("FireTorpedoes", manager, forward_msg, 1);
-    // factory.registerNodeType<DriveForDuration>("DriveIntoBuoy", manager, forward_msg, 5);
+    factory.registerNodeType<TurnTowardsBuoy>("TurnTowardsBuoy", manager);
+    factory.registerNodeType<DriveAtDetected>("DriveAtBuoy", manager, YOLO_BUOY);
+    factory.registerNodeType<DriveForDuration>("FireTorpedoes", manager, forward_msg, 1);
+    factory.registerNodeType<DriveForDuration>("DriveIntoBuoy", manager, forward_msg, 5);
 
 
     manager->initialize_tree(factory);

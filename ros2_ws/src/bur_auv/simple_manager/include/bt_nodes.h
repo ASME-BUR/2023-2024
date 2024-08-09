@@ -35,6 +35,7 @@ class TurnTowardsBuoy : public BT::StatefulActionNode
         float time_limit_ = 10.0;
 
         BT::NodeStatus turn();
+        nav_msgs::msg::Odometry odometry_msg_;
 
 };
 
@@ -62,9 +63,13 @@ class DriveAtDetected : public BT::StatefulActionNode
         std::chrono::steady_clock::time_point timer_;
         bool not_seen_ = false;
 
+        float target_distance_ = -1.0;
+        float stop_distance_ = 3.0;
+
         BT::NodeStatus publish_joy();
 
-        sensor_msgs::msg::Joy msg;
+        sensor_msgs::msg::Joy joy_msg_;
+        nav_msgs::msg::Odometry odometry_msg_;
 
 };
 

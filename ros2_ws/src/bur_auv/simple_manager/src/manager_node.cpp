@@ -4,6 +4,7 @@
 #include "tf2/exceptions.h"
 #include "rclcpp/rclcpp.hpp"
 
+
 SimpleManager::SimpleManager() : rclcpp::Node::Node("simple_manager")
 {
     this->declare_parameter("localizer_topic", "/odometry/filtered");
@@ -24,6 +25,9 @@ SimpleManager::SimpleManager() : rclcpp::Node::Node("simple_manager")
     localizer_sub_ = this->create_subscription<nav_msgs::msg::Odometry>(
         this->get_parameter("localizer_topic").as_string(), 
         10, std::bind(&SimpleManager::localizer_callback, this, std::placeholders::_1));
+    vision_sub_ = this->create_subscription<yolo_msgs::msg::CVDetections>(
+        this->get_parameter("vision_topic").as_string(),
+        10, std::bind(&SimpleManager::vision_callback, this, std::placeholders::_1));
 
     goal_pose_pub_ = this->create_publisher<geometry_msgs::msg::PoseStamped>(
         this->get_parameter("goal_topic").as_string(), 10);
@@ -74,8 +78,31 @@ void SimpleManager::localizer_callback(const nav_msgs::msg::Odometry::SharedPtr 
     this->current_vel_ = msg->twist.twist;
 }
 
+void SimpleManager::vision_callback(const yolo_msgs::msg::CVDetections::SharedPtr msg) {
+    this->detected_ = msg->detected;
+
+    if(!gate_complete) {
+        yolo_msgs::msg::CVDetection buoy_detection;
+
+        for(int i = 0; i<this->detected_.size(); i++) {
+            if(this->detected_[i].label == YOLO_BUOY) {
+                if(this->detected_[i].bbox.pose.position.x > ZED_WIDTH / 2) {
+                    this->buoy_is_left_ = false;
+                } else {
+                    this->buoy_is_left_ = true;
+                }
+                break;
+            }
+        }
+    }
+}
+
 void SimpleManager::set_goal_pose(geometry_msgs::msg::Pose target_pos) {
     this->goal_pose_ = target_pos;
+}
+
+void SimpleManager::publish_joy_msg(sensor_msgs::msg::Joy joy_msg) {
+    this->joy_pub_->publish(joy_msg);
 }
 
 void SimpleManager::publish_goal_pose() {
@@ -102,21 +129,54 @@ int main(int argc, char * argv[])
 
     auto manager = std::make_shared<SimpleManager>();
 
-    auto target = std::make_shared<geometry_msgs::msg::Pose>();
-    target->position.x = 5.0;
-    manager->gate_position_ = target;
+    sensor_msgs::msg::Joy submerge_msg;
 
-    auto start_position = std::make_shared<geometry_msgs::msg::Pose>();
-    manager->start_position_ = start_position;
+    std::vector<double> values(9, 0);
+    std::vector<int> buttons(10, 0);
 
-    manager->initialize_targets();
+    values[1] = -0.7;
+    buttons[9] = 1;
+    for (size_t i = 0; i < values.size(); i++) {
+            submerge_msg.axes.push_back(values[i]);
+    }
+    for (size_t i = 0; i < buttons.size(); i++) {
+            submerge_msg.buttons.push_back(buttons[i]);
+    }
 
-    factory.registerNodeType<UpdateTarget>("UpdateStartTarget", start_position);
-    factory.registerNodeType<UpdateTarget>("UpdateGateTarget", target);
+    sensor_msgs::msg::Joy forward_msg;
 
-    factory.registerNodeType<GoToTarget>("GoToTarget", manager);
+    values = std::vector<double>(9, 0);
+    buttons = std::vector<int>(10, 0);
+    
+    values[1] = -0.7;
+    values[4] = 1.0;
+    buttons[9] = 1;
+    for (size_t i = 0; i < values.size(); i++) {
+            forward_msg.axes.push_back(values[i]);
+    }
+    for (size_t i = 0; i < buttons.size(); i++) {
+            forward_msg.buttons.push_back(buttons[i]);
+    }
 
-    factory.registerNodeType<FireTorpedo>("FireTorpedo", manager, "");
+    sensor_msgs::msg::Joy barrel_roll_msg;
+
+    values = std::vector<double>(9, 0);
+    buttons = std::vector<int>(10, 0);
+    
+    values[1] = -0.7;
+    values[4] = 1.0;
+    buttons[9] = 1;
+    for (size_t i = 0; i < values.size(); i++) {
+            forward_msg.axes.push_back(values[i]);
+    }
+    for (size_t i = 0; i < buttons.size(); i++) {
+            forward_msg.buttons.push_back(buttons[i]);
+    }
+
+    factory.registerNodeType<DriveForDuration>("Submerge", manager, submerge_msg, 5);
+    factory.registerNodeType<DriveForDuration>("GoToGate", manager, forward_msg, 15);
+    factory.registerNodeType<DriveForDuration>("BarrelRoll", manager, barrel_roll_msg, 15);
+    factory.registerNodeType<DriveForDuration>("GoPastGate", manager, forward_msg, 5);
 
     manager->initialize_tree(factory);
 

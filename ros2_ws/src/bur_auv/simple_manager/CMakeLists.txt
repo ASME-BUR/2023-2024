@@ -14,6 +14,7 @@ find_package(ament_index_cpp REQUIRED)
 find_package(geometry_msgs REQUIRED)
 find_package(std_msgs REQUIRED)
 find_package(nav2_behavior_tree REQUIRED)
+find_package(yolo_msgs REQUIRED)
 
 set(THIS_PACKAGE_INCLUDE_DEPENDS
     behaviortree_cpp
@@ -21,7 +22,8 @@ set(THIS_PACKAGE_INCLUDE_DEPENDS
     rclcpp
     geometry_msgs
     std_msgs
-    rclcpp_action)
+    rclcpp_action
+    yolo_msgs)
 
 # macro to remove some boiler plate
 function(add_target_dependencies target)

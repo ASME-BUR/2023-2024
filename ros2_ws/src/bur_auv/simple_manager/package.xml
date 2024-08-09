@@ -12,6 +12,7 @@
   <depend>std_msgs</depend>
   <depend>behaviortree_cpp</depend>
   <depend>nav2_behavior_tree</depend>
+  <depend>yolo_msgs</depend>
 
   <buildtool_depend>ament_cmake</buildtool_depend>
 

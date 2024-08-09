@@ -164,5 +164,23 @@ BT::NodeStatus DriveForDuration::publish_joy() {
 
 
 BT::NodeStatus FireTorpedo::tick() {
+    sensor_msgs::msg::Joy msg;
+
+    auto values = std::vector<double>(9, 0);
+    auto buttons = std::vector<int>(10, 0);
+    
+    values[2] = -0.7;
+    values[0] = 1.0;
+    buttons[9] = 1;
+
+    for (size_t i = 0; i < values.size(); i++) {
+            msg.axes.push_back(values[i]);
+    }
+    for (size_t i = 0; i < buttons.size(); i++) {
+            msg.buttons.push_back(buttons[i]);
+    }
+
+    this->node_->publish_joy_msg(msg);
+
     return BT::NodeStatus::SUCCESS;
 }

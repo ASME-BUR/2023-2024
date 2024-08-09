@@ -18,8 +18,8 @@ SimpleManager::SimpleManager() : rclcpp::Node::Node("simple_manager")
     this->declare_parameter("behavior_tree", "tree.xml");
     this->declare_parameter("tick_rate", 10);
 
-    this->declare_parameter("auto_shutdown", false);
-
+    this->declare_parameter("auto_shutdown", true);
+    this->declare_parameter("wait_for_depth", false);
 
     int pub_rate = this->get_parameter("pub_rate").as_int();
     int tick_rate = this->get_parameter("tick_rate").as_int();
@@ -103,6 +103,10 @@ void SimpleManager::vision_callback(const yolo_msgs::msg::CVDetections::SharedPt
     }
 }
 
+void SimpleManager::depth_callback(const geometry_msgs::msg::PoseWithCovarianceStamped::SharedPtr msg) {
+    this->depth = msg->pose.pose.position.z;
+}
+
 void SimpleManager::set_goal_pose(geometry_msgs::msg::Pose target_pos) {
     this->goal_pose_ = target_pos;
 }
@@ -123,6 +127,7 @@ void SimpleManager::publish_goal_pose() {
 }
 
 void SimpleManager::tick_behavior() {
+    if(depth > 0 && this->get_parameter("wait_for_depth").as_bool()) { return; }
     BT::NodeStatus status = this->behavior_tree_.tickOnce();
 
     if(status == BT::NodeStatus::SUCCESS &&
@@ -194,7 +199,7 @@ int main(int argc, char * argv[])
 
     factory.registerNodeType<TurnTowardsBuoy>("TurnTowardsBuoy", manager);
     factory.registerNodeType<DriveAtDetected>("DriveAtBuoy", manager, YOLO_BUOY);
-    factory.registerNodeType<DriveForDuration>("FireTorpedoes", manager, forward_msg, 1);
+    factory.registerNodeType<FireTorpedo>("FireTorpedoes", manager);
     factory.registerNodeType<DriveForDuration>("DriveIntoBuoy", manager, forward_msg, 5);
 
 

@@ -33,49 +33,32 @@ class DetectionViewer(Node):
         bridge = CvBridge()
         self.frame = bridge.imgmsg_to_cv2(msg, "bgr8")
 
+        if self.detections:
+            for detection in self.detections:
+                cv2.rectangle(self.frame,
+                    (int(detection.bbox.pose.position.x - detection.width/2), int(detection.bbox.pose.position.y - detection.height/2)),
+                    (int(detection.bbox.pose.position.x + detection.width/2), int(detection.bbox.pose.position.y + detection.height/2)),
+                    (0,255,0),2)
+                # cv2.putText(self.frame,f'{detection.label}',
+                #     (detection.bbox.pose.position.x + detection.width/2 + 10, detection.bbox.pose.position.y + detection.height/2),
+                #     0,0.3,(0,255,0))
+        
+        cv2.imshow("preview", self.frame)
+        key = cv2.waitKey(20)
 
     def yolo_callback(self, msg):
         self.detections = msg.detected
 
-        if not self.frame:
-            return
-        
-
-    def view_detections(self):
-        while not self.frame or self.detections:
-            time.sleep(0.5)
-        
-        for detection in self.detections:
-            cv2.rectangle(self.frame,
-                (detection.bbox.pose.position.x - detection.width/2, detection.bbox.pose.position.y - detection.height/2),
-                (detection.bbox.pose.position.x + detection.width/2, detection.bbox.pose.position.y + detection.height/2),
-                (0,255,0),2)
-            cv2.putText(self.frame,f'{detection.label}',
-                (detection.bbox.pose.position.x + detection.width/2 + 10, detection.bbox.pose.position.y + detection.height/2),
-                0,0.3,(0,255,0))
-
-        while True:
-            cv2.imshow("preview", self.frame)
-            key = cv2.waitKey(20)
-            if key == 27: # exit on ESC
-                break
 
 def main(args=None):
     rclpy.init(args=args)
 
     detection_viewer = DetectionViewer()
 
-    # rospy.Timer(rospy.Duration(1.0), detection_viewer.view_detections)
-
-    # rclpy.spin(detection_viewer)
-    detection_viewer.view_detections()
+    rclpy.spin(detection_viewer)
 
     # Destroy the node explicitly
     # (optional - otherwise it will be done automatically
     # when the garbage collector destroys the node object)
     detection_viewer.destroy_node()
     rclpy.shutdown()
-
-
-if __name__ == '__main__':
-    main()

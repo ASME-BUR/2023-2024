@@ -19,7 +19,7 @@ class YoloNode(Node):
     def __init__(self):
         super().__init__("yolo_node")
         # SET UP MODEL 
-        self.model = torch.hub.load("ultralytics/yolov5", "custom", "best_new.pt") 
+        self.model = torch.hub.load("ultralytics/yolov5", "custom", path="/home/bur/2023-2024/ros2_ws/best_new.pt") 
         self.model_classes = self.model.names
         self.device = 'cuda' if torch.cuda.is_available() else 'cpu'
         print("Used ", self.device)    
@@ -44,8 +44,8 @@ class YoloNode(Node):
         self.timer = self.create_timer(timer_period, self.frame_forward_callback)
 
         # CREATE PUBLISHER OF CLASS LABEL WITH DISTANCE TO CENTER, CROPPED CLOUD, 
-        self.yolo_publisher = self.create_publisher(CVDetections, "yolo_detections", 10)
-
+        self.yolo_publisher = self.create_publisher(CVDetections, "yolo_detections", 1)
+        self.balls_publisher = self.create_publisher(String, "balls", 1)
         self.detect_results = ""
         self.frame = [] 
         self.depth = [] 
@@ -53,6 +53,7 @@ class YoloNode(Node):
     def video_callback(self, msg):
         bridge = CvBridge()
         self.frame = bridge.imgmsg_to_cv2(msg, "bgr8")
+        print(self.frame.shape)
 
     def getXYZ_from_pixel(self, x, y, my_pcl):
         arrayPosition = y*my_pcl.row_step + x*my_pcl.point_step
@@ -78,7 +79,9 @@ class YoloNode(Node):
     def frame_forward_callback(self):
         # Create messages for labels, bounding boxes, and confidence scores
         msg = CVDetections()
-
+        balls_msg = String()
+        balls_msg.data = "balls in yo jaws"
+        self.balls_publisher.publish(balls_msg)
         if self.frame is None or len(self.frame) == 0:
             print("Error: The frame is empty or not properly initialized.")
             return

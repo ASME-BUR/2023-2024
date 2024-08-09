@@ -111,11 +111,9 @@ class FireTorpedo : public BT::SyncActionNode
 {
     public:
         FireTorpedo(const std::string& name, const BT::NodeConfiguration& config,
-                          const std::shared_ptr<SimpleManager> ptr, 
-                          const std::string pub_topic):
+                          const std::shared_ptr<SimpleManager> ptr):
             BT::SyncActionNode(name, config),
-            node_(ptr),
-            pub_topic_(pub_topic) {}
+            node_(ptr) {}
 
         static BT::PortsList providedPorts() { return {}; }
 

@@ -39,6 +39,10 @@ BT::NodeStatus DriveAtDetected::publish_joy() {
 
         this->node_->publish_joy_msg(msg);
 
+        if(detection.width > ZED_WIDTH * 0.5 || detection.height > ZED_HEIGHT * 0.5) {
+            return BT::NodeStatus::RUNNING;
+        }
+
         return BT::NodeStatus::RUNNING;
     } else {
         if(!this->not_seen_) {
@@ -56,6 +60,7 @@ BT::NodeStatus DriveAtDetected::publish_joy() {
         return BT::NodeStatus::RUNNING;
     }
 }
+
 
 BT::NodeStatus DriveForDuration::publish_joy() {
     auto end = std::chrono::steady_clock::now();

@@ -4,12 +4,13 @@ simple_manager:
     vision_topic: "/vision"
     
     goal_topic: "/goal_pose"
+    joy_topic: "/joy"
     pub_rate: 10
 
     behavior_tree: "manager.launch.py should replace me"
     tick_rate: 10
 
-    auto_shutdown: false
+    auto_shutdown: true
 
     start_position:
       x: 0.0

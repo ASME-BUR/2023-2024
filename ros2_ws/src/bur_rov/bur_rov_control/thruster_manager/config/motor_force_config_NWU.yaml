@@ -9,8 +9,8 @@ thruster_manager:
     - -1.0
     - 1.0
     - -1.0
-    max_force: 60.0
-    max_torque: 40.0
+    max_force: 100.0
+    max_torque: 80.0
     motor0:
       heave: 0.0
       pitch: -0.0

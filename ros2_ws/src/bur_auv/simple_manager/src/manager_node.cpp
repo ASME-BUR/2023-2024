@@ -137,7 +137,7 @@ int main(int argc, char * argv[])
     std::vector<double> values(9, 0);
     std::vector<int> buttons(10, 0);
 
-    values[1] = -0.7;
+    values[2] = -0.7;
     buttons[9] = 1;
     for (size_t i = 0; i < values.size(); i++) {
             submerge_msg.axes.push_back(values[i]);
@@ -151,8 +151,8 @@ int main(int argc, char * argv[])
     values = std::vector<double>(9, 0);
     buttons = std::vector<int>(10, 0);
     
-    values[1] = -0.7;
-    values[4] = 1.0;
+    values[2] = -0.7;
+    values[0] = 1.0;
     buttons[9] = 1;
     for (size_t i = 0; i < values.size(); i++) {
             forward_msg.axes.push_back(values[i]);
@@ -161,25 +161,31 @@ int main(int argc, char * argv[])
             forward_msg.buttons.push_back(buttons[i]);
     }
 
-    sensor_msgs::msg::Joy barrel_roll_msg;
+    sensor_msgs::msg::Joy yaw_roll_msg;
 
     values = std::vector<double>(9, 0);
     buttons = std::vector<int>(10, 0);
-    
-    values[1] = -0.7;
-    values[4] = 1.0;
+
+    values[5] = -1.0;
+    values[0] = 1.0;
     buttons[9] = 1;
     for (size_t i = 0; i < values.size(); i++) {
-            forward_msg.axes.push_back(values[i]);
+            yaw_roll_msg.axes.push_back(values[i]);
     }
     for (size_t i = 0; i < buttons.size(); i++) {
-            forward_msg.buttons.push_back(buttons[i]);
+            yaw_roll_msg.buttons.push_back(buttons[i]);
     }
 
     factory.registerNodeType<DriveForDuration>("Submerge", manager, submerge_msg, 5);
     factory.registerNodeType<DriveForDuration>("GoToGate", manager, forward_msg, 15);
-    factory.registerNodeType<DriveForDuration>("BarrelRoll", manager, barrel_roll_msg, 15);
+    factory.registerNodeType<DriveForDuration>("YawRoll", manager, yaw_roll_msg, 15);
     factory.registerNodeType<DriveForDuration>("GoPastGate", manager, forward_msg, 5);
+
+    // factory.registerNodeType<TurnTowardsBuoy>("TurnTowardsBuoy", manager);
+    // factory.registerNodeType<DriveAtDetected>("DriveAtBuoy", manager, YOLO_BUOY);
+    // factory.registerNodeType<DriveForDuration>("FireTorpedoes", manager, forward_msg, 1);
+    // factory.registerNodeType<DriveForDuration>("DriveIntoBuoy", manager, forward_msg, 5);
+
 
     manager->initialize_tree(factory);
 

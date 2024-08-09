@@ -6,7 +6,19 @@
 #include <iostream>
 #include <thread>
 
+#include "tf2/LinearMath/Matrix3x3.h"
+#include "tf2_geometry_msgs/tf2_geometry_msgs.hpp"
+
 #include "sensor_msgs/msg/joy.hpp"
+
+#include "geometry_msgs/msg/quaternion.hpp"
+
+
+void quaternion_to_euler(geometry_msgs::msg::Quaternion& msg, float& roll, float& pitch, float& yaw) {
+    tf2::Quaternion quat;
+    fromMsg(msg, quat);
+    quat.setRPY( roll, pitch, yaw );
+}
 
 int getMatchingDetection(const std::vector<yolo_msgs::msg::CVDetection> detected,
                                     const int label) {
@@ -16,6 +28,33 @@ int getMatchingDetection(const std::vector<yolo_msgs::msg::CVDetection> detected
         }
     }
     return -1;
+}
+
+
+BT::NodeStatus TurnTowardsBuoy::turn() {
+    int idx = getMatchingDetection(this->node_->detected_, YOLO_BUOY);
+
+    if(idx != -1) {
+        return BT::NodeStatus::SUCCESS;
+    }
+
+    auto end = std::chrono::steady_clock::now();
+    if(std::chrono::duration_cast<std::chrono::seconds> (end - this->begin_).count() > this->time_limit_) {
+        return BT::NodeStatus::FAILURE;
+    }
+
+    sensor_msgs::msg::Joy joy_msg;
+
+    // if(this->node->buoy_is_left_) {
+
+    // } else {
+
+    // }
+
+    this->node_->publish_joy_msg(joy_msg);
+
+    return BT::NodeStatus::RUNNING;
+
 }
 
 BT::NodeStatus DriveAtDetected::publish_joy() {
@@ -37,10 +76,18 @@ BT::NodeStatus DriveAtDetected::publish_joy() {
         
         this->msg = sensor_msgs::msg::Joy();
 
+        // if(center_in_bbox && bbox_is_centered) {
+
+        // } else if(center_in_bbox) {
+
+        // } else {
+
+        // }
+
         this->node_->publish_joy_msg(msg);
 
         if(detection.width > ZED_WIDTH * 0.5 || detection.height > ZED_HEIGHT * 0.5) {
-            return BT::NodeStatus::RUNNING;
+            return BT::NodeStatus::SUCCESS;
         }
 
         return BT::NodeStatus::RUNNING;
@@ -76,37 +123,4 @@ BT::NodeStatus DriveForDuration::publish_joy() {
 
 BT::NodeStatus FireTorpedo::tick() {
     return BT::NodeStatus::SUCCESS;
-}
-
-
-BT::NodeStatus UpdateTarget::getTarget() {
-    setOutput("target",  *this->target_pos_ptr_);
-    return BT::NodeStatus::SUCCESS;
-}
-
-
-BT::NodeStatus GoToTarget::getStatus() {
-    if(this->successful) {
-        return BT::NodeStatus::SUCCESS;
-    }
-
-    auto msg = getInput<geometry_msgs::msg::Pose>("target");
-    
-    if(msg) {
-        this->target_pose_ = msg.value();
-    }
-
-    float dist = sqrt(pow(this->target_pose_.position.x - this->node_->getCurrentPosition().position.x, 2)
-            + pow(this->target_pose_.position.y - this->node_->getCurrentPosition().position.y, 2)
-            + pow(this->target_pose_.position.z - this->node_->getCurrentPosition().position.z, 2));
-
-
-    if(dist < this->tolerance_radius) {
-        this->successful = true;
-        return BT::NodeStatus::SUCCESS;
-    }
-
-    this->node_->set_goal_pose(this->target_pose_);
-
-    return BT::NodeStatus::RUNNING;
 }

@@ -117,65 +117,68 @@ namespace controller
       active = true;
     }
 
-    double roll_state, pitch_state, yaw_state;
-    tf2::Quaternion q = tf2::Quaternion(msg->current_pos.pose.orientation.x, msg->current_pos.pose.orientation.y, msg->current_pos.pose.orientation.z, msg->current_pos.pose.orientation.w);
-    tf2::Matrix3x3 rot_matrix = tf2::Matrix3x3(q);
-    rot_matrix.getRPY(roll_state, pitch_state, yaw_state);
-    state_angle = tf2::Vector3(roll_state, pitch_state, yaw_state);
+    if (active)
+    {
+      double roll_state, pitch_state, yaw_state;
+      tf2::Quaternion q = tf2::Quaternion(msg->current_pos.pose.orientation.x, msg->current_pos.pose.orientation.y, msg->current_pos.pose.orientation.z, msg->current_pos.pose.orientation.w);
+      tf2::Matrix3x3 rot_matrix = tf2::Matrix3x3(q);
+      rot_matrix.getRPY(roll_state, pitch_state, yaw_state);
+      state_angle = tf2::Vector3(roll_state, pitch_state, yaw_state);
 
-    double roll_setpoint, pitch_setpoint, yaw_setpoint;
-    q = tf2::Quaternion(msg->target_pos.pose.orientation.x, msg->target_pos.pose.orientation.y, msg->target_pos.pose.orientation.z, msg->target_pos.pose.orientation.w);
-    std::cout << msg->target_pos.pose.orientation.x << msg->target_pos.pose.orientation.y << msg->target_pos.pose.orientation.z << msg->target_pos.pose.orientation.w << std::endl;
-    rot_matrix = tf2::Matrix3x3(q);
-    rot_matrix.getRPY(roll_setpoint, pitch_setpoint, yaw_setpoint);
+      double roll_setpoint, pitch_setpoint, yaw_setpoint;
+      q = tf2::Quaternion(msg->target_pos.pose.orientation.x, msg->target_pos.pose.orientation.y, msg->target_pos.pose.orientation.z, msg->target_pos.pose.orientation.w);
+      std::cout << msg->target_pos.pose.orientation.x << msg->target_pos.pose.orientation.y << msg->target_pos.pose.orientation.z << msg->target_pos.pose.orientation.w << std::endl;
+      rot_matrix = tf2::Matrix3x3(q);
+      rot_matrix.getRPY(roll_setpoint, pitch_setpoint, yaw_setpoint);
 
-    // Yaw hold
-    if (abs(twist_setpoint.angular.z) <= 0.1 && yaw_hold == false)
-    {
-      yaw_setpoint = yaw_state;
-      yaw_hold_pos = yaw_state;
-      yaw_hold = true;
-    }
-    else if (yaw_hold && abs(twist_setpoint.angular.z) <= 0.1)
-    {
-      yaw_setpoint = yaw_hold_pos;
-    }
-    else
-    {
-      yaw_hold = false;
-    }
-    // Roll hold
-    if (abs(twist_setpoint.angular.x) <= 0.1 && roll_hold == false)
-    {
-      roll_setpoint = 0;
-      roll_hold_pos = 0;
-      roll_hold = true;
-    }
-    else if (roll_hold && abs(twist_setpoint.angular.x) <= 0.1)
-    {
-      roll_setpoint = roll_hold_pos;
-    }
-    else
-    {
-      roll_hold = false;
-    }
-    // Pitch hold
-    if (abs(twist_setpoint.angular.y) <= 0.1 && pitch_hold == false)
-    {
-      pitch_setpoint = pitch_state;
-      pitch_hold_pos = pitch_state;
-      pitch_hold = true;
-    }
-    else if (pitch_hold && abs(twist_setpoint.angular.y) <= 0.1)
-    {
-      pitch_setpoint = pitch_hold_pos;
-    }
-    else
-    {
-      pitch_hold = false;
-    }
+      // Yaw hold
+      if (abs(twist_setpoint.angular.z) <= 0.1 && yaw_hold == false)
+      {
+        yaw_setpoint = yaw_state;
+        yaw_hold_pos = yaw_state;
+        yaw_hold = true;
+      }
+      else if (yaw_hold && abs(twist_setpoint.angular.z) <= 0.1)
+      {
+        yaw_setpoint = yaw_hold_pos;
+      }
+      else
+      {
+        yaw_hold = false;
+      }
+      // Roll hold
+      if (abs(twist_setpoint.angular.x) <= 0.1 && roll_hold == false)
+      {
+        roll_setpoint = 0;
+        roll_hold_pos = 0;
+        roll_hold = true;
+      }
+      else if (roll_hold && abs(twist_setpoint.angular.x) <= 0.1)
+      {
+        roll_setpoint = roll_hold_pos;
+      }
+      else
+      {
+        roll_hold = false;
+      }
+      // Pitch hold
+      if (abs(twist_setpoint.angular.y) <= 0.1 && pitch_hold == false)
+      {
+        pitch_setpoint = pitch_state;
+        pitch_hold_pos = pitch_state;
+        pitch_hold = true;
+      }
+      else if (pitch_hold && abs(twist_setpoint.angular.y) <= 0.1)
+      {
+        pitch_setpoint = pitch_hold_pos;
+      }
+      else
+      {
+        pitch_hold = false;
+      }
 
-    setpoint_angle = tf2::Vector3(roll_setpoint, pitch_setpoint, yaw_setpoint);
+      setpoint_angle = tf2::Vector3(roll_setpoint, pitch_setpoint, yaw_setpoint);
+    }
   }
 
   void ControllerNode::publishState()
@@ -215,7 +218,6 @@ namespace controller
           else
           {
             controlEffort.wrench.torque.z = angular_z.computeCommand(twist_setpoint.angular.z - twist_state.angular.z, dt);
-
           }
 
           if (roll_hold)

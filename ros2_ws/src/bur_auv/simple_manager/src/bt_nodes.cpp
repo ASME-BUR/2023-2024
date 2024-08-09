@@ -8,17 +8,13 @@
 
 #include "tf2/LinearMath/Matrix3x3.h"
 #include "tf2_geometry_msgs/tf2_geometry_msgs.hpp"
+#include <tf2/LinearMath/Quaternion.h>
+#include <tf2/utils.h>
 
 #include "sensor_msgs/msg/joy.hpp"
 
 #include "geometry_msgs/msg/quaternion.hpp"
 
-
-void quaternion_to_euler(geometry_msgs::msg::Quaternion& msg, float& roll, float& pitch, float& yaw) {
-    tf2::Quaternion quat;
-    fromMsg(msg, quat);
-    quat.setRPY( roll, pitch, yaw );
-}
 
 int getMatchingDetection(const std::vector<yolo_msgs::msg::CVDetection> detected,
                                     const int label) {
@@ -43,13 +39,39 @@ BT::NodeStatus TurnTowardsBuoy::turn() {
         return BT::NodeStatus::FAILURE;
     }
 
+    // Set Odometry message
+    double roll_state, pitch_state, yaw_state;
+
+    auto current_pos = this->node_->getCurrentPosition();
+    tf2::Quaternion q = tf2::Quaternion(current_pos.orientation.x, current_pos.orientation.y, current_pos.orientation.z, current_pos.orientation.w);
+    tf2::Matrix3x3 rot_matrix = tf2::Matrix3x3(q);
+    rot_matrix.getRPY(roll_state, pitch_state, yaw_state);
+
+    // Turns counterclockwise
+    tf2::Quaternion q_target;
+    q_target.setRPY(roll_state, pitch_state, yaw_state + 0.2);
+
+    this->odometry_msg_ = nav_msgs::msg::Odometry();
+    odometry_msg_.pose.pose.orientation = tf2::toMsg(q_target);
+    this->odometry_msg_.pose.pose.position.z = 1.0;
+
+    // Set Joy message
     sensor_msgs::msg::Joy joy_msg;
 
-    // if(this->node->buoy_is_left_) {
+    auto values = std::vector<double>(9, 0);
+    auto buttons = std::vector<int>(10, 0);
+    
+    values[2] = -0.7;
+    buttons[9] = 1;
 
-    // } else {
+    values[5] = (this->node_->buoy_is_left_) ? -1.0 : 1.0;
 
-    // }
+    for (size_t i = 0; i < values.size(); i++) {
+            joy_msg.axes.push_back(values[i]);
+    }
+    for (size_t i = 0; i < buttons.size(); i++) {
+            joy_msg.buttons.push_back(buttons[i]);
+    }
 
     this->node_->publish_joy_msg(joy_msg);
 
@@ -64,27 +86,45 @@ BT::NodeStatus DriveAtDetected::publish_joy() {
         this->not_seen_ = false;
 
         auto detection = this->node_->detected_[idx];
-        int center_tolerance = 20;
+        this->target_distance_ = detection.bbox.pose.position.z;
 
-        bool center_in_bbox = (ZED_WIDTH / 2 >= detection.bbox.pose.position.x - detection.width / 2)
-            && (ZED_WIDTH / 2 < detection.bbox.pose.position.x + detection.width / 2)
-            && (ZED_HEIGHT / 2 < detection.bbox.pose.position.y + detection.height / 2)
-            && (ZED_HEIGHT / 2 < detection.bbox.pose.position.y + detection.height / 2);
+        // Set Odometry message
+        double roll_state, pitch_state, yaw_state;
+
+        auto current_pos = this->node_->getCurrentPosition();
+        tf2::Quaternion q = tf2::Quaternion(current_pos.orientation.x, current_pos.orientation.y, current_pos.orientation.z, current_pos.orientation.w);
+        tf2::Matrix3x3 rot_matrix = tf2::Matrix3x3(q);
+        rot_matrix.getRPY(roll_state, pitch_state, yaw_state);
+
+        // ZED Mini FOV is approx. 66 degrees = 1.152 rad
+        double yaw_change_target = -0.576 * (detection.bbox.pose.position.x / ZED_WIDTH - 0.5);
+
+        tf2::Quaternion q_target;
+        q_target.setRPY(roll_state, pitch_state, yaw_state + yaw_change_target);
+
+        this->odometry_msg_ = nav_msgs::msg::Odometry();
+        odometry_msg_.pose.pose.orientation = tf2::toMsg(q_target);
+        this->odometry_msg_.pose.pose.position.z = 1.0;
+
+        // Set Joy message
+        this->joy_msg_ = sensor_msgs::msg::Joy();
+
+        auto values = std::vector<double>(9, 0);
+        auto buttons = std::vector<int>(10, 0);
         
-        bool bbox_is_centered = (abs(detection.bbox.pose.position.x - ZED_WIDTH / 2) < center_tolerance)
-            && (abs(detection.bbox.pose.position.y - ZED_HEIGHT / 2) < center_tolerance);
-        
-        this->msg = sensor_msgs::msg::Joy();
+        values[2] = -0.7;
+        values[0] = 1.0;
+        buttons[9] = 1;
 
-        // if(center_in_bbox && bbox_is_centered) {
+        for (size_t i = 0; i < values.size(); i++) {
+                this->joy_msg_.axes.push_back(values[i]);
+        }
+        for (size_t i = 0; i < buttons.size(); i++) {
+                this->joy_msg_.buttons.push_back(buttons[i]);
+        }
 
-        // } else if(center_in_bbox) {
-
-        // } else {
-
-        // }
-
-        this->node_->publish_joy_msg(msg);
+        this->node_->publish_joy_msg(joy_msg_);
+        this->node_->publish_odometry_msg(this->odometry_msg_);
 
         if(detection.width > ZED_WIDTH * 0.5 || detection.height > ZED_HEIGHT * 0.5) {
             return BT::NodeStatus::SUCCESS;
@@ -102,7 +142,7 @@ BT::NodeStatus DriveAtDetected::publish_joy() {
                 return BT::NodeStatus::SUCCESS;
             }
         }
-        this->node_->publish_joy_msg(msg);
+        this->node_->publish_joy_msg(joy_msg_);
 
         return BT::NodeStatus::RUNNING;
     }

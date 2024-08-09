@@ -5,6 +5,7 @@ simple_manager:
     
     goal_topic: "/goal_pose"
     joy_topic: "/joy"
+    waypoint_topic: "/des_pose"
     pub_rate: 10
 
     behavior_tree: "manager.launch.py should replace me"

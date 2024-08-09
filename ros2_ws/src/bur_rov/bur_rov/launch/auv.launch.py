@@ -45,7 +45,7 @@ def generate_launch_description():
         name="joy_command",
         parameters=[{"using_joy": True},
         {"using_ekf": False},
-        # os.path.join(get_package_share_directory("bur_rov"), 'config', 'fake_joystick.yaml')
+        os.path.join(get_package_share_directory("bur_rov"), 'config', 'fake_joystick.yaml')
         ],
     )
 
@@ -53,8 +53,8 @@ def generate_launch_description():
     return LaunchDescription([
         thruster_manager,
         controller_launch,
-        # depth_sensor,
+        depth_sensor,
         # camera,
-        # joy,
-        # arduino
+        joy,
+        arduino
     ])

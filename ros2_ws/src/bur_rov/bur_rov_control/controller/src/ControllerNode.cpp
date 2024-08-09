@@ -132,19 +132,26 @@ namespace controller
       rot_matrix.getRPY(roll_setpoint, pitch_setpoint, yaw_setpoint);
 
       // Yaw hold
-      if (abs(twist_setpoint.angular.z) <= 0.1 && yaw_hold == false)
+      if (yaw_setpoint != 0)
       {
-        yaw_setpoint = yaw_state;
-        yaw_hold_pos = yaw_state;
         yaw_hold = true;
-      }
-      else if (yaw_hold && abs(twist_setpoint.angular.z) <= 0.1)
-      {
-        yaw_setpoint = yaw_hold_pos;
       }
       else
       {
-        yaw_hold = false;
+        if (abs(twist_setpoint.angular.z) <= 0.1 && yaw_hold == false)
+        {
+          yaw_setpoint = yaw_state;
+          yaw_hold_pos = yaw_state;
+          yaw_hold = true;
+        }
+        else if (yaw_hold && abs(twist_setpoint.angular.z) <= 0.1)
+        {
+          yaw_setpoint = yaw_hold_pos;
+        }
+        else
+        {
+          yaw_hold = false;
+        }
       }
       // Roll hold
       if (abs(twist_setpoint.angular.x) <= 0.1 && roll_hold == false)

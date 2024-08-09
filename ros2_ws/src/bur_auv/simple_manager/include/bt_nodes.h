@@ -9,6 +9,35 @@
 
 #include "manager_node.h"
 
+
+class TurnTowardsBuoy : public BT::StatefulActionNode
+{
+    public:
+        TurnTowardsBuoy(const std::string& name, const BT::NodeConfiguration& config,
+                        const std::shared_ptr<SimpleManager> ptr):
+            BT::StatefulActionNode(name, config),
+            node_(ptr) {
+            this->node_->gate_complete = true;
+            begin_ = std::chrono::steady_clock::now();
+        }
+        
+        static BT::PortsList providedPorts() { return {}; }
+
+        BT::NodeStatus onStart() override   { return this->turn(); }
+        BT::NodeStatus onRunning() override { return this->turn(); }
+
+        void onHalted() override {}
+    
+    private: 
+        std::shared_ptr<SimpleManager> node_;
+
+        std::chrono::steady_clock::time_point begin_;
+        float time_limit_ = 10.0;
+
+        BT::NodeStatus turn();
+
+};
+
 class DriveAtDetected : public BT::StatefulActionNode
 {
     public:
@@ -90,62 +119,6 @@ class FireTorpedo : public BT::SyncActionNode
     private:
         std::shared_ptr<SimpleManager> node_;
         std::string pub_topic_;
-};
-
-class UpdateTarget : public BT::StatefulActionNode
-{
-    public:
-        UpdateTarget(const std::string& name, const BT::NodeConfiguration& config,
-                          const std::shared_ptr<geometry_msgs::msg::Pose> target):
-            BT::StatefulActionNode(name, config),
-            target_pos_ptr_(target) {}
-
-        static BT::PortsList providedPorts() {
-            return { BT::OutputPort<geometry_msgs::msg::Pose>("target") };
-        }
-
-        BT::NodeStatus onStart() override   { return this->getTarget(); }
-        BT::NodeStatus onRunning() override { return this->getTarget(); }
-
-        void onHalted() override {}
-
-    
-    private:
-        std::shared_ptr<SimpleManager> node_;
-        std::shared_ptr<geometry_msgs::msg::Pose> target_pos_ptr_;
-
-        BT::NodeStatus getTarget();
-};
-
-
-class GoToTarget : public BT::StatefulActionNode
-{
-    public:
-        GoToTarget(const std::string& name, const BT::NodeConfiguration& config,
-                          const std::shared_ptr<SimpleManager> ptr):
-            BT::StatefulActionNode(name, config),
-            node_(ptr) {}
-
-        static BT::PortsList providedPorts() {
-            return { BT::InputPort<geometry_msgs::msg::Pose>("target") };
-        }
-
-        BT::NodeStatus onStart() override   { return this->getStatus(); }
-        BT::NodeStatus onRunning() override { return this->getStatus(); }
-
-        void onHalted() override {}
-
-    
-    private:
-        std::shared_ptr<SimpleManager> node_;
-        geometry_msgs::msg::Pose target_pose_;
-
-        BT::NodeStatus getStatus();
-
-        bool successful = false;
-
-        float tolerance_radius = 0.5;
-
 };
 
 #endif

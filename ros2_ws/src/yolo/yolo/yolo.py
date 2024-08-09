@@ -1,6 +1,7 @@
 import sys
 sys.path.append("/home/bur/2023-2024/ros2_ws/src/yolo/yolo")
 import time
+import math
 import cv2
 import rclpy
 from rclpy.node import Node
@@ -32,23 +33,25 @@ class YoloNode(Node):
         )
         self.img_subscriber  # prevent unused variable warning
 
-        # self.depth_subscriber = self.create_subscription(
-        #     PointCloud2,
-        #     "/zed/zed_node/point_cloud/cloud_registered",
-        #     self.depth_callback,
-        #     rclpy.qos.qos_profile_sensor_data,
-        # )
-        # self.depth_subscriber  # prevent unused variable warning
+        self.depth_subscriber = self.create_subscription(
+            PointCloud2,
+            "/zed/zed_node/point_cloud/cloud_registered",
+            self.depth_callback,
+            rclpy.qos.qos_profile_sensor_data,
+        )
+        self.depth_subscriber  # prevent unused variable warning
 
         timer_period = 0.5  # seconds
         self.timer = self.create_timer(timer_period, self.frame_forward_callback)
 
         # CREATE PUBLISHER OF CLASS LABEL WITH DISTANCE TO CENTER, CROPPED CLOUD, 
         self.yolo_publisher = self.create_publisher(CVDetections, "yolo_detections", 1)
-        self.balls_publisher = self.create_publisher(String, "balls", 1)
         self.detect_results = ""
         self.frame = [] 
         self.depth = [] 
+
+        self.yolo_arr = None
+        self.dectections_raw = None
 
     def video_callback(self, msg):
         bridge = CvBridge()
@@ -66,33 +69,43 @@ class YoloNode(Node):
         Z = my_pcl.data[arrayPosZ]
 
         return (X, Y, Z)
+    
+
+    def crop_RGB_depth_to_only_bbox(self):
+        if self.dectections_raw != None:
+            self.yolo_arr = []
+            for i in range(0, self.dectections_raw.shape[0]):
+                for j in range(0, self.dectections_raw.shape[1]-3):
+                    self.yolo_arr.append(math.ceil(float(self.dectections_raw.iat[i, j])))
+            self.final_cropped_image = self.original_image[self.yolo_arr[1]:self.yolo_arr[3], self.yolo_arr[0]:self.yolo_arr[2]]
+            self.depth = self.depth[self.yolo_arr[1]:self.yolo_arr[3], self.yolo_arr[0]:self.yolo_arr[2]]
 
     def depth_callback(self, msg):
         height, width, channels = self.frame.shape
         self.depth = [[(0, 0, 0) for _ in range(width)] for _ in range(height)]
-        for y in range(height):
-            for x in range(width):
-                pixel_value = self.getXYZ_from_pixel(x, y, msg)
-                self.depth[y][x] = pixel_value
-        self.crop_depth(self.detect_results)
+        self.crop_RGB_depth_to_only_bbox()
+        # for y in range(height):
+        #     for x in range(width):
+        #         pixel_value = self.getXYZ_from_pixel(x, y, msg)
+        #         self.depth[y][x] = pixel_value
+        # self.crop_depth(self.detect_results)
 
     def frame_forward_callback(self):
         # Create messages for labels, bounding boxes, and confidence scores
         msg = CVDetections()
-        balls_msg = String()
-        balls_msg.data = "balls in yo jaws"
-        self.balls_publisher.publish(balls_msg)
         if self.frame is None or len(self.frame) == 0:
             print("Error: The frame is empty or not properly initialized.")
             return
 
         results = self.model(self.frame)
         detections = results.pandas().xyxy[0]
+        self.dectections_raw = results.pandas().xyxy[0]
         print(detections)
 
         # Extract labels and publish them
         labels = detections['class'].astype(int).tolist()
         print(labels)
+        print("DEPTH:", self.depth)
 
         # Extract bounding boxes and confidence scores, then publish them
         poses = []

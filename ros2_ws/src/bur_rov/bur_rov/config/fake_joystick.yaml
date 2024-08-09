@@ -1,0 +1,16 @@
+joy_command:
+  ros__parameters:
+    joy_topic: "joy"
+    depth_topic: "depth_sensor"
+    pose_topic: "set_pose"
+    twist_topic: "set_twist"
+    publish_rate: 50
+    imu_topic: "imu"
+    multiplier: 1.0
+    cmd_pub_topic: "command"
+    axis_mapping.linear_x: 0
+    axis_mapping.linear_y: 1
+    axis_mapping.linear_z: 2
+    axis_mapping.angular_x: 3
+    axis_mapping.angular_y: 4
+    axis_mapping.angular_z: 5

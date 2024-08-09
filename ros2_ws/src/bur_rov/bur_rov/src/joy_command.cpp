@@ -77,8 +77,8 @@ void JoyCommand::joy_callback(const sensor_msgs::msg::Joy::SharedPtr msg)
             output.target_vel.twist.linear.x = multiplier * msg->axes[abs(axis_mapping_.at("linear_x"))];
             output.target_vel.twist.linear.y = multiplier * msg->axes[abs(axis_mapping_.at("linear_y"))];
             output.target_vel.twist.linear.z = multiplier * msg->axes[abs(axis_mapping_.at("linear_z"))];
-            output.target_vel.twist.angular.x = multiplier * -msg->axes[abs(axis_mapping_.at("angular_x"))];
-            output.target_vel.twist.angular.y = multiplier * msg->axes[abs(axis_mapping_.at("angular_y"))];
+            output.target_vel.twist.angular.x = multiplier * msg->axes[abs(axis_mapping_.at("angular_x"))];
+            output.target_vel.twist.angular.y = multiplier * -msg->axes[abs(axis_mapping_.at("angular_y"))];
             output.target_vel.twist.angular.z = multiplier * msg->axes[abs(axis_mapping_.at("angular_z"))];
 
             // Debug
@@ -139,16 +139,16 @@ void JoyCommand::twist_callback(const geometry_msgs::msg::TwistStamped::SharedPt
 
 void JoyCommand::des_pose_callback(const nav_msgs::msg::Odometry::SharedPtr msg)
 {
-    if (using_ekf)
-    {
-        output.target_pos.pose.position.x = msg->pose.pose.position.x;
-        output.target_pos.pose.position.y = msg->pose.pose.position.y;
-        output.target_pos.pose.position.z = msg->pose.pose.position.z;
-        output.target_pos.pose.orientation.x = msg->pose.pose.orientation.x;
-        output.target_pos.pose.orientation.y = msg->pose.pose.orientation.y;
-        output.target_pos.pose.orientation.z = msg->pose.pose.orientation.z;
-        output.target_pos.pose.orientation.w = msg->pose.pose.orientation.w;
-    }
+    // if (using_ekf)
+    // {
+    // output.target_pos.pose.position.x = msg->pose.pose.position.x;
+    // output.target_pos.pose.position.y = msg->pose.pose.position.y;
+    output.target_pos.pose.position.z = msg->pose.pose.position.z;
+    // output.target_pos.pose.orientation.x = msg->pose.pose.orientation.x;
+    // output.target_pos.pose.orientation.y = msg->pose.pose.orientation.y;
+    // output.target_pos.pose.orientation.z = msg->pose.pose.orientation.z;
+    // output.target_pos.pose.orientation.w = msg->pose.pose.orientation.w;
+    // }
 }
 
 void JoyCommand::imu_callback(const sensor_msgs::msg::Imu::SharedPtr msg)
@@ -206,8 +206,8 @@ void JoyCommand::odom_callback(const nav_msgs::msg::Odometry::SharedPtr msg)
         output.current_pos.pose.orientation.y = msg->pose.pose.orientation.y;
         output.current_pos.pose.orientation.z = msg->pose.pose.orientation.z;
         output.current_pos.pose.orientation.w = msg->pose.pose.orientation.w;
-        output.current_vel.header = msg->header;
-        output.current_vel.twist = msg->twist.twist;
+        // output.current_vel.header = msg->header;
+        // output.current_vel.twist = msg->twist.twist;
     }
 }
 

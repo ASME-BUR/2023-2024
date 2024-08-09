@@ -65,7 +65,11 @@ namespace controller
     tf2::Vector3 state_angle;
     bool depth_hold = false;
     bool yaw_hold = false;
+    bool roll_hold = false;
+    bool pitch_hold = false;
     double yaw_hold_pos;
+    double roll_hold_pos = 0;
+    double pitch_hold_pos = 0;
   };
 }
 

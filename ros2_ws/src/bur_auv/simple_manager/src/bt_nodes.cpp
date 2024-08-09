@@ -74,6 +74,7 @@ BT::NodeStatus TurnTowardsBuoy::turn() {
     }
 
     this->node_->publish_joy_msg(joy_msg);
+    this->node_->publish_odometry_msg(this->odometry_msg_);
 
     return BT::NodeStatus::RUNNING;
 
@@ -143,6 +144,7 @@ BT::NodeStatus DriveAtDetected::publish_joy() {
             }
         }
         this->node_->publish_joy_msg(joy_msg_);
+        this->node_->publish_odometry_msg(this->odometry_msg_);
 
         return BT::NodeStatus::RUNNING;
     }

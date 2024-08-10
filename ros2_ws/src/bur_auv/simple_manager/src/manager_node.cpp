@@ -201,20 +201,16 @@ int main(int argc, char * argv[])
     tf2::Quaternion zigzag_left_turn;
     zigzag_left_turn.setRPY(0.0, 0.0, 2 * 1.1071);
 
-    factory.registerNodeType<DriveForDuration>("Submerge", manager, submerge_msg, 5);
-    factory.registerNodeType<SaveCurrentPoseToBlackboard>("SavePose", manager);
-    factory.registerNodeType<DriveForDuration>("GoToGate", manager, forward_msg, 15);
-    factory.registerNodeType<DriveForDuration>("YawRoll", manager, yaw_roll_msg, 24);
-    factory.registerNodeType<DriveForDuration>("GoPastGate", manager, forward_msg, 5);
+    auto empty_msg = sensor_msgs::msg::Joy();
 
-    factory.registerNodeType<TurnFromCurrentPosition>("TurnTowardsBuoy", manager, rotate_left_45);
-    factory.registerNodeType<DriveForDuration>("DriveAtBuoy", manager, forward_msg, 20);
+    factory.registerNodeType<DriveForDurationBlackboard>("Wait", manager, empty_msg);
+    factory.registerNodeType<DriveForDurationBlackboard>("Submerge", manager, submerge_msg);
+    factory.registerNodeType<DriveForDurationBlackboard>("DriveForward", manager, forward_msg);
+    factory.registerNodeType<DriveForDurationBlackboard>("YawRoll", manager, yaw_roll_msg);
+
+    factory.registerNodeType<TurnFromCurrentPositionBlackboard>("TurnFromCurrentPosition", manager);
+
     factory.registerNodeType<FireTorpedo>("FireTorpedoes", manager);
-    factory.registerNodeType<DriveForDuration>("DriveIntoBuoy", manager, forward_msg, 10);
-
-    factory.registerNodeType<TurnFromCurrentPosition>("TurnOctagonRight", manager, zigzag_right_turn);
-    factory.registerNodeType<TurnFromCurrentPosition>("TurnOctagonLeft", manager, zigzag_left_turn);
-    factory.registerNodeType<DriveForDuration>("DriveZigzag", manager, forward_msg, 22);
 
     manager->initialize_tree(factory);
 

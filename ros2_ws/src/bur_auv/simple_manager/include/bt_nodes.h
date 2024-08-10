@@ -24,8 +24,7 @@ class DriveForDuration : public BT::StatefulActionNode
                         const float duration):
             BT::StatefulActionNode(name, config),
             node_(ptr),
-            joy_msg_(joy_msg),
-            duration_(duration) {
+            joy_msg_(joy_msg) {
                 begin_ = std::chrono::steady_clock::now();
             }
 
@@ -36,6 +35,8 @@ class DriveForDuration : public BT::StatefulActionNode
 
         void onHalted() override {}
 
+        void setDuration(float duration) { this->duration_ = duration; }
+
     
     private:
         std::shared_ptr<SimpleManager> node_;
@@ -45,6 +46,37 @@ class DriveForDuration : public BT::StatefulActionNode
 
         sensor_msgs::msg::Joy joy_msg_;
         BT::NodeStatus publish_joy();
+};
+
+class DriveForDurationBlackboard : public DriveForDuration
+{
+    public:
+        DriveForDurationBlackboard(const std::string& name, const BT::NodeConfiguration& config,
+                        const std::shared_ptr<SimpleManager> ptr,
+                        const sensor_msgs::msg::Joy joy_msg):
+            DriveForDuration(name, config, ptr, joy_msg, 0.0) {}
+
+        static BT::PortsList providedPorts() { return { BT::InputPort<float>("duration") }; }
+
+        BT::NodeStatus onStart() override {
+            updateDuration();
+            DriveForDuration::onStart();
+        }
+        BT::NodeStatus onRunning() override {
+            updateDuration();
+            DriveForDuration::onRunning();
+        }
+    
+    private:
+        void updateDuration() {
+            auto msg = getInput<float>("duration");
+            if(!msg) {
+                throw BT::RuntimeError("missing required input [duration]: ", 
+                              msg.error() );
+            }
+            DriveForDuration::setDuration(msg.value());
+        }
+
 };
 
 
@@ -126,13 +158,16 @@ class TurnFromCurrentPosition : public TurnToOrientation
             transf_(q) {}
         
         BT::NodeStatus onStart() override {
-            auto current_pos = this->getNode()->getCurrentPosition();
-            tf2::Quaternion q = tf2::Quaternion(current_pos.orientation.x, 
-                                                current_pos.orientation.y, 
-                                                current_pos.orientation.z, 
-                                                current_pos.orientation.w);
+            auto initial_pos_ = this->getNode()->getCurrentPosition();
+            this->initial_orientation_ = tf2::Quaternion(initial_pos_.orientation.x, 
+                                                initial_pos_.orientation.y, 
+                                                initial_pos_.orientation.z, 
+                                                initial_pos_.orientation.w);
+            return this->onRunning();
+        }
 
-            tf2::Quaternion q_new = this->transf_ * q;
+        BT::NodeStatus onRunning() override {
+            tf2::Quaternion q_new = this->transf_ * initial_orientation_;
             q_new.normalize();
 
             this->setTarget(q_new);
@@ -140,8 +175,49 @@ class TurnFromCurrentPosition : public TurnToOrientation
             return TurnToOrientation::onStart();
         }
 
+        void setTransformation(tf2::Quaternion q) { this->transf_ = q; }
+
     private:
+        tf2::Quaternion initial_orientation_;
         tf2::Quaternion transf_;
+};
+
+class TurnFromCurrentPositionBlackboard : public TurnFromCurrentPosition {
+    public:
+        TurnFromCurrentPositionBlackboard(const std::string& name, const BT::NodeConfiguration& config,
+                            const std::shared_ptr<SimpleManager> ptr):
+            TurnFromCurrentPosition(name, config, ptr, tf2::Quaternion()) {}
+        
+        static BT::PortsList providedPorts() { 
+            return { BT::InputPort<float>("roll"),
+                     BT::InputPort<float>("pitch"),
+                     BT::InputPort<float>("yaw") }; 
+        }
+
+
+        BT::NodeStatus onStart() override {
+            this->updateTransformation();
+            return TurnFromCurrentPosition::onStart();
+        }
+        BT::NodeStatus onRunning() override {
+            this->updateTransformation();
+            return TurnFromCurrentPosition::onRunning();
+        }
+    
+    private:
+        void updateTransformation() {
+            auto roll_msg = getInput<float>("roll");
+            auto pitch_msg = getInput<float>("pitch");
+            auto yaw_msg = getInput<float>("yaw");
+            if(!roll_msg || pitch_msg || yaw_msg) {
+                throw BT::RuntimeError("missing required input ");
+            }
+
+            tf2::Quaternion q_target;
+            q_target.setRPY(roll_msg.value(), pitch_msg.value(), yaw_msg.value());
+            
+            this->setTransformation(q_target);
+        }
 };
 
 class TurnToBlackboardOrientation : public TurnToOrientation

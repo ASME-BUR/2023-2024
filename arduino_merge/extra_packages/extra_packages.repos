@@ -1,0 +1,5 @@
+repositories:
+  bur_rov_msgs:
+    type: git
+    url: https://github.com/ASME-BUR/bur_rov_msgs.git
+    version: main

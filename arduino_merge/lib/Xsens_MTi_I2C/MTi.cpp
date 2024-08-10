@@ -42,7 +42,7 @@ void MTi::configureOutputs(uint16_t freq, bool verbose)
   uint8_t high = (uint8_t)((freq & 0xFF00) >> 8);
   uint8_t low = (uint8_t)(freq & 0x00FF);
   readMessages(); // Clear the measurement/notification pipes (without printing) before configuring.
-  SerialUSB.println("Configuring Acceleration, Rate of Turn, Quaternion, Mag FIeld at 100 Hz");
+  // SerialUSB.println("Configuring Acceleration, Rate of Turn, Quaternion, Mag FIeld at 100 Hz");
   uint8_t outputConfig[] = {0xC0, 0x10, 0x40, 0x20, high, low, 0x80, 0x20, high, low, 0xC0, 0x20, high, low, 0x20, 0x10, high, low};
   // uint8_t outputConfig[] = {0xC0, 0x04, 0x20, 0x14, high, low, 0x40, 0x24, high, low};
   sendMessage(outputConfig, sizeof(outputConfig), verbose);
@@ -163,7 +163,7 @@ void MTi::saveReset(bool verbose){
 
 void MTi::goToConfig(bool verbose)
 {
-  SerialUSB.println("Entering configuration mode.");
+  // SerialUSB.println("Entering configuration mode.");
   uint8_t goToConfig[] = {0x30, 0x00}; // goToConfig Xbus message
   sendMessage(goToConfig, sizeof(goToConfig), verbose);
   delay(100);

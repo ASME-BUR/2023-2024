@@ -9,20 +9,22 @@
 
     <BehaviorTree ID="GateTask">
         <Sequence>
-            <Submerge />
+            <Wait duration="20"/>
+            <Submerge duration="5"/>
             <!-- <SavePose output="{start}"/> -->
-            <GoToGate />
-            <YawRoll />
-            <GoPastGate />
+            <DriveForward duration="15"/>
+            <YawRoll duration="24"/>
+            <DriveForward duration="5"/>
         </Sequence>
     </BehaviorTree>
 
     <BehaviorTree ID="BuoyTask">
         <Sequence>
-            <TurnTowardsBuoy />
-            <DriveAtBuoy />
+            <!-- 0.785 rad = 45 deg -->
+            <TurnFromCurrentPosition roll="0.0" pitch="0.0" yaw="0.785"/> 
+            <DriveForward duration="20"/>
             <FireTorpedoes />
-            <DriveIntoBuoy />
+            <DriveForward duration="10"/>
         </Sequence>
     </BehaviorTree>
 
@@ -30,12 +32,14 @@
         <Sequence>
             <!-- <TurnTowardsOctagon orientation="{start}"/> -->
             <Sequence>
-                <TurnOctagonRight />
-                <DriveZigzag />
+                <!-- (-0.785 - 1.1071) rad -->
+                <TurnFromCurrentPosition roll="0.0" pitch="0.0" yaw="-1.892"/> 
+                <DriveForward duration="22"/>
             </Sequence>
             <Sequence>
-                <TurnOctagonLeft />
-                <DriveZigzag />
+                <!-- (2 * 1.1071) rad -->
+                <TurnFromCurrentPosition roll="0.0" pitch="0.0" yaw="2.214"/> 
+                <DriveForward duration="22"/>
             </Sequence>
             <!-- <DriveToOctagon /> -->
         </Sequence>

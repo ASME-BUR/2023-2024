@@ -10,7 +10,7 @@
     <BehaviorTree ID="GateTask">
         <Sequence>
             <Submerge />
-            <SavePose output="{start}"/>
+            <!-- <SavePose output="{start}"/> -->
             <GoToGate />
             <YawRoll />
             <GoPastGate />
@@ -28,8 +28,16 @@
 
     <BehaviorTree ID="OctagonTask">
         <Sequence>
-            <TurnTowardsOctagon orientation="{start}"/>
-            <DriveToOctagon />
+            <!-- <TurnTowardsOctagon orientation="{start}"/> -->
+            <Sequence>
+                <TurnOctagonRight />
+                <DriveZigzag />
+            </Sequence>
+            <Sequence>
+                <TurnOctagonLeft />
+                <DriveZigzag />
+            </Sequence>
+            <!-- <DriveToOctagon /> -->
         </Sequence>
     </BehaviorTree>
  </root>

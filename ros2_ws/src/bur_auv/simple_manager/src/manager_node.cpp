@@ -198,7 +198,7 @@ int main(int argc, char * argv[])
     factory.registerNodeType<DriveForDuration>("Submerge", manager, submerge_msg, 5);
     factory.registerNodeType<SaveCurrentPoseToBlackboard>("SavePose", manager);
     factory.registerNodeType<DriveForDuration>("GoToGate", manager, forward_msg, 15);
-    factory.registerNodeType<DriveForDuration>("YawRoll", manager, yaw_roll_msg, 15);
+    factory.registerNodeType<DriveForDuration>("YawRoll", manager, yaw_roll_msg, 24);
     factory.registerNodeType<DriveForDuration>("GoPastGate", manager, forward_msg, 5);
 
     factory.registerNodeType<TurnFromCurrentPosition>("TurnTowardsBuoy", manager, to_buoy_rot);

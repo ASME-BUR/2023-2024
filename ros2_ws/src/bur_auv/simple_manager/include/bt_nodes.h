@@ -155,7 +155,17 @@ class TurnToBlackboardOrientation : public TurnToOrientation
             return { BT::InputPort<geometry_msgs::msg::Pose>("orientation") };
         }
 
-        BT::NodeStatus turn() {
+
+        BT::NodeStatus onStart() override { 
+            this->updateTarget();
+            return TurnToOrientation::turn();
+        }
+        BT::NodeStatus onRunning() override { 
+            this->updateTarget();
+            return TurnToOrientation::turn();
+        }
+
+        void updateTarget() {
             auto q_msg = getInput<geometry_msgs::msg::Pose>("orientation");
 
             if(!q_msg) {
@@ -167,8 +177,6 @@ class TurnToBlackboardOrientation : public TurnToOrientation
             tf2::fromMsg(q_msg.value().orientation, q);
 
             this->setTarget(q);
-
-            return TurnToOrientation::turn(); 
         }
 };
 

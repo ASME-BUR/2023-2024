@@ -192,8 +192,14 @@ int main(int argc, char * argv[])
             yaw_roll_msg.buttons.push_back(buttons[i]);
     }
 
-    tf2::Quaternion to_buoy_rot;
-    to_buoy_rot.setRPY(0.0, 0.0, 0.3);
+    tf2::Quaternion rotate_left_45;
+    rotate_left_45.setRPY(0.0, 0.0, 0.785);
+
+    tf2::Quaternion zigzag_right_turn;
+    zigzag_right_turn.setRPY(0.0, 0.0, -0.785 - 1.1071);
+
+    tf2::Quaternion zigzag_left_turn;
+    zigzag_left_turn.setRPY(0.0, 0.0, 2 * 1.1071);
 
     factory.registerNodeType<DriveForDuration>("Submerge", manager, submerge_msg, 5);
     factory.registerNodeType<SaveCurrentPoseToBlackboard>("SavePose", manager);
@@ -201,14 +207,14 @@ int main(int argc, char * argv[])
     factory.registerNodeType<DriveForDuration>("YawRoll", manager, yaw_roll_msg, 24);
     factory.registerNodeType<DriveForDuration>("GoPastGate", manager, forward_msg, 5);
 
-    factory.registerNodeType<TurnFromCurrentPosition>("TurnTowardsBuoy", manager, to_buoy_rot);
-    factory.registerNodeType<DriveForDuration>("DriveAtBuoy", manager, forward_msg, 10);
+    factory.registerNodeType<TurnFromCurrentPosition>("TurnTowardsBuoy", manager, rotate_left_45);
+    factory.registerNodeType<DriveForDuration>("DriveAtBuoy", manager, forward_msg, 20);
     factory.registerNodeType<FireTorpedo>("FireTorpedoes", manager);
-    factory.registerNodeType<DriveForDuration>("DriveIntoBuoy", manager, forward_msg, 8);
+    factory.registerNodeType<DriveForDuration>("DriveIntoBuoy", manager, forward_msg, 10);
 
-    factory.registerNodeType<TurnToBlackboardOrientation>("TurnTowardsOctagon", manager);
-    factory.registerNodeType<DriveForDuration>("DriveToOctagon", manager, forward_msg, 25);
-
+    factory.registerNodeType<TurnFromCurrentPosition>("TurnOctagonRight", manager, zigzag_right_turn);
+    factory.registerNodeType<TurnFromCurrentPosition>("TurnOctagonLeft", manager, zigzag_left_turn);
+    factory.registerNodeType<DriveForDuration>("DriveZigzag", manager, forward_msg, 22);
 
     manager->initialize_tree(factory);
 

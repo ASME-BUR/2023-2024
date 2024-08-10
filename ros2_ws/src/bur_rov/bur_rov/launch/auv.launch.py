@@ -38,6 +38,12 @@ def generate_launch_description():
             '/micro_ros.launch.py'
         ])
     )
+    manager = IncludeLaunchDescription(
+        PythonLaunchDescriptionSource([os.path.join(
+            get_package_share_directory('simple_manager'), 'launch'),
+            '/manager.launch.py'
+        ])
+    )
 
     joy = Node(
         package="bur_rov",
@@ -49,12 +55,20 @@ def generate_launch_description():
         ],
     )
 
+    open_loop = Node(
+        package="bur_rov",
+        executable="open_loop",
+        name="open_loop",
+    )
+
 
     return LaunchDescription([
         thruster_manager,
         controller_launch,
-        depth_sensor,
+        # depth_sensor,
         # camera,
         joy,
-        arduino
+        open_loop,
+        # manager,
+        # arduino
     ])

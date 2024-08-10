@@ -1,15 +1,16 @@
  <root BTCPP_format="4" >
     <BehaviorTree ID="MainTree">
         <Sequence>
-            <!--<SubTree ID="GateTask"/>-->
+            <SubTree ID="GateTask"/>
             <SubTree ID="BuoyTask"/>
-            <!--<SubTree ID="OctagonTask"/> -->
+            <SubTree ID="OctagonTask"/>
         </Sequence>
     </BehaviorTree>
 
     <BehaviorTree ID="GateTask">
         <Sequence>
             <Submerge />
+            <SavePose output="{start}"/>
             <GoToGate />
             <YawRoll />
             <GoPastGate />
@@ -25,10 +26,10 @@
         </Sequence>
     </BehaviorTree>
 
-    <!--<BehaviorTree ID="OctagonTask">
+    <BehaviorTree ID="OctagonTask">
         <Sequence>
-            <TurnTowardsOctagon />
-            <DriveTowardsOctagon />
-        </Sequence
-    </BehaviorTree>-->
+            <TurnTowardsOctagon orientation="{start}"/>
+            <DriveToOctagon />
+        </Sequence>
+    </BehaviorTree>
  </root>

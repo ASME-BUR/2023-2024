@@ -12,7 +12,7 @@ simple_manager:
     tick_rate: 10
 
     auto_shutdown: true
-    wait_for_depth: false;
+    wait_for_depth: false
 
     start_position:
       x: 0.0

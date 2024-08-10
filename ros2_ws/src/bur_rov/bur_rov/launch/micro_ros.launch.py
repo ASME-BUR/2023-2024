@@ -35,6 +35,6 @@ def generate_launch_description():
     return LaunchDescription([
         imu_verbose_arg,
         thruster_verbose_arg,
-        imu,
+        #imu,
         thruster,
     ])

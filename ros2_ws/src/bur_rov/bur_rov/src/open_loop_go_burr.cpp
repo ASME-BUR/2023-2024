@@ -33,7 +33,7 @@ private:
         if (depth < 0)
         {
             auto message = sensor_msgs::msg::Joy();
-            des_pose.pose.pose.position.z = -1.0;
+            des_pose.pose.pose.position.z = -1.5;
             publisher2_->publish(des_pose);
             std::vector<double> values(9, 0);
             message.axes.clear();
@@ -42,7 +42,7 @@ private:
             double delta_t = num_of_s.count();
             message.header.stamp.sec = delta_t;
             message.buttons.clear();
-            std::vector<int> buttons(10, 0);
+            std::vector<int> buttons(13, 0);
             for (size_t i = 0; i < buttons.size(); i++)
             {
                 message.buttons.push_back(buttons[i]);
@@ -50,10 +50,13 @@ private:
             float start_time = 20.0;
             float t1 = 5;
             float t2 = 13;
-            float t3 = 15.5;
+            float t3 = 23;
+            float t4 = 15;
+            float t5 = 15;
+            float t6 = 5;
             if (delta_t < start_time + t1 && delta_t >= start_time)
             {
-                values[2] = -0.7;
+                values[2] = -1.5;
                 message.buttons.clear();
                 buttons[9] = 1;
                 for (size_t i = 0; i < buttons.size(); i++)
@@ -61,9 +64,10 @@ private:
                     message.buttons.push_back(buttons[i]);
                 }
             }
+            // go forward
             else if (delta_t < start_time + t1 + t2 && delta_t >= start_time + t1)
             {
-                values[2] = -0.7;
+                values[2] = -1.5;
                 values[0] = 1.0;
                 buttons[9] = 1;
                 message.buttons.clear();
@@ -72,6 +76,7 @@ private:
                     message.buttons.push_back(buttons[i]);
                 }
             }
+            // yaw
             else if (delta_t < start_time + t1 + t2 + t3 && delta_t >= start_time + t1 + t2)
             {
                 values[5] = -1.0;
@@ -83,17 +88,40 @@ private:
                     message.buttons.push_back(buttons[i]);
                 }
             }
-            // else if (delta_t < start_time + t1 + t2 + t3 + t3 && delta_t >= start_time + t1 + t2 + t3)
-            // {
-            //     values[5] = 0.0;
-            //     values[0] = 1.0;
-            //     buttons[9] = 1;
-            //     message.buttons.clear();
-            //     for (size_t i = 0; i < buttons.size(); i++)
-            //     {
-            //         message.buttons.push_back(buttons[i]);
-            //     }
-            // }
+            // roll and fire torpedo
+            else if (delta_t < start_time + t1 + t2 + t3 + t4 && delta_t >= start_time + t1 + t2 + t3)
+            {
+                values[3] = 5.0;
+                buttons[9] = 1;
+                buttons[4] = 1.0;
+                message.buttons.clear();
+                for (size_t i = 0; i < buttons.size(); i++)
+                {
+                    message.buttons.push_back(buttons[i]);
+                }
+            }
+            else if (delta_t < start_time + t1 + t2 + t3 + t4 + t5 && delta_t >= start_time + t1 + t2 + t3 + t4)
+            {
+                values[2] = -1.5;
+                values[0] = 1.0;
+                buttons[9] = 1;
+                message.buttons.clear();
+                for (size_t i = 0; i < buttons.size(); i++)
+                {
+                    message.buttons.push_back(buttons[i]);
+                }
+            }
+            // fire other torpedo
+            else if (delta_t < start_time + t1 + t2 + t3 + t4 + t5 + t6 && delta_t >= start_time + t1 + t2 + t3 + t4 + t5)
+            {
+                buttons[9] = 1;
+                buttons[7] = 1.0;
+                message.buttons.clear();
+                for (size_t i = 0; i < buttons.size(); i++)
+                {
+                    message.buttons.push_back(buttons[i]);
+                }
+            }
 
             for (size_t i = 0; i < values.size(); i++)
             {

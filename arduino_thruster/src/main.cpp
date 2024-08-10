@@ -70,9 +70,11 @@ void sub_callback(const void *msgin)
   // }
   // if (sizeof(msg->buttons) != 0)
   // {
+  uint butt[3] = {3, 1, 2};
   for (int i = 0; i < UTIL_COUNT; i++)
   {
-    digitalWrite(i * 2 + util_pin_begin, (msg->buttons[i*3 - 2]));
+    digitalWrite(i * 2 + util_pin_begin, (msg->buttons[butt[i]]));
+    // left button = 0, right button = 1, left trigger = 2, right trigger = 3, 
   }
   // }
 }

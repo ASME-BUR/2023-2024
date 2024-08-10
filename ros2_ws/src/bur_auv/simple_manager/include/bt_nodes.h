@@ -124,4 +124,28 @@ class FireTorpedo : public BT::SyncActionNode
         std::string pub_topic_;
 };
 
+class TurnToOrientation : public BT::StatefulActionNode
+{
+    public:
+        TurnToOrientation(const std::string& name, const BT::NodeConfiguration& config,
+                            const std::shared_ptr<SimpleManager> ptr,
+                            const geometry_msgs::msg::Quaternion quat):
+            BT::StatefulActionNode(name, config),
+            node_(ptr),
+            target_(quat) {}
+        
+        static BT::PortsList providedPorts() { return {}; }
+
+        BT::NodeStatus onStart() override   { return this->turn(); }
+        BT::NodeStatus onRunning() override { return this->turn(); }
+
+        void onHalted() override {}
+
+    private:
+        std::shared_ptr<SimpleManager> node_;
+        geometry_msgs::msg::Quaternion target_;
+
+        BT::NodeStatus turn();
+};
+
 #endif

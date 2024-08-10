@@ -184,3 +184,29 @@ BT::NodeStatus FireTorpedo::tick() {
 
     return BT::NodeStatus::SUCCESS;
 }
+
+BT::NodeStatus TurnToOrientation::turn() {
+    double roll_state, pitch_state, yaw_state;
+
+    auto current_pos = this->node_->getCurrentPosition();
+    tf2::Quaternion q = tf2::Quaternion(current_pos.orientation.x, current_pos.orientation.y, current_pos.orientation.z, current_pos.orientation.w);
+    tf2::Matrix3x3 rot_matrix = tf2::Matrix3x3(q);
+    rot_matrix.getRPY(roll_state, pitch_state, yaw_state);
+
+    double roll_target, pitch_target, yaw_target;
+    tf2::Quaternion q_target = tf2::Quaternion(target_.x, target_.y, target_.z, target_.w);
+    tf2::Matrix3x3(q_target).getRPY(roll_target, pitch_target, yaw_target);
+
+    if(abs(roll_target - roll_state) < 0.1 && abs(pitch_target - pitch_state) < 0.1
+        && abs(yaw_target - yaw_state) < 0.1) {
+        return BT::NodeStatus::SUCCESS;
+    }
+
+    auto odometry_msg_ = nav_msgs::msg::Odometry();
+    odometry_msg_.pose.pose.orientation = this->target_;
+    odometry_msg_.pose.pose.position.z = 1.0;
+
+    this->node_->publish_odometry_msg(odometry_msg_);
+
+    return BT::NodeStatus::RUNNING;
+}

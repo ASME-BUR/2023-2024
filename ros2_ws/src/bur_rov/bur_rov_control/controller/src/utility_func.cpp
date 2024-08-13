@@ -2,7 +2,8 @@
 
 // this implementation assumes normalized quaternion
 // converts to Euler angles in 3-2-1 sequence
-EulerAngles ToEulerAngles(Quaternion q) {
+EulerAngles ToEulerAngles(Quaternion q)
+{
     EulerAngles angles;
 
     // roll (x-axis rotation)
@@ -23,7 +24,8 @@ EulerAngles ToEulerAngles(Quaternion q) {
     return angles;
 }
 
-EulerAngles ToEulerAngles(double w, double x, double y, double z) {
+EulerAngles ToEulerAngles(double w, double x, double y, double z)
+{
     EulerAngles angles;
 
     // roll (x-axis rotation)
@@ -44,6 +46,21 @@ EulerAngles ToEulerAngles(double w, double x, double y, double z) {
     return angles;
 }
 
-double angle_wrap_pi(double angle){
+double angle_wrap_pi(double angle)
+{
     return std::atan2(std::sin(angle), std::cos(angle));
+}
+
+template <typename T>
+T clamp(T val, T low, T high)
+{
+    if (val < low)
+    {
+        return low;
+    }
+    else if (val > high)
+    {
+        return high;
+    }
+    return val;
 }

@@ -14,13 +14,15 @@ Thruster_manager::Thruster_manager() : rclcpp::Node("thruster_manager")
     this->declare_parameter("thrust_max_bwd", 4.1);
     this->declare_parameter("thrust_deadband", 0.000001);
     this->declare_parameter("motor_driver_deadband", 0.0625);
+    this->declare_parameter("rate_limit", 0.1);
     this->declare_parameter("max_force", 60.0);
     this->declare_parameter("max_torque", 8.0);
     this->declare_parameter("num_motors", 8);
+    this->declare_parameter("test_mode", false);
+    this->declare_parameter("flip_motors", std::vector<double>{1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0});
     // Parameter Lists
     const std::map<std::string, double> &motor = {{"surge", 0.0}, {"sway", 0.0}, {"heave", 0.0}, {"roll", 0.0}, {"pitch", 0.0}, {"yaw", 0.0}};
-
-    for (size_t i = 0; i < this->get_parameter("num_motors").as_int(); i++)
+    for (int i = 0; i < this->get_parameter("num_motors").as_int(); i++)
     {
         this->declare_parameters(string("motor" + to_string(i)), motor);
         motor_names.push_back(string("motor" + to_string(i)));
@@ -32,8 +34,24 @@ Thruster_manager::Thruster_manager() : rclcpp::Node("thruster_manager")
         this->get_parameter("cmd_sub_topic").as_string(), 1, std::bind(&Thruster_manager::cmd_Callback, this, _1));
     cmd_pub = this->create_publisher<bur_rov_msgs::msg::ThrusterCommand>(
         this->get_parameter("thrust_cmd_pub_topic").as_string(), 1);
+    test_mode = this->get_parameter("test_mode").as_bool();
 
     setVariables();
+}
+
+Thruster_manager::~Thruster_manager()
+{
+    RCLCPP_INFO(this->get_logger(), "Destructing, stopping all thrusters");
+    this->output.auxilary.clear();
+    this->output.buttons.clear();
+    for (uint8_t i = 0; i < 8; i++)
+    {
+        this->output.auxilary.push_back(0);
+    }
+    for (uint8_t i = 0; i < 3; i++)
+    {
+        this->output.buttons.push_back(0);
+    }
 }
 
 void Thruster_manager::setVariables()
@@ -47,7 +65,9 @@ void Thruster_manager::setVariables()
     TORQUE_MAX = this->get_parameter("max_torque").as_double();
     THRUST_MAX_FWD_N = THRUST_MAX_FWD * KGF2N;
     THRUST_MAX_BWD_N = THRUST_MAX_BWD * KGF2N;
-    last_motor_command.resize(8, 0);
+    max_step_per_loop = this->get_parameter("rate_limit").as_double();
+    last_motor_command.resize(this->get_parameter("num_motors").as_int(), 0);
+    flip_motors.resize(this->get_parameter("num_motors").as_int(), 1.0);
     for (int i = 0; i < this->get_parameter("num_motors").as_int(); ++i)
     {
         motors[i]["surge"] = this->get_parameter(string(motor_names[i] + ".surge")).as_double();
@@ -57,6 +77,7 @@ void Thruster_manager::setVariables()
         motors[i]["pitch"] = this->get_parameter(string(motor_names[i] + ".pitch")).as_double();
         motors[i]["yaw"] = this->get_parameter(string(motor_names[i] + ".yaw")).as_double();
     }
+    flip_motors = this->get_parameter("flip_motors").as_double_array();
 }
 
 void Thruster_manager::cmd_Callback(const bur_rov_msgs::msg::Command::SharedPtr msg)
@@ -71,17 +92,26 @@ void Thruster_manager::cmd_Callback(const bur_rov_msgs::msg::Command::SharedPtr 
     {
         this->output.buttons.push_back(msg->buttons[i]);
     }
+
+    if (this->test_mode)
+    {
+        this->output.thrusters.clear();
+        for (size_t i = 0; i < 8; ++i)
+        {
+            this->output.thrusters.push_back(0.4 * output.buttons[i]);
+        }
+    }
     // runNode();
 }
 
 void Thruster_manager::wrench_Callback(const geometry_msgs::msg::WrenchStamped::SharedPtr msg)
 {
-    pwr[0] = msg->wrench.force.x;   // surge
-    pwr[1] = -msg->wrench.force.y;  // sway
-    pwr[2] = -msg->wrench.force.z;  // heave
-    pwr[3] = msg->wrench.torque.x;  // roll
-    pwr[4] = -msg->wrench.torque.y; // pitch
-    pwr[5] = -msg->wrench.torque.z; // yaw
+    pwr[0] = msg->wrench.force.x;  // surge
+    pwr[1] = msg->wrench.force.y;  // sway
+    pwr[2] = msg->wrench.force.z;  // heave
+    pwr[3] = msg->wrench.torque.x; // roll
+    pwr[4] = msg->wrench.torque.y; // pitch
+    pwr[5] = msg->wrench.torque.z; // yaw
     runNode();
 }
 
@@ -130,6 +160,7 @@ double Thruster_manager::rateLimitMotorCommand(double new_command, double last_c
     }
     else
     {
+        // std::cout <<"here"<<std::endl;
         return CommonFunctions::Clamp(new_command, last_command - max_step_per_loop, last_command + max_step_per_loop); // Rate limit
     }
 }
@@ -154,18 +185,24 @@ void Thruster_manager::runNode()
 
     // Convert motor thrusts to commands
     std::vector<float> motor_comms(motors.size(), 0);
+
     // Publish message
-    this->output.thrusters.clear();
-    for (size_t i = 0; i < motors.size(); ++i)
+    if (this->test_mode == false)
     {
-        double m_comms = thrust_to_motor_comm(des_motor_thrusts[i]);
-        m_comms = CommonFunctions::Clamp(m_comms, -1.0, 1.0); // Clamp just in case
-        // std::cout << "m_comms " << i << " " << m_comms << " last_cmd " << last_motor_command[i]<< std::endl;
-        motor_comms[i] = (float)rateLimitMotorCommand(m_comms, last_motor_command[i]);
-        this->output.thrusters.push_back(CommonFunctions::Clamp(motor_comms[i], -1.0, 1.0));
-        // Store the last command so we can ramp it
-        last_motor_command[i] = motor_comms[i];
+        this->output.thrusters.clear();
+        for (size_t i = 0; i < motors.size(); ++i)
+        {
+            double m_comms = thrust_to_motor_comm(des_motor_thrusts[i]);
+            m_comms = CommonFunctions::Clamp(m_comms, -1.0, 1.0); // Clamp just in case
+            // std::cout << "m_comms " << i << " " << m_comms << " last_cmd " << last_motor_command[i] << std::endl;
+            motor_comms[i] = (float)rateLimitMotorCommand(m_comms, last_motor_command[i]);
+            // std::cout << "m_comms " << i << " " << motor_comms[i] << " last_cmd " << last_motor_command[i] << std::endl;
+            this->output.thrusters.push_back(flip_motors[i] * motor_comms[i]);
+            // Store the last command so we can ramp it
+            last_motor_command[i] = motor_comms[i];
+        }
     }
+
     cmd_pub->publish(this->output);
 } // End of run node
 

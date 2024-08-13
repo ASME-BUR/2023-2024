@@ -13,6 +13,9 @@ find_package(ament_cmake REQUIRED)
 find_package(rclcpp REQUIRED)
 find_package(sensor_msgs REQUIRED)
 find_package(bur_rov_msgs REQUIRED)
+find_package(bur_rov_sensors REQUIRED)
+find_package(controller REQUIRED)
+find_package(thruster_manager REQUIRED)
 find_package(tf2 REQUIRED)
 find_package(tf2_ros REQUIRED)
 find_package(tf2_geometry_msgs REQUIRED)
@@ -26,7 +29,11 @@ include_directories(include/${PROJECT_NAME})
 add_executable(joy_command src/joy_command.cpp)
 ament_target_dependencies(joy_command tf2 tf2_geometry_msgs nav_msgs rclcpp sensor_msgs bur_rov_msgs joy)
 
-install(TARGETS joy_command DESTINATION lib/${PROJECT_NAME})
+add_executable(open_loop src/open_loop_go_burr.cpp)
+ament_target_dependencies(open_loop rclcpp sensor_msgs nav_msgs geometry_msgs)
+
+
+install(TARGETS joy_command open_loop DESTINATION lib/${PROJECT_NAME})
 
 # Install launch files.
 install(DIRECTORY launch config DESTINATION share/${PROJECT_NAME}/)

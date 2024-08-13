@@ -1,0 +1,41 @@
+ <root BTCPP_format="4" >
+    <BehaviorTree ID="MainTree">
+        <SequenceWithMemory>
+            <RetryUntilSuccessful num_attempts="6">
+                <SubTree ID="GateTask"/>
+                <SubTree ID="BuoyTask"/>
+                <SubTree ID="OctagonTask"/>
+            </RetryUntilSuccessful>
+        </SequenceWithMemory>
+    </BehaviorTree>
+
+    <BehaviorTree ID="GateTask">
+        <SequenceWithMemory>
+            <Sequence>
+                <UpdateGateTarget target="{goal}" />
+                <GoToTarget target="{goal}"/>
+            </Sequence>
+            <BarrelRoll />
+            <DriveForward />
+        </SequenceWithMemory>
+    </BehaviorTree>
+
+    <BehaviorTree ID="BuoyTask">
+        <SequenceWithMemory>
+            <Sequence>
+                <UpdateBuoyTarget target="{goal}" />
+                <GoToTarget target="{goal}"/>
+            </Sequence>
+            <FireTorpedo>
+        </SequenceWithMemory>
+    </BehaviorTree>
+
+    <BehaviorTree ID="OctagonTask">
+        <SequenceWithMemory>
+            <Sequence>
+                <UpdateOctagonTarget target="{goal}" />
+                <GoToTarget target="{goal}"/>
+            </Sequence>
+        </SequenceWithMemory>
+    </BehaviorTree>
+ </root>

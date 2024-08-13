@@ -47,8 +47,9 @@ def transform(matrix, coordinate_system_in=CoordinateSystems.ENU, coordinate_sys
 # This calculates the mapping between force-torque to thruster allocations
 
 # Can calculate using whatever coordinate system (NED, NWU, ENU), just be consistent
-coordinate_system = CoordinateSystems.NED
-filename = 'motor_force_config.yaml'
+coordinate_system_in = CoordinateSystems.NED
+coordinate_system_out = CoordinateSystems.ENU
+filename = 'motor_force_config_ENU.yaml'
 # Full path to the output file
 output_path = os.path.join('src/bur_rov/bur_rov_control/thruster_manager/config', filename)
 # Thruster locations (m) relative to CoM
@@ -57,45 +58,51 @@ CoM = np.array([0, 0, 0]) / 1000
 
 # Units in mm
 thruster_locations = np.array([
-    [-368.79653, 256.83809, 38.1],
-    [-264.87636, 233.15, -35.71352],
-    [264.87636, 233.15, -35.71352],
-    [264.87636, -233.15, -35.71352],
-    [368.79653, -256.83809, 38.1],
-    [-368.79653, -256.83809, 38.1],
-    [-264.87636, -233.15, -35.71352],
-    [368.79653, 256.83809, 38.1]
+    [-368.79653, 256.83809, -38.1],
+    [368.79653, 256.83809, -38.1],
+    [-264.87636, 233.15, 35.71352],
+    [264.87636, 233.15, 35.71352],
+    [-264.87636, -233.15, 35.71352],
+    [-368.79653, -256.83809, -38.1],
+    [368.79653, -256.83809, -38.1],
+    [264.87636, -233.15, 35.71352],
 ]) / 1000
+
+# Prevents up/down thrusters from having nonzero surge/sway
+# thruster_locations[:, 2] = 0
 
 deg = 45
 s = np.sin(np.deg2rad(deg))
 c = np.cos(np.deg2rad(deg))
 thruster_orientations = np.array([
                                 [-c, -s, 0],
-                                [0, 0, -1],
-                                [0, 0, 1],
-                                [0, 0, -1],
-                                [c, s, 0],
                                 [c, -s, 0],
-                                [0, 0, 1],
-                                [-c, s, 0]
+                                [0, 0, -1],
+                                [0, 0, -1],
+                                [0, 0, -1],
+                                [-c, s, 0],
+                                [c, s, 0],
+                                [0, 0, -1]
                                 ])
 
-CoM = transform(CoM, coordinate_system_in=coordinate_system, coordinate_system_out=CoordinateSystems.ENU)
-thruster_locations = transform(thruster_locations, coordinate_system_in=coordinate_system, coordinate_system_out=CoordinateSystems.ENU)
-thruster_orientations = transform(thruster_orientations, coordinate_system_in=coordinate_system, coordinate_system_out=CoordinateSystems.ENU)
-print("thruster_locations", thruster_locations)
-print("thruster orientations", thruster_orientations)
+CoM = transform(CoM, coordinate_system_in=coordinate_system_in, coordinate_system_out=coordinate_system_out)
+thruster_locations = transform(thruster_locations, coordinate_system_in=coordinate_system_in, coordinate_system_out=coordinate_system_out)
+thruster_orientations = transform(thruster_orientations, coordinate_system_in=coordinate_system_in, coordinate_system_out=coordinate_system_out)
+print("thruster_locations\n", thruster_locations)
+print("thruster orientations\n", thruster_orientations)
 
 thruster_locations = thruster_locations - CoM
 # Compute torques
 Torque = np.cross(thruster_locations, thruster_orientations)
+print("Torque\n", Torque)
+
 # Stack to get Force-Torque conversion matrix
 A = np.vstack((thruster_orientations.T, Torque.T))
 Ainv = np.linalg.pinv(A)
 Ainv = np.around(Ainv, 6)
 
-print("Ainv", Ainv)
+print("A\n", A)
+print("Ainv\n", Ainv)
 
 # Convert numpy arrays to lists
 Ainv = Ainv.tolist()
@@ -114,11 +121,15 @@ for i in range(len(Ainv)):
     }
     motors_data[f'motor{i}'] = motor_data
 
+flip_motors = [1.0, -1.0, -1.0, 1.0, 1.0, -1.0, 1.0, -1.0]
+
 yaml_data = {
     'thruster_manager': {
         'ros__parameters': {
             'max_force': 60.0,
             'max_torque': 40.0,
+            'rate_limit': 0.3,
+            'flip_motors': flip_motors,
             'num_motors': len(Ainv),
             **motors_data
         }

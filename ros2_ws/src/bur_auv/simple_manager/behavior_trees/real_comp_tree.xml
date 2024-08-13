@@ -1,0 +1,47 @@
+ <root BTCPP_format="4" >
+    <BehaviorTree ID="MainTree">
+        <Sequence>
+            <SubTree ID="GateTask"/>
+            <SubTree ID="BuoyTask"/>
+            <SubTree ID="OctagonTask"/>
+        </Sequence>
+    </BehaviorTree>
+
+    <BehaviorTree ID="GateTask">
+        <Sequence>
+            <Wait duration="20"/>
+            <Submerge duration="5"/>
+            <!-- <SavePose output="{start}"/> -->
+            <DriveForward duration="15"/>
+            <YawRoll duration="24"/>
+            <DriveForward duration="5"/>
+        </Sequence>
+    </BehaviorTree>
+
+    <BehaviorTree ID="BuoyTask">
+        <Sequence>
+            <!-- 0.785 rad = 45 deg -->
+            <TurnFromCurrentPosition roll="0.0" pitch="0.0" yaw="0.785"/> 
+            <DriveForward duration="20"/>
+            <FireTorpedoes />
+            <DriveForward duration="10"/>
+        </Sequence>
+    </BehaviorTree>
+
+    <BehaviorTree ID="OctagonTask">
+        <Sequence>
+            <!-- <TurnTowardsOctagon orientation="{start}"/> -->
+            <Sequence>
+                <!-- (-0.785 - 1.1071) rad -->
+                <TurnFromCurrentPosition roll="0.0" pitch="0.0" yaw="-1.892"/> 
+                <DriveForward duration="22"/>
+            </Sequence>
+            <Sequence>
+                <!-- (2 * 1.1071) rad -->
+                <TurnFromCurrentPosition roll="0.0" pitch="0.0" yaw="2.214"/> 
+                <DriveForward duration="22"/>
+            </Sequence>
+            <!-- <DriveToOctagon /> -->
+        </Sequence>
+    </BehaviorTree>
+ </root>

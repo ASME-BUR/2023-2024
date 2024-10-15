@@ -33,7 +33,7 @@ private:
         // if (depth < 0)
         // {
             auto message = sensor_msgs::msg::Joy();
-            des_pose.pose.pose.position.z = -1.5;
+            des_pose.pose.pose.position.z = -1.0;
             publisher2_->publish(des_pose);
             std::vector<double> values(9, 0);
             message.axes.clear();
@@ -47,7 +47,7 @@ private:
             {
                 message.buttons.push_back(buttons[i]);
             }
-            float start_time = 20.0;
+            float start_time = 40.0;
             float t1 = 5;
             float t2 = 13;
             float t3 = 23;

@@ -30,8 +30,8 @@ public:
 private:
     void timer_callback()
     {
-        if (depth < 0)
-        {
+        // if (depth < 0)
+        // {
             auto message = sensor_msgs::msg::Joy();
             des_pose.pose.pose.position.z = -1.5;
             publisher2_->publish(des_pose);
@@ -128,11 +128,11 @@ private:
                 message.axes.push_back(values[i]);
             }
             publisher_->publish(message);
-        }
-        else
-        {
-            init = this->now();
-        }
+        // }
+        // else
+        // {
+        //     init = this->now();
+        // }
     }
     void depth_callback(const geometry_msgs::msg::PoseWithCovarianceStamped::SharedPtr msg)
     {
